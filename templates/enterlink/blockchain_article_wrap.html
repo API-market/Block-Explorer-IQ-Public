@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% load i18n %}
+{% load humanize %}
+{% load enterlink_custom_tags %}
+<html>
+<head>
+    {% include "enterlink/inline-css/template_blockchain_css.html" %}
+</head>
+
+<body class="main-article">
+    {{ innerHTMLBlock|safe }}
+</body>
+</html>

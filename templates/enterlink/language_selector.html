@@ -1,0 +1,105 @@
+{% load i18n %}
+<script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/jquery.js"></script>
+
+<style>
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://epcdn-vz.azureedge.net/static/fonts/Poppins-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('https://epcdn-vz.azureedge.net/static/fonts/Poppins-SemiBold.woff') format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('https://epcdn-vz.azureedge.net/static/fonts/Poppins-RegItalic.woff') format('woff');
+    font-style: italic;
+}
+
+/**{*/
+    /*font-family: 'Poppins', Helvetica, Arial;*/
+/*}*/
+
+.language-selector-desktop form select {
+    padding: 3px;
+    border-radius: 0;
+    box-shadow: 0 0 0 #CCC, 0 -1px #FFF inset;
+    font-family: 'Poppins', Helvetica, Arial;
+    border: 1px solid #CCC;
+    outline: medium none;
+    display: inline-block;
+    font-size: 35px;
+    cursor: pointer;
+    background: none repeat scroll 0 0 #EFEFEF;
+    color: #666;
+    height: 58px;
+    line-height: 58px;
+    float: left;
+    width: 100%;
+}
+
+.language-selector-desktop img {
+    border-radius: 8px;
+    margin: 1px 0px 0px 8px;
+    position: relative;
+    font-family: 'Poppins', Helvetica, Arial;
+}
+
+.language-selector-header{
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    font-size: 45px;
+    font-family: 'Poppins', Helvetica, Arial;
+}
+
+.language-post{
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    font-family: 'Poppins', Helvetica, Arial;
+}
+
+.flag-box{
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+
+</style>
+
+<body>
+<div class="language-selector-desktop">
+    <h2 class="language-selector-header">{% trans 'Select language' %}</h2>
+    <form action="{% url 'set_language' %}" method="post" class="language-post">
+        {% csrf_token %}
+        {% if redirect_to %}
+            <input name="next" type="hidden" value="{{ redirect_to }}" />
+        {% else %}
+            <input name="next" type="hidden" value="/" />
+        {% endif %}
+        <select id="language-selector" onchange="this.form.submit();" name="language">
+        {% get_language_info_list for LANGUAGES as languages %}
+        {% for language in languages %}
+        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+            {{ language.name_local|title }} ({{ language.code }})
+        </option>
+        {% endfor %}
+        </select>
+    </form>
+    <div class="flag-box">
+        <img id="selected-language" height="60" width="60" alt="Language flag" class="language-select lang-header-dropdown-flag" src="https://epcdn-vz.azureedge.net/static/images/language_icon.png">
+    </div>
+
+    <script>
+        document.getElementById("selected-language").src = "https://epcdn-vz.azureedge.net/static/images/flags/png/48/languages/" + $( "#language-selector" ).val() + ".png";
+    </script>
+</div>
+</body>

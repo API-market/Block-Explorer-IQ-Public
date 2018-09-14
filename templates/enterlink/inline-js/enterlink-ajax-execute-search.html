@@ -1,0 +1,189 @@
+<script>
+
+// Execute an AJAX search for an article
+function ajax_execute_search(){
+    // Get the search term
+    var searchedterm ;
+    searchedterm = $(this).val();
+
+    // See if the search term is blank
+    if (searchedterm == "") {
+        // If the result is blank, fill in the result areas with empty strings
+        $('#result').html("");
+        $('#indexresult').html("");
+        $('#mobileresult').html("");
+    }
+    else {
+        // Execute the search
+        $.ajax({
+            type: "GET",
+            url: "/AJAX-REQUEST/AJAX_Search/normal/",
+            data: {searchterm: searchedterm},
+            beforeSend: function( xhr ) {
+                // Loading indicator
+                $('#AJAX-SpinBox').show();
+            },
+            success: function (data) {
+                // Fill the areas with the search results
+                $('#result').html(data);
+                $('#indexresult').html(data);
+                $('#mobileresult').html(data);
+            },
+            complete: function(){
+                // Hide the loading indicator
+                $('#AJAX-SpinBox').hide();
+            }
+        });
+    }
+}
+
+// AJAX search for in-article links to other wiki articles (blue links)
+function ajax_execute_search_TinyMCE(){
+    // Get the search term
+    var searchedterm ;
+    searchedterm = $(this).val();
+
+    // Get the TinyMCE editor ID
+    var editorID = $(this).parent().parent().attr('data-mce-editor-id');
+
+    // Construct the selector for the article search list
+    var selectorPrefix = ".tinymce-linkpage-menu.tinymce-pages-only[data-mce-editor-id='" + editorID + "']";
+
+    // Handle an empty search term
+    if (searchedterm == "") {
+        $(selectorPrefix + ' #linkpage_results.pages-only').html("");
+    }
+    else {
+        // Loading spinner
+        $(selectorPrefix + ' #linkpage_results.pages-only').html("<img class='tinymce-loading-spinner' src='https://epcdn-vz.azureedge.net/static/images/loading2.gif'>");
+
+        // Send the request for the article list based on the search term
+        $.get('/AJAX-REQUEST/AJAX_Search/tinymce-link-page/', {searchterm: searchedterm}, function (data) {
+            // Fill in the results for the article search
+            $(selectorPrefix + ' #linkpage_results.pages-only').html(data);
+
+            // For each result row, create a handler that injects the article tooltip into the TinyMCE HTML if that
+            // row is selected by the user
+            $(selectorPrefix + ' #linkpage_results.pages-only li').each(function () {
+                $(this).on("click tap", function() {
+                    // Get the pre-generated tooltip HTML
+                    var tooltipHTML = $(this).find('.tooltip-html').html();
+
+                    // Get the TinyMCE editor ID
+                    var theEditorInstance = tinymce.get(editorID);
+
+                    // Insert the tooltip into the TinyMCE
+                    theEditorInstance.insertContent(tooltipHTML);
+
+                    // Hide the list
+                    $(selectorPrefix).hide();
+                });
+            });
+        });
+    }
+}
+
+// AJAX search for article citations
+function ajax_execute_search_TinyMCE_cite(editorID){
+    // Get the editor instance
+    var theEditorInstance = tinymce.get(editorID);
+
+    // Get the HTML that contains the citations
+    var citeHTML = $('#form_tinymce_container_ifr').contents().find(".reference-container").html();
+
+    // Get the selector for the citation menu
+    var selectorPrefix = ".tinymce-linkpage-menu.tinymce-citesource-menu[data-mce-editor-id='" + editorID + "']";
+    $.ajax({
+        type: "POST",
+        url: "/AJAX-REQUEST/AJAX_Search/tinymce-cite-source/",
+        data: {htmlblock: citeHTML, slug: ARTICLE_SLUG},
+        success: function (data) {
+            // Insert the search results into the citation menu
+            $(selectorPrefix + ' #linkpage_results.citepage-results').html(data);
+
+            // For each result row, create a handler that injects the citation tooltip (e.g. [23]) into the TinyMCE HTML if that
+            // row is selected by the user
+            $(selectorPrefix + ' #linkpage_results.citepage-results li').each(function () {
+                $(this).on("click tap", function() {
+                    // Get the pre-generated tooltip HTML
+                    var tooltipHTML = $(this).find('.tooltip-html').html();
+
+                    // Insert the tooltip into the TinyMCE
+                    theEditorInstance.insertContent(tooltipHTML);
+
+                    // Hide the list
+                    $(selectorPrefix).hide();
+                });
+            });
+        }
+    });
+
+}
+
+// AJAX search for in-article media
+function ajax_execute_search_TinyMCE_citepicture(editorID){
+    // Get the HTML that contains the citations
+    var citeHTML = $('#form_tinymce_container_ifr').contents().find(".media-gallery").html();
+
+    // Get the selector for the citation menu
+    var selectorPrefix = ".tinymce-linkpage-menu.tinymce-citepicture-menu[data-mce-editor-id='" + editorID + "']";
+
+    // Get the selector for the citation menu
+    $.ajax({
+        type: "POST",
+        url: "/AJAX-REQUEST/AJAX_Search/tinymce-cite-picture/",
+        data: {slug: ARTICLE_SLUG, htmlblock: citeHTML, cited_by: CITED_BY, citer_rank: CITER_RANK, citer_is_verified: CITER_IS_VERIFIED},
+        success: function (data) {
+            // Fill the menu with the results
+            $(selectorPrefix + ' #linkpage_results.citepicture-results').html(data);
+
+            // For each result row, create a handler that injects the picture into the TinyMCE HTML if that
+            // row is selected by the user
+            $(selectorPrefix + ' #linkpage_results.citepicture-results li').each(function () {
+                $(this).on("click tap", function() {
+                    // Get the pre-generated tooltip HTML
+                    var tooltipHTML = $(this).find('.tooltip-html').html();
+
+                    // Get the image
+                    var imgNode = $(this).find('.caption-img');
+
+                    // Get the image URL
+                    var srcURL = $(imgNode).attr('src');
+
+                    // Create a Javascript image object and set its attributes
+                    var newImg = new Image();
+                    newImg.src = srcURL;
+                    var curHeight = newImg.height;
+                    var curWidth = newImg.width;
+                    var newHeight = (curHeight / curWidth) * 200;
+
+                    // Replace the placeholder / dummy height (AAA111BBB222CCC333DDD444EEE) with the actual one
+                    if (newHeight > 0){
+                        tooltipHTML = tooltipHTML.replace('AAA111BBB222CCC333DDD444EEE', Math.round(newHeight));
+                    }
+                    else{
+                        tooltipHTML = tooltipHTML.replace('AAA111BBB222CCC333DDD444EEE', '200');
+                    }
+
+                    // Get the TinyMCE editor ID
+                    var theEditorInstance = tinymce.get(editorID);
+
+                    // Insert the tooltip into the TinyMCE
+                    theEditorInstance.insertContent(tooltipHTML);
+
+                    // Hide the list
+                    $(selectorPrefix).hide();
+                });
+            });
+        }
+    });
+
+
+}
+// Bind the article search. Debounce allows a delay between keystrokes before the AJAX is sent.
+$(document).on('keyup', '#AJAXBox', jQuery.debounce(600, ajax_execute_search ));
+
+// Bind the article search for inserting in TinyMCE. Debounce allows a delay between keystrokes before the AJAX is sent.
+$(document).on('keyup', '#AJAXBox-TinyMCE', jQuery.debounce(600, ajax_execute_search_TinyMCE ));
+
+</script>

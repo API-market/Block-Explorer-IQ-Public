@@ -1,0 +1,598 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-25 08:59-0700\n"
+"PO-Revision-Date: 2018-07-31 23:12-0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.1.1\n"
+
+#: static/js/easytimer.min.js:7
+msgid "secondTenthsUpdated"
+msgstr "CậpnhậtPhầnmườiGiây"
+
+#: static/js/easytimer.min.js:7
+msgid "secondsUpdated"
+msgstr "CậpnhậtGiây"
+
+#: static/js/easytimer.min.js:7
+msgid "minutesUpdated"
+msgstr "CậpnhậtPhút"
+
+#: static/js/easytimer.min.js:7
+msgid "hoursUpdated"
+msgstr "CậpnhậtGiờ"
+
+#: static/js/easytimer.min.js:7
+msgid "daysUpdated"
+msgstr "CậpnhậtNgày"
+
+#: static/js/easytimer.min.js:7
+msgid "targetAchieved"
+msgstr "mục tiêu đạt được"
+
+#: static/js/easytimer.min.js:7
+msgid "stopped"
+msgstr "đã dừng"
+
+#: static/js/easytimer.min.js:7
+msgid "started"
+msgstr "Bắt đầu"
+
+#: static/js/easytimer.min.js:7
+msgid "paused"
+msgstr "Đã tạm từng"
+
+#: static/js/easytimer.min.js:7
+msgid "reset"
+msgstr "Đặt lại"
+
+#: static/js/facebook_sdk_local.min.js:4
+msgid "Cancel"
+msgstr "Hủy"
+
+#: static/js/facebook_sdk_local.min.js:4
+msgid "Loading..."
+msgstr "Đang tải..."
+
+#: static/js/facebook_sdk_local.min.js:4
+msgid "js_sdk_force_status_on_load"
+msgstr "js_sdk_force_status_on_load"
+
+#: static/js/facebook_sdk_local.min.js:5
+msgid "auth.logout"
+msgstr "auth.logout"
+
+#: static/js/plugins/citepicture/plugin.min.js:16
+#: static/js/plugins/citepicture/plugin.min.js:17
+#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:16
+#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:17
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Media"
+msgstr "Đa phương tiện"
+
+#: static/js/plugins/citesource/plugin.min.js:15
+#: static/js/plugins/citesource/plugin.min.js:16
+#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:15
+#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:16
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Cite"
+msgstr "trích dẫn"
+
+#: static/js/plugins/linkpage/plugin.min.js:1
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:1
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Search Everipedia"
+msgstr "Tìm kiếm Everipedia"
+
+#: static/js/plugins/linkpage/plugin.min.js:17
+#: static/js/plugins/linkpage/plugin.min.js:18
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:17
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:18
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Link"
+msgstr "Liên kết"
+
+#: static/js/plugins/mention/plugin.min.js:374
+#: static/tinymce_4.2.3/plugins/mention/plugin.min.js:374
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:162
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:165
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:212
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:215
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:54
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:112
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:115
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:224
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:227
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:331
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:334
+msgid "Cite as verified editor"
+msgstr "Trích dẫn biên tập viên được xác nhận"
+
+#: static/js/plugins/rollups/plugin.min.js:3
+#: static/js/plugins/savepage/plugin.min.js:6
+#: static/js/plugins/savepage/plugin.min.js:7
+#: static/tageditor/jquery.tag-editor.js:335
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:3
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:6
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:7
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:191
+msgid "Save"
+msgstr "Lưu"
+
+#: static/js/plugins/rollups/plugin.min.js:4
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:4
+msgid "Edit"
+msgstr "Chỉnh Sửa"
+
+#: static/js/plugins/rollups/plugin.min.js:11
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
+msgid "Font Style"
+msgstr "Kiểu chữ"
+
+#: static/js/plugins/rollups/plugin.min.js:11
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
+msgid "Style"
+msgstr "Kiểu"
+
+#: static/tageditor/jquery.tag-editor.js:584
+#: static/tageditor/jquery.tag-editor.js:587
+#: static/tageditor/jquery.tag-editor.js:590
+msgid "Add an additional description for this category"
+msgstr "Bổ sung mô tả cho danh mục này"
+
+#: static/tageditor/jquery.tag-editor.js:584
+#: static/tageditor/jquery.tag-editor.js:587
+#: static/tageditor/jquery.tag-editor.js:590
+msgid "Delete this tag"
+msgstr "Xóa thẻ tag này"
+
+#: templates/enterlink/brainpowermgmt.html:142
+msgid "Claim"
+msgstr "Khiếu nại"
+
+#: templates/enterlink/brainpowermgmt.html:142
+msgid "Not Ready"
+msgstr "Chưa sẵn sàng"
+
+#: templates/enterlink/dropzone.html:157
+msgid "Drag and drop your photo here or click to upload."
+msgstr "Kéo và thả ảnh của bạn ở đây hoặc nhấp để tải lên."
+
+#: templates/enterlink/dropzone.html:182
+msgid "Please enter a description for the photo"
+msgstr "Vui lòng nhập mô tả cho ảnh"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:89
+msgid "Adding infobox item, please wait..."
+msgstr "Đang thêm hộp thông tin, vui lòng chờ ..."
+
+#: templates/enterlink/edit_ajax_addlink.html:64
+msgid "Adding, please wait..."
+msgstr "Đang thêm, vui lòng chờ ..."
+
+#: templates/enterlink/edit_ajax_addlink.html:71
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:354
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:457
+msgid ""
+"You have been posting a lot of links today. Wait a bit for the community to "
+"respond to your content. New editors are limited to posting only 250 "
+"submissions a day."
+msgstr ""
+"Bạn đã đăng rất nhiều liên kết ngày hôm nay. Đợi một chút để cộng đồng phản "
+"hồi nội dung của bạn. Biên tập viên mới giới hạn chỉ đăng 250 bài mỗi ngày."
+
+#: templates/enterlink/edit_ajax_addlink.html:75
+msgid ""
+"This link is already on this page, you can still edit the link summary to "
+"improve the information on EP!"
+msgstr ""
+"Liên kết này đã có trên trang, bạn vẫn có thể chỉnh sửa liên kết rút gọn để "
+"cải thiện thông tin trên EP!"
+
+#: templates/enterlink/edit_ajax_addlink.html:79
+msgid ""
+"Links to Wikipedia pages are not allowed, for technical reasons. Please try "
+"again."
+msgstr ""
+"Không cho phép liên kết đến các trang Wikipedia vì lý do kỹ thuật. Vui lòng "
+"thử lại."
+
+#: templates/enterlink/edit_ajax_addlink.html:83
+msgid "No URL provided, please try again"
+msgstr "Không có URL nào được cung cấp, vui lòng thử lại"
+
+#: templates/enterlink/edit_ajax_addlink.html:87
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:362
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:465
+msgid "Please provide a description for the link or file."
+msgstr "Vui lòng cung cấp mô tả cho liên kết hoặc tệp."
+
+#: templates/enterlink/edit_ajax_addlink.html:91
+msgid "Please provide a more scholarly description."
+msgstr "Vui lòng cung cấp mô tả cụ thể hơn."
+
+#: templates/enterlink/edit_ajax_addlink.html:109
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+msgid "File uploaded successfully."
+msgstr "Tệp đã được tải lên thành công"
+
+#: templates/enterlink/edit_ajax_addlink.html:141
+#: templates/enterlink/inline-js/edit-bottom.html:16
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+msgid "Add File"
+msgstr "Thêm tệp"
+
+#: templates/enterlink/edit_ajax_addlink.html:148
+#: templates/enterlink/inline-js/edit-bottom.html:17
+msgid "Add Link"
+msgstr "Thêm liên kết"
+
+#: templates/enterlink/headers/scatter-header.html:130
+msgid "Claim Rewards"
+msgstr ""
+
+#: templates/enterlink/index.html:236
+msgid "Loading more activity, please wait..."
+msgstr "Đang tải thêm hoạt động, vui lòng chờ ..."
+
+#: templates/enterlink/index.html:260
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+msgid "Create page"
+msgstr "Tạo trang"
+
+#: templates/enterlink/inline-js/edit-bottom.html:12
+msgid ""
+"Please stake some IQ into Brainpower before continuing. Click OK to open the "
+"Brainpower management screen in a new tab. NOTE: Please make sure popups are "
+"enabled for this site, as you may receive a warning."
+msgstr ""
+"Hãy đặt một số IQ vào Brainpower trước khi tiếp tục. Nhấn OK để mở màn hình "
+"quản lý Brainpower trong một tab mới. LƯU Ý: Hãy đảm bảo rằng cửa sổ popup "
+"được bật cho trang web này, vì bạn có thể nhận được cảnh báo."
+
+#: templates/enterlink/inline-js/edit-bottom.html:13
+msgid ""
+"Note that you will not be able to propose edits without Brainpower. Your "
+"work will be lost!"
+msgstr ""
+"Lưu ý rằng bạn sẽ không thể đề xuất chỉnh sửa nếu không có Brainpower. "
+"\bThao tác của bạn sẽ bị mất!"
+
+#: templates/enterlink/inline-js/edit-bottom.html:14
+msgid "Error: proposal not found. Please try submitting again."
+msgstr "Lỗi: không tìm thấy đề xuất. Vui lòng thử gửi lại."
+
+#: templates/enterlink/inline-js/edit-bottom.html:15
+msgid "Article proposal submission failed!"
+msgstr "Không thể gửi đề xuất bài viết!"
+
+#: templates/enterlink/inline-js/edit-bottom.html:18
+msgid "Add New Infobox"
+msgstr "Thêm hộp thông tin mới"
+
+#: templates/enterlink/inline-js/edit-bottom.html:19
+msgid "Completing transaction..."
+msgstr "Đang hoàn tất giao dịch ..."
+
+#: templates/enterlink/inline-js/edit-bottom.html:141
+msgid "Add Row"
+msgstr "Thêm dòng"
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:56
+msgid "Are you sure you want to remove this link?"
+msgstr "Bạn có chắc muốn xóa liên kết này không?"
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:162
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:166
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:212
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:216
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:55
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:112
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:116
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:224
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:228
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:331
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:335
+msgid "Cite my own knowledge / experience as a verified editor"
+msgstr ""
+"Trích dẫn từ kiến ​​thức / kinh nghiệm của riêng tôi là biên tập viên đã xác "
+"nhận"
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:347
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:451
+msgid "Posting comment, please wait.."
+msgstr "Đang đăng nhận xét, vui lòng đợi .."
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:358
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:461
+msgid "This comment is already on this page. Please try again!"
+msgstr "Nhận xét này đã có trên trang. Vui lòng thử lại!"
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:450
+msgid "Posting reply, please wait.."
+msgstr "Đăng trả lời, vui lòng đợi ..."
+
+#: templates/enterlink/inline-js/enterlink-ajax-execute-search.html:139
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:52
+msgid "Searching..."
+msgstr "Tìm kiếm ..."
+
+#: templates/enterlink/inline-js/enterlink-ajax-execute-search.html:167
+msgid "Merging..."
+msgstr "Đang hợp nhất"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:94
+msgid "Are you sure you want to exit the page? Unsaved changes will be lost."
+msgstr ""
+"Bạn có chắc chắn muốn thoát khỏi trang không? Các thay đổi chưa lưu sẽ bị "
+"mất."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:180
+msgid "Introduction"
+msgstr "Giới thiệu"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:180
+msgid ""
+"Everipedia is just like Wikipedia but much simpler to edit and contribute. "
+"Each page is composed of an infobox area for short concise facts, a main "
+"article written in a neutral 3rd person tense, a media gallery of pictures, "
+"videos, audio etc about the topic, a list of references to webpages and "
+"files that are used as citations in the article and infobox."
+msgstr ""
+"Everipedia giống Wikipedia nhưng đơn giản để chỉnh sửa và đóng góp hơn. Mỗi "
+"trang bao gồm một vùng thông tin cho các sự kiện ngắn gọn, một bài viết "
+"chính được viết bởi một người thứ ba trung lập, thư viện đa phương tiện gồm "
+"hình ảnh, video, âm thanh v.v. về chủ đề, danh sách tài liệu tham khảo đến "
+"các trang web và tệp được sử dụng trích dẫn trong bài viết và hộp thông tin."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:181
+msgid "Main photo"
+msgstr "Ảnh chính"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:181
+msgid "Here you can add the main photo for the article."
+msgstr "Bạn có thể thêm ảnh chính cho bài viết ở đây."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:182
+msgid "Infobox"
+msgstr "Hộp thông tin"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:182
+msgid ""
+"The infobox is designed for concise, quick facts. Suggested items appear in "
+"the dropdown depending on the selected topic, but any type of infobox can be "
+"added."
+msgstr ""
+"Hộp thông tin được thiết kế cho các sự kiện ngắn gọn, nhanh chóng. Các mục "
+"được đề xuất xuất hiện trong menu thả xuống tùy thuộc vào chủ đề đã chọn, "
+"nhưng có thể thêm bất kỳ loại thông tin nào."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:183
+msgid "Add Links, Files, Etc."
+msgstr "Thêm liên kết, tệp, v.v."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:183
+msgid ""
+"Make sure to cite your sources when adding information to the page by adding "
+"links and files here so you can show where the information is coming from."
+msgstr ""
+"Đảm bảo trích dẫn nguồn của bạn khi thêm thông tin vào trang bằng cách thêm "
+"liên kết và tệp ở đây để bạn có thể hiển thị thông tin đến từ đâu."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:184
+msgid "Reference links"
+msgstr "Liên kết tham chiếu"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:184
+msgid ""
+"As you add links and files, they will show up in the Reference Links "
+"section. You can edit or remove them as well."
+msgstr ""
+"Khi bạn thêm liên kết và tệp, chúng sẽ hiển thị trong phần Liên kết Tham "
+"chiếu. Bạn cũng có thể chỉnh sửa hoặc xóa chúng."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:185
+msgid "Media Gallery"
+msgstr "Thư viện Đa Phương Tiện"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:185
+msgid "Added pictures will show up here."
+msgstr "Các ảnh đã thêm sẽ hiển thị ở đây."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
+msgid "Add media to article text"
+msgstr "Thêm đa phương tiện vào văn bản bài viết"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
+msgid "To add an image or video to the article text, click the 'Media' button."
+msgstr ""
+"Để thêm hình ảnh hoặc video vào văn bản bài viết, hãy nhấp vào nút 'Đa "
+"Phương Tiện'."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
+msgid "Cite links, files, etc"
+msgstr "Trích dẫn liên kết, tệp, v.v."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
+msgid ""
+"After you have already added a link, file, or picture to the page, you can "
+"cite it by clicking the 'Cite' button. You can also press the '^' or '*' "
+"keys when typing and a dropdown should appear."
+msgstr ""
+"Sau khi bạn đã thêm một liên kết, tệp hoặc hình ảnh vào trang, bạn có thể "
+"trích dẫn nó bằng cách nhấp vào nút 'Trích dẫn'. Bạn cũng có thể nhấn phím "
+"'^' hoặc '*' khi nhập và menu thả xuống sẽ xuất hiện."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:188
+msgid "Link to other Everipedia pages"
+msgstr "Liên kết đến các trang Everipedia khác"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:188
+msgid ""
+"To link to another Everipedia page click the 'Link Page' button. You can "
+"also press the '@' or key when typing and a dropdown should appear. Try to "
+"link to as many pages as necessary to make each page as rich and informative "
+"as possible."
+msgstr ""
+"Để liên kết đến một trang Everipedia khác, hãy nhấp vào nút 'Liên kết "
+"Trang'. Bạn cũng có thể nhấn phím'@'; hoặc phím khi nhập và menu thả xuống "
+"sẽ xuất hiện. Cố gắng liên kết tới nhiều trang nếu cần để làm cho mỗi trang "
+"càng phong phú và có nhiều thông tin càng tốt."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:189
+msgid "Main article body"
+msgstr "Thân bài viết chính"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:189
+msgid ""
+"Write in an objective manner in third person tense, do not include any "
+"marketing speak (exclusive offers, unverifiable claims etc). This is an "
+"encyclopedia, not a social media page."
+msgstr ""
+"Viết một cách khách quan với tư cách người thứ ba, không bao gồm bất kỳ "
+"thông tin tiếp thị (cung cấp độc quyền, tuyên bố không thể xác minh vv). Đây "
+"là một bách khoa toàn thư, không phải là một trang truyền thông xã hội."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:190
+msgid "Title"
+msgstr "Tiêu đề"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:190
+msgid "Enter the page title here"
+msgstr "Nhập tiêu đề của trang"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:191
+msgid "When you are finished, click here to save your changes."
+msgstr "Khi bạn hoàn tất, nhấp vào đây để lưu các thay đổi của bạn."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:193
+msgid "Back"
+msgstr "Quay lại"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:193
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:159
+msgid "Next"
+msgstr "Tiếp"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Formats"
+msgstr "Định dạng"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+msgid "File uploaded successfully"
+msgstr "Tệp tin đã được tải lên thành công"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:459
+msgid "Please enter a headline"
+msgstr "Vui lòng nhập dòng tiêu đề chính"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:463
+msgid "Submission Successful!"
+msgstr "Gửi thành công!"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:93
+msgid "Editor profile"
+msgstr "Tiểu sử biên tập viên"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:95
+msgid ""
+"The editor profile page shows the pages the user has edited, references "
+"they’ve added to a page, and comments they’ve made."
+msgstr ""
+"Trang tiểu sử biên tập viên hiển thị các trang mà người dùng đã chỉnh sửa, "
+"các tài liệu tham chiếu họ đã thêm vào một trang và các nhận xét họ đã viết."
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:105
+msgid "Profile photo"
+msgstr "Ảnh hồ sơ"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:106
+msgid "Click here to upload a picture for your editor profile."
+msgstr "Nhấp vào đây để đăng ảnh cho hồ sơ biên tập viên của bạn."
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:112
+msgid "Enter your profile info"
+msgstr "Nhập thông tin hồ sơ của bạn"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:113
+msgid "(Optional) Enter your name, email, nationality, language, etc."
+msgstr "(Tùy chọn) Nhập tên, email, quốc tịch, ngôn ngữ, v.v."
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:119
+msgid "Link your Everipedia page"
+msgstr "Liên kết trang Everipedia của bạn"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:120
+msgid ""
+"If you already created an Everipedia article about yourself, you can link to "
+"it here."
+msgstr ""
+"Nếu bạn đã tạo một bài viết về Everipedia về bản thân, bạn có thể liên kết "
+"với nó ở đây."
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:126
+msgid "(Optional) Add your cryptocurrency wallet addresses"
+msgstr "(Tùy chọn) Thêm địa chỉ ví tiền điện tử của bạn"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:127
+msgid ""
+"If you have any cryptocurrencies, add the wallet addresses here. People may "
+"donate to you if they like your work! If you do not have a wallet, you can "
+"get one here: <img class='userview-crypto-logo-helper' src='https://epcdn-vz."
+"azureedge.net/static/images/bitcoin-icon.svg'/><a class='helper-crypto-"
+"anchor' rel='nofollow' target='_blank' href='https://www.coinbase."
+"com/'>Bitcoin</a>, <img class='userview-crypto-logo-helper' style='margin-"
+"right: 0px;' src='https://epcdn-vz.azureedge.net/static/images/ethereum-icon."
+"png'/><a class='helper-crypto-anchor' rel='nofollow' target='_blank' "
+"href='https://www.coinbase.com/'>Ethereum</a>, <img class='userview-crypto-"
+"logo-helper' src='https://epcdn-vz.azureedge.net/static/images/dogecoin-logo."
+"png'/><a class='helper-crypto-anchor' rel='nofollow' target='_blank' "
+"href='https://my.dogechain.info/#/overview'>Dogecoin</a> "
+msgstr ""
+"Nếu bạn có bất kỳ loạị tiền điện tử nào, hãy thêm địa chỉ ví tại đây. Mọi "
+"người có thể quyên góp cho bạn nếu họ thích những gì bạn đã làm! Nếu bạn "
+"không có ví, bạn có thể tạo ví tại đây: <img class='userview-crypto-logo-"
+"helper' src='https://epcdn-vz.azureedge.net/static/images/bitcoin-icon.svg'/"
+"> <a class='helper-crypto-anchor' rel='nofollow' target='_blank' "
+"href='https://www.coinbase.com/'>Bitcoin</a> , <img class='userview-crypto-"
+"logo-helper' style='margin-right: 0px;' src='https://epcdn-vz.azureedge.net/"
+"static/images/ethereum-icon.png'/> <a class='helper-crypto-anchor' "
+"rel='nofollow' target='_blank' href='https://www.coinbase.com/'>Ethereum</"
+"a> , <img class='userview-crypto-logo-helper' src='https://epcdn-vz."
+"azureedge.net/static/images/dogecoin-logo.png'/> <a class='helper-crypto-"
+"anchor' rel='nofollow' target='_blank' href='https://my.dogechain.info/#/"
+"overview'>Dogecoin</a>"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:133
+msgid "Save changes"
+msgstr "Lưu thay đổi"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:134
+msgid "When you are done, click here to save your changes."
+msgstr "Khi bạn hoàn tất, hãy nhấp vào đây để lưu các thay đổi của bạn."
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:140
+msgid "Create Page"
+msgstr "Tạo trang"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:141
+msgid "You can also create a new wiki article by clicking here."
+msgstr "Bạn cũng có thể tạo một bài viết wiki mới bằng cách nhấp vào đây."
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:157
+msgid "Pre"
+msgstr "Trước"

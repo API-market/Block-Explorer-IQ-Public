@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html>
+<head>
+    <!--[if gte mso 9]><xml>
+     <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+     </o:OfficeDocumentSettings>
+    </xml><![endif]-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width">
+    <!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]-->
+    <meta name="description" content="Everipedia is a free and easy to use wiki platform. Write about anyone and anything!">
+    <style>
+        *{
+            font-family: Garamond, Times;
+        }
+        .welcome-ct .welcome-img-container{
+            text-align: center;
+            width: 100%;
+            float: left;
+        }
+        .welcome-ct .main-block{
+            width: 100%;
+            float: left;
+        }
+        .welcome-ct .welcome-img{
+            width:200px;
+        }
+        .welcome-ct .button-group{
+            float:left;
+            width:100%;
+            margin: 20px 0px;
+            text-align: center;
+            border-radius: 2px;
+        }
+        .welcome-ct .register-social-box {
+            width:100%;
+            float: left;
+            text-align: center;
+            margin: 20px 0px 20px 0px;
+        }
+
+        .welcome-ct .register-social-box .social-logo-box {
+            margin: 10px;
+        }
+
+        .welcome-ct .register-social-box .social-logo-box img {
+            width: 45px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="welcome-ct">
+        <div class="col-md-7 col-xs-12 main-block">
+            <div class="col-md-5 welcome-img-container">
+                <img class="welcome-img" src="https://epcdn-vz.azureedge.net/static/images/iphoneEP.png"/>
+            </div>
+            <h1 class="tagline">WELCOME TO EVERIPEDIA <strong>{{ tagcontent }}</strong></h1>
+            <h2>Everipedia is a next generation online encyclopedia built for the twenty-first century.</h2>
+            <h3>Redesigned for the modern age</h3> Everipedia is an encyclopedia modernized and re-designed for the twenty-first century. Our editing interface makes creating and editing wiki's as easy as using Facebook.
+            <h3>Over 6 million articles</h3> Everipedia already contains all of Wikipedia's articles plus over a million additional articles created by the Everipedia community.
+            <h3>Open and welcoming community</h3> Our vibrant community is open and welcoming to people from all backgrounds. Our guidelines and policies are based on common sense rather than strict bureaucracy.
+            <div class="button-group">
+                <a href="https://everipedia.org/create_page/advanced_edit/?key=" class="main-button" style="color: #fff; background-color: #71B8E3; border-color: #66add9; padding: 5px 10px; margin: 10px; text-decoration: none;" >{% trans 'Create a Wiki' %}</a>
+                <a href="https://everipedia.org/wiki/everipedia-faq/" class="main-button" style="color: #fff; background-color: #71B8E3; border-color: #66add9; padding: 5px 10px; margin: 10px; text-decoration: none;" >{% trans "Learn More" %}</a>
+            </div>
+        </div>
+
+        <div class="register-social-box">
+            <a class='social-logo-box' target="_blank"  href="http://facebook.com/everipedia" title="Everipedia on Facebook">
+                <img alt="Facebook" width="45px" height="45px" src="https://epcdn-vz.azureedge.net/static/images/facebook.png"/>
+            </a>
+            <a class='social-logo-box' target="_blank"  href="http://twitter.com/everipedia" title="Everipedia on Twitter">
+                <img alt="Twitter" width="45px" height="45px" src="https://epcdn-vz.azureedge.net/static/images/twitter.png"/>
+            </a>
+            <a class='social-logo-box' target="_blank" href="https://www.reddit.com/r/Everipedia/" title="Everipedia on Reddit">
+                <img alt="Reddit" width="45px" height="45px" src="https://epcdn-vz.azureedge.net/static/images/reddit.png"/>
+            </a>
+            <a class='social-logo-box' target="_blank" href="https://t.me/everipedia" title="Everipedia on Telegram">
+                <img alt="Telegram" width="45px" height="45px" src="https://epcdn-vz.azureedge.net/static/images/telegram.png"/>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

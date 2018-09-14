@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+{% load enterlink_custom_tags %}
+{% load i18n %}
+<html>
+    <head>
+ 
+    <title>{% trans 'Voting' %} - {% trans "Everipedia, the encyclopedia of everything" %}</title>
+    <!-- ' -->
+    <meta name="description" content=" Everipedia is the world’s largest collection of hyperlinks grouped by identity. ">
+	<link rel="canonical" href="https://everipedia.org/contact/" />
+	<!--- Include Header -->
+	{% include "enterlink/headers/header-common.html" %}{% include "enterlink/headers/header-navbar.html" %}
+    <link href="/static/css/howto_welcome.css" rel="stylesheet">
+	<style>
+		.go-back{
+			width: 100%;
+			text-align: center;
+		}
+		.proposal-list{
+			float: left;
+			width: 100%;
+			font-size: 16px;
+		}
+		.proposal-line{
+			float: left;
+			width: 100%;
+			border-top: 1px solid rgba(128,128,128,0.13);
+			border-left: 1px solid rgba(128,128,128,0.13);
+			-webkit-box-shadow: 3px 3px 4px 0px rgba(196,196,196,1);
+			-moz-box-shadow: 3px 3px 4px 0px rgba(196,196,196,1);
+			box-shadow: 3px 3px 4px 0px rgba(196,196,196,1);
+			margin-bottom: 10px;
+			padding: 10px 10px;
+			cursor: pointer;
+		}
+		.proposal-line.propstat-0{
+			background: #ffcc0042;
+			color: #966b00;
+		}
+		.proposal-line.propstat-0:hover{
+			background: lightgoldenrodyellow;
+		}
+		.proposal-line.propstat-1{
+			background: #0080001f;
+			color: darkgreen;
+		}
+		.proposal-line.propstat-1:hover{
+			background: #00800036;
+		}
+		.proposal-line.propstat-2{
+			background: #ff000042;
+			color: darkred;
+		}
+		.proposal-line.propstat-2:hover{
+			background: #ff00001f;
+		}
+		.proposal-line .timespan{
+			font-weight: bold;
+		}
+		.proposal-line .top-block{
+			float: left;
+			width: 100%;
+			background: white;
+			color: #666;
+		}
+		.proposal-line .proposerblock{
+			float: left;
+			display: inline-block;
+			margin-right: 5px;
+			border-right: 1px solid #777;
+			padding-right: 5px;
+			background: #777;
+			color: #f6f6f6;
+			padding-left: 5px;
+		}
+		.proposal-line .bottom-block{
+			float: left;
+			width: 100%;
+			margin-top: 5px;
+			font-size: 15px;
+			word-break: break-all;
+		}
+
+	</style>
+
+</head>
+<body>
+	<div class="contact-ct tablet-compatible">
+	{% if allProposals|length == 0 %}
+		<h1>There are currently no votes in progress for this article</h1>
+		<h3 class="go-back">
+			<a class="" href="/wiki/{{ articleObject.slug }}/">GO BACK</a>
+		</h3>
+	{% else %}
+		<h1>{% trans "Voting History" %}</h1>
+		<table class="proposal-list">
+		{% for proposal in allProposals %}
+			<tr class="proposal-line propstat-{{ proposal.status }}" data-oldhash="{{ proposal.old_article_hash }}" data-newhash="{{ proposal.proposed_article_hash }}">
+				<td class="top-block">
+					<div class="proposerblock">{{ proposal.proposer }}</div>
+					<span class="timespan">
+						<span class="starttime">{{ proposal.starttime|print_timestamp }}</span>
+						<span class="icon icon-minus"></span>
+						<span class="endtime">{{ proposal.endtime|print_timestamp }}</span>
+					</span>
+				</td>
+				<td class="bottom-block">
+					<span class="oldhash">{{ proposal.old_article_hash }}</span>
+					<span class="icon icon-arrow-long-right"></span>
+					<span class="newhash">{{ proposal.proposed_article_hash }}</span>
+				</td>
+			</tr>
+		{% endfor %}
+		</table>
+	{% endif %}
+	</div>
+
+<script>
+	$(".proposal-line").on("click", function () {
+	    window.location.href = window.location.origin + "/AJAX-REQUEST/AJAX_Fetch_Blurb_Compare/" + $(this).attr("data-newhash") + "/" + $(this).attr("data-oldhash") + "/";
+    });
+
+</script>
+
+<!--- Everipedia Footer -->
+{% include "enterlink/footers/footer.html" %}
+{#{% include "enterlink/footers/deferredJS.html" %}#}
+{% include 'enterlink/inline-css/application.html' %}
+{% include 'enterlink/headers/extra-analytics-right-before-body-end.html' %}
+</body>
+</html>

@@ -1,0 +1,116 @@
+<script>
+// URI encoder
+function encodeData(inputString){
+    return encodeURIComponent(inputString).replace(/\-/g, "%2D").replace(/\./g, "%2E").replace(/\!/g, "%21").replace(/\~/g, "%7E").replace(/\*/g, "%2A").replace(/\'/g, "%27").replace(/\(/g, "%28").replace(/\)/g, "%29");
+}
+
+// Initialize tooltips (hovercards / bubbles) for blue links (to articles) on desktop pages
+// Optional selectionObject parameter initializes them only in the specified selector
+function initializeTooltippables(selectionObject) {
+    // Declare variables
+    var ttblSelectionObj, ttblCaratSelectionObj, posToUse, tipContents;
+
+    // Determine if the selector is present, otherwise the entire page will be searched for .tooltippable and .tooltippableCarat classes
+    if (selectionObject !== undefined) {
+        ttblSelectionObj = $(selectionObject).find('.tooltippable');
+        ttblCaratSelectionObj = $(selectionObject).find('.tooltippableCarat');
+        posToUse = {
+            viewport: $(window),
+            adjust: {y: 175}
+        };
+        tipContents = {};
+    }
+    else {
+        ttblSelectionObj = $('.tooltippable');
+        tblCaratSelectionObj = $('.tooltippableCarat');
+        posToUse = {
+            viewport: $(window),
+            my: "top center",
+            at: "center",
+            adjust: {
+                screen: true,
+                y: 10
+            }
+        };
+        tipContents = {width: 15, height: 15};
+    }
+
+    // Set the hide delay for the tooltip
+    var hideDelay = 1000;
+
+    // Loop through all the tooltippables and tooltippableCarats
+    ttblSelectionObj.each(function () {
+        // Get the article slug from the tooltip
+        var articleSlug = $(this).data('username');
+
+        // Set the URL for the hoverblurb
+        var workingLink = "/hoverblurb/" + articleSlug + "/";
+
+        // Keeps track so only one hoverblurb appears on the page at once
+        var visitedOnce = false;
+        var eThis = this;
+
+        // Get some elements to apply the tooltip to
+        $(this).qtip({
+            content: $('<iframe class="tooltip_iframe" src="' + workingLink + '" sandbox="allow-forms ' +
+                'allow-scripts allow-same-origin allow-pointer-lock allow-popups allow-top-navigation" frameborder="yes" ' +
+                'seamless="seamless" scrolling="no" width="1000px" height="310px"/>'),
+            show: {
+                solo: true,
+                delay: 50,
+                leave: false,
+                effect: function () {
+                    $(this).fadeIn(400);
+                }
+            },
+            hide: {
+                event: false,
+                delay: hideDelay,
+                fixed: true, // <--- add this
+                //leave: false,
+                effect: function () {
+                    $(this).fadeOut(250);
+                }
+            },
+            position: posToUse,
+            style: {
+                width: {
+                    min: 5000
+                },
+                tip: tipContents
+            },
+            events: {
+                show: function (event, api) {
+                    var tooltip = api.elements.tooltip;
+                    // Make sure only one hoverblurb appears on the page at once
+                    tooltip.bind('mouseover touchstart', function (event, api) {
+                        visitedOnce = true;
+                    });
+                    $(eThis).bind('mouseleave touchend', function (event, api) {
+                        //alert("mouse left the anchor, starting countdown");
+                        setTimeout(function () {
+                            //alert("Time's up");
+                            if (!visitedOnce && !$(eThis).is(':hover')) {
+                                //alert("Not visited or hovered, so closing");
+                                $(tooltip).qtip('hide');
+                                visitedOnce = false;
+                            }
+                            else {
+                                //alert("Visited, so not closing");
+                            }
+                        }, 1000);
+                    });
+                    tooltip.bind('mouseleave touchend', function (event, api) {
+                        visitedOnce = false;
+                        $(tooltip).qtip('hide');
+                    });
+
+                },
+
+            },
+        });
+    });
+}
+
+
+</script>

@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+{% load i18n %}
+{% language LANG_OVERRIDE %}
+{% load humanize %}
+{% load enterlink_custom_tags %}
+{% spaceless %}
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#FFFFFF">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,600&amp;subset=latin-ext" rel="stylesheet">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    {% if PREFETCH_LOAD_YOUTUBE_JS %}
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    {% endif %}
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    {% if PREFETCH_LOAD_AUDIO_JS %}
+        <script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
+    {% endif %}
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    {% if not PREFETCH_PAGEATTRIBUTE_HIDEADS and not PREFETCH_FBNAME_ISADULTCONTENT %}
+        <script async custom-element="amp-sticky-ad" src="https://cdn.ampproject.org/v0/amp-sticky-ad-1.0.js"></script>
+        <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    {% endif %}
+    {% if PREFETCH_LOAD_VIDEO_JS %}
+        <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+    {% endif %}
+    <meta property="og:type" content="article"/>
+    <meta name="twitter:card" content="summary">
+    {% if IS_REMOVED_FROM_INDEX %}
+        <meta name="robots" content="noindex, nofollow, noarchive">
+    {% endif %}
+
+    {% if PAGEMETADATA.page_type == 'Person' %}
+        <title>{{ PAGETITLE }} | Wiki & Bio | Everipedia</title><!-- ' -->
+        <meta name="description" content="{{ PAGETITLE }}'s wiki: {{PREFETCH_BLURB_255_STRIPPED}}">
+        <meta name="keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} bio, {{ PAGETITLE }} encylopedia">
+        <meta itemprop="keywords" content="{{ PAGETITLE }} news, who is {{ PAGETITLE }}, where is {{ PAGETITLE }}" >
+        <meta name="news_keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} bio, {{ PAGETITLE }} encylopedia">
+        <meta property="og:title" content="{{ PAGETITLE }}"/>
+        <meta name="twitter:title" content="{{ PAGETITLE }} | Wiki & Bio |">
+    {% elif PAGEMETADATA.page_type == 'Product'%}
+        <title>{{ PAGETITLE }} | Wiki & Review | Everipedia</title><!-- ' -->
+        <meta name="description" content="{{ PAGETITLE }}'s wiki: {{PREFETCH_BLURB_255_STRIPPED}}">
+        <meta name="keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} encylopedia, {{ PAGETITLE }} review">
+        <meta itemprop="keywords" content="{{ PAGETITLE }} news, what is {{ PAGETITLE }}" >
+        <meta name="news_keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} encylopedia, {{ PAGETITLE }} review">
+        <meta property="og:title" content="{{ PAGETITLE }}"/>
+        <meta name="twitter:title" content="{{ PAGETITLE }} | Wiki & Review |">
+    {% elif PAGEMETADATA.page_type == 'Organization'%}
+        <title>{{ PAGETITLE }} | Wiki & Review | Everipedia</title><!-- ' -->
+        <meta name="description" content="{{ PAGETITLE }}'s wiki: {{PREFETCH_BLURB_255_STRIPPED}}">
+        <meta name="keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} history, {{ PAGETITLE }} encylopedia">
+        <meta itemprop="keywords" content="{{ PAGETITLE }} news, what is {{ PAGETITLE }}, where is {{ PAGETITLE }}" >
+        <meta name="news_keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} history, {{ PAGETITLE }} encylopedia">
+        <meta property="og:title" content="{{ PAGETITLE }}"/>
+        <meta name="twitter:title" content="{{ PAGETITLE }} | Wiki & Review |">
+    {% else %}
+        <title>{{ PAGETITLE }} | Wiki | Everipedia</title><!-- ' -->
+        <meta name="description" content="{{ PAGETITLE }}'s wiki: {{PREFETCH_BLURB_255_STRIPPED}}">
+        <meta name="keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} encylopedia">
+        <meta itemprop="keywords" content="{{ PAGETITLE }} news, what is {{ PAGETITLE }}" >
+        <meta name="news_keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} encylopedia">
+        <meta property="og:title" content="{{ PAGETITLE }}"/>
+        <meta name="twitter:title" content="{{ PAGETITLE }} | Wiki |">
+    {% endif %}
+
+    <meta property="article:tag" content="{{ PAGETITLE }}">
+    <meta property="article:published_time" content="{{ PAGEMETADATA.creation_timestamp }}" />
+    <meta property="article:modified_time" content="{{ PAGEMETADATA.last_modified }}" />
+    <meta property="og:image" content="{{ PHOTOOBJECT.url }}" />
+    <meta property="og:image" content="{{ PHOTOOBJECT.thumb }}" />
+    <meta property="og:description" content="{{ PREFETCH_BLURB_255_STRIPPED }}"/>
+    <meta name="og:url" content="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/">
+
+    <meta name="twitter:image" content="{{ PHOTOOBJECT.url }}">
+    <meta name="twitter:image" content="{{ PHOTOOBJECT.thumb }}">
+    <meta name="twitter:description" content="{{ PREFETCH_BLURB_255_STRIPPED }}">
+    <meta name="twitter:url" content="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/">
+
+    <meta property="fb:app_id" content="1617004011913755" />
+    <meta property="fb:pages" content="328643504006398"/>
+    <meta property="article:author" content="https://www.facebook.com/everipedia">
+
+    <link rel="canonical" href="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/" />
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    {{ compressedCSSBlob|safe }}
+    </head>
+    {% endspaceless %}
+    <body>
+    <nav class="amp-header-bar">
+        <ul>
+            <li class="amp-header-toc">
+                <button on='tap:sidebar.toggle'>
+                    <amp-img height="24.3438" width="30" layout="fixed" alt="{% trans 'Table of contents and facts for this wiki' %}" src="https://epcdn-vz.azureedge.net/static/images/bull-icon.png"/></amp-img>
+                </button>
+            </li>
+            <li class="amp-header-logo">
+                <a rel='nofollow' href="https://iqnetwork.io">
+                    <amp-img width='45' height='36' layout='fixed' src='https://epcdn-vz.azureedge.net/static/images/Everipedia_Logo.svg' alt='Everipedia Logo' ></amp-img>
+                </a>
+            </li>
+            <li class="amp-header-menu">
+                <button on='tap:guestmenu-lightbox'>
+                   <span class="bull-menu">
+                       <amp-img height="25" width="7" layout="fixed" alt={% trans 'Bullet' %} src="https://epcdn-vz.azureedge.net/static/images/bull-menu.png"/></amp-img>
+                   </span>
+                </button>
+            </li>
+            <li class="amp-header-search">
+                <button on="tap:search-lightbox" data-description="Search Bar"><span class="svgIcon svgIcon--search svgIcon--25px u-textColorNormal u-baseColor--iconLight"><svg class="svgIcon-use" width="30" height="30" viewBox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg></span></button>
+            </li>
+
+        </ul>
+    </nav>
+    <main id="mainEntityId" itemscope itemtype="http://schema.org/NewsArticle" itemid="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/" class="schema">
+        {% if PAGEMETADATA.page_type == 'Person' %}
+            <meta itemprop="keywords" content="{{ PAGETITLE }} wiki, {{ PAGETITLE }} bio" >
+        {% elif PAGEMETADATA.page_type == 'Product'%}
+            <meta itemprop="keywords" content="{{ PAGETITLE }} wiki, {{ PAGETITLE }} review">
+        {% elif PAGEMETADATA.page_type == 'Organization'%}
+            <meta itemprop="keywords" content="{{ PAGETITLE }} wiki, {{ PAGETITLE }} review">
+        {% else %}
+            <meta itemprop="keywords" content="{{ PAGETITLE }} wiki, {{ PAGETITLE }} history, {{ PAGETITLE }} review">
+        {% endif %}
+
+
+
+        <article class="schema-wrap" itemprop="about" itemscope itemtype="http://schema.org/{% if PageAttr.sub_page_type != None %}{{ PageAttr.sub_page_type }}{% elif PAGEMETADATA.page_type != None %}{{ PAGEMETADATA.page_type }}{% else %}Thing{% endif %}">
+            {% if PAGEMETADATA.page_type == 'Person' %}
+            <abbr itemprop="homeLocation" itemscope itemtype="http://schema.org/Place" />
+                <meta itemprop="name" content="Earth" />
+            </abbr>
+            {% endif %}
+            {% if PHOTOOBJECT.url != None %}
+                <meta itemprop="image" content="{{ PHOTOOBJECT.url }}">
+            {% else %}
+                <meta itemprop="image" content="https://epcdn-vz.azureedge.net/static/images/logo_1050x1050.png">
+            {% endif %}
+            {% if PHOTOOBJECT.url != None and PHOTOOBJECT.url != '' %}
+                <figure class="blurb-photo-container" id="toc-top">
+                {% if PHOTOOBJECT.attribution_url != None and PHOTOOBJECT.attribution_url != '' %}
+                    <a class="blurb-photo-anchor" href="{{ PHOTOOBJECT.attribution_url}}" rel="nofollow" target="_blank">
+                {% else %}
+                    <a class="blurb-photo-anchor" href="{{ PHOTOOBJECT.url }}" rel="nofollow" target="_blank">
+                {% endif %}
+                        {% if photoData.2 == 'image/gif' %}
+                            <amp-anim id="mainphoto" itemprop="image" width='{{ photoData.0 }}' height='{{ photoData.1 }}' layout='responsive' src="{{ PHOTOOBJECT.url }}" alt="{% if PAGEMETADATA.page_type == 'Person' %}{{ PAGETITLE }} wiki, {{ PAGETITLE }} bio{% elif PAGEMETADATA.page_type == 'Product'%}{{ PAGETITLE }} wiki, {{ PAGETITLE }} review{% elif PAGEMETADATA.page_type == 'Organization'%}{{ PAGETITLE }} wiki, {{ PAGETITLE }} review, {{ PAGETITLE }} history{% else %}{{ PAGETITLE }} wiki, {{ PAGETITLE }} history{% endif %}">
+                                <amp-img class="mainphoto-placeholder" placeholder width=1050 height=1050 layout='responsive' src="{{ PHOTOOBJECT.thumb }}"></amp-img>
+                            </amp-anim>
+                        {% else %}
+                            <amp-img id="mainphoto" itemprop="image" width='{{ photoData.0 }}' height='{{ photoData.1 }}' layout='responsive' src="{{ PHOTOOBJECT.url }}" alt="{% if PAGEMETADATA.page_type == 'Person' %}{{ PAGETITLE }} wiki, {{ PAGETITLE }} bio{% elif PAGEMETADATA.page_type == 'Product'%}{{ PAGETITLE }} wiki, {{ PAGETITLE }} review{% elif PAGEMETADATA.page_type == 'Organization'%}{{ PAGETITLE }} wiki, {{ PAGETITLE }} review, {{ PAGETITLE }} history{% else %}{{ PAGETITLE }} wiki, {{ PAGETITLE }} history{% endif %}">
+                                <amp-img placeholder width=100 height=100 layout='responsive' src="{{ PHOTOOBJECT.thumb }}"></amp-img>
+                            </amp-img>
+                        {% endif %}
+                    </a>
+                </figure>
+            {% else %}
+                <div class="noavatar-filler"></div>
+            {% endif %}
+
+            {% if PHOTOOBJECT.caption != None and PHOTOOBJECT.caption != '' %}
+                <figcaption class="mainphoto-caption">{{ ampSanitizedPhotoComment|safe }}</figcaption>
+            {% endif %}
+
+            <aside id="welcomeBanner">
+                {{ SITE_NOTICE|safe }}
+                <!--<strong>{% trans 'Recent news' %}:</strong> {% trans 'Everipedia IQ tokens are now in circulation on the EOS mainnet. Follow Everipedia on' %} <a rel="nofollow" target="_blank" href="https://t.me/everipedia">Telegram</a> and <a rel="nofollow" class="reddit-link" target="_blank" href="https://www.reddit.com/r/Everipedia/">Reddit</a> {% trans 'to learn about upcoming features and developments!' %}-->
+            </aside>
+
+
+            <div class="name-container">
+
+            <h1>
+                <span>{{ PAGETITLE }}</span>
+            </h1>
+            {% if PAGEMETADATA.page_type == 'Person' %}
+                <amp-anim height='1' width='1' layout='fixed' class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} news, who is {{ PAGETITLE }}, where is {{ PAGETITLE }}" ></amp-anim>
+                <amp-anim height='1' width='1' layout='fixed' class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} real name, how old is {{ PAGETITLE }}" ></amp-anim>
+            {% elif PAGEMETADATA.page_type == 'Product'%}
+                <amp-anim height='1' width='1' layout='fixed' class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} news, what is {{ PAGETITLE }}" ></amp-anim>
+            {% elif PAGEMETADATA.page_type == 'Organization'%}
+                <amp-anim height='1' width='1' layout='fixed' class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} news, what is {{ PAGETITLE }}, where is {{ PAGETITLE }}" ></amp-anim>
+            {% else %}
+                <amp-anim height='1' width='1' layout='fixed' class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} news, what is {{ PAGETITLE }}" ></amp-anim>
+            {% endif %}
+
+            <div id="title-buttonset">
+                <div class="tlbx-ct-wrapper">
+                    <div class="tlbx-ct">
+                        <ul>
+                            <li><button on="tap:share-lightbox" aria-label="Share" class="icon"><i class="fa fa-share-alt"></i></button></li>
+                            <li><a rel='nofollow' href="https://iqnetwork.io/vote/{{ PAGEMETADATA.url_slug }}/" class="icon"><i class="fa fa-archive"></i></a></li>
+                            <li><a rel='nofollow' href="#" class="icon"><i class="fa fa-eye"></i></a>
+                                {% if PAGEMETADATA.pageviews >= 100 %}
+                                <span class="views-nr">{{ PAGEMETADATA.pageviews|intcomma }}</span>
+                                {% endif %}
+                            </li>
+                            {% if PAGEMETADATA.page_type == 'Person' %}
+                                <amp-anim height='1' width='1' layout='fixed' class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} religion, {{ PAGETITLE }} interview, {{ PAGETITLE }} life, {{ PAGETITLE }} website" ></amp-anim>
+                                <amp-anim height='1' width='1' layout='fixed' class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} wife, {{ PAGETITLE }} family, {{ PAGETITLE }} education, {{ PAGETITLE }} measurements, {{ PAGETITLE }} email" ></amp-anim>
+                                <amp-anim height='1' width='1' layout='fixed' class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} phone, {{ PAGETITLE }} salary, {{ PAGETITLE }} address, {{ PAGETITLE }} history, {{ PAGETITLE }} facts" ></amp-anim>
+                                <amp-anim height='1' width='1' layout='fixed' class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} wikipedia, {{ PAGETITLE }} news, who is {{ PAGETITLE }}, where is {{ PAGETITLE }}" ></amp-anim>
+                            {% elif PAGEMETADATA.page_type == 'Product'%}
+                                <amp-anim height='1' width='1' layout='fixed' class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} designer, {{ PAGETITLE }} sales, {{ PAGETITLE }} facts" ></amp-anim>
+                                <amp-anim height='1' width='1' layout='fixed' class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} wikipedia, {{ PAGETITLE }} news, what is {{ PAGETITLE }}" ></amp-anim>
+                            {% elif PAGEMETADATA.page_type == 'Organization'%}
+                                <amp-anim height='1' width='1' layout='fixed' class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} ownership, {{ PAGETITLE }} email, {{ PAGETITLE }} address, {{ PAGETITLE }} phone, {{ PAGETITLE }} headquarters" ></amp-anim>
+                                <amp-anim height='1' width='1' layout='fixed' class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} revenue, {{ PAGETITLE }} employees, {{ PAGETITLE }} location, {{ PAGETITLE }} facts" ></amp-anim>
+                                <amp-anim height='1' width='1' layout='fixed' class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} wikipedia, {{ PAGETITLE }} news, what is {{ PAGETITLE }}, where is {{ PAGETITLE }}" ></amp-anim>
+                            {% else %}
+                                <amp-anim height='1' width='1' layout='fixed' class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} information, {{ PAGETITLE }} definition, {{ PAGETITLE }} timeline, {{ PAGETITLE }} location" ></amp-anim>
+                                <amp-anim height='1' width='1' layout='fixed' class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} wikipedia, {{ PAGETITLE }} news, what is {{ PAGETITLE }}" ></amp-anim>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+            
+
+            <div class="entry-content" id="first-paragraph" itemprop="description">
+                <div class="entry-content-inner-wrap">
+                    {{splitBlurbSet.0|safe}}
+                </div>
+            </div>
+            
+            {% if NONPLURAL_INFOBOXES|length > 0 or PLURAL_INFOBOXES|length > 0 or BLOBBOX|length > 0 %}
+            <amp-accordion class="infobox-accordion">
+                <section id="infobox_section" class="infobox-main-wrap" expanded>
+                    <h2 class="qf-header">
+                        {% if PAGEMETADATA.page_type == 'Person' %}
+                            {% trans 'Quick Biography' %}
+                        {% else %}
+                            {% trans 'Quick Facts For This Wiki' %}
+                        {% endif %}
+                        <span class="icon"><i class="fa fa-chevron-down"></i></span></h2>
+                    <div >
+                        {% if NONPLURAL_INFOBOXES|length > 0 or PLURAL_INFOBOXES|length > 0 or BLOBBOX|length > 0%}
+                            <div class="infbx-ct">
+                                {{ ampSanitizedInfobox|safe }}
+                            </div>
+                        {% endif %}
+                        
+                    </div>
+                </section>
+            </amp-accordion>
+            {% endif %}
+
+
+                <div class="entry-content" itemprop="description">
+                    <div class="entry-content-inner-wrap">
+                        {{splitBlurbSet.1|safe}}
+                    </div>
+                </div>
+
+            </article>
+        
+
+            {% if MEDIA_OBJECTS|length > 0 %}
+                <span id="gallery" class="toc-span-fix"></span>
+                <amp-accordion>
+                    <section expanded>
+                        <h2 class="acc-header" id="mediaGallery">{% trans 'Image & Video Gallery' %}
+                            <span class="icon"><i class="fa fa-chevron-down"></i>
+                                <amp-anim class='micro-image' height="10" width="10" layout="fixed" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} {% trans 'images, pictures, and videos' %}" />
+                            </span>
+                        </h2>
+                        <div class="pic-video-container">
+                            <!--<h6>{% trans 'Gallery' %} - ({{ MEDIA_OBJECTS|length }})</h6>-->
+                            <div class="photo-gallery">
+                                {{ ampSanitizedPhotoGallery|safe }}
+                            </div>
+                        </div>
+                    </section>
+                </amp-accordion>
+            {% endif %}
+
+
+            {% if CITATION_OBJECTS|length > 0 %}
+            <div id="link_list_container_mobile_wrapper">
+            <span id="referenceList" class="toc-span-fix"></span>
+            <amp-accordion>
+            <section expanded>
+                <h2 class="acc-header">
+                    {% if PAGEMETADATA.page_type == 'Person' %}
+                        {% trans 'Reference Links For This Biography' %}
+                    {% else %}
+                        {% trans 'Reference Links For This Wiki' %}
+                    {% endif %}
+                    <span class="icon"><i class="fa fa-chevron-down"></i>
+                        <amp-anim class='micro-image' height="10" width="10" layout="fixed" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{% trans 'Links to historical reviews, career / educational facts, and other encyclopedic information' %}" />
+                    </span>
+                </h2>
+                <div class="l-lst-header" id="link_list_container">
+                    <div class="ll-wrapper">
+                        <div class="disclaimer">{% trans 'All information for' %} {{ PAGETITLE }}'s {% trans 'wiki comes from the below links. Any source is valid, including Twitter, Facebook, Instagram, and LinkedIn. Pictures, videos, biodata, and files relating to' %} {{ PAGETITLE }} {% trans 'are also acceptable encyclopedic sources.' %}</div>
+                        <ul class="l-lst">
+                            <!-- For using on everipedia.com, not on AMP -->
+                            {{ ampSanitizedLinkset|safe }}
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            </amp-accordion>
+                
+            <span id="seeAlsoPanel" class="toc-span-fix"></span>
+            <amp-accordion id="seeAlsoPanelContainer" >
+            <section expanded>
+                <h2 class="acc-header" >{% trans 'See Also' %}
+                    <span class="icon"><i class="fa fa-chevron-down"></i>
+                        <amp-anim class='micro-image' height="10" width="10" layout="fixed" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{% trans 'See related encyclopedia articles, biographies, reviews, and historical facts.' %}" />
+                    </span>
+                </h2>
+                <div>
+                    <div class="disclaimer">{% trans 'Other wiki pages related to' %} {{ PAGETITLE }}.</div>
+                    {% if SEEALSOS.3 %}
+                        <a class='sa-ancr-wrp' href="/wiki/{{SEEALSOS.3.slug}}/">
+                            {% with picture_type=SEEALSOS.3.photo_thumb_url|get_picture_type_from_url %}
+                                {% if picture_type == 'PICTURE' %}
+                                    <amp-img layout="fixed-height" height=80 src="{{SEEALSOS.3.photo_thumb_url}}" alt="{{SEEALSOS.3.page_title}} wiki">
+                                        <amp-img fallback layout="fixed-height" height=80 src="{{SEEALSOS.3.photo_thumb_url}}" alt="Placeholder for {{SEEALSOS.3.page_title}}"></amp-img>
+                                    </amp-img>
+                                {% elif picture_type == 'GIF' %}
+                                    <amp-anim layout="fixed-height" height=80 src="{{SEEALSOS.3.photo_thumb_url}}" alt="{{SEEALSOS.3.page_title}} wiki">
+                                        <amp-img fallback layout="fixed-height" height=80 src="{{SEEALSOS.3.photo_thumb_url}}" alt="Placeholder for {{SEEALSOS.3.page_title}}"></amp-img>
+                                    </amp-anim>
+                                {% else %}
+                                    <div class="sa-noimg"></div>
+                                {% endif %}
+                            {% endwith %}
+                            <div class="sa-contentwrap">
+                                <div class="sa-title">{{SEEALSOS.3.page_title}}</div>
+                                <!--<div class="sa-blurb">{{SEEALSOS.3.blurb.blurbcontent|safe|striptags}}</div>-->
+                            </div>
+                        </a>
+                    {% endif %}
+
+                    {% if SEEALSOS.4 %}
+                        <a class='sa-ancr-wrp' href="/wiki/{{SEEALSOS.4.slug}}/">
+                            {% with picture_type=SEEALSOS.4.photo_thumb_url|get_picture_type_from_url %}
+                                {% if picture_type == 'PICTURE' %}
+                                    <amp-img layout="fixed-height" height=80 src="{{SEEALSOS.4.photo_thumb_url}}" alt="{{SEEALSOS.4.page_title}} wiki">
+                                        <amp-img layout="fixed-height" height=80 src="{{SEEALSOS.4.photo_thumb_url}}" alt="Placeholder for {{SEEALSOS.4.page_title}}"></amp-img>
+                                    </amp-img>
+                                {% elif picture_type == 'GIF' %}
+                                    <amp-anim layout="fixed-height" height=80 src="{{SEEALSOS.4.photo_thumb_url}}" alt="{{SEEALSOS.4.page_title}} wiki">
+                                        <amp-img layout="fixed-height" height=80 src="{{SEEALSOS.4.photo_thumb_url}}" alt="Placeholder for {{SEEALSOS.4.page_title}}"></amp-img>
+                                    </amp-anim>
+                                {% else %}
+                                    <div class="sa-noimg"></div>
+                                {% endif %}
+                            {% endwith %}
+                            <div class="sa-contentwrap">
+                                <div class="sa-title">{{SEEALSOS.4.page_title}}</div>
+                                <!--<div class="sa-blurb">{{SEEALSOS.4.blurb.blurbcontent|safe|striptags}}</div>-->
+                            </div>
+                        </a>
+                    {% endif %}
+
+                    {% if SEEALSOS.2 %}
+                        <a class='sa-ancr-wrp' href="{{ SEEALSOS.2.target_url }}">
+                            {% if SEEALSOS.2.picture_type == 'PICTURE' %}
+                                <amp-img layout="fixed-height" height=80 src="{{SEEALSOS.2.photo_url}}" alt="{{SEEALSOS.2.see_also_content}} wiki">
+                                    <amp-img layout="fixed-height" height=80 src="https://epcdn-vz.azureedge.net/static/images/white_dot.png" alt="Placeholder for {{SEEALSOS.2.see_also_content}}"></amp-img>
+                                </amp-img>
+                            {% elif SEEALSOS.2.picture_type == 'GIF' %}
+                                <amp-anim layout="fixed-height" height=80 src="{{SEEALSOS.2.photo_url}}" alt="{{SEEALSOS.2.see_also_content}} wiki">
+                                    <amp-img layout="fixed-height" height=80 src="https://epcdn-vz.azureedge.net/static/images/white_dot.png" alt="Placeholder for {{SEEALSOS.2.see_also_content}}"></amp-img>
+                                </amp-anim>
+                            {% else %}
+                                <div class="sa-noimg"></div>
+                            {% endif %}
+                            <div class="sa-contentwrap">
+                                <div class="sa-title">{{SEEALSOS.2.see_also_content}}</div>
+                                <!--<div class="sa-blurb">{{SEEALSOS.2.see_also_tag.blurb.blurbcontent|safe|striptags}}</div>-->
+                            </div>
+                        </a>
+                    {% endif %}
+
+
+
+                </div>
+            </section>
+            </amp-accordion>
+
+            </div>
+            {% endif %}
+
+            <meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/"/>
+            <meta itemprop="url" content="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/">
+            {% if PAGEMETADATA.page_type == 'Person' %}
+                <meta itemprop="headline" content="{{ PAGETITLE }}'s biography and wiki on Everipedia">
+            {% elif PAGEMETADATA.page_type == 'Product'%}
+                <meta itemprop="headline" content="{{ PAGETITLE }}'s wiki & review on Everipedia">
+            {% elif PAGEMETADATA.page_type == 'Organization'%}
+                <meta itemprop="headline" content="{{ PAGETITLE }}'s wiki & review on Everipedia">
+            {% else %}
+                <meta itemprop="headline" content="{{ PAGETITLE }}'s wiki on Everipedia">
+            {% endif %}
+            <meta itemprop="text" content="{{ PREFETCH_BLURB_255_STRIPPED }}">
+            <meta itemprop="articleSection" content="News, Trending">
+            <meta itemprop="author" content="Everipedia">
+            <meta itemprop="copyrightHolder" content="Everipedia">
+
+            {% if PHOTOOBJECT.url != None %}
+                <abbr itemprop="image" itemscope itemtype="http://schema.org/ImageObject" />
+                    <meta itemprop="url" content="{{ PHOTOOBJECT.url }}">
+                    <meta itemprop="name" content="{{ PAGETITLE }}">
+                    <meta itemprop="caption" content="{{ PAGETITLE }}">
+                    <meta itemprop="uploadDate" content="{{ PAGEMETADATA.last_modified }}">
+                    <meta itemprop="height" content="300">
+                    <meta itemprop="width" content="300">
+                </abbr>
+            {% else %}
+                <abbr itemprop="image" itemscope itemtype="http://schema.org/ImageObject" />
+                    <meta itemprop="url" content="https://epcdn-vz.azureedge.net/static/images/logo_1050x1050.png">
+                    <meta itemprop="name" content="{{ PAGETITLE }}">
+                    <meta itemprop="caption" content="{{ PAGETITLE }}">
+                    <meta itemprop="uploadDate" content="{{ PAGEMETADATA.last_modified }}">
+                    <meta itemprop="height" content="300">
+                    <meta itemprop="width" content="300">
+                </abbr>
+            {% endif %}
+
+            <abbr itemprop="publisher" itemid="https://everipedia.org/" itemscope itemtype="https://schema.org/Organization">
+                <meta itemprop="name" content="Everipedia">
+                <meta itemprop="legalName" content="Everipedia International">
+                <meta itemprop="name" content="Everipedia International">
+                <meta itemprop="sameAs" content="https://twitter.com/everipedia">
+                <meta itemprop="sameAs" content="https://www.facebook.com/everipedia/">
+                <abbr itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+                    <meta itemprop="url" content="https://epcdn-vz.azureedge.net/static/images/logo_1050x1050.png">
+                    <meta itemprop="width" content="1050">
+                    <meta itemprop="height" content="1050">
+                </abbr >
+            </abbr >
+            <meta itemprop="datePublished" content="{{ PAGEMETADATA.creation_timestamp }}"/>
+            <meta itemprop="dateModified" content="{{ PAGEMETADATA.last_modified }}"/>
+
+            <span class="hidden-meta">
+                {% for media in mediaNewLinks %} 
+                {% if media.2 == "PICTURE" %} 
+                <abbr itemprop="image" itemscope itemtype="http://schema.org/ImageObject" />
+                    <meta itemprop="url" content="{{ media.0 }}">
+                    <meta itemprop="name" content="{{ PAGETITLE }} Image #{{ forloop.counter }}">
+                    <meta itemprop="caption" content="{{ media.1|striptags }}">
+                    <meta itemprop="uploadDate" content="{{ media.6 }}">
+                    <meta itemprop="height" content="300">
+                    <meta itemprop="width" content="300">
+                </abbr>
+                {% endif %}
+                {% if media.2 == "GIF" %} 
+                    <abbr itemprop="image" itemscope itemtype="http://schema.org/ImageObject" />
+                        <meta itemprop="url" content="{{ media.0 }}">
+                        <meta itemprop="name" content="{{ PAGETITLE }} GIF Image #{{ forloop.counter }}">
+                        <meta itemprop="caption" content="{{ media.1|striptags }}">
+                        <meta itemprop="uploadDate" content="{{ media.6 }}">
+                        <meta itemprop="height" content="300">
+                        <meta itemprop="width" content="300">
+                    </abbr>
+                {% endif %}
+                {% if media.2 == "YOUTUBE" %} 
+                    <abbr itemprop="video" itemscope itemtype="http://schema.org/VideoObject" />
+                        <meta itemprop="url" content="{{ media.0 }}">
+                        <meta itemprop="name" content="{{ PAGETITLE }} YouTube Video #{{ forloop.counter }}">
+                        <meta itemprop="description" content="{{ media.1|striptags }}">
+                        <meta itemprop="thumbnailUrl" content="https://i.ytimg.com/vi/{{ media.3 }}/hqdefault.jpg">
+                        <meta itemprop="uploadDate" content="{{ media.6 }}">
+                        <meta itemprop="height" content="300">
+                        <meta itemprop="width" content="300">
+                    </abbr>
+                {% endif %}
+                {% if media.2 == "NORMAL_VIDEO" %} 
+                    <abbr itemprop="video" itemscope itemtype="http://schema.org/VideoObject" />
+                        <meta itemprop="url" content="{{ media.0 }}">
+                        <meta itemprop="name" content="{{ PAGETITLE }} Video #{{ forloop.counter }}">
+                        <meta itemprop="description" content="{{ media.1|striptags }}">
+                        <meta itemprop="thumbnailUrl" content="{{ PHOTOOBJECT.url_FOR_OG }}">
+                        <meta itemprop="uploadDate" content="{{ media.5 }}">
+                        <meta itemprop="height" content="300">
+                        <meta itemprop="width" content="300">
+                    </abbr>
+                {% endif %}
+                 {% endfor %}
+            </span>
+
+
+        </main>
+    </div>
+
+</div>
+
+<div class="page-times">
+    <div>{% trans 'Created' %}: <span id="page_create_time">{{ PAGEMETADATA.creation_timestamp }}</span></div>
+    <div>{% trans 'Last Modified' %}: <span id="page_last_modified_time">{{ PAGEMETADATA.last_modified }}</span></div>
+    <div>{% trans 'IPFS' %}: <span id="page_last_modified_time">{{ CURRENT_IPFS_HASH }}</span></div>
+</div>
+
+
+<footer class="footer everi_footer">
+    <div class="footer-wrapper">
+        <amp-anim class='gif-pixel-fix' width=1 height=1 alt="GIF Pixel" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+            <amp-img placeholder width=1 height=1 src="https://epcdn-vz.azureedge.net/static/images/white_dot.png">
+            </amp-img>
+        </amp-anim>
+        <div class="footer-links">
+            <a href="/everipedia/">{% trans 'About' %}</a>
+            <a href="/wiki/everipedia-faq/">{% trans 'FAQ' %}</a>
+            <a href="/contact/">{% trans 'Contact' %}</a>
+            <a rel="nofollow" href="https://www.reddit.com/r/Everipedia/">{% trans 'Forum' %}</a>
+            <a href="/wiki/everipedia-terms/">{% trans 'Terms' %}</a>
+            <a href="/exchange-listings/">{% trans 'Get IQ' %}</a>
+        </div>
+        <div class="footer-separator"></div>
+        <div class="copyright">
+          <amp-img class='cc-img' width="15" height="15" layout='fixed' alt="Creative Commons" src="https://epcdn-vz.azureedge.net/static/images/cc.png"/></amp-img>&nbsp;<span>2018 Everipedia International</span>
+            <amp-img class='cayman-flag-footer' width="21" height="20" layout='fixed' alt="Cayman Flag" src="https://epcdn-vz.azureedge.net/static/images/flags/cayman_flag.svg"/></amp-img>
+            <span class="disclaimer">{% trans 'By using this website, you agree to the' %} <a href="/wiki/everipedia-terms/">{% trans 'Terms of Use' %}</a>. {% trans 'Everipedia® is a trademark of Everipedia International' %}.</span>
+        </div>
+    </div>
+    <div class="footer-social">
+        <a class='social-logo' href="http://facebook.com/everipedia" title="Everipedia on Facebook">
+            <amp-img height="26" width="26" layout="fixed" alt="Facebook" src="https://epcdn-vz.azureedge.net/static/images/facebook.png"/></amp-img>
+        </a>
+        <a class='social-logo' href="http://twitter.com/everipedia" title="Everipedia on Twitter">
+            <amp-img height="26" width="26" layout="fixed" alt="Twitter" src="https://epcdn-vz.azureedge.net/static/images/twitter.png"/></amp-img>
+        </a>
+            <a class='social-logo' href="https://www.reddit.com/r/Everipedia/" title="Everipedia on Reddit">
+            <amp-img height="26" width="26" layout="fixed" alt="Reddit" src="https://epcdn-vz.azureedge.net/static/images/reddit.png"/></amp-img>
+        </a>
+        <a class='social-logo' href="https://t.me/everipedia" title="Everipedia on Telegram">
+            <amp-img height="26" width="26" layout="fixed" alt="Telegram" src="https://epcdn-vz.azureedge.net/static/images/telegram.png"/></amp-img>
+        </a>
+    </div>
+    <div class="eos-powered-line">
+        <span id="powered-by-eos">{% trans "Powered by" %} <a class="eos-link" href="https://eos.io/">EOS.IO</a></span>
+        <a class="eos-link" href="https://eos.io/">
+            <amp-img class="eos-footer-img" height="26" width="26" layout="fixed" src="https://epcdn-vz.azureedge.net/static/images/eos-logo.png" ></amp-img>
+        </a>
+        <span id="api-by-libertyblock">{% trans 'API by' %} <a class="liberty-link" href="https://libertyblock.io/">LibertyBlock</a></span>
+        <a class="liberty-link" href="https://eos.io/">
+            <amp-img class="liberty-footer-img" height="40" width="50" layout="fixed" src="https://epcdn-vz.azureedge.net/static/images/libertyblock.png" ></amp-img>
+        </a>
+    </div>
+</footer>
+
+
+
+    <amp-sidebar id='sidebar' layout="nodisplay" side="left">
+        {{ tableOfContentsChunk }}
+    </amp-sidebar>
+
+    {% spaceless %}
+	<amp-lightbox id="guestmenu-lightbox" layout="nodisplay">
+		  <div class="lightbox" tabindex="1" role="menubar">
+
+		    <div class="usermenu-toggle-space" on='tap:guestmenu-lightbox.close' tabindex="3" role="menubar">
+
+		    </div>
+
+		    <div class="usermenu-ct">
+
+	            <div class="usermenu-header">
+		            <div class="usermenu-header-inner">
+
+                    </div>
+	            </div>
+
+	            <div>
+	                <ul>
+					    <li>
+					        <a rel="nofollow" href="/wiki/everipedia-faq/">
+					            <span class="icon"><i class="fa fa-question"></i></span>
+					            <div class="fixed-items-description">{% trans 'Help' %}</div>
+					        </a>
+					    </li>
+
+                        <li>
+					        <a rel="nofollow" href="https://www.reddit.com/r/Everipedia/">
+					            <span class="icon"><i class="fa fa-list"></i></span>
+					            <div class="fixed-items-description">{% trans 'Forum' %}</div>
+					        </a>
+					    </li>
+                        <li>
+                            <a rel="nofollow" href="/recent-activity/">
+                                <span class="icon"><i class="fa fa-bolt"></i></span>
+                                <div class="fixed-items-description">{% trans 'Feed' %}</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a rel="nofollow" href="/language-selector/">
+                                <span class="icon"><i class="fa fa-language"></i></span>
+                                <div class="fixed-items-description">{% trans 'Language' %}</div>
+                            </a>
+                        </li>
+                </div>
+	                </ul>
+	            </div>
+		    </div>
+		  </div>
+	</amp-lightbox>
+
+    <amp-lightbox id="search-lightbox" layout="nodisplay">
+	  <div class="lightbox" tabindex="3" role="search">
+	    <div class="search-lb-ct">
+			<div class="global-search" id="searchfield_index">
+                <amp-iframe
+                    sandbox="allow-scripts allow-pointer-lock allow-popups allow-top-navigation allow-same-origin"
+                    layout="flex-item"
+                    frameborder="0"
+                    src="https://www.iqnetwork.io/search/iframe/">
+                    <div placeholder></div>
+                </amp-iframe>
+			</div>
+			<div class="search-toggle-space-bottom" on='tap:search-lightbox.close' tabindex="5" role="button">
+			</div>
+	    </div>
+	  </div>
+	</amp-lightbox>
+
+    <amp-lightbox id="toped-ltbx" layout="nodisplay">
+	<span class="lb-button close-toped-ltbx"><button on='tap:toped-ltbx.close'></button></span>
+	  <div class="lightbox" tabindex="6" role="note">
+
+	    <div class="te-ct">
+            <div class="top-page-editor-header">
+            <h2>{% trans "Top Page Editors" %}</h2>
+            </div>
+            <!--<div class="top-editors">-->
+                <!--<amp-iframe-->
+                    <!--sandbox="allow-scripts allow-pointer-lock allow-popups allow-top-navigation"-->
+                    <!--layout="flex-item"-->
+                    <!--frameborder="0"-->
+                    <!--src="https://www.iqnetwork.io/AJAX-REQUEST/AJAX_Fetch_Geniuses/{{ PREFETCH_FBNAME_ID }}/?amp=1">-->
+                    <!--<div placeholder></div>-->
+                <!--</amp-iframe>-->
+            <!--</div>-->
+	    </div>
+
+	  </div>
+	</amp-lightbox>
+	<amp-lightbox id="share-lightbox" layout="nodisplay">
+	<span class="lb-button cls-shr-lgbx"><button  on='tap:share-lightbox.close'></button></span>
+    <nav class="lightbox" tabindex="7" role="widget">
+        <div class="share-ct">
+            <div class="share-ct-inner">
+                <h2>{% trans 'Share this page' %}</h2>
+                <div class="social-share-block-wrap">
+                    <div class="social-share-block">
+                        <a class="email social-share-btn" rel='nofollow' href="mailto:email@email.com?&body=https://iqnetwork.io/wiki/{{ PAGEMETADATA.url_slug }}/"></a>
+                        <a class="facebook social-share-btn" rel='nofollow' href="https://www.facebook.com/sharer/sharer.php?u=https://iqnetwork.io/wiki/{{ PAGEMETADATA.url_slug }}/"></a>
+                        <a class="twitter social-share-btn" rel='nofollow' href="http://twitter.com/share?text=https://iqnetwork.io/wiki/{{ PAGEMETADATA.url_slug }}/"></a>
+                        <a class="reddit social-share-btn" rel='nofollow' href="https://reddit.com/submit?url=https://iqnetwork.io/wiki/{{ PAGEMETADATA.url_slug }}/"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="share-pad"></div>
+            <div class="share-ct-link">
+                <h4>{% trans 'DIRECT LINK' %}</h4>
+                <a href="https://iqnetwork.io/wiki/{{ PAGEMETADATA.url_slug }}/">https://iqnetwork.io/wiki/{{ PAGEMETADATA.url_slug }}/</a>
+            </div>
+            <div class="share-pad"></div>
+            <div class="share-hshtgs">
+                <div class="suggested-tags">{% trans 'Suggested Hashtags' %}</div>
+                <div class="social-share-block-wrap">
+                    <ul class="tag-list">
+                        {% if PAGEMETADATA.page_type == 'Person' %}
+                            <li>{{ PAGETITLE }} wiki</li>
+                            <li>{{ PAGETITLE }} bio</li>
+                            <li>{{ PAGETITLE }} net worth</li>
+                            <li>{{ PAGETITLE }} age</li>
+                            <li>{{ PAGETITLE }} married</li>
+                        {% elif PAGEMETADATA.page_type == 'Product'%}
+                            <li>{{ PAGETITLE }} wiki</li>
+                            <li>{{ PAGETITLE }} review</li>
+                            <li>{{ PAGETITLE }} history</li>
+                            <li>{{ PAGETITLE }} sales</li>
+                            <li>{{ PAGETITLE }} facts</li>
+                        {% elif PAGEMETADATA.page_type == 'Organization'%}
+                            <li>{{ PAGETITLE }} wiki</li>
+                            <li>{{ PAGETITLE }} review</li>
+                            <li>{{ PAGETITLE }} history</li>
+                            <li>{{ PAGETITLE }} founders</li>
+                            <li>{{ PAGETITLE }} facts</li>
+                        {% else %}
+                            <li>{{ PAGETITLE }} wiki</li>
+                            <li>{{ PAGETITLE }} review</li>
+                            <li>{{ PAGETITLE }} history</li>
+                            <li>{{ PAGETITLE }} encyclopedia</li>
+                            <li>{{ PAGETITLE }} facts</li>
+                        {% endif %}
+
+                    </ul>
+                </div>
+            </div>
+            <div class="share-pad"></div>
+            <div class="share-ct-link qr-code-container">
+                <h4>{% trans 'QR Code' %}</h4>
+                <amp-iframe
+                    sandbox="allow-scripts allow-pointer-lock allow-popups allow-top-navigation"
+                    layout="fixed"
+                    height="225"
+                    width="216"
+                    frameborder="0"
+                    src="https://www.iqnetwork.io/AJAX-REQUEST/AJAX_QR_Code_Iframe/{{ PAGEMETADATA.url_slug }}/">
+                    <div placeholder></div>
+                </amp-iframe>
+            </div>
+
+
+        </div>
+    </nav>
+	</amp-lightbox>
+
+    
+    <!-- Lightbox declarations -->
+    {{splitBlurbSet.2|safe}}
+
+    <amp-pixel src="https://iqnetwork.io/pagecounter/{{ PAGEMETADATA.url_slug }}/"></amp-pixel>
+
+    <amp-analytics type="googleanalytics" id="analytics1">
+          <script type="application/json">
+            {
+              "vars": {
+                "account": "UA-57561457-6"
+              },
+              "triggers": {
+                "trackPageview": {
+                  "on": "visible",
+                  "request": "pageview",
+                  "vars": {
+                    "title": "{{ PAGETITLE }}"
+                  }
+                }
+              }
+            }
+          </script>
+    </amp-analytics>
+    <amp-analytics type="quantcast">
+        <script type="application/json">
+        {
+          "vars": {
+          "pcode": "p-zX_L0rFEaESwg",
+          "labels": ["AMPProject","AMP" ]
+          }
+        }
+        </script>
+    </amp-analytics>
+
+</body>
+
+    <script type="application/ld+json">
+        {
+          "@context":"http://schema.org",
+          "@type":"ItemList",
+          "itemListElement":[
+            {
+              "@type":"ListItem",
+              "position":1,
+              "url":"https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/"
+            },
+            {
+              "@type":"ListItem",
+              "position":2,
+              "url":"https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/advanced_edit/history/"
+            }
+          ]
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@id": "https://everipedia.org",
+              "name": "Everipedia",
+              "image": "https://epcdn-vz.azureedge.net/static/images/logo_1050x1050.png"
+            }
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@id": "https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/",
+              "name": "{{ PAGETITLE }}",
+              "image": "{{ PHOTOOBJECT.url_FOR_OG }}"
+            }
+          }]
+        }
+    </script>
+</html>
+{% endspaceless %}
+{% endlanguage %}

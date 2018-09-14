@@ -1,0 +1,588 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-25 08:59-0700\n"
+"PO-Revision-Date: 2018-07-30 20:26-0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.1.1\n"
+
+#: static/js/easytimer.min.js:7
+msgid "secondTenthsUpdated"
+msgstr "सेकंड का दसवां हिस्सा अपडेट किया गया"
+
+#: static/js/easytimer.min.js:7
+msgid "secondsUpdated"
+msgstr "सेकंड अपडेट किये गए"
+
+#: static/js/easytimer.min.js:7
+msgid "minutesUpdated"
+msgstr "मिनट अपडेट किये गए"
+
+#: static/js/easytimer.min.js:7
+msgid "hoursUpdated"
+msgstr "घंटे अपडेट किये गए"
+
+#: static/js/easytimer.min.js:7
+msgid "daysUpdated"
+msgstr "दिन अपडेट किये गए"
+
+#: static/js/easytimer.min.js:7
+msgid "targetAchieved"
+msgstr "लक्ष्य हासिल"
+
+#: static/js/easytimer.min.js:7
+msgid "stopped"
+msgstr "रोका गया"
+
+#: static/js/easytimer.min.js:7
+msgid "started"
+msgstr "शुरू हो गया"
+
+#: static/js/easytimer.min.js:7
+msgid "paused"
+msgstr "रुका हुआ"
+
+#: static/js/easytimer.min.js:7
+msgid "reset"
+msgstr "रिसेट करें"
+
+#: static/js/facebook_sdk_local.min.js:4
+msgid "Cancel"
+msgstr "रद्द करें"
+
+#: static/js/facebook_sdk_local.min.js:4
+msgid "Loading..."
+msgstr "शुरू हो रहा है..."
+
+#: static/js/facebook_sdk_local.min.js:4
+msgid "js_sdk_force_status_on_load"
+msgstr "js_sdk_force_status_on_load"
+
+#: static/js/facebook_sdk_local.min.js:5
+msgid "auth.logout"
+msgstr "auth.logout"
+
+#: static/js/plugins/citepicture/plugin.min.js:16
+#: static/js/plugins/citepicture/plugin.min.js:17
+#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:16
+#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:17
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Media"
+msgstr "मीडिया"
+
+#: static/js/plugins/citesource/plugin.min.js:15
+#: static/js/plugins/citesource/plugin.min.js:16
+#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:15
+#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:16
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Cite"
+msgstr "उद्धृत करें"
+
+#: static/js/plugins/linkpage/plugin.min.js:1
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:1
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Search Everipedia"
+msgstr "Everipedia खोजें"
+
+#: static/js/plugins/linkpage/plugin.min.js:17
+#: static/js/plugins/linkpage/plugin.min.js:18
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:17
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:18
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Link"
+msgstr "लिंक"
+
+#: static/js/plugins/mention/plugin.min.js:374
+#: static/tinymce_4.2.3/plugins/mention/plugin.min.js:374
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:162
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:165
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:212
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:215
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:54
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:112
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:115
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:224
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:227
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:331
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:334
+msgid "Cite as verified editor"
+msgstr "सत्यापित संपादक के रूप में उद्धृत करें"
+
+#: static/js/plugins/rollups/plugin.min.js:3
+#: static/js/plugins/savepage/plugin.min.js:6
+#: static/js/plugins/savepage/plugin.min.js:7
+#: static/tageditor/jquery.tag-editor.js:335
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:3
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:6
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:7
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:191
+msgid "Save"
+msgstr "सहेजें"
+
+#: static/js/plugins/rollups/plugin.min.js:4
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:4
+msgid "Edit"
+msgstr "संपादित करें"
+
+#: static/js/plugins/rollups/plugin.min.js:11
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
+msgid "Font Style"
+msgstr "फॉन्ट शैली"
+
+#: static/js/plugins/rollups/plugin.min.js:11
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
+msgid "Style"
+msgstr "शैली"
+
+#: static/tageditor/jquery.tag-editor.js:584
+#: static/tageditor/jquery.tag-editor.js:587
+#: static/tageditor/jquery.tag-editor.js:590
+msgid "Add an additional description for this category"
+msgstr "इस श्रेणी के लिए एक अतिरिक्त विवरण जोड़ें"
+
+#: static/tageditor/jquery.tag-editor.js:584
+#: static/tageditor/jquery.tag-editor.js:587
+#: static/tageditor/jquery.tag-editor.js:590
+msgid "Delete this tag"
+msgstr "इस टैग को हटाएं"
+
+#: templates/enterlink/brainpowermgmt.html:142
+msgid "Claim"
+msgstr "प्राप्त करें"
+
+#: templates/enterlink/brainpowermgmt.html:142
+msgid "Not Ready"
+msgstr "तैयार नहीं है"
+
+#: templates/enterlink/dropzone.html:157
+msgid "Drag and drop your photo here or click to upload."
+msgstr "अपनी तस्वीर को यहाँ खींचें और छोड़ें या अपलोड करने के लिए क्लिक करें।"
+
+#: templates/enterlink/dropzone.html:182
+msgid "Please enter a description for the photo"
+msgstr "कृपया तस्वीर के लिए विवरण डालें"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:89
+msgid "Adding infobox item, please wait..."
+msgstr "इंफोबॉक्स सामग्री जुड़ रही है, कृपया प्रतीक्षा करें..."
+
+#: templates/enterlink/edit_ajax_addlink.html:64
+msgid "Adding, please wait..."
+msgstr "जुड़ रहा है, कृपया प्रतीक्षा करें.."
+
+#: templates/enterlink/edit_ajax_addlink.html:71
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:354
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:457
+msgid ""
+"You have been posting a lot of links today. Wait a bit for the community to "
+"respond to your content. New editors are limited to posting only 250 "
+"submissions a day."
+msgstr ""
+"आज आपने बहुत सारे लिंक पोस्ट कर दिए हैं। आपकी सामग्री के लिए प्रतिक्रियाकरने के लिए कृपया "
+"थोड़ी देर समुदाय की प्रतीक्षा करें। नए संपादक एक दिन मेंकेवल 250 लिंक जमा कर सकते हैं।"
+
+#: templates/enterlink/edit_ajax_addlink.html:75
+msgid ""
+"This link is already on this page, you can still edit the link summary to "
+"improve the information on EP!"
+msgstr ""
+"यह लिंक पहले से इस पृष्ठ पर है, आप EP पर जानकारी को बेहतर बनाने के लिए अभी भी "
+"लिंकसारांश संपादित कर सकते हैं!"
+
+#: templates/enterlink/edit_ajax_addlink.html:79
+msgid ""
+"Links to Wikipedia pages are not allowed, for technical reasons. Please try "
+"again."
+msgstr "तकनीकी कारणों से विकिपीडिया पृष्ठों के लिंक की अनुमति नहीं है। कृपया पुन:प्रयास करें।"
+
+#: templates/enterlink/edit_ajax_addlink.html:83
+msgid "No URL provided, please try again"
+msgstr "कोई यूआरएल प्रदान नहीं किया गया, कृपया पुनः प्रयास करें"
+
+#: templates/enterlink/edit_ajax_addlink.html:87
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:362
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:465
+msgid "Please provide a description for the link or file."
+msgstr "कृपया लिंक या फाइल के लिए विवरण प्रदान करें।"
+
+#: templates/enterlink/edit_ajax_addlink.html:91
+msgid "Please provide a more scholarly description."
+msgstr "कृपया ज्यादा ज्ञानपूर्ण विवरण प्रदान करें।"
+
+#: templates/enterlink/edit_ajax_addlink.html:109
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+msgid "File uploaded successfully."
+msgstr "फाइल सफलतापूर्वक अपलोड किया गया"
+
+#: templates/enterlink/edit_ajax_addlink.html:141
+#: templates/enterlink/inline-js/edit-bottom.html:16
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+msgid "Add File"
+msgstr "फाइल जोड़ें"
+
+#: templates/enterlink/edit_ajax_addlink.html:148
+#: templates/enterlink/inline-js/edit-bottom.html:17
+msgid "Add Link"
+msgstr "लिंक जोड़ें"
+
+#: templates/enterlink/headers/scatter-header.html:130
+msgid "Claim Rewards"
+msgstr ""
+
+#: templates/enterlink/index.html:236
+msgid "Loading more activity, please wait..."
+msgstr "और अधिक गतिविधि लोड हो रही है, कृपया प्रतीक्षा करें ..."
+
+#: templates/enterlink/index.html:260
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+msgid "Create page"
+msgstr "पृष्ठ बनाएं"
+
+#: templates/enterlink/inline-js/edit-bottom.html:12
+msgid ""
+"Please stake some IQ into Brainpower before continuing. Click OK to open the "
+"Brainpower management screen in a new tab. NOTE: Please make sure popups are "
+"enabled for this site, as you may receive a warning."
+msgstr ""
+"जारी रखने से पहले कृपया ब्रेनपावर में कुछ आईक्यू स्टैक करें। नए टैब में ब्रेनपावर प्रबंधनस्क्रीन "
+"खोलने के लिए ठीक है पर क्लिक करें। ध्यान दें: कृपया इस साइट के लिए पॉपअपसक्षम करना ना "
+"भूलें, क्योंकि आपको चेतावनी मिल सकती है।"
+
+#: templates/enterlink/inline-js/edit-bottom.html:13
+msgid ""
+"Note that you will not be able to propose edits without Brainpower. Your "
+"work will be lost!"
+msgstr ""
+"ध्यान दें, आप ब्रेनपावर के बिना संपादन का प्रस्ताव नहीं दे पाएंगे। आपका कामसमाप्त हो जायेगा!"
+
+#: templates/enterlink/inline-js/edit-bottom.html:14
+msgid "Error: proposal not found. Please try submitting again."
+msgstr "त्रुटि: प्रस्ताव नहीं मिला। कृपया दोबारा जमा करने का प्रयास करें।"
+
+#: templates/enterlink/inline-js/edit-bottom.html:15
+msgid "Article proposal submission failed!"
+msgstr "लेख प्रस्ताव जमा विफल हुआ!"
+
+#: templates/enterlink/inline-js/edit-bottom.html:18
+msgid "Add New Infobox"
+msgstr "नया इंफोबॉक्स जोड़ें"
+
+#: templates/enterlink/inline-js/edit-bottom.html:19
+msgid "Completing transaction..."
+msgstr "लेनदेन पूरा हो रहा है ..."
+
+#: templates/enterlink/inline-js/edit-bottom.html:141
+msgid "Add Row"
+msgstr "पंक्ति जोड़ें"
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:56
+msgid "Are you sure you want to remove this link?"
+msgstr "क्या आप निश्चित रूप से यह लिंक हटाना चाहते हैं?"
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:162
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:166
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:212
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:216
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:55
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:112
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:116
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:224
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:228
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:331
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:335
+msgid "Cite my own knowledge / experience as a verified editor"
+msgstr "सत्यापित संपादक के रूप में मेरा अपना ज्ञान / अनुभव उद्धृत करें"
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:347
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:451
+msgid "Posting comment, please wait.."
+msgstr "टिप्पणी पोस्ट की जा रही है, कृपया प्रतीक्षा करें.."
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:358
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:461
+msgid "This comment is already on this page. Please try again!"
+msgstr "यह टिप्पणी पहले से इस पृष्ठ पर है। कृपया पुन: प्रयास करें!"
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:450
+msgid "Posting reply, please wait.."
+msgstr "जवाब पोस्ट हो रहा है, कृपया प्रतीक्षा करें.."
+
+#: templates/enterlink/inline-js/enterlink-ajax-execute-search.html:139
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:52
+msgid "Searching..."
+msgstr "खोज रहा है..."
+
+#: templates/enterlink/inline-js/enterlink-ajax-execute-search.html:167
+msgid "Merging..."
+msgstr "मिलाया जा रहा है..."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:94
+msgid "Are you sure you want to exit the page? Unsaved changes will be lost."
+msgstr ""
+"क्या आप निश्चित रूप से इस पृष्ठ से बाहर निकलना चाहते हैं? नहीं सहेजे गए परिवर्तन समाप्त हो "
+"जाएंगे।"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:180
+msgid "Introduction"
+msgstr "परिचय"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:180
+msgid ""
+"Everipedia is just like Wikipedia but much simpler to edit and contribute. "
+"Each page is composed of an infobox area for short concise facts, a main "
+"article written in a neutral 3rd person tense, a media gallery of pictures, "
+"videos, audio etc about the topic, a list of references to webpages and "
+"files that are used as citations in the article and infobox."
+msgstr ""
+"Everipedia बिलकुल विकिपीडिया जैसा है लेकिन इसे संपादित करना और इसमें योगदान करनाकहीं "
+"ज्यादा आसान है। प्रत्येक पृष्ठ में संक्षिप्त तथ्यों के लिए एक इंफोबॉक्स क्षेत्र, तटस्थ अन्य पुरुष "
+"कालमें लिखित एक मुख्य लेख, विषय के बारे में तस्वीरों, विडियो, ऑडियो आदि की मीडिया गैलरी, "
+"वेबपृष्ठों केलिए सन्दर्भों की सूची और लेख में उद्धरण के रूप में प्रयोग की जाने वालीफाइलें और "
+"इंफोबॉक्स शामिल होते हैं।"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:181
+msgid "Main photo"
+msgstr "मुख्य तस्वीर"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:181
+msgid "Here you can add the main photo for the article."
+msgstr "यहाँ आप लेख के लिए मुख्य तस्वीर जोड़ सकते हैं।"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:182
+msgid "Infobox"
+msgstr "इंफोबॉक्स"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:182
+msgid ""
+"The infobox is designed for concise, quick facts. Suggested items appear in "
+"the dropdown depending on the selected topic, but any type of infobox can be "
+"added."
+msgstr ""
+"इंफोबॉक्स को सटीक, संक्षिप्त तथ्यों के लिए निर्मित किया गया है। चयनित विषय के आधार "
+"परड्रॉपडाउन में सुझावित चीजें प्रदर्शित होती हैं, लेकिन किसी भी प्रकार का इंफोबॉक्स जोड़ाजा "
+"सकता है।"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:183
+msgid "Add Links, Files, Etc."
+msgstr "लिंक, फाइल, आदि जोड़ें"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:183
+msgid ""
+"Make sure to cite your sources when adding information to the page by adding "
+"links and files here so you can show where the information is coming from."
+msgstr ""
+"पृष्ठ पर जानकारी डालते समय लिंक्स और फाइल जोड़कर अपने स्त्रोतों को उद्धृत करनाना भूलें ताकि "
+"आप यह दिखा सकें कि जानकारी कहाँ से आ रही है।"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:184
+msgid "Reference links"
+msgstr "संदर्भ लिंक"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:184
+msgid ""
+"As you add links and files, they will show up in the Reference Links "
+"section. You can edit or remove them as well."
+msgstr ""
+"लिंक और फाइल जोड़ने पर, वे संदर्भ लिंक वाले भाग में दिखाई देंगे।आप उन्हें संपादित कर सकते हैं या "
+"हटा सकते हैं।"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:185
+msgid "Media Gallery"
+msgstr "मीडिया गैलरी"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:185
+msgid "Added pictures will show up here."
+msgstr "जोड़ी गयी तस्वीरें यहाँ दिखाई देंगी।"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
+msgid "Add media to article text"
+msgstr "लेख में मीडिया जोड़ें"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
+msgid "To add an image or video to the article text, click the 'Media' button."
+msgstr "लेख टेक्स्ट में कोई छवि या वीडियो जोड़ने के लिए, 'मीडिया' बटन पर क्लिक करें।"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
+msgid "Cite links, files, etc"
+msgstr "लिंक, फाइल, आदि उद्धृत करें"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
+msgid ""
+"After you have already added a link, file, or picture to the page, you can "
+"cite it by clicking the 'Cite' button. You can also press the '^' or '*' "
+"keys when typing and a dropdown should appear."
+msgstr ""
+"पृष्ठ पर लिंक, फाइल या तस्वीर जोड़ने के बाद, 'उद्धृत करें' बटन पर क्लिककरके आप इसे उद्धृत कर "
+"सकते हैं। आप टाइप करते समय '^' या '*' बटन भीदबा सकते हैं और इसके बाद ड्रॉपडाउन दिखाई "
+"देगा।"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:188
+msgid "Link to other Everipedia pages"
+msgstr "अन्य Everipedia पृष्ठों से लिंक करें"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:188
+msgid ""
+"To link to another Everipedia page click the 'Link Page' button. You can "
+"also press the '@' or key when typing and a dropdown should appear. Try to "
+"link to as many pages as necessary to make each page as rich and informative "
+"as possible."
+msgstr ""
+"एक अन्य Everipedia पृष्ठ लिंक करने के लिए 'पृष्ठ लिंक करें' बटन पर क्लिक करें।आप टाइप करते "
+"समय '@' बटन भी दबा सकते हैं और ड्रॉपडाउन दिखाई देगा।प्रत्येक पृष्ठ को ज्यादा से ज्यादा "
+"बेहतर और ज्ञानपूर्ण बनाने के लिए आवश्यकतानुसारज्यादा से ज्यादा पृष्ठों से लिंक करने का प्रयास "
+"करें।"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:189
+msgid "Main article body"
+msgstr "मुख्य लेख भाग"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:189
+msgid ""
+"Write in an objective manner in third person tense, do not include any "
+"marketing speak (exclusive offers, unverifiable claims etc). This is an "
+"encyclopedia, not a social media page."
+msgstr ""
+"अन्य पुरुष काल में वस्तुनिष्ठ रूप में लिखें, कोई विपणन बोली(विशेष ऑफर, अविश्वसनीय दावे आदि) "
+"ना शामिल करें। यह विश्वकोश है,सोशल मीडिया पृष्ठ नहीं।"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:190
+msgid "Title"
+msgstr "शीर्षक"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:190
+msgid "Enter the page title here"
+msgstr "यहाँ पृष्ठ शीर्षक डालें"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:191
+msgid "When you are finished, click here to save your changes."
+msgstr "समाप्त करने के बाद अपने परिवर्तनों को सहेजने के लिए यहाँ क्लिक करें।"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:193
+msgid "Back"
+msgstr "पीछे"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:193
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:159
+msgid "Next"
+msgstr "आगे"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Formats"
+msgstr "फॉर्मेट"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+msgid "File uploaded successfully"
+msgstr "फाइल सफलतापूर्वक अपलोड किया गया"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:459
+msgid "Please enter a headline"
+msgstr "कृपया एक शीर्ष पंक्ति डालें"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:463
+msgid "Submission Successful!"
+msgstr "जमा सफल!"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:93
+msgid "Editor profile"
+msgstr "संपादक प्रोफाइल"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:95
+msgid ""
+"The editor profile page shows the pages the user has edited, references "
+"they’ve added to a page, and comments they’ve made."
+msgstr ""
+"संपादक का प्रोफाइल पृष्ठ प्रयोगकर्ता द्वारा संपादित पृष्ठ, पृष्ठ पर उनके द्वाराजोड़े गए संदर्भ "
+"और उनके द्वारा की गयी टिप्पणियां दिखाता है।"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:105
+msgid "Profile photo"
+msgstr "प्रोफाइल तस्वीर"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:106
+msgid "Click here to upload a picture for your editor profile."
+msgstr "अपनी संपादक प्रोफाइल के लिए तस्वीर अपलोड करने के लिए यहाँ क्लिक करें।"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:112
+msgid "Enter your profile info"
+msgstr "अपनी प्रोफाइल जानकारी डालें"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:113
+msgid "(Optional) Enter your name, email, nationality, language, etc."
+msgstr "(वैकल्पिक) अपना नाम, ईमेल, राष्ट्रीयता, भाषा आदि डालें।"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:119
+msgid "Link your Everipedia page"
+msgstr "अपना Everipedia पृष्ठ लिंक करें"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:120
+msgid ""
+"If you already created an Everipedia article about yourself, you can link to "
+"it here."
+msgstr ""
+"यदि आप अपने बारे में Everipedia लेख निर्मित कर चुके हैं तो आप इसे यहाँलिंक कर सकते हैं।"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:126
+msgid "(Optional) Add your cryptocurrency wallet addresses"
+msgstr "(वैकल्पिक) अपना क्रिप्टोमुद्रा वॉलेट पता डालें"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:127
+msgid ""
+"If you have any cryptocurrencies, add the wallet addresses here. People may "
+"donate to you if they like your work! If you do not have a wallet, you can "
+"get one here: <img class='userview-crypto-logo-helper' src='https://epcdn-vz."
+"azureedge.net/static/images/bitcoin-icon.svg'/><a class='helper-crypto-"
+"anchor' rel='nofollow' target='_blank' href='https://www.coinbase."
+"com/'>Bitcoin</a>, <img class='userview-crypto-logo-helper' style='margin-"
+"right: 0px;' src='https://epcdn-vz.azureedge.net/static/images/ethereum-icon."
+"png'/><a class='helper-crypto-anchor' rel='nofollow' target='_blank' "
+"href='https://www.coinbase.com/'>Ethereum</a>, <img class='userview-crypto-"
+"logo-helper' src='https://epcdn-vz.azureedge.net/static/images/dogecoin-logo."
+"png'/><a class='helper-crypto-anchor' rel='nofollow' target='_blank' "
+"href='https://my.dogechain.info/#/overview'>Dogecoin</a> "
+msgstr ""
+"यदि आपके पास कोई क्रिप्टोमुद्रा है तो यहाँ वॉलेट पता डालें। यदि लोगों को आपका काम पसंद "
+"आता है तो वे यहाँ आपको दान दे सकते हैं!यदि आपके पास वॉलेट नहीं है तो आप यहाँ एक प्राप्त "
+"करसकते हैं: <img class='userview-crypto-logo-helper' src='https://epcdn-vz."
+"azureedge.net/static/images/bitcoin-icon.svg'/> <a class='helper-crypto-"
+"anchor' rel='nofollow' target='_blank' href='https://www.coinbase."
+"com/'>बिटकॉइन</a> , <img class='userview-crypto-logo-helper' style='margin-"
+"right: 0px;' src='https://epcdn-vz.azureedge.net/static/images/ethereum-icon."
+"png'/> <a class='helper-crypto-anchor' rel='nofollow' target='_blank' "
+"href='https://www.coinbase.com/'>Ethereum</a> , <img class='userview-crypto-"
+"logo-helper' src='https://epcdn-vz.azureedge.net/static/images/dogecoin-logo."
+"png'/> <a class='helper-crypto-anchor' rel='nofollow' target='_blank' "
+"href='https://my.dogechain.info/#/overview'>Dogecoin</a>"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:133
+msgid "Save changes"
+msgstr "परिवर्तन सहेजें"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:134
+msgid "When you are done, click here to save your changes."
+msgstr "समाप्त करने के बाद अपने परिवर्तनों को सहेजने के लिए यहाँ क्लिक करें।"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:140
+msgid "Create Page"
+msgstr "पृष्ठ बनाएं"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:141
+msgid "You can also create a new wiki article by clicking here."
+msgstr "आप यहाँ क्लिक करके एक नया विकी लेख भी बना सकते हैं।"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:157
+msgid "Pre"
+msgstr "पूर्व"

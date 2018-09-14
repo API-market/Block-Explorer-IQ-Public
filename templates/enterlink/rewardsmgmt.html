@@ -1,0 +1,296 @@
+{% load i18n %}
+<html>
+    <head>
+    <title>{% trans 'Rewards Management' %} - {% trans "Everipedia, the encyclopedia of everything" %}</title>
+    <!-- ' -->
+    <meta name="description" content=" Everipedia is the world’s largest collection of hyperlinks grouped by identity. ">
+	<link rel="canonical" href="https://everipedia.org/rewards/" />
+	<script src="/static/js/dateformat.min.js"></script>
+	<!--- Include Header -->
+	{% include "enterlink/headers/header-common.html" %}{% include "enterlink/headers/header-navbar.html" %}
+    <link href="/static/css/howto_welcome.css" rel="stylesheet">
+	<style>
+		.go-back{
+			width: 100%;
+			text-align: center;
+		}
+		#NewStakeBox{
+			width: calc(100% - 130px);
+			float: left;
+		}
+		.explanation-ct{
+			    margin: -5px 0px 30px 0px;
+		}
+		.explanation-ct p{
+			margin: 10px 0px;
+			font-size: 18px;
+		}
+		.claim-all-wrap{
+			width: 100%;
+			float: left;
+			text-align: center;
+			margin-bottom: 25px;
+		}
+		.claim-all{
+			background: #acb0fa1f;
+			color: #286195;
+			font-weight: bold;
+			cursor: pointer;
+			padding: 5px 10px;
+			font-size: 25px;
+			border: 1px solid #074989;
+			border-radius: 3px;
+		}
+		.claim-all:hover{
+			background: #798cfa36;
+		}
+		.result-tx, .result-tx-ram{
+			display: none;
+			background: #5ec45e33;
+			color: darkgreen;
+			padding: 5px 10px;
+			font-size: 17px;
+			margin-top: 25px;
+			border-radius: 3px;
+			text-align: center;
+			float: left;
+			width: 100%;
+		}
+		.result-tx .tx-id, .result-tx-ram .tx-id-ram{
+			font-style: italic;
+		}
+		.rewards-list, .rewards-list thead, .rewards-list tbody, .rewards-list tr{
+			width: 100%;
+			float: left;
+			text-align: center;
+		}
+		.rewards-list th, .rewards-list td{
+			text-align: center;
+			width: 20%;
+			border-collapse: collapse;
+			float: left;
+		}
+		.rewards-list tr{
+			text-align: left;
+			font-size: 17px;
+			line-height: 28px;
+			border-bottom: 1px solid #9da9b0;
+		}
+		.rewards-list td{
+			text-align: center;
+			padding-left: 10px;
+		}
+		.rewards-list td.redeem-cell{
+			background: #0080001f;
+			color: darkgreen;
+			font-weight: bold;
+			cursor: pointer;
+			padding-left: 0px;
+		}
+		.rewards-list td.redeem-cell:hover {
+			background: #00800036;
+		}
+		.rewards-list td.final-period{
+			background: #acb0fa1f;
+			color: #286195;
+			font-weight: bold;
+			cursor: pointer;
+			padding-left: 0px;
+		}
+		.rewards-list td.final-period:hover {
+			background: #798cfa36;
+		}
+		.rewards-list .stake-header-row{
+			font-size: 20px;
+		}
+		.rewards-list th.proposal-hash, .rewards-list td.proposal-hash {
+			width: 45%;
+		}
+		.rewards-list th.final-time, .rewards-list td.final-time {
+			width: 25%;
+		}
+		.rewards-list th.final-period, .rewards-list td.final-period {
+			width: 17.5%;
+		}
+		.rewards-list th.redeem-header, .rewards-list td.redeem-cell {
+			width: 12.5%;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="submission_waiting" style="display: none;">
+		<div class="waiting-header">{% trans 'Please wait' %}...</div>
+		<div class="waiting-header-close"><span class="icon icon-squared-cross"></span></div>
+		<div class="submission-wait-wrap">
+			<img src="/static/images/loading2.gif">
+		</div>
+		<script>
+			$(".waiting-header-close").click(function() {
+        		$(this).parent().hide();
+    		});
+		</script>
+	</div>
+
+	<div class="contact-ct tablet-compatible">
+		<h1>{% trans 'Rewards Management' %}</h1>
+
+		<div class="explanation-ct">
+			<p>{% trans 'Here you can claim rewards for the edits and / or votes that you made.' %}</p>
+		</div>
+
+		<div class="claim-all-wrap">
+			<span class="claim-all">{% trans 'Claim all rewards' %}</span>
+		</div>
+		<table class="rewards-list">
+			<thead>
+				<tr class="stake-header-row">
+					<th class="proposal-hash">{% trans 'Proposal Hash' %}</th>
+					<th class="final-time">{% trans 'Finalized Time' %}</th>
+					<th class="final-period">{% trans 'Period' %}</th>
+					<th class="redeem-header">{% trans 'Redeem' %}</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+		<div class="result-tx">
+			<span class="tx-prefix">{% trans 'Redeem successful' %}: </span>
+			<a class="tx-anchor" target="_blank" href="javascript:void(0)"><span class="tx-id"></span></a>
+		</div>
+	</div>
+
+
+<script>
+	var transStrings = [gettext("Redeem"), gettext("Not Ready"), gettext("Process Reward")];
+
+	$(".claim-all").click(function (event) {
+		$('#submission_waiting').show();
+		eos.contract('eparticlectr').then(eparticlectr => {
+			eparticlectr.rewardclmall(scatterAccountName, {
+					authorization: scatterAccountName,
+					permission: "active"
+				}
+			).then(result => {
+				let txID = result.transaction_id;
+				let theURL = "https://bloks.io/transaction/" + txID;
+				$(".tx-anchor").attr("href", theURL);
+				$(".result-tx .tx-id").html(txID);
+				$(".result-tx").show();
+
+				$('#submission_waiting').hide();
+				$(this).parent().remove();
+				refreshRewards();
+				refreshIQ();
+				refreshBrainpower();
+			}).catch(error => {
+				$('#submission_waiting').hide();
+				error = JSON.parse(error).error.details[0].message.replace('condition: assertion failed: ', '');
+				alert(error);
+			});
+		});
+	});
+
+
+	function refreshRewards() {
+	    $('.rewards-list tbody').html("");
+		$.ajax({
+			type: "POST",
+			url: EosNetURL + "/v1/chain/get_table_rows",
+			// cannot filter by staker until secondary indexes are fixed by Dan. Also cannot set stake user as primary key due to uniqueness issues...
+			data: JSON.stringify({"scope":"eparticlectr", "code":"eparticlectr", "table":"rewardstbl", "json": true, "key_type":"name",
+				"index_position":"2", "limit":"999999999999", "lower_bound":scatterAccountName, "upper_bound":scatterAccountNameCharPlusOne}),
+			beforeSend: function( xhr ) {
+			},
+			success: function (data) {
+				var rewardsList = [];
+				$.each(data.rows, function( index, reward ) {
+				    let currentUTC = Math.floor((new Date).getTime()/1000);
+				    // if (currentUTC > (reward.proposal_finalize_time + 60)){
+						let finalDate = new Date(reward.proposal_finalize_time * 1000);
+						let result = dateFormat(finalDate, "mm/dd/yyyy hh:MM:ss TT Z");
+						replacements = {"%PROPOSALHASH%":reward.proposed_article_hash,"%FINALIZETIME%":result, "%REWARDID%": reward.id.toString(), "%PERIOD%": reward.proposal_finalize_period, "%REDEEMTEXT%": transStrings[0], "%PROCESSTEXT%": transStrings[2]};
+						liHTML = '<tr><td class="proposal-hash">%PROPOSALHASH%</td><td class="final-time">%FINALIZETIME%</td><td class="final-period" data-periodid="%PERIOD%">%PROCESSTEXT%</td><td class="redeem-cell" data-rewardid="%REWARDID%">%REDEEMTEXT%</td></tr>';
+						liHTML = liHTML.replace(/%\w+%/g, function(all) {
+							return replacements[all] || all;
+						});
+						$('.rewards-list tbody').append(liHTML);
+					// }
+				});
+
+				$(".final-period").click(function (event) {
+					$('#submission_waiting').show();
+					var periodID = $(this).data("periodid");
+					eos.contract('eparticlectr').then(eparticlectr => {
+						eparticlectr.procrewards(periodID, {
+								authorization: scatterAccountName,
+								permission: "active"
+							}
+						).then(result => {
+						    let txID = result.transaction_id;
+							let theURL = "https://bloks.io/transaction/" + txID;
+							$(".tx-anchor").attr("href", theURL);
+							$(".result-tx .tx-id").html(txID);
+							$(".result-tx").show();
+
+							$('#submission_waiting').hide();
+							$(this).parent().remove();
+							refreshRewards();
+							refreshIQ();
+							refreshBrainpower();
+						}).catch(error => {
+							$('#submission_waiting').hide();
+							error = JSON.parse(error).error.details[0].message.replace('condition: assertion failed: ', '');
+							alert(error);
+						});
+					});
+				});
+
+				$(".redeem-cell").click(function (event) {
+					$('#submission_waiting').show();
+					var rewardID = $(this).data("rewardid");
+					eos.contract('eparticlectr').then(eparticlectr => {
+						eparticlectr.rewardclmid(rewardID, {
+								authorization: scatterAccountName,
+								permission: "active"
+							}
+						).then(result => {
+						    let txID = result.transaction_id;
+							let theURL = "https://bloks.io/transaction/" + txID;
+							$(".tx-anchor").attr("href", theURL);
+							$(".result-tx .tx-id").html(txID);
+							$(".result-tx").show();
+
+							$('#submission_waiting').hide();
+							$(this).parent().remove();
+							refreshRewards();
+							refreshIQ();
+							refreshBrainpower();
+						}).catch(error => {
+							$('#submission_waiting').hide();
+							error = JSON.parse(error).error.details[0].message.replace('condition: assertion failed: ', '');
+							alert(error);
+						});
+					});
+				});
+
+
+				document.dispatchEvent(new CustomEvent("brainpowerListLoaded"));
+			}
+		});
+	}
+
+
+	$(document).on("scatterNavbarDone", function () {
+	    refreshRewards();
+    });
+	
+</script>
+
+<!--- Everipedia Footer -->
+{% include "enterlink/footers/footer.html" %}
+{#{% include "enterlink/footers/deferredJS.html" %}#}
+{% include 'enterlink/inline-css/application.html' %}
+{% include 'enterlink/headers/extra-analytics-right-before-body-end.html' %}
+</body>
+</html>

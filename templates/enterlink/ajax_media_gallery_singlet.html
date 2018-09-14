@@ -1,0 +1,52 @@
+{% load i18n %}
+{% load enterlink_custom_tags %}
+<li class="media-row">
+<table class="mce-item-table">
+<tr>
+    <td class="media-embed-wrap">
+        {% if theLink.category == "PICTURE" or theLink.category == "GIF" %}
+            <img class="media-obj media-picture" src="{{ theLink.url }}" data-thumb="{{ theLink.thumb }}" data-image="{{ theLink.url }}" data-mime="{{ theLink.mime }}"/>
+        {% elif theLink.category == "YOUTUBE" %}
+            <img class="media-obj media-youtube" src="{{ theLink.thumb }}" data-videourl="{{ theLink.url }}" data-mime="youtube" data-width="640" data-height="640"/>
+        {% elif theLink.category == "NORMAL_VIDEO"  %}
+            <video class="media-obj media-video" controls preload="metadata">
+                <source src="{{ theLink.url }}" type="{{ theLink.mime }}">
+                {% trans 'Your browser does not support HTML5 video.' %}
+            </video>
+        {% elif theLink.category == "AUDIO"  %}
+            <audio class="media-obj media-audio" controls preload="metadata">
+                <source src="{{ theLink.url }}" type="{{ theLink.mime }}">
+                 {% trans 'Your browser does not support HTML5 video.' %}
+            </audio>
+        {% endif %}
+    </td>
+    <td class="media-extras-wrap">
+        <table>
+            <tr class="media-caption-wrap">
+                <td class="media-caption">{{ theLink.description|safe }}</td>
+            </tr>
+            <tr class="media-meta-wrap">
+                <td class="media-label no-edit">{% trans 'Type' %}</td>
+                <td class="media-value media-class">{{ theLink.category }}</td>
+                <td class="media-label no-edit">{% trans 'MIME Type' %}</td>
+                <td class="media-value media-mime">{{ theLink.mime }}</td>
+                <td class="media-label no-edit">{% trans 'Timestamp' %}</td>
+                <td class="media-value media-timestamp">{{ theLink.timestamp|json_fix_time }}</td>
+            </tr>
+            <tr class="media-orig-source-wrap">
+                <td class="media-label no-edit">{% trans 'Original URL' %}</td>
+                <td class="media-value media-ogsource">{{ theLink.attribution_url }}</td>
+            </tr>
+        </table>
+    </td>
+</tr>
+</table>
+<div class="button-wrap">
+    <div class="delete-btn-wrap">
+        <span class="icon icon-squared-cross"></span>
+    </div>
+    <div class="add-btn-wrap">
+        <span class="icon icon-squared-plus"></span>
+    </div>
+</div>
+</li>

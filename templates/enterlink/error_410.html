@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+{% load i18n %}
+<html>
+<head>
+    <title>{% trans 'This page has been removed' %}</title><!-- ' -->
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <meta name="description" content="Everipedia is a free and easy to use wiki platform. Write about anyone and anything!">
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-57561457-6', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    {% include 'enterlink/headers/extra-analytics-header.html' %}
+
+
+    <style>
+
+        body *{
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: white;
+        }
+        .page-header{
+            margin-top:0px;
+        }
+        .page-header h1, h4{
+            text-align: center;
+        }
+        .page-header .return-search-btn{
+            color: #3097d1 !important;
+            padding: 5px;
+            border: 1px solid #3097d1 !important;
+            border-radius: 5px;
+            width: auto;
+            display: table;
+            margin: 0 auto;
+        }
+
+        .page-header .return-search-btn:hover{
+            background-color: #fbfbfb;
+        }
+
+        .page-header .return-search-btn a{
+            text-decoration: none;
+            color: #3097d1 !important;
+        }
+
+    </style>
+</head>
+<body class="with-top-navbar" style="padding-top: 140px; overflow-x: hidden;">
+<div class="container" id="abt-ct" style="margin-top:10px;">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <h1>{% trans "This page has been removed" %}!</h1>
+                    <h4 class="return-search-btn"><a rel='nofollow' href="/recent-activity/" >{% trans "Click here to return to recent activity" %}</a></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% include 'enterlink/headers/extra-analytics-right-before-body-end.html' %}
+</body>
+</html>

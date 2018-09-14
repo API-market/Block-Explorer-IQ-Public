@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+  <loc>https://everipedia.org/</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://everipedia.org/recent-activity/</loc>
+  <changefreq>always</changefreq>
+  <priority>1</priority>
+</url>
+<url>
+  <loc>https://everipedia.org/editors/</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://everipedia.org/about/</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://everipedia.org/everipedia-faq/</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://everipedia.org/contact/</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://everipedia.org/wiki/everipedia-terms/</loc>
+  <changefreq>monthly</changefreq>
+</url>
+</urlset>

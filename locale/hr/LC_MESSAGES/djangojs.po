@@ -1,0 +1,673 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-25 08:59-0700\n"
+"PO-Revision-Date: 2018-07-31 15:49-0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Poedit 2.1.1\n"
+
+#: static/js/easytimer.min.js:7
+#, fuzzy
+msgid "secondTenthsUpdated"
+msgstr "secondTenthsUpdated"
+
+#: static/js/easytimer.min.js:7
+#, fuzzy
+msgid "secondsUpdated"
+msgstr "secondsUpdated"
+
+#: static/js/easytimer.min.js:7
+#, fuzzy
+msgid "minutesUpdated"
+msgstr "minutesUpdated"
+
+#: static/js/easytimer.min.js:7
+#, fuzzy
+msgid "hoursUpdated"
+msgstr "hoursUpdated"
+
+#: static/js/easytimer.min.js:7
+#, fuzzy
+msgid "daysUpdated"
+msgstr "daysUpdated"
+
+#: static/js/easytimer.min.js:7
+#, fuzzy
+msgid "targetAchieved"
+msgstr "targetAchieved"
+
+#: static/js/easytimer.min.js:7
+msgid "stopped"
+msgstr "zaustavljeno"
+
+#: static/js/easytimer.min.js:7
+#, fuzzy
+msgid "started"
+msgstr "pokrenuto"
+
+#: static/js/easytimer.min.js:7
+msgid "paused"
+msgstr "pauzirano"
+
+#: static/js/easytimer.min.js:7
+#, fuzzy
+msgid "reset"
+msgstr "resetirano"
+
+#: static/js/facebook_sdk_local.min.js:4
+msgid "Cancel"
+msgstr "Otkazano"
+
+#: static/js/facebook_sdk_local.min.js:4
+msgid "Loading..."
+msgstr "Učitavanje ..."
+
+#: static/js/facebook_sdk_local.min.js:4
+#, fuzzy
+msgid "js_sdk_force_status_on_load"
+msgstr "js_sdk_forsiranje_statusa_kod_učitavanja"
+
+#: static/js/facebook_sdk_local.min.js:5
+#, fuzzy
+msgid "auth.logout"
+msgstr "auth.odjava"
+
+#: static/js/plugins/citepicture/plugin.min.js:16
+#: static/js/plugins/citepicture/plugin.min.js:17
+#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:16
+#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:17
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Media"
+msgstr "Mediji"
+
+#: static/js/plugins/citesource/plugin.min.js:15
+#: static/js/plugins/citesource/plugin.min.js:16
+#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:15
+#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:16
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Cite"
+msgstr "Citiranje"
+
+#: static/js/plugins/linkpage/plugin.min.js:1
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:1
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+#, fuzzy
+msgid "Search Everipedia"
+msgstr "Pretražiti Everipediju"
+
+#: static/js/plugins/linkpage/plugin.min.js:17
+#: static/js/plugins/linkpage/plugin.min.js:18
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:17
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:18
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Link"
+msgstr "Poveznica"
+
+#: static/js/plugins/mention/plugin.min.js:374
+#: static/tinymce_4.2.3/plugins/mention/plugin.min.js:374
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:162
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:165
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:212
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:215
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:54
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:112
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:115
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:224
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:227
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:331
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:334
+#, fuzzy
+msgid "Cite as verified editor"
+msgstr "Citirajte kao verificirani urednik"
+
+#: static/js/plugins/rollups/plugin.min.js:3
+#: static/js/plugins/savepage/plugin.min.js:6
+#: static/js/plugins/savepage/plugin.min.js:7
+#: static/tageditor/jquery.tag-editor.js:335
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:3
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:6
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:7
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:191
+msgid "Save"
+msgstr "Spremiti"
+
+#: static/js/plugins/rollups/plugin.min.js:4
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:4
+msgid "Edit"
+msgstr "Urediti"
+
+#: static/js/plugins/rollups/plugin.min.js:11
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
+#, fuzzy
+msgid "Font Style"
+msgstr "Stil fonta"
+
+#: static/js/plugins/rollups/plugin.min.js:11
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
+msgid "Style"
+msgstr "Stil"
+
+#: static/tageditor/jquery.tag-editor.js:584
+#: static/tageditor/jquery.tag-editor.js:587
+#: static/tageditor/jquery.tag-editor.js:590
+#, fuzzy
+msgid "Add an additional description for this category"
+msgstr "Dodajte dodatni opis za ovu kategoriju"
+
+#: static/tageditor/jquery.tag-editor.js:584
+#: static/tageditor/jquery.tag-editor.js:587
+#: static/tageditor/jquery.tag-editor.js:590
+#, fuzzy
+msgid "Delete this tag"
+msgstr "Izbrisati tu oznaku"
+
+#: templates/enterlink/brainpowermgmt.html:142
+#, fuzzy
+msgid "Claim"
+msgstr "Zahtjevati"
+
+#: templates/enterlink/brainpowermgmt.html:142
+#, fuzzy
+msgid "Not Ready"
+msgstr "Nije spremno"
+
+#: templates/enterlink/dropzone.html:157
+#, fuzzy
+msgid "Drag and drop your photo here or click to upload."
+msgstr ""
+"Ovdje povucite i ispustite svoju fotografiju ili kliknite za učitavanje."
+
+#: templates/enterlink/dropzone.html:182
+#, fuzzy
+msgid "Please enter a description for the photo"
+msgstr "Molimo unesite opis fotografije"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:89
+#, fuzzy
+msgid "Adding infobox item, please wait..."
+msgstr "Dodavanje stavke u zaglavlje, molimo pričekajte ..."
+
+#: templates/enterlink/edit_ajax_addlink.html:64
+#, fuzzy
+msgid "Adding, please wait..."
+msgstr "Dodavanje, pričekajte ..."
+
+#: templates/enterlink/edit_ajax_addlink.html:71
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:354
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:457
+#, fuzzy
+msgid ""
+"You have been posting a lot of links today. Wait a bit for the community to "
+"respond to your content. New editors are limited to posting only 250 "
+"submissions a day."
+msgstr ""
+"Danas ste postavili mnogo poveznica. Pričekajte malo da zajednica odgovori "
+"na vaš sadržaj. Novi urednici ograničeni su za objavljivanje na samo do 250 "
+"podnesaka dnevno."
+
+#: templates/enterlink/edit_ajax_addlink.html:75
+#, fuzzy
+msgid ""
+"This link is already on this page, you can still edit the link summary to "
+"improve the information on EP!"
+msgstr ""
+"Ova poveznica već postoji na ovoj stranici no i dalje možete uređivati "
+"sažetak poveznice kako bi poboljšali informacije na EP!"
+
+#: templates/enterlink/edit_ajax_addlink.html:79
+#, fuzzy
+msgid ""
+"Links to Wikipedia pages are not allowed, for technical reasons. Please try "
+"again."
+msgstr ""
+"Poveznice na stranice Wikipedije nisu dozvoljene, iz tehničkih razloga. "
+"Molimo pokušajte ponovno."
+
+#: templates/enterlink/edit_ajax_addlink.html:83
+#, fuzzy
+msgid "No URL provided, please try again"
+msgstr "Nijedan URL nije naveden, molimo pokušajte ponovo"
+
+#: templates/enterlink/edit_ajax_addlink.html:87
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:362
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:465
+#, fuzzy
+msgid "Please provide a description for the link or file."
+msgstr "Molimo navedite opis poveznice ili datoteke."
+
+#: templates/enterlink/edit_ajax_addlink.html:91
+#, fuzzy
+msgid "Please provide a more scholarly description."
+msgstr "Molimo navedite više znanstvenog opisa."
+
+#: templates/enterlink/edit_ajax_addlink.html:109
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+#, fuzzy
+msgid "File uploaded successfully."
+msgstr "Datoteka je uspješno prenesena."
+
+#: templates/enterlink/edit_ajax_addlink.html:141
+#: templates/enterlink/inline-js/edit-bottom.html:16
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+msgid "Add File"
+msgstr "Dodati datoteku"
+
+#: templates/enterlink/edit_ajax_addlink.html:148
+#: templates/enterlink/inline-js/edit-bottom.html:17
+msgid "Add Link"
+msgstr "Dodati poveznicu"
+
+#: templates/enterlink/headers/scatter-header.html:130
+msgid "Claim Rewards"
+msgstr ""
+
+#: templates/enterlink/index.html:236
+#, fuzzy
+msgid "Loading more activity, please wait..."
+msgstr "Učitavanje više aktivnosti, molimo pričekajte ..."
+
+#: templates/enterlink/index.html:260
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+#, fuzzy
+msgid "Create page"
+msgstr "Kreirati stranicu"
+
+#: templates/enterlink/inline-js/edit-bottom.html:12
+#, fuzzy
+msgid ""
+"Please stake some IQ into Brainpower before continuing. Click OK to open the "
+"Brainpower management screen in a new tab. NOTE: Please make sure popups are "
+"enabled for this site, as you may receive a warning."
+msgstr ""
+"Molimo uložite neki IQ u Brainpower prije nastavka. Kliknite OK da biste "
+"otvorili zaslon za Brainpower upravljanje u novoj kartici. NAPOMENA: Molimo "
+"provjerite jesu li skočni prozori omogućeni za tu web lokaciju jer možda "
+"primite upozorenje."
+
+#: templates/enterlink/inline-js/edit-bottom.html:13
+#, fuzzy
+msgid ""
+"Note that you will not be able to propose edits without Brainpower. Your "
+"work will be lost!"
+msgstr ""
+"Imajte na umu da nećete moći predložiti izmjene bez Brainpowera. Vaš rad će "
+"biti izgubljen!"
+
+#: templates/enterlink/inline-js/edit-bottom.html:14
+#, fuzzy
+msgid "Error: proposal not found. Please try submitting again."
+msgstr "Pogreška: prijedlog nije pronađen. Molimo pokušajte poslati ponovo."
+
+#: templates/enterlink/inline-js/edit-bottom.html:15
+#, fuzzy
+msgid "Article proposal submission failed!"
+msgstr "Podnesak prijedloga članka nije uspio!"
+
+#: templates/enterlink/inline-js/edit-bottom.html:18
+#, fuzzy
+msgid "Add New Infobox"
+msgstr "Dodati novo zaglavlje"
+
+#: templates/enterlink/inline-js/edit-bottom.html:19
+#, fuzzy
+msgid "Completing transaction..."
+msgstr "Dovršetak transakcije ..."
+
+#: templates/enterlink/inline-js/edit-bottom.html:141
+msgid "Add Row"
+msgstr "Dodati red"
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:56
+#, fuzzy
+msgid "Are you sure you want to remove this link?"
+msgstr "Jeste li sigurni da želite ukloniti tu poveznicu?"
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:162
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:166
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:212
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:216
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:55
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:112
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:116
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:224
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:228
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:331
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:335
+#, fuzzy
+msgid "Cite my own knowledge / experience as a verified editor"
+msgstr "Citirajte moje vlastito znanje / iskustvo kao provjerenog urednika"
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:347
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:451
+#, fuzzy
+msgid "Posting comment, please wait.."
+msgstr "Objavljivanje komentara, molimo pričekajte."
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:358
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:461
+#, fuzzy
+msgid "This comment is already on this page. Please try again!"
+msgstr ""
+"Ovaj komentar se već nalazi na ovoj stranici. Molimo pokušajte ponovno!"
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:450
+#, fuzzy
+msgid "Posting reply, please wait.."
+msgstr "Objavljivanje odgovora, molimo pričekajte."
+
+#: templates/enterlink/inline-js/enterlink-ajax-execute-search.html:139
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:52
+msgid "Searching..."
+msgstr "Traženje"
+
+#: templates/enterlink/inline-js/enterlink-ajax-execute-search.html:167
+#, fuzzy
+msgid "Merging..."
+msgstr "Integriranje"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:94
+#, fuzzy
+msgid "Are you sure you want to exit the page? Unsaved changes will be lost."
+msgstr ""
+"Jeste li sigurni da želite izaći sa stranice? Nespremljene promjene bit će "
+"izgubljene."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:180
+msgid "Introduction"
+msgstr "Uvod"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:180
+#, fuzzy
+msgid ""
+"Everipedia is just like Wikipedia but much simpler to edit and contribute. "
+"Each page is composed of an infobox area for short concise facts, a main "
+"article written in a neutral 3rd person tense, a media gallery of pictures, "
+"videos, audio etc about the topic, a list of references to webpages and "
+"files that are used as citations in the article and infobox."
+msgstr ""
+" Everipedija je poput Wikipedije, ali mnogo je jednostavnija za uređivanje i "
+"prilaganje. Svaka stranica se sastoji od područja zaglavlja za kratke sažete "
+"činjenice, glavnog članka napisanog u neutralnom trećem licu, medijske "
+"galerije slika, video, audio i sličnog o toj temi, popisa referenci ka web "
+"stranicama i datotekama koje se koriste kao citati u članku i zaglavlju."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:181
+#, fuzzy
+msgid "Main photo"
+msgstr "Glavna fotografija"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:181
+#, fuzzy
+msgid "Here you can add the main photo for the article."
+msgstr "Ovdje možete dodati glavnu fotografiju za članak."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:182
+#, fuzzy
+msgid "Infobox"
+msgstr "Zaglavlje"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:182
+#, fuzzy
+msgid ""
+"The infobox is designed for concise, quick facts. Suggested items appear in "
+"the dropdown depending on the selected topic, but any type of infobox can be "
+"added."
+msgstr ""
+"Zaglavlje je namijenjeno kratkim i brzim činjenicama. Predložene stavke "
+"prikazuju se na padajućem izborniku ovisno o odabranoj temi, ali se može "
+"dodati bilo koja vrsta zaglavlja."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:183
+#, fuzzy
+msgid "Add Links, Files, Etc."
+msgstr "Dodati veze, datoteke itd."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:183
+#, fuzzy
+msgid ""
+"Make sure to cite your sources when adding information to the page by adding "
+"links and files here so you can show where the information is coming from."
+msgstr ""
+"Obavezno treba navesti svoje izvore prilikom dodavanja informacija na "
+"stranicu tako da ovdje dodajete poveznice i datoteke kako biste mogli "
+"prikazati odakle informacije dolaze."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:184
+#, fuzzy
+msgid "Reference links"
+msgstr "Referentne poveznice"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:184
+#, fuzzy
+msgid ""
+"As you add links and files, they will show up in the Reference Links "
+"section. You can edit or remove them as well."
+msgstr ""
+"Dok dodajete poveznice i datoteke, one će se prikazivati u odjeljku "
+"Referentne veze. Možete ih također i uređivati ili ukloniti."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:185
+#, fuzzy
+msgid "Media Gallery"
+msgstr "Galerija medija"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:185
+#, fuzzy
+msgid "Added pictures will show up here."
+msgstr "Dodavane slike prikazat će se ovdje."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
+#, fuzzy
+msgid "Add media to article text"
+msgstr "Dodajte medije u tekst članka"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
+#, fuzzy
+msgid "To add an image or video to the article text, click the 'Media' button."
+msgstr ""
+"Da biste dodali sliku ili videozapis u tekst članka, kliknite gumb medija."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
+#, fuzzy
+msgid "Cite links, files, etc"
+msgstr "Navedite poveznice, datoteke itd."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
+#, fuzzy
+msgid ""
+"After you have already added a link, file, or picture to the page, you can "
+"cite it by clicking the 'Cite' button. You can also press the '^' or '*' "
+"keys when typing and a dropdown should appear."
+msgstr ""
+"Nakon što ste na stranicu već dodali poveznicu, datoteku ili sliku, možete "
+"ju i citirati klikom na gumb 'Citiraj'. Također možete pritisnuti tipke '^' "
+"ili '*' prilikom upisivanja i pojavit će se padajući izbornik."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:188
+#, fuzzy
+msgid "Link to other Everipedia pages"
+msgstr "Poveznica ka drugim Everipedija stranicama"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:188
+#, fuzzy
+msgid ""
+"To link to another Everipedia page click the 'Link Page' button. You can "
+"also press the '@' or key when typing and a dropdown should appear. Try to "
+"link to as many pages as necessary to make each page as rich and informative "
+"as possible."
+msgstr ""
+"Da biste se povezali s nekom drugom Everipedija stranicom kliknite na gumb "
+"'Link Page'. Također možete pritisnuti tipku '@' ili ključ dok upisujete i "
+"pojavit će se padajući izbornik. Pokušajte se povezati s onoliko stranica "
+"koliko je potrebno kako bi svaka stranica bila što bogatija i informativnija."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:189
+#, fuzzy
+msgid "Main article body"
+msgstr "Glavni dio članka"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:189
+#, fuzzy
+msgid ""
+"Write in an objective manner in third person tense, do not include any "
+"marketing speak (exclusive offers, unverifiable claims etc). This is an "
+"encyclopedia, not a social media page."
+msgstr ""
+"Pišite na objektivan način u trećem licu, nemojte uključivati nikakav "
+"marketinški govor (ekskluzivna ponuda, nepotvrđena potraživanja itd.). Ovo "
+"je enciklopedija, a ne stranica društvenih medija."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:190
+msgid "Title"
+msgstr "Naslov"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:190
+#, fuzzy
+msgid "Enter the page title here"
+msgstr "Ovdje unesite naslov stranice"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:191
+#, fuzzy
+msgid "When you are finished, click here to save your changes."
+msgstr "Kada ste gotovi, kliknite ovdje kako bi spremili promjene."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:193
+msgid "Back"
+msgstr "Natrag"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:193
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:159
+msgid "Next"
+msgstr "Sljedeći"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Formats"
+msgstr "Formati"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+#, fuzzy
+msgid "File uploaded successfully"
+msgstr "Datoteka je uspješno učitana"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:459
+#, fuzzy
+msgid "Please enter a headline"
+msgstr "Molimo unesite naslov"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:463
+#, fuzzy
+msgid "Submission Successful!"
+msgstr "Podnošenje je uspješno!"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:93
+#, fuzzy
+msgid "Editor profile"
+msgstr "Profil urednika"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:95
+#, fuzzy
+msgid ""
+"The editor profile page shows the pages the user has edited, references "
+"they’ve added to a page, and comments they’ve made."
+msgstr ""
+"Stranica profila urednika prikazuje stranice koje je korisnik uređivao, "
+"reference koje su dodavane na stranicu i komentare koji su napravljeni."
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:105
+msgid "Profile photo"
+msgstr "Fotografija profila"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:106
+#, fuzzy
+msgid "Click here to upload a picture for your editor profile."
+msgstr "Kliknite ovdje kako bi učitali sliku za svoj profil urednika."
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:112
+#, fuzzy
+msgid "Enter your profile info"
+msgstr "Unesite podatke o profilu"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:113
+#, fuzzy
+msgid "(Optional) Enter your name, email, nationality, language, etc."
+msgstr "(Neobavezno) Unesite svoje ime, e-mail, nacionalnost, jezik itd."
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:119
+#, fuzzy
+msgid "Link your Everipedia page"
+msgstr "Povežite svoju Everipedija stranicu"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:120
+#, fuzzy
+msgid ""
+"If you already created an Everipedia article about yourself, you can link to "
+"it here."
+msgstr ""
+"Ako ste već stvorili Everipedija članak o sebi, možete ga povezati ovdje."
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:126
+#, fuzzy
+msgid "(Optional) Add your cryptocurrency wallet addresses"
+msgstr "(Neobavezno) Dodajte adrese kripto vrijednosti novčanika"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:127
+#, fuzzy
+msgid ""
+"If you have any cryptocurrencies, add the wallet addresses here. People may "
+"donate to you if they like your work! If you do not have a wallet, you can "
+"get one here: <img class='userview-crypto-logo-helper' src='https://epcdn-vz."
+"azureedge.net/static/images/bitcoin-icon.svg'/><a class='helper-crypto-"
+"anchor' rel='nofollow' target='_blank' href='https://www.coinbase."
+"com/'>Bitcoin</a>, <img class='userview-crypto-logo-helper' style='margin-"
+"right: 0px;' src='https://epcdn-vz.azureedge.net/static/images/ethereum-icon."
+"png'/><a class='helper-crypto-anchor' rel='nofollow' target='_blank' "
+"href='https://www.coinbase.com/'>Ethereum</a>, <img class='userview-crypto-"
+"logo-helper' src='https://epcdn-vz.azureedge.net/static/images/dogecoin-logo."
+"png'/><a class='helper-crypto-anchor' rel='nofollow' target='_blank' "
+"href='https://my.dogechain.info/#/overview'>Dogecoin</a> "
+msgstr ""
+"Ako imate bilo kakve kripto vrijednosti, ovdje dodajte adrese novčanika. "
+"Ljudi vam mogu donirati ako im se sviđa vaš posao! Ako nemate novčanik, "
+"možete ga dobiti ovdje: <img class='userview-crypto-logo-helper' "
+"src='https://epcdn-vz.azureedge.net/static/images/bitcoin-icon.svg'/> <a "
+"class='helper-crypto-anchor' rel='nofollow' target='_blank' href='https://"
+"www.coinbase.com/'>Bitcoin</a> , <img class='userview-crypto-logo-helper' "
+"style='margin-right: 0px;' src='https://epcdn-vz.azureedge.net/static/images/"
+"ethereum-icon.png'/> <a class='helper-crypto-anchor' rel='nofollow' "
+"target='_blank' href='https://www.coinbase.com/'>Ethereum</a> , <img "
+"class='userview-crypto-logo-helper' src='https://epcdn-vz.azureedge.net/"
+"static/images/dogecoin-logo.png'/> <a class='helper-crypto-anchor' "
+"rel='nofollow' target='_blank' href='https://my.dogechain.info/#/"
+"overview'>Dogecoin</a>"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:133
+msgid "Save changes"
+msgstr "Spremiti promjene"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:134
+#, fuzzy
+msgid "When you are done, click here to save your changes."
+msgstr "Kada ste gotovi, kliknite ovdje kako bi spremili promjene."
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:140
+msgid "Create Page"
+msgstr "Kreirati stranicu"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:141
+#, fuzzy
+msgid "You can also create a new wiki article by clicking here."
+msgstr "Također možete napraviti i novi wiki članak klikom ovdje."
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:157
+msgid "Pre"
+msgstr "Prije"

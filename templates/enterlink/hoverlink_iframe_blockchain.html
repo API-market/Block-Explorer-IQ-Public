@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+{% load enterlink_custom_tags %}
+{% load i18n %}
+{% spaceless %}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script>
+        var ARTICLE_SLUG = '{{ARTICLE_SLUG}}';
+        var isMobile = parseInt('{{request.mobile|yesno:"1,0"}}'); var isTablet = parseInt('{{request.tablet|yesno:"1,0"}}');
+    </script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-57561457-6', 'auto');
+        ga('send', 'pageview');
+    </script>
+    {% include 'enterlink/headers/extra-analytics-header.html' %}
+    {% include 'enterlink/inline-css/linkview-css.html' %}
+
+    <style>
+        .mce-tinymce.mce-container.mce-panel{
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        #linkview-ct{
+            width: 100% !important;
+            margin-top: 0px;
+            padding: 0px;
+        }
+
+        #linkview-ct .link-box-left{
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .addcomment-ct .postcomment{
+            width: 100%;
+            margin-top: 0px;
+        }
+    </style>
+</head>
+{% endspaceless %}
+<body>
+	<div class="container linkview-container" id="linkview-ct" style="">
+        <ul class="l-lst">
+            <li class="link-box" id="link-box" style="margin-bottom:0px; border-color:#DB7B7B;">
+                <div class="link-box-right">
+                    {% if linkJSON.fields.mimetype_if_applicable != None %}
+                        <a href="{{ CITATION_URL }}" rel="nofollow" target="_blank"><span class="link-direct-url">[{% trans "Download" %}]</span>: {{CITATION_URL|filename}}</a>
+                    {% else %}
+                        <a href="{{ CITATION_URL }}" rel="nofollow" target="_blank">[<strong>{% trans "Direct Link" %}</strong>] {{CITATION_URL}}</a>
+                    {% endif %}
+                    <div data-action="linkedit_child_textarea" id="linkDescription{{linkJSON.pk}}" class="link-description link-comment message">{{ CITATION_DESCRIPTION|safe }}</div>
+
+                    <div class="link-date">
+                        <span class="the-date">{{ CITATION_TIMESTAMP|json_fix_time }}</span>
+                    </div>
+                </div>
+                <div class="dropdown iframe-share-dropdown" style="float:right;" onclick='$(".dropdown.iframe-share-dropdown .dropdown-menu").toggle();'>
+                    <button class="btn btn-default dropdown-toggle share-dropdown" type="button" data-delay='{"show":"500", "hide":"300"}' data-placement="bottom" title='{% trans "Share" %}' id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <span class="icon icon-share" data-delay='{"show":"500", "hide":"300"}' data-toggle="tooltip" data-placement="bottom" title='{% trans "Share" %}'></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <div id="copyURL" style="margin-left:16.5px; width:79%;" class="copyURL-btn btn-default btn" onclick="window.prompt(gettext('To copy to clipboard, press Ctrl+C, then Enter'), 'https://iqnetwork.io/wiki/{{ARTICLE_SLUG}}/');">{% trans 'Copy URL' %}</div>
+                        <a rel='nofollow' id="shareURL_fb" style="" class="copyURL-btn embedURL-btn shareURL-btn-fb btn-default btn" href="https://www.facebook.com/sharer/sharer.php?u=https://iqnetwork.io/wiki/{{ARTICLE_SLUG}}/" target="_blank">
+                            <img alt="Share {{ ARTICLE_NAME }}'s {% if ARTICLE_PAGE_TYPE == 'Person' %}biography{% else %}wiki{% endif %} on Facebook" src="https://epcdn-vz.azureedge.net/static/images/fb_share_button.png">
+                        </a>
+                        <a rel='nofollow' id="shareURL_tw" style="" class="copyURL-btn embedURL-btn shareURL-btn-tw btn-default btn" href="http://www.twitter.com/share?url=https://iqnetwork.io/wiki/{{ARTICLE_SLUG}}/" target="_blank">
+                            <img alt="Share {{ ARTICLE_NAME }}'s wiki on Twitter" src="https://epcdn-vz.azureedge.net/static/images/tw_share_button.png">
+                        </a>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+
+        <div class="linkview-ct-media-container">
+        {%  if CITATION_CATEGORY != "NONE" and CITATION_CATEGORY != "" %}
+            <div class="linkview-pic-div gallery-tileset" style="text-align: center; margin-bottom: 10px; cursor: pointer;">
+                {% if CITATION_CATEGORY == "PICTURE" %}
+                    <div class="gallery-anchor" data-src="{{ CITATION_URL }}" data-sub-html="{{ CITATION_DESCRIPTION }}">
+                        <img class="linkview-pic-img" style="object-fit: contain; width: 100%; max-width: 100%;" src="{{ CITATION_URL }}" onerror="{{ ARTICLE_PHOTO_URL }}" >
+                    </div>
+                {% elif CITATION_CATEGORY == "YOUTUBE" %}
+                    <iframe width="100%" height="420px" src="https://www.youtube.com/embed/{{ CITATION_YOUTUBE_ID }}?autoplay=1" frameborder="0" allowfullscreen></iframe>
+                {% elif CITATION_CATEGORY == "NORMAL_VIDEO" %}
+                    <div id="video-newlink">
+                        <video width="100%" height="420px" class="lg-video-object lg-html5 video-js vjs-default-skin" controls autoplay preload="none">
+                            <source src="{{ CITATION_URL }}" type="{{ CITATION_MIME }}">
+                             {% trans 'Your browser does not support HTML5 video.' %}
+                        </video>
+                    </div>
+                {% elif CITATION_CATEGORY == "AUDIO" %}
+                    {% include 'enterlink/inline-js/audio-wavesurfer.html' %}
+                    <div id="waveform"></div>
+                    <script>
+                    var wavesurfer = WaveSurfer.create({
+                        container: '#waveform',
+                        waveColor: '#3b94d9',
+                        progressColor: '#60acdb',
+                        normalize: true,
+                        height: '200',
+                    });
+                    wavesurfer.load('{{ CITATION_URL }}');
+                    wavesurfer.on('ready', function () {
+                        wavesurfer.playPause();
+                    });
+                    </script>
+                      <button class="btn btn-primary" onclick="wavesurfer.playPause();">
+                        <i class="glyphicon glyphicon-play"></i>
+                        {% trans 'Play / Pause' %}
+                      </button>
+                {% endif %}
+            </div>
+
+        {% elif CITATION_THUMB != "" %}
+            <div class="linkview-pic-div gallery-tileset" style="text-align: center; margin-bottom: 10px; cursor: pointer;">
+                <div class="gallery-anchor" data-src="{{ CITATION_THUMB }}" data-sub-html="{{ CITATION_DESCRIPTION }}">
+                    <img class="linkview-pic-img" style="object-fit: contain; width: 100%; max-width: 100%;" src="{{ CITATION_THUMB }}" onerror="{{ ARTICLE_PHOTO_URL }}" >
+                </div>
+            </div>
+        {% endif %}
+        </div>
+    </div>
+        
+<!--- Everipedia Footer -->
+{% include "enterlink/footers/footerJS.html" %}
+
+{#This makes sure to load the iframe last so the TinyMCE comment areas do not stall#}
+<script>
+    initializeTooltippables();
+</script>
+{% include "enterlink/inline-js/unveil.html" %}
+<script>
+    // Speed hack to only load main image if human interaction. Needed for bots.
+    $( "html" ).on( "mouseover tap touchstart scroll scrollstart mousewheel", function( event ) {
+        $("img.lazyloadable").unveil();
+        $(this).off('mouseover tap touchstart scroll scrollstart mousewheel');
+    });
+</script>
+
+</body>
+</html>

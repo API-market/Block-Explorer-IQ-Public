@@ -1,0 +1,26 @@
+{% load i18n %}
+{% load humanize %}
+<link rel="dns-prefetch" href="//everipedia.org">
+
+{{ compressedCSSBlob_BOOTSTRAP_CUSTOM_TEMPLATE|safe }}
+{{ compressedCSSBlob_COMMON|safe }}
+{{ compressedCSSBlob_APPLICATION|safe }}
+
+<link rel="dns-prefetch" href="//s3.amazonaws.com">
+<link rel="dns-prefetch" href="//everipedia-storage.s3.amazonaws.com">
+<link rel="dns-prefetch" href="//everipedia-fast-cache.s3-accelerate.amazonaws.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/jquery.js"></script>
+
+{% include "enterlink/headers/favicon.html" %}
+
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta property="fb:app_id" content="1617004011913755" />
+<meta property="fb:pages" content="328643504006398"/>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="theme-color" content="#FFFFFF">
+
+{% include 'enterlink/headers/extra-analytics-header.html' %}
+{% include 'enterlink/inline-css/tablet-header-fixes.html' %}
+{% include 'enterlink/inline-css/featherlight-fixes.html' %}

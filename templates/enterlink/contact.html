@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html>
+<head>
+    <title>{% trans 'Contact us' %} - {% trans "Everipedia, the encyclopedia of everything" %}</title>
+    <!-- ' -->
+    <meta name="description" content=" Everipedia is the world’s largest collection of hyperlinks grouped by identity. ">
+	<link rel="canonical" href="https://everipedia.org/contact/" />
+	<!--- Include Header -->
+	{% include "enterlink/headers/header-common.html" %}{% include "enterlink/headers/header-navbar.html" %}
+    <link href="/static/css/howto_welcome.css" rel="stylesheet">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<body>
+	<div class="contact-ct tablet-compatible">
+		<div class="alert alert-info alert-dismissible forumbanner" role="alert" id="shuffle_banner">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close" ><span aria-hidden="true">&times;</span></button>
+                {% trans 'To get quicker replies from our community' %}, <a href="https://www.reddit.com/r/Everipedia/">{% trans 'create a post in our forum' %}</a>
+            <br>
+        </div>
+
+		<h1>{% trans 'Contact us' %}</h1>
+		<h4>{% trans 'Get in touch with us' %}</h4>
+        <ul class="address-list">
+            <li>Everipedia International</li>
+            <li>171 Elgin Avenue</li>
+            <li>Floor 2 #709, Willow House, Cricket Square</li>
+            <li>Grand Cayman, KY1-1103</li>
+            <li>Cayman Islands</li>
+        </ul>
+		{% if sent %}<div class="alert alert-success"><strong>{% trans 'Thanks, we got your message. We will respond in a bit' %}.</strong></div>{% endif %}
+		
+		{% if sent == False %}
+			<form id="contact_form" method="POST" action="/contact/">
+			    {% csrf_token %} {% for hidden in form.hidden_fields %} {{ hidden }} {% endfor %}
+
+			    <span style="color:darkred;">{% for field in form.visible_fields %} {{ field.errors }} {{ field.help_text }} {{ field }} {% endfor %}</span>
+                <div class="g-recaptcha" data-sitekey="6LdqkGQUAAAAABok67o8I1NW0-Mlif_KGyVhEdIH"></div>
+			    <input type="submit" class="btn btn-info pull-left" name="submit" value="{% trans 'Send' %}" />
+            </form>
+		{% endif %}
+		
+	</div>
+
+<!--- Everipedia Footer -->
+{% include "enterlink/footers/footer.html" %}
+{#{% include "enterlink/footers/deferredJS.html" %}#}
+{% include 'enterlink/inline-css/application.html' %}
+{% include 'enterlink/headers/extra-analytics-right-before-body-end.html' %}
+</body>
+</html>

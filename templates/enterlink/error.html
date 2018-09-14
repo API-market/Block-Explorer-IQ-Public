@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+{% load i18n %}
+<html>
+<head>
+    <title>{% trans "Page not found!" %}</title><!-- ' -->
+    <meta name="robots" content="noindex">
+    <meta name="description" content="Everipedia is a free and easy to use wiki platform. Write about anyone and anything!">
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-57561457-6', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <script type="text/javascript" src="//static.criteo.net/js/ld/publishertag.js"></script>
+    <style>
+        @font-face {
+            font-family:'Lora';
+            font-style:normal;
+            font-weight:400;
+            src:url(https://epcdn-vz.azureedge.net/static/fonts/Lora-Regular.woff) format("woff")
+        }
+
+        @font-face {
+            font-family: 'Lora';
+            src: url('https://epcdn-vz.azureedge.net/static/fonts/Lora-Bold.woff') format('woff');
+            font-weight: bold;
+        }
+
+        @font-face {
+            font-family: 'Lora';
+            src: url('https://epcdn-vz.azureedge.net/static/fonts/Lora-Italic.woff') format('woff');
+            font-style: italic;
+        }
+
+        body{
+            overflow-x: hidden;
+            height: auto;
+            float: left;
+            width: 100%;
+            margin: 10px 0px 0px 0px;
+            background: white;
+        }
+
+        body *{
+            font-family: Lora, "Lora", Helvetica, Arial, sans-serif;
+        }
+
+
+        #abt-ct{
+            background-color: white;
+            margin-top:10px;
+            float: left;
+            width: 100%;
+        }
+
+        .page-header{
+            margin-top:0px;
+        }
+        .page-header h1, h4{
+            text-align: center;
+        }
+        .page-header .return-search-btn{
+            color: #3097d1 !important;
+            padding: 5px;
+            border: 1px solid #3097d1 !important;
+            border-radius: 5px;
+            width: auto;
+            display: table;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        .page-header .return-search-btn:hover{
+            background-color: #f3f3f3;
+        }
+
+        .page-header .return-search-btn a{
+            text-decoration: none;
+            color: #3097d1 !important;
+        }
+
+        .ad-container-full-width{
+            width:100%;
+            float: left;
+            text-align: center;
+        }
+
+        .ad-notice{
+            width:100%;
+            font-size:11px;
+            color:#b3b3b3;
+            margin: 20px 0px 20px 0px;
+            float:left;
+            text-align: center;
+        }
+
+        .bottom-adhesion-ad {
+            position: fixed;
+            z-index: 9999;
+            bottom: 0px;
+            width: 732px;
+            height: 91px;
+            padding-top: 1px;
+            text-align: center;
+            {#border: 1px solid rgba(0, 0, 0, 0.35);#}
+            {#background-color: rgba(0, 0, 0, 0.15);#}
+            {#box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);#}
+            right: 22%;
+            left: 44%;
+            margin-left: -366px;
+        }
+
+        .bottom-adhesion-ad .ad-close-btn{
+            left: 731px;
+            top: -1px;
+            font-size: 17px;
+            z-index: 10050;
+            width: 23px;
+            height: 23px;
+            position: absolute;
+            color: rgba(128,128,128,.5);
+            border-left: none;
+        }
+
+        .bottom-adhesion-ad .ad-close-btn:hover{
+            opacity: .7;
+            cursor: pointer;
+        }
+
+        .bottom-adhesion-ad .ad-close-btn .icon{
+            top: -1px;
+            left: 0px;
+            position: relative;
+        }
+
+        @media (max-width:565px) {
+            body{
+                margin-top: 0px;
+            }
+            .page-header h1{
+                margin: 10px 0px 10px 0px;
+                font-size: 20px;
+            }
+            .ad-notice{
+                margin: 5px 0px 0px 0px;
+            }
+            .ad-container-full-width{
+                margin-top: 0px;
+            }
+            #abt-ct{
+                margin: 0px;
+            }
+            .page-header .button-container{
+                text-align: center;
+            }
+            .page-header .button-container .return-search-btn{
+                margin-bottom: 10px;
+                display: inline-block;
+                font-size: 12px;
+            }
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+
+{% if request.mobile %}
+<script type='text/javascript'>
+ function newWindowNews() {
+     top.location.href = "../../../../News/";
+ }
+  function newWindowRecentActivity() {
+     top.location.href = "../../../../recent-activity/";
+ }
+</script>
+{% endif %}
+
+
+
+<div class="container" id="abt-ct">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <h1>{% trans "Page not found" %}!</h1>
+                    <div class="button-container">
+                        <h4 class="return-search-btn" onclick="newWindowNews();"><a href="/news/" >{% trans "In The News" %}</a></h4>
+                        <h4 class="return-search-btn" onclick="newWindowRecentActivity();"><a href="/recent-activity/" >{% trans "Recent Activity" %}</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% include 'enterlink/headers/extra-analytics-right-before-body-end.html' %}
+</body>
+</html>
+</html>

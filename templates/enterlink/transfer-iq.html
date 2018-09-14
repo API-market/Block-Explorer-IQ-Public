@@ -1,0 +1,245 @@
+{% load i18n %}
+<html>
+    <head>
+ 
+    <title>{% trans 'Transfer IQ' %} - {% trans "Everipedia, the encyclopedia of everything" %}</title>
+    <!-- ' -->
+    <meta name="description" content=" Everipedia is the world’s largest collection of hyperlinks grouped by identity. ">
+	<link rel="canonical" href="https://everipedia.org/contact/" />
+	<!--- Include Header -->
+	{% include "enterlink/headers/header-common.html" %}{% include "enterlink/headers/header-navbar.html" %}
+    <link href="/static/css/howto_welcome.css" rel="stylesheet">
+	<style>
+		.go-back{
+			width: 100%;
+			text-align: center;
+		}
+		h5{
+			text-align: center;
+		}
+		#NewStakeBox{
+			width: calc(100% - 130px);
+			float: left;
+		}
+		.new-transfer-btn, .buy-ram-btn{
+			text-align: center;
+			background: #777;
+			border-radius: 3px;
+			color: #f6f6f6;
+			width: 120px;
+			height: 43px;
+			line-height: 43px;
+			font-size: 18px;
+			cursor: pointer;
+			display: inline-block;
+		}
+		.new-transfer-btn:hover, .buy-ram-btn:hover{
+			background: grey;
+		}
+		.new-transfer, .new-ram{
+			text-align: center;
+		}
+		.new-transfer .icon{
+			font-size: 30px;
+			color: #50aedb;
+			position: relative;
+			top: 8px;
+			margin: 0px 10px;
+		}
+		 .new-ram .icon{
+			font-size: 25px;
+			color: #50aedb;
+			position: relative;
+			top: 6px;
+			margin: 0px 0px 0px 0px;
+		}
+		.address-entry, .address-entry-ram, .value-entry-ram{
+			width: 125px !important;
+		}
+		.value-entry, .memo-entry{
+			width: 305px !important;
+		}
+		#sender, #sender-ram{
+			cursor: pointer;
+			font-size: 14px;
+		}
+		.result-tx, .result-tx-ram{
+			display: none;
+			background: #5ec45e33;
+			color: darkgreen;
+			padding: 5px 10px;
+			font-size: 17px;
+			margin-top: 15px;
+			border-radius: 3px;
+			text-align: center;
+		}
+		.result-tx .tx-id, .result-tx-ram .tx-id-ram{
+			font-style: italic;
+		}
+		#price-ram{
+			font-size: 15px;
+		}
+
+		h1.ram-title{
+			margin-top: 30px;
+			border-top: 1px solid #536570;
+			padding-top: 20px;
+			margin-bottom: 0px;
+		}
+
+		.feexplorer-link{
+			font-size: 16px;
+		}
+
+		.fee-notice{
+			text-align: left;
+			margin: 0px 0px 20px 0px;
+			line-height: 28px;
+		}
+
+
+	</style>
+
+</head>
+<body>
+	<div id="submission_waiting" style="display: none;">
+		<div class="waiting-header">{% trans 'Loading Scatter' %}...</div>
+		<div class="waiting-header-close"><span class="icon icon-squared-cross"></span></div>
+		<div class="submission-wait-wrap">
+			<img src="/static/images/loading2.gif">
+		</div>
+        <script>
+            $(".waiting-header-close").click(function() {
+                $(this).parent().hide();
+            });
+        </script>
+	</div>
+
+	<div class="contact-ct tablet-compatible">
+		<h1>{% trans 'Transfer IQ' %}</h1>
+		<h5 class="fee-notice">NOTE: Everipedia has been paying the RAM costs for stakings, votes, and proposals. To help mitigate this, we are implementing a 0.1% transfer fee (x0.001) for all IQ movements outside of the article and token contracts (eparticlectr and everipediaiq respectively). This will help to reduce speculation and fund the continued use of RAM, as well as introduce some deflation to counteract the inflation introduced by the edit rewards. This is modeled in the same way as EOS's RAM trading fee reward which is taken out of direct circulation.</h5>
+		<h5 class="scatter-notice">{% trans 'Please make sure you have set up' %} <a href="https://get-scatter.com/">Scatter</a> {% trans 'beforehand' %}.</h5>
+		<div class="new-transfer">
+			<input placeholder="{% trans 'Sender' %}" name="sender" autocomplete="off" id="sender" type="text" value="" class="address-entry" disabled>
+			<span class="icon icon-arrow-long-right"></span>
+			<input placeholder="{% trans 'Recipient' %}" name="recipient" autocomplete="off" id="recipient" type="text" value="" class="address-entry">
+			<br>
+			<input placeholder="{% trans 'Amount' %}" name="amount" autocomplete="off" id="amount" type="text" value="" class="value-entry">
+			<br>
+			<input placeholder="{% trans 'Memo' %}" name="amount" autocomplete="off" id="memo" type="text" value="" class="memo-entry">
+			<br>
+			<div class="new-transfer-btn">{% trans 'Send' %}</div>
+		</div>
+		<div class="result-tx">
+			<span class="tx-prefix">{% trans 'Transaction successful' %}: </span>
+			<a class="tx-anchor" target="_blank" href="javascript:void(0)"><span class="tx-id"></span></a>
+		</div>
+
+		<h1 class="ram-title">{% trans 'Buy RAM' %}</h1>
+		<div class="new-ram">
+			<a href="https://eos.feexplorer.io" class="feexplorer-link">
+				<span class="icon icon-export"></span>
+				{% trans 'See your RAM, CPU, and Bandwidth on FeeXplorer' %}
+			</a>
+			<!--<input placeholder="Amount (EOS)" name="amount-ram" autocomplete="off" id="amount-ram" type="text" value="" class="value-entry-ram">-->
+			<!--<span class="icon icon-email"></span>-->
+			<!--<span id="price-ram" class="value-entry-ram"></span>-->
+			<!--<br>-->
+			<!--<div class="buy-ram-btn">Buy</div>-->
+		<!--</div>-->
+		<!--<div class="result-tx-ram">-->
+			<!--<span class="tx-prefix-ram">Transaction successful: </span>-->
+			<!--<a class="tx-anchor-ram" target="_blank" href="javascript:void(0)"><span class="tx-id-ram"></span></a>-->
+		</div>
+	</div>
+
+<script>
+
+
+
+	// $.ajax({
+	// 	type: "POST",
+	// 	url: EosNetURL + "/v1/chain/get_table_rows",
+	// 	data: JSON.stringify({"scope":"eosio", "code":"eosio", "table":"rammarket", "limit":"999999999999", "json": true}),
+	// 	beforeSend: function( xhr ) {
+	// 	},
+	// 	success: function (data) {
+	// 	    let temp = data.rows[0].quote.balance;
+	// 	    let quote = temp.split(/[ ,]+/)[0];
+	// 	    temp = data.rows[0].base.balance;
+    //
+	// 	    let balance = temp.split(/[ ,]+/)[0];
+	// 	    let price = (quote / balance) * 1000;
+	// 	    price = parseFloat(price).toFixed(4);
+	// 	    let priceString = price.toString() + " EOS / KB";
+	// 		$("#price-ram").html(priceString);
+	// 	}
+	// });
+
+	$(document).on("scatterNavbarDone", function () {
+
+	    $(".new-transfer #sender, .new-ram #sender-ram").val(scatterAccountName);
+	    $(".scatter-notice").hide();
+        //
+        // $(".buy-ram-btn").click(function (event) {
+			// let transferAmount = $("#amount-ram").val();
+			// transferAmount = Number((parseFloat(transferAmount)).toFixed(4));
+			// eos.contract('system').then(system => {
+			// 	system.buyram(transferAmount, {authorization: scatterAccountName, permission: "active"}
+			// 	).then(result => {
+			// 		let txID = result.transaction_id;
+			// 		let theURL = "https://bloks.io/transaction/" + txID;
+			// 		$(".tx-anchor-ram").attr("href", theURL);
+			// 		$(".result-tx-ram .tx-id-ram").html(txID);
+			// 		$(".result-tx-ram").show();
+			// 		refreshIQ();
+			// 		refreshBrainpower();
+        //
+			// 	}).catch(error => {
+			// 		error = JSON.parse(error).error.details[0].message.replace('condition: assertion failed: ', '');
+			// 		alert(error);
+			// 	});
+			// });
+        //
+        // });
+
+		$(".new-transfer-btn").click(function (event) {
+		    $('#submission_waiting').show();
+			let transferAmount = $("#amount").val();
+			let memoText = $("#memo").val();
+			let recipient = $("#recipient").val();
+			transferAmount = Number((parseFloat(transferAmount)).toFixed(3));
+			transferAmount = addZeroes(transferAmount) + " IQ";
+			eos.contract('everipediaiq').then(everipediaiq => {
+				everipediaiq.transfer(scatterAccountName, recipient, transferAmount, memoText, {authorization: scatterAccountName, permission: "active"}
+				).then(result => {
+				    $('#submission_waiting').hide();
+					let txID = result.transaction_id;
+					let theURL = "https://bloks.io/transaction/" + txID;
+					$(".tx-anchor").attr("href", theURL);
+					$(".result-tx .tx-id").html(txID);
+					$(".result-tx").show();
+					refreshIQ();
+					refreshBrainpower();
+
+				}).catch(error => {
+				    $('#submission_waiting').hide();
+					error = JSON.parse(error).error.details[0].message.replace('condition: assertion failed: ', '');
+					alert(error);
+				});
+			});
+
+        });
+
+    });
+
+
+</script>
+
+<!--- Everipedia Footer -->
+{% include "enterlink/footers/footer.html" %}
+{#{% include "enterlink/footers/deferredJS.html" %}#}
+{% include 'enterlink/inline-css/application.html' %}
+{% include 'enterlink/headers/extra-analytics-right-before-body-end.html' %}
+</body>
+</html>

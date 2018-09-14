@@ -1,0 +1,14 @@
+#tinymce {
+margin:5px;
+font-size:12px;
+font-family: 'Poppins', Helvetica, Arial;
+font-weight:normal;
+color: rgb(68, 68, 68);
+width: calc(100% - 12px);
+padding-bottom: 5px !important;
+}
+
+#tinymce a{
+text-decoration: none;
+color: #3097D1;
+}

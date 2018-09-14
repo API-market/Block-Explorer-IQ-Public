@@ -1,0 +1,112 @@
+{% load enterlink_custom_tags %}
+{% load i18n %}
+{% for media in MEDIA_OBJECTS %}
+
+    {% if media.class == "PICTURE" %}
+    <div class="tile-ct">
+        <div class="">
+            <span>
+                <a rel='nofollow' class="photo-gallery-anchor" href="{{ media.url }}" data-target="{{ media.url }}" title="{{ media.caption }}">
+                    <amp-img width=150 height=150 layout="responsive" src="{{ media.url|handle_missing_photo:'photo' }}" data-image="{{ media.url|handle_missing_photo:'photo' }}" data-description="{{ media.caption }}" alt="{{ media.caption|striptags }}" data-width="640" data-height="640">
+                        <amp-img placeholder width=150 height=150 src="{{ media.thumb|handle_missing_photo:'photo' }}" layout="fill"></amp-img>
+                    </amp-img>
+                </a>
+            </span>
+        </div>
+        <div class="tile-desc">
+            {% if media.attribution_url != None and media.attribution_url != "" %}
+                <a class="grid-attribution" rel="nofollow" target="_blank" href="{{ media.attribution_url }}">
+                    <i class="fa fa-info-circle"></i>
+                </a>
+            {% endif %}
+            {{ media.caption|safe }}
+        </div>
+    </div>
+    {% elif media.class == "GIF" %}
+    <div class="tile-ct">
+        <div class="">
+            <span>
+                <a rel='nofollow' class="photo-gallery-anchor" href="{{ media.url }}" data-target="{{ media.url }}" title="{{ media.caption }}">
+                    <amp-anim width=150 height=150 layout="responsive" src="{{ media.url|handle_missing_photo:'photo' }}" data-image="{{ media.url|handle_missing_photo:'photo' }}" data-description="{{ media.caption }}" alt="{{ media.caption|striptags }}" data-width="640" data-height="640">
+                      <amp-img placeholder width=150 height=150 src="{{ media.thumb|handle_missing_photo:'photo' }}" layout="fill"></amp-img>
+                    </amp-anim>
+                </a>
+            </span>
+        </div>
+        <div class="tile-desc">
+            {% if media.attribution_url != None and media.attribution_url != "" %}
+                <a class="grid-attribution" rel="nofollow" target="_blank" href="{{ media.attribution_url }}">
+                    <i class="fa fa-info-circle"></i>
+                </a>
+            {% endif %}
+            {{ media.caption|safe }}
+        </div>
+    </div>
+    {% elif media.class == "YOUTUBE"  %}
+    <div class="tile-ct">
+        <a rel='nofollow' href="{{ media.url }}" title="Link to video">
+        <span>
+            <amp-youtube
+                data-videoid="{{ media.url|get_youtube_id }}"
+                layout="responsive"
+                width=150
+                height=150>
+            </amp-youtube>
+        </span>
+        <div class="tile-desc">
+            {% if media.attribution_url != None and media.attribution_url != "" %}
+                <a class="grid-attribution" rel="nofollow" target="_blank" href="{{ media.attribution_url }}">
+                    <i class="fa fa-info-circle"></i>
+                </a>
+            {% endif %}
+            {{ media.caption|safe }}
+        </div>
+        </a>
+    </div>
+    {% elif media.class == "NORMAL_VIDEO"  %}
+    <div class="tile-ct">
+        <a rel='nofollow' href="{{ media.url }}" title='Link to video'>
+        <span>
+            <div id="video-{{ media.url }}" class="video-wrapper">
+                <div class="video-overlay"></div>
+                <amp-video
+                       width=150
+                       height=150
+                       layout="responsive"
+                       preload="metadata"
+                       poster='https://epcdn-vz.azureedge.net/static/images/placeholder-video.png'>
+                        <source src="{{ media.url }}#t=0.1" type="{{ media.mime }}">
+                        {% trans 'Your browser does not support HTML5 video.' %}
+                </amp-video>
+            </div>
+        </span>
+        <div class="tile-desc">
+            {% if media.attribution_url != None and media.attribution_url != "" %}
+                <a class="grid-attribution" rel="nofollow" target="_blank" href="{{ media.attribution_url }}">
+                    <i class="fa fa-info-circle"></i>
+                </a>
+            {% endif %}
+            {{ media.caption|safe }}
+        </div>
+        </a>
+    </div>
+    {% elif media.class == "AUDIO"  %}
+    <div class="tile-ct">
+        <a rel='nofollow' href="{{ media.url }}" title="Link to recording">
+        <span>
+            <amp-img width=150 height=150 layout="responsive" src="https://epcdn-vz.azureedge.net/static/images/placeholder-audio.png" data-image="https://epcdn-vz.azureedge.net/static/images/placeholder-audio.png" data-description="{{ media.caption }}" alt="{{ media.caption|striptags }}" data-width="640" data-height="640">
+                <amp-img placeholder width=150 height=150 src="https://epcdn-vz.azureedge.net/static/images/placeholder-audio.png" layout="fill"></amp-img>
+            </amp-img>
+        </span>
+        <div class="tile-desc">
+           {% if media.attribution_url != None and media.attribution_url != "" %}
+                <a class="grid-attribution" rel="nofollow" target="_blank" href="{{ media.attribution_url }}">
+                    <i class="fa fa-info-circle"></i>
+                </a>
+            {% endif %}
+            {{ media.caption|safe }}
+        </div>
+        </a>
+    </div>
+    {% endif %}
+{% endfor %}

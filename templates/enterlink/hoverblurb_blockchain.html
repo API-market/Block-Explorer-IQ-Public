@@ -1,0 +1,261 @@
+{#<!DOCTYPE html>#}
+<html>
+<head>
+    <meta name="robots" content="noindex, nofollow, noarchive">
+	<!--- Include Header -->
+	{% include "enterlink/headers/hoverheader_light.html" %}
+    {% include "enterlink/inline-css/hovercard-wiki-fixes.html" %}
+
+    <style>
+		
+		@font-face {
+		    font-family:'Lora';
+		    font-style:normal;
+		    font-weight:400;
+		    src:url(https://epcdn-vz.azureedge.net/static/fonts/Lora-Regular.woff) format("woff")
+		}
+		
+		@font-face {
+		    font-family: 'Lora';
+		    src: url('https://epcdn-vz.azureedge.net/static/fonts/Lora-Bold.woff') format('woff');
+		    font-weight: bold;
+		}
+		
+		@font-face {
+		    font-family: 'Lora';
+		    src: url('https://epcdn-vz.azureedge.net/static/fonts/Lora-Italic.woff') format('woff');
+		    font-style: italic;
+		}
+
+        body {
+            background-color: white;
+        }
+
+        #hoverblurb {
+            margin-left: 0px;
+            font-family: 'Lora', Garamond, Georgia;
+            height: 405px !important;
+            overflow-y: hidden;
+            padding: 18px 10px 10px 10px;
+            /* Mobile optimization */
+            width: 92%;
+            /* border: 1px solid red; */
+            cursor: pointer;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #hoverblurb a{
+            text-decoration: none;
+        }
+
+        #hoverblurb .hoverdescription img {
+            width: 25%;
+            float: right;
+            max-height: 440px;
+            object-fit: contain;
+            border-radius: 2px;
+            margin-left: 40px;
+			margin-bottom: 30px;
+        }
+
+        #hoverblurb .hovername {
+            font-family: 'Lora', Garamond, Georgia;
+            font-size:36px;
+            display:block;
+            text-decoration: none;
+            color:#222;
+            margin-top:0px;
+        }
+
+        #hoverblurb .hovername .verified-page-logo{
+            position: relative;
+            top: -14px;
+            left: 3px;
+            display: inline-block;
+        }
+
+        #hoverblurb .hoverdescription {
+            font-size:28px;
+            color: #555 !important;
+            cursor:pointer;
+            border:0px solid red;
+            height:363px;
+            overflow:hidden;
+            pointer-events:none;
+            font-family: 'Lora', Garamond, Georgia;
+            line-height: 1.4;
+{#            text-align: left;#}
+            text-align: justify;
+    text-justify: inter-word;
+        }
+
+        #hoverblurb .hoverdescription .blurbholder{
+            margin-top: -30px;
+        }
+
+        #hoverblurb .hoverdescription a{
+            color: #555 !important;
+            font-weight: bold;
+        }
+
+
+        #hoverblurb .hoverblurb-picture{
+            float: right;
+            height: 250px;
+            padding: 0px 5px 0px 0px;
+
+        }
+
+        #hoverblurb .hovertitle{
+            border-bottom: 0px solid #e5e5e5;
+            margin-bottom: 20px;
+
+        }
+        #hoverblurb > .row {
+            height: 420px;
+        }
+
+        #hoverblurb .hvrdesc-wrap{
+            height: 355px;
+        }
+
+        .hvrblrb-ajax-ad{
+            float: right;
+            width: 1003px;
+            height: 142px;
+            bottom: -6px;
+            right: 14px;
+            position: fixed;
+        }
+
+        .go-to-article{
+            position: fixed;
+            width: 100%;
+            top: 340px;
+            display: block;
+            z-index: 5;
+            background: white;
+            height: 126px;
+        }
+
+        a.gta-anchor{
+            float: left;
+            font-size: 31px;
+            font-family: 'Lora', Garamond, Georgia;
+            /* border: 0px none; */
+            outline: medium none;
+            text-decoration: none;
+            height: 110px;
+            line-height: 94px;
+            width: 243px;
+            padding: 5px;
+            text-align: center;
+            cursor: pointer;
+            /* border-top: 1px solid #ececec; */
+            background-color: rgb(90, 172, 218);
+            color: #f5f8fa;
+        }
+
+        a.gta-anchor:hover{
+            background-color: rgb(112, 183, 223);
+        }
+
+        @font-face {
+            font-family: "toolkit-entypo";
+            src: url('https://epcdn-vz.azureedge.net/static/fonts/toolkit-entypo.eot');
+            src: url('https://epcdn-vz.azureedge.net/static/fonts/toolkit-entypo.eot?#iefix') format('eot'), url('https://epcdn-vz.azureedge.net/static/fonts/toolkit-entypo.woff2') format('woff2'), url('https://epcdn-vz.azureedge.net/static/fonts/toolkit-entypo.woff') format('woff'), url('https://epcdn-vz.azureedge.net/static/fonts/toolkit-entypo.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        .icon-export::before {
+	        font-family: "toolkit-entypo";
+			top: 8px;
+			position: relative;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			color: rgb(46, 142, 195);
+			font-size: 38px;
+			left: 10px;
+
+        }
+
+
+        .icon-export:before {
+            content: "\EA96";
+        }
+        
+        #hoverblurb .blurb-inline-image-container {
+	        display:none !important;
+        }
+
+
+        #hoverblurb:after {
+            background: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255, .80), white); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255, .80), white); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255, .80), white); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255, .80), white); /* Standard syntax */
+            content: " ";
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 23px;
+            width: 100%;
+            height: 35px;
+        }
+
+                
+    </style>
+
+	<script type='text/javascript'>
+     function newWindow() {
+         window.top.location.href = "../../../../wiki/{{ ARTICLE_SLUG }}/";
+     }
+    </script>
+</head>
+<body>
+    <div class="container p-t-md" id="hoverblurb">
+		<div class="row">
+            {% if ARTICLE_THUMB_URL|default_if_none:"" %}
+			    <div class="col-md-12 hovertitle" onclick="newWindow();">
+                    <a class="hovername" href="../../../../wiki/{{ ARTICLE_SLUG }}/" onclick="return false;">
+                        {{ARTICLE_NAME|truncatechars:52}}<span class="icon icon-export"></span>
+                    </a>
+                </div>
+                <div class='hvrdesc-wrap' onclick="newWindow();">
+                    <div class="col-md-12">
+                        <div class="hoverdescription hovernoads">
+                            <img id='main_blurb_image' class="b-lazy" src='{{ ARTICLE_THUMB_URL }}'/>
+                            <div class="blurbholder">{{BLURB_SNIPPET|safe|truncatewords_html:250}}</div>
+                            <script>document.getElementById("main_blurb_image").src="{{ ARTICLE_PHOTO_URL }}";</script>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <div class="col-md-12 hovertitle" onclick="newWindow();">
+                    <a class="hovername" href="../../../../wiki/{{ ARTICLE_SLUG }}/" onclick="return false;">
+                        {{ARTICLE_NAME|truncatechars:52}}<span class="icon icon-export"></span>
+                    </a>
+                </div>
+                <div class='hvrdesc-wrap' onclick="newWindow();">
+                    <div class="col-md-12">
+                        <div class="hoverdescription hovernoads">
+                            <div class="blurbholder">{{BLURB_SNIPPET|safe|truncatewords_html:150}}</div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+		</div>
+	</div>
+
+    {% if not user.is_authenticated or user.is_staff  %}
+    <div class="col-md-12">
+
+    </div>
+    {% endif %}
+    
+{% include 'enterlink/headers/extra-analytics-right-before-body-end.html' %}
+</body>
+</html>
+

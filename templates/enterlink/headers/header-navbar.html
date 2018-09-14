@@ -1,0 +1,5 @@
+{% if request.mobile and not request.tablet %}
+	{% include "enterlink/headers/mobile-navbar.html" %}
+{% else %}
+	{% include "enterlink/headers/desktop-navbar.html" %}
+{% endif %}

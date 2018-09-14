@@ -1,0 +1,19 @@
+AddHandler fcgid-script .fcgi
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(.+\.|)everipedia.com [OR]
+RewriteCond %{HTTP_HOST} ^(.+\.|)everipedia.org
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ everipedia.fcgi/$1 [QSA,L]
+
+#Order deny,allow
+#Deny from all
+<Files 403.shtml>
+order allow,deny
+allow from all
+</Files>
+
+deny from 115.231.222.45
+
+ErrorDocument 403 /index.html
+
+#allow from 83.252.247.232

@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+{% load i18n %}
+{% language LANG_OVERRIDE %}
+{% load humanize %}
+{% load enterlink_custom_tags %}
+<html>
+<head>
+    {% include 'enterlink/inline-js/jquery.html' %}
+    {% include "enterlink/inline-js/lazyload.html" %}
+    <meta property="og:type" content="article"/>
+    <meta name="twitter:card" content="summary">
+
+    {% if PAGEMETADATA.page_type == 'Person' %}
+        <title>{{ PAGETITLE }} | Wiki & {% trans 'Bio' %} | Everipedia</title><!-- ' -->
+        <meta name="description" content="{{ PAGETITLE }}'s wiki: {{BLURB|truncatechars_html:255}}">
+        <meta name="keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} {% trans 'bio' %}, {{ PAGETITLE }} {% trans 'encylopedia' %}">
+        <meta name="news_keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} {% trans 'bio' %}, {{ PAGETITLE }} {% trans 'encylopedia' %}">
+        <meta property="og:title" content="{{ PAGETITLE }}"/>
+        <meta name="twitter:title" content="{{ PAGETITLE }} | Wiki & {% trans 'Bio' %} |">
+    {% elif PAGEMETADATA.page_type == 'Product'%}
+        <title>{{ PAGETITLE }} | Wiki & {% trans 'Review' %} | Everipedia</title><!-- ' -->
+        <meta name="description" content="{{ PAGETITLE }}'s wiki: {{BLURB|truncatechars_html:255}}">
+        <meta name="keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} {% trans 'encylopedia' %}, {{ PAGETITLE }} {% trans 'review' %}">
+        <meta name="news_keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} {% trans 'encylopedia' %}, {{ PAGETITLE }} {% trans 'review' %}">
+        <meta property="og:title" content="{{ PAGETITLE }}"/>
+        <meta name="twitter:title" content="{{ PAGETITLE }} | Wiki & {% trans 'Review' %} |">
+    {% elif PAGEMETADATA.page_type == 'Organization'%}
+        <title>{{ PAGETITLE }} | Wiki & {% trans 'Review' %} | Everipedia</title><!-- ' -->
+        <meta name="description" content="{{ PAGETITLE }}'s wiki: {{BLURB|truncatechars_html:255}}">
+        <meta name="keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} {% trans 'history' %}, {{ PAGETITLE }} {% trans 'review' %}, {{ PAGETITLE }} {% trans 'encylopedia' %}">
+        <meta name="news_keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} {% trans 'history' %}, {{ PAGETITLE }} {% trans 'review' %}, {{ PAGETITLE }} {% trans 'encylopedia' %}">
+        <meta property="og:title" content="{{ PAGETITLE }}"/>
+        <meta name="twitter:title" content="{{ PAGETITLE }} | Wiki & {% trans 'Review' %} |">
+    {% else %}
+        <title>{{ PAGETITLE }} | Wiki | Everipedia</title><!-- ' -->
+        <meta name="description" content="{{ PAGETITLE }}'s wiki: {{BLURB|truncatechars_html:255}}">
+        <meta name="keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} {% trans 'encylopedia' %}">
+        <meta name="news_keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} {% trans 'encylopedia' %}">
+        <meta property="og:title" content="{{ PAGETITLE }}"/>
+        <meta name="twitter:title" content="{{ PAGETITLE }} | Wiki |">
+    {% endif %}
+
+    <meta property="article:tag" content="{{ PAGETITLE }}">
+    <meta property="article:published_time" content="{{ PAGEMETADATA.creation_timestamp }}" />
+    <meta property="article:modified_time" content="{{ PAGEMETADATA.last_modified }}" />
+    <meta property="og:image" content="{{ PHOTOOBJECT.url }}" />
+    <meta property="og:description" content="{{ BLURB|truncatewords_html:125 }}"/>
+    <meta name="og:url" content="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/">
+    {% if .PHOTOOBJECT.thumb != 'NOPICTURE' %}
+    <meta property="og:image" content="{{ PHOTOOBJECT.thumb }}" />
+    {% endif %}
+
+    <meta name="twitter:image" content="{{ PHOTOOBJECT.url }}">
+    {% if .PHOTOOBJECT.thumb != 'NOPICTURE' %}
+    <meta name="twitter:image" content="{{ PHOTOOBJECT.thumb }}">
+    {% endif %}
+    <meta name="twitter:description" content="{{ BLURB|truncatewords_html:125 }}">
+        {% if passedLanguage == 'en' %}
+        <meta name="twitter:url" content="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/">
+    {% else %}
+        <meta name="twitter:url" content="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/?wiki-lang={{ passedLanguage }}">
+    {% endif %}
+
+    {% if PAGEMETADATA.is_indexed %}
+        {% if PAGEMETADATA.bing_index_override %}
+            <meta name="googlebot" content="noindex, nofollow, noarchive">
+        {% else %}
+            <meta name="robots" content="noindex, nofollow, noarchive">
+        {% endif %}
+    {% endif %}
+
+
+    <!-- <link rel="dns-prefetch" href="//s.skimresources.com"> -->
+    <link rel="dns-prefetch" href="//connect.facebook.net">
+
+	<meta property="article:author" content="https://www.facebook.com/everipedia">
+
+    <script>
+        var ARTICLE_SLUG = '{{ PAGEMETADATA.url_slug }}';
+        var CITED_BY = '';
+        var CITER_RANK = '';
+        var initializeTooltippables;
+        var isMobile = parseInt('{{PREFETCH_REQUEST_MOBILE|yesno:"1,0"}}'); var isTablet = parseInt('{{request.tablet|yesno:"1,0"}}');
+        var embedHTML = "<a href='https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/'><img alt='Everipedia Logo' width='25' height='25' src='https://epcdn-vz.azureedge.net/static/images/everipedia_logo_small.png'></a>";
+    </script>
+
+    <link rel="canonical" href="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/" >
+    <link rel="amphtml" href="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/amp/">
+
+	<!--- Include Header -->
+	{% include "enterlink/headers/header-common-template-desktop-only.html" %}
+    {% include "enterlink/headers/header-navbar.html" %}
+    {{ compressedCSSBlob_PUSH_LEFT_COMPONENT|safe }}
+
+
+    <style>
+		#showLeft {display:block !important;}
+    </style>
+
+</head>
+
+
+<body id="top" itemscope itemtype="http://schema.org/NewsArticle" itemid="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/" class="cbp-spmenu-push {% if BLURB|safe|length > 5000 %}cbp-spmenu-push-toright{% else %}{% endif %}" style="overflow-x: visible !important;">
+{% if PAGEMETADATA.page_type == 'Person' %}
+    <meta itemprop="keywords" content="{{ PAGETITLE }} wiki, {{ PAGETITLE }} bio" >
+    <meta itemprop="keywords" content="{{ PAGETITLE }} news, who is {{ PAGETITLE }}, where is {{ PAGETITLE }}" >
+{% elif PAGEMETADATA.page_type == 'Product'%}
+    <meta itemprop="keywords" content="{{ PAGETITLE }} wiki, {{ PAGETITLE }} review">
+    <meta itemprop="keywords" content="{{ PAGETITLE }} news, what is {{ PAGETITLE }}" >
+{% elif PAGEMETADATA.page_type == 'Organization'%}
+    <meta itemprop="keywords" content="{{ PAGETITLE }} wiki, {{ PAGETITLE }} review">
+    <meta itemprop="keywords" content="{{ PAGETITLE }} news, what is {{ PAGETITLE }}, where is {{ PAGETITLE }}" >
+{% else %}
+    <meta itemprop="keywords" content="{{ PAGETITLE }} wiki, {{ PAGETITLE }} history, {{ PAGETITLE }} review">
+    <meta itemprop="keywords" content="{{ PAGETITLE }} news, what is {{ PAGETITLE }}" >
+{% endif %}
+
+<!-- body has the class "cbp-spmenu-push" -->
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left {% if BLURB|safe|length > 5000 %}cbp-spmenu-open{% else %}{% endif %}" id="cbp-spmenu-s1">
+<button id="hideLeft" style="display:none; background:transparent;"><img class="triggertoc-icon" height="24.3438" width="30" layout="fixed" src="https://epcdn-vz.azureedge.net/static/images/bull-icon-white.png"/></button>
+	{{ tableOfContentsChunk }}
+</nav>
+<main class="container desktop-container" id="body-ct">
+    <div class="alert alert-info alert-dismissible" role="alert" id="shuffle_banner">
+        <button type="button" class="close" data-dismiss="alert" data-description="Close"><span aria-hidden="true">×</span></button>
+        {{ SITE_NOTICE|safe }}
+    </div>
+
+	<div class="row main-desktop-chunk">
+	    <div id="right-biopanel" class="col-md-12" style="padding: 0px;overflow-x: hidden !important;word-wrap: break-word !important;">
+		<article class="bioheadtwenty" style="overflow:hidden;">
+            <div class="name-ct" style="position: relative;">
+				{% if PAGETITLE|length > 40 %}
+					<h1 id='top_header' class="main-heading-id" style="font-size:2.4em; font-weight: bold">{{ PAGETITLE }}</h1>
+					<style>.bioheadtwenty .name-icons {margin-top: 0px;} .corner-ct-desktop {margin-top: 3px !important;}</style>
+                {% else %}
+					<h1 id='top_header' class="main-heading-id" >{{ PAGETITLE }}</h1>
+                    <style>.corner-ct-desktop{margin-top: 15px;}</style>
+				{% endif %}
+                <!-- First half -->
+                {% if PAGEMETADATA.page_type == 'Person' %}
+                    <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} wiki, {{ PAGETITLE }} bio, {{ PAGETITLE }} net worth, {{ PAGETITLE }} nationality, {{ PAGETITLE }} ethnicity" />
+                    <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} age, {{ PAGETITLE }} birthday, {{ PAGETITLE }} height, {{ PAGETITLE }} weight" />
+                    <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} boyfriend, {{ PAGETITLE }} girlfriend, {{ PAGETITLE }} married, {{ PAGETITLE }} husband" />
+                    <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} news, who is {{ PAGETITLE }}, where is {{ PAGETITLE }}" />
+                    <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} wikipedia" />
+                {% elif PAGEMETADATA.page_type == 'Product'%}
+                    <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} wiki, {{ PAGETITLE }} review, {{ PAGETITLE }} history, {{ PAGETITLE }} motto, {{ PAGETITLE }} ownership" />
+                    <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} news, what is {{ PAGETITLE }}" />
+                    <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} wikipedia" />
+                {% elif PAGEMETADATA.page_type == 'Organization'%}
+                    <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} wiki, {{ PAGETITLE }} review, {{ PAGETITLE }} history, {{ PAGETITLE }} founders, {{ PAGETITLE }} motto" />
+                    <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} ownership, {{ PAGETITLE }} email, {{ PAGETITLE }} address, {{ PAGETITLE }} phone, {{ PAGETITLE }} headquarters" />
+                    <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} news, what is {{ PAGETITLE }}, where is {{ PAGETITLE }}" />
+                    <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} wikipedia" />
+                {% else %}
+                    <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} wiki, {{ PAGETITLE }} history, {{ PAGETITLE }} review, {{ PAGETITLE }} facts" />
+                    <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} news, what is {{ PAGETITLE }}" />
+                    <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} wikipedia" />
+                {% endif %}
+				<div class="name-icons">
+                    <div class="corner-ct-desktop" data-delay='{"show":"500", "hide":"300"}' data-toggle="tooltip" data-placement="right" title="{% trans 'Views' %}">
+                        <div class="corner-views" style="display:block;">
+                            {% if PAGEMETADATA.pageviews >= 100 %}
+                            <span class="icon icon-eye"></span>
+                            <span class="views-text">{{ PAGEMETADATA.pageviews|intcomma }}</span>
+                            {% endif %}
+                            <!-- Second half -->
+                            {% if PAGEMETADATA.page_type == 'Person' %}
+                                <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} religion, {{ PAGETITLE }} interview, {{ PAGETITLE }} life, {{ PAGETITLE }} website" />
+                                <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} wife, {{ PAGETITLE }} family, {{ PAGETITLE }} education, {{ PAGETITLE }} measurements, {{ PAGETITLE }} email" />
+                                <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} phone, {{ PAGETITLE }} salary, {{ PAGETITLE }} address, {{ PAGETITLE }} history, {{ PAGETITLE }} facts" />
+                            {% elif PAGEMETADATA.page_type == 'Product'%}
+                                <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} designer, {{ PAGETITLE }} sales, {{ PAGETITLE }} facts" />
+                            {% elif PAGEMETADATA.page_type == 'Organization'%}
+                                <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} revenue, {{ PAGETITLE }} employees, {{ PAGETITLE }} location, {{ PAGETITLE }} facts" />
+                            {% else %}
+                                <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} information, {{ PAGETITLE }} definition, {{ PAGETITLE }} timeline, {{ PAGETITLE }} location" />
+                            {% endif %}
+		                </div>
+		            </div>
+                    <a class="btn btn-default" rel='nofollow' data-delay='{"show":"500", "hide":"300"}' data-toggle="tooltip" data-placement="bottom" title="{% trans 'Edit' %}" id="edit-page-ico" href="/wiki/{{ PAGEMETADATA.url_slug }}/advanced_edit/" >
+                        <span class="icon icon-edit"></span>
+                    </a>
+                    <a class="btn btn-default" rel='nofollow' data-delay='{"show":"500", "hide":"300"}' data-toggle="tooltip" data-placement="bottom" title="{% trans 'Vote' %}" id="vote-page-ico" href="/vote/{{ PAGEMETADATA.url_slug }}" >
+                        <span class="icon icon-box"></span>
+                    </a>
+
+					<div class="dropdown" style="float:left;">
+						  <button class="btn btn-default dropdown-toggle share-dropdown" type="button" data-delay='{"show":"500", "hide":"300"}' data-placement="bottom" title='{% trans "Share" %}' id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						    <span class="icon icon-share" data-delay='{"show":"500", "hide":"300"}' data-toggle="tooltip" data-placement="bottom" title='{% trans "Share" %}'></span>
+						  </button>
+                        <ul class="dropdown-menu sharedropdown-desktop" titleledby="dropdownMenu1">
+                            <div class="share-menu-left">
+                                <div class="share-container-row">
+                                    <div class="share-divider">
+                                        <div id="copyURL" class="copyURL-btn btn-default btn" onclick="window.prompt(gettext('To copy to clipboard, press Ctrl+C, then Enter'), 'https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/');">{% trans 'Copy URL' %}</div>
+                                    </div>
+                                    <div class="share-divider">
+                                        <div id="embedURL" class="copyURL-btn embedURL-btn btn-default btn" onclick="window.prompt(gettext('To copy to clipboard, press Ctrl+C, then Enter. Next, paste the HTML code on your website.'), embedHTML);">{% trans 'Embed / Widget' %}</div>
+                                    </div>
+                                </div>
+                                <div class="share-container-row">
+                                    <div class="share-divider">
+                                        <a rel='nofollow' id="shareURL_fb" style="" class="copyURL-btn embedURL-btn shareURL-btn-fb btn-default btn" href="https://www.facebook.com/sharer/sharer.php?u=https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/" target="_blank">
+                                            <img alt="Share this {{ PAGETITLE }} {% if PAGEMETADATA.page_type == 'Person' %}biography{% else %}wiki{% endif %} on Facebook" src="https://epcdn-vz.azureedge.net/static/images/fb_share_button.png">
+                                        </a>
+                                    </div>
+                                    <div class="share-divider">
+                                        <a rel='nofollow' id="shareURL_tw" style="" class="copyURL-btn embedURL-btn shareURL-btn-tw btn-default btn" href="http://www.twitter.com/share?url=https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/" target="_blank">
+                                            <img alt="Share this {{ PAGETITLE }} wiki on Twitter" src="https://epcdn-vz.azureedge.net/static/images/tw_share_button.png">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="share-hshtgs">
+                                    <div class="suggested-tags">{% trans 'Suggested Hashtags' %}</div>
+                                    <ul class="tag-list">
+                                        {% if PAGEMETADATA.page_type == 'Person' %}
+                                            <li>{{ PAGETITLE }} {% trans 'wiki' %}</li>
+                                            <li>{{ PAGETITLE }} {% trans 'bio' %}</li>
+                                            <li>{{ PAGETITLE }} {% trans 'net worth' %}</li>
+                                            <li>{{ PAGETITLE }} {% trans 'age' %}</li>
+                                            <li>{{ PAGETITLE }} {% trans 'married' %}</li>
+                                        {% elif PAGEMETADATA.page_type == 'Product'%}
+                                            <li>{{ PAGETITLE }} {% trans 'wiki' %}</li>
+                                            <li>{{ PAGETITLE }} {% trans 'review' %}</li>
+                                            <li>{{ PAGETITLE }} {% trans 'history' %}</li>
+                                            <li>{{ PAGETITLE }} {% trans 'sales' %}</li>
+                                            <li>{{ PAGETITLE }} {% trans 'facts' %}</li>
+                                        {% elif PAGEMETADATA.page_type == 'Organization'%}
+                                            <li>{{ PAGETITLE }} {% trans 'wiki' %}</li>
+                                            <li>{{ PAGETITLE }} {% trans 'review' %}</li>
+                                            <li>{{ PAGETITLE }} {% trans 'history' %}</li>
+                                            <li>{{ PAGETITLE }} {% trans 'founders' %}</li>
+                                            <li>{{ PAGETITLE }} {% trans 'facts' %}</li>
+                                        {% else %}
+                                            <li>{{ PAGETITLE }} {% trans 'wiki' %}</li>
+                                            <li>{{ PAGETITLE }} {% trans 'review' %}</li>
+                                            <li>{{ PAGETITLE }} {% trans 'history' %}</li>
+                                            <li>{{ PAGETITLE }} {% trans 'encyclopedia' %}</li>
+                                            <li>{{ PAGETITLE }} {% trans 'facts' %}</li>
+                                        {% endif %}
+
+                                    </ul>
+                                </div>
+                                <script>
+                                    function printImg() {
+                                        var theSrc = $("#shareURL_QR img").attr('src');
+                                        var pwin = window.open(theSrc,"_blank");
+                                        pwin.onload = function () {window.print();}
+                                    }
+                                </script>
+                                <div rel='nofollow' id="shareURL_QR" onclick="printImg();" class="copyURL-btn embedURL-btn shareURL-btn-qr btn-default btn" target="_blank">
+                                    {% trans 'QR Code' %}
+                                </div>
+                            </div>
+                        </ul>
+
+					</div>
+				</div>
+
+            </div>
+            <div id="blurbtwenty" class="blurb-desktop schema" itemprop="about" itemid="{{ PREFETCH_MAINLINK_URL }}" itemscope itemtype="http://schema.org/{% if PageAttr.sub_page_type != None %}{{ PageAttr.sub_page_type }}{% elif PAGEMETADATA.page_type != None %}{{ PAGEMETADATA.page_type }}{% else %}Thing{% endif %}" style="{% if PREFETCH_BLURB_LENGTH|eq:0 %}margin-bottom: 0px;{% endif %}">
+                <meta itemprop="name" content="{{ PAGETITLE }}" />
+                {% if PAGEMETADATA.page_type == 'Person' %}
+                <abbr itemprop="homeLocation" itemscope itemtype="http://schema.org/Place" />
+                    <meta itemprop="name" content="Earth" />
+                </abbr>
+                {% endif %}
+                {% if PHOTOOBJECT.url != "" or  NONPLURAL_INFOBOXES|length > 0 or PLURAL_INFOBOXES|length > 0 or SOCIAL_LINK_OBJECTS|length > 0 or BLOBBOX|length > 0 %}
+                    <div class="right-sidebar">
+                        <div class="hidden-lg hidden-md hidden-sm" style="margin-top:0px;"></div>
+                        <div class="panel panel-default panel-profile m-b-md mpanel-header" style="padding-top:0px !important;margin-bottom: 5px !important;">
+
+                        {% if PHOTOOBJECT.url != "" %}
+                            <div class="panel-heading" style="padding:0px; overflow:hidden;max-height: 300px !important;" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                <a class="mainphoto-anchor" rel="nofollow" target="_blank" href="{{PHOTOOBJECT.attribution_url}}">
+                                    <img id='main-image-for-page' style="object-fit: contain; width: 100%; max-height: 300px;" onerror="this.onerror=null;this.src='https://epcdn-vz.azureedge.net/static/images/white.png'" src="{{ PHOTOOBJECT.thumb }}" data-src="{{ PHOTOOBJECT.url }}"
+                                         alt="{% if PAGEMETADATA.page_type == 'Person' %}{{ PAGETITLE }} wiki, {{ PAGETITLE }} bio, {{ PAGETITLE }} news{% elif PAGEMETADATA.page_type == 'Product'%}{{ PAGETITLE }} wiki, {{ PAGETITLE }} review, {{ PAGETITLE }} news{% elif PAGEMETADATA.page_type == 'Organization'%}{{ PAGETITLE }} wiki, {{ PAGETITLE }} review, {{ PAGETITLE }} history, {{ PAGETITLE }} news{% else %}{{ PAGETITLE }} wiki, {{ PAGETITLE }} history, {{ PAGETITLE }} news{% endif %}"
+                                    />
+                                </a>
+                                <meta itemprop="url" content="{{ PHOTOOBJECT.url }}" />
+                                <meta itemprop="height" content="400" />
+                                <meta itemprop="width" content="400" />
+                            </div>
+                        {% endif %}
+                        {% if PHOTOOBJECT.url != "" and PHOTOOBJECT.caption != "" and PHOTOOBJECT.caption != None %}
+                        <div class="text-center mobiletitlecontainer mainphoto-caption">
+                          <h5 class="panel-title" id="mobiletitle">
+                            <span>{{PHOTOOBJECT.caption|safe}}</span>
+                          </h5>
+                        </div>
+                        {% endif %}
+                        {% if BLOBBOX|length == 0 %}
+                        {% if NONPLURAL_INFOBOXES|length > 0 or PLURAL_INFOBOXES|length > 0%}
+                        <div class="text-center mobiletitlecontainer">
+                          <h5 class="panel-title" id="mobiletitle">
+                            <span>{{ PAGETITLE }}</span>
+                            {% if PAGEMETADATA.page_type == 'Person' %}
+                                <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} news, who is {{ PAGETITLE }}, where is {{ PAGETITLE }}" />
+                                <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} real name, {{ PAGETITLE }} wikipedia, how old is {{ PAGETITLE }} " />
+                            {% elif PAGEMETADATA.page_type == 'Product'%}
+                                <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} news, {{ PAGETITLE }} wikipedia what is {{ PAGETITLE }} " />
+                            {% elif PAGEMETADATA.page_type == 'Organization'%}
+                                <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} news, {{ PAGETITLE }} wikipedia, what is {{ PAGETITLE }}, where is {{ PAGETITLE }}" />
+                            {% else %}
+                                <img class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} news, {{ PAGETITLE }} wikipedia, what is {{ PAGETITLE }}" />
+                            {% endif %}
+                          </h5>
+                        </div>
+                        {% endif %}
+                        {% endif %}
+
+
+                        <div class="panel-body infbx-ct" style="padding-top:0px;">
+                            {% if NONPLURAL_INFOBOXES|length > 0 or PLURAL_INFOBOXES|length > 0 or BLOBBOX|length > 0%}
+                              {% include "enterlink/infobox_json_blockchain.html" %}
+                            {% endif %}
+                        </div>
+
+                        {% if SOCIAL_LINK_OBJECTS|length > 0  %}
+                            <div class="panel-footer prf-lnk-ct">
+                                <h5 id="profile-links-title" class="m-t-0">{% trans 'Profiles' %}</h5>
+                                {% include "enterlink/template_profilelinks_blockchain.html" %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Conditional Ads -->
+                    {% if PREFETCH_BLURB_ISLONGARTICLE %}
+                    <div class="main-ct-template-sidebar hide-compressed-desktop">
+                        <div> </div>
+                    </div>
+                    {% endif %}
+                    </div>
+                {% endif %}
+
+                <div class="entry-content">
+                    {{BLURB|safe}}
+                </div>
+            </div>
+		</article>
+    </div>
+    </div>
+
+    <section>
+    {% if MEDIA_OBJECTS|length > 0 %}
+        <div id="grid-gallery" class="section-ct">
+            <span id="gallery" style="float:left; margin-top:-85px;"></span>
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                <h2 class="refh2" id='Gallery_Pseudo_ID' style="margin-bottom:-5px;">{% trans 'Image & Video Gallery' %}
+                    <i class="indicator glyphicon glyphicon-chevron-down pull-right">
+                        <img class='micro-image' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} {% trans 'images, pictures, and videos' %}" />
+                    </i>
+                </h2>
+            </a>
+
+            <div id="collapseOne" class="panel-collapse gallery-ct collapse in">
+
+                <div class="grid">
+                    {% for media in MEDIA_OBJECTS %}
+                        {% if media.class == "PICTURE" or media.2 == "GIF" %}
+                            <div class="grid-box">
+                                <a class="gallery-anchor" rel='nofollow' href="/wiki/{{ PAGEMETADATA.url_slug }}/"  >
+                                    <div class="grid-wrap" data-src="{{ media.url }}" data-sub-html="{{ media.caption}}">
+                                        <img class="grid-item lazyloadable" src="{{ media.thumb }}" data-src="{{ media.url }}" data-image="{{ media.url }}" data-description="{{ media.caption}}" alt="{{ media.caption|striptags }}" onerror="this.onerror=null;this.src='{{ media.thumb }}'"/>
+                                    </div>
+                                </a>
+                                <div class="grid-title">
+                                    {% if media.attribution_url != None and media.attribution_url != "" %}
+                                        <a class="grid-attribution" rel="nofollow" target="_blank" href="{{ media.attribution_url }}">
+                                            <i class="glyphicon glyphicon-info-sign"></i>
+                                        </a>
+                                    {% endif %}
+                                    {{ media.caption|safe}}
+                                </div>
+                                <div class="grid-space"></div>
+                            </div>
+                        {% elif media.class == "YOUTUBE"  %}
+                            <div class="grid-box tile-ct">
+                                <a class="gallery-anchor" rel='nofollow' href="/wiki/{{ PAGEMETADATA.url_slug }}/" >
+                                    <div class="grid-wrap video-wrapper" data-poster="{{ media.thumb }}" data-src="{{ media.url }}?rel=0&vq=hd1080&hd=1" data-sub-html="{{ media.caption}}">
+                                        <div class="video-overlay"></div>
+                                        <img class="grid-item lazyloadable" src="{{ media.thumb }}" data-type="youtube" data-description="{{ media.caption}}" alt="{{ media.caption|striptags }}" data-width="640" data-height="640"/>
+                                    </div>
+                                </a>
+                                <div class="grid-title">
+                                    {% if media.attribution_url != None and media.attribution_url != "" %}
+                                        <a class="grid-attribution" rel="nofollow" target="_blank" href="{{ media.attribution_url }}">
+                                            <i class="glyphicon glyphicon-info-sign"></i>
+                                        </a>
+                                    {% endif %}
+                                    {{ media.caption|safe}}
+                                </div>
+                                <div class="grid-space"></div>
+                            </div>
+                       {% elif media.class == "NORMAL_VIDEO"  %}
+                            <div class="grid-box tile-ct">
+                                <a class="gallery-anchor" rel='nofollow' href="/wiki/{{ PAGEMETADATA.url_slug }}/" >
+                                    <div class="grid-wrap video-wrapper" data-sub-html="{{ media.caption }}" data-html="#video-{{ media.unique }}">
+                                        <div class="video-overlay"></div>
+                                        <a id="video-{{ media.unique }}" rel='nofollow' href="/wiki/{{ PAGEMETADATA.url_slug }}/" >
+                                            <video class="lg-video-object lg-html5 video-js vjs-default-skin grid-item" controls preload="metadata">
+                                                <source src="{{ media.url }}#t=0.1" type="{{ media.mime }}">
+                                                 {% trans 'Your browser does not support HTML5 video.' %}
+                                            </video>
+                                        </a>
+                                    </div>
+                                </a>
+                                <div class="grid-title">
+                                    {% if media.attribution_url != None and media.attribution_url != "" %}
+                                        <a class="grid-attribution" rel="nofollow" target="_blank" href="{{ media.attribution_url }}">
+                                            <i class="glyphicon glyphicon-info-sign"></i>
+                                        </a>
+                                    {% endif %}
+                                    {{ media.caption|safe}}
+                                </div>
+                                <div class="grid-space"></div>
+                            </div>
+                       {% elif media.class == "AUDIO"  %}
+                            <div class="grid-box">
+                                <a class="gallery-anchor" rel='nofollow' href="/wiki/{{ PAGEMETADATA.url_slug }}/" >
+                                    <div class="grid-wrap video-wrapper" data-poster="https://epcdn-vz.azureedge.net/static/images/placeholder-audio.png" data-sub-html="{{ media.caption }}" data-html="#video-AAABBBCCC">
+                                        <div class="video-overlay"></div>
+                                        <a rel='nofollow' href="/wiki/{{ PAGEMETADATA.url_slug }}/" >
+                                            <audio class="lg-video-object lg-html5 video-js vjs-default-skin grid-item" controls preload="metadata">
+                                                <source src="{{ media.url }}" type="{{ media.mime }}">
+                                                 {% trans 'Your browser does not support HTML5 video.' %}
+                                            </audio>
+                                        </a>
+                                    </div>
+                                </a>
+                                <div class="grid-title">
+                                    {% if media.attribution_url != None and media.attribution_url != "" %}
+                                        <a class="grid-attribution" rel="nofollow" target="_blank" href="{{ media.attribution_url }}">
+                                            <i class="glyphicon glyphicon-info-sign"></i>
+                                        </a>
+                                    {% endif %}
+                                    {{ media.caption|safe}}
+                                </div>
+                                <div class="grid-space"></div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+
+
+        <script>
+            // Speed hack to only load main image if human interaction. Needed for bots.
+            $( "html" ).on( "mouseover tap touchstart scroll scrollstart mousewheel", function( event ) {
+                let images = document.querySelectorAll("#main-image-for-page");
+                new LazyLoad(images);
+                $(this).off('mouseover tap touchstart scroll scrollstart mousewheel');
+            });
+        </script>
+
+        <!-- Toolbar Dropdown script -->
+        {% include 'enterlink/inline-js/toolbar-dropdown.html' %}
+
+        <!-- TinyMCE "Mention" plugin (autocomplete tooltip) -->
+        {% include 'enterlink/inline-js/featherlight.html' %}
+
+        <script>
+            $(function() {
+              // Setup drop down menu
+              $('.dropdown-toggle').dropdown();
+
+              // Fix input element click problem
+              $('.dropdown input, .dropdown label').click(function(e) {
+                    e.stopPropagation();
+              });
+            });
+        </script>
+
+
+        <!-- REFERENCE LINKS START -->
+        <div class="section-ct">
+            <span id="referenceList" style="float:left; margin-top:-85px;"></span>
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                <h2 class="refh2" id="Reference_Links-button">
+                    {% if PAGEMETADATA.page_type == 'Person' %}
+                        {% trans "Reference Links For This Biography" %}
+                    {% else %}
+                        {% trans "Reference Links For This Wiki" %}
+                    {% endif %}
+                    <i class="indicator glyphicon glyphicon-chevron-down  pull-right">
+                        <img class='micro-image' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{% trans 'Links to historical reviews, career / educational facts, and other encyclopedic information' %}"/>
+                    </i>
+                </h2>
+            </a>
+
+            <div id="collapseTwo" class="section-ct-inner panel-collapse">
+                <span class="ref_link_description">{% trans 'All information for' %} {{ PAGETITLE }}'s {% trans "wiki comes from the below links. Any source is valid, including Twitter, Facebook, Instagram, and LinkedIn. Pictures, videos, biodata, and files relating to" %} {{ PAGETITLE }} {% trans "are also acceptable encyclopedic sources." %}</span>
+            </div>
+
+            <!-- START LINK LOOP #1 -->
+            {% if CITATION_OBJECTS|length > 0 %}
+                <ul class="l-lst">
+                    {% include "enterlink/template_html_ajax_pagination_blockchain.html" %}
+                </ul>
+            {% else %}
+            {% endif %}
+            <!-- END LINK LOOP #1 -->
+        </div>
+        </div>
+        <!-- REFERENCE LINKS END -->
+
+        <!-- SEEALSO START -->
+        <div class="section-ct">
+            <span id="seeAlsoPanel" style="float:left; margin-top:-85px;"></span>
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#tab_container" href="#collapseFour" >
+                <h2 class="refh2" id="menu2-button">{% trans 'See Also' %}
+                    <i class="indicator glyphicon glyphicon-chevron-down  pull-right">
+                        <img class='micro-image' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{% trans 'See related encyclopedia articles, biographies, reviews, and historical facts.' %}"/>
+                    </i>
+                </h2>
+            </a>
+
+
+            <div id="collapseFour" class="section-ct-inner panel-collapse collapse in">
+                <span class="ref_link_description">{% trans 'Other wiki pages related to' %} {{ PAGETITLE }}.</span>
+                <div class="seealso-ct">
+                    <!-- This is the suggestion units, please leave this here until Sam fixes them -->
+                    {%if SEEALSOS.3 %}
+                    <a href="/wiki/{{SEEALSOS.3.slug}}/">
+                        <div class="seealso-item" >
+                            <img class='sa-page-image' src="{{ SEEALSOS.3.photo_thumb_url }}" data-src="{{ SEEALSOS.3.photo_url }}" onerror="this.onerror=null;this.src='https://epcdn-vz.azureedge.net/static/images/no-image-slide-big.png'"/>
+                            <div class="seealso-overlay">
+                                <div class="sa-title">{{SEEALSOS.3.page_title}}</div>
+                            </div>
+                        </div>
+                    </a>
+                    {%endif%}
+
+                    {%if SEEALSOS.4 %}
+                    <a href="/wiki/{{SEEALSOS.4.slug}}/">
+                        <div class="seealso-item">
+                            <img class='sa-page-image' src="{{ SEEALSOS.4.photo_thumb_url }}" data-src="{{ SEEALSOS.4.photo_url }}" onerror="this.onerror=null;this.src='https://epcdn-vz.azureedge.net/static/images/no-image-slide-big.png'"/>
+                            <div class="seealso-overlay">
+                                <div class="sa-title">{{SEEALSOS.4.page_title}}</div>
+                            </div>
+                        </div>
+                    </a>
+                    {% endif %}
+
+                    {% if SEEALSOS.2 %}
+                    <a href="{{ SEEALSOS.2.target_url }}">
+                        <div class="seealso-item">
+                            <img class='sa-page-image' src="{{ SEEALSOS.2.thumb_url }}" data-src="{{ SEEALSOS.2.photo_url }}" onerror="this.onerror=null;this.src='https://epcdn-vz.azureedge.net/static/images/no-image-slide-big.png'"/>
+                            <div class="seealso-overlay">
+                                <div class="sa-title">{{SEEALSOS.2.see_also_content}}</div>
+                            </div>
+                        </div>
+                    </a>
+                    {% endif %}
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SEEALSO END -->
+        <div class="container">
+            <div class="main">
+                <section style="display:none;">			<!-- Class "cbp-spmenu-open" gets applied to menu -->
+                    <button id="showLeft">Show/Hide Left Slide Menu</button>
+                    <button id="showRight">Show/Hide Right Slide Menu</button>
+                    <button id="showTop">Show/Hide Top Slide Menu</button>
+                    <button id="showBottom">Show/Hide Bottom Slide Menu</button>
+                </section>
+
+            </div>
+        </div>
+
+    </section>
+
+    <div class="page-times">
+        <div>
+            <a rel='nofollow' class="tooltippable" data-username="InterPlanetary_File_System" href="/wiki/InterPlanetary_File_System/">
+                <img class='ipfs-logo' src="https://epcdn-vz.azureedge.net/static/images/ipfs_logo.png">
+            </a>
+            <span>{{ CURRENT_IPFS_HASH }}</span>
+        </div>
+    </div>
+
+</main>
+
+
+<!--- Everipedia Footer -->
+{% include "enterlink/footers/footer.html" %}
+
+{% spaceless %}
+<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/"/>
+<meta itemprop="url" content="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/">
+{% if PAGEMETADATA.page_type == 'Person' %}
+    <meta itemprop="headline" content="{{ PAGETITLE }}'s biography and wiki on Everipedia">
+{% elif PAGEMETADATA.page_type == 'Product'%}
+    <meta itemprop="headline" content="{{ PAGETITLE }}'s wiki & review on Everipedia">
+{% elif PAGEMETADATA.page_type == 'Organization'%}
+    <meta itemprop="headline" content="{{ PAGETITLE }}'s wiki & review on Everipedia">
+{% else %}
+    <meta itemprop="headline" content="{{ PAGETITLE }}'s wiki on Everipedia">
+{% endif %}
+<meta itemprop="text" content="{{ stripped_blurb_for_schema }}">
+<meta itemprop="articleSection" content="News, Trending">
+<meta itemprop="author" content="Everipedia">
+<meta itemprop="copyrightHolder" content="Everipedia">
+{% if PHOTOOBJECT.url != None %}
+    <abbr itemprop="image" itemscope itemtype="http://schema.org/ImageObject" />
+        <meta itemprop="url" content="{{ PHOTOOBJECT.url }}">
+        <meta itemprop="name" content="{{ PAGETITLE }}">
+        <meta itemprop="caption" content="{{ PAGETITLE }}">
+        <meta itemprop="uploadDate" content="{{ PAGEMETADATA.last_modified }}">
+        <meta itemprop="height" content="300">
+        <meta itemprop="width" content="300">
+    </abbr>
+{% else %}
+    <abbr itemprop="image" itemscope itemtype="http://schema.org/ImageObject" />
+        <meta itemprop="url" content="https://epcdn-vz.azureedge.net/static/images/logo_1050x1050.png">
+        <meta itemprop="name" content="{{ PAGETITLE }}">
+        <meta itemprop="caption" content="{{ PAGETITLE }}">
+        <meta itemprop="uploadDate" content="{{ PAGEMETADATA.last_modified }}">
+        <meta itemprop="height" content="300">
+        <meta itemprop="width" content="300">
+    </abbr>
+{% endif %}
+<abbr itemprop="publisher" itemid="https://everipedia.org/" itemscope itemtype="https://schema.org/Organization">
+    <meta itemprop="name" content="Everipedia">
+    <meta itemprop="legalName" content="Everipedia International">
+    <meta itemprop="sameAs" content="https://twitter.com/everipedia">
+    <meta itemprop="sameAs" content="https://www.facebook.com/everipedia/">
+    <meta itemprop="sameAs" content="https://www.reddit.com/r/Everipedia/">
+    <abbr itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+        <meta itemprop="url" content="https://epcdn-vz.azureedge.net/static/images/logo_1050x1050.png">
+        <meta itemprop="width" content="1050">
+        <meta itemprop="height" content="1050">
+    </abbr >
+</abbr >
+<meta itemprop="datePublished" content="{{ PAGEMETADATA.creation_timestamp }}"/>
+<meta itemprop="dateModified" content="{{ PAGEMETADATA.last_modified }}"/>
+
+{% for media in MEDIA_OBJECTS %}
+    {% if media.class == "PICTURE" %} 
+    <abbr itemprop="image" itemscope itemtype="http://schema.org/ImageObject" />
+        <meta itemprop="url" content="{{ media.url }}">
+        <meta itemprop="name" content="{{ PAGETITLE }} Image #{{ forloop.counter }}">
+        <meta itemprop="caption" content="{{ media.caption|striptags }}">
+        <meta itemprop="uploadDate" content="{{ media.timestamp }}">
+        <meta itemprop="height" content="300">
+        <meta itemprop="width" content="300">
+    </abbr>
+    {% endif %}
+
+    {% if media.class == "YOUTUBE" %} 
+        <abbr itemprop="video" itemscope itemtype="http://schema.org/VideoObject" />
+            <meta itemprop="url" content="{{ media.url }}">
+            <meta itemprop="name" content="{{ PAGETITLE }} YouTube Video #{{ forloop.counter }}">
+            <meta itemprop="description" content="{{ media.caption|striptags }}">
+            <meta itemprop="thumbnailUrl" content="https://i.ytimg.com/vi/{{ media.3 }}/default.jpg">
+            <meta itemprop="uploadDate" content="{{ media.timestamp }}">
+            <meta itemprop="height" content="300">
+            <meta itemprop="width" content="300">
+        </abbr>
+    {% endif %}
+    {% if media.class == "NORMAL_VIDEO" %} 
+        <abbr itemprop="video" itemscope itemtype="http://schema.org/VideoObject" />
+            <meta itemprop="url" content="{{ media.url }}">
+            <meta itemprop="name" content="{{ PAGETITLE }} Video #{{ forloop.counter }}">
+            <meta itemprop="description" content="{{ media.caption|striptags }}">
+            <meta itemprop="thumbnailUrl" content="{{ PHOTOOBJECT.url }}">
+            <meta itemprop="uploadDate" content="{{ media.timestamp }}">
+            <meta itemprop="height" content="300">
+            <meta itemprop="width" content="300">
+        </abbr>
+    {% endif %}
+{% endfor %}
+{% endspaceless %}
+</body>
+
+<aside id="template-genius-lightbox" class="top-page-geniuses-modal" >
+    <div class="blurb-compare-hoverbox trending-ct-genius"></div>
+</aside>
+
+<aside id="template-hoverlink-lightbox" class="hoverlink-lightbox" >
+    <div class="blurb-compare-hoverbox" ></div>
+</aside>
+
+<div id="submission_waiting" style="display: none;">
+    <div class="waiting-header">{% trans 'Please wait' %}...</div>
+    <div class="waiting-header-close"><span class="icon icon-squared-cross"></span></div>
+    <div class="submission-wait-wrap">
+        <img src="/static/images/loading2.gif">
+    </div>
+    <script>
+        $(".waiting-header-close").click(function() {
+            $(this).parent().hide();
+        });
+    </script>
+</div>
+
+{% include "enterlink/footers/footerJS.html" %}
+{% include 'enterlink/inline-js/enterlink-template-ajax-postloaders.html' %}
+{% include 'enterlink/inline-js/table_of_contents_js.html' %}
+{% include "enterlink/footers/deferredJS.html" %}
+
+
+<link rel="stylesheet" href="https://epcdn-vz.azureedge.net/static/lightgallery/css/lightgallery-combo-min.css">
+
+{% include 'enterlink/inline-js/lightgallery-local.html' %}
+
+
+<!-- Google Analytics -->
+<script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/jquery-qrcode-0.14.0.min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57561457-6', 'auto');
+  ga('send', {
+      hitType: 'pageview',
+      page: location.pathname,
+      title: '{{ PAGETITLE }}',
+    });
+
+
+</script>
+
+
+
+<script>
+	$('document').ready(function() {
+
+        let images2 = document.querySelectorAll("img.sa-page-image, img.lazyloadable");
+        new LazyLoad(images2);
+
+        // $("img.sa-page-image, img.lazyloadable").unveil(250);
+
+	    $('#cd-vertical-nav a').click(function(e) {
+	        e.preventDefault();
+	        $('#cd-vertical-nav a').removeClass('is-selected');
+	        $(this).addClass('is-selected');
+	    });
+
+        var sections = $('.bioheadtwenty h1#top_header, #blurbtwenty .entry-content h2[id], #blurbtwenty .entry-content h2 .mw-headline[id], ' +
+                '#blurbtwenty .entry-content h3[id], #blurbtwenty .entry-content h3 .mw-headline[id], ' +
+                '#blurbtwenty .entry-content h4[id], #blurbtwenty .entry-content h4 .mw-headline[id], ' +
+                '.section-ct h2');
+        var nav = $('nav#navbar');
+        var toc = $('nav#cbp-spmenu-s1');
+        <!-- var nav_height = nav.outerHeight(); -->
+        var nav_height = 15;
+        var span_fix_height = 85 + nav_height;
+        var mostRecentPassedHeaderID = "";
+
+        //$(window).on('scroll', function () {
+        $('#body-ct').bind('mousewheel DOMMouseScroll scroll touchmove', function(e) {
+            var cur_pos = $(window).scrollTop();
+
+            if (!$('.cbp-spmenu').is(":hover")){
+                sections.each(function(index) {
+                    var top = $(this).offset().top - span_fix_height;
+                    var bottom = "";
+                    if(index !== sections.length - 1) {
+                        bottom = sections.eq(index + 1).offset().top - span_fix_height;
+                    }
+                    else{
+                        bottom = 55;
+                    }
+
+
+                    if (cur_pos >= top && cur_pos < bottom) {
+                        var theBlurbID = $(this).attr('id');
+                        mostRecentPassedHeaderID = theBlurbID;
+                        var selectorString = "[data-blurb-id='" + theBlurbID + "']";
+                        var tocElement = toc.find(selectorString);
+                        tocElement.addClass("tocactive");
+
+                        var windowHeight = $( window ).height();
+                        var tocMenuTop = $('.cbp-spmenu').offset().top;
+                        var windowTopOffset = cur_pos;
+                        var windowBottomOffset = windowTopOffset + windowHeight;
+                        var tocDistanceFromH1 = $('[data-blurb-id="top_header"]').offset().top;
+                        var tocElementTopOffset = tocElement.offset().top;
+                        var tocElementHeight = tocElement.height();
+                        var tocElementBottomOffset = tocElementTopOffset + tocElementHeight;
+
+
+                        if (tocElementBottomOffset >= windowBottomOffset){
+                            $('.heading-collection').animate({
+                                scrollTop: tocElementTopOffset - tocDistanceFromH1 - 50
+                            }, 250);
+                        }
+                        else if (tocElementTopOffset <= windowTopOffset){
+                            $('.heading-collection').animate({
+                                scrollTop: tocElementBottomOffset - tocDistanceFromH1 - windowHeight + 50
+                            }, 250);
+                        }
+
+                    }
+                    else{
+                        var theBlurbID = $(this).attr('id');
+                        if (theBlurbID != mostRecentPassedHeaderID){
+                            var selectorString = "[data-blurb-id='" + theBlurbID + "']";
+                            toc.find(selectorString).removeClass("tocactive")
+                        }
+                    }
+                });
+            };
+        });
+
+        var infoBoxWidth = $(".right-sidebar").width() + 20;
+        var infoBoxScrollBottomPos = $(".right-sidebar").scrollTop() + $(".right-sidebar").height();
+        var blurbtwentyWidth = $("#blurbtwenty").width();
+
+        $("table.blurb-inline-image-container").each(function( index ) {
+            var topOfContainerPos = $(this).offset()['top'];
+            if (topOfContainerPos < infoBoxScrollBottomPos){
+                $(this).addClass('jammed-inline');
+            }
+            else{
+                // simply using a CSS :not() won't work due to a race condition
+                $(this).addClass('not-jammed-inline');
+            }
+        });
+
+        $("#shareURL_QR").qrcode({
+            render: 'image',
+            ecLevel: 'Q',
+            background: '#FFFFFF',
+            size: 300,
+            text: 'https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/',
+            mode: 0,
+            quiet: 2,
+            mSize: 0.1,
+            mPosX: 0.5,
+            mPosY: 0.5,
+            label: 'https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/',
+            fontname: 'sans',
+            fontcolor: '#000',
+            image: null
+        });
+
+           var fadeStart=0, fadeUntil=300, fading = $('#main-takeover-top');
+
+            $(window).bind('scroll', function(){
+                var offset = $(document).scrollTop()
+                    ,opacity=0
+                ;
+                if( offset<=fadeStart ){
+                    opacity=1;
+                }else if( offset<=fadeUntil ){
+                    opacity=1-offset/fadeUntil;
+                }
+                fading.css('opacity',opacity);
+            });
+
+
+
+
+        function printImg() {
+            var theSrc = $("#shareURL_QR img").attr('src');
+            var pwin = window.open(theSrc,"_blank");
+            pwin.onload = function () {window.print();}
+        }
+
+        function toggleChevron(e) {
+	    $(e.target)
+	        .prev('.tab-content')
+	        .find("i.indicator")
+	        .toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
+        }
+        $('#tab_container').on('hidden.bs.collapse', toggleChevron);
+        $('#tab_container').on('shown.bs.collapse', toggleChevron);
+
+        var $lg = $("#collapseOne");
+        $lg.lightGallery({
+            selector: ".grid-wrap",
+            loadYoutubeThumbnail: true,
+            youtubeThumbSize: 'default',
+            loadVimeoThumbnail: true,
+            vimeoThumbSize: 'thumbnail_medium',
+            thumbnail:false,
+            preload: '2',
+            animateThumb: true,
+            showThumbByDefault: false,
+            mode: 'lg-slide',
+            videojs: false,
+            youtubePlayerParams: {
+                modestbranding: 1,
+                showinfo: 1,
+                rel: 0,
+                controls: 1
+            },
+            vimeoPlayerParams: {
+                byline : 0,
+                portrait : 0,
+                color : 'A90707'
+            }
+        });
+
+        $lg.on('onAfterOpen.lg', function(event){
+            if ($('#cbp-spmenu-s1').hasClass('cbp-spmenu-open').toString() == 'true'){
+                $('#showLeft').click();
+            }
+        });
+        $lg.on('onAfterSlide.lg', function(event){
+
+            initializeTooltippables();
+            $(".tooltippable").each(function(){
+                $(this).attr('target', '_parent');
+            })
+        });
+        $lg.on('onCloseAfter.lg', function(event){
+            $('.grid').isotope('destroy');
+            $('.grid').isotope({ itemSelector: '.grid-box', layoutMode: 'fitRows'});
+        });
+
+        // Makes sure the items fit
+        setTimeout(function(){
+            $('.grid').isotope('destroy');
+            $('.grid').isotope({ itemSelector: '.grid-box', layoutMode: 'fitRows'});
+        }, 1000);
+
+    });
+
+
+    function loadScript( url, callback ) {
+        var script = document.createElement( "script" );
+        script.type = "text/javascript";
+        if(script.readyState) {  //IE
+            script.onreadystatechange = function() {
+                if ( script.readyState === "loaded" || script.readyState === "complete" ) {
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else {  //Others
+            script.onload = function() {
+                callback();
+            };
+        }
+        script.src = url;
+        document.getElementsByTagName( "head" )[0].appendChild( script );
+    }
+
+    loadScript("https://epcdn-vz.azureedge.net/static/js/isotope.pkgd.min.js", function() {
+        $('.grid').isotope({
+            // options
+            itemSelector: '.grid-box',
+            layoutMode: 'fitRows'
+        });
+    });
+
+    document.querySelector('head').innerHTML += '<link href="https://epcdn-vz.azureedge.net/static/css/jquery-qtip.css" rel="stylesheet">';
+
+    var trackingPixel = new Image();
+    trackingPixel.src="https://iqnetwork.io/pagecounter/{{ PAGEMETADATA.url_slug }}/";
+
+</script>
+
+<script type="application/ld+json">
+    {
+      "@context":"http://schema.org",
+      "@type":"ItemList",
+      "itemListElement":[
+        {
+          "@type":"ListItem",
+          "position":1,
+          "url":"https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/"
+        },
+        {
+          "@type":"ListItem",
+          "position":2,
+          "url":"https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/advanced_edit/history/"
+        }
+      ]
+    }
+</script>
+
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://everipedia.org",
+          "name": "Everipedia",
+          "image": "https://epcdn-vz.azureedge.net/static/images/logo_1050x1050.png"
+        }
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/",
+          "name": "{{ PAGETITLE }}",
+          "image": "{{ PHOTOOBJECT.url }}"
+        }
+      }]
+    }
+</script>
+</html>
+{% endlanguage %}

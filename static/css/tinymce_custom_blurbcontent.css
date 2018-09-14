@@ -1,0 +1,186 @@
+@font-face {
+    font-family:'Lora';
+    font-style:normal;
+    font-weight:400;
+    src:url(https://epcdn-vz.azureedge.net/static/fonts/Lora-Regular.woff) format("woff")
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('https://epcdn-vz.azureedge.net/static/fonts/Lora-Bold.woff') format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('https://epcdn-vz.azureedge.net/static/fonts/Lora-Italic.woff') format('woff');
+    font-style: italic;
+}
+
+@keyframes fadeinopacity {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+p {
+margin:0;
+padding:0 0 0 0px;
+border:0;
+font:400 16px/1.6 "Lora"
+}
+
+h1,h2,h3,h4,h5,h6{
+font-weight: bold;
+color: #444;
+}
+h1{
+font-size: 32px;
+}
+h2{
+font-size: 28px;
+}
+h3{
+font-size: 24px;
+}
+h4{
+font-size: 22px;
+}
+h5{
+font-size: 20px;
+}
+h6{
+font-size: 18px;
+}
+.mw-body-content p{
+    margin-bottom: 10px;
+}
+
+a {
+    color: #3097d1;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #216a94;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+div.mce-edit-area {
+border-radius:12px 12px 12px 12px;
+overflow:hidden;
+font:400 16px/1.4 "Lora"
+}
+
+@media (max-width: 565px) {
+p {
+font-size:15px;
+color: #444;
+}
+}
+
+body#tinymce[data-id="id_blurbcontent"]{
+    padding: 0px 0px 15px 0px !important
+}
+
+@media (min-width: 767px) {
+    body#tinymce[data-id="id_blurbcontent"] {
+        margin: 0px 15px 0px 0px;
+        overflow-x: auto;
+    }
+
+    .edit-page-blurb-box input[type="text"]:hover{
+        cursor: pointer;
+    }
+}
+
+
+
+#tinymce{
+    margin:0px;
+    /*animation-name: fadeinopacity;*/
+    /*animation-duration: 1.5s;*/
+}
+
+.blurb-inline-image-container {
+    float: right;
+    margin: 15px 3px 15px 20px;
+    background-color: rgb(248, 249, 250);
+    border: 1px solid rgb(200, 204, 209) !important;
+    border-bottom: 0px !important;
+    padding: 3px;
+    /* box-shadow: 2px 2px 5px #dddfe2; */
+    border: 0px !important;
+}
+
+.blurb-inline-image-container tbody img{
+    margin: 3px;
+    object-fit: cover;
+}
+
+.blurb-inline-image-container caption.blurbimage-caption {
+    font-family: 'Lora', Garamond, Georgia;
+    font-size: 13px;
+    line-height: 1.4em;
+    padding: 5px 8px 5px 8px;
+    caption-side: bottom;
+    color: rgb(68, 68, 68);
+    word-break: break-word;
+    text-align: left;
+    background-color: transparent;
+}
+
+.blurb-inline-image-container .thumbcaption {
+	font-style:italic;
+}
+
+.blurb-inline-image-container .thumbcaption .magnify {
+	display:none;
+}
+
+
+.blurb-inline-image-container a.imagelink{
+    float:left;
+    overflow: hidden;
+}
+
+
+.blurb-inline-image-container .inline-video-wrapper{
+    top: 0;
+    left: 0;
+    right: 0;
+    position: relative;
+}
+
+.blurb-inline-image-container .inline-video-wrapper a.inline-video-overlay:before{
+    content: "";
+    background-image: url('https://epcdn-vz.azureedge.net/static/images/placeholder-video.png');
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: absolute;
+    cursor: pointer;
+}
+
+.blurb-inline-image-container .inline-video-wrapper a.inline-video-overlay:before:hover{
+    opacity: .7;
+}
+
+.blurb-inline-image-container .inline-video-wrapper video{
+    object-fit: cover;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.mce-item-table, .mce-item-table td, .mce-item-table th, .mce-item-table caption{
+border: none;
+}
+
+span.tt-wrap{
+    color: #3097d1;
+}

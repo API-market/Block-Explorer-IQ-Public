@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+{% load i18n %}
+<html>
+    <head>
+    <link rel="canonical" href="https://iqnetwork.io/login/" />
+    <title>{% trans "Sign in" %} - {% trans "Everipedia, the encyclopedia of everything" %}</title>
+        
+    <meta name="description" content=" Everipedia is the world’s largest collection of hyperlinks grouped by identity. ">
+    
+ 	<!--- Include Header -->
+	{% include "enterlink/headers/header-common.html" %}
+	
+	
+	{% if request.mobile %}
+		{% include "enterlink/headers/header-navbar.html" %}
+	{% endif %}
+	
+    <link href="/static/css/login_register.css" rel="stylesheet">
+</head>
+
+
+
+
+<body style="background-color:#FAFAFA;">
+	
+		<div class="login-ct">
+		  <div class="container-content-middle">
+		    <form id="login_form" method="post" action="" role="form" autocomplete="on" class="m-x-auto text-center app-login-form">
+			{% csrf_token %}
+				
+				<img class="login-logo hidden-xs" src="https://epcdn-vz.azureedge.net/static/images/Everipedia_Logo.svg"/>
+                <h1>{%  trans 'Sign in to Everipedia' %}</h1>
+                <div style="margin: -10px 0px 10px 0px; color: #d56464; font-size: 12px;">{{ errorMessage }}</div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="username" value="" placeholder="{% trans 'Username' %}" size="50" />
+                </div>
+
+                <div class="form-group m-b-md">
+                    <input type="password" class="form-control" name="password" value="" placeholder="{% trans 'Password' %}" size="50" />
+                    <a rel='nofollow' class="login-info" href="/account/reset" style="float: left; margin-top: 7px; display: block; margin-bottom: 6px;">{%  trans 'Forgot your password?' %}</a>
+                </div>
+
+                <div class="m-b-lg" style="margin-bottom:8px !important; float: left; width: 100%;">
+                    <input class="btn btn-primary" type="submit" value="{% trans 'Log in' %}" style="width:100%;"/>
+                </div>
+
+                <a class="fb_login social-login" rel="nofollow" href="/socialauth/login/facebook/?next={{ request.path }}"><div>{% trans 'Log in with Facebook' %}</div></a>
+                <a class="tw_login social-login" rel="nofollow" href="/socialauth/login/twitter/?next={{ request.path }}"><div>{% trans 'Log in with Twitter' %}</div></a>
+
+		        <input type="hidden" name="next" value="{{next}}" />
+		
+		    </form>
+		  </div>
+		</div>
+		
+
+
+
+<!--- Everipedia Footer -->
+{% include "enterlink/footers/footer.html" %}
+{#{% include "enterlink/footers/deferredJS.html" %}#}
+{% include 'enterlink/inline-css/application.html' %}
+{% include 'enterlink/headers/extra-analytics-right-before-body-end.html' %}
+</body>
+</html>

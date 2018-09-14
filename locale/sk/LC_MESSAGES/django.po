@@ -1,0 +1,2325 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-25 08:59-0700\n"
+"PO-Revision-Date: 2018-08-04 23:52-0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Poedit 2.1.1\n"
+
+#: enterlink/edit.py:114
+msgid "Page Type"
+msgstr "Stránka"
+
+#: enterlink/edit.py:114
+msgid "Removed From Site"
+msgstr "Odstránené z lokality"
+
+#: enterlink/edit.py:114 templates/enterlink/edit_ajax_editpagemeta.html:12
+msgid "Adult Content"
+msgstr "Obsah pre dospelých"
+
+#: enterlink/edit.py:115
+msgid "Media Gallery"
+msgstr "Galéria"
+
+#: enterlink/edit.py:115
+msgid "References and Citations"
+msgstr "Odkazy a citácie"
+
+#: enterlink/forms.py:9
+msgid "Contains"
+msgstr "Obsahuje"
+
+#: enterlink/forms.py:9
+msgid "Equal to"
+msgstr "Rovná sa"
+
+#: enterlink/forms.py:10
+msgid "Regular expression"
+msgstr "Regulárny výraz"
+
+#: enterlink/forms.py:11
+msgid "Starts with"
+msgstr "Začína na"
+
+#: enterlink/forms.py:11
+msgid "Ends with"
+msgstr "Končí na"
+
+#: enterlink/forms.py:12
+msgid "Greater than"
+msgstr "Viac než"
+
+#: enterlink/forms.py:12
+msgid "Greater than or equal to"
+msgstr "Viac než alebo rovnako"
+
+#: enterlink/forms.py:13
+msgid "Less than"
+msgstr "Menej než"
+
+#: enterlink/forms.py:13
+msgid "Less than or equal to"
+msgstr "Menej než alebo rovnako"
+
+#: enterlink/forms.py:42 templates/enterlink/headers/index_header.html:133
+#: templates/enterlink/login.html:40
+msgid "Password"
+msgstr "Heslo"
+
+#: enterlink/forms.py:44
+msgid "Please enter a password"
+msgstr "Zadajte heslo prosím"
+
+#: enterlink/forms.py:45
+msgid "Please enter a valid password"
+msgstr "Zadajte platné heslo"
+
+#: enterlink/forms.py:46
+msgid "Enter an email"
+msgstr "Zadajte e-mail"
+
+#: enterlink/forms.py:47
+msgid "Please enter an email address"
+msgstr "Zadajte prosím vašu emailovú adresu."
+
+#: enterlink/forms.py:48
+msgid "Please enter a valid email address"
+msgstr "Prosím vložte platnú emailovú adresu"
+
+#: enterlink/forms.py:49 enterlink/forms.py:69
+msgid "First Name"
+msgstr "Meno"
+
+#: enterlink/forms.py:51 enterlink/forms.py:71
+msgid "Last Name"
+msgstr "Priezvisko"
+
+#: enterlink/forms.py:53
+msgid "Enter a username"
+msgstr "Zadajte užívateľské meno"
+
+#: enterlink/forms.py:54
+msgid "Please enter a username"
+msgstr "Prosím zadajte užívateľské meno"
+
+#: enterlink/forms.py:55
+msgid "Please enter a valid username"
+msgstr "Prosím, zadajte platné užívateľské meno"
+
+#: enterlink/forms.py:61
+msgid "This email address already exists! Please use another one."
+msgstr "Táto e-mailová adresa už existuje! Prosím použite inú."
+
+#: enterlink/forms.py:73 enterlink/forms.py:83
+msgid "Email"
+msgstr "E-mail"
+
+#: enterlink/forms.py:82
+msgid "How can we help?"
+msgstr "Ako môžeme pomôcť?"
+
+#: enterlink/forms.py:84
+msgid "Full Name"
+msgstr "Celé meno"
+
+#: enterlink/forms.py:85
+msgid "Subject"
+msgstr "Predmet"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Report Abuse"
+msgstr "Nahlásiť obťažovanie"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Report Bug"
+msgstr "Nahlásiť chybu"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Verify Account"
+msgstr "Overte účet"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Anonymous Tip"
+msgstr "Anonymný tip"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Investment Inquiries"
+msgstr "Investičné otázky"
+
+#: enterlink/forms.py:86 enterlink/forms.py:175 enterlink/models.py:89
+#: enterlink/models.py:134
+msgid "Other"
+msgstr "Iné"
+
+#: enterlink/forms.py:97
+msgid "Search by Entering a Link"
+msgstr "Vyhľadávanie podľa zadaného odkazu"
+
+#: enterlink/forms.py:126
+msgid ""
+"Describe the file briefly. A summary of the information found is best. Avoid "
+"simply repeating the page title."
+msgstr ""
+"Stručne popíšte súbor. Zhrnutie nájdených informácií je najlepšie. Vyhnite "
+"sa opakovaniu názvu stránky."
+
+#: enterlink/forms.py:148
+msgid "File type not allowed."
+msgstr "Typ súboru nie je povolený."
+
+#: enterlink/forms.py:153
+msgid "Please ."
+msgstr "Prosím ."
+
+#: enterlink/forms.py:154
+msgid "Enter a URL"
+msgstr "Zadajte URL"
+
+#: enterlink/forms.py:156
+msgid ""
+"Describe the URL briefly. A summary of the information found is best. Avoid "
+"simply repeating the page title."
+msgstr ""
+"Stručne opíšte adresu URL. Zhrnutie nájdených informácií je najlepšie. "
+"Vyhnite sa opakovaniu názvu stránky."
+
+#: enterlink/forms.py:165 templates/enterlink/edit_ajax_addinfobox.html:28
+msgid "Enter type (e.g. Occupation)"
+msgstr "Zadajte typ (napr. Povolanie)"
+
+#: enterlink/forms.py:166 templates/enterlink/edit_ajax_addinfobox.html:28
+msgid "Enter value (e.g. CEO)"
+msgstr "Zadajte hodnotu (napr. CEO)"
+
+#: enterlink/forms.py:170 enterlink/models.py:134
+msgid "Person"
+msgstr "Osoba"
+
+#: enterlink/forms.py:170 enterlink/models.py:134
+msgid "Place/Location"
+msgstr "Miesto / Lokalita"
+
+#: enterlink/forms.py:171 enterlink/models.py:134
+msgid "Organization/Company/Institution"
+msgstr "Organizácia / Firma / Inštitúcia"
+
+#: enterlink/forms.py:171 enterlink/models.py:134
+msgid "Event"
+msgstr "Udalosť"
+
+#: enterlink/forms.py:172 enterlink/models.py:134
+msgid "List/Ranking"
+msgstr "List / Rebríček"
+
+#: enterlink/forms.py:172 enterlink/models.py:134
+msgid "Product/Merchandise"
+msgstr "Produkt / Merchandise"
+
+#: enterlink/forms.py:173 enterlink/models.py:134
+msgid "Electronics/Software"
+msgstr "Elektronika / Softvér"
+
+#: enterlink/forms.py:173 enterlink/models.py:134
+msgid "Medical/Biology"
+msgstr "Lekárske / Biológia"
+
+#: enterlink/forms.py:174 enterlink/models.py:134
+msgid "Creative Work/Art"
+msgstr "Kreatívna práca / Umenie"
+
+#: enterlink/forms.py:175 enterlink/models.py:134
+msgid "Science/Academia/Humanities"
+msgstr "Veda / Akademické / Humanitné"
+
+#: enterlink/models.py:45 enterlink/models.py:49
+msgid "None"
+msgstr "Žiadne"
+
+#: enterlink/models.py:45
+msgid "Featured"
+msgstr "Odporúčané"
+
+#: enterlink/models.py:45
+msgid "In the news"
+msgstr "V správach"
+
+#: enterlink/models.py:46
+msgid "In the news (Editor's Pick)"
+msgstr "V správach (Editor Pick)"
+
+#: enterlink/models.py:46
+msgid "In the news (Standout Article)"
+msgstr "V správach (článok Standout)"
+
+#: enterlink/models.py:47
+msgid "Trending"
+msgstr "Trendy"
+
+#: enterlink/models.py:47
+msgid "On this day"
+msgstr "V tento deň"
+
+#: enterlink/models.py:47
+msgid "Blog Post (Meta Article)"
+msgstr "Príspevok blogu (článok Meta)"
+
+#: enterlink/models.py:49
+msgid "Verified Only"
+msgstr "Iba overené"
+
+#: enterlink/models.py:50
+msgid "Normal (Business)"
+msgstr "Normálne (obchodné)"
+
+#: enterlink/models.py:50
+msgid "Normal (Personal)"
+msgstr "Normálne (osobné)"
+
+#: enterlink/view_functions.py:144
+msgid ""
+"Your Everipedia editor restrictions have been removed. You can now edit "
+"pages freely!"
+msgstr ""
+"Vaše obmedzenia editora Everipedia boli odstránené. Teraz môžete stránky "
+"voľne upravovať!"
+
+#: enterlink/view_functions.py:607
+msgid "Images & Videos"
+msgstr "Obrázky a videá"
+
+#: enterlink/view_functions.py:609
+msgid "References"
+msgstr "Referencie"
+
+#: enterlink/view_functions.py:612
+msgid "Article Discussion"
+msgstr "Diskusia článku"
+
+#: enterlink/view_functions.py:615 enterlink/view_functions.py:618
+#: templates/enterlink/template_blockchain_styled_amp.html:350
+#: templates/enterlink/template_blockchain_styled_desktop.html:526
+msgid "See Also"
+msgstr "Pozri aj"
+
+#: enterlink/view_functions.py:617
+msgid "Top Editors"
+msgstr "Top editory"
+
+#: enterlink/view_functions.py:1625
+msgid "Wiki and references for"
+msgstr "Wiki a referencie pre"
+
+#: enterlink/view_functions.py:1626
+msgid "You can edit something on this wiki now!"
+msgstr "Teraz môžete na tejto wiki editovať!"
+
+#: local_packages/block_ip/models.py:11
+msgid "IP address or mask"
+msgstr "IP adresu alebo masku"
+
+#: local_packages/block_ip/models.py:12
+msgid "Optional reason for block"
+msgstr "Nepovinný dôvod blokovania"
+
+#: local_packages/block_ip/models.py:25 local_packages/block_ip/models.py:26
+msgid "IPs & masks to ban"
+msgstr "IP adresy a masky na zakázanie"
+
+#: templates/admin/base.html:28
+msgid "Welcome,"
+msgstr "Vitajte,"
+
+#: templates/admin/base.html:33
+msgid "Documentation"
+msgstr "Dokumentácia"
+
+#: templates/admin/base.html:36
+msgid "Change password"
+msgstr "Zmeniť heslo"
+
+#: templates/admin/base.html:38 templates/admin/password_change_done.html:57
+#: templates/admin/password_change_form.html:59
+#: templates/enterlink/headers/header_dropdown.html:22
+#: templates/enterlink/headers/header_dropdown.html:44
+#: templates/enterlink/headers/index_header.html:110
+#: templates/enterlink/headers/index_header.html:166
+#: templates/enterlink/headers/index_header.html:236
+#: templates/enterlink/headers/index_header.html:258
+#: templates/enterlink/notifications/index.html:100
+#: templates/enterlink/notifications/index.html:105
+msgid "Log out"
+msgstr "Odhlásiť sa"
+
+#: templates/admin/base.html:47 templates/admin/logged_out.html:4
+#: templates/admin/password_reset_complete.html:6
+#: templates/admin/password_reset_confirm.html:6
+#: templates/admin/password_reset_done.html:6
+#: templates/admin/password_reset_form.html:6
+#: templates/enterlink/notifications/index.html:61
+#: templates/enterlink/notifications/index.html:94
+msgid "Home"
+msgstr "Domov"
+
+#: templates/admin/base_site.html:4
+msgid "Django site admin"
+msgstr "Django admin stránky"
+
+#: templates/admin/base_site.html:7
+msgid "Django administration"
+msgstr "Django administrácia"
+
+#: templates/admin/logged_out.html:8
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr "Ďakujeme za to, že ste dnes strávili čas na webe."
+
+#: templates/admin/logged_out.html:10
+msgid "Log in again"
+msgstr "Prihláste sa znova"
+
+#: templates/admin/password_change_done.html:46
+#: templates/admin/password_change_form.html:48
+#: templates/enterlink/edit.html:145 templates/enterlink/search-iframe.html:122
+#: templates/enterlink/search.html:27 templates/enterlink/user.html:220
+msgid "Search Everipedia"
+msgstr "Hľadať Everipedia"
+
+#: templates/admin/password_change_done.html:60
+#: templates/admin/password_change_form.html:62
+#: templates/admin/password_reset_complete.html:19
+#: templates/enterlink/headers/index_header.html:135
+#: templates/enterlink/headers/index_header.html:168
+#: templates/enterlink/headers/index_header.html:240
+#: templates/enterlink/headers/index_header.html:262
+#: templates/enterlink/login.html:45
+msgid "Log in"
+msgstr "Prihlásiť sa"
+
+#: templates/admin/password_change_done.html:71
+msgid "Password change successful"
+msgstr "Zmena hesla bola úspešná"
+
+#: templates/admin/password_reset_complete.html:7
+#: templates/admin/password_reset_confirm.html:11
+#: templates/admin/password_reset_done.html:7
+#: templates/admin/password_reset_form.html:7
+#: templates/admin/password_reset_form.html:11
+#: templates/admin/password_reset_form.html:15
+msgid "Password reset"
+msgstr "Obnoviť heslo"
+
+#: templates/admin/password_reset_complete.html:11
+#: templates/admin/password_reset_complete.html:15
+msgid "Password reset complete"
+msgstr "Obnovenie hesla dokončené"
+
+#: templates/admin/password_reset_complete.html:17
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr "Vaše heslo bolo nastavené. Môžete pokračovať a prihlásiť sa."
+
+#: templates/admin/password_reset_confirm.html:7
+msgid "Password reset confirmation"
+msgstr "Potvrdenie obnovenia hesla"
+
+#: templates/admin/password_reset_confirm.html:17
+msgid "Enter new password"
+msgstr "Zadať nové heslo"
+
+#: templates/admin/password_reset_confirm.html:19
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+"Zadajte vaše nové heslo dvakrát, aby sme mohli overiť, že ste ho napísali "
+"správne."
+
+#: templates/admin/password_reset_confirm.html:23
+msgid "New password:"
+msgstr "Nové heslo:"
+
+#: templates/admin/password_reset_confirm.html:25
+msgid "Confirm password:"
+msgstr "Potvrdiť heslo:"
+
+#: templates/admin/password_reset_confirm.html:26
+msgid "Change my password"
+msgstr "Zmeniť heslo"
+
+#: templates/admin/password_reset_confirm.html:31
+msgid "Password reset unsuccessful"
+msgstr "Obnovenie hesla neúspešné"
+
+#: templates/admin/password_reset_confirm.html:33
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+"Odkaz na obnovenie hesla bol neplatný, možno preto, že už bol použitý. "
+"Požiadajte o obnovenie nového hesla."
+
+#: templates/admin/password_reset_done.html:11
+#: templates/admin/password_reset_done.html:15
+msgid "Password reset successful"
+msgstr "Obnovenie hesla úspešné"
+
+#: templates/admin/password_reset_done.html:17
+msgid ""
+"We have emailed you instructions for setting your password. You should be "
+"receiving them shortly."
+msgstr ""
+"Odoslali sme vám e-mailové pokyny na nastavenie hesla. Mali by ste ich "
+"dostať čoskoro."
+
+#: templates/admin/password_reset_done.html:19
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+"Ak nedostanete e-mail, uistite sa, že ste zadali adresu, na ktorú ste sa "
+"zaregistrovali, a skontrolujte priečinok so spamom."
+
+#: templates/admin/password_reset_email.html:2
+msgid ""
+"You are receiving this email because you requested a password reset for your "
+"Everipedia account."
+msgstr ""
+"Tento e-mail ste dostali, pretože ste požiadali o obnovenie hesla pre váš "
+"účet Everipedia."
+
+#: templates/admin/password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr "Prejdite na nasledujúcu stránku a zvoľte nové heslo:"
+
+#: templates/admin/password_reset_email.html:8
+msgid "Your username, in case you've forgotten:"
+msgstr "Vaše užívateľské meno, v prípade, že ste zabudli:"
+
+#: templates/admin/password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr "Ďakujeme za používanie našich stránok!"
+
+#: templates/admin/password_reset_form.html:17
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+"Zabudnuté heslo? Zadajte nižšie svoju e-mailovú adresu a my vám pošleme e-"
+"mailom a pokyny pre nastavenie nového."
+
+#: templates/admin/password_reset_form.html:21
+msgid "Email address:"
+msgstr "E-mailová adresa:"
+
+#: templates/admin/password_reset_form.html:21
+msgid "Reset my password"
+msgstr "Resetovať heslo"
+
+#: templates/email/sanger_announcement.html:276
+#: templates/email/welcome_email.html:264
+#: templates/email/welcome_email_old.html:68
+#: templates/enterlink/welcome.html:33
+msgid "Learn More"
+msgstr "Dozvedieť sa viac"
+
+#: templates/email/welcome_email.html:257
+msgid "View My Profile"
+msgstr "Zobraziť môj profil"
+
+#: templates/email/welcome_email_old.html:67
+#: templates/enterlink/welcome.html:28 templates/enterlink/welcome.html:30
+msgid "Create a Wiki"
+msgstr "Vytvoriť Wiki"
+
+#: templates/endless/show_more.html:5
+msgid "more"
+msgstr "viac"
+
+#: templates/enterlink/ajax_infobox_singlet.html:14
+#: templates/enterlink/ajax_infobox_singlet.html:42
+msgid "Add Row"
+msgstr "Pridať riadok"
+
+#: templates/enterlink/ajax_infobox_singlet.html:17
+#: templates/enterlink/ajax_infobox_singlet.html:45
+msgid "Schema"
+msgstr "Schéma"
+
+#: templates/enterlink/ajax_infobox_singlet.html:21
+#: templates/enterlink/ajax_infobox_singlet.html:49
+msgid "Schema Type"
+msgstr "Typ schémy"
+
+#: templates/enterlink/ajax_infobox_singlet.html:25
+#: templates/enterlink/ajax_infobox_singlet.html:53
+msgid "Subschema"
+msgstr "Subschema"
+
+#: templates/enterlink/ajax_link_singlet.html:25
+msgid "Social Media"
+msgstr "Sociálne médiá"
+
+#: templates/enterlink/ajax_link_singlet.html:27
+msgid "Attributes"
+msgstr "Vlastnosti"
+
+#: templates/enterlink/ajax_link_singlet.html:29
+#: templates/enterlink/ajax_media_gallery_singlet.html:33
+msgid "Timestamp"
+msgstr "Časová pečiatka"
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:14
+#: templates/enterlink/ajax_media_gallery_singlet.html:19
+#: templates/enterlink/ajaxresults.html:104
+#: templates/enterlink/hoverlink_iframe_blockchain.html:97
+#: templates/enterlink/template_blockchain_styled_desktop.html:415
+#: templates/enterlink/template_blockchain_styled_desktop.html:438
+#: templates/enterlink/template_photos_amp_json_blockchain.html:79
+msgid "Your browser does not support HTML5 video."
+msgstr "Váš prehliadač nepodporuje HTML5 video"
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:29
+msgid "Type"
+msgstr "Typ"
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:31
+msgid "MIME Type"
+msgstr "MIME typ"
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:37
+msgid "Original URL"
+msgstr "Pôvodné URL"
+
+#: templates/enterlink/ajaxresults.html:57
+msgid "Click to add a new link or file to this list"
+msgstr "Kliknutím pridáte nový odkaz alebo súbor do tohto zoznamu"
+
+#: templates/enterlink/ajaxresults.html:60
+msgid "Or click an existing link below to add it to the article"
+msgstr "Alebo kliknite na existujúci odkaz nižšie a pridajte ho do článku"
+
+#: templates/enterlink/ajaxresults.html:135
+#: templates/enterlink/ajaxresults.html:192
+#: templates/enterlink/template_blockchain_styled_desktop.html:167
+msgid "Views"
+msgstr "Zobrazení"
+
+#: templates/enterlink/ajaxresults.html:157
+#: templates/enterlink/hovereditor_ajax.html:74
+msgid "IQ"
+msgstr "IQ"
+
+#: templates/enterlink/ajaxresults.html:175
+msgid "page(s) have this link"
+msgstr "stránka(y) majú tento odkaz"
+
+#: templates/enterlink/analytics.html:7 templates/enterlink/faq.html:6
+msgid "Frequently Asked Questions - Everipedia, everyone's encyclopedia"
+msgstr "Často kladené otázky - Everipedia, encyklopédia každého"
+
+#: templates/enterlink/brainpowermgmt.html:4
+#: templates/enterlink/brainpowermgmt.html:114
+msgid "Brainpower Management"
+msgstr "Správa Brainpower"
+
+#: templates/enterlink/brainpowermgmt.html:4 templates/enterlink/contact.html:7
+#: templates/enterlink/edit.html:7 templates/enterlink/editing-disabled.html:7
+#: templates/enterlink/editors.html:23
+#: templates/enterlink/exchange-listings.html:7
+#: templates/enterlink/headers/index_header.html:17
+#: templates/enterlink/headers/index_header.html:18
+#: templates/enterlink/inbox.html:12 templates/enterlink/index.html:7
+#: templates/enterlink/leadership.html:7
+#: templates/enterlink/limitreached.html:7 templates/enterlink/login.html:7
+#: templates/enterlink/recent-activity.html:7
+#: templates/enterlink/register.html:6 templates/enterlink/rewardsmgmt.html:4
+#: templates/enterlink/search.html:7 templates/enterlink/transfer-iq.html:5
+#: templates/enterlink/user.html:12 templates/enterlink/votehistory.html:7
+msgid "Everipedia, the encyclopedia of everything"
+msgstr "Everipedia, encyklopédia všetkého"
+
+#: templates/enterlink/brainpowermgmt.html:101 templates/enterlink/edit.html:89
+#: templates/enterlink/rewardsmgmt.html:119
+#: templates/enterlink/transfer-iq.html:106 templates/enterlink/voting.html:180
+msgid "Loading Scatter"
+msgstr "Načíta sa rozptyl"
+
+#: templates/enterlink/brainpowermgmt.html:117
+msgid ""
+"Staking IQ tokens will freeze them for 21 days and will generate "
+"nontransferable Brainpower, which can be used for editing and voting on the "
+"Everipedia network. At the end of the 21 days, you can claim back your IQ "
+"tokens and re-stake them for more Brainpower again. Thus, 1 IQ, staked every "
+"21 days, can lead to 365 days / 21 days = 17.38 Brainpower every year."
+msgstr ""
+"Zostávajúce symboly IQ ich zmrazia po dobu 21 dní a vytvoria neprenosné "
+"Brainpower, ktoré môžu byť použité na editáciu a hlasovanie v sieti "
+"Everipedia. Po uplynutí 21 dní môžete požiadať o svoje IQ žetóny a znova ich "
+"znova naštartovať pre viac Brainpower. Takže 1 IQ, stávka každých 21 dní, "
+"môže viesť každémý rok 365 dní / 21 dní = 17,38 Brainpower."
+
+#: templates/enterlink/brainpowermgmt.html:118
+msgid ""
+"As you make pages, propose edits, and vote on article proposals, you will "
+"consume Brainpower. However, making successful edits and voting on the "
+"winning side of a proposal will generate rewards in IQ, not Brainpower. "
+"Therefore, you can generate more Brainpower (and any profit) by staking the "
+"new IQ you just earned."
+msgstr ""
+"Pri vytváraní stránok, navrhovaní úprav a hlasovaní o návrhoch článku budete "
+"konzumovať  Brainpower. Úspešné úpravy a hlasovanie o víťazných návrhoch "
+"však dostanete odmeny v IQ, a nie v Brainpower. Preto môžete vygenerovať "
+"viac Brainpower (a akýkoľvek zisk) stavaním nového IQ, ktorý ste práve "
+"zarobili."
+
+#: templates/enterlink/brainpowermgmt.html:119
+msgid ""
+"Every edit proposal requires a minimum of 10 Brainpower at this time, in "
+"order to prevent spam and poor-quality edits."
+msgstr ""
+"Každý návrh na úpravu vyžaduje v súčasnosti minimálne 10 modelov Brainpower, "
+"aby sa zabránilo spamu a nekvalitným úpravám."
+
+#: templates/enterlink/brainpowermgmt.html:122
+msgid "Enter an integer amount of IQ to stake"
+msgstr "Zadajte celkovú sumu IQ na stávku"
+
+#: templates/enterlink/brainpowermgmt.html:123
+msgid "New Stake"
+msgstr "Nový zostatok"
+
+#: templates/enterlink/brainpowermgmt.html:128
+msgid "Start"
+msgstr "Štart"
+
+#: templates/enterlink/brainpowermgmt.html:129
+msgid "End"
+msgstr "Koniec"
+
+#: templates/enterlink/brainpowermgmt.html:130
+#: templates/enterlink/voting_table_of_contents.html:40
+msgid "Time Remaining"
+msgstr "Zostávajúci čas"
+
+#: templates/enterlink/brainpowermgmt.html:131
+#: templates/enterlink/transfer-iq.html:127
+msgid "Amount"
+msgstr "Suma"
+
+#: templates/enterlink/brainpowermgmt.html:132
+msgid "Claim"
+msgstr "Zažiadať"
+
+#: templates/enterlink/contact.html:7 templates/enterlink/contact.html:24
+msgid "Contact us"
+msgstr "Kontaktujte nás"
+
+#: templates/enterlink/contact.html:20
+msgid "To get quicker replies from our community"
+msgstr "Ak chcete získať rýchlejšie odpovede od našej komunity"
+
+#: templates/enterlink/contact.html:20
+msgid "create a post in our forum"
+msgstr "vytvorte príspevok na našom fóre"
+
+#: templates/enterlink/contact.html:25
+msgid "Get in touch with us"
+msgstr "Kontaktujte nás"
+
+#: templates/enterlink/contact.html:33
+msgid "Thanks, we got your message. We will respond in a bit"
+msgstr "Ďakujeme, dostali sme vašu správu. Budeme reagovať onedlho"
+
+#: templates/enterlink/contact.html:41 templates/enterlink/transfer-iq.html:131
+msgid "Send"
+msgstr "Odoslať"
+
+#: templates/enterlink/dropzone.html:140 templates/enterlink/edit.html:167
+#: templates/enterlink/edit.html:176 templates/enterlink/edit.html:185
+#: templates/enterlink/edit.html:195 templates/enterlink/edit.html:204
+msgid "OK"
+msgstr "OK"
+
+#: templates/enterlink/dropzone.html:141
+msgid "Enter a caption for the main image of the page."
+msgstr "Zadajte titulok pre hlavný obrázok stránky."
+
+#: templates/enterlink/edit.html:7
+msgid "Edit Page"
+msgstr "Upraviť stránku"
+
+#: templates/enterlink/edit.html:85
+msgid "Loading.."
+msgstr "Načítanie..."
+
+#: templates/enterlink/edit.html:128
+msgid "Change Picture"
+msgstr "Zmeniť obrázok"
+
+#: templates/enterlink/edit.html:144
+msgid "Please enter the destination page you wish to merge this one into"
+msgstr "Zadajte cieľovú stránku, do ktorej chcete zlúčiť túto stránku"
+
+#: templates/enterlink/edit.html:149
+msgid "Merge Page"
+msgstr "Zlúčiť stránku"
+
+#: templates/enterlink/edit.html:156 templates/enterlink/edit.html:165
+#: templates/enterlink/edit.html:174 templates/enterlink/edit.html:183
+#: templates/enterlink/edit.html:192 templates/enterlink/edit.html:202
+msgid "Hey there scholar!"
+msgstr "Nazdar učenec!"
+
+#: templates/enterlink/edit.html:157
+msgid ""
+"Looks like you have been editing for a while. You should take a moment to "
+"save your work before continuing!"
+msgstr ""
+"Zdá sa, že ste na chvíľu editovali. Pred pokračovaním by ste mali uložit "
+"svoju prácu!"
+
+#: templates/enterlink/edit.html:158
+msgid "Save"
+msgstr "Uložiť"
+
+#: templates/enterlink/edit.html:166
+msgid ""
+"Looks like you are using first-person! (ex: Our product, I am, We are, You "
+"should). Everipedia is a neutral encyclopedia written in third-person tense "
+"(ex: It is, They are, The company makes). THIS IS NOT FACEBOOK!!"
+msgstr ""
+"Vyzerá to, že používate prvú osobu! (napr. náš produkt, ja som, my sme, mali "
+"by ste). Everipedia je neutrálna encyklopédia napísaná v tretej osobe (napr. "
+"To je, sú, spoločnosť robí). TOTO NIE JE FACEBOOK!"
+
+#: templates/enterlink/edit.html:175
+msgid "Please enter a title for the page."
+msgstr "Zadajte názov stránky."
+
+#: templates/enterlink/edit.html:184
+msgid ""
+"Please write something for the article section. Make sure to use citations."
+msgstr "Napíšte niečo pre sekciu článku. Nezabudnite použiť citácie."
+
+#: templates/enterlink/edit.html:193
+msgid ""
+"Hello! This page needs citations (also known as footnotes, references, "
+"sources) before it can be saved. Add the links you're using as sources with "
+"the cite button above."
+msgstr ""
+"Ahoj! Táto stránka potrebuje citácie (tiež známe ako poznámky pod čiarou, "
+"odkazy, zdroje) predtým, než sa dá uložiť. Pridajte prepojenia, ktoré "
+"používate ako zdroje, pomocou tlačidla citácie vyššie."
+
+#: templates/enterlink/edit.html:194
+msgid "Join our official Facebook group if you need help with it!:"
+msgstr "Pripojte sa k oficiálnej skupine Facebook, ak potrebujete pomoc!:"
+
+#: templates/enterlink/edit.html:194
+msgid "- we will hook you up. It's not hard!"
+msgstr "- budeme vám pomáhať. Nie je to ťažké!"
+
+#: templates/enterlink/edit.html:203
+msgid ""
+"Please cite the link(s) you just added into the main article body. First "
+"click at the end of the sentence or paragraph you want to cite, then click "
+"the (Cite) button on the edit panel above!"
+msgstr ""
+"Uveďte odkaz(y), ktorý ste práve pridali do hlavného článku. Po prvom "
+"kliknutí na konci vety alebo odseku, ktoré chcete citovať, kliknite na "
+"tlačidlo (Citovať) na paneli úprav vyššie!"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:10
+msgid "Add New Infobox Item"
+msgstr "Pridať novú položku infoboxu"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:14
+msgid "Enter a classification or category"
+msgstr "Zadajte klasifikáciu alebo kategóriu"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:17
+msgid "Enter a value or a description"
+msgstr "Zadajte hodnotu alebo popis"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:23
+msgid "Add Infobox Item"
+msgstr "Pridať Infobox"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:25
+#: templates/enterlink/edit_ajax_addlink.html:26
+#: templates/enterlink/edit_ajax_editpagemeta.html:15
+#: templates/enterlink/edit_ajax_page_photo.html:4
+msgid "Close"
+msgstr "Zatvoriť"
+
+#: templates/enterlink/edit_ajax_addlink.html:7
+msgid "Add a Link or File"
+msgstr "Pridajte odkaz alebo súbor"
+
+#: templates/enterlink/edit_ajax_addlink.html:9
+msgid "File"
+msgstr "Súbor"
+
+#: templates/enterlink/edit_ajax_addlink.html:10
+msgid "URL"
+msgstr "URL"
+
+#: templates/enterlink/edit_ajax_addlink.html:10
+msgid "Link"
+msgstr "Odkaz"
+
+#: templates/enterlink/edit_ajax_addlink.html:14
+msgid "Upload file"
+msgstr "Nahrať súbor"
+
+#: templates/enterlink/edit_ajax_addlink.html:24
+msgid "Add Link"
+msgstr "Pridať odkaz"
+
+#: templates/enterlink/edit_ajax_editmainphoto.html:7
+msgid "Reset"
+msgstr "Resetovať"
+
+#: templates/enterlink/edit_ajax_editpagemeta.html:4
+msgid "Select the topic of this page"
+msgstr "Vyberte tému tejto stránky"
+
+#: templates/enterlink/edit_ajax_editpagemeta.html:8
+msgid "Remove page"
+msgstr "Odstrániť stránku"
+
+#: templates/enterlink/editing-disabled.html:7
+msgid "Editing existing pages temporarily disabled"
+msgstr "Úprava existujúcich stránok je dočasne zakázaná"
+
+#: templates/enterlink/editors.html:23
+msgid "Editors"
+msgstr "Editory"
+
+#: templates/enterlink/editors.html:74
+msgid "Everipedia Editors"
+msgstr "Everipedia Editory"
+
+#: templates/enterlink/editors.html:93 templates/enterlink/inbox.html:52
+#: templates/enterlink/recent-activity.html:103
+#: templates/enterlink/search.html:89
+msgid "Previous"
+msgstr "Späť"
+
+#: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
+#: templates/enterlink/recent-activity.html:107
+#: templates/enterlink/search.html:93
+msgid "Page"
+msgstr "Stránka"
+
+#: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
+#: templates/enterlink/recent-activity.html:107
+#: templates/enterlink/search.html:93
+msgid "of"
+msgstr "z"
+
+#: templates/enterlink/editors.html:101 templates/enterlink/inbox.html:60
+#: templates/enterlink/recent-activity.html:111
+#: templates/enterlink/search.html:97
+msgid "Next"
+msgstr "Ďalej"
+
+#: templates/enterlink/error.html:6
+msgid "Page not found!"
+msgstr "Stránka nebola nájdená!"
+
+#: templates/enterlink/error.html:211
+msgid "Page not found"
+msgstr "Stránka sa nenašla"
+
+#: templates/enterlink/error.html:213
+msgid "In The News"
+msgstr "V správach"
+
+#: templates/enterlink/error.html:214
+#: templates/enterlink/headers/header_dropdown.html:37
+#: templates/enterlink/recent-activity.html:7
+#: templates/enterlink/recent-activity.html:73
+#: templates/enterlink/user.html:192
+msgid "Recent Activity"
+msgstr "Posledná aktivita"
+
+#: templates/enterlink/error_410.html:6 templates/enterlink/error_410.html:62
+msgid "This page has been removed"
+msgstr "Táto stránka bola odstránená"
+
+#: templates/enterlink/error_410.html:63
+#: templates/enterlink/in_progress_404.html:86
+msgid "Click here to return to recent activity"
+msgstr "Kliknutím sem sa vrátite na poslednú aktivitu"
+
+#: templates/enterlink/exchange-listings.html:7
+msgid "Exchange Listings"
+msgstr "Výpis výmen"
+
+#: templates/enterlink/exchange-listings.html:17
+msgid "Supported Exchanges"
+msgstr "Podporované výmeny"
+
+#: templates/enterlink/exchange-listings.html:18
+msgid "The following exchanges indicated that they will support the IQ airdrop"
+msgstr "Nasledujúce výmeny naznačili, že podporia airdrop IQ"
+
+#: templates/enterlink/exchange-listings.html:142
+msgid "Supported Wallets"
+msgstr "Podporované peňaženky"
+
+#: templates/enterlink/exchange-listings.html:176
+msgid "Token Pockets"
+msgstr "Tokenové vrecká"
+
+#: templates/enterlink/faq.html:20
+msgid "Frequently Asked Questions"
+msgstr "Často kladené otázky"
+
+#: templates/enterlink/faq.html:24
+msgid "What is Everipedia?"
+msgstr "Čo je Everipedia?"
+
+#: templates/enterlink/faq.html:25
+msgid ""
+"Everipedia is a knowledge aggregator and knowledge base. We think it's much "
+"easier to edit than Wikipedia. Anyone can create a page about any person, "
+"place, organization, or thing and populate it with relevant reference links/"
+"sources. The only main rules of EP are: Information on the page must always "
+"be cited and the article must be in a neutral point of view. Check out the "
+"actual entry for Everipedia... on"
+msgstr ""
+"Everipedia je agregátor vedomostí a vedomostná základňa. Myslíme, že je "
+"oveľa jednoduchšie upravitelná ako Wikipedia. Ktokoľvek môže vytvoriť "
+"stránku o ľubovoľnej osobe, mieste, organizácii alebo veciach a vyplniť ju "
+"príslušnými referenčnými odkazmi / zdrojmi. Jediné hlavné pravidlá EP sú: "
+"Informácie na stránke musia byť vždy citované a článok musí byť neutrálny. "
+"Pozrite sa na skutočnú položku pre Everipedia ... na"
+
+#: templates/enterlink/faq.html:27
+msgid "Why should I sign up?"
+msgstr "Prečo by som sa mal zaregistrovať?"
+
+#: templates/enterlink/faq.html:28
+msgid ""
+"Because it’s fun and easy! We thought contributing to large knowledge "
+"projects shouldn't require high barriers to entry so we made Everipedia very "
+"easy to navigate, edit, and get started. Editors gain more privileges as "
+"they accumulate IQ and rise through the ranks. Top site-wide editors are "
+"displayed on the front page. Top editors for each page are also displayed."
+msgstr ""
+"Pretože je to zábavné a jednoduché! Mysleli sme si, že prispievanie k veľkým "
+"znalostným projektom by nemalo vyžadovať vysoké prekážky vstupu, a preto je "
+"Everipedia veľmi jednoduchá, upravovateľná a použiteľná. Redaktori získavajú "
+"viac privilégií, pretože akumulujú IQ a stúpajú v rádoch. Najlepší redaktory "
+"na celom webe sa zobrazujú na úvodnej stránke. Top editory pre každú stránku "
+"sú tiež zobrazený."
+
+#: templates/enterlink/faq.html:30
+msgid "Try it!"
+msgstr "Skúsiť to!"
+
+#: templates/enterlink/faq.html:30
+msgid "Sign up here"
+msgstr "Zaregistrujte sa tu"
+
+#: templates/enterlink/faq.html:32
+msgid "So how is Everipedia different from Wikipedia and similar sites?"
+msgstr "Takže ako sa Everipedia líši od Wikipédie a podobných stránok?"
+
+#: templates/enterlink/faq.html:33
+msgid ""
+"Editing on Everipedia is graphic and modern, talk pages are designed as "
+"discussion threads, celebrities have verified accounts, and anyone can make "
+"pages about anything as long as they are properly cited. Every page from "
+"Wikipedia is already here on Everipedia to build on top of and improve. All "
+"this makes EP the biggest knowledge project ever!"
+msgstr ""
+"Úprava na Everipedia je grafická a moderná, diskusné stránky sú navrhnuté "
+"ako diskusné témy, celebrity majú overené účty a ktokoľvek si môže vytvoriť "
+"stránky o čomkoľvek, pokiaľ sú správne citované. Každá stránka z Wikipédie "
+"je už tu na Everipedia, aby sa postavili základy a zlepšovali sa. To všetko "
+"robí z EP najväčší vedecký projekt vôbec!"
+
+#: templates/enterlink/faq.html:35
+msgid "Is Everipedia free?"
+msgstr "Je Everipedia zadarmo?"
+
+#: templates/enterlink/faq.html:36
+msgid ""
+"All information found on Everipedia is freely available for anyone to use "
+"and access. All we ask is a link back to the source Everipedia page for "
+"attribution purposes. The information on this encyclopedia is meant to be "
+"free to all. We will never charge for or withhold any of the information on "
+"this website. We just ask that you do not throttle the site and "
+"programmatically harvest information that would dramatically affect our "
+"servers."
+msgstr ""
+"Všetky informácie nachádzajúce sa na Everipedia sú voľne dostupné a "
+"použiteľné pre každého. Všetko, čo požadujeme, je prepojenie späť na "
+"zdrojovú stránku Everipedia na účely priraďovania. Informácie o tejto "
+"encyklopédii sú prístupné pre všetkých. Nikdy nebudeme účtovať alebo "
+"zadržiavať žiadnu informáciu na tejto webovej stránke. Len vás žiadame, aby "
+"ste nezneužívali alebo programovo zberali informácie, ktoré by dramaticky "
+"ovplyvnili naše servery."
+
+#: templates/enterlink/faq.html:42
+msgid "Much love,"
+msgstr "Veľa lásky,"
+
+#: templates/enterlink/footers/desktop_footer.html:5
+#: templates/enterlink/footers/footer_no_extras.html:5
+#: templates/enterlink/footers/index_footer.html:23
+#: templates/enterlink/footers/mobile_footer.html:130
+#: templates/enterlink/template_blockchain_styled_amp.html:548
+msgid "About"
+msgstr "O nás"
+
+#: templates/enterlink/footers/desktop_footer.html:6
+#: templates/enterlink/footers/footer_no_extras.html:6
+#: templates/enterlink/footers/index_footer.html:7
+#: templates/enterlink/footers/index_footer.html:25
+#: templates/enterlink/footers/mobile_footer.html:131
+#: templates/enterlink/template_blockchain_styled_amp.html:549
+msgid "FAQ"
+msgstr "Často kladené otázky"
+
+#: templates/enterlink/footers/desktop_footer.html:7
+#: templates/enterlink/footers/footer_no_extras.html:7
+#: templates/enterlink/footers/index_footer.html:8
+#: templates/enterlink/footers/index_footer.html:26
+#: templates/enterlink/footers/mobile_footer.html:132
+#: templates/enterlink/template_blockchain_styled_amp.html:550
+msgid "Contact"
+msgstr "Kontakt"
+
+#: templates/enterlink/footers/desktop_footer.html:8
+#: templates/enterlink/footers/footer_no_extras.html:9
+#: templates/enterlink/footers/index_footer.html:9
+#: templates/enterlink/footers/index_footer.html:27
+#: templates/enterlink/footers/mobile_footer.html:136
+#: templates/enterlink/template_blockchain_styled_amp.html:552
+msgid "Terms"
+msgstr "Podmienky"
+
+#: templates/enterlink/footers/desktop_footer.html:9
+#: templates/enterlink/footers/footer_no_extras.html:10
+#: templates/enterlink/footers/index_footer.html:10
+#: templates/enterlink/footers/index_footer.html:28
+#: templates/enterlink/footers/mobile_footer.html:134
+#: templates/enterlink/headers/header_dropdown.html:17
+#: templates/enterlink/headers/header_dropdown.html:38
+#: templates/enterlink/headers/index_header.html:164
+#: templates/enterlink/headers/index_header.html:173
+#: templates/enterlink/headers/index_header.html:233
+#: templates/enterlink/headers/index_header.html:242
+#: templates/enterlink/headers/index_header.html:264
+#: templates/enterlink/headers/mobile-navbar.html:131
+#: templates/enterlink/headers/mobile-navbar.html:198
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:190
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:238
+#: templates/enterlink/template_blockchain_styled_amp.html:551
+#: templates/enterlink/template_blockchain_styled_amp.html:629
+#: templates/enterlink/template_blockchain_styled_amp.html:687
+msgid "Forum"
+msgstr "Fórum"
+
+#: templates/enterlink/footers/desktop_footer.html:10
+#: templates/enterlink/footers/footer_no_extras.html:11
+#: templates/enterlink/footers/index_footer.html:11
+#: templates/enterlink/footers/index_footer.html:29
+#: templates/enterlink/footers/mobile_footer.html:137
+#: templates/enterlink/headers/header_dropdown.html:18
+#: templates/enterlink/headers/header_dropdown.html:40
+#: templates/enterlink/template_blockchain_styled_amp.html:553
+msgid "Get IQ"
+msgstr "Získajte IQ"
+
+#: templates/enterlink/footers/desktop_footer.html:30
+#: templates/enterlink/footers/footer_no_extras.html:31
+#: templates/enterlink/footers/mobile_footer.html:157
+#: templates/enterlink/template_blockchain_styled_amp.html:577
+msgid "Powered by"
+msgstr "Poháňa"
+
+#: templates/enterlink/footers/desktop_footer.html:35
+#: templates/enterlink/footers/footer_no_extras.html:36
+#: templates/enterlink/footers/mobile_footer.html:161
+#: templates/enterlink/template_blockchain_styled_amp.html:581
+msgid "API by"
+msgstr "API o"
+
+#: templates/enterlink/footers/desktop_footer.html:43
+#: templates/enterlink/footers/footer_no_extras.html:44
+#: templates/enterlink/headers/desktop-navbar-index.html:6
+#: templates/enterlink/headers/index_header.html:93
+#: templates/enterlink/language_selector.html:80
+msgid "Select language"
+msgstr "Vybrať jazyk"
+
+#: templates/enterlink/footers/forum_footer.html:6
+#: templates/enterlink/footers/pm_footer.html:6
+msgid "Enter a title for the thread"
+msgstr "Zadajte názov vlákna"
+
+#: templates/enterlink/footers/forum_footer.html:7
+msgid "Enter your post here"
+msgstr "Vložte svoj príspevok tu"
+
+#: templates/enterlink/footers/forum_footer.html:8
+#: templates/enterlink/footers/pm_footer.html:7
+msgid "Create New Thread"
+msgstr "Vytvorte nové vlákno"
+
+#: templates/enterlink/footers/index_footer.html:5
+msgid "About Everipedia"
+msgstr "O spoločnosti Everipedia"
+
+#: templates/enterlink/footers/index_footer.html:6
+#: templates/enterlink/footers/index_footer.html:24
+msgid "How To Use"
+msgstr "Návod na používanie"
+
+#: templates/enterlink/footers/index_footer.html:12
+#: templates/enterlink/footers/index_footer.html:30
+#: templates/enterlink/footers/mobile_footer.html:133
+msgid "Donate"
+msgstr "Prispejte"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:559
+msgid "By using this website, you agree to the"
+msgstr "Používaním týchto webových stránok súhlasíte"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:559
+msgid "Terms of Use"
+msgstr "Všeobecné podmienky"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:559
+msgid "Everipedia® is a trademark of Everipedia International"
+msgstr "Everipedia® je ochranná známka spoločnosti Everipedia International"
+
+#: templates/enterlink/footers/mobile_footer.html:135
+#: templates/enterlink/headers/index_header.html:165
+#: templates/enterlink/headers/index_header.html:174
+#: templates/enterlink/headers/index_header.html:234
+#: templates/enterlink/headers/index_header.html:243
+#: templates/enterlink/headers/index_header.html:265
+#: templates/enterlink/headers/mobile-navbar.html:138
+#: templates/enterlink/headers/mobile-navbar.html:204
+#: templates/enterlink/template_blockchain_styled_amp.html:694
+msgid "Chat"
+msgstr "Chat"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:29
+#: templates/enterlink/headers/desktop-navbar.html:39
+#: templates/enterlink/headers/index_header.html:156
+#: templates/enterlink/howto.html:61 templates/enterlink/search.html:7
+msgid "Search"
+msgstr "Hľadať"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:42
+#: templates/enterlink/headers/desktop-navbar-index.html:50
+#: templates/enterlink/headers/desktop-navbar-index.html:60
+#: templates/enterlink/headers/desktop-navbar.html:20
+#: templates/enterlink/headers/desktop-navbar.html:57
+#: templates/enterlink/headers/desktop-navbar.html:67
+#: templates/enterlink/headers/header_dropdown.html:14
+#: templates/enterlink/headers/header_dropdown.html:36
+#: templates/enterlink/headers/index_header.html:231
+#: templates/enterlink/headers/mobile-navbar.html:145
+#: templates/enterlink/headers/mobile-navbar.html:186
+#: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
+#: templates/enterlink/howto.html:74 templates/enterlink/index.html:64
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:51
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:91
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:196
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:232
+#: templates/enterlink/template_blockchain_styled_amp.html:615
+#: templates/enterlink/template_blockchain_styled_amp.html:701
+#: templates/enterlink/user.html:64
+msgid "Create Page"
+msgstr "Vytvorte stránku"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:49
+#: templates/enterlink/headers/desktop-navbar.html:19
+#: templates/enterlink/howto.html:73 templates/enterlink/index.html:63
+msgid "Paste a link or enter a title"
+msgstr "Vložte odkaz alebo zadajte názov"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:66
+#: templates/enterlink/headers/desktop-navbar.html:73
+#: templates/enterlink/headers/header_dropdown.html:16
+#: templates/enterlink/headers/header_dropdown.html:35
+#: templates/enterlink/headers/index_header.html:162
+#: templates/enterlink/headers/index_header.html:201
+#: templates/enterlink/headers/index_header.html:232
+#: templates/enterlink/headers/mobile-navbar.html:124
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:45
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:184
+#: templates/enterlink/notifications/index.html:67
+#: templates/enterlink/notifications/index.html:97
+#: templates/enterlink/template_blockchain_styled_amp.html:680
+msgid "Messages"
+msgstr "Správy"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:72
+#: templates/enterlink/headers/desktop-navbar.html:79
+#: templates/enterlink/headers/header_dropdown.html:15
+#: templates/enterlink/headers/header_dropdown.html:34
+#: templates/enterlink/headers/index_header.html:206
+#: templates/enterlink/headers/index_header.html:230
+#: templates/enterlink/headers/mobile-navbar.html:117
+#: templates/enterlink/inbox.html:12
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:39
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:178
+#: templates/enterlink/notifications/index.html:96
+#: templates/enterlink/template_blockchain_styled_amp.html:673
+msgid "Notifications"
+msgstr "Oznámenia"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:84
+#: templates/enterlink/headers/desktop-navbar.html:96
+#: templates/enterlink/headers/index_header.html:217
+msgid "Your IQ Score"
+msgstr "Váš skóre IQ"
+
+#: templates/enterlink/headers/desktop-navbar.html:29
+msgid "Table of contents"
+msgstr "Obsah"
+
+#: templates/enterlink/headers/desktop-navbar.html:29
+#: templates/enterlink/template_blockchain_styled_amp.html:105
+msgid "Table of contents and facts for this wiki"
+msgstr "Obsah a fakty pre túto wiki"
+
+#: templates/enterlink/headers/desktop-navbar.html:62
+#: templates/enterlink/headers/mobile-navbar.html:159
+#: templates/enterlink/headers/mobile-navbar.html:210
+#: templates/enterlink/template_blockchain_styled_amp.html:635
+#: templates/enterlink/template_blockchain_styled_amp.html:715
+msgid "Feed"
+msgstr "Kanál"
+
+#: templates/enterlink/headers/desktop-navbar.html:87
+msgid "Please log in with Scatter"
+msgstr "Prihláste sa pomocou programu Scatter"
+
+#: templates/enterlink/headers/header_dropdown.html:8
+#: templates/enterlink/headers/header_dropdown.html:28
+msgid "Claim Rewards"
+msgstr ""
+
+#: templates/enterlink/headers/header_dropdown.html:39
+#: templates/enterlink/headers/mobile-navbar.html:153
+#: templates/enterlink/headers/mobile-navbar.html:192
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:68
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:101
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:208
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:250
+#: templates/enterlink/template_blockchain_styled_amp.html:622
+#: templates/enterlink/template_blockchain_styled_amp.html:708
+#: templates/enterlink/user.html:126
+msgid "Help"
+msgstr "Pomoc"
+
+#: templates/enterlink/headers/index_header.html:109
+msgid "View Profile"
+msgstr "Zobraziť profil"
+
+#: templates/enterlink/headers/index_header.html:128
+msgid "Sign In"
+msgstr "Prihlásiť sa"
+
+#: templates/enterlink/headers/index_header.html:128
+#: templates/enterlink/headers/index_header.html:172
+#: templates/enterlink/headers/index_header.html:241
+#: templates/enterlink/headers/index_header.html:263
+#: templates/enterlink/index.html:47
+msgid "Register"
+msgstr "Registrovať"
+
+#: templates/enterlink/headers/index_header.html:132
+#: templates/enterlink/login.html:36
+msgid "Username"
+msgstr "Užívateľské meno"
+
+#: templates/enterlink/headers/index_header.html:139
+msgid "Need an account? Register here."
+msgstr "Potrebujete účet? Zaregistrujte sa tu."
+
+#: templates/enterlink/headers/index_header.html:140
+#: templates/enterlink/headers/index_header.html:171
+#: templates/enterlink/login.html:41
+msgid "Forgot your password?"
+msgstr "Zabudli ste heslo?"
+
+#: templates/enterlink/headers/index_header.html:163
+#: templates/enterlink/inbox.html:23
+msgid "Your Notifications"
+msgstr "Vaše upozornenia"
+
+#: templates/enterlink/headers/index_header.html:222
+msgid "Get an account"
+msgstr "Získajte účet"
+
+#: templates/enterlink/headers/index_header.html:222
+msgid "or Log in"
+msgstr "alebo Prihlásiť sa"
+
+#: templates/enterlink/headers/index_header.html:235
+#: templates/enterlink/headers/index_header.html:244
+#: templates/enterlink/headers/index_header.html:257
+#: templates/enterlink/headers/index_header.html:266
+#: templates/enterlink/headers/mobile-navbar.html:165
+#: templates/enterlink/headers/mobile-navbar.html:216
+#: templates/enterlink/template_blockchain_styled_amp.html:641
+msgid "Language"
+msgstr "Jazyk"
+
+#: templates/enterlink/headers/mobile-navbar.html:178
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:224
+#: templates/enterlink/template_blockchain_styled_amp.html:606
+msgid "Register / Log in"
+msgstr "Registrácia / Prihlásenie"
+
+#: templates/enterlink/hoverblurb_ajax_blockchain.html:65
+msgid "Go to article"
+msgstr "Prejsť na článok"
+
+#: templates/enterlink/hovereditor_ajax.html:67
+msgid "Self citation by"
+msgstr "Vlastné citovanie od"
+
+#: templates/enterlink/hovereditor_ajax.html:72
+msgid "Title"
+msgstr "Názov"
+
+#: templates/enterlink/hovereditor_ajax.html:75
+msgid "Rank"
+msgstr "Rank"
+
+#: templates/enterlink/hovereditor_ajax.html:76
+msgid "User since"
+msgstr "Používateľ od"
+
+#: templates/enterlink/hovereditor_ajax.html:77
+msgid "Last login"
+msgstr "Posledné prihlásenie"
+
+#: templates/enterlink/hovereditor_ajax.html:80
+msgid "Go to Editor's Profile"
+msgstr "Prejdite na profil editora"
+
+#: templates/enterlink/hoverlink_ajax_blockchain.html:64
+msgid "Discuss Citation"
+msgstr "Diskusná citácia"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:53
+msgid "Download"
+msgstr "Stiahnuť"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:55
+msgid "Direct Link"
+msgstr "Priamy odkaz"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:64
+#: templates/enterlink/hoverlink_iframe_blockchain.html:65
+#: templates/enterlink/template_blockchain_styled_desktop.html:195
+#: templates/enterlink/template_blockchain_styled_desktop.html:196
+msgid "Share"
+msgstr "Zdieľať"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:68
+#: templates/enterlink/template_blockchain_styled_desktop.html:202
+msgid "Copy URL"
+msgstr "Kopírovať URL"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:118
+msgid "Play / Pause"
+msgstr "Prehrať / Pozastaviť"
+
+#: templates/enterlink/howto.html:8 templates/enterlink/howto.html:30
+msgid "How to use Everipedia"
+msgstr "Ako používať Everipedia"
+
+#: templates/enterlink/howto.html:10 templates/enterlink/limitreached.html:9
+msgid ""
+"Everipedia is a free and easy to use wiki platform. Write about anyone and "
+"anything!"
+msgstr ""
+"Everipedia je bezplatná a ľahko použiteľná wiki platforma. Píšte o hocikom a "
+"hocičom!"
+
+#: templates/enterlink/howto.html:36 templates/enterlink/howto.html:45
+msgid "Go back to the page you started from"
+msgstr "Vráťte sa späť na stránku, z ktorej ste začali"
+
+#: templates/enterlink/howto.html:40 templates/enterlink/howto.html:45
+msgid "Go to page"
+msgstr "Ísť na stránku"
+
+#: templates/enterlink/howto.html:50
+msgid "Go to your editor profile page"
+msgstr "Prejdite na stránku profilu editora"
+
+#: templates/enterlink/howto.html:50
+msgid "Go to profile"
+msgstr "Prejsť na profil"
+
+#: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
+msgid "Create a new page now"
+msgstr "Vytvoriť novú stránku teraz"
+
+#: templates/enterlink/howto.html:61
+msgid "Search for an existing page"
+msgstr "Vyhľadať existujúcu stránku"
+
+#: templates/enterlink/in_progress_404.html:6
+msgid "This page is currently being created by another user"
+msgstr "Túto stránku momentálne tvorí iný uživateľ"
+
+#: templates/enterlink/in_progress_404.html:82
+msgid ""
+"This page is currently in the process of being created by another user. "
+"Please return later!"
+msgstr ""
+"Táto stránka je momentálne tvorená iným používateľom.  Prosím, vráťte sa "
+"neskôr!"
+
+#: templates/enterlink/inbox.html:30
+msgid "You have"
+msgstr "Máte"
+
+#: templates/enterlink/inbox.html:30
+msgid "unread notifications"
+msgstr "neprečítané upozornenia."
+
+#: templates/enterlink/inbox.html:45
+msgid "You currently do not have any notifications."
+msgstr "Momentálne nemáte žiadne upozornenia."
+
+#: templates/enterlink/index.html:40
+msgid "The world's first encyclopedia on the blockchain"
+msgstr "Prvá encyklopédia na blockchaine"
+
+#: templates/enterlink/index.html:41
+msgid ""
+"Everipedia's IQ Network is the world's first Encyclopedia that allows anyone "
+"to become a stakeholder in the system and earn rank, rewards & tokens for "
+"curating content."
+msgstr ""
+"Everipedia IQ Network je prvou encyklopédiou na svete, ktorá umožňuje "
+"každému stať sa zainteresovaným subjektom v systéme a zarábať hodnosti, "
+"odmeny a žetóny na ukladanie obsahu."
+
+#: templates/enterlink/index.html:48
+msgid "Learn more"
+msgstr "Zistiť viac"
+
+#: templates/enterlink/index.html:79
+msgid "As Seen In"
+msgstr "Ako vidíte"
+
+#: templates/enterlink/index.html:100
+msgid "An Encyclopedia for the modern age"
+msgstr "Encyklopédia modernej doby"
+
+#: templates/enterlink/index.html:104
+msgid ""
+"The Everipedia IQ blockchain provides a new paradigm change and knowledge "
+"economy to disrupt the old centralized internet knowledge encyclopedia model "
+"similar to Wikipedia. By creating a new incentive structure and a "
+"distributed backend hosted within a blockchain, the new Everipedia knowledge "
+"base will be able to improve upon all fundamental features of Wikipedia."
+msgstr ""
+"Everipedia IQ blockchain prináša novú zmenu paradigmu a znalostnej "
+"ekonomiky, aby narušila starý centralizovaný encyklopedický model znalostí "
+"internetu podobný Wikipédii. Vytvorením novej motivačnej štruktúry a "
+"distribuovaného backendu umiestneného v blockchaine bude nová znalostná "
+"základňa Everipedia schopná zlepšiť všetky základné vlastnosti Wikipedie."
+
+#: templates/enterlink/index.html:112
+msgid "Decentralized"
+msgstr "Decentralizované"
+
+#: templates/enterlink/index.html:113
+msgid ""
+"Articles are fetched using IPFS and EOS Storage. Majority of IQ being "
+"distributed during the airdrop."
+msgstr ""
+"Články sú zaznamenané pomocou IPFS a EOS Storage. Väčšina IQ je   "
+"distribuovaná počas airdropu."
+
+#: templates/enterlink/index.html:117
+msgid "Democratic"
+msgstr "Demokratické"
+
+#: templates/enterlink/index.html:118
+msgid ""
+"Proof of Stake (PoS) model allows for voting to change and upgrade the IQ "
+"network as it grows. Also will facilitate batch imports of new content with "
+"no fees."
+msgstr ""
+"Model dokladu o vklade (PoS) umožňuje hlasovanie o zmeeu a aktualizácií "
+"siete IQ v priebehu rastu. Tiež uľahčí dovážanie nového obsahu bez poplatku."
+
+#: templates/enterlink/index.html:122
+msgid "Censorship Resistant"
+msgstr "Odolnosé voči cenzúre"
+
+#: templates/enterlink/index.html:123
+msgid ""
+"Live and permanent edits of content on the blockchain beyond the control of "
+"a central authority."
+msgstr ""
+"Aktuálne a trvalé úpravy obsahu na blockchain bez možnosti ovplyvňovania "
+"autoritami."
+
+#: templates/enterlink/index.html:127
+msgid "Financial Incentive"
+msgstr "Finančná motivácia"
+
+#: templates/enterlink/index.html:128
+msgid ""
+"All holders of IQ will be incentivized to create quality, neutral content "
+"and to work together in building the reputation of the network."
+msgstr ""
+"Všetci držitelia IQ budú motivovaní vytvoriť kvalitný a neutrálny obsah a "
+"spolupracovať pri budovaní povesti siete."
+
+#: templates/enterlink/index.html:139
+msgid "Become an editor today and start creating your own wiki articles."
+msgstr "Staňte sa editorom dnes a začnite vytvárať svoje vlastné wiki články."
+
+#: templates/enterlink/index.html:142
+msgid "Open Community"
+msgstr "Otvorená komunita"
+
+#: templates/enterlink/index.html:143
+msgid ""
+"Our vibrant community is open and welcoming to people from all backgrounds. "
+"Our guidelines and policies are based on common sense rather than strict "
+"bureaucracy."
+msgstr ""
+"Naša živá komunita je otvorená a privítaca ľuďom zo všetkých oblastí. Naše "
+"smernice a zásady sú založené skôr na zdravom rozumu ako na prísnej "
+"byrokracii."
+
+#: templates/enterlink/index.html:145
+msgid "Redesigned for the modern age"
+msgstr "Prepracované pre modernú dobu"
+
+#: templates/enterlink/index.html:146
+msgid ""
+"Everipedia is an encyclopedia modernized and re-designed for the twenty-"
+"first century. Our editing interface makes creating and editing wiki's as "
+"easy as using Facebook."
+msgstr ""
+"Everipedia je encyklopédia modernizovaná a prepracovaná pre 21. storočie. "
+"Naše editačné rozhranie umožňuje vytvárať a upravovať wiki rovnako "
+"jednoducho ako pomocou Facebooku."
+
+#: templates/enterlink/index.html:155
+msgid "Follow us on Telegram"
+msgstr "Sledujte nás na Telegrame"
+
+#: templates/enterlink/index.html:168
+msgid "Led by the Founder of Wikipedia and Genius.com"
+msgstr "Vedenie zakladateľom Wikipedia a Genius.com"
+
+#: templates/enterlink/index.html:171
+msgid ""
+"Everipedia is being led by a team with extensive experience and knowledge "
+"both in the online knowledge space as well as the blockchain industry. The "
+"executive team is made up of several prominent individuals in the industry, "
+"the Co-Founder of Wikipedia, Larry Sanger, the founder of Genius.com, Mahbod "
+"Moghadam, and several others. Academic credentials includes UCLA, Stanford, "
+"Yale & Columbia, covering nationalities from America, Sweden, Norway and "
+"Italy. "
+msgstr ""
+"Spoločnosť Everipedia vedie tím s rozsiahlymi skúsenosťami a znalosťami v "
+"priestore znalostí online, ako aj v odvetví blokchain. Výkonný tím pozostáva "
+"z niekoľkých významných jednotlivcov v tomto odvetví, spoluzakladateľ "
+"Wikipedie, Larry Sanger, zakladateľ spoločnosti Genius.com, Mahbod Moghadam "
+"a niekoľko ďalších. Akademické kredity zahŕňajú UCLA, Stanford, Yale &amp; "
+"Columbia, ktoré pokrývajú národnosti z Ameriky, Švédska, Nórska a Talianska."
+
+#: templates/enterlink/index.html:172
+msgid "Executive Team"
+msgstr "Vrcholový manažment"
+
+#: templates/enterlink/leadership.html:7
+msgid "Leadership"
+msgstr "Vedenie"
+
+#: templates/enterlink/leadership.html:23
+msgid "Executive Leadership"
+msgstr "Výkonné vedenie"
+
+#: templates/enterlink/leadership.html:35
+msgid "Chief Information Officer"
+msgstr "Výkonný informačný riaditeľ"
+
+#: templates/enterlink/leadership.html:41
+msgid "Chief Executive Officer, Co-Founder"
+msgstr "Generálny riaditeľ, spoluzakladateľ"
+
+#: templates/enterlink/leadership.html:47
+msgid "Chief Technology Officer, Co-Founder"
+msgstr "Výkonný technický riaditeľ, spoluzakladateľ"
+
+#: templates/enterlink/leadership.html:53
+msgid "President, Co-Founder"
+msgstr "Prezident, spoluzakladateľ"
+
+#: templates/enterlink/leadership.html:63
+msgid "Director of Software"
+msgstr "Riaditeľ softvéru"
+
+#: templates/enterlink/leadership.html:69
+msgid "Chief Operating Officer"
+msgstr "Výkonný riaditeľ prevádzky"
+
+#: templates/enterlink/leadership.html:75
+msgid "Chief Community Officer, Co-Founder"
+msgstr "Výkonný riaditeľ komunity, spoluzakladateľ"
+
+#: templates/enterlink/limitreached.html:7
+msgid "Activity limit reached"
+msgstr "Dosiahnutý limit aktivity"
+
+#: templates/enterlink/limitreached.html:23
+msgid ""
+"Hey! You've added 15 morsels of knowledge to Everipedia now, so we have "
+"paused your account until Master Editors have had a chance to review your "
+"work. Shouldn't take too long, you'll probably be good to go in less than 5 "
+"minutes."
+msgstr ""
+"Hey! Pridali ste do Everipedy 15 poznatkov o znalostiach, takže sme "
+"pozastavili váš účet, aby majstri redaktori mali šancu skontrolovať vašu "
+"prácu. Nemalo by to trvať príliš dlho, pravdepodobne by to malo byť za "
+"necelých 5 minút."
+
+#: templates/enterlink/limitreached.html:24
+msgid "In the meantime, please join our official Facebook group:"
+msgstr "Zatiaľ sa pripojte k oficiálnej Facebook skupine:"
+
+#: templates/enterlink/limitreached.html:24
+msgid "It’s the best way to reach the community!"
+msgstr "Je to najlepší spôsob, ako sa dostať ku komunite!"
+
+#: templates/enterlink/login.html:7
+msgid "Sign in"
+msgstr "Prihlásiť sa"
+
+#: templates/enterlink/login.html:33
+msgid "Sign in to Everipedia"
+msgstr "Prihláste sa do služby Everipedia"
+
+#: templates/enterlink/login.html:48
+msgid "Log in with Facebook"
+msgstr "Prihlásiť sa cez Facebook"
+
+#: templates/enterlink/login.html:49
+msgid "Log in with Twitter"
+msgstr "Prihlásiť sa cez Twitter"
+
+#: templates/enterlink/login.html:58
+msgid "Need an account?"
+msgstr "Potrebujete účet?"
+
+#: templates/enterlink/login.html:58
+msgid "Register here"
+msgstr "Zaregistrujte sa tu"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:34
+msgid "Visit Profile"
+msgstr "Navštívit profil"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:57
+msgid "Settings"
+msgstr "Nastavenia"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:73
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:214
+#: templates/enterlink/template_blockchain_styled_amp.html:721
+msgid "Log Out"
+msgstr "Odhlásiť sa"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:86
+msgid "Register / Log In"
+msgstr "Registrácia / Prihlásenie"
+
+#: templates/enterlink/notifications/index.html:116
+msgid "New message"
+msgstr "Nová správa"
+
+#: templates/enterlink/recent-activity.html:84
+msgid "by"
+msgstr "od"
+
+#: templates/enterlink/register.html:6
+msgid "Create an account"
+msgstr "Vytvorte si účet"
+
+#: templates/enterlink/register.html:26 templates/enterlink/register.html:28
+msgid "Have an account?"
+msgstr "Máte už účet?"
+
+#: templates/enterlink/register.html:26 templates/enterlink/register.html:28
+msgid "Login"
+msgstr "Prihlásenie"
+
+#: templates/enterlink/register.html:42
+msgid ""
+"Registration is currently invite only due to blockchain software testing. "
+"Join us on Telegram and Reddit in the meantime to become a part of "
+"Everipedia today!"
+msgstr ""
+"Registrácia je momentálne iba na pozvanie kvôli testovaniu softvéru "
+"blockchain. Pridajte sa k nám zatiaľ na Telegram a Reddit a stante sa tak "
+"súčasťou Everipedia!"
+
+#: templates/enterlink/register.html:60
+msgid "Welcome to the Everipedia editor community!"
+msgstr "Vitajte v komunite editorov Everipedia!"
+
+#: templates/enterlink/register.html:63
+msgid ""
+"Sign up to become an editor to access more features and an ad-free "
+"experience."
+msgstr ""
+"Zaregistrujte sa, aby ste sa stali editorom a získali prístup k ďalším "
+"funkciám a bez reklám skúsenostiam."
+
+#: templates/enterlink/register.html:96
+msgid "Sign up"
+msgstr "Registrácia"
+
+#: templates/enterlink/register.html:97
+msgid "By clicking sign up above you agree to our"
+msgstr "Kliknutím na tlačidlo potvrdenia vyššie súhlasíte s našimi"
+
+#: templates/enterlink/register.html:97
+msgid "Terms of Service"
+msgstr "Podmienky používania"
+
+#: templates/enterlink/rewardsmgmt.html:4
+#: templates/enterlink/rewardsmgmt.html:132
+#, fuzzy
+#| msgid "Brainpower Management"
+msgid "Rewards Management"
+msgstr "Správa Brainpower"
+
+#: templates/enterlink/rewardsmgmt.html:135
+msgid "Here you can claim rewards for the edits and / or votes that you made."
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:140
+msgid "Proposal Hash"
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:141
+msgid "Finalized Time"
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:142
+#, fuzzy
+#| msgid "Voting Period"
+msgid "Period"
+msgstr "Obdobie hlasovania"
+
+#: templates/enterlink/rewardsmgmt.html:143
+msgid "Redeem"
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:150
+#, fuzzy
+#| msgid "Password reset successful"
+msgid "Redeem successful"
+msgstr "Obnovenie hesla úspešné"
+
+#: templates/enterlink/search-iframe.html:127
+msgid "Searching..."
+msgstr "Vyhľadávanie..."
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "Can't find it below?"
+msgstr "Nenašlo sa to nižšie?"
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "Create"
+msgstr "Vytvoriť"
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "a new page titled"
+msgstr "nová stránka s názvom"
+
+#: templates/enterlink/search.html:45 templates/enterlink/search.html:55
+msgid "Or try the"
+msgstr "Alebo vyskúšajte"
+
+#: templates/enterlink/search.html:45 templates/enterlink/search.html:55
+msgid "advanced search."
+msgstr "pokročilé vyhľadávanie."
+
+#: templates/enterlink/search.html:48
+msgid "Everipedia couldn’t find anything with the name"
+msgstr "Everipedia nenašla nič s menom"
+
+#: templates/enterlink/search.html:50
+msgid ""
+"If you know any links associated with this page, try searching for those "
+"links"
+msgstr ""
+"Ak poznáte nejaké odkazy spojené s touto stránkou, skúste vyhľadať tieto "
+"odkazy"
+
+#: templates/enterlink/template_ajax_genius.html:17
+#: templates/enterlink/template_amp_ajax_genius.html:98
+msgid "Verified Editor"
+msgstr "Overený editor"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:123
+msgid "Bullet"
+msgstr "Odrážka"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:185
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid "Recent news"
+msgstr "Nedávne udalosti"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:185
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid ""
+"Everipedia IQ tokens are now in circulation on the EOS mainnet. Follow "
+"Everipedia on"
+msgstr ""
+"Žetóny Everipedia IQ sú teraz v obehu na hlavnej sieti EOS. Sledujte "
+"Everipediu na"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:185
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid "to learn about upcoming features and developments!"
+msgstr "dozvedieť sa o nadchádzajúcich funkciách a vývoji!"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:197
+#: templates/enterlink/template_blockchain_styled_desktop.html:143
+msgid "Verified Page"
+msgstr "Overená stránka"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:273
+msgid "Quick Biography"
+msgstr "Rýchla biografia"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:275
+msgid "Quick Facts For This Wiki"
+msgstr "Referenčné odkazy pre túto Wiki"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:304
+#: templates/enterlink/template_blockchain_styled_desktop.html:361
+msgid "Image & Video Gallery"
+msgstr "Galéria obrázkov a videí"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:306
+#: templates/enterlink/template_blockchain_styled_desktop.html:363
+msgid "images, pictures, and videos"
+msgstr "obrázky, fotky a videá"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:310
+msgid "Gallery"
+msgstr "Galéria"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:327
+#: templates/enterlink/template_blockchain_styled_desktop.html:496
+msgid "Reference Links For This Biography"
+msgstr "Referenčné odkazy pre túto biografiu"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:329
+#: templates/enterlink/template_blockchain_styled_desktop.html:498
+msgid "Reference Links For This Wiki"
+msgstr "Referenčné odkazy pre túto Wiki"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:332
+#: templates/enterlink/template_blockchain_styled_desktop.html:501
+msgid ""
+"Links to historical reviews, career / educational facts, and other "
+"encyclopedic information"
+msgstr ""
+"Odkazy na historické recenzie, kariérne / vzdelávacie fakty a iné "
+"encyklopedické informácie"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:337
+#: templates/enterlink/template_blockchain_styled_desktop.html:507
+msgid "All information for"
+msgstr "Všetky informácie pre"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:337
+#: templates/enterlink/template_blockchain_styled_desktop.html:507
+msgid ""
+"wiki comes from the below links. Any source is valid, including Twitter, "
+"Facebook, Instagram, and LinkedIn. Pictures, videos, biodata, and files "
+"relating to"
+msgstr ""
+"wiki pochádza z nižšie uvedených odkazov. Každý zdroj je platný, vrátane "
+"Twitter, Facebook, Instagram a LinkedIn. Obrázky, videá, osobné údaje a "
+"súbory týkajúce sa"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:337
+#: templates/enterlink/template_blockchain_styled_desktop.html:507
+msgid "are also acceptable encyclopedic sources."
+msgstr "sú tiež prijateľné encyklopedické zdroje."
+
+#: templates/enterlink/template_blockchain_styled_amp.html:352
+#: templates/enterlink/template_blockchain_styled_desktop.html:528
+msgid ""
+"See related encyclopedia articles, biographies, reviews, and historical "
+"facts."
+msgstr ""
+"Pozrite si v encyklopédií súvisiace články, biografie, recenzie a historické "
+"fakty."
+
+#: templates/enterlink/template_blockchain_styled_amp.html:356
+#: templates/enterlink/template_blockchain_styled_desktop.html:535
+msgid "Other wiki pages related to"
+msgstr "Ostatné wiki stránky súvisiace s"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:535
+msgid "Created"
+msgstr "Vytvorené"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:536
+msgid "Last Modified"
+msgstr "Posledná zmena"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:537
+msgid "IPFS"
+msgstr "IPFS"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:757
+msgid "Top Page Editors"
+msgstr "Najlepší editori stránky"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:777
+msgid "Share this page"
+msgstr "Zdieľať túto stránku"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:789
+msgid "DIRECT LINK"
+msgstr "PRIAMY ODKAZ"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:794
+#: templates/enterlink/template_blockchain_styled_desktop.html:221
+msgid "Suggested Hashtags"
+msgstr "Navrhované značky Hashtags"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:828
+#: templates/enterlink/template_blockchain_styled_desktop.html:259
+msgid "QR Code"
+msgstr "QR kód"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:14
+#: templates/enterlink/template_blockchain_styled_desktop.html:19
+msgid "Bio"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:16
+#: templates/enterlink/template_blockchain_styled_desktop.html:17
+#: templates/enterlink/template_blockchain_styled_desktop.html:225
+msgid "bio"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:16
+#: templates/enterlink/template_blockchain_styled_desktop.html:17
+#: templates/enterlink/template_blockchain_styled_desktop.html:23
+#: templates/enterlink/template_blockchain_styled_desktop.html:24
+#: templates/enterlink/template_blockchain_styled_desktop.html:30
+#: templates/enterlink/template_blockchain_styled_desktop.html:31
+#: templates/enterlink/template_blockchain_styled_desktop.html:37
+#: templates/enterlink/template_blockchain_styled_desktop.html:38
+msgid "encylopedia"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:21
+#: templates/enterlink/template_blockchain_styled_desktop.html:26
+#: templates/enterlink/template_blockchain_styled_desktop.html:28
+#: templates/enterlink/template_blockchain_styled_desktop.html:33
+msgid "Review"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:23
+#: templates/enterlink/template_blockchain_styled_desktop.html:24
+#: templates/enterlink/template_blockchain_styled_desktop.html:30
+#: templates/enterlink/template_blockchain_styled_desktop.html:31
+#: templates/enterlink/template_blockchain_styled_desktop.html:231
+#: templates/enterlink/template_blockchain_styled_desktop.html:237
+#: templates/enterlink/template_blockchain_styled_desktop.html:243
+msgid "review"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:30
+#: templates/enterlink/template_blockchain_styled_desktop.html:31
+#: templates/enterlink/template_blockchain_styled_desktop.html:232
+#: templates/enterlink/template_blockchain_styled_desktop.html:238
+#: templates/enterlink/template_blockchain_styled_desktop.html:244
+msgid "history"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid "and"
+msgstr "a"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:187
+#: templates/enterlink/voting_table_of_contents.html:12
+msgid "Edit"
+msgstr "Upraviť"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:190
+msgid "Vote"
+msgstr "Hlasovať"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:205
+msgid "Embed / Widget"
+msgstr "Vložiť / Widget"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:224
+#: templates/enterlink/template_blockchain_styled_desktop.html:230
+#: templates/enterlink/template_blockchain_styled_desktop.html:236
+#: templates/enterlink/template_blockchain_styled_desktop.html:242
+msgid "wiki"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:226
+msgid "net worth"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:227
+msgid "age"
+msgstr "Stránka"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:228
+msgid "married"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:233
+msgid "sales"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:234
+#: templates/enterlink/template_blockchain_styled_desktop.html:240
+#: templates/enterlink/template_blockchain_styled_desktop.html:246
+msgid "facts"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:239
+msgid "founders"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:245
+msgid "encyclopedia"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:329
+msgid "Profiles"
+msgstr "Profily"
+
+#: templates/enterlink/transfer-iq.html:5
+#: templates/enterlink/transfer-iq.html:119
+msgid "Transfer IQ"
+msgstr "Prenos IQ"
+
+#: templates/enterlink/transfer-iq.html:121
+msgid "Please make sure you have set up"
+msgstr "Uistite sa, že ste nastavili"
+
+#: templates/enterlink/transfer-iq.html:121
+msgid "beforehand"
+msgstr "vopred"
+
+#: templates/enterlink/transfer-iq.html:123
+msgid "Sender"
+msgstr "Odoslať"
+
+#: templates/enterlink/transfer-iq.html:125
+msgid "Recipient"
+msgstr "Príjemca"
+
+#: templates/enterlink/transfer-iq.html:129
+msgid "Memo"
+msgstr "Memo"
+
+#: templates/enterlink/transfer-iq.html:134
+msgid "Transaction successful"
+msgstr "Transakcia bola úspešná"
+
+#: templates/enterlink/transfer-iq.html:138
+msgid "Buy RAM"
+msgstr "Kúpiť RAM"
+
+#: templates/enterlink/transfer-iq.html:142
+msgid "See your RAM, CPU, and Bandwidth on FeeXplorer"
+msgstr "Zobrazte vašu RAM, CPU a rýchlosť internetu na FeeXplorer"
+
+#: templates/enterlink/user.html:12
+msgid "profile"
+msgstr "profil"
+
+#: templates/enterlink/user.html:38
+msgid "Everipedia Rank"
+msgstr "Everipedia Rank"
+
+#: templates/enterlink/user.html:53
+msgid "This user is verified"
+msgstr "Tento používateľ je overený"
+
+#: templates/enterlink/user.html:56
+msgid "Everipedia Staff"
+msgstr "Everipedia Staff"
+
+#: templates/enterlink/user.html:62 templates/enterlink/user.html:67
+msgid "Message"
+msgstr "Správa"
+
+#: templates/enterlink/user.html:71 templates/enterlink/user.html:123
+msgid "Edit Profile"
+msgstr "Upraviť profil"
+
+#: templates/enterlink/user.html:74
+msgid "Everipedia Page"
+msgstr "Everipedia Strana"
+
+#: templates/enterlink/user.html:80
+msgid "IQ Score"
+msgstr "Skóre IQ"
+
+#: templates/enterlink/user.html:81
+msgid "Pages created"
+msgstr "Vytvorené stránky"
+
+#: templates/enterlink/user.html:82
+msgid "Total edits"
+msgstr "Úplné úpravy"
+
+#: templates/enterlink/user.html:94
+msgid "Joined"
+msgstr "Pripojil"
+
+#: templates/enterlink/user.html:125
+msgid "Upload Avatar / Profile Picture"
+msgstr "Nahrať Avatar / Profilový obrázok"
+
+#: templates/enterlink/user.html:153
+msgid "Enable account? Uncheck to ban"
+msgstr "Povoliť účet? Zrušte začiarknutie pre zrušenie blokovania"
+
+#: templates/enterlink/user.html:157
+msgid "IP Ban"
+msgstr "IP Ban"
+
+#: templates/enterlink/user.html:157
+msgid "Ban"
+msgstr "Blokovanie"
+
+#: templates/enterlink/user.html:157
+msgid "Clear"
+msgstr "Vyčistiť"
+
+#: templates/enterlink/user.html:159
+msgid "Verify the account?"
+msgstr "Overiť účet?"
+
+#: templates/enterlink/user.html:163
+msgid "Is Staff?"
+msgstr "Je personál?"
+
+#: templates/enterlink/user.html:177
+msgid "Save all changes"
+msgstr "Uložiť všetky zmeny"
+
+#: templates/enterlink/user.html:178
+msgid "Cancel"
+msgstr "Zrušiť"
+
+#: templates/enterlink/user.html:211
+msgid "Change Avatar Picture"
+msgstr "Zmeniť obrázok Avatar"
+
+#: templates/enterlink/user.html:219
+msgid "Please select your Everipedia page"
+msgstr "Vyberte prosím svoju stránku Everipedia"
+
+#: templates/enterlink/user.html:224
+msgid "Continue"
+msgstr "Pokračovať"
+
+#: templates/enterlink/votehistory.html:7
+msgid "Voting"
+msgstr "Hlasovanie"
+
+#: templates/enterlink/votehistory.html:95
+msgid "Voting History"
+msgstr "História hlasovania"
+
+#: templates/enterlink/voting.html:197
+msgid "Before"
+msgstr "Pred"
+
+#: templates/enterlink/voting.html:199
+msgid "After"
+msgstr "Po"
+
+#: templates/enterlink/voting_table_of_contents.html:7
+msgid "Article"
+msgstr "Článok"
+
+#: templates/enterlink/voting_table_of_contents.html:17
+msgid "Current Vote"
+msgstr "Aktuálne hlasovanie"
+
+#: templates/enterlink/voting_table_of_contents.html:20
+#: templates/enterlink/voting_table_of_contents.html:62
+msgid "Reject"
+msgstr "Zamietnuť"
+
+#: templates/enterlink/voting_table_of_contents.html:21
+msgid "Accept"
+msgstr "Súhlasiť"
+
+#: templates/enterlink/voting_table_of_contents.html:28
+msgid "Voting Period"
+msgstr "Obdobie hlasovania"
+
+#: templates/enterlink/voting_table_of_contents.html:34
+msgid "to"
+msgstr "do"
+
+#: templates/enterlink/voting_table_of_contents.html:51
+msgid "Place Votes"
+msgstr "Umiestniť hlasy"
+
+#: templates/enterlink/voting_table_of_contents.html:63
+msgid "Approve"
+msgstr "Schváliť"
+
+#: templates/enterlink/voting_table_of_contents.html:67
+msgid "Changes"
+msgstr "Zmeny"
+
+#: templates/enterlink/welcome.html:7
+msgid "Welcome to Everipedia, the encyclopedia of everything"
+msgstr "Vitajte na Everipedia, encyklopédií všetkého"

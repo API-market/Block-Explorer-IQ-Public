@@ -1,0 +1,203 @@
+{% load i18n %}
+{% load enterlink_custom_tags %}
+{% if search_type == "tinyMCE_JSON" %}
+    {% if result == "nopersonfoundwiththatname" %}
+    {% else %}
+        {% if result == "urlnoresult" %}
+        {% else %}
+            <table id="search_results" border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>Facebook_ID</th>
+                        <th>Blurb</th>
+                        <th>Thumbnail_URL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for result in result|slice:":20" %}
+                    <tr class="student">
+                        <td>{{result.0}}</td>
+                        <td>{{result.1}}</td>
+                        <td>{{result.3}}</td>
+                        <td>{{result.5|safe|striptags|truncatewords_html:200}}</td>
+                        <td>{{result.2}}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>​​​​​​
+        {% endif %}
+    {% endif %}
+{% elif renderType == 'tinymce-link-page' %}
+    {% if result == "nopersonfoundwiththatname" %}
+    {% else %}
+        <ul>
+            {% for resultItem in result|slice:":20" %}
+            <li>
+                <div class="tooltip-html" style="display: none;"><a class='tooltippable' href='/wiki/{{resultItem.8}}/' data-username='{{resultItem.1}}' data-mce-href='/wiki/{{resultItem.8}}/'>{{resultItem.0}}</a>&#8203;</div>
+                {% if resultItem.4 != None %}
+                    <img class="ajax_avatar" src="{{resultItem.2}}"/>
+                {% else %}
+                    <img class="ajax_avatar" src="https://epcdn-vz.azureedge.net/static/images/no-image-slide.png"/>
+                {% endif %}
+                <div class="ajax_username" >
+                    <span class="ajax_links ajax-page-title" style="color: #394c56 !important; font-weight: bold !important;" >{{resultItem.0}}</span>
+                </div>
+                <div class="ajax_blurb">{{resultItem.5|safe}}</div>
+            </li>
+            {% endfor %}
+        </ul>
+        <br style="clear: both" />
+    {% endif %}
+
+
+{% elif renderType == 'tinymce-cite-source' %}
+    <div class='open-addlink-menu'>
+        {% trans "Click to add a new link or file to this list" %}
+    </div>
+    <div class="cite-source-instructions">
+        <span>{% trans 'Or click an existing link below to add it to the article' %}</span>
+    </div>
+    {% if result == "nopersonfoundwiththatname" %}
+    {% else %}
+    <ul>
+        {% for linkitem in result %}
+        <li class="cite-line-item">
+            <div class="tooltip-html" style="display: none;">{{ linkitem.tooltipHTML|safe }}</div>
+                {% if linkitem.thumb != None and linkitem.thumb != ""  %}
+                    <img class="ajax_avatar" src="{{linkitem.thumb}}"/>
+                {% endif %}
+                <div class="ajax_username" style="display:block;">
+                    <span class="ajax_links ajax-page-title">{{linkitem.url}}</span>
+                </div>
+                <div class="ajax_blurb">{{ linkitem.description|safe|striptags|truncatewords_html:200 }}</div>
+        </li>
+        {% endfor %}
+        </ul>
+        <br style="clear: both" />
+    {% endif %}
+{% elif renderType == 'tinymce-cite-picture' %}
+    {% if result == "nopersonfoundwiththatname" %}
+    {% else %}
+    <ul>
+        {% for linkitem in result %}
+        <li style="display:inline;list-style-type:none;float:none;">
+            <div class="tooltip-html" style="display: none;">{{ linkitem.1|safe }}</div>
+
+            <table class='picture-dropdown'>
+            <tbody><tr>
+                {% if linkitem.0.2 == "PICTURE" or linkitem.0.2 == "GIF" %}
+                    <td>
+                        <img class="ajax_picture_dropdown" src="{{linkitem.0.0}}"/>
+                    </td>
+                {% elif linkitem.0.2 == "YOUTUBE" %}
+                    <td class="embed-menu-video-wrapper">
+                        <div class="embed-menu-video-overlay"></div>
+                        <img class="ajax_picture_dropdown" src="https://i.ytimg.com/vi/{{ linkitem.0.3 }}/hqdefault.jpg"/>
+                    </td>
+                {% elif linkitem.0.2 == "NORMAL_VIDEO" %}
+                    <td class="embed-menu-video-wrapper">
+                        <div class="embed-menu-video-overlay"></div>
+                        <video class="ajax_picture_dropdown" preload="metadata">
+                            <source src="{{ linkitem.0.0 }}#t=0.1" type="{{ linkitem.0.4 }}">
+                             {% trans 'Your browser does not support HTML5 video.' %}
+                        </video>
+                    </td>
+                {% elif linkitem.0.2 == "AUDIO" %}
+                    <td>
+                        <img class="ajax_picture_dropdown" src="https://epcdn-vz.azureedge.net/static/images/placeholder-audio.png"/>
+                    </td>
+                {% endif %}
+            </tr></tbody>
+            <caption class='blurbimage-caption'>{{ linkitem.0.1|safe|striptags }}</caption>
+            </table>
+
+
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% elif renderType == 'merge-page' %}
+    {% if result == "nopersonfoundwiththatname" %}
+    {% else %}
+    <ul>
+        {% for resultItem in result|slice:":20" %}
+        <li>
+            <div class="tooltip-html" style="display: none;">{{resultItem.2}}</div>
+            {% if resultItem.4 != None %}
+                <img class="ajax_avatar" src="{{resultItem.4}}"/>
+            {% else %}
+                <img class="ajax_avatar" src="https://epcdn-vz.azureedge.net/static/images/no-image-slide.png"/>
+            {% endif %}
+            <div class="ajax_username" style="display:block;">
+                <span class="ajax_links ajax-page-title">{{resultItem.1}}</span>
+                <span class="ajax_links ajax-view-count">{{resultItem.5}}{% if request.mobile %}<br>{% else %} {% endif %}{% trans "Views" %}</span>
+            </div>
+            <div class="ajax_blurb">{{ blurbResults|index:forloop.counter0|safe|striptags|truncatewords_html:200 }}</div>
+        </li>
+        {% endfor %}
+        </ul>
+        <br style="clear: both" />
+    {% endif %}
+{% elif renderType == 'users' %}
+    {% if result == "nopersonfoundwiththatname" %}
+    {% else %}
+    <ul>
+        {% for resultItem in result|slice:":20" %}
+        <li>
+            <div class="tooltip-html" style="display: none;">{{ resultItem.0 }}</div>
+            {% if resultItem.5 != None %}
+                <img class="ajax_avatar" src="{{resultItem.5}}" onerror="this.onerror=null;this.src='https://epcdn-vz.azureedge.net/static/images/noavatar_100x100.png';"/>
+            {% else %}
+                <img class="ajax_avatar" src="https://epcdn-vz.azureedge.net/static/images/noavatar_100x100.png" />
+            {% endif %}
+            <div class="ajax_username" style="display:block;">
+                <span class="ajax_links ajax-page-title">{{resultItem.0}} | {{resultItem.1}} {{resultItem.2}}</span>
+                <span class="ajax_links ajax-view-count">{{resultItem.4}}{% if request.mobile %}<br>{% else %} {% endif %}{% trans 'IQ' %}</span>
+            </div>
+            <div class="ajax_blurb">{{resultItem.3}}</div>
+        </li>
+        {% endfor %}
+        </ul>
+        <br style="clear: both" />
+    {% endif %}
+{% else %}
+    {% if result == "nopersonfoundwiththatname" %}
+    {% else %}
+        <script>
+            function newWindowSpecific(inputLink) {
+                window.top.location.href = inputLink;
+            }
+        </script>
+        {% if result == "urlnoresult" %}
+            <ul>
+                <div class="ajax_top nolinkresults">0 {% trans 'page(s) have this link' %}</div>
+            </ul>
+        {% else %}
+            {% if result == "wontgenerate" %}
+            {% else %}
+                {% if result != None %}
+                    <ul class="ajax-search-mobile ajax-result-ul">
+                        {% for resultItem in result|slice:":20" %}
+                            <li>
+                            <a class="ajax-result-link" href="javascript:void(0)" onclick='newWindowSpecific("https://iqnetwork.io/wiki/{{resultItem.1}}/")'>
+                                {% if resultItem.4 != None %}
+                                    <img class="ajax_avatar" src="{{resultItem.2}}"/>
+                                {% else %}
+                                    <img class="ajax_avatar" src="https://epcdn-vz.azureedge.net/static/images/no-image-slide.png"/>
+                                {% endif %}
+                                <div class="ajax_username" style="display:block;">
+                                    <span class="ajax_links ajax-page-title" >{{resultItem.0}}</span>
+                                    <span class="ajax_links ajax-view-count">{{resultItem.3}} {% trans "Views" %}</span>
+                                </div>
+                                <div class="ajax_blurb">{{resultItem.5|striptags|truncatewords_html:200}}</div>
+                            </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+{% endif %}

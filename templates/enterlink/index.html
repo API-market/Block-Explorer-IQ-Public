@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+{% load i18n %}
+{% load humanize %}
+{% load enterlink_custom_tags %}
+<html>
+<head>
+    <title>{% if not GlobalNewEvents|length < 1 %}({{GlobalNewEvents|length}}){% endif %} {% trans "Everipedia, the encyclopedia of everything" %}</title><!-- ' -->
+
+    <meta name="description" content="The world's largest english encyclopedia">
+    <meta name="msvalidate.01" content="F77C4B08C5A119855B42F640955BF655" />
+    <meta name="naver-site-verification" content="590f0c804c3d5255ffc674a08f64b0cf7066065a"/>
+    <meta name="yandex-verification" content="ad3727dc0775cd31" />
+    <meta name="baidu-site-verification" content="m8WWPz2dpV" />
+    <meta name="seznam-wmt" content="gOzGhOjKsKdx5uVRpCXrtaURubLcLhyY" />
+    <meta name="wot-verification" content="398e7866dfcd6a2b419a"/>
+    <meta property="fb:pages" content="328643504006398"/>
+
+    <script>
+        var isMobile = parseInt('{{request.mobile|yesno:"1,0"}}'); var isTablet = parseInt('{{request.tablet|yesno:"1,0"}}');
+    </script>
+
+	<!--- Include Header -->
+	{% include "enterlink/headers/header-common.html" %}
+    {% include "enterlink/headers/header-navbar.html" %}
+
+
+    <link href="/static/css/index_2.css" rel="stylesheet">
+    <link href="/static/css/index17.css" rel="stylesheet">
+    <!--<script src="/static/js/imagesloaded.pkgd.min.js"></script>-->
+
+
+</head>
+<!--<body OnLoad="document.indexsearch.SearchBox.focus();">-->
+<body>
+<div class="index-top">
+	<div class="container index-container">
+		<div class="laptop-ct row">
+			<div class="col-md-6 intro-blurb-wrap">
+				<h1>{% trans "The world's first encyclopedia on the blockchain" %}</h1>
+				<p>{% trans "Everipedia's IQ Network is the world's first Encyclopedia that allows anyone to become a stakeholder in the system and earn rank, rewards & tokens for curating content." %}</p>
+				
+
+				<div class="index-logos">
+                    <div class="logos-ct">
+                    </div>
+				<a id="become_an_editor" href="https://chrome.google.com/webstore/detail/scatter/ammjpmhgckkpcamddpolhchgomcojkle" target="_blank" class="laptop-btn">{% trans "Register" %}</a>
+				<a id="become_an_editor" href="/wiki/everipedia" target="_blank" class="laptop-btn2">{% trans "Learn more" %}</a>
+				</div>
+			</div>
+			<div class="col-md-6 laptop-wrap hidden-sm">
+				<div class="welcome-laptop"><img src="https://epcdn-vz.azureedge.net/static/images/factsbg.png"/></div>
+			</div>
+		</div>
+		<div class="cover-container hidden-lg hidden-md hidden-sm">
+		    <div class="inner cover">
+		    </div>
+		    <div class="lightbox" id="fl1">
+		    <div class="createpage-field">
+		        <form action="/search/?create_req=1" method="post" class="search" name="createpagefield" id="createpagefield">
+		            {% csrf_token %}
+		            <input type="hidden" value="1" name="create_page_flag" />
+		            <input placeholder="{% trans 'Paste a link or enter a title' %}." name="SearchBox" id="CreateBox" autocomplete="off" type="text" value="" style="border:0px;">
+		            <button type="submit" value="search" class="icon-search btn-index-create-page">{% trans 'Create Page' %}</button>
+		        </form>
+		    </div>
+		    </div>
+		</div>
+	</div>
+</div>
+
+<div class="index-featured hidden-sm hidden-xs">
+	<div class="container index-container">
+        <div class="featured-ct join-the-featured recent-forum-act-tagline">
+            <div class="">
+
+					<div class="featured-seenin">{% trans 'As Seen In' %}</div>
+					
+                    <div class="featured-logos">
+                        <div class="col-md-2 col-xs-4"><img src="https://epcdn-vz.azureedge.net/static/images/1wired.png"/></div>
+                        <div class="col-md-2 col-xs-4"><img src="https://epcdn-vz.azureedge.net/static/images/1cnn.png"/></div>
+                        <div class="col-md-2 col-xs-4"><img src="https://epcdn-vz.azureedge.net/static/images/1forbes.png"/></div>
+                        <div class="col-md-2 col-xs-4"><img src="https://epcdn-vz.azureedge.net/static/images/1reuters.png"/></div>
+                        <div class="col-md-2 col-xs-4"><img src="https://epcdn-vz.azureedge.net/static/images/1fortune.png"/></div>
+                        <div class="col-md-2 col-xs-4"><img src="https://epcdn-vz.azureedge.net/static/images/1coindesk.png"/></div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="index-intro">
+
+	<div class="row modernage-ct">
+		<h1>{% trans 'An Encyclopedia for the modern age' %}</h1>
+		
+		<hr class="separator-break separator-accent">
+		
+		<p>{% trans "The Everipedia IQ blockchain provides a new paradigm change and knowledge economy to disrupt the old centralized internet knowledge encyclopedia model similar to Wikipedia. By creating a new incentive structure and a distributed backend hosted within a blockchain, the new Everipedia knowledge base will be able to improve upon all fundamental features of Wikipedia." %}</p>
+	</div>
+
+
+
+	<div class="row features-ct">
+		<div class="col-md-3 feature-tile">
+			<img src="https://epcdn-vz.azureedge.net/static/images/icon-decentralized.png"/>
+			<h2>{% trans "Decentralized" %}</h2>
+			<p>{% trans "Articles are fetched using IPFS and EOS Storage. Majority of IQ being distributed during the airdrop." %}</p>
+		</div>
+		<div class="col-md-3 feature-tile">
+			<img src="https://epcdn-vz.azureedge.net/static/images/icon-democratic.png"/>
+			<h2>{% trans "Democratic" %}</h2>
+			<p>{% trans "Proof of Stake (PoS) model allows for voting to change and upgrade the IQ network as it grows. Also will facilitate batch imports of new content with no fees." %}</p>
+		</div>
+		<div class="col-md-3 feature-tile">
+			<img src="https://epcdn-vz.azureedge.net/static/images/icon-censor.png"/>
+			<h2>{% trans "Censorship Resistant" %}</h2>
+			<p>{% trans "Live and permanent edits of content on the blockchain beyond the control of a central authority." %}</p>
+		</div>
+		<div class="col-md-3 feature-tile">
+			<img src="https://epcdn-vz.azureedge.net/static/images/icon-incentive.png"/>
+			<h2>{% trans "Financial Incentive" %}</h2>
+			<p>{% trans "All holders of IQ will be incentivized to create quality, neutral content and to work together in building the reputation of the network." %}</p>
+		</div>
+	</div>
+
+</div>
+
+
+<div class="index-vision">
+	<div class="row vision-ct">
+		<div class="col-md-6 visionlaptop"><img src="https://epcdn-vz.azureedge.net/static/images/historyofstanford1.png"/></div>
+		<div class="col-md-6 col-xs-12 visionpara">
+			<h2>{% trans "Become an editor today and start creating your own wiki articles." %}</h2>
+			<hr class="separator-break separator-accent" style="margin-left:0;">
+			
+			<h3>{% trans "Open Community" %}</h3>
+			<p>{% trans "Our vibrant community is open and welcoming to people from all backgrounds. Our guidelines and policies are based on common sense rather than strict bureaucracy." %}</p>
+			
+			<h3>{% trans "Redesigned for the modern age" %}</h3>
+			<p>{% trans "Everipedia is an encyclopedia modernized and re-designed for the twenty-first century. Our editing interface makes creating and editing wiki's as easy as using Facebook." %}</p>
+			
+		</div>
+	</div>
+</div>
+
+
+<!--<div class="index-telegram">-->
+	<!--<div class="row telegram-ct">-->
+		<!--<h2>{% trans "Follow us on Telegram" %}</h2>-->
+		<!--<hr class="separator-break separator-accent">-->
+
+		<!--<div class="col-md-4"></div>-->
+		<!--<div class="col-md-4"></div>-->
+		<!--<div class="col-md-4"></div>-->
+	<!--</div>-->
+<!--</div>-->
+
+
+<div class="index-team">
+	<div class="row team-ct">
+		<div class="col-md-6 col-xs-12 teampara">
+			<h2>{% trans "Led by the Founder of Wikipedia and Genius.com" %}</h2>
+			<hr class="separator-break separator-accent" style="margin-left:0;">
+
+			<p>{% trans "Everipedia is being led by a team with extensive experience and knowledge both in the online knowledge space as well as the blockchain industry. The executive team is made up of several prominent individuals in the industry, the Co-Founder of Wikipedia, Larry Sanger, the founder of Genius.com, Mahbod Moghadam, and several others. Academic credentials includes UCLA, Stanford, Yale & Columbia, covering nationalities from America, Sweden, Norway and Italy. " %}</p>
+			<a id="become_an_editor" href="/leadership/" target="_blank" class="laptop-btn2">{% trans "Executive Team" %}</a>
+		</div>
+		<div class="col-md-6 teamphoto hidden-sm hidden-xs"></div>
+	</div>
+</div>
+
+
+{% include 'enterlink/inline-js/debounce-min.html' %}
+{% include 'enterlink/inline-js/enterlink-ajax-tooltippables.html' %}
+{% include 'enterlink/inline-js/enterlink-ajax-execute-search.html' %}
+{% include "enterlink/inline-js/unveil.html" %}
+
+</div>
+
+
+<script>
+function toggleFilter() {
+    if ($("#ra_filter_form").css('display') == 'none') {
+        $("#ra_filter_form").css("display", "block");
+        $(".trending-filters-toggle").html("Hide");
+    }
+    else {
+        $("#ra_filter_form").css("display", "none");
+        $(".trending-filters-toggle").html("Show");
+    }
+}
+
+function clearForm() {
+    $("#ra_filter_form input:checked").prop("checked", false);
+}
+
+var nextPage = parseInt({{ current_page }});
+if (isNaN(nextPage)){
+    nextPage = 1;
+}
+else{
+    nextPage = nextPage + 1;
+}
+var theURL = "/AJAX-REQUEST/AJAX_Fetch_Paginated_Activity_JSON/";
+var ajaxResultBox = $("span#ajax_addlink_result");
+
+function ajaxFetchActivity() {
+    var o = {};
+    var a = $("#ra_filter_form").serializeArray();
+    $.each(a, function() {
+        if (o[this.name]) {
+            if (!o[this.name].push) {
+                o[this.name] = [o[this.name]];
+            }
+            o[this.name].push(this.value || '');
+        } else {
+            o[this.name] = [this.value] || '';
+        }
+    });
+    var ranks = JSON.stringify(o['rank']);
+    var verbs = JSON.stringify(o['verb']);
+
+    $.ajax({
+        type: "POST",
+        url: theURL,
+        data: {fb_id: "index", page: nextPage, ranks: ranks, verbs: verbs },
+        beforeSend: function( xhr ) {
+            ajaxResultBox.html("<img class='addlink-loading-gif' src='https://epcdn-vz.azureedge.nethttps://epcdn-vz.azureedge.net/static/images/loading.gif'><span style='margin-left: 17px; position: relative; top: 5px; color: green;'>" + gettext('Loading more activity, please wait...') + "</span>");
+            $('#activity-next-button').toggle();
+        },
+        success: function (data) {
+            var fadeDuration = 250;
+            var theTarget = $('#recent-activity-container');
+            if (theTarget.is(":visible")){
+                theTarget.fadeOut(fadeDuration, function() {
+                    theTarget.html(data);
+                    theTarget.fadeIn(fadeDuration);
+                });
+            }
+            else {
+                theTarget.html(data);
+                theTarget.fadeIn(fadeDuration);
+            }
+        }
+    });
+}
+$("img.lazyloadable").unveil(250);
+
+
+
+$(document).on("scatterNavbarDone", function () {
+	$("#become_an_editor").html(gettext("Create page"));
+	$("#become_an_editor").attr("href", "/wiki/everipedia-blank-page-template/advanced_edit/");
+    $("#become_an_editor").click(function(event) {
+        event.preventDefault();
+        $("#createpage_box_wrap").show();
+    });
+});
+
+</script>
+
+    <!--- Everipedia Footer -->
+    {% include "enterlink/footers/footer.html" %}
+    {% include "enterlink/footers/deferredJS.html" %}
+    {% include 'enterlink/headers/extra-analytics-right-before-body-end.html' %}
+</body>

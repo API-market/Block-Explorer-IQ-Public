@@ -1,0 +1,37 @@
+{% load i18n %}
+{% load humanize %}
+
+{% if request.mobile and not request.tablet %}
+    <ul class="nav navbar-nav mbl-dropdown-hdr" id="mobile_dropdown" style="margin:0px;">
+        <li><a href="/transfer-iq/"><span id="header_iq_count">0 IQ</span></a></li>
+        <li><a rel="nofollow" href="https://www.reddit.com/r/Everipedia/">{% trans 'Forum' %}</a></li>
+        <li><a href="/exchange-listings/">{% trans 'Get IQ' %}</a></li>
+        <li><a href="/language-selector/">
+            <img id="selected-language" height="33" width="33" alt="Language flag" class="language-select lang-header-dropdown-flag" src="https://epcdn-vz.azureedge.net/static/images/flags/png/48/languages/{{LANGUAGE_CODE}}.png">
+        </a></li>
+        <!--<li><a rel='nofollow' href="/logout/?next={{ request.path }}">{% trans 'Log out' %}</a></li>-->
+    </ul>
+{% else %}
+    <ul class="nav navbar-nav right-login-area col-xs-3 col-sm-3">
+        <li><a href="/transfer-iq/"><span id="header_iq_count">0 IQ</span></a></li>
+        <li><a href="/editor/"><span id="header_bpwr_count">0 BRAIN</span></a></li>
+        <li><a class="/editor/"><span id="header_rwd_claim">{% trans 'Claim Rewards' %}</span></a></li>
+        <!--<li>-->
+            <!--<a href="/editor/{{ GlobalUserUsername }}/">-->
+                <!--<span id="header_eos_count">0 EOS</span>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li><a rel='nofollow' href="/notifications/">{% trans 'Notifications' %}</a></li>-->
+        <!--<li><a rel='nofollow' href="/messages/">{% trans 'Messages' %}</a></li>-->
+        <li><a class="create-page-dropdown" href="/create_page/advanced_edit/?key=">{% trans 'Create Page' %}</a></li>
+        <li><a href="/recent-activity/">{% trans 'Recent Activity' %}</a></li>
+        <li><a rel="nofollow" href="https://www.reddit.com/r/Everipedia/">{% trans 'Forum' %}</a></li>
+        <li><a href="https://everipedia.org/wiki/everipedia-faq/">{% trans 'Help' %}</a></li>
+        <li><a href="/exchange-listings/">{% trans 'Get IQ' %}</a></li>
+        <li><a href="/language-selector/">
+            <img id="selected-language" height="33" width="33" alt="Language flag" class="language-select lang-header-dropdown-flag" src="https://epcdn-vz.azureedge.net/static/images/flags/png/48/languages/{{LANGUAGE_CODE}}.png">
+        </a></li>
+        <!--<li><a rel='nofollow' href="/logout/?next={{ request.path }}">{% trans 'Log out' %}</a></li>-->
+    </ul>
+{% endif %}
+

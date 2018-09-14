@@ -1,0 +1,36 @@
+
+<script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+    {% if not isTemplatePage %}
+        document.querySelector('head').innerHTML += '<link href="https://epcdn-vz.azureedge.net/static/css/featherlight-min-css.css" rel="stylesheet">';
+    {% endif %}
+</script>
+<!-- i18n translations-->
+<script type="text/javascript">gettext = function(a) {return a;}</script>
+
+{% if not isTemplatePage  %}
+    {% include 'enterlink/inline-js/application.html' %}
+    <script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/jquery-ui-min.js"></script>
+    <script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/jquery-qtip-min.js"></script>
+    <script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/bootstrap-min-js.js"></script>
+    {% include 'enterlink/inline-css/qtip2-custom.html' %}
+    {% include 'enterlink/inline-js/debounce-min.html' %}
+    {% include 'enterlink/inline-js/enterlink-ajax-tooltippables.html' %}
+    {% include 'enterlink/inline-js/enterlink-ajax-execute-search.html' %}
+
+{% else %}
+    <script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/jquery-ui-min.js"></script>
+    <script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/jquery-qtip-min.js"></script>
+    <script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/bootstrap-min-js.js"></script>
+
+    {% include 'enterlink/inline-css/qtip2-custom.html' %}
+    {% include 'enterlink/inline-js/debounce-min.html' %}
+    {{ compressedJSBlob_AJAX_TOOLTIPPABLES|safe }}
+    {{ compressedJSBlob_EXECUTE_SEARCH|safe }}
+    {{ compressedCSSBlob_FEATHERLIGHT|safe }}
+
+{% endif %}
+
+

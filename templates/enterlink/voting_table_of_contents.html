@@ -1,0 +1,68 @@
+{% load i18n %}
+<div class="heading-collection">
+    <table class="toc-vote-box"><tbody>
+        <tr class="redirect-row">
+            <td class="article">
+                <a href="/wiki/{{ articleObject.slug }}/">
+                    <span class="icon icon-news"></span>{% trans "Article" %}
+                </a>
+            </td>
+            <td class="edit">
+                <a href="/wiki/{{ articleObject.slug }}/advanced_edit/">
+                    <span class="icon icon-edit"></span>{% trans "Edit" %}
+                </a>
+            </td>
+        </tr>
+        <tr class="voting-head vote-inl-tbl">
+            <td>{% trans "Current Vote" %}<span class="icon icon-cycle"></span></td>
+        </tr>
+        <tr class="tally-label">
+            <th>{% trans "Reject" %}</th>
+            <th>{% trans "Accept" %}</th>
+        </tr>
+        <tr class="tally-row">
+            <td class="reject-tally">---</td>
+            <td class="accept-tally">---</td>
+        </tr>
+        <tr>
+        <tr class="voting-head vote-inl-tbl">
+            <td>{% trans "Voting Period" %}</td>
+        </tr>
+        <tr class="voting-period">
+            <td class="vote-period-label">
+                <div class="vote-period-wrap">
+                    <div class="period-start">02/22/2018 01:00:00</div>
+                    <div class="period-to">--- {% trans "to" %} ---</div>
+                    <div class="period-end">02/23/2018 13:00:00</div>
+                </div>
+            </td>
+        </tr>
+        <tr class="voting-head vote-inl-tbl">
+            <td>{% trans "Time Remaining" %}</td>
+        </tr>
+        <tr class="voting-timer">
+            <td class="vote-timer-label">
+                <div class="vote-timer-wrap">
+                    <!--<div class="timer-left"></div>-->
+                    <div class="timer-right">53:32:30</div>
+                </div>
+            </td>
+        </tr>
+        <tr class="voting-head place-votes-header">
+            <td>{% trans "Place Votes" %}</td>
+        </tr>
+        <!--<tr class="vote-label">-->
+            <!--<td>Enter Votes</td>-->
+        <!--</tr>-->
+        <tr class="vote-input-box">
+            <td>
+                <input class="vote-input" type="text" name="vote-count">
+            </td>
+        </tr>
+        <tr class="button-row place-votes-btn-rows">
+            <td class="vote-btn reject-vote">{% trans "Reject" %}</td>
+            <td class="vote-btn accept-vote">{% trans "Approve" %}</td>
+        </tr>
+    </tbody></table>
+</div>
+

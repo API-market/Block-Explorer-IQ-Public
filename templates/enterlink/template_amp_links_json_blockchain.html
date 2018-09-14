@@ -1,0 +1,38 @@
+{% load enterlink_custom_tags %}
+{% load i18n %}
+{% for linkObject in CITATION_OBJECTS %}
+<li>
+    {% if linkObject.thumb != None and linkObject.thumb != "" %}
+    <a class='avatar-wrap' {{ linkObject.attr }} href="{{ linkObject.url }}" title="Preview Thumbnail">
+        <amp-img alt='Thumbnail' class="link-image" width=50 height=50 layout="fixed" src="{{ linkObject.thumb|handle_missing_photo:'link' }}" >
+            <amp-img placeholder width=50 height=50 src="https://epcdn-vz.azureedge.net/static/images/link-2.png" layout="fill"></amp-img>
+        </amp-img>
+    </a>
+    {% endif %}
+
+    <!--<div class="link-box-left">-->
+        <!--<div data-role="like_container">-->
+
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="link-box-right">
+	    <div class="link-url">
+	        {% if linkObject.isSocial == True%}
+	            <span itemprop="sameAs"><a href="{{ linkObject.url }}" class="link-box-url" {{ linkObject.attr }} target="_blank">{{ linkObject.url }}</a></span>
+	        {% else %}
+	            <a href="{{ linkObject.url }}" class="link-box-url" {{ linkObject.attr }} target="_blank">{{ linkObject.url }}</a>
+	        {% endif %}
+        </div>
+
+        <div id="linksetid{{ linkObject.url }}" class="link-comment">{{ linkObject.description|safe }}</div>
+
+        <div class="link-box-details">
+            <div class="link-date"><a href="{{ linkObject.url }}" rel="nofollow">{{ linkObject.timestamp|json_fix_time }}</a></div>
+       </div>
+
+       
+</li>
+{% endfor %}
+
+

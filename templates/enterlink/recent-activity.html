@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+{% load enterlink_custom_tags %}
+{% load i18n %}
+<html>
+    <head>
+
+    <title>{% trans 'Recent Activity' %} - {% trans "Everipedia, the encyclopedia of everything" %}</title>
+    <!-- ' -->
+    <meta name="description" content=" Everipedia is the world’s largest collection of hyperlinks grouped by identity. ">
+	<link rel="canonical" href="https://everipedia.org/contact/" />
+	<!--- Include Header -->
+	{% include "enterlink/headers/header-common.html" %}{% include "enterlink/headers/header-navbar.html" %}
+    <link href="/static/css/howto_welcome.css" rel="stylesheet">
+	<style>
+		ul.recent-activity {
+			list-style: none;
+			float: left;
+		}
+		ul.recent-activity li {
+			float: left;
+    		width: 100%;
+			margin: 5px 0px;
+			border-top: 1px solid rgba(128,128,128,0.13);
+			border-left: 1px solid rgba(128,128,128,0.13);
+			-webkit-box-shadow: 3px 3px 4px 0px rgba(196,196,196,1);
+			-moz-box-shadow: 3px 3px 4px 0px rgba(196,196,196,1);
+			box-shadow: 3px 3px 4px 0px rgba(196,196,196,1);
+		}
+		ul.recent-activity li a.act-anchor{
+			float: left;
+			width: 100%;
+		}
+		.recent-activity .act-img-wrap{
+			object-fit: contain;
+			float: left;
+		}
+		.recent-activity .line-picture{
+			width: 50px;
+			height: 50px;
+		}
+		.recent-activity .line-data-wrap{
+			float: right;
+			width: calc(100% - 60px);
+			padding: 5px 10px 5px 0px;
+			font-size: 14px;
+		}
+		.recent-activity .line-data-wrap .page-title{
+			font-weight: bold;
+			color: #333;
+		}
+		.recent-activity .line-data-wrap .page-author{
+			font-style: italic;
+			color: #333;
+		}
+		.recent-activity .line-data-wrap .page-separator{
+			margin: 0px 10px 0px 5px;
+			border-right: 1px solid #333;
+			color: #333;
+		}
+		.recent-activity .line-data-wrap .page-timestamp{
+			color: #333;
+		}
+		.recent-activity .line-data-wrap .change-row{
+			word-break: break-all;
+		}
+		.recent-activity .line-data-wrap .before-hash, .recent-activity .line-data-wrap .after-hash{
+			color: #5a5a5a;
+			font-size: 12px;
+		}
+
+	</style>
+
+</head>
+<body>
+	<div class="contact-ct tablet-compatible">
+		<h1>{% trans 'Recent Activity' %}</h1>
+		<ul class="recent-activity">
+			{% for lineItem in theProposals %}
+				<li class="activity-line">
+					<a class="act-anchor" href="/wiki/{{ lineItem.article.slug }}/">
+						<div class="act-img-wrap">
+							<img class="lazyloadable line-picture" src="{{ lineItem.article.photo_thumb_url }}" data-src="{{ lineItem.article.photo_url }}">
+						</div>
+						<div class="line-data-wrap">
+							<div class="title-row">
+								<span class="page-title">{{ lineItem.article.page_title }}</span>
+								<span class="page-author"> {% trans 'by' %} {{ lineItem.proposer }}</span>
+								<span class="page-separator"></span>
+								<span class="page-timestamp">{{ lineItem.starttime|parsetimestamp }}</span>
+							</div>
+							<div class="change-row">
+								<span class="before-hash">{{ lineItem.old_article_hash }}</span>
+								<span class="icon icon-arrow-long-right"></span>
+								<span class="after-hash">{{ lineItem.proposed_article_hash }}</span>
+							</div>
+						</div>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+
+
+		<div class="pagination">
+			<span class="step-links">
+				{% if theProposals.has_previous %}
+					<a href="?page={{ theProposals.previous_page_number }}">{% trans 'Previous' %}</a>
+				{% endif %}
+
+				<span class="current">
+					{% trans 'Page' %} {{ theProposals.number }} {% trans 'of' %} {{ theProposals.paginator.num_pages }}.
+				</span>
+
+				{% if theProposals.has_next %}
+					<a href="?page={{ theProposals.next_page_number }}">{% trans 'Next' %}</a>
+				{% endif %}
+			</span>
+		</div>
+
+
+	</div>
+
+<!--- Everipedia Footer -->
+{% include "enterlink/footers/footer.html" %}
+{#{% include "enterlink/footers/deferredJS.html" %}#}
+{% include 'enterlink/inline-css/application.html' %}
+{% include 'enterlink/headers/extra-analytics-right-before-body-end.html' %}
+</body>
+</html>

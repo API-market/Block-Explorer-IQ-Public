@@ -1,0 +1,269 @@
+{#<!DOCTYPE html>#}
+
+{% load staticfiles %}
+{% load enterlink_custom_tags %}
+<html>
+<head>
+    <title>{{editorUser.username}}</title>
+    <meta name="robots" content="noindex, nofollow, noarchive">
+	<!--- Include Header -->
+	{% include "enterlink/headers/hoverheader.html" %}
+
+    <style>
+        @font-face {
+            font-family:'Lora';
+            font-style:normal;
+            font-weight:400;
+            src:url(https://epcdn-vz.azureedge.net/static/fonts/Lora-Regular.woff) format("woff")
+        }
+
+        @font-face {
+            font-family: 'Lora';
+            src: url('https://epcdn-vz.azureedge.net/static/fonts/Lora-Bold.woff') format('woff');
+            font-weight: bold;
+        }
+
+        @font-face {
+            font-family: 'Lora';
+            src: url('https://epcdn-vz.azureedge.net/static/fonts/Lora-Italic.woff') format('woff');
+            font-style: italic;
+        }
+        body {
+            background-color: white;
+            font-family: 'Lora', Garamond, Georgia !important;
+        }
+        .main-ct {
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            padding: 5px;
+        }
+        .profile_header {
+            display: none;
+        }
+        .mobile-header{
+            display: none;
+        }
+
+        .bio-ct-head .avatar {
+            min-height: 245px;
+            min-width: 245px;
+            border-radius: 150px;
+        }
+
+        div.avatar {
+            margin-left: 0px;
+            margin-right: 15px;
+        }
+
+        div.avatar:hover {
+            opacity: 0.6;
+            cursor: pointer;
+        }
+
+        .blurb-ct {
+            float: left;
+            width: 710px;
+            line-height: 27px;
+            height: 266px;
+            color: #1b4362;
+            padding: 4px 5px 0px 10px;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .bio-ct-head{
+            padding: 7px;
+            width: 100%;
+        }
+
+        .blurb-ct:hover{
+            background-color:#eef5fa;
+            cursor: pointer;
+        }
+
+        .blurb-ct p {
+            font-size:26px;
+            color: #436f8a;
+        }
+
+        .blurb-ct p a {
+            color: #436f8a;
+        }
+
+        .bio-ct-head .name {
+            width: 100%;
+            padding-left: 5px;
+        }
+
+        .bio-ct-head .name a{
+            text-decoration: none;
+            color: #444;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .bio-ct-head .name a:hover{
+            opacity: 0.6;
+            cursor: pointer;
+        }
+
+        .right-ct {
+            margin-left: 5px;
+            width: 100%;
+            max-height: 1000px;
+            overflow: hidden;
+        }
+
+        .hvrblrb-ajax-ad{
+            float: right;
+            width: 1003px;
+            height: 142px;
+            bottom: -6px;
+            right: 14px;
+            position: fixed;
+        }
+
+        .go-to-article{
+            position: fixed;
+            width: 100%;
+            top: 340px;
+            display: block;
+            z-index: 5;
+            background: white;
+            height: 126px;
+        }
+
+        a.gta-anchor{
+            float: left;
+            font-size: 31px;
+            font-family: 'Lora', Garamond, Georgia;
+            /* border: 0px none; */
+            outline: medium none;
+            text-decoration: none;
+            height: 110px;
+            line-height: 94px;
+            width: 243px;
+            padding: 5px;
+            text-align: center;
+            cursor: pointer;
+            /* border-top: 1px solid #ececec; */
+            background-color: rgb(90, 172, 218);
+            color: #f5f8fa;
+        }
+
+        a.gta-anchor:hover{
+            background-color: rgb(112, 183, 223);
+        }
+
+        iframe {
+            -moz-transform: scale(1.38, 1.38);
+            -webkit-transform: scale(1.38, 1.38);
+            -o-transform: scale(1.38, 1.38);
+            -ms-transform: scale(1.38, 1.38);
+            transform: scale(1.38, 1.38);
+            -moz-transform-origin: top left;
+            -webkit-transform-origin: top left;
+            -o-transform-origin: top left;
+            -ms-transform-origin: top left;
+            transform-origin: top left;
+        }
+        iframe.iframe-block{
+            width: 747px !important;
+            height: 110px !important;
+            border: 0px solid green;
+        }
+
+        .tynt-ad-fence{
+            display: inline-block;
+            width: 1004px;
+            float: right;
+            overflow: visible;
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            height: 124px;
+            z-index: 10;
+        }
+        .tynt-ad-fence .tynt-ad-container{
+            width: 100%;
+        }
+        .tynt-ad-fence .tynt-ad-container .tynt-ad-frame-container{
+            height: 137px;
+        }
+
+
+    </style>
+
+<div class="main-ct main-ct-hovercards">
+    <div class="right-ct hover-blurb-item" id="desktopblurb" style="">
+<!-- START BIO HEAD SECTION -->
+        <div class="bio-ct-head">
+            <div class="name" style="font-size:34px;" title="{{ editorUser.username }}">
+                <script type='text/javascript'>
+                 function newWindow() {
+                     top.location.href = "../../../../editor/{{ editorUser.username }}/";
+                 }
+                </script>
+                <ul style="display: inline;">
+                    <li>Self citation by: <a href="../../../../editor/{{ editorUser.username }}/" onclick="newWindow();">{{ editorUser.first_name }}&nbsp;{{ editorUser.last_name }}</a>
+{#                        <img class='hoverEditor-flag' width='10' height='10' style="display:inline; margin-top: 0px; margin-left: 5px;" src="https://epcdn-vz.azureedge.net/static/images/flags/png/48/{{ editorUserInfo.nationality }}.png"/>#}
+                        &#8226; {{ editorUserInfo.gender|capfirst }} &#8226;
+                        {{ editorUserInfo.age }}
+                    </li>
+{#                    <li>#}
+{#                    {% if editorUserInfo.isverified == True %}#}
+{#                        <span>{{ editorUser.first_name }}&nbsp;{{ editorUser.last_name }}#}
+{#                        <img style="display: inline; width: 30px; height:30px; margin-top: 0px; margin-left: 5px;" height ="18" width="18" src="https://epcdn-vz.azureedge.net/static/images/verified.png"/></span>#}
+{#                    {% endif %}#}
+{#                    </li>#}
+                </ul>
+            </div>
+
+            <a href="../../../../editor/{{ editorUser.username }}/" onclick="newWindow();">
+                <div class="avatar" style="float: left; margin-left: 5px; margin-right: 10px; background:url('{{ editorUser.username|full_photo_from_username }}'), url('https://epcdn-vz.azureedge.net/static/images/noavatar_100x100.png');  background-position:center; background-size:cover;">
+                </div>
+            </a>
+            <!-- START BLURB SECTION -->
+            <div onclick="newWindow();" class="blurb-ct" id="blurb">
+                {% if editorUserInfo.isverified == True %}
+                    <p><strong>Title: </strong>{{ editorUserInfo.usertitle }}</p>
+                {% endif %}
+                <p><strong>IQ: </strong>{{ editorUserInfo.points }}</p>
+                <p><strong>Rank: </strong>{{ editorUserInfo.rank }}</p>
+                <p><strong>Links added: </strong>{{ ulinkcount }}</p>
+                <p><strong>Comments posted: </strong>{{ upostcount }}</p>
+                <p><strong>User since: </strong>{{ editorUser.date_joined }}</p>
+                <p><strong>Last login: </strong>{{ editorUser.last_login }}</p>
+            </div>
+
+{#            {% if not user.is_authenticated or user.is_staff  %}#}
+{#            <div class="row go-to-article">#}
+{#                <div class="col-md-12" style="padding: 0px;">#}
+{#                    <div class="hvrblrb-ajax-ad">#}
+{#                        <div class="ad-inner-block">#}
+{#                            <!-- Begin 33Across RevCTRL InPage -->#}
+{#                            <script id='x33x1474564694952'>#}
+{#                            var Tynt=Tynt||[];Tynt.push('cdBJuwpxar5RjCrkHcnnVW');#}
+{#                            Tynt.cmd=Tynt.cmd||[];Tynt.cmd.push(function(){#}
+{#                            Tynt.ads.display('728x90','x33x1474564694952','inpage');});#}
+{#                            (function(){var h,s=document.createElement('script');#}
+{#                            s.src='https://cdn.tynt.com/siab.js';#}
+{#                            h=document.getElementsByTagName('script')[0];#}
+{#                            h.parentNode.insertBefore(s,h);})();#}
+{#                            </script>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#            </div>#}
+{#            {% endif %}#}
+
+            <!-- END BLURB SECTION -->
+        </div>
+	<!-- END BIO HEAD SECTION -->
+    </div>
+</div>
+
+{% include "enterlink/inline-js/lazyload-hovercards.html" %}
+<script>document.addEventListener("DOMContentLoaded", function(event) {var bLazy = new Blazy();});</script>

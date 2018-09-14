@@ -1,0 +1,26 @@
+{% load i18n %}
+<div class="heading-collection">
+{% for headingChunk in rawHeadings %}
+    {% if templateType == 'AMP' %}
+        <li class='toc-header-{{ headingChunk.5}}' data-blurb-id="{{ headingChunk.3 }}">
+            <a rel="nofollow" class='toc-header-{{ headingChunk.5}}' href="#{% if request.mobile %}{{ headingChunk.1 }}{% else %}{{ headingChunk.2}}{% endif %}">
+                <div class="fixed-items-description">{{ headingChunk.0 }}</div>
+            </a>
+        </li>
+    {% elif templateType == 'BLOCKCHAIN' %}
+        <li class='toc-header-{{ headingChunk.5}}' data-blurb-id="{{ headingChunk.3 }}" onclick="$('#{{ headingChunk.3 }}').click();">
+            <a rel="nofollow" href="/wiki/{{ articleSlug }}/#{% if request.mobile %}{{ headingChunk.1 }}{% else %}{{ headingChunk.2}}{% endif %}">
+                <div class="fixed-items-description">{{ headingChunk.0 }}</div>
+            </a>
+        </li>
+    {% else %}
+        <li class='toc-header-{{ headingChunk.5}}' data-blurb-id="{{ headingChunk.3 }}" onclick="$('#{{ headingChunk.3 }}').click();">
+            <a rel="nofollow" href="/wiki/{{ articleSlug }}/#{% if request.mobile %}{{ headingChunk.1 }}{% else %}{{ headingChunk.2}}{% endif %}">
+                <div class="fixed-items-description">{{ headingChunk.0 }}</div>
+            </a>
+        </li>
+    {% endif %}
+
+{% endfor %}
+</div>
+

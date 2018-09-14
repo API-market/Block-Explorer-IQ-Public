@@ -1,0 +1,2299 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-25 08:59-0700\n"
+"PO-Revision-Date: 2018-08-04 23:51-0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.1.1\n"
+
+#: enterlink/edit.py:114
+msgid "Page Type"
+msgstr "페이지"
+
+#: enterlink/edit.py:114
+msgid "Removed From Site"
+msgstr "사이트에서 제거됨"
+
+#: enterlink/edit.py:114 templates/enterlink/edit_ajax_editpagemeta.html:12
+msgid "Adult Content"
+msgstr "성인용 콘텐츠"
+
+#: enterlink/edit.py:115
+msgid "Media Gallery"
+msgstr "갤러리"
+
+#: enterlink/edit.py:115
+msgid "References and Citations"
+msgstr "참고 문헌 및 인용문"
+
+#: enterlink/forms.py:9
+msgid "Contains"
+msgstr "포함"
+
+#: enterlink/forms.py:9
+msgid "Equal to"
+msgstr "다음과 동일함"
+
+#: enterlink/forms.py:10
+msgid "Regular expression"
+msgstr "정규식"
+
+#: enterlink/forms.py:11
+msgid "Starts with"
+msgstr "다음으로 시작하기"
+
+#: enterlink/forms.py:11
+msgid "Ends with"
+msgstr "다음으로 끝내기"
+
+#: enterlink/forms.py:12
+msgid "Greater than"
+msgstr "보다 큼"
+
+#: enterlink/forms.py:12
+msgid "Greater than or equal to"
+msgstr "크거나 같음"
+
+#: enterlink/forms.py:13
+msgid "Less than"
+msgstr "보다 작음"
+
+#: enterlink/forms.py:13
+msgid "Less than or equal to"
+msgstr "작거나 같음"
+
+#: enterlink/forms.py:42 templates/enterlink/headers/index_header.html:133
+#: templates/enterlink/login.html:40
+msgid "Password"
+msgstr "비밀번호"
+
+#: enterlink/forms.py:44
+msgid "Please enter a password"
+msgstr "비밀번호를 입력하십시오."
+
+#: enterlink/forms.py:45
+msgid "Please enter a valid password"
+msgstr "올바른 비밀번호를 입력하십시오."
+
+#: enterlink/forms.py:46
+msgid "Enter an email"
+msgstr "이메일 입력하기"
+
+#: enterlink/forms.py:47
+msgid "Please enter an email address"
+msgstr "이메일 주소를 입력해주십시오"
+
+#: enterlink/forms.py:48
+msgid "Please enter a valid email address"
+msgstr "유효한 이메일 주소를 입력해주십시오"
+
+#: enterlink/forms.py:49 enterlink/forms.py:69
+msgid "First Name"
+msgstr "이름"
+
+#: enterlink/forms.py:51 enterlink/forms.py:71
+msgid "Last Name"
+msgstr "성"
+
+#: enterlink/forms.py:53
+msgid "Enter a username"
+msgstr "사용자 이름을 입력하십시오"
+
+#: enterlink/forms.py:54
+msgid "Please enter a username"
+msgstr "사용자 이름을 입력해주십시오."
+
+#: enterlink/forms.py:55
+msgid "Please enter a valid username"
+msgstr "유효한 사용자 이름을 입력해주십시오"
+
+#: enterlink/forms.py:61
+msgid "This email address already exists! Please use another one."
+msgstr "해당 이메일 주소는 이미 존재합니다! 다른 이메일 주소를 사용하십시오."
+
+#: enterlink/forms.py:73 enterlink/forms.py:83
+msgid "Email"
+msgstr "이메일"
+
+#: enterlink/forms.py:82
+msgid "How can we help?"
+msgstr "어떻게 도와 드릴까요?"
+
+#: enterlink/forms.py:84
+msgid "Full Name"
+msgstr "성명"
+
+#: enterlink/forms.py:85
+msgid "Subject"
+msgstr "제목"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Report Abuse"
+msgstr "악용 사례 신고"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Report Bug"
+msgstr "버그 보고하기"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Verify Account"
+msgstr "계정 확인하기"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Anonymous Tip"
+msgstr "익명 제보"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Investment Inquiries"
+msgstr "투자 문의"
+
+#: enterlink/forms.py:86 enterlink/forms.py:175 enterlink/models.py:89
+#: enterlink/models.py:134
+msgid "Other"
+msgstr "기타"
+
+#: enterlink/forms.py:97
+msgid "Search by Entering a Link"
+msgstr "링크를 입력하여 검색하기"
+
+#: enterlink/forms.py:126
+msgid ""
+"Describe the file briefly. A summary of the information found is best. Avoid "
+"simply repeating the page title."
+msgstr ""
+"정보를 간단히 설명하십시오. 수록된 정보의 요약이 가장 좋습니다. 페이지 제목"
+"을 단순히 반복하지 마십시오"
+
+#: enterlink/forms.py:148
+msgid "File type not allowed."
+msgstr "파일 형식이 허용되지 않습니다."
+
+#: enterlink/forms.py:153
+msgid "Please ."
+msgstr "꼭"
+
+#: enterlink/forms.py:154
+msgid "Enter a URL"
+msgstr "URL을 입력하십시오"
+
+#: enterlink/forms.py:156
+msgid ""
+"Describe the URL briefly. A summary of the information found is best. Avoid "
+"simply repeating the page title."
+msgstr ""
+"URL을 간단히 묘사하십시오. 수록된 정보의 요약이 가장 좋습니다. 페이지 제목을 "
+"단순히 반복하지 마십시오"
+
+#: enterlink/forms.py:165 templates/enterlink/edit_ajax_addinfobox.html:28
+msgid "Enter type (e.g. Occupation)"
+msgstr "유형 입력 (예 : 직업)"
+
+#: enterlink/forms.py:166 templates/enterlink/edit_ajax_addinfobox.html:28
+msgid "Enter value (e.g. CEO)"
+msgstr "중요도 입력 (예 : CEO)"
+
+#: enterlink/forms.py:170 enterlink/models.py:134
+msgid "Person"
+msgstr "사람"
+
+#: enterlink/forms.py:170 enterlink/models.py:134
+msgid "Place/Location"
+msgstr "장소/위치"
+
+#: enterlink/forms.py:171 enterlink/models.py:134
+msgid "Organization/Company/Institution"
+msgstr "업체/회사/기관"
+
+#: enterlink/forms.py:171 enterlink/models.py:134
+msgid "Event"
+msgstr "이벤트"
+
+#: enterlink/forms.py:172 enterlink/models.py:134
+msgid "List/Ranking"
+msgstr "목록/랭킹"
+
+#: enterlink/forms.py:172 enterlink/models.py:134
+msgid "Product/Merchandise"
+msgstr "상품/제품"
+
+#: enterlink/forms.py:173 enterlink/models.py:134
+msgid "Electronics/Software"
+msgstr "전자 제품/소프트웨어"
+
+#: enterlink/forms.py:173 enterlink/models.py:134
+msgid "Medical/Biology"
+msgstr "의학/생물학"
+
+#: enterlink/forms.py:174 enterlink/models.py:134
+msgid "Creative Work/Art"
+msgstr "창작/예술"
+
+#: enterlink/forms.py:175 enterlink/models.py:134
+msgid "Science/Academia/Humanities"
+msgstr "과학/학문/인문"
+
+#: enterlink/models.py:45 enterlink/models.py:49
+msgid "None"
+msgstr "없음"
+
+#: enterlink/models.py:45
+msgid "Featured"
+msgstr "추천"
+
+#: enterlink/models.py:45
+msgid "In the news"
+msgstr "기사거리"
+
+#: enterlink/models.py:46
+msgid "In the news (Editor's Pick)"
+msgstr "기사거리 (에디터 추천)"
+
+#: enterlink/models.py:46
+msgid "In the news (Standout Article)"
+msgstr "기사거리 (주목할 만한 기사)"
+
+#: enterlink/models.py:47
+msgid "Trending"
+msgstr "인기 급상승"
+
+#: enterlink/models.py:47
+msgid "On this day"
+msgstr "오늘날"
+
+#: enterlink/models.py:47
+msgid "Blog Post (Meta Article)"
+msgstr "블로그 포스트 (Meta 기사)"
+
+#: enterlink/models.py:49
+msgid "Verified Only"
+msgstr "유일하게 인증됨"
+
+#: enterlink/models.py:50
+msgid "Normal (Business)"
+msgstr "일반 (비즈니스)"
+
+#: enterlink/models.py:50
+msgid "Normal (Personal)"
+msgstr "일반 (개인)"
+
+#: enterlink/view_functions.py:144
+msgid ""
+"Your Everipedia editor restrictions have been removed. You can now edit "
+"pages freely!"
+msgstr ""
+"Everipedia 에디터 제한이 사라졌습니다. 이제 자유롭게 페이지를 편집할 수 있습"
+"니다!"
+
+#: enterlink/view_functions.py:607
+msgid "Images & Videos"
+msgstr "이미지 & 비디오"
+
+#: enterlink/view_functions.py:609
+msgid "References"
+msgstr "참조"
+
+#: enterlink/view_functions.py:612
+msgid "Article Discussion"
+msgstr "기사 토론"
+
+#: enterlink/view_functions.py:615 enterlink/view_functions.py:618
+#: templates/enterlink/template_blockchain_styled_amp.html:350
+#: templates/enterlink/template_blockchain_styled_desktop.html:526
+msgid "See Also"
+msgstr "추가 참조하기"
+
+#: enterlink/view_functions.py:617
+msgid "Top Editors"
+msgstr "상위 에디터"
+
+#: enterlink/view_functions.py:1625
+msgid "Wiki and references for"
+msgstr "다음에 대한Wiki 및 참조"
+
+#: enterlink/view_functions.py:1626
+msgid "You can edit something on this wiki now!"
+msgstr "이제 해당 wiki에서 무엇이든 편집 할 수 있습니다!"
+
+#: local_packages/block_ip/models.py:11
+msgid "IP address or mask"
+msgstr "IP 주소 또는 마스크"
+
+#: local_packages/block_ip/models.py:12
+msgid "Optional reason for block"
+msgstr "차단 선택 이유"
+
+#: local_packages/block_ip/models.py:25 local_packages/block_ip/models.py:26
+msgid "IPs & masks to ban"
+msgstr "차단할 IP & 마스크"
+
+#: templates/admin/base.html:28
+msgid "Welcome,"
+msgstr "환영합니다,"
+
+#: templates/admin/base.html:33
+msgid "Documentation"
+msgstr "기록"
+
+#: templates/admin/base.html:36
+msgid "Change password"
+msgstr "비밀번호 변경하기"
+
+#: templates/admin/base.html:38 templates/admin/password_change_done.html:57
+#: templates/admin/password_change_form.html:59
+#: templates/enterlink/headers/header_dropdown.html:22
+#: templates/enterlink/headers/header_dropdown.html:44
+#: templates/enterlink/headers/index_header.html:110
+#: templates/enterlink/headers/index_header.html:166
+#: templates/enterlink/headers/index_header.html:236
+#: templates/enterlink/headers/index_header.html:258
+#: templates/enterlink/notifications/index.html:100
+#: templates/enterlink/notifications/index.html:105
+msgid "Log out"
+msgstr "로그아웃"
+
+#: templates/admin/base.html:47 templates/admin/logged_out.html:4
+#: templates/admin/password_reset_complete.html:6
+#: templates/admin/password_reset_confirm.html:6
+#: templates/admin/password_reset_done.html:6
+#: templates/admin/password_reset_form.html:6
+#: templates/enterlink/notifications/index.html:61
+#: templates/enterlink/notifications/index.html:94
+msgid "Home"
+msgstr "홈"
+
+#: templates/admin/base_site.html:4
+msgid "Django site admin"
+msgstr "Django 사이트 관리자"
+
+#: templates/admin/base_site.html:7
+msgid "Django administration"
+msgstr "Django 관리"
+
+#: templates/admin/logged_out.html:8
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr "오늘 해당 웹 사이트에서 의미 있는 시간을 보내주셔서 감사합니다."
+
+#: templates/admin/logged_out.html:10
+msgid "Log in again"
+msgstr "다시 로그인하십시오."
+
+#: templates/admin/password_change_done.html:46
+#: templates/admin/password_change_form.html:48
+#: templates/enterlink/edit.html:145 templates/enterlink/search-iframe.html:122
+#: templates/enterlink/search.html:27 templates/enterlink/user.html:220
+msgid "Search Everipedia"
+msgstr " Everipedia 검색하기"
+
+#: templates/admin/password_change_done.html:60
+#: templates/admin/password_change_form.html:62
+#: templates/admin/password_reset_complete.html:19
+#: templates/enterlink/headers/index_header.html:135
+#: templates/enterlink/headers/index_header.html:168
+#: templates/enterlink/headers/index_header.html:240
+#: templates/enterlink/headers/index_header.html:262
+#: templates/enterlink/login.html:45
+msgid "Log in"
+msgstr "로그인"
+
+#: templates/admin/password_change_done.html:71
+msgid "Password change successful"
+msgstr "비밀번호가 성공적으로 변경되었습니다"
+
+#: templates/admin/password_reset_complete.html:7
+#: templates/admin/password_reset_confirm.html:11
+#: templates/admin/password_reset_done.html:7
+#: templates/admin/password_reset_form.html:7
+#: templates/admin/password_reset_form.html:11
+#: templates/admin/password_reset_form.html:15
+msgid "Password reset"
+msgstr "비밀번호 초기화"
+
+#: templates/admin/password_reset_complete.html:11
+#: templates/admin/password_reset_complete.html:15
+msgid "Password reset complete"
+msgstr "비밀번호 재설정 완료"
+
+#: templates/admin/password_reset_complete.html:17
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr "비밀번호가 설정되었습니다. 계속해서 로그인 할 수 있습니다."
+
+#: templates/admin/password_reset_confirm.html:7
+msgid "Password reset confirmation"
+msgstr "비밀번호 재설정 확인"
+
+#: templates/admin/password_reset_confirm.html:17
+msgid "Enter new password"
+msgstr "새로운 비밀번호 입력하기"
+
+#: templates/admin/password_reset_confirm.html:19
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr "새로운 비밀번호를 두 번 입력하여 올바르게 입력했는지 확인합니다."
+
+#: templates/admin/password_reset_confirm.html:23
+msgid "New password:"
+msgstr "새 비밀번호:"
+
+#: templates/admin/password_reset_confirm.html:25
+msgid "Confirm password:"
+msgstr "비밀번호 확인:"
+
+#: templates/admin/password_reset_confirm.html:26
+msgid "Change my password"
+msgstr "내 비밀번호 변경하기"
+
+#: templates/admin/password_reset_confirm.html:31
+msgid "Password reset unsuccessful"
+msgstr "비밀번호 재설정 실패"
+
+#: templates/admin/password_reset_confirm.html:33
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+"비밀번호 재설정 링크가 이미 사용되었으므로 유효하지 않습니다. 새로운 비밀번호"
+"재설정을 요청해주십시오."
+
+#: templates/admin/password_reset_done.html:11
+#: templates/admin/password_reset_done.html:15
+msgid "Password reset successful"
+msgstr "비밀번호 재설정 성공"
+
+#: templates/admin/password_reset_done.html:17
+msgid ""
+"We have emailed you instructions for setting your password. You should be "
+"receiving them shortly."
+msgstr "비밀번호 설정 방법을 이메일로 보내 드렸습니다. 곧 받으실 수 있습니다."
+
+#: templates/admin/password_reset_done.html:19
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+"이메일을 받지 못했다면 등록하신 주소를 입력했는지 확인하고스팸 폴더를 확인하"
+"십시오."
+
+#: templates/admin/password_reset_email.html:2
+msgid ""
+"You are receiving this email because you requested a password reset for your "
+"Everipedia account."
+msgstr ""
+"Everipedia 계정에 대한 비밀번호 재설정이 요청되었으므로해당 이메일로 받게됩니"
+"다."
+
+#: templates/admin/password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr "다음 페이지로 이동하여 새 비밀번호를 선택하십시오."
+
+#: templates/admin/password_reset_email.html:8
+msgid "Your username, in case you've forgotten:"
+msgstr "잊어 버린 경우를 대비한 사용자 이름 :"
+
+#: templates/admin/password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr "우리 사이트를 이용해 주셔서 감사합니다!"
+
+#: templates/admin/password_reset_form.html:17
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+"비밀번호를 잊으셨나요? 아래에 이메일 주소를 입력하시면 새로운 비밀번호를설정"
+"하는 방법에 대해 이메일로 보내 드리겠습니다."
+
+#: templates/admin/password_reset_form.html:21
+msgid "Email address:"
+msgstr "이메일 주소:"
+
+#: templates/admin/password_reset_form.html:21
+msgid "Reset my password"
+msgstr "내 비밀번호 재설정"
+
+#: templates/email/sanger_announcement.html:276
+#: templates/email/welcome_email.html:264
+#: templates/email/welcome_email_old.html:68
+#: templates/enterlink/welcome.html:33
+msgid "Learn More"
+msgstr "자세히 알아보기"
+
+#: templates/email/welcome_email.html:257
+msgid "View My Profile"
+msgstr "내 프로필 보기"
+
+#: templates/email/welcome_email_old.html:67
+#: templates/enterlink/welcome.html:28 templates/enterlink/welcome.html:30
+msgid "Create a Wiki"
+msgstr " Wiki생성하기"
+
+#: templates/endless/show_more.html:5
+msgid "more"
+msgstr "더보기"
+
+#: templates/enterlink/ajax_infobox_singlet.html:14
+#: templates/enterlink/ajax_infobox_singlet.html:42
+msgid "Add Row"
+msgstr "행 추가"
+
+#: templates/enterlink/ajax_infobox_singlet.html:17
+#: templates/enterlink/ajax_infobox_singlet.html:45
+msgid "Schema"
+msgstr "개요"
+
+#: templates/enterlink/ajax_infobox_singlet.html:21
+#: templates/enterlink/ajax_infobox_singlet.html:49
+msgid "Schema Type"
+msgstr "스키마 유"
+
+#: templates/enterlink/ajax_infobox_singlet.html:25
+#: templates/enterlink/ajax_infobox_singlet.html:53
+msgid "Subschema"
+msgstr "서브 스키마"
+
+#: templates/enterlink/ajax_link_singlet.html:25
+msgid "Social Media"
+msgstr "소셜 미디어"
+
+#: templates/enterlink/ajax_link_singlet.html:27
+msgid "Attributes"
+msgstr "속성"
+
+#: templates/enterlink/ajax_link_singlet.html:29
+#: templates/enterlink/ajax_media_gallery_singlet.html:33
+msgid "Timestamp"
+msgstr "타임 스탬프"
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:14
+#: templates/enterlink/ajax_media_gallery_singlet.html:19
+#: templates/enterlink/ajaxresults.html:104
+#: templates/enterlink/hoverlink_iframe_blockchain.html:97
+#: templates/enterlink/template_blockchain_styled_desktop.html:415
+#: templates/enterlink/template_blockchain_styled_desktop.html:438
+#: templates/enterlink/template_photos_amp_json_blockchain.html:79
+msgid "Your browser does not support HTML5 video."
+msgstr "브라우저가 HTML5 동영상을 지원하지 않습니다."
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:29
+msgid "Type"
+msgstr "유형"
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:31
+msgid "MIME Type"
+msgstr "MIME 유형"
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:37
+msgid "Original URL"
+msgstr "원본 URL"
+
+#: templates/enterlink/ajaxresults.html:57
+msgid "Click to add a new link or file to this list"
+msgstr "해당 목록에 새 링크 또는 파일을 추가하려면 클릭하십시오."
+
+#: templates/enterlink/ajaxresults.html:60
+msgid "Or click an existing link below to add it to the article"
+msgstr "또는 아래 기존 링크를 클릭하여 글에 추가하십시오."
+
+#: templates/enterlink/ajaxresults.html:135
+#: templates/enterlink/ajaxresults.html:192
+#: templates/enterlink/template_blockchain_styled_desktop.html:167
+msgid "Views"
+msgstr "조회수"
+
+#: templates/enterlink/ajaxresults.html:157
+#: templates/enterlink/hovereditor_ajax.html:74
+msgid "IQ"
+msgstr " IQ"
+
+#: templates/enterlink/ajaxresults.html:175
+msgid "page(s) have this link"
+msgstr "페이지에 해당 링크가 있습니다."
+
+#: templates/enterlink/analytics.html:7 templates/enterlink/faq.html:6
+msgid "Frequently Asked Questions - Everipedia, everyone's encyclopedia"
+msgstr "자주 묻는 질문 - Everipedia, 모든 이의 백과 사전"
+
+#: templates/enterlink/brainpowermgmt.html:4
+#: templates/enterlink/brainpowermgmt.html:114
+msgid "Brainpower Management"
+msgstr " Brainpower 관리"
+
+#: templates/enterlink/brainpowermgmt.html:4 templates/enterlink/contact.html:7
+#: templates/enterlink/edit.html:7 templates/enterlink/editing-disabled.html:7
+#: templates/enterlink/editors.html:23
+#: templates/enterlink/exchange-listings.html:7
+#: templates/enterlink/headers/index_header.html:17
+#: templates/enterlink/headers/index_header.html:18
+#: templates/enterlink/inbox.html:12 templates/enterlink/index.html:7
+#: templates/enterlink/leadership.html:7
+#: templates/enterlink/limitreached.html:7 templates/enterlink/login.html:7
+#: templates/enterlink/recent-activity.html:7
+#: templates/enterlink/register.html:6 templates/enterlink/rewardsmgmt.html:4
+#: templates/enterlink/search.html:7 templates/enterlink/transfer-iq.html:5
+#: templates/enterlink/user.html:12 templates/enterlink/votehistory.html:7
+msgid "Everipedia, the encyclopedia of everything"
+msgstr " Everipedia, 모든 것의 백과 사전"
+
+#: templates/enterlink/brainpowermgmt.html:101 templates/enterlink/edit.html:89
+#: templates/enterlink/rewardsmgmt.html:119
+#: templates/enterlink/transfer-iq.html:106 templates/enterlink/voting.html:180
+msgid "Loading Scatter"
+msgstr "스캐터 로딩 중 "
+
+#: templates/enterlink/brainpowermgmt.html:117
+msgid ""
+"Staking IQ tokens will freeze them for 21 days and will generate "
+"nontransferable Brainpower, which can be used for editing and voting on the "
+"Everipedia network. At the end of the 21 days, you can claim back your IQ "
+"tokens and re-stake them for more Brainpower again. Thus, 1 IQ, staked every "
+"21 days, can lead to 365 days / 21 days = 17.38 Brainpower every year."
+msgstr ""
+"Staking IQ 토큰은 21 일 동안 고정되어 Everipedia네트워크에서 편집 및 투표에사"
+"용할 수 있는 양도가 불가능한 Brainpower를 생성합니다. 21 일이 끝나면 IQ 토큰"
+"을다시 청구하고 더 많은 Brainpower를 위해 다시 지분을 가질 수 있습니다. 따라"
+"서1 IQ는 21 일마다 지분되어 365 일 / 21 일 = 17.38 Brainpower로이어질 수 있습"
+"니다."
+
+#: templates/enterlink/brainpowermgmt.html:118
+msgid ""
+"As you make pages, propose edits, and vote on article proposals, you will "
+"consume Brainpower. However, making successful edits and voting on the "
+"winning side of a proposal will generate rewards in IQ, not Brainpower. "
+"Therefore, you can generate more Brainpower (and any profit) by staking the "
+"new IQ you just earned."
+msgstr ""
+"페이지를 만들어 편집을 제안하고 기사 제안에 투표하면 Brainpower를소비하게됩니"
+"다. 그러나 성공적인 편집 및 제안의 승리면에서 투표는 Brainpower가 아니라 IQ에"
+"서 보상을 생성합니다. 따라서 방금 얻은 새로운 IQ를 발휘하여 더 많은 "
+"Brainpower (및 모든 이익)를 창출 할 수 있습니다."
+
+#: templates/enterlink/brainpowermgmt.html:119
+msgid ""
+"Every edit proposal requires a minimum of 10 Brainpower at this time, in "
+"order to prevent spam and poor-quality edits."
+msgstr ""
+"스팸 및 편집 품질 저하를 방지하기 위해 모든 편집 제안서에는 이때에최소 10 "
+"Brainpower이 필요합니다."
+
+#: templates/enterlink/brainpowermgmt.html:122
+msgid "Enter an integer amount of IQ to stake"
+msgstr "지분에 IQ의 정수를 입력하십시오."
+
+#: templates/enterlink/brainpowermgmt.html:123
+msgid "New Stake"
+msgstr "새로운 지분"
+
+#: templates/enterlink/brainpowermgmt.html:128
+msgid "Start"
+msgstr "시작"
+
+#: templates/enterlink/brainpowermgmt.html:129
+msgid "End"
+msgstr "마지막"
+
+#: templates/enterlink/brainpowermgmt.html:130
+#: templates/enterlink/voting_table_of_contents.html:40
+msgid "Time Remaining"
+msgstr "남은 시간"
+
+#: templates/enterlink/brainpowermgmt.html:131
+#: templates/enterlink/transfer-iq.html:127
+msgid "Amount"
+msgstr "금액"
+
+#: templates/enterlink/brainpowermgmt.html:132
+msgid "Claim"
+msgstr "승인 요청"
+
+#: templates/enterlink/contact.html:7 templates/enterlink/contact.html:24
+msgid "Contact us"
+msgstr "문의하기"
+
+#: templates/enterlink/contact.html:20
+msgid "To get quicker replies from our community"
+msgstr "커뮤니티의 답변을 더 빨리 얻으려면"
+
+#: templates/enterlink/contact.html:20
+msgid "create a post in our forum"
+msgstr "포럼에 게시물을 작성하십시오."
+
+#: templates/enterlink/contact.html:25
+msgid "Get in touch with us"
+msgstr "연락하기"
+
+#: templates/enterlink/contact.html:33
+msgid "Thanks, we got your message. We will respond in a bit"
+msgstr "감사합니다, 귀하의 메시지를 받았습니다. 잠시 뒤에 답변을 드리겠습니다"
+
+#: templates/enterlink/contact.html:41 templates/enterlink/transfer-iq.html:131
+msgid "Send"
+msgstr "보내다"
+
+#: templates/enterlink/dropzone.html:140 templates/enterlink/edit.html:167
+#: templates/enterlink/edit.html:176 templates/enterlink/edit.html:185
+#: templates/enterlink/edit.html:195 templates/enterlink/edit.html:204
+msgid "OK"
+msgstr "확인"
+
+#: templates/enterlink/dropzone.html:141
+msgid "Enter a caption for the main image of the page."
+msgstr "페이지의 주요 이미지 캡션을 입력하십시오."
+
+#: templates/enterlink/edit.html:7
+msgid "Edit Page"
+msgstr "페이지 편집하기"
+
+#: templates/enterlink/edit.html:85
+msgid "Loading.."
+msgstr "로딩 중..."
+
+#: templates/enterlink/edit.html:128
+msgid "Change Picture"
+msgstr "사진 바꾸기"
+
+#: templates/enterlink/edit.html:144
+msgid "Please enter the destination page you wish to merge this one into"
+msgstr "해당 페이지를 병합할 대상 페이지를 입력하십시오."
+
+#: templates/enterlink/edit.html:149
+msgid "Merge Page"
+msgstr "페이지 병합하기"
+
+#: templates/enterlink/edit.html:156 templates/enterlink/edit.html:165
+#: templates/enterlink/edit.html:174 templates/enterlink/edit.html:183
+#: templates/enterlink/edit.html:192 templates/enterlink/edit.html:202
+msgid "Hey there scholar!"
+msgstr "저기 학자 님!"
+
+#: templates/enterlink/edit.html:157
+msgid ""
+"Looks like you have been editing for a while. You should take a moment to "
+"save your work before continuing!"
+msgstr ""
+"한동안 편집 한 것처럼 보입니다. 계속하기에 앞서 작업을 저장하는데잠시 시간을 "
+"가져야 합니다!"
+
+#: templates/enterlink/edit.html:158
+msgid "Save"
+msgstr "저장하기"
+
+#: templates/enterlink/edit.html:166
+msgid ""
+"Looks like you are using first-person! (ex: Our product, I am, We are, You "
+"should). Everipedia is a neutral encyclopedia written in third-person tense "
+"(ex: It is, They are, The company makes). THIS IS NOT FACEBOOK!!"
+msgstr ""
+"1인칭으로 사용하는 것 같습니다! (예 : 우리 제품, 나는, 우리는, 귀하는해야 합"
+"니다). Everipedia는 3 인칭 시제로 작성되는 중립의 백과 사전입니다(예 : 그것"
+"은, 그들은, 해당 회사는 다음과 같이 만들어 냅니다). 이것은 페이스북이 아닙니"
+"다 !!"
+
+#: templates/enterlink/edit.html:175
+msgid "Please enter a title for the page."
+msgstr "해당 페이지의 제목을 입력하십시오."
+
+#: templates/enterlink/edit.html:184
+msgid ""
+"Please write something for the article section. Make sure to use citations."
+msgstr "글 섹션에 무언가를 적어주십시오. 참고 문헌을 사용하십시오."
+
+#: templates/enterlink/edit.html:193
+msgid ""
+"Hello! This page needs citations (also known as footnotes, references, "
+"sources) before it can be saved. Add the links you're using as sources with "
+"the cite button above."
+msgstr ""
+"안녕하세요! 해당 페이지는 저장되기 전에 인용문 (각주, 참조 자료, 출저라고도 "
+"함)이필요합니다. 위의 인용 버튼을 사용하여 출처로 사용할 링크를 추가하십시오."
+
+#: templates/enterlink/edit.html:194
+msgid "Join our official Facebook group if you need help with it!:"
+msgstr "도움이 필요하면 공식 페이스북 그룹에 가입하십시오!:"
+
+#: templates/enterlink/edit.html:194
+msgid "- we will hook you up. It's not hard!"
+msgstr "- 귀하와 연결시켜 줍니다. 어렵지 않습니다!"
+
+#: templates/enterlink/edit.html:203
+msgid ""
+"Please cite the link(s) you just added into the main article body. First "
+"click at the end of the sentence or paragraph you want to cite, then click "
+"the (Cite) button on the edit panel above!"
+msgstr ""
+"주요 기사 본문에 방금 추가한 링크를 인용하십시오. 먼저 인용하고 싶은 문장이나"
+"단락의 마지막 부분을 클릭 한 다음위의 편집 패널에서 (인용) 버튼을 클릭하십시"
+"오! "
+
+#: templates/enterlink/edit_ajax_addinfobox.html:10
+msgid "Add New Infobox Item"
+msgstr "새로운 정보 상자 항목 추가하기"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:14
+msgid "Enter a classification or category"
+msgstr "분류 또는 카테고리 입력하기"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:17
+msgid "Enter a value or a description"
+msgstr "값 또는 설명 입력하기"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:23
+msgid "Add Infobox Item"
+msgstr "정보 상자 항목 추가하기"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:25
+#: templates/enterlink/edit_ajax_addlink.html:26
+#: templates/enterlink/edit_ajax_editpagemeta.html:15
+#: templates/enterlink/edit_ajax_page_photo.html:4
+msgid "Close"
+msgstr "닫기"
+
+#: templates/enterlink/edit_ajax_addlink.html:7
+msgid "Add a Link or File"
+msgstr "링크 또는 파일 추가하기"
+
+#: templates/enterlink/edit_ajax_addlink.html:9
+msgid "File"
+msgstr "파일"
+
+#: templates/enterlink/edit_ajax_addlink.html:10
+msgid "URL"
+msgstr "URL"
+
+#: templates/enterlink/edit_ajax_addlink.html:10
+msgid "Link"
+msgstr "링크"
+
+#: templates/enterlink/edit_ajax_addlink.html:14
+msgid "Upload file"
+msgstr "파일 업로드하기"
+
+#: templates/enterlink/edit_ajax_addlink.html:24
+msgid "Add Link"
+msgstr "링크 추가하기"
+
+#: templates/enterlink/edit_ajax_editmainphoto.html:7
+msgid "Reset"
+msgstr "재설정"
+
+#: templates/enterlink/edit_ajax_editpagemeta.html:4
+msgid "Select the topic of this page"
+msgstr "해당 페이지의 주제 선택하기"
+
+#: templates/enterlink/edit_ajax_editpagemeta.html:8
+msgid "Remove page"
+msgstr "페이지 삭제하기"
+
+#: templates/enterlink/editing-disabled.html:7
+msgid "Editing existing pages temporarily disabled"
+msgstr "기존 페이지를 임시로 편집할 수 없습니다."
+
+#: templates/enterlink/editors.html:23
+msgid "Editors"
+msgstr "에디터"
+
+#: templates/enterlink/editors.html:74
+msgid "Everipedia Editors"
+msgstr " Everipedia에디터"
+
+#: templates/enterlink/editors.html:93 templates/enterlink/inbox.html:52
+#: templates/enterlink/recent-activity.html:103
+#: templates/enterlink/search.html:89
+msgid "Previous"
+msgstr "이전"
+
+#: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
+#: templates/enterlink/recent-activity.html:107
+#: templates/enterlink/search.html:93
+msgid "Page"
+msgstr "페이지"
+
+#: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
+#: templates/enterlink/recent-activity.html:107
+#: templates/enterlink/search.html:93
+msgid "of"
+msgstr "다음 중"
+
+#: templates/enterlink/editors.html:101 templates/enterlink/inbox.html:60
+#: templates/enterlink/recent-activity.html:111
+#: templates/enterlink/search.html:97
+msgid "Next"
+msgstr "다음"
+
+#: templates/enterlink/error.html:6
+msgid "Page not found!"
+msgstr "페이지를 찾을 수 없습니다!"
+
+#: templates/enterlink/error.html:211
+msgid "Page not found"
+msgstr "페이지를 찾을 수 없습니다"
+
+#: templates/enterlink/error.html:213
+msgid "In The News"
+msgstr "기사 거리"
+
+#: templates/enterlink/error.html:214
+#: templates/enterlink/headers/header_dropdown.html:37
+#: templates/enterlink/recent-activity.html:7
+#: templates/enterlink/recent-activity.html:73
+#: templates/enterlink/user.html:192
+msgid "Recent Activity"
+msgstr "최근 활동"
+
+#: templates/enterlink/error_410.html:6 templates/enterlink/error_410.html:62
+msgid "This page has been removed"
+msgstr "해당 페이지는 삭제되었습니다."
+
+#: templates/enterlink/error_410.html:63
+#: templates/enterlink/in_progress_404.html:86
+msgid "Click here to return to recent activity"
+msgstr "최근 활동으로 돌아가려면 여기를 클릭하십시오."
+
+#: templates/enterlink/exchange-listings.html:7
+msgid "Exchange Listings"
+msgstr "거래소 리스팅"
+
+#: templates/enterlink/exchange-listings.html:17
+msgid "Supported Exchanges"
+msgstr "지원된 거래소"
+
+#: templates/enterlink/exchange-listings.html:18
+msgid "The following exchanges indicated that they will support the IQ airdrop"
+msgstr "다음의 거래소는 IQ 에어드롭을 지원할 것이라고 나타냈습니다."
+
+#: templates/enterlink/exchange-listings.html:142
+msgid "Supported Wallets"
+msgstr "지원되는 지갑"
+
+#: templates/enterlink/exchange-listings.html:176
+msgid "Token Pockets"
+msgstr "토큰 포켓"
+
+#: templates/enterlink/faq.html:20
+msgid "Frequently Asked Questions"
+msgstr "자주 묻는 질문"
+
+#: templates/enterlink/faq.html:24
+msgid "What is Everipedia?"
+msgstr "Everipedia 란 무엇인가요?"
+
+#: templates/enterlink/faq.html:25
+msgid ""
+"Everipedia is a knowledge aggregator and knowledge base. We think it's much "
+"easier to edit than Wikipedia. Anyone can create a page about any person, "
+"place, organization, or thing and populate it with relevant reference links/"
+"sources. The only main rules of EP are: Information on the page must always "
+"be cited and the article must be in a neutral point of view. Check out the "
+"actual entry for Everipedia... on"
+msgstr ""
+"Everipedia는 정보 제공 웹사이트 및 기술 자료입니다. Wikipedia보다 편집하기가"
+"훨씬 쉽습니다. 사람, 장소, 조직 또는 사물에 대한 페이지를 만들고관련된 참조 "
+"조 링크/출처를 만들 수 있습니다. EP의 주요 규칙은 다음과 같습니다:페이지의 정"
+"보는 항상 인용되어야 하며 기사는 반드시 중립적인 관점에 있어야합니다. "
+"Everipedia ...에 입력이 실제로 있는지 확인하십시오"
+
+#: templates/enterlink/faq.html:27
+msgid "Why should I sign up?"
+msgstr "왜 가입해야 하나요?"
+
+#: templates/enterlink/faq.html:28
+msgid ""
+"Because it’s fun and easy! We thought contributing to large knowledge "
+"projects shouldn't require high barriers to entry so we made Everipedia very "
+"easy to navigate, edit, and get started. Editors gain more privileges as "
+"they accumulate IQ and rise through the ranks. Top site-wide editors are "
+"displayed on the front page. Top editors for each page are also displayed."
+msgstr ""
+"재미 있고 쉽기 때문입니다! 대규모 정보 프로젝트에 참여하는 것은 진입 장벽이높"
+"지 않아야 하므로 Everipedia를 탐색, 편집 및 시작하기가 매우 쉬워졌습니다.에디"
+"터는 IQ를 쌓게 되며 등급이 올라갈수록 더 많은 특권을 누릴 수 있습니다. 상위 "
+"사이트 범위의 편집자가 첫 페이지에 표시됩니다.각 페이지의 최상위 에디터도 표"
+"시됩니다."
+
+#: templates/enterlink/faq.html:30
+msgid "Try it!"
+msgstr "시도해보십시오!"
+
+#: templates/enterlink/faq.html:30
+msgid "Sign up here"
+msgstr "여기에 가입하십시오."
+
+#: templates/enterlink/faq.html:32
+msgid "So how is Everipedia different from Wikipedia and similar sites?"
+msgstr "Everipedia와 Wikipedia 및 이와 유사한 사이트는 어떻게 다른가요?"
+
+#: templates/enterlink/faq.html:33
+msgid ""
+"Editing on Everipedia is graphic and modern, talk pages are designed as "
+"discussion threads, celebrities have verified accounts, and anyone can make "
+"pages about anything as long as they are properly cited. Every page from "
+"Wikipedia is already here on Everipedia to build on top of and improve. All "
+"this makes EP the biggest knowledge project ever!"
+msgstr ""
+"Everipedia에서의 편집은 그래픽적이고 현대적이며 토크 페이지는 토의 스레드로설"
+"계되고 유명 인사는 계정을 확인하며 누구나 적절하게 인용되는 무엇이든 페이지"
+"를 만들 수 있습니다. 상위권 구축 및 향상을 위해서Wikipedia의 모든 페이지는 "
+"Everipedia에 이미 올라와 있습니다. 이 모든 것이 EP를 가장 큰 지식 프로젝트로 "
+"만들어줍니다!"
+
+#: templates/enterlink/faq.html:35
+msgid "Is Everipedia free?"
+msgstr "Everipedia는 무료인가요?"
+
+#: templates/enterlink/faq.html:36
+msgid ""
+"All information found on Everipedia is freely available for anyone to use "
+"and access. All we ask is a link back to the source Everipedia page for "
+"attribution purposes. The information on this encyclopedia is meant to be "
+"free to all. We will never charge for or withhold any of the information on "
+"this website. We just ask that you do not throttle the site and "
+"programmatically harvest information that would dramatically affect our "
+"servers."
+msgstr ""
+"Everipedia에있는 모든 정보는 누구나 자유롭게 사용하고액세스 할 수 있습니다. "
+"우리가 요구하는 것은 속성 목적을 위해 소스 Everipedia 페이지로되돌아가는 링크"
+"입니다. 해당 백과 사전에 대한 정보는 모두에게 무료로 제공됩니다.우리는 결코 "
+"해당 웹 사이트의 정보에 대한 요금을 청구하거나 비공개 하지 않을 것입니다. 우"
+"리는 귀하가 사이트를 통제하지 않도록 요청하며 서버에 심각한 영향을 줄 정보를"
+"프로그래밍 방식으로 수집하지 않도록 요청합니다."
+
+#: templates/enterlink/faq.html:42
+msgid "Much love,"
+msgstr "많은 애정,"
+
+#: templates/enterlink/footers/desktop_footer.html:5
+#: templates/enterlink/footers/footer_no_extras.html:5
+#: templates/enterlink/footers/index_footer.html:23
+#: templates/enterlink/footers/mobile_footer.html:130
+#: templates/enterlink/template_blockchain_styled_amp.html:548
+msgid "About"
+msgstr "에브리피디아"
+
+#: templates/enterlink/footers/desktop_footer.html:6
+#: templates/enterlink/footers/footer_no_extras.html:6
+#: templates/enterlink/footers/index_footer.html:7
+#: templates/enterlink/footers/index_footer.html:25
+#: templates/enterlink/footers/mobile_footer.html:131
+#: templates/enterlink/template_blockchain_styled_amp.html:549
+msgid "FAQ"
+msgstr "자주 묻는 질문"
+
+#: templates/enterlink/footers/desktop_footer.html:7
+#: templates/enterlink/footers/footer_no_extras.html:7
+#: templates/enterlink/footers/index_footer.html:8
+#: templates/enterlink/footers/index_footer.html:26
+#: templates/enterlink/footers/mobile_footer.html:132
+#: templates/enterlink/template_blockchain_styled_amp.html:550
+msgid "Contact"
+msgstr "문의하기"
+
+#: templates/enterlink/footers/desktop_footer.html:8
+#: templates/enterlink/footers/footer_no_extras.html:9
+#: templates/enterlink/footers/index_footer.html:9
+#: templates/enterlink/footers/index_footer.html:27
+#: templates/enterlink/footers/mobile_footer.html:136
+#: templates/enterlink/template_blockchain_styled_amp.html:552
+msgid "Terms"
+msgstr "이용약관"
+
+#: templates/enterlink/footers/desktop_footer.html:9
+#: templates/enterlink/footers/footer_no_extras.html:10
+#: templates/enterlink/footers/index_footer.html:10
+#: templates/enterlink/footers/index_footer.html:28
+#: templates/enterlink/footers/mobile_footer.html:134
+#: templates/enterlink/headers/header_dropdown.html:17
+#: templates/enterlink/headers/header_dropdown.html:38
+#: templates/enterlink/headers/index_header.html:164
+#: templates/enterlink/headers/index_header.html:173
+#: templates/enterlink/headers/index_header.html:233
+#: templates/enterlink/headers/index_header.html:242
+#: templates/enterlink/headers/index_header.html:264
+#: templates/enterlink/headers/mobile-navbar.html:131
+#: templates/enterlink/headers/mobile-navbar.html:198
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:190
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:238
+#: templates/enterlink/template_blockchain_styled_amp.html:551
+#: templates/enterlink/template_blockchain_styled_amp.html:629
+#: templates/enterlink/template_blockchain_styled_amp.html:687
+msgid "Forum"
+msgstr "포럼"
+
+#: templates/enterlink/footers/desktop_footer.html:10
+#: templates/enterlink/footers/footer_no_extras.html:11
+#: templates/enterlink/footers/index_footer.html:11
+#: templates/enterlink/footers/index_footer.html:29
+#: templates/enterlink/footers/mobile_footer.html:137
+#: templates/enterlink/headers/header_dropdown.html:18
+#: templates/enterlink/headers/header_dropdown.html:40
+#: templates/enterlink/template_blockchain_styled_amp.html:553
+msgid "Get IQ"
+msgstr "IQ 받기"
+
+#: templates/enterlink/footers/desktop_footer.html:30
+#: templates/enterlink/footers/footer_no_extras.html:31
+#: templates/enterlink/footers/mobile_footer.html:157
+#: templates/enterlink/template_blockchain_styled_amp.html:577
+msgid "Powered by"
+msgstr "다음으로 작동"
+
+#: templates/enterlink/footers/desktop_footer.html:35
+#: templates/enterlink/footers/footer_no_extras.html:36
+#: templates/enterlink/footers/mobile_footer.html:161
+#: templates/enterlink/template_blockchain_styled_amp.html:581
+msgid "API by"
+msgstr "API"
+
+#: templates/enterlink/footers/desktop_footer.html:43
+#: templates/enterlink/footers/footer_no_extras.html:44
+#: templates/enterlink/headers/desktop-navbar-index.html:6
+#: templates/enterlink/headers/index_header.html:93
+#: templates/enterlink/language_selector.html:80
+msgid "Select language"
+msgstr "언어 선택"
+
+#: templates/enterlink/footers/forum_footer.html:6
+#: templates/enterlink/footers/pm_footer.html:6
+msgid "Enter a title for the thread"
+msgstr "스레드용 제목 입력하기"
+
+#: templates/enterlink/footers/forum_footer.html:7
+msgid "Enter your post here"
+msgstr "여기에 귀하의 포스트를 입력하십시오"
+
+#: templates/enterlink/footers/forum_footer.html:8
+#: templates/enterlink/footers/pm_footer.html:7
+msgid "Create New Thread"
+msgstr "새 스레드 만들기"
+
+#: templates/enterlink/footers/index_footer.html:5
+msgid "About Everipedia"
+msgstr " Everipedia소개"
+
+#: templates/enterlink/footers/index_footer.html:6
+#: templates/enterlink/footers/index_footer.html:24
+msgid "How To Use"
+msgstr "사용 방법"
+
+#: templates/enterlink/footers/index_footer.html:12
+#: templates/enterlink/footers/index_footer.html:30
+#: templates/enterlink/footers/mobile_footer.html:133
+msgid "Donate"
+msgstr "기부하기"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:559
+msgid "By using this website, you agree to the"
+msgstr "해당 웹 사이트를 사용함으로써 귀하는 다음을 동의합니다"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:559
+msgid "Terms of Use"
+msgstr "이용 약관"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:559
+msgid "Everipedia® is a trademark of Everipedia International"
+msgstr "Everipedia®는 Everipedia 인터내셔널 상표입니다."
+
+#: templates/enterlink/footers/mobile_footer.html:135
+#: templates/enterlink/headers/index_header.html:165
+#: templates/enterlink/headers/index_header.html:174
+#: templates/enterlink/headers/index_header.html:234
+#: templates/enterlink/headers/index_header.html:243
+#: templates/enterlink/headers/index_header.html:265
+#: templates/enterlink/headers/mobile-navbar.html:138
+#: templates/enterlink/headers/mobile-navbar.html:204
+#: templates/enterlink/template_blockchain_styled_amp.html:694
+msgid "Chat"
+msgstr "채팅"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:29
+#: templates/enterlink/headers/desktop-navbar.html:39
+#: templates/enterlink/headers/index_header.html:156
+#: templates/enterlink/howto.html:61 templates/enterlink/search.html:7
+msgid "Search"
+msgstr "검색"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:42
+#: templates/enterlink/headers/desktop-navbar-index.html:50
+#: templates/enterlink/headers/desktop-navbar-index.html:60
+#: templates/enterlink/headers/desktop-navbar.html:20
+#: templates/enterlink/headers/desktop-navbar.html:57
+#: templates/enterlink/headers/desktop-navbar.html:67
+#: templates/enterlink/headers/header_dropdown.html:14
+#: templates/enterlink/headers/header_dropdown.html:36
+#: templates/enterlink/headers/index_header.html:231
+#: templates/enterlink/headers/mobile-navbar.html:145
+#: templates/enterlink/headers/mobile-navbar.html:186
+#: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
+#: templates/enterlink/howto.html:74 templates/enterlink/index.html:64
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:51
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:91
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:196
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:232
+#: templates/enterlink/template_blockchain_styled_amp.html:615
+#: templates/enterlink/template_blockchain_styled_amp.html:701
+#: templates/enterlink/user.html:64
+msgid "Create Page"
+msgstr "페이지 만들기"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:49
+#: templates/enterlink/headers/desktop-navbar.html:19
+#: templates/enterlink/howto.html:73 templates/enterlink/index.html:63
+msgid "Paste a link or enter a title"
+msgstr "링크 붙여넣기 또는 제목 입력하기"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:66
+#: templates/enterlink/headers/desktop-navbar.html:73
+#: templates/enterlink/headers/header_dropdown.html:16
+#: templates/enterlink/headers/header_dropdown.html:35
+#: templates/enterlink/headers/index_header.html:162
+#: templates/enterlink/headers/index_header.html:201
+#: templates/enterlink/headers/index_header.html:232
+#: templates/enterlink/headers/mobile-navbar.html:124
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:45
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:184
+#: templates/enterlink/notifications/index.html:67
+#: templates/enterlink/notifications/index.html:97
+#: templates/enterlink/template_blockchain_styled_amp.html:680
+msgid "Messages"
+msgstr "메시지"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:72
+#: templates/enterlink/headers/desktop-navbar.html:79
+#: templates/enterlink/headers/header_dropdown.html:15
+#: templates/enterlink/headers/header_dropdown.html:34
+#: templates/enterlink/headers/index_header.html:206
+#: templates/enterlink/headers/index_header.html:230
+#: templates/enterlink/headers/mobile-navbar.html:117
+#: templates/enterlink/inbox.html:12
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:39
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:178
+#: templates/enterlink/notifications/index.html:96
+#: templates/enterlink/template_blockchain_styled_amp.html:673
+msgid "Notifications"
+msgstr "알림"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:84
+#: templates/enterlink/headers/desktop-navbar.html:96
+#: templates/enterlink/headers/index_header.html:217
+msgid "Your IQ Score"
+msgstr "귀하의 IQ 점수"
+
+#: templates/enterlink/headers/desktop-navbar.html:29
+msgid "Table of contents"
+msgstr "목차"
+
+#: templates/enterlink/headers/desktop-navbar.html:29
+#: templates/enterlink/template_blockchain_styled_amp.html:105
+msgid "Table of contents and facts for this wiki"
+msgstr "해당 위키의 목차와 사실에 대한 테이블"
+
+#: templates/enterlink/headers/desktop-navbar.html:62
+#: templates/enterlink/headers/mobile-navbar.html:159
+#: templates/enterlink/headers/mobile-navbar.html:210
+#: templates/enterlink/template_blockchain_styled_amp.html:635
+#: templates/enterlink/template_blockchain_styled_amp.html:715
+msgid "Feed"
+msgstr "피드"
+
+#: templates/enterlink/headers/desktop-navbar.html:87
+msgid "Please log in with Scatter"
+msgstr "Scatter로 로그인하십시오."
+
+#: templates/enterlink/headers/header_dropdown.html:8
+#: templates/enterlink/headers/header_dropdown.html:28
+msgid "Claim Rewards"
+msgstr ""
+
+#: templates/enterlink/headers/header_dropdown.html:39
+#: templates/enterlink/headers/mobile-navbar.html:153
+#: templates/enterlink/headers/mobile-navbar.html:192
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:68
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:101
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:208
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:250
+#: templates/enterlink/template_blockchain_styled_amp.html:622
+#: templates/enterlink/template_blockchain_styled_amp.html:708
+#: templates/enterlink/user.html:126
+msgid "Help"
+msgstr "도움말"
+
+#: templates/enterlink/headers/index_header.html:109
+msgid "View Profile"
+msgstr "프로필 보기"
+
+#: templates/enterlink/headers/index_header.html:128
+msgid "Sign In"
+msgstr "로그인"
+
+#: templates/enterlink/headers/index_header.html:128
+#: templates/enterlink/headers/index_header.html:172
+#: templates/enterlink/headers/index_header.html:241
+#: templates/enterlink/headers/index_header.html:263
+#: templates/enterlink/index.html:47
+msgid "Register"
+msgstr "가입"
+
+#: templates/enterlink/headers/index_header.html:132
+#: templates/enterlink/login.html:36
+msgid "Username"
+msgstr "사용자 이름"
+
+#: templates/enterlink/headers/index_header.html:139
+msgid "Need an account? Register here."
+msgstr "계정이 필요하십니까? 여기서 가입하십시오."
+
+#: templates/enterlink/headers/index_header.html:140
+#: templates/enterlink/headers/index_header.html:171
+#: templates/enterlink/login.html:41
+msgid "Forgot your password?"
+msgstr "비밀번호를 잊어버리셨나요?"
+
+#: templates/enterlink/headers/index_header.html:163
+#: templates/enterlink/inbox.html:23
+msgid "Your Notifications"
+msgstr "알림"
+
+#: templates/enterlink/headers/index_header.html:222
+msgid "Get an account"
+msgstr "계정 가져오기"
+
+#: templates/enterlink/headers/index_header.html:222
+msgid "or Log in"
+msgstr "또는 로그인하기"
+
+#: templates/enterlink/headers/index_header.html:235
+#: templates/enterlink/headers/index_header.html:244
+#: templates/enterlink/headers/index_header.html:257
+#: templates/enterlink/headers/index_header.html:266
+#: templates/enterlink/headers/mobile-navbar.html:165
+#: templates/enterlink/headers/mobile-navbar.html:216
+#: templates/enterlink/template_blockchain_styled_amp.html:641
+msgid "Language"
+msgstr "언어"
+
+#: templates/enterlink/headers/mobile-navbar.html:178
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:224
+#: templates/enterlink/template_blockchain_styled_amp.html:606
+msgid "Register / Log in"
+msgstr "가입/로그인"
+
+#: templates/enterlink/hoverblurb_ajax_blockchain.html:65
+msgid "Go to article"
+msgstr "기사로 이동"
+
+#: templates/enterlink/hovereditor_ajax.html:67
+msgid "Self citation by"
+msgstr "다음으로 자기 인용"
+
+#: templates/enterlink/hovereditor_ajax.html:72
+msgid "Title"
+msgstr "제목"
+
+#: templates/enterlink/hovereditor_ajax.html:75
+msgid "Rank"
+msgstr "순위"
+
+#: templates/enterlink/hovereditor_ajax.html:76
+msgid "User since"
+msgstr "사용자: 이후"
+
+#: templates/enterlink/hovereditor_ajax.html:77
+msgid "Last login"
+msgstr "최근 로그인"
+
+#: templates/enterlink/hovereditor_ajax.html:80
+msgid "Go to Editor's Profile"
+msgstr "에디터 프로필로 이동하기"
+
+#: templates/enterlink/hoverlink_ajax_blockchain.html:64
+msgid "Discuss Citation"
+msgstr "인용문 논의"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:53
+msgid "Download"
+msgstr "다운로드"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:55
+msgid "Direct Link"
+msgstr "다이렉트 링크"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:64
+#: templates/enterlink/hoverlink_iframe_blockchain.html:65
+#: templates/enterlink/template_blockchain_styled_desktop.html:195
+#: templates/enterlink/template_blockchain_styled_desktop.html:196
+msgid "Share"
+msgstr "공유"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:68
+#: templates/enterlink/template_blockchain_styled_desktop.html:202
+msgid "Copy URL"
+msgstr "URL 복사"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:118
+msgid "Play / Pause"
+msgstr "재생 / 일시정지"
+
+#: templates/enterlink/howto.html:8 templates/enterlink/howto.html:30
+msgid "How to use Everipedia"
+msgstr "Everipedia 사용 방법"
+
+#: templates/enterlink/howto.html:10 templates/enterlink/limitreached.html:9
+msgid ""
+"Everipedia is a free and easy to use wiki platform. Write about anyone and "
+"anything!"
+msgstr ""
+"Everipedia는 무료이며 사용하기 쉬운 wiki 플랫폼입니다. 어떤 사람이나 어떤 것"
+"이든 쓰십시오!"
+
+#: templates/enterlink/howto.html:36 templates/enterlink/howto.html:45
+msgid "Go back to the page you started from"
+msgstr "시작한 페이지로 돌아 가기"
+
+#: templates/enterlink/howto.html:40 templates/enterlink/howto.html:45
+msgid "Go to page"
+msgstr "페이지로 이동하기"
+
+#: templates/enterlink/howto.html:50
+msgid "Go to your editor profile page"
+msgstr "에디터 프로필 페이지로 이동하기"
+
+#: templates/enterlink/howto.html:50
+msgid "Go to profile"
+msgstr "프로필로 이동하기"
+
+#: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
+msgid "Create a new page now"
+msgstr "지금 새 페이지 생성하기"
+
+#: templates/enterlink/howto.html:61
+msgid "Search for an existing page"
+msgstr "기존 페이지 검색하기"
+
+#: templates/enterlink/in_progress_404.html:6
+msgid "This page is currently being created by another user"
+msgstr "해당 페이지는 다른 사용자가 작성 중입니다."
+
+#: templates/enterlink/in_progress_404.html:82
+msgid ""
+"This page is currently in the process of being created by another user. "
+"Please return later!"
+msgstr ""
+"해당 페이지는 현재 다른 사용자가 작성 중에 있습니다.나중에 다시 오십시오!"
+
+#: templates/enterlink/inbox.html:30
+msgid "You have"
+msgstr "귀하 소지"
+
+#: templates/enterlink/inbox.html:30
+msgid "unread notifications"
+msgstr "읽지 않은 알림"
+
+#: templates/enterlink/inbox.html:45
+msgid "You currently do not have any notifications."
+msgstr "현재 알림이 없습니다."
+
+#: templates/enterlink/index.html:40
+msgid "The world's first encyclopedia on the blockchain"
+msgstr "세계 최초의 블록체인 기반 백과사전"
+
+#: templates/enterlink/index.html:41
+msgid ""
+"Everipedia's IQ Network is the world's first Encyclopedia that allows anyone "
+"to become a stakeholder in the system and earn rank, rewards & tokens for "
+"curating content."
+msgstr ""
+"Everipedia의 IQ 네트워크는 누구나 이 시스템의 이해 관계자가 되어, 콘텐츠 관리"
+"를 통해 지위와 보상, 토큰을 얻을 수 있는 세계 최초의 백과 사전입니다."
+
+#: templates/enterlink/index.html:48
+msgid "Learn more"
+msgstr "자세히 알아보기"
+
+#: templates/enterlink/index.html:79
+msgid "As Seen In"
+msgstr "주요 특징"
+
+#: templates/enterlink/index.html:100
+msgid "An Encyclopedia for the modern age"
+msgstr "시대에 맞는 백과 사전"
+
+#: templates/enterlink/index.html:104
+msgid ""
+"The Everipedia IQ blockchain provides a new paradigm change and knowledge "
+"economy to disrupt the old centralized internet knowledge encyclopedia model "
+"similar to Wikipedia. By creating a new incentive structure and a "
+"distributed backend hosted within a blockchain, the new Everipedia knowledge "
+"base will be able to improve upon all fundamental features of Wikipedia."
+msgstr ""
+"Everipedia IQ 블록 체인은 새로운 패러다임 변화와 지식 경제를 제공해서, "
+"Wikipedia와 유사한 낡은 중앙집중형 인터넷 지식 백과사전 모델을 타파합니다. 새"
+"로운 Everipedia 지식 기반은 새 인센티브 구조 창출과 블록체인 기반 분산형 백엔"
+"드를 통해 Wikipedia의 모든 기본 기능을 향상시킬 수 있습니다."
+
+#: templates/enterlink/index.html:112
+msgid "Decentralized"
+msgstr "분산형"
+
+#: templates/enterlink/index.html:113
+msgid ""
+"Articles are fetched using IPFS and EOS Storage. Majority of IQ being "
+"distributed during the airdrop."
+msgstr ""
+"기사는 IPFS 및 EOS 저장소를 사용하여 가져옵니다. 대부분의 IQ는 에어드롭을 통"
+"해 배분됩니다."
+
+#: templates/enterlink/index.html:117
+msgid "Democratic"
+msgstr "민주주의"
+
+#: templates/enterlink/index.html:118
+msgid ""
+"Proof of Stake (PoS) model allows for voting to change and upgrade the IQ "
+"network as it grows. Also will facilitate batch imports of new content with "
+"no fees."
+msgstr ""
+"지분증명(PoS) 모델을 통해, 성장하는 IQ 네트워크를 변경하고 업그레이드할 수 있"
+"습니다. 또한 새로운 컨텐츠를 일괄적으로 무료로 가져올수 있습니다."
+
+#: templates/enterlink/index.html:122
+msgid "Censorship Resistant"
+msgstr "검열 방지"
+
+#: templates/enterlink/index.html:123
+msgid ""
+"Live and permanent edits of content on the blockchain beyond the control of "
+"a central authority."
+msgstr ""
+"중앙권력의 통제를 벗어나 블록체인 상에서 콘텐츠를 실시간으로, 영구적으로 편집"
+"합니다."
+
+#: templates/enterlink/index.html:127
+msgid "Financial Incentive"
+msgstr "재정적 인센티브"
+
+#: templates/enterlink/index.html:128
+msgid ""
+"All holders of IQ will be incentivized to create quality, neutral content "
+"and to work together in building the reputation of the network."
+msgstr ""
+"모든 IQ 보유자는 인센티브를 통해 고품질의 중립적인 콘텐츠를 만들고, 네트워크"
+"의 평판을 쌓기 위해 협력할 것입니다."
+
+#: templates/enterlink/index.html:139
+msgid "Become an editor today and start creating your own wiki articles."
+msgstr "오늘 편집자가 되어 여러분의 wiki 기사를 만들어 보십시오."
+
+#: templates/enterlink/index.html:142
+msgid "Open Community"
+msgstr "열린 커뮤니티"
+
+#: templates/enterlink/index.html:143
+msgid ""
+"Our vibrant community is open and welcoming to people from all backgrounds. "
+"Our guidelines and policies are based on common sense rather than strict "
+"bureaucracy."
+msgstr ""
+"우리의 활기찬 커뮤니티는 모든 사람들에게 열려 있고, 이들을 환영합니다. 우리의"
+"지침과 정책은 엄격한 관료적 절차보다 상식을 기반으로 합니다."
+
+#: templates/enterlink/index.html:145
+msgid "Redesigned for the modern age"
+msgstr "시대에 맞게 재설계되었습니다."
+
+#: templates/enterlink/index.html:146
+msgid ""
+"Everipedia is an encyclopedia modernized and re-designed for the twenty-"
+"first century. Our editing interface makes creating and editing wiki's as "
+"easy as using Facebook."
+msgstr ""
+"21세기에 맞게 현대적으로 재설계된 백과사전입니다. 편집 인터페이스는 Facebook"
+"을 사용하는 것 만큼 쉽게 wiki를 작성하고 편집할 수 있게 해줍니다."
+
+#: templates/enterlink/index.html:155
+msgid "Follow us on Telegram"
+msgstr " Telegram 팔로우"
+
+#: templates/enterlink/index.html:168
+msgid "Led by the Founder of Wikipedia and Genius.com"
+msgstr "Wikipedia와 Genius.com의 창업자가 이끌다."
+
+#: templates/enterlink/index.html:171
+msgid ""
+"Everipedia is being led by a team with extensive experience and knowledge "
+"both in the online knowledge space as well as the blockchain industry. The "
+"executive team is made up of several prominent individuals in the industry, "
+"the Co-Founder of Wikipedia, Larry Sanger, the founder of Genius.com, Mahbod "
+"Moghadam, and several others. Academic credentials includes UCLA, Stanford, "
+"Yale & Columbia, covering nationalities from America, Sweden, Norway and "
+"Italy. "
+msgstr ""
+"Everipedia는 블록체인 산업 뿐 아니라 온라인 지식 공간에서 광범위한 경험과 지"
+"식을 갖춘 팀이 주도하고 있습니다. 경영진은 Wikipedia의 공동 설립자인 Larry "
+"Sanger, Genius.com의 설립자인 Mahbod Moghadam 등 업계의 저명한 인물들로 구성"
+"되어 있습니다. 이들은 UCLA, 스탠포드, 예일, 컬럼비아 등에서 학위를 취득했으"
+"며, 미국, 스웨덴, 노르웨이 및 이탈리아 출신 등 다양한 국적의 인물들이 참여하"
+"고 있습니다."
+
+#: templates/enterlink/index.html:172
+msgid "Executive Team"
+msgstr "경영진 보기"
+
+#: templates/enterlink/leadership.html:7
+msgid "Leadership"
+msgstr "리더쉽"
+
+#: templates/enterlink/leadership.html:23
+msgid "Executive Leadership"
+msgstr "경영진 리더십"
+
+#: templates/enterlink/leadership.html:35
+msgid "Chief Information Officer"
+msgstr "최고 정보 책임자"
+
+#: templates/enterlink/leadership.html:41
+msgid "Chief Executive Officer, Co-Founder"
+msgstr "최고 경영자 겸 공동 창립자"
+
+#: templates/enterlink/leadership.html:47
+msgid "Chief Technology Officer, Co-Founder"
+msgstr "기술 담당 최고 책임자 겸 공동 창립자"
+
+#: templates/enterlink/leadership.html:53
+msgid "President, Co-Founder"
+msgstr "회장, 공동 창립자"
+
+#: templates/enterlink/leadership.html:63
+msgid "Director of Software"
+msgstr "소프트웨어 이사"
+
+#: templates/enterlink/leadership.html:69
+msgid "Chief Operating Officer"
+msgstr "최고 운영 책임자"
+
+#: templates/enterlink/leadership.html:75
+msgid "Chief Community Officer, Co-Founder"
+msgstr "최고 커뮤니티 책임자 겸 공동 책임자"
+
+#: templates/enterlink/limitreached.html:7
+msgid "Activity limit reached"
+msgstr "활동 국한 도달"
+
+#: templates/enterlink/limitreached.html:23
+msgid ""
+"Hey! You've added 15 morsels of knowledge to Everipedia now, so we have "
+"paused your account until Master Editors have had a chance to review your "
+"work. Shouldn't take too long, you'll probably be good to go in less than 5 "
+"minutes."
+msgstr ""
+"Everipedia에 이제 15 개의 지식을 추가했기 때문에 마스터 에디터가 작업을검토"
+"할 때까지 계정을 일시 중지했습니다. 오래 걸리지 않으며 5 분 이내로진행됩니다."
+
+#: templates/enterlink/limitreached.html:24
+msgid "In the meantime, please join our official Facebook group:"
+msgstr "그 동안 공식 페이스북 그룹에 가입하십시오."
+
+#: templates/enterlink/limitreached.html:24
+msgid "It’s the best way to reach the community!"
+msgstr "커뮤니티에 연락을 취할 수 있는 가장 좋은 방법입니다."
+
+#: templates/enterlink/login.html:7
+msgid "Sign in"
+msgstr "로그인"
+
+#: templates/enterlink/login.html:33
+msgid "Sign in to Everipedia"
+msgstr "Everipedia에 로그인하기"
+
+#: templates/enterlink/login.html:48
+msgid "Log in with Facebook"
+msgstr "페이스 북으로 로그인하기"
+
+#: templates/enterlink/login.html:49
+msgid "Log in with Twitter"
+msgstr "트위터로 로그인하기"
+
+#: templates/enterlink/login.html:58
+msgid "Need an account?"
+msgstr "계정이 필요하십니까?"
+
+#: templates/enterlink/login.html:58
+msgid "Register here"
+msgstr "여기에 등록하십시오"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:34
+msgid "Visit Profile"
+msgstr "프로필 보기"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:57
+msgid "Settings"
+msgstr "설정"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:73
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:214
+#: templates/enterlink/template_blockchain_styled_amp.html:721
+msgid "Log Out"
+msgstr "로그아웃"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:86
+msgid "Register / Log In"
+msgstr "가입 / 로그인"
+
+#: templates/enterlink/notifications/index.html:116
+msgid "New message"
+msgstr "새 메시지"
+
+#: templates/enterlink/recent-activity.html:84
+msgid "by"
+msgstr "다음 방식으로"
+
+#: templates/enterlink/register.html:6
+msgid "Create an account"
+msgstr "계정 만들기"
+
+#: templates/enterlink/register.html:26 templates/enterlink/register.html:28
+msgid "Have an account?"
+msgstr "계정이 있으십니까?"
+
+#: templates/enterlink/register.html:26 templates/enterlink/register.html:28
+msgid "Login"
+msgstr "로그인"
+
+#: templates/enterlink/register.html:42
+msgid ""
+"Registration is currently invite only due to blockchain software testing. "
+"Join us on Telegram and Reddit in the meantime to become a part of "
+"Everipedia today!"
+msgstr ""
+"등록은 현재 블록체인 소프트웨어 테스팅으로만 초대됩니다.오늘 Everipedia에 등"
+"록하시려면 Telegram과 Reddit으로 가입하세요"
+
+#: templates/enterlink/register.html:60
+msgid "Welcome to the Everipedia editor community!"
+msgstr "Everipedia 에디터 커뮤니티에 오신 것을 환영합니다!"
+
+#: templates/enterlink/register.html:63
+msgid ""
+"Sign up to become an editor to access more features and an ad-free "
+"experience."
+msgstr "가입하시면 더 많은 기능 제공 및 광고가 사라집니다."
+
+#: templates/enterlink/register.html:96
+msgid "Sign up"
+msgstr "가입하기"
+
+#: templates/enterlink/register.html:97
+msgid "By clicking sign up above you agree to our"
+msgstr "위에 가입을 클릭하면 다음에 관해 동의하게 됩니다."
+
+#: templates/enterlink/register.html:97
+msgid "Terms of Service"
+msgstr "서비스 약관"
+
+#: templates/enterlink/rewardsmgmt.html:4
+#: templates/enterlink/rewardsmgmt.html:132
+#, fuzzy
+#| msgid "Brainpower Management"
+msgid "Rewards Management"
+msgstr " Brainpower 관리"
+
+#: templates/enterlink/rewardsmgmt.html:135
+msgid "Here you can claim rewards for the edits and / or votes that you made."
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:140
+msgid "Proposal Hash"
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:141
+msgid "Finalized Time"
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:142
+#, fuzzy
+#| msgid "Voting Period"
+msgid "Period"
+msgstr "투표 기간"
+
+#: templates/enterlink/rewardsmgmt.html:143
+msgid "Redeem"
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:150
+#, fuzzy
+#| msgid "Password reset successful"
+msgid "Redeem successful"
+msgstr "비밀번호 재설정 성공"
+
+#: templates/enterlink/search-iframe.html:127
+msgid "Searching..."
+msgstr "검색 중..."
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "Can't find it below?"
+msgstr "아래에서 찾을 수 없나요?"
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "Create"
+msgstr "생성하기"
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "a new page titled"
+msgstr "새로운 제목 페이지"
+
+#: templates/enterlink/search.html:45 templates/enterlink/search.html:55
+msgid "Or try the"
+msgstr "아니면 시도해보십시오"
+
+#: templates/enterlink/search.html:45 templates/enterlink/search.html:55
+msgid "advanced search."
+msgstr "고급 검색"
+
+#: templates/enterlink/search.html:48
+msgid "Everipedia couldn’t find anything with the name"
+msgstr "Everipedia는 이름이 무엇인지 찾을 수 없습니다."
+
+#: templates/enterlink/search.html:50
+msgid ""
+"If you know any links associated with this page, try searching for those "
+"links"
+msgstr "이 페이지와 관련된 링크를 알고 있다면 해당 링크를 검색해보십시오."
+
+#: templates/enterlink/template_ajax_genius.html:17
+#: templates/enterlink/template_amp_ajax_genius.html:98
+msgid "Verified Editor"
+msgstr "확인된 에디터"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:123
+msgid "Bullet"
+msgstr "만시 일시상환"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:185
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid "Recent news"
+msgstr "최근 뉴스"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:185
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid ""
+"Everipedia IQ tokens are now in circulation on the EOS mainnet. Follow "
+"Everipedia on"
+msgstr "Everipedia IQ 토큰은 EOS 메인넷에 유통됩니다. Everipedia 팔로우하여"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:185
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid "to learn about upcoming features and developments!"
+msgstr "곧 출시될 기능과 개발에 대해 알아보십시오!"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:197
+#: templates/enterlink/template_blockchain_styled_desktop.html:143
+msgid "Verified Page"
+msgstr "인증된 페이지"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:273
+msgid "Quick Biography"
+msgstr "빠른 전기"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:275
+msgid "Quick Facts For This Wiki"
+msgstr "해당 Wiki 의 참조 링크"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:304
+#: templates/enterlink/template_blockchain_styled_desktop.html:361
+msgid "Image & Video Gallery"
+msgstr "이미지 및 동영상 갤러리"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:306
+#: templates/enterlink/template_blockchain_styled_desktop.html:363
+msgid "images, pictures, and videos"
+msgstr "이미지, 그림 및 비디오"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:310
+msgid "Gallery"
+msgstr "갤러리"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:327
+#: templates/enterlink/template_blockchain_styled_desktop.html:496
+msgid "Reference Links For This Biography"
+msgstr "해당 전기에 대한 참조 링크"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:329
+#: templates/enterlink/template_blockchain_styled_desktop.html:498
+msgid "Reference Links For This Wiki"
+msgstr "해당 Wiki 의 참조 링크"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:332
+#: templates/enterlink/template_blockchain_styled_desktop.html:501
+msgid ""
+"Links to historical reviews, career / educational facts, and other "
+"encyclopedic information"
+msgstr "역사적인 리뷰, 경력 / 교육 사실 및 기타 백과 사전 정보에 대한 링크"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:337
+#: templates/enterlink/template_blockchain_styled_desktop.html:507
+msgid "All information for"
+msgstr "다음에 대한 모든 정보"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:337
+#: templates/enterlink/template_blockchain_styled_desktop.html:507
+msgid ""
+"wiki comes from the below links. Any source is valid, including Twitter, "
+"Facebook, Instagram, and LinkedIn. Pictures, videos, biodata, and files "
+"relating to"
+msgstr ""
+" wiki는 아래 링크에서 제공됩니다. 트위터, 페이스북, 인스타그램 및 LinkedIn을"
+"포함한 모든 자료가 유효합니다. 다음과 같이 사진, 비디오, 바이오 데이터 및 관"
+"련 파일은"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:337
+#: templates/enterlink/template_blockchain_styled_desktop.html:507
+msgid "are also acceptable encyclopedic sources."
+msgstr "백과 사전 자료로 사용 가능합니다."
+
+#: templates/enterlink/template_blockchain_styled_amp.html:352
+#: templates/enterlink/template_blockchain_styled_desktop.html:528
+msgid ""
+"See related encyclopedia articles, biographies, reviews, and historical "
+"facts."
+msgstr "관련 백과 사전 기사, 전기, 리뷰 및 역사적 사실을 보십시오."
+
+#: templates/enterlink/template_blockchain_styled_amp.html:356
+#: templates/enterlink/template_blockchain_styled_desktop.html:535
+msgid "Other wiki pages related to"
+msgstr "관련된 다른 wiki 페이지들"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:535
+msgid "Created"
+msgstr "작성함"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:536
+msgid "Last Modified"
+msgstr "마지막 수정"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:537
+msgid "IPFS"
+msgstr "IPFS"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:757
+msgid "Top Page Editors"
+msgstr "상위 페이지 에디터"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:777
+msgid "Share this page"
+msgstr "이 페이지 공유하기"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:789
+msgid "DIRECT LINK"
+msgstr "다이렉트 링크"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:794
+#: templates/enterlink/template_blockchain_styled_desktop.html:221
+msgid "Suggested Hashtags"
+msgstr "제안된 해시 태그"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:828
+#: templates/enterlink/template_blockchain_styled_desktop.html:259
+msgid "QR Code"
+msgstr "QR 코드"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:14
+#: templates/enterlink/template_blockchain_styled_desktop.html:19
+msgid "Bio"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:16
+#: templates/enterlink/template_blockchain_styled_desktop.html:17
+#: templates/enterlink/template_blockchain_styled_desktop.html:225
+msgid "bio"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:16
+#: templates/enterlink/template_blockchain_styled_desktop.html:17
+#: templates/enterlink/template_blockchain_styled_desktop.html:23
+#: templates/enterlink/template_blockchain_styled_desktop.html:24
+#: templates/enterlink/template_blockchain_styled_desktop.html:30
+#: templates/enterlink/template_blockchain_styled_desktop.html:31
+#: templates/enterlink/template_blockchain_styled_desktop.html:37
+#: templates/enterlink/template_blockchain_styled_desktop.html:38
+msgid "encylopedia"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:21
+#: templates/enterlink/template_blockchain_styled_desktop.html:26
+#: templates/enterlink/template_blockchain_styled_desktop.html:28
+#: templates/enterlink/template_blockchain_styled_desktop.html:33
+msgid "Review"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:23
+#: templates/enterlink/template_blockchain_styled_desktop.html:24
+#: templates/enterlink/template_blockchain_styled_desktop.html:30
+#: templates/enterlink/template_blockchain_styled_desktop.html:31
+#: templates/enterlink/template_blockchain_styled_desktop.html:231
+#: templates/enterlink/template_blockchain_styled_desktop.html:237
+#: templates/enterlink/template_blockchain_styled_desktop.html:243
+msgid "review"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:30
+#: templates/enterlink/template_blockchain_styled_desktop.html:31
+#: templates/enterlink/template_blockchain_styled_desktop.html:232
+#: templates/enterlink/template_blockchain_styled_desktop.html:238
+#: templates/enterlink/template_blockchain_styled_desktop.html:244
+msgid "history"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid "and"
+msgstr "및"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:187
+#: templates/enterlink/voting_table_of_contents.html:12
+msgid "Edit"
+msgstr "편집하기"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:190
+msgid "Vote"
+msgstr "투표"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:205
+msgid "Embed / Widget"
+msgstr "퍼가기 / 위젯"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:224
+#: templates/enterlink/template_blockchain_styled_desktop.html:230
+#: templates/enterlink/template_blockchain_styled_desktop.html:236
+#: templates/enterlink/template_blockchain_styled_desktop.html:242
+msgid "wiki"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:226
+msgid "net worth"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:227
+msgid "age"
+msgstr "페이지"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:228
+msgid "married"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:233
+msgid "sales"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:234
+#: templates/enterlink/template_blockchain_styled_desktop.html:240
+#: templates/enterlink/template_blockchain_styled_desktop.html:246
+msgid "facts"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:239
+msgid "founders"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:245
+msgid "encyclopedia"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:329
+msgid "Profiles"
+msgstr "프로필"
+
+#: templates/enterlink/transfer-iq.html:5
+#: templates/enterlink/transfer-iq.html:119
+msgid "Transfer IQ"
+msgstr "IQ 전송"
+
+#: templates/enterlink/transfer-iq.html:121
+msgid "Please make sure you have set up"
+msgstr "설정했는지 확인해주십시오."
+
+#: templates/enterlink/transfer-iq.html:121
+msgid "beforehand"
+msgstr "사전"
+
+#: templates/enterlink/transfer-iq.html:123
+msgid "Sender"
+msgstr "보내다"
+
+#: templates/enterlink/transfer-iq.html:125
+msgid "Recipient"
+msgstr "받는 사람"
+
+#: templates/enterlink/transfer-iq.html:129
+msgid "Memo"
+msgstr "메모"
+
+#: templates/enterlink/transfer-iq.html:134
+msgid "Transaction successful"
+msgstr "거래 성공"
+
+#: templates/enterlink/transfer-iq.html:138
+msgid "Buy RAM"
+msgstr "RAM 구입하기"
+
+#: templates/enterlink/transfer-iq.html:142
+msgid "See your RAM, CPU, and Bandwidth on FeeXplorer"
+msgstr "FeeXplorer에서 RAM, CPU 및 대역폭을 확인해주십시오"
+
+#: templates/enterlink/user.html:12
+msgid "profile"
+msgstr "프로필"
+
+#: templates/enterlink/user.html:38
+msgid "Everipedia Rank"
+msgstr "Everipedia 순위"
+
+#: templates/enterlink/user.html:53
+msgid "This user is verified"
+msgstr "해당 사용자는 확인되었습니다."
+
+#: templates/enterlink/user.html:56
+msgid "Everipedia Staff"
+msgstr " Everipedia직원"
+
+#: templates/enterlink/user.html:62 templates/enterlink/user.html:67
+msgid "Message"
+msgstr "메시지"
+
+#: templates/enterlink/user.html:71 templates/enterlink/user.html:123
+msgid "Edit Profile"
+msgstr "프로필 수정하기"
+
+#: templates/enterlink/user.html:74
+msgid "Everipedia Page"
+msgstr " Everipedia페이지"
+
+#: templates/enterlink/user.html:80
+msgid "IQ Score"
+msgstr "IQ 점수"
+
+#: templates/enterlink/user.html:81
+msgid "Pages created"
+msgstr "생성된 페이지"
+
+#: templates/enterlink/user.html:82
+msgid "Total edits"
+msgstr "총 편집 수"
+
+#: templates/enterlink/user.html:94
+msgid "Joined"
+msgstr "가입됨"
+
+#: templates/enterlink/user.html:125
+msgid "Upload Avatar / Profile Picture"
+msgstr "아바타 업로드 / 프로필 사진"
+
+#: templates/enterlink/user.html:153
+msgid "Enable account? Uncheck to ban"
+msgstr "계정을 활성화 하시겠습니까? 비활성화하려면 선택을 취소하십시오."
+
+#: templates/enterlink/user.html:157
+msgid "IP Ban"
+msgstr "IP 차단"
+
+#: templates/enterlink/user.html:157
+msgid "Ban"
+msgstr "차단"
+
+#: templates/enterlink/user.html:157
+msgid "Clear"
+msgstr "확인"
+
+#: templates/enterlink/user.html:159
+msgid "Verify the account?"
+msgstr "계정을 확인하시겠습니까?"
+
+#: templates/enterlink/user.html:163
+msgid "Is Staff?"
+msgstr "직원이신가요?"
+
+#: templates/enterlink/user.html:177
+msgid "Save all changes"
+msgstr "모든 변경 사항 저장"
+
+#: templates/enterlink/user.html:178
+msgid "Cancel"
+msgstr "취소"
+
+#: templates/enterlink/user.html:211
+msgid "Change Avatar Picture"
+msgstr "아바타 그림 변경하기"
+
+#: templates/enterlink/user.html:219
+msgid "Please select your Everipedia page"
+msgstr "Everipedia 페이지를 선택하십시오."
+
+#: templates/enterlink/user.html:224
+msgid "Continue"
+msgstr "계속하기"
+
+#: templates/enterlink/votehistory.html:7
+msgid "Voting"
+msgstr "투표"
+
+#: templates/enterlink/votehistory.html:95
+msgid "Voting History"
+msgstr "투표 기록"
+
+#: templates/enterlink/voting.html:197
+msgid "Before"
+msgstr "전"
+
+#: templates/enterlink/voting.html:199
+msgid "After"
+msgstr "후"
+
+#: templates/enterlink/voting_table_of_contents.html:7
+msgid "Article"
+msgstr "글"
+
+#: templates/enterlink/voting_table_of_contents.html:17
+msgid "Current Vote"
+msgstr "현재 투표"
+
+#: templates/enterlink/voting_table_of_contents.html:20
+#: templates/enterlink/voting_table_of_contents.html:62
+msgid "Reject"
+msgstr "거절"
+
+#: templates/enterlink/voting_table_of_contents.html:21
+msgid "Accept"
+msgstr "승인"
+
+#: templates/enterlink/voting_table_of_contents.html:28
+msgid "Voting Period"
+msgstr "투표 기간"
+
+#: templates/enterlink/voting_table_of_contents.html:34
+msgid "to"
+msgstr "수신"
+
+#: templates/enterlink/voting_table_of_contents.html:51
+msgid "Place Votes"
+msgstr "투표하기"
+
+#: templates/enterlink/voting_table_of_contents.html:63
+msgid "Approve"
+msgstr "승인"
+
+#: templates/enterlink/voting_table_of_contents.html:67
+msgid "Changes"
+msgstr "변경 사항"
+
+#: templates/enterlink/welcome.html:7
+msgid "Welcome to Everipedia, the encyclopedia of everything"
+msgstr "모든 것이 있는 백과 사전 Everipedia에 오신 것을 환영합니다."

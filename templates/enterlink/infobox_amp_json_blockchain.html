@@ -1,0 +1,89 @@
+{% load i18n %}
+{% load enterlink_custom_tags %}
+<ul class="list-unstyled list-spaced list-nonplural" id="infobox">
+<div class="row">
+{% if BLOBBOX|length > 0 %}
+    <div id="blobBox_container">
+    {{ BLOBBOX|safe }}
+    </div>
+{% endif %}
+{% for item in NONPLURAL_INFOBOXES %}
+<li>
+    <div class="col-md-5 col-xs-5" id="info-qt">{{ item.key }}</div>
+    <div class="col-md-7 col-xs-7" id="info-an">
+    {% spaceless %}
+    {% if item.schema != none %}
+        {% if item.addlSchematype != None %}
+            {% if item.addlSchemaItemprop == "NOTHING" %}
+                <abbr itemprop="{{ item.schema }}">
+                    <div class="schema addl-schema-line" itemscope itemtype="http://schema.org/{{ item.addlSchematype }}">
+                        {{ item.value|safe }}
+                    </div>
+                </abbr>
+            {% else %}
+                <div itemprop="{{ item.schema }}" class="schema addl-schema-line" itemscope itemtype="http://schema.org/{{ item.addlSchematype }}">
+                    <abbr itemprop="{{ item.addlSchemaItemprop }}">
+                        {{ item.value|safe }}
+                    </abbr>
+                </div>
+            {% endif %}
+        {% else %}
+            <abbr itemprop="{{ item.schema }}">
+                {{ item.value|safe }}
+            </abbr>
+        {% endif %}
+    {% else %}
+        {{ item.value|safe }}
+    {% endif %}
+    {% endspaceless %}
+    </div>
+</li>
+{% endfor %}
+</div>
+</ul>
+
+<ul class="list-unstyled list-spaced list-plural" id="infobox">
+{% for refbox in PLURAL_INFOBOX_PACKAGES %}
+<div class="row">
+<li>
+    <div class="col-md-5 col-xs-5" id="info-qt"><h3>{{ refbox.key }}</h3></div>
+    {% for pluralbox in refbox.objects %}
+        <div class="col-md-7 col-xs-7" id="info-an">
+            {% if pluralbox.schema != none %}
+                {%  if pluralbox.addlSchematype != None %}
+                    <li class="plural-infobox">
+                        {% if pluralbox.addlSchemaItemprop == "NOTHING" %}
+                            <abbr itemprop="{{ pluralbox.schema }}">
+                                <div class="schema addl-schema-line" itemscope itemtype="http://schema.org/{{ pluralbox.addlSchematype }}">
+                                    {{ pluralbox.value|safe }}
+                                </div>
+                            </abbr>
+                        {% else %}
+                            <div itemprop="{{ pluralbox.schema }}" class="schema addl-schema-line" itemscope itemtype="http://schema.org/{{ pluralbox.addlSchematype }}">
+                                <abbr itemprop="{{ pluralbox.addlSchemaItemprop }}">
+                                    {{ pluralbox.value|safe }}
+                                </abbr>
+                            </div>
+                        {% endif %}
+                    </li>
+                {% else %}
+                    <li class="plural-infobox">
+                        <abbr itemprop="{{ pluralbox.schema }}">
+                            {{ pluralbox.value|safe }}
+                        </abbr>
+                    </li>
+                {% endif %}
+
+            {% else %}
+                <li class="plural-infobox">
+                    {{ pluralbox.value|safe }}
+                </li>
+            {% endif %}
+        </div>
+    {% endfor %}
+</li>
+</div>
+{% endfor %}
+</ul>
+
+</div>

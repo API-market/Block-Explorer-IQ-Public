@@ -1,0 +1,140 @@
+{% load i18n %}
+{% load humanize %}
+<header>
+	<script type="text/javascript" src="/static/js/eosjs-cdn.js"></script>
+	<script type="text/javascript" src="/static/js/BigInteger.js"></script>
+
+    <div class="lightbox" data-featherlight-variant="search-featherlight" id="sl1">
+        <div class="search-lb-ct">
+            <div class="global-search" id="searchfield_index"  style="display:block;">
+
+            </div>
+        </div>
+    </div>
+	<div id="createpage_box_wrap">
+		<div id="createpage_box">
+			<form action="/create_page/" method="post" class="search" name="createpagefield" id="createpagefield">
+				{% csrf_token %}
+				<input type="hidden" value="1" name="create_page_flag" />
+				<input placeholder="{% trans 'Paste a link or enter a title' %}." name="SearchBox" id="CreateBox" autocomplete="off" type="text" value="" style="border:0px;">
+				<button type="submit" value="search" class="icon-search btn btn-md btn-default">{% trans 'Create Page' %}</button>
+			</form>
+		</div>
+	</div>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top app-navbar" id="navbar" style="background: #fff; border-bottom: 1px solid #ebebeb !important; padding-top: 11px; max-height: 70px; height: 70px;">
+    <div class="container">
+		<section class="buttonset">
+			<!-- Class "cbp-spmenu-open" gets applied to menu and "cbp-spmenu-push-toleft" or "cbp-spmenu-push-toright" to the body -->
+			<button id="showLeft" title="{% trans 'Table of contents' %}"><img alt="{% trans 'Table of contents and facts for this wiki' %}" class="triggertoc-icon" height="24.3438" width="30" layout="fixed" src="https://epcdn-vz.azureedge.net/static/images/bull-icon.png"/></button>
+		</section>
+	    <div class="logo">
+	        <a href="/"><img alt="Everipedia Logo" width="45" height="36" src="https://epcdn-vz.azureedge.net/static/images/Everipedia_Logo.svg"/></a>
+	    </div>
+	    <div id="custom-search-input" class="col-xs-4 col-sm-4 col-md-6 col-lg-6">
+	        <div class="input-group col-sm-3 ">
+	            <form action="/search/" method="post">
+	            {% csrf_token %}
+	
+	            <input placeholder="{% trans 'Search' %}" name="SearchBox" autocomplete="off" id="AJAXBox" type="text" value="" class="search-query form-control" />
+	            </form>
+	            <span class="icon icon-search"></span>
+	            <span class="hidden-xs svgIcon svgIcon--search svgIcon--25px u-textColorNormal u-baseColor--iconLight"><svg class="svgIcon-use" width="25" height="25" viewBox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg></span>
+	        </div>
+	        <div id="result">
+	            {% include "enterlink/ajaxresults.html" %}
+	        </div>
+	    </div>
+        <div class="amp-header-search">
+            <button id='tablet_search_btn' onclick="insertSearchIframe();" data-featherlight="#sl1">
+                <span class="svgIcon svgIcon--search svgIcon--25px u-textColorNormal u-baseColor--iconLight">
+                    <svg class="svgIcon-use" width="35" height="35" viewBox="0 0 25 25">
+                        <path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg></span></button>
+        </div>
+
+	    <ul class="nav navbar-nav navbar-right navbar-tour-point right-login-area">
+	      <li>
+	        <a class="app-notifications create-page-plus" data-toggle="tooltip" data-placement="bottom" title="{% trans 'Create Page' %}" href="/create_page/advanced_edit/?key=" style="margin-right:10px;">
+	          <span class="icon icon-plus"></span>
+	        </a>
+	      </li>
+	      <li>
+	        <a class="app-notifications" data-delay='{"show":"500", "hide":"300"}' data-toggle="tooltip" data-placement="bottom" title="{% trans 'Feed' %}" href="/recent-activity/" style="margin-right:10px;">
+	          <span class="icon icon-flash"></span>
+	        </a>
+	      </li>
+	       <li style="display:none;">
+	        <a class="app-notifications" data-delay='{"show":"500", "hide":"300"}' data-toggle="tooltip" data-placement="bottom" data-container="body" title="{% trans 'Create Page' %}" href="#" data-featherlight="#fl1">
+	          <span class="icon icon-new-message"></span>
+	{#                  {% if GlobalNewPrivateMessages|length != 0 %}<span class="notify-circle">{{GlobalNewPrivateMessages|length}}</span>{% endif %}#}
+	        </a>
+	      </li>
+	      <!--<li>-->
+	        <!--<a class="app-notifications" data-delay='{"show":"500", "hide":"300"}' data-toggle="tooltip" data-placement="bottom" title="{% trans 'Messages' %}" href="/messages/" style="">-->
+	          <!--<span class="icon icon-chat"></span>-->
+	          <!--{% if GlobalNewPrivateMessages|length != 0 %}<span class="notify-circle">{{GlobalNewPrivateMessages|length}}</span>{% endif %}-->
+	        <!--</a>-->
+	      <!--</li>-->
+	      <!--<li>-->
+	        <!--<a class="app-notifications" data-delay='{"show":"500", "hide":"300"}' data-toggle="tooltip" data-placement="bottom" title="{% trans 'Notifications' %}" href="/notifications/" style="">-->
+	         <!--<span class="icon icon-globe"></span>-->
+	         <!--{% if GlobalNewNotifications|length != 0 %}<span class="notify-circle">{{GlobalNewNotifications|length}}</span>{% endif %}-->
+	        <!--</a>-->
+	      <!--</li>-->
+          <li class="avatar-iq">
+	        <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">
+				<div class="scatter-username">
+					<div class="scatter-link" onclick="window.location='https://chrome.google.com/webstore/detail/scatter/ammjpmhgckkpcamddpolhchgomcojkle';" >{% trans 'Please log in with Scatter' %}</div>
+				</div>
+	          <!--<img class="img-circle" data-original="{{ GlobalUserInfo.photo_thumb100url }}" alt="Profile picture for {{ user.username }}" src="{{ GlobalUserInfo.photo_thumb100url }}" onError="this.onerror=null;this.src='https://epcdn-vz.azureedge.net/static/images/noavatar_100x100.png'">-->
+	        </a>
+
+	        <div class="dropdown-menu" id="user-dropdown">
+	            {% include 'enterlink/headers/header_dropdown.html' %}
+	        </div>
+
+	        <span id="iq_count" data-toggle="tooltip" data-placement="bottom" title="{% trans 'Your IQ Score' %}">{{GlobalUserInfo.points|intcomma}} IQ</span>
+	      </li>
+	    </ul>
+	</div>
+	</nav>
+	
+
+
+<script>
+    var hoverCardCloseHandler = function() {
+        $('#mobile-hovercard-bottom #card-content').html('');
+        $('#mobile-hovercard-bottom').hide();
+        $(window).unbind('scroll');
+        $('body').unbind('touchmove');
+    };
+
+    $(".create-page-plus, .create-page-dropdown").click(function(e) {
+		e.preventDefault();
+		$("#createpage_box_wrap").show();
+    });
+
+    $("#createpage_box_wrap").click(function() {
+        $("#createpage_box_wrap").hide();
+    });
+
+	$("#createpage_box").click(function(e) {
+		e.stopPropagation();
+    });
+
+    function insertSearchIframe(){
+        var injectionNugget = '<iframe id="desktop_search_iframe" sandbox="allow-scripts allow-pointer-lock' +
+                'allow-popups allow-top-navigation allow-same-origin" frameborder="0" src="https://www.iqnetwork.io' +
+                '/search/iframe/"></iframe>';
+        $('#sl1 #searchfield_index').html(injectionNugget);
+    }
+</script>
+{% include "enterlink/headers/scatter-header.html" %}
+
+</header>
+
+
+
+
+
+

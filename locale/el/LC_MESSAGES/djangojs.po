@@ -1,0 +1,608 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-25 08:59-0700\n"
+"PO-Revision-Date: 2018-07-31 21:44-0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.1.1\n"
+
+#: static/js/easytimer.min.js:7
+msgid "secondTenthsUpdated"
+msgstr "τα δέκατα του δευτερολέπτου ενημερώθηκαν"
+
+#: static/js/easytimer.min.js:7
+msgid "secondsUpdated"
+msgstr "τα δευτερόλεπτα ενημερώθηκαν"
+
+#: static/js/easytimer.min.js:7
+msgid "minutesUpdated"
+msgstr "τα λεπτά ενημερώθηκαν"
+
+#: static/js/easytimer.min.js:7
+msgid "hoursUpdated"
+msgstr "οι ώρες ενημερώθηκαν"
+
+#: static/js/easytimer.min.js:7
+msgid "daysUpdated"
+msgstr "οι ημέρες ενημερώθηκαν"
+
+#: static/js/easytimer.min.js:7
+msgid "targetAchieved"
+msgstr "ο στόχος επετεύχθη"
+
+#: static/js/easytimer.min.js:7
+msgid "stopped"
+msgstr "σταμάτησε"
+
+#: static/js/easytimer.min.js:7
+msgid "started"
+msgstr "άρχισε"
+
+#: static/js/easytimer.min.js:7
+msgid "paused"
+msgstr "διεκόπη"
+
+#: static/js/easytimer.min.js:7
+msgid "reset"
+msgstr "Επαναφορά"
+
+#: static/js/facebook_sdk_local.min.js:4
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: static/js/facebook_sdk_local.min.js:4
+msgid "Loading..."
+msgstr "Γίνεται φόρτωση..."
+
+#: static/js/facebook_sdk_local.min.js:4
+msgid "js_sdk_force_status_on_load"
+msgstr "Φορτώνεται η κατάσταση js_sdk_force"
+
+#: static/js/facebook_sdk_local.min.js:5
+msgid "auth.logout"
+msgstr "αποσύνδεση"
+
+#: static/js/plugins/citepicture/plugin.min.js:16
+#: static/js/plugins/citepicture/plugin.min.js:17
+#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:16
+#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:17
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Media"
+msgstr "Μέσα"
+
+#: static/js/plugins/citesource/plugin.min.js:15
+#: static/js/plugins/citesource/plugin.min.js:16
+#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:15
+#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:16
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Cite"
+msgstr "Παραπομπή"
+
+#: static/js/plugins/linkpage/plugin.min.js:1
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:1
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Search Everipedia"
+msgstr "Αναζήτηση στην Everipedia"
+
+#: static/js/plugins/linkpage/plugin.min.js:17
+#: static/js/plugins/linkpage/plugin.min.js:18
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:17
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:18
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Link"
+msgstr "Σύνδεσμος"
+
+#: static/js/plugins/mention/plugin.min.js:374
+#: static/tinymce_4.2.3/plugins/mention/plugin.min.js:374
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:162
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:165
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:212
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:215
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:54
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:112
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:115
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:224
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:227
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:331
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:334
+msgid "Cite as verified editor"
+msgstr "Κάντε παραπομπή σαν επαληθευμένος συντάκτης"
+
+#: static/js/plugins/rollups/plugin.min.js:3
+#: static/js/plugins/savepage/plugin.min.js:6
+#: static/js/plugins/savepage/plugin.min.js:7
+#: static/tageditor/jquery.tag-editor.js:335
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:3
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:6
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:7
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:191
+msgid "Save"
+msgstr "Αποθήκευση"
+
+#: static/js/plugins/rollups/plugin.min.js:4
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:4
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#: static/js/plugins/rollups/plugin.min.js:11
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
+msgid "Font Style"
+msgstr "Στυλ γραμματοσειράς"
+
+#: static/js/plugins/rollups/plugin.min.js:11
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
+msgid "Style"
+msgstr "Στυλ"
+
+#: static/tageditor/jquery.tag-editor.js:584
+#: static/tageditor/jquery.tag-editor.js:587
+#: static/tageditor/jquery.tag-editor.js:590
+msgid "Add an additional description for this category"
+msgstr "Προσθέστε μια πρόσθετη περιγραφή για αυτήν την κατηγορία"
+
+#: static/tageditor/jquery.tag-editor.js:584
+#: static/tageditor/jquery.tag-editor.js:587
+#: static/tageditor/jquery.tag-editor.js:590
+msgid "Delete this tag"
+msgstr "Διαγράψτε αυτήν την ετικέτα"
+
+#: templates/enterlink/brainpowermgmt.html:142
+msgid "Claim"
+msgstr "Απόκτηση"
+
+#: templates/enterlink/brainpowermgmt.html:142
+msgid "Not Ready"
+msgstr "Δεν είναι έτοιμο"
+
+#: templates/enterlink/dropzone.html:157
+msgid "Drag and drop your photo here or click to upload."
+msgstr ""
+"Μεταφέρετε και αποθέστε τη φωτογραφία σας εδώ ή κάντε κλικ για μεταφόρτωση."
+
+#: templates/enterlink/dropzone.html:182
+msgid "Please enter a description for the photo"
+msgstr "Καταχωρίστε μια περιγραφή για τη φωτογραφία"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:89
+msgid "Adding infobox item, please wait..."
+msgstr "Προσθήκη στοιχείου infobox, παρακαλώ περιμένετε ..."
+
+#: templates/enterlink/edit_ajax_addlink.html:64
+msgid "Adding, please wait..."
+msgstr "Προσθήκη, παρακαλώ περιμένετε ..."
+
+#: templates/enterlink/edit_ajax_addlink.html:71
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:354
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:457
+msgid ""
+"You have been posting a lot of links today. Wait a bit for the community to "
+"respond to your content. New editors are limited to posting only 250 "
+"submissions a day."
+msgstr ""
+"Έχετε δημοσιεύσει πολλούς συνδέσμους σήμερα. Περιμένετε λίγο ώστε η "
+"κοινότητα να απαντήσει στο περιεχόμενό σας. Οι νέοι συντάκτες περιορίζονται "
+"στην ανάρτηση μόνο 250 υποβολών την ημέρα."
+
+#: templates/enterlink/edit_ajax_addlink.html:75
+msgid ""
+"This link is already on this page, you can still edit the link summary to "
+"improve the information on EP!"
+msgstr ""
+"Αυτός ο σύνδεσμος βρίσκεται ήδη σε αυτήν τη σελίδα, αλλά μπορείτε να "
+"επεξεργαστείτε την περίληψη συνδέσμων για να βελτιώσετε τις πληροφορίες "
+"σχετικά με το EP!"
+
+#: templates/enterlink/edit_ajax_addlink.html:79
+msgid ""
+"Links to Wikipedia pages are not allowed, for technical reasons. Please try "
+"again."
+msgstr ""
+"Δεν επιτρέπονται συνδέσεις με σελίδες Wikipedia, για τεχνικούς λόγους. "
+"Παρακαλώ, προσπαθήστε ξανά."
+
+#: templates/enterlink/edit_ajax_addlink.html:83
+msgid "No URL provided, please try again"
+msgstr "Δεν παρέχεται διεύθυνση URL, δοκιμάστε ξανά"
+
+#: templates/enterlink/edit_ajax_addlink.html:87
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:362
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:465
+msgid "Please provide a description for the link or file."
+msgstr "Καταχωρίστε μια περιγραφή για το σύνδεσμο ή το αρχείο."
+
+#: templates/enterlink/edit_ajax_addlink.html:91
+msgid "Please provide a more scholarly description."
+msgstr "Παρακαλώ δώστε μια πιο επιστημονική περιγραφή."
+
+#: templates/enterlink/edit_ajax_addlink.html:109
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+msgid "File uploaded successfully."
+msgstr "Το αρχείο ανέβηκε με επιτυχία"
+
+#: templates/enterlink/edit_ajax_addlink.html:141
+#: templates/enterlink/inline-js/edit-bottom.html:16
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+msgid "Add File"
+msgstr "Προσθήκη αρχείου"
+
+#: templates/enterlink/edit_ajax_addlink.html:148
+#: templates/enterlink/inline-js/edit-bottom.html:17
+msgid "Add Link"
+msgstr "Προσθήκη συνδέσμου..."
+
+#: templates/enterlink/headers/scatter-header.html:130
+msgid "Claim Rewards"
+msgstr ""
+
+#: templates/enterlink/index.html:236
+msgid "Loading more activity, please wait..."
+msgstr "Φόρτωση περισσότερης δραστηριότητας, παρακαλώ περιμένετε ..."
+
+#: templates/enterlink/index.html:260
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+msgid "Create page"
+msgstr "Δημιουργία Σελίδας"
+
+#: templates/enterlink/inline-js/edit-bottom.html:12
+msgid ""
+"Please stake some IQ into Brainpower before continuing. Click OK to open the "
+"Brainpower management screen in a new tab. NOTE: Please make sure popups are "
+"enabled for this site, as you may receive a warning."
+msgstr ""
+"Παρακαλώ στοιχηματίζετε κάποιο IQ στην Νοημοσύνη πριν συνεχίσετε. Κάντε κλικ "
+"στο κουμπί OK για να ανοίξετε την οθόνη διαχείρισης της Νοημοσύνης σε μια "
+"νέα καρτέλα. ΣΗΜΕΙΩΣΗ: Βεβαιωθείτε ότι έχετε ενεργοποιήσει τα αναδυόμενα "
+"παράθυρα για αυτόν τον ιστότοπο, καθώς ενδέχεται να λάβετε προειδοποίηση."
+
+#: templates/enterlink/inline-js/edit-bottom.html:13
+msgid ""
+"Note that you will not be able to propose edits without Brainpower. Your "
+"work will be lost!"
+msgstr ""
+"Σημειώστε ότι δεν θα μπορείτε να προτείνετε τροποποιήσεις χωρίς  Νοημοσύνη. "
+"Η εργασία σας θα χαθεί!"
+
+#: templates/enterlink/inline-js/edit-bottom.html:14
+msgid "Error: proposal not found. Please try submitting again."
+msgstr "Σφάλμα: η πρόταση δεν βρέθηκε. Δοκιμάστε να υποβάλετε ξανά."
+
+#: templates/enterlink/inline-js/edit-bottom.html:15
+msgid "Article proposal submission failed!"
+msgstr "Η υποβολή προτάσεων στο άρθρο απέτυχε!"
+
+#: templates/enterlink/inline-js/edit-bottom.html:18
+msgid "Add New Infobox"
+msgstr "Προσθέστε νέο Infobox"
+
+#: templates/enterlink/inline-js/edit-bottom.html:19
+msgid "Completing transaction..."
+msgstr "Ολοκλήρωση συναλλαγής ..."
+
+#: templates/enterlink/inline-js/edit-bottom.html:141
+msgid "Add Row"
+msgstr "Προσθήκη Σειράς"
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:56
+msgid "Are you sure you want to remove this link?"
+msgstr "Είστε βέβαιοι ότι θέλετε να καταργήσετε αυτόν τον σύνδεσμο;"
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:162
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:166
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:212
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:216
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:55
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:112
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:116
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:224
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:228
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:331
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:335
+msgid "Cite my own knowledge / experience as a verified editor"
+msgstr "Παράθεση της δικής μου γνώσης / εμπειρίας σαν επαληθευμένος συντάκτης"
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:347
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:451
+msgid "Posting comment, please wait.."
+msgstr "Δημοσίευση σχολίου, παρακαλώ περιμένετε .."
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:358
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:461
+msgid "This comment is already on this page. Please try again!"
+msgstr ""
+"Αυτό το σχόλιο βρίσκεται ήδη σε αυτή τη σελίδα. Παρακαλώ προσπαθήστε ξανά!"
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:450
+msgid "Posting reply, please wait.."
+msgstr "Δημοσίευση απάντησης, παρακαλώ περιμένετε .."
+
+#: templates/enterlink/inline-js/enterlink-ajax-execute-search.html:139
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:52
+msgid "Searching..."
+msgstr "Αναζήτηση..."
+
+#: templates/enterlink/inline-js/enterlink-ajax-execute-search.html:167
+msgid "Merging..."
+msgstr "Συγχώνευση…"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:94
+msgid "Are you sure you want to exit the page? Unsaved changes will be lost."
+msgstr ""
+"Είστε βέβαιοι ότι θέλετε να βγείτε από τη σελίδα; Οι μη αποθηκευμένες "
+"αλλαγές θα χαθούν."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:180
+msgid "Introduction"
+msgstr "Εισαγωγή"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:180
+msgid ""
+"Everipedia is just like Wikipedia but much simpler to edit and contribute. "
+"Each page is composed of an infobox area for short concise facts, a main "
+"article written in a neutral 3rd person tense, a media gallery of pictures, "
+"videos, audio etc about the topic, a list of references to webpages and "
+"files that are used as citations in the article and infobox."
+msgstr ""
+"Η Everipedia είναι ακριβώς όπως η Wikipedia, αλλά πολύ απλούστερη στην "
+"επεξεργασία και συμβολή. Κάθε σελίδα αποτελείται από μια περιοχή infobox για "
+"σύντομα συνοπτικά γεγονότα, ένα κύριο άρθρο γραμμένο σε τρίτο πρόσωπο από "
+"ουδέτερη οπτική γωνία, μια συλλογή μέσων με εικόνες, βίντεο, ήχου κλπ. "
+"σχετικά μετο θέμα, μια λίστα με αναφορές σε ιστοσελίδες και αρχεία που "
+"χρησιμοποιούνται ως παραπομπές στο άρθρο και στο infobox."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:181
+msgid "Main photo"
+msgstr "Κύρια φωτογραφία"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:181
+msgid "Here you can add the main photo for the article."
+msgstr "Εδώ μπορείτε να προσθέσετε την κύρια φωτογραφία για το άρθρο."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:182
+msgid "Infobox"
+msgstr "Infobox"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:182
+msgid ""
+"The infobox is designed for concise, quick facts. Suggested items appear in "
+"the dropdown depending on the selected topic, but any type of infobox can be "
+"added."
+msgstr ""
+"Το infobox έχει σχεδιαστεί για σύντομα και γρήγορα γεγονότα. Τα προτεινόμενα "
+"στοιχεία εμφανίζονται στο αναπτυσσόμενο μενού, ανάλογα με το επιλεγμένο "
+"θέμα, αλλά μπορεί να προστεθεί οποιοσδήποτε τύπος infobox."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:183
+msgid "Add Links, Files, Etc."
+msgstr "Προσθήκη συνδέσμων, αρχείων κ.λπ."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:183
+msgid ""
+"Make sure to cite your sources when adding information to the page by adding "
+"links and files here so you can show where the information is coming from."
+msgstr ""
+"Βεβαιωθείτε ότι αναφέρετε τις πηγές σας κατά την προσθήκη πληροφοριών στη "
+"σελίδα, προσθέτοντας εδώ συνδέσμους και αρχεία, ώστε να μπορείτε να δείξετε "
+"από πού προέρχονται οι πληροφορίες."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:184
+msgid "Reference links"
+msgstr "Σύνδεσμοι αναφοράς"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:184
+msgid ""
+"As you add links and files, they will show up in the Reference Links "
+"section. You can edit or remove them as well."
+msgstr ""
+"Καθώς προσθέτετε συνδέσμους και αρχεία, θα εμφανίζονται στην ενότητα "
+"Σύνδεσμοι Αναφοράς. Επίσης μπορείτε να τα επεξεργαστείτε ή να τα αφαιρέσετε."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:185
+msgid "Media Gallery"
+msgstr "Συλλογή Πολυμέσων"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:185
+msgid "Added pictures will show up here."
+msgstr "Οι προστιθέμενες εικόνες θα εμφανιστούν εδώ."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
+msgid "Add media to article text"
+msgstr "Προσθήκη μέσων στο κείμενο του άρθρου"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
+msgid "To add an image or video to the article text, click the 'Media' button."
+msgstr ""
+"Για να προσθέσετε μια εικόνα ή ένα βίντεο στο κείμενο του άρθρου, κάντε κλικ "
+"στην επιλογή ‘Πολυμέσα’."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
+msgid "Cite links, files, etc"
+msgstr "Αναφορά συνδέσμων, αρχείων, κλπ"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
+msgid ""
+"After you have already added a link, file, or picture to the page, you can "
+"cite it by clicking the 'Cite' button. You can also press the '^' or '*' "
+"keys when typing and a dropdown should appear."
+msgstr ""
+"Αφού έχετε ήδη προσθέσει ένα σύνδεσμο, ένα αρχείο ή μια εικόνα στη σελίδα, "
+"μπορείτε να την αναφέρετε κάνοντας κλικ στην επιλογή ‘Παραπομπή’. Μπορείτε "
+"επίσης να πατήσετε τα πλήκτρα ‘^‘ ή ‘*’ κατά την πληκτρολόγηση και θα "
+"εμφανιστεί ένα αναπτυσσόμενο μενού."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:188
+msgid "Link to other Everipedia pages"
+msgstr "Σύνδεση με άλλες σελίδες της Everipedia"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:188
+msgid ""
+"To link to another Everipedia page click the 'Link Page' button. You can "
+"also press the '@' or key when typing and a dropdown should appear. Try to "
+"link to as many pages as necessary to make each page as rich and informative "
+"as possible."
+msgstr ""
+"Για να συνδεθείτε με μια άλλη σελίδα της Everipedia, κάντε κλικ στην επιλογή "
+"’Σύνδεση Σελίδας». Μπορείτε επίσης να πατήσετε το πλήκτρο ‘@’ ή το κλειδί "
+"κατά την πληκτρολόγηση και να εμφανιστεί ένα αναπτυσσόμενο μενού. "
+"Προσπαθήστε να βάλετε συνδέσμους σε όσες περισσότερες σελίδες για να κάνετε "
+"κάθε σελίδα όσο το δυνατόν πιο πλούσια και ενημερωτική."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:189
+msgid "Main article body"
+msgstr "Κύριο σώμα του άρθρου"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:189
+msgid ""
+"Write in an objective manner in third person tense, do not include any "
+"marketing speak (exclusive offers, unverifiable claims etc). This is an "
+"encyclopedia, not a social media page."
+msgstr ""
+"Γράψτε με αντικειμενικό τρόπο σε τρίτο πρόσωπο, μην συμπεριλάβετε "
+"διαφημίσεις (όπως αποκλειστικές προσφορές, μη επαληθεύσιμες αξιώσεις κ.λπ.). "
+"Αυτή είναι μια εγκυκλοπαίδεια, όχι μια σελίδα κοινωνικών μέσων."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:190
+msgid "Title"
+msgstr "Τίτλος"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:190
+msgid "Enter the page title here"
+msgstr "Εισαγάγετε εδώ τον τίτλο της σελίδας εδώ"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:191
+msgid "When you are finished, click here to save your changes."
+msgstr "Όταν τελειώσετε, κάντε κλικ εδώ για να αποθηκεύσετε τις αλλαγές σας."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:193
+msgid "Back"
+msgstr "Επιστροφή"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:193
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:159
+msgid "Next"
+msgstr "Επόμενο"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Formats"
+msgstr "Μορφές"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+msgid "File uploaded successfully"
+msgstr "Το αρχείο ανέβηκε με επιτυχία"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:459
+msgid "Please enter a headline"
+msgstr "Εισαγάγετε έναν τίτλο"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:463
+msgid "Submission Successful!"
+msgstr "Επιτυχημένη υποβολή"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:93
+msgid "Editor profile"
+msgstr "Προφίλ συντάκτη"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:95
+msgid ""
+"The editor profile page shows the pages the user has edited, references "
+"they’ve added to a page, and comments they’ve made."
+msgstr ""
+"Η σελίδα προφίλ του συντάκτη εμφανίζει τις σελίδες που έχει επεξεργαστεί ο "
+"χρήστης, τις αναφορές που έχουν προσθέσει σε μια σελίδα και τα σχόλια που "
+"έχουν γίνει."
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:105
+msgid "Profile photo"
+msgstr "Φωτογραφία προφίλ"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:106
+msgid "Click here to upload a picture for your editor profile."
+msgstr "Κάντε κλικ εδώ για να ανεβάσετε μια εικόνα για το προφίλ συντάκτη σας."
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:112
+msgid "Enter your profile info"
+msgstr "Εισάγετε τις πληροφορίες του προφίλ σας"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:113
+msgid "(Optional) Enter your name, email, nationality, language, etc."
+msgstr ""
+"(Προαιρετικό) Καταχωρίστε το όνομα, το email, την εθνικότητα, τη γλώσσα σας "
+"κ.λπ."
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:119
+msgid "Link your Everipedia page"
+msgstr "Συνδέστε τη σελίδα σας στο Everipedia"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:120
+msgid ""
+"If you already created an Everipedia article about yourself, you can link to "
+"it here."
+msgstr ""
+"Αν έχετε ήδη δημιουργήσει ένα άρθρο της Everipedia, μπορείτε να συνδεθείτε "
+"με αυτό εδώ."
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:126
+msgid "(Optional) Add your cryptocurrency wallet addresses"
+msgstr "(Προαιρετικό) Προσθέστε τις διευθύνσεις πορτοφολιού με κρυπτονόμισμα"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:127
+msgid ""
+"If you have any cryptocurrencies, add the wallet addresses here. People may "
+"donate to you if they like your work! If you do not have a wallet, you can "
+"get one here: <img class='userview-crypto-logo-helper' src='https://epcdn-vz."
+"azureedge.net/static/images/bitcoin-icon.svg'/><a class='helper-crypto-"
+"anchor' rel='nofollow' target='_blank' href='https://www.coinbase."
+"com/'>Bitcoin</a>, <img class='userview-crypto-logo-helper' style='margin-"
+"right: 0px;' src='https://epcdn-vz.azureedge.net/static/images/ethereum-icon."
+"png'/><a class='helper-crypto-anchor' rel='nofollow' target='_blank' "
+"href='https://www.coinbase.com/'>Ethereum</a>, <img class='userview-crypto-"
+"logo-helper' src='https://epcdn-vz.azureedge.net/static/images/dogecoin-logo."
+"png'/><a class='helper-crypto-anchor' rel='nofollow' target='_blank' "
+"href='https://my.dogechain.info/#/overview'>Dogecoin</a> "
+msgstr ""
+"Εάν έχετε κρυπτονομίσματα, προσθέστε εδώ τις διευθύνσεις του πορτοφολιού. Οι "
+"άνθρωποι μπορούν να σας χρηματοδοτήσουν αν τους αρέσει η δουλειά σας! Εάν "
+"δεν έχετε ένα πορτοφόλι, μπορείτε να το πάρετε εδώ: <img class='userview-"
+"crypto-logo-helper' src='https://epcdn-vz.azureedge.net/static/images/"
+"bitcoin-icon.svg'/> <a class='helper-crypto-anchor' rel='nofollow' "
+"target='_blank' href='https://www.coinbase.com/'>Bitcoin</a> , <img "
+"class='userview-crypto-logo-helper' style='margin-right: 0px;' src='https://"
+"epcdn-vz.azureedge.net/static/images/ethereum-icon.png'/> <a class='helper-"
+"crypto-anchor' rel='nofollow' target='_blank' href='https://www.coinbase."
+"com/'>Ethereum</a> , <img class='userview-crypto-logo-helper' src='https://"
+"epcdn-vz.azureedge.net/static/images/dogecoin-logo.png'/> <a class='helper-"
+"crypto-anchor' rel='nofollow' target='_blank' href='https://my.dogechain."
+"info/#/overview'>Dogecoin</a>"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:133
+msgid "Save changes"
+msgstr "Αποθήκευση αλλαγών"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:134
+msgid "When you are done, click here to save your changes."
+msgstr "Όταν τελειώσετε, κάντε κλικ εδώ για να αποθηκεύσετε τις αλλαγές σας."
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:140
+msgid "Create Page"
+msgstr "Δημιουργία Σελίδας"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:141
+msgid "You can also create a new wiki article by clicking here."
+msgstr "Μπορείτε επίσης να δημιουργήσετε ένα νέο άρθρο wiki πατώντας εδώ."
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:157
+msgid "Pre"
+msgstr "Προ"

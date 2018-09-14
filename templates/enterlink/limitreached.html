@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+{% load i18n %}
+<html>
+    <head>
+
+    <title> {% trans "Activity limit reached" %} - {% trans "Everipedia, the encyclopedia of everything" %}</title><!-- ' -->
+
+    <meta name="description" content='{% trans "Everipedia is a free and easy to use wiki platform. Write about anyone and anything!" %}'>
+    <link rel="canonical" href="https://iqnetwork.io/limitreached/" />
+
+
+	<!--- Include Header -->
+	{% include "enterlink/headers/header-common.html" %}{% include "enterlink/headers/header-navbar.html" %}
+    <link href="/static/css/howto_welcome.css" rel="stylesheet">
+</head>
+<body class="with-top-navbar limitreached-wrapper">
+
+	<div class="container limitreached-ct" id="abt-ct" style="font-size: 15px; margin-top:20px;">
+		<div class="panel panel-default">
+			<div class="panel-body" id="mobilepanel" style="padding:15px 5px 10px 5px !important;">
+				<div class="col-md-12" id="mobilepanel">
+					<p>{% trans "Hey! You've added 15 morsels of knowledge to Everipedia now, so we have paused your account until Master Editors have had a chance to review your work. Shouldn't take too long, you'll probably be good to go in less than 5 minutes." %}</p>
+                    <p>{% trans 'In the meantime, please join our official Facebook group:' %} <a href="https://www.facebook.com/groups/832060766909870/">https://www.facebook.com/groups/832060766909870/</a> {% trans "It’s the best way to reach the community!" %}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<!--- Everipedia Footer -->
+{% include "enterlink/footers/footer.html" %}

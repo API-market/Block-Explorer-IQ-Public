@@ -1,0 +1,57 @@
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% load humanize %}
+<link rel="dns-prefetch" href="//everipedia.org">
+
+<script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/jquery.js"></script>
+<script src="{{ STATIC_URL }}jsi18n/{{ LANGUAGE_CODE }}/djangojs.js"></script>
+{% include 'enterlink/inline-js/featherlight.html' %}
+{% include 'enterlink/inline-css/bootstrap-custom-EP.html' %}
+{% include 'enterlink/inline-css/common-css.html' %}
+{% include 'enterlink/inline-css/application.html' %}
+
+<link rel="dns-prefetch" href="//s3.amazonaws.com">
+<link rel="dns-prefetch" href="//everipedia-storage.s3.amazonaws.com">
+<link rel="dns-prefetch" href="//everipedia-fast-cache.s3-accelerate.amazonaws.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+
+
+{% include "enterlink/headers/favicon.html" %}
+
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta property="fb:app_id" content="1617004011913755" />
+<meta property="fb:pages" content="328643504006398"/>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="theme-color" content="#FFFFFF">
+
+<!-- TinyMCE "Mention" plugin (autocomplete tooltip) -->
+{% include 'enterlink/inline-js/featherlight.html' %}
+
+<!-- Tablet fixes-->
+{% if request.mobile and not request.tablet %}
+    {% include 'enterlink/mobile/inline-css/mobile-css.html' %}
+{% else %}
+    {% include 'enterlink/inline-css/tablet-fixes.html' %}
+    {% include 'enterlink/inline-css/tablet-header-fixes.html' %}
+{% endif %}
+{% include 'enterlink/inline-css/featherlight-fixes.html' %}
+<script>
+    document.querySelector('head').innerHTML += '<link href="https://epcdn-vz.azureedge.net/static/css/featherlight-min-css.css" rel="stylesheet">';
+</script>
+<!-- Defers GA load for template page -->
+{% if not isTemplatePage %}
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57561457-6', 'auto');
+  ga('send', 'pageview');
+</script>
+{% endif %}
+
+{% include 'enterlink/headers/extra-analytics-header.html' %}

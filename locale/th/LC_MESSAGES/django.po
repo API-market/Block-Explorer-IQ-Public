@@ -1,0 +1,2275 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-25 08:59-0700\n"
+"PO-Revision-Date: 2018-08-01 02:35-0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.1.1\n"
+
+#: enterlink/edit.py:114
+msgid "Page Type"
+msgstr "หน้า"
+
+#: enterlink/edit.py:114
+msgid "Removed From Site"
+msgstr ""
+
+#: enterlink/edit.py:114 templates/enterlink/edit_ajax_editpagemeta.html:12
+msgid "Adult Content"
+msgstr "เนื้อหาสำหรับผู้ใหญ่"
+
+#: enterlink/edit.py:115
+msgid "Media Gallery"
+msgstr "แกลลอรี่"
+
+#: enterlink/edit.py:115
+msgid "References and Citations"
+msgstr ""
+
+#: enterlink/forms.py:9
+msgid "Contains"
+msgstr "ประกอบด้วย"
+
+#: enterlink/forms.py:9
+msgid "Equal to"
+msgstr "เท่ากับ"
+
+#: enterlink/forms.py:10
+msgid "Regular expression"
+msgstr "นิพจน์ปกติ"
+
+#: enterlink/forms.py:11
+msgid "Starts with"
+msgstr "ขึ้นต้นด้วย"
+
+#: enterlink/forms.py:11
+msgid "Ends with"
+msgstr "ลงท้ายด้วย"
+
+#: enterlink/forms.py:12
+msgid "Greater than"
+msgstr "มากกว่า"
+
+#: enterlink/forms.py:12
+msgid "Greater than or equal to"
+msgstr "มากกว่าหรือเท่ากับ"
+
+#: enterlink/forms.py:13
+msgid "Less than"
+msgstr "น้อยกว่า"
+
+#: enterlink/forms.py:13
+msgid "Less than or equal to"
+msgstr "น้อยกว่าหรือเท่ากับ"
+
+#: enterlink/forms.py:42 templates/enterlink/headers/index_header.html:133
+#: templates/enterlink/login.html:40
+msgid "Password"
+msgstr "รหัสผ่าน"
+
+#: enterlink/forms.py:44
+msgid "Please enter a password"
+msgstr "โปรดกรอกรหัสผ่าน"
+
+#: enterlink/forms.py:45
+msgid "Please enter a valid password"
+msgstr "โปรดกรอกรหัสผ่านที่ถูกต้อง"
+
+#: enterlink/forms.py:46
+msgid "Enter an email"
+msgstr "กรอกอีเมล"
+
+#: enterlink/forms.py:47
+msgid "Please enter an email address"
+msgstr "โปรดกรอกอีเมล"
+
+#: enterlink/forms.py:48
+msgid "Please enter a valid email address"
+msgstr "โปรดกรอกอีเมลที่ถูกต้อง"
+
+#: enterlink/forms.py:49 enterlink/forms.py:69
+msgid "First Name"
+msgstr "ชื่อจริง"
+
+#: enterlink/forms.py:51 enterlink/forms.py:71
+msgid "Last Name"
+msgstr "นามสกุล"
+
+#: enterlink/forms.py:53
+msgid "Enter a username"
+msgstr "กรอกชื่อผู้ใช้"
+
+#: enterlink/forms.py:54
+msgid "Please enter a username"
+msgstr "โปรดกรอกชื่อผู้ใช้งาน"
+
+#: enterlink/forms.py:55
+msgid "Please enter a valid username"
+msgstr "โปรดกรอกชื่อผู้ใช้ที่ถูกต้อง"
+
+#: enterlink/forms.py:61
+msgid "This email address already exists! Please use another one."
+msgstr "อีเมลนี้มีผู้ใช้แล้ว! โปรดใช้อีเมลอื่น"
+
+#: enterlink/forms.py:73 enterlink/forms.py:83
+msgid "Email"
+msgstr "อีเมล"
+
+#: enterlink/forms.py:82
+msgid "How can we help?"
+msgstr "เราจะช่วยคุณได้อย่างไร"
+
+#: enterlink/forms.py:84
+msgid "Full Name"
+msgstr "ชื่อจริง"
+
+#: enterlink/forms.py:85
+msgid "Subject"
+msgstr "เรื่อง"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Report Abuse"
+msgstr "รายงานการละเมิด"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Report Bug"
+msgstr "รายการปัญหา"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Verify Account"
+msgstr "ยืนยันบัญชี"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Anonymous Tip"
+msgstr "เคล็ดลับแบบไม่ระบุตัวตน"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Investment Inquiries"
+msgstr "สอบถามข้อมูลการลงทุน"
+
+#: enterlink/forms.py:86 enterlink/forms.py:175 enterlink/models.py:89
+#: enterlink/models.py:134
+msgid "Other"
+msgstr "อื่น ๆ"
+
+#: enterlink/forms.py:97
+msgid "Search by Entering a Link"
+msgstr "ค้นหาโดยการกรอกลิงค์"
+
+#: enterlink/forms.py:126
+msgid ""
+"Describe the file briefly. A summary of the information found is best. Avoid "
+"simply repeating the page title."
+msgstr "อธิบายไฟล์สั้น ๆ สรุปข้อมูลคือวิธีที่ดีที่สุด หลีกเลี่ยงการใช้ชื่อเรื่องซ้ำ"
+
+#: enterlink/forms.py:148
+msgid "File type not allowed."
+msgstr "ไม่อนุญาตให้ใช้ไฟล์ประเภทนี้"
+
+#: enterlink/forms.py:153
+msgid "Please ."
+msgstr "โปรด"
+
+#: enterlink/forms.py:154
+msgid "Enter a URL"
+msgstr "กรอกที่อยู่ URL:"
+
+#: enterlink/forms.py:156
+msgid ""
+"Describe the URL briefly. A summary of the information found is best. Avoid "
+"simply repeating the page title."
+msgstr "อธิบาย URL สั้น ๆ สรุปข้อมูลคือวิธีที่ดีที่สุด หลีกเลี่ยงการใช้ชื่อเรื่องซ้ำ"
+
+#: enterlink/forms.py:165 templates/enterlink/edit_ajax_addinfobox.html:28
+msgid "Enter type (e.g. Occupation)"
+msgstr "กรอกประเภท (เช่นอาชีพ)"
+
+#: enterlink/forms.py:166 templates/enterlink/edit_ajax_addinfobox.html:28
+msgid "Enter value (e.g. CEO)"
+msgstr "กรอกค่า (เช่น CEO)"
+
+#: enterlink/forms.py:170 enterlink/models.py:134
+msgid "Person"
+msgstr "บุคคล"
+
+#: enterlink/forms.py:170 enterlink/models.py:134
+msgid "Place/Location"
+msgstr "สถานที่/สถานที่ตั้ง"
+
+#: enterlink/forms.py:171 enterlink/models.py:134
+msgid "Organization/Company/Institution"
+msgstr "องค์กร/บริษัท/สถาบันการศึกษา"
+
+#: enterlink/forms.py:171 enterlink/models.py:134
+msgid "Event"
+msgstr "กิจกรรม"
+
+#: enterlink/forms.py:172 enterlink/models.py:134
+msgid "List/Ranking"
+msgstr "รายการ/การจัดอันดับ"
+
+#: enterlink/forms.py:172 enterlink/models.py:134
+msgid "Product/Merchandise"
+msgstr "สินค้า/สินค้า"
+
+#: enterlink/forms.py:173 enterlink/models.py:134
+msgid "Electronics/Software"
+msgstr "เครื่องใช้ไฟฟ้า/ซอฟแวร์"
+
+#: enterlink/forms.py:173 enterlink/models.py:134
+msgid "Medical/Biology"
+msgstr "แพทย์/ชีววิทยา"
+
+#: enterlink/forms.py:174 enterlink/models.py:134
+msgid "Creative Work/Art"
+msgstr "งานครีเอทีฟ/ศิลปะ"
+
+#: enterlink/forms.py:175 enterlink/models.py:134
+msgid "Science/Academia/Humanities"
+msgstr "วิทยาศาสตร์/วิชาการ/มนุษยศาสตร์"
+
+#: enterlink/models.py:45 enterlink/models.py:49
+msgid "None"
+msgstr "ไม่มีเลย"
+
+#: enterlink/models.py:45
+msgid "Featured"
+msgstr "แนะนำ"
+
+#: enterlink/models.py:45
+msgid "In the news"
+msgstr "ในข่าว"
+
+#: enterlink/models.py:46
+msgid "In the news (Editor's Pick)"
+msgstr "ในข่าว (Editor’s Pick)"
+
+#: enterlink/models.py:46
+msgid "In the news (Standout Article)"
+msgstr "ในข่าว (บทความยอดเยี่ยม)"
+
+#: enterlink/models.py:47
+msgid "Trending"
+msgstr "ยอดนิยม"
+
+#: enterlink/models.py:47
+msgid "On this day"
+msgstr "ในวันนี้"
+
+#: enterlink/models.py:47
+msgid "Blog Post (Meta Article)"
+msgstr "โพสต์บล็อก (บทความเมต้า)"
+
+#: enterlink/models.py:49
+msgid "Verified Only"
+msgstr "ยืนยันเท่านั้น"
+
+#: enterlink/models.py:50
+msgid "Normal (Business)"
+msgstr "ปกติ (ธุรกิจ)"
+
+#: enterlink/models.py:50
+msgid "Normal (Personal)"
+msgstr "ปกติ (ส่วนตัว)"
+
+#: enterlink/view_functions.py:144
+msgid ""
+"Your Everipedia editor restrictions have been removed. You can now edit "
+"pages freely!"
+msgstr "ยกเลิกข้อจำกัดของเครื่องมือแก้ไข Everipedia คุณสามารถแก้ไขหน้าได้อย่างอิสระแล้วตอนนี้!"
+
+#: enterlink/view_functions.py:607
+msgid "Images & Videos"
+msgstr "รูปภาพและวิดีโอ"
+
+#: enterlink/view_functions.py:609
+msgid "References"
+msgstr "การอ้างอิง"
+
+#: enterlink/view_functions.py:612
+msgid "Article Discussion"
+msgstr "อภิปรายบทความ"
+
+#: enterlink/view_functions.py:615 enterlink/view_functions.py:618
+#: templates/enterlink/template_blockchain_styled_amp.html:350
+#: templates/enterlink/template_blockchain_styled_desktop.html:526
+msgid "See Also"
+msgstr "ดูเพิ่มเติมที่:"
+
+#: enterlink/view_functions.py:617
+msgid "Top Editors"
+msgstr "บรรณาธิการยอดนิยม"
+
+#: enterlink/view_functions.py:1625
+msgid "Wiki and references for"
+msgstr "Wiki และการอ้างอิงสำหรับ"
+
+#: enterlink/view_functions.py:1626
+msgid "You can edit something on this wiki now!"
+msgstr "คุณสามารถแก้ไข Wiki นี้ได้แล้ว!"
+
+#: local_packages/block_ip/models.py:11
+msgid "IP address or mask"
+msgstr "ที่อยู่ IP หรือหน้ากาก"
+
+#: local_packages/block_ip/models.py:12
+msgid "Optional reason for block"
+msgstr "เหตุผลเพิ่มเติมสำหรับการบล็อก"
+
+#: local_packages/block_ip/models.py:25 local_packages/block_ip/models.py:26
+msgid "IPs & masks to ban"
+msgstr "IPs และมาสก์ที่ห้ามใช้"
+
+#: templates/admin/base.html:28
+msgid "Welcome,"
+msgstr "ยินดีต้อนรับสู่เว็บไซต์คุณ"
+
+#: templates/admin/base.html:33
+msgid "Documentation"
+msgstr "เอกสาร"
+
+#: templates/admin/base.html:36
+msgid "Change password"
+msgstr "เปลี่ยนรหัสผ่าน"
+
+#: templates/admin/base.html:38 templates/admin/password_change_done.html:57
+#: templates/admin/password_change_form.html:59
+#: templates/enterlink/headers/header_dropdown.html:22
+#: templates/enterlink/headers/header_dropdown.html:44
+#: templates/enterlink/headers/index_header.html:110
+#: templates/enterlink/headers/index_header.html:166
+#: templates/enterlink/headers/index_header.html:236
+#: templates/enterlink/headers/index_header.html:258
+#: templates/enterlink/notifications/index.html:100
+#: templates/enterlink/notifications/index.html:105
+msgid "Log out"
+msgstr "ออกจากระบบ"
+
+#: templates/admin/base.html:47 templates/admin/logged_out.html:4
+#: templates/admin/password_reset_complete.html:6
+#: templates/admin/password_reset_confirm.html:6
+#: templates/admin/password_reset_done.html:6
+#: templates/admin/password_reset_form.html:6
+#: templates/enterlink/notifications/index.html:61
+#: templates/enterlink/notifications/index.html:94
+msgid "Home"
+msgstr "หน้าแรก"
+
+#: templates/admin/base_site.html:4
+msgid "Django site admin"
+msgstr "แอดมินเว็บไซต์ Django"
+
+#: templates/admin/base_site.html:7
+msgid "Django administration"
+msgstr "การจัดการ Django"
+
+#: templates/admin/logged_out.html:8
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr "ขอบคุณที่ใช้เวลาอันมีคุณภาพของคุณกับเว็บไซต์วันนี้"
+
+#: templates/admin/logged_out.html:10
+msgid "Log in again"
+msgstr "เข้าสู่ระบบอีกครั้ง"
+
+#: templates/admin/password_change_done.html:46
+#: templates/admin/password_change_form.html:48
+#: templates/enterlink/edit.html:145 templates/enterlink/search-iframe.html:122
+#: templates/enterlink/search.html:27 templates/enterlink/user.html:220
+msgid "Search Everipedia"
+msgstr "ค้นหา Everipedia"
+
+#: templates/admin/password_change_done.html:60
+#: templates/admin/password_change_form.html:62
+#: templates/admin/password_reset_complete.html:19
+#: templates/enterlink/headers/index_header.html:135
+#: templates/enterlink/headers/index_header.html:168
+#: templates/enterlink/headers/index_header.html:240
+#: templates/enterlink/headers/index_header.html:262
+#: templates/enterlink/login.html:45
+msgid "Log in"
+msgstr "เข้าสู่ระบบ"
+
+#: templates/admin/password_change_done.html:71
+msgid "Password change successful"
+msgstr "เปลี่ยนรหัสผ่านสำเร็จแล้ว"
+
+#: templates/admin/password_reset_complete.html:7
+#: templates/admin/password_reset_confirm.html:11
+#: templates/admin/password_reset_done.html:7
+#: templates/admin/password_reset_form.html:7
+#: templates/admin/password_reset_form.html:11
+#: templates/admin/password_reset_form.html:15
+msgid "Password reset"
+msgstr "ตั้งรหัสผ่านใหม่"
+
+#: templates/admin/password_reset_complete.html:11
+#: templates/admin/password_reset_complete.html:15
+msgid "Password reset complete"
+msgstr "ตั้งรหัสผ่านใหม่เสร็จสมบูรณ์"
+
+#: templates/admin/password_reset_complete.html:17
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr "ตั้งรหัสผ่านของคุณแล้ว คุณสามารถเข้าสู่ระบบได้ตอนนี้"
+
+#: templates/admin/password_reset_confirm.html:7
+msgid "Password reset confirmation"
+msgstr "ยืนยันการตั้งรหัสผ่านใหม่"
+
+#: templates/admin/password_reset_confirm.html:17
+msgid "Enter new password"
+msgstr "กรอกรหัสผ่านใหม่"
+
+#: templates/admin/password_reset_confirm.html:19
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr "โปรดกรอกรหัสผ่านใหม่สองครั้งเพื่อให้เราสามารถยืนยันว่าคุณพิมพ์รหัสผ่านถูกต้อง"
+
+#: templates/admin/password_reset_confirm.html:23
+msgid "New password:"
+msgstr "รหัสผ่านใหม่:"
+
+#: templates/admin/password_reset_confirm.html:25
+msgid "Confirm password:"
+msgstr "ยืนยันรหัสผ่าน:"
+
+#: templates/admin/password_reset_confirm.html:26
+msgid "Change my password"
+msgstr "เปลี่ยนรหัสผ่านของฉัน"
+
+#: templates/admin/password_reset_confirm.html:31
+msgid "Password reset unsuccessful"
+msgstr "ตั้งรหัสผ่านใหม่ไม่สำเร็จ"
+
+#: templates/admin/password_reset_confirm.html:33
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+"ลิงค์สำหรับการตั้งรหัสผ่านใหม่ไม่ถูกต้องอาจเป็นเพราะลิงค์มีการใช้งานไปแล้ว โปรดขอตั้งรหัสผ่านใหม่"
+
+#: templates/admin/password_reset_done.html:11
+#: templates/admin/password_reset_done.html:15
+msgid "Password reset successful"
+msgstr "การตั้งรหัสผ่านใหม่สำเร็จ"
+
+#: templates/admin/password_reset_done.html:17
+msgid ""
+"We have emailed you instructions for setting your password. You should be "
+"receiving them shortly."
+msgstr "เราได้ส่งอีเมลขั้นตอนการตั้งรหัสผ่านของคุณ คุณจะได้รับอีเมลเร็ว ๆ นี้"
+
+#: templates/admin/password_reset_done.html:19
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+"หากคุณไม่ได้รับอีเมล "
+"โปรดตรวจสอบว่าคุณได้กรอกอีเมลที่คุณใช้ลงทะเบียนและตรวจสอบโฟลเดอร์สแปมของคุณ"
+
+#: templates/admin/password_reset_email.html:2
+msgid ""
+"You are receiving this email because you requested a password reset for your "
+"Everipedia account."
+msgstr "คุณได้รับอีเมลนี้เพราะคุณขอตั้งรหัสผ่านใหม่สำหรับบัญชี Everipedia ของคุณ"
+
+#: templates/admin/password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr "โปรดไปยังหน้าต่อไปนี้และเลือกรหัสผ่านใหม่:"
+
+#: templates/admin/password_reset_email.html:8
+msgid "Your username, in case you've forgotten:"
+msgstr "ชื่อผู้ใช้ของคุณในกรณีที่คุณลืม:"
+
+#: templates/admin/password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr "ขอบคุณที่ใช้เว็บไซต์ของเรา!"
+
+#: templates/admin/password_reset_form.html:17
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr "ลืมรหัสผ่านใช่ไหม กรอกอีเมลของคุณด้านล่างและเราจะส่งอีเมลขั้นตอนการตั้งรหัสผ่านใหม่"
+
+#: templates/admin/password_reset_form.html:21
+msgid "Email address:"
+msgstr "อีเมล"
+
+#: templates/admin/password_reset_form.html:21
+msgid "Reset my password"
+msgstr "ตั้งรหัสผ่านใหม่"
+
+#: templates/email/sanger_announcement.html:276
+#: templates/email/welcome_email.html:264
+#: templates/email/welcome_email_old.html:68
+#: templates/enterlink/welcome.html:33
+msgid "Learn More"
+msgstr "เรียนรู้เพิ่มเติม"
+
+#: templates/email/welcome_email.html:257
+msgid "View My Profile"
+msgstr "ดูโปรไฟล์ของฉัน"
+
+#: templates/email/welcome_email_old.html:67
+#: templates/enterlink/welcome.html:28 templates/enterlink/welcome.html:30
+msgid "Create a Wiki"
+msgstr "สร้าง Wiki"
+
+#: templates/endless/show_more.html:5
+msgid "more"
+msgstr "เพิ่มเติม"
+
+#: templates/enterlink/ajax_infobox_singlet.html:14
+#: templates/enterlink/ajax_infobox_singlet.html:42
+msgid "Add Row"
+msgstr ""
+
+#: templates/enterlink/ajax_infobox_singlet.html:17
+#: templates/enterlink/ajax_infobox_singlet.html:45
+msgid "Schema"
+msgstr ""
+
+#: templates/enterlink/ajax_infobox_singlet.html:21
+#: templates/enterlink/ajax_infobox_singlet.html:49
+msgid "Schema Type"
+msgstr ""
+
+#: templates/enterlink/ajax_infobox_singlet.html:25
+#: templates/enterlink/ajax_infobox_singlet.html:53
+msgid "Subschema"
+msgstr ""
+
+#: templates/enterlink/ajax_link_singlet.html:25
+msgid "Social Media"
+msgstr ""
+
+#: templates/enterlink/ajax_link_singlet.html:27
+msgid "Attributes"
+msgstr ""
+
+#: templates/enterlink/ajax_link_singlet.html:29
+#: templates/enterlink/ajax_media_gallery_singlet.html:33
+msgid "Timestamp"
+msgstr ""
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:14
+#: templates/enterlink/ajax_media_gallery_singlet.html:19
+#: templates/enterlink/ajaxresults.html:104
+#: templates/enterlink/hoverlink_iframe_blockchain.html:97
+#: templates/enterlink/template_blockchain_styled_desktop.html:415
+#: templates/enterlink/template_blockchain_styled_desktop.html:438
+#: templates/enterlink/template_photos_amp_json_blockchain.html:79
+msgid "Your browser does not support HTML5 video."
+msgstr "เบราว์เซอร์ของคุณไม่รองรับวิดีโอ HTML5"
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:29
+msgid "Type"
+msgstr ""
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:31
+msgid "MIME Type"
+msgstr ""
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:37
+msgid "Original URL"
+msgstr ""
+
+#: templates/enterlink/ajaxresults.html:57
+msgid "Click to add a new link or file to this list"
+msgstr "คลิกเพื่อเพิ่มลิงก์หรือไฟล์ใหม่ลงในรายการนี้"
+
+#: templates/enterlink/ajaxresults.html:60
+msgid "Or click an existing link below to add it to the article"
+msgstr "หรือคลิกลิงก์ที่มีอยู่ด้านล่างเพื่อเพิ่มลงในบทความ"
+
+#: templates/enterlink/ajaxresults.html:135
+#: templates/enterlink/ajaxresults.html:192
+#: templates/enterlink/template_blockchain_styled_desktop.html:167
+msgid "Views"
+msgstr "มุมมอง"
+
+#: templates/enterlink/ajaxresults.html:157
+#: templates/enterlink/hovereditor_ajax.html:74
+msgid "IQ"
+msgstr "ระดับเชาวน์ปัญญา"
+
+#: templates/enterlink/ajaxresults.html:175
+msgid "page(s) have this link"
+msgstr "หน้าเว็บมีลิงก์นี้"
+
+#: templates/enterlink/analytics.html:7 templates/enterlink/faq.html:6
+msgid "Frequently Asked Questions - Everipedia, everyone's encyclopedia"
+msgstr "คำถามที่พบบ่อย - Everipedia สารานุกรมของทุกคน"
+
+#: templates/enterlink/brainpowermgmt.html:4
+#: templates/enterlink/brainpowermgmt.html:114
+msgid "Brainpower Management"
+msgstr "การจัดการกำลังคน"
+
+#: templates/enterlink/brainpowermgmt.html:4 templates/enterlink/contact.html:7
+#: templates/enterlink/edit.html:7 templates/enterlink/editing-disabled.html:7
+#: templates/enterlink/editors.html:23
+#: templates/enterlink/exchange-listings.html:7
+#: templates/enterlink/headers/index_header.html:17
+#: templates/enterlink/headers/index_header.html:18
+#: templates/enterlink/inbox.html:12 templates/enterlink/index.html:7
+#: templates/enterlink/leadership.html:7
+#: templates/enterlink/limitreached.html:7 templates/enterlink/login.html:7
+#: templates/enterlink/recent-activity.html:7
+#: templates/enterlink/register.html:6 templates/enterlink/rewardsmgmt.html:4
+#: templates/enterlink/search.html:7 templates/enterlink/transfer-iq.html:5
+#: templates/enterlink/user.html:12 templates/enterlink/votehistory.html:7
+msgid "Everipedia, the encyclopedia of everything"
+msgstr "Everipedia สารานุกรมของทุกสิ่งทุกอย่าง"
+
+#: templates/enterlink/brainpowermgmt.html:101 templates/enterlink/edit.html:89
+#: templates/enterlink/rewardsmgmt.html:119
+#: templates/enterlink/transfer-iq.html:106 templates/enterlink/voting.html:180
+msgid "Loading Scatter"
+msgstr "กำลังโหลด Scatter"
+
+#: templates/enterlink/brainpowermgmt.html:117
+msgid ""
+"Staking IQ tokens will freeze them for 21 days and will generate "
+"nontransferable Brainpower, which can be used for editing and voting on the "
+"Everipedia network. At the end of the 21 days, you can claim back your IQ "
+"tokens and re-stake them for more Brainpower again. Thus, 1 IQ, staked every "
+"21 days, can lead to 365 days / 21 days = 17.38 Brainpower every year."
+msgstr ""
+"การเดิมพันโทเคน IQ จะพักโทเคนเหล่านั้นเป็นเวลา 21 วันและจะสร้าง Brainpower "
+"ที่ย้ายโอนไม่ได้ พลังนี้สามารถใช้แก้ไขหรือโหวตบน เครือข่าย Everipedia เมื่อครบกำหนด 21 "
+"วันแล้ว คุณจะขอโทเคน IQ ของคุณคืนได้และเดิมพันโทเคนเพื่อรับ Brainpower ได้ใหม่อีก "
+"ดังนั้นโทเคน IQ 1 อัน เดิมพันทุก 21 วัน คิดเป็น 365 วัน หารด้วย 21 วัน เท่ากับ 17.38 "
+"Brainpower แต่ละปี"
+
+#: templates/enterlink/brainpowermgmt.html:118
+msgid ""
+"As you make pages, propose edits, and vote on article proposals, you will "
+"consume Brainpower. However, making successful edits and voting on the "
+"winning side of a proposal will generate rewards in IQ, not Brainpower. "
+"Therefore, you can generate more Brainpower (and any profit) by staking the "
+"new IQ you just earned."
+msgstr ""
+"เมื่อคุณสร้างเพจ แก้ไขหรือโหวตโครงร่างบทความ คุณ ใช้ Brainpower อย่างไรก็ตาม "
+"การแก้ไขที่ประสบความสำเร็จหรือโหวตให้กับฝ่ายที่ชนะของโครงร่างบทความจะได้รางวัลโทเคน IQ "
+"จะไม่ได้ Brainpower ดังนั้น คุณสามารถสร้าง Brainpower (หรือกำไรอื่น ๆ) "
+"เพิ่มได้โดยการเดิมพัน IQ ใหม่ที่คุณเพิ่งได้รับ"
+
+#: templates/enterlink/brainpowermgmt.html:119
+msgid ""
+"Every edit proposal requires a minimum of 10 Brainpower at this time, in "
+"order to prevent spam and poor-quality edits."
+msgstr ""
+"ตอนนี้ต้องมีอย่างน้อย 10 Brainpower "
+"ถึงจะแก้ไขโครงร่างบทความแต่ละอันได้เพื่อป้องกันสแปมและการแก้ไขคุณภาพต่ำ"
+
+#: templates/enterlink/brainpowermgmt.html:122
+msgid "Enter an integer amount of IQ to stake"
+msgstr "กรอกจำนวนโทเคน IQ ที่ต้องเดิมพัน"
+
+#: templates/enterlink/brainpowermgmt.html:123
+msgid "New Stake"
+msgstr "เดิมพันใหม่"
+
+#: templates/enterlink/brainpowermgmt.html:128
+msgid "Start"
+msgstr "เริ่ม"
+
+#: templates/enterlink/brainpowermgmt.html:129
+msgid "End"
+msgstr "สิ้นสุด"
+
+#: templates/enterlink/brainpowermgmt.html:130
+#: templates/enterlink/voting_table_of_contents.html:40
+msgid "Time Remaining"
+msgstr "เวลาที่เหลือ:"
+
+#: templates/enterlink/brainpowermgmt.html:131
+#: templates/enterlink/transfer-iq.html:127
+msgid "Amount"
+msgstr "จำนวน"
+
+#: templates/enterlink/brainpowermgmt.html:132
+msgid "Claim"
+msgstr "รับ"
+
+#: templates/enterlink/contact.html:7 templates/enterlink/contact.html:24
+msgid "Contact us"
+msgstr "ติดต่อเรา"
+
+#: templates/enterlink/contact.html:20
+msgid "To get quicker replies from our community"
+msgstr "เพื่อให้ได้รับคำตอบที่รวดเร็วขึ้นจากชุมชนของเรา"
+
+#: templates/enterlink/contact.html:20
+msgid "create a post in our forum"
+msgstr "สร้างโพสต์ในเว็บบอร์ดของเรา"
+
+#: templates/enterlink/contact.html:25
+msgid "Get in touch with us"
+msgstr "ติดต่อเราได้ที่"
+
+#: templates/enterlink/contact.html:33
+msgid "Thanks, we got your message. We will respond in a bit"
+msgstr "ขอบคุณ เราได้รับข้อความของคุณ เราจะตอบกลับในไม่ช้า"
+
+#: templates/enterlink/contact.html:41 templates/enterlink/transfer-iq.html:131
+msgid "Send"
+msgstr "ส่ง"
+
+#: templates/enterlink/dropzone.html:140 templates/enterlink/edit.html:167
+#: templates/enterlink/edit.html:176 templates/enterlink/edit.html:185
+#: templates/enterlink/edit.html:195 templates/enterlink/edit.html:204
+msgid "OK"
+msgstr "ตกลง"
+
+#: templates/enterlink/dropzone.html:141
+msgid "Enter a caption for the main image of the page."
+msgstr "กรอกคำอธิบายภาพสำหรับภาพหลักของหน้าเว็บ"
+
+#: templates/enterlink/edit.html:7
+msgid "Edit Page"
+msgstr "แก้ไขหน้า"
+
+#: templates/enterlink/edit.html:85
+msgid "Loading.."
+msgstr "กำลังโหลด.."
+
+#: templates/enterlink/edit.html:128
+msgid "Change Picture"
+msgstr "เปลี่ยนรูปภาพ"
+
+#: templates/enterlink/edit.html:144
+msgid "Please enter the destination page you wish to merge this one into"
+msgstr "โปรดกรอกหน้าปลายทางที่คุณต้องการรวมเข้า"
+
+#: templates/enterlink/edit.html:149
+msgid "Merge Page"
+msgstr "รวมหน้า"
+
+#: templates/enterlink/edit.html:156 templates/enterlink/edit.html:165
+#: templates/enterlink/edit.html:174 templates/enterlink/edit.html:183
+#: templates/enterlink/edit.html:192 templates/enterlink/edit.html:202
+msgid "Hey there scholar!"
+msgstr "หวัดดี นักวิชาการ!"
+
+#: templates/enterlink/edit.html:157
+msgid ""
+"Looks like you have been editing for a while. You should take a moment to "
+"save your work before continuing!"
+msgstr "ดูเหมือนว่าคุณได้แก้ไขอยู่พักหนึ่ง คุณควรบันทึกงานของคุณก่อนดำเนินการต่อ!"
+
+#: templates/enterlink/edit.html:158
+msgid "Save"
+msgstr "บันทึก"
+
+#: templates/enterlink/edit.html:166
+msgid ""
+"Looks like you are using first-person! (ex: Our product, I am, We are, You "
+"should). Everipedia is a neutral encyclopedia written in third-person tense "
+"(ex: It is, They are, The company makes). THIS IS NOT FACEBOOK!!"
+msgstr ""
+"ดูเหมือนว่าคุณใช้สรรพนามบุรุษที่หนึ่งอยู่ (เช่น: ผลิตภัณฑ์ของเรา ฉันคือ เราคือ คุณควร) Everipedia "
+"เป็นสารานุกรมที่เป็นกลางที่ใช้สรรพนามบุรุษที่สาม(เช่น นั้นคือ พวกเขาคือ บริษัทสร้าง) ที่นี่ไม่ใช่ "
+"FACEBOOK!!"
+
+#: templates/enterlink/edit.html:175
+msgid "Please enter a title for the page."
+msgstr "โปรดใส่ชื่อหน้า"
+
+#: templates/enterlink/edit.html:184
+msgid ""
+"Please write something for the article section. Make sure to use citations."
+msgstr "โปรดใส่เนื้อหาสำหรับบทความส่วนนี้ ตรวจสอบให้แน่ใจว่าคุณใส่อ้างอิง"
+
+#: templates/enterlink/edit.html:193
+msgid ""
+"Hello! This page needs citations (also known as footnotes, references, "
+"sources) before it can be saved. Add the links you're using as sources with "
+"the cite button above."
+msgstr ""
+"สวัสดี! หน้านี้ต้องการอ้างอิง (เรียกอีกอย่างว่าเชิงอรรถหรือการอ้างอิงแหล่งที่มา) "
+"ก่อนที่จะสามารถบันทึกได้ เพิ่มลิงก์ที่คุณใช้เป็นแหล่งที่มาด้วยปุ่มอ้างอิงด้านบน"
+
+#: templates/enterlink/edit.html:194
+msgid "Join our official Facebook group if you need help with it!:"
+msgstr "เข้าร่วมกลุ่ม Facebook ทางการของเราหากคุณต้องการความช่วยเหลือ!:"
+
+#: templates/enterlink/edit.html:194
+msgid "- we will hook you up. It's not hard!"
+msgstr "- เราจะติดต่อคุณ ไม่ใช่เรื่องยาก!"
+
+#: templates/enterlink/edit.html:203
+msgid ""
+"Please cite the link(s) you just added into the main article body. First "
+"click at the end of the sentence or paragraph you want to cite, then click "
+"the (Cite) button on the edit panel above!"
+msgstr ""
+"โปรดอ้างอิงลิงค์ที่คุณเพิ่งเพิ่มลงในเนื้อหาบทความหลัก "
+"ขั้นตอนแรกให้คลิกที่ท้ายประโยคหรือย่อหน้าที่คุณต้องการอ้างอิงแล้วคลิกปุ่ม (Cite) ในแผงแก้ไขด้านบน!"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:10
+msgid "Add New Infobox Item"
+msgstr "เพิ่มไอเทม Infobox ใหม่"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:14
+msgid "Enter a classification or category"
+msgstr "ใส่ประเภทหรือหมวดหมู่"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:17
+msgid "Enter a value or a description"
+msgstr "ใส่จำนวนหรือคำอธิบาย"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:23
+msgid "Add Infobox Item"
+msgstr "เพิ่มไอเทม Infobox"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:25
+#: templates/enterlink/edit_ajax_addlink.html:26
+#: templates/enterlink/edit_ajax_editpagemeta.html:15
+#: templates/enterlink/edit_ajax_page_photo.html:4
+msgid "Close"
+msgstr "ปิด"
+
+#: templates/enterlink/edit_ajax_addlink.html:7
+msgid "Add a Link or File"
+msgstr "เพิ่มลิงก์หรือไฟล์"
+
+#: templates/enterlink/edit_ajax_addlink.html:9
+msgid "File"
+msgstr "ไฟล์"
+
+#: templates/enterlink/edit_ajax_addlink.html:10
+msgid "URL"
+msgstr "URL"
+
+#: templates/enterlink/edit_ajax_addlink.html:10
+msgid "Link"
+msgstr "ลิงค์"
+
+#: templates/enterlink/edit_ajax_addlink.html:14
+msgid "Upload file"
+msgstr "อัพโหลดไฟล์"
+
+#: templates/enterlink/edit_ajax_addlink.html:24
+msgid "Add Link"
+msgstr "เพิ่มลิงค์"
+
+#: templates/enterlink/edit_ajax_editmainphoto.html:7
+msgid "Reset"
+msgstr "ตั้งค่าใหม่"
+
+#: templates/enterlink/edit_ajax_editpagemeta.html:4
+msgid "Select the topic of this page"
+msgstr "เลือกหัวข้อของหน้านี้"
+
+#: templates/enterlink/edit_ajax_editpagemeta.html:8
+msgid "Remove page"
+msgstr "ลบหน้า"
+
+#: templates/enterlink/editing-disabled.html:7
+msgid "Editing existing pages temporarily disabled"
+msgstr "กำลังแก้ไขหน้า ระงับชั่วคราว"
+
+#: templates/enterlink/editors.html:23
+msgid "Editors"
+msgstr "บรรณาธิการ"
+
+#: templates/enterlink/editors.html:74
+msgid "Everipedia Editors"
+msgstr "บรรณาธิการของ Everipedia"
+
+#: templates/enterlink/editors.html:93 templates/enterlink/inbox.html:52
+#: templates/enterlink/recent-activity.html:103
+#: templates/enterlink/search.html:89
+msgid "Previous"
+msgstr "ก่อนหน้า"
+
+#: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
+#: templates/enterlink/recent-activity.html:107
+#: templates/enterlink/search.html:93
+msgid "Page"
+msgstr "หน้า"
+
+#: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
+#: templates/enterlink/recent-activity.html:107
+#: templates/enterlink/search.html:93
+msgid "of"
+msgstr "จาก"
+
+#: templates/enterlink/editors.html:101 templates/enterlink/inbox.html:60
+#: templates/enterlink/recent-activity.html:111
+#: templates/enterlink/search.html:97
+msgid "Next"
+msgstr "ถัดไป"
+
+#: templates/enterlink/error.html:6
+msgid "Page not found!"
+msgstr "ไม่พบหน้านี้!"
+
+#: templates/enterlink/error.html:211
+msgid "Page not found"
+msgstr "ไม่พบหน้า"
+
+#: templates/enterlink/error.html:213
+msgid "In The News"
+msgstr "ในข่าว"
+
+#: templates/enterlink/error.html:214
+#: templates/enterlink/headers/header_dropdown.html:37
+#: templates/enterlink/recent-activity.html:7
+#: templates/enterlink/recent-activity.html:73
+#: templates/enterlink/user.html:192
+msgid "Recent Activity"
+msgstr "กิจกรรมล่าสุด"
+
+#: templates/enterlink/error_410.html:6 templates/enterlink/error_410.html:62
+msgid "This page has been removed"
+msgstr "ลบหน้านี้ไปแล้ว"
+
+#: templates/enterlink/error_410.html:63
+#: templates/enterlink/in_progress_404.html:86
+msgid "Click here to return to recent activity"
+msgstr "คลิกที่นี่เพื่อกลับสู่กิจกรรมล่าสุด"
+
+#: templates/enterlink/exchange-listings.html:7
+msgid "Exchange Listings"
+msgstr "รายชื่อการแลกเปลี่ยน"
+
+#: templates/enterlink/exchange-listings.html:17
+msgid "Supported Exchanges"
+msgstr "การแลกเปลี่ยนที่รองรับ"
+
+#: templates/enterlink/exchange-listings.html:18
+msgid "The following exchanges indicated that they will support the IQ airdrop"
+msgstr "การแลกเปลี่ยนต่อไปนี้ระบุว่าพวกเขาจะรองรับ IQ airdrop"
+
+#: templates/enterlink/exchange-listings.html:142
+msgid "Supported Wallets"
+msgstr " Wallet ที่รองรับ"
+
+#: templates/enterlink/exchange-listings.html:176
+msgid "Token Pockets"
+msgstr "Token Pockets"
+
+#: templates/enterlink/faq.html:20
+msgid "Frequently Asked Questions"
+msgstr "คำถามที่พบบ่อย"
+
+#: templates/enterlink/faq.html:24
+msgid "What is Everipedia?"
+msgstr "Everipedia คืออะไร?"
+
+#: templates/enterlink/faq.html:25
+msgid ""
+"Everipedia is a knowledge aggregator and knowledge base. We think it's much "
+"easier to edit than Wikipedia. Anyone can create a page about any person, "
+"place, organization, or thing and populate it with relevant reference links/"
+"sources. The only main rules of EP are: Information on the page must always "
+"be cited and the article must be in a neutral point of view. Check out the "
+"actual entry for Everipedia... on"
+msgstr ""
+"Everipedia เป็นตัวแทนและฐานรวบรวมองค์ความรู้ เราคิดว่า Everipedia  แก้ไขง่ายกว่า "
+"Wikipedia ทุกคนสามารถสร้างหน้าเว็บเกี่ยวกับบุคคลสถานที่ องค์กรหรือสิ่งต่างๆ "
+"และเติมข้อมูลพร้อมลิงค์/ แหล่งอ้างอิงที่เกี่ยวข้อง กฎหลักอย่างเดียวของ EP "
+"คือข้อมูลที่อยู่บนหน้าเว็บต้อง มีการอ้างอิงและบทความต้องเป็นกลางเสมอ เข้าไปดู "
+"รายการที่เกิดขึ้นจริงสำหรับ Everipedia ... ได้บน"
+
+#: templates/enterlink/faq.html:27
+msgid "Why should I sign up?"
+msgstr "เหตุใดฉันจึงควรลงทะเบียน"
+
+#: templates/enterlink/faq.html:28
+msgid ""
+"Because it’s fun and easy! We thought contributing to large knowledge "
+"projects shouldn't require high barriers to entry so we made Everipedia very "
+"easy to navigate, edit, and get started. Editors gain more privileges as "
+"they accumulate IQ and rise through the ranks. Top site-wide editors are "
+"displayed on the front page. Top editors for each page are also displayed."
+msgstr ""
+"เพราะสนุกและง่าย! เราคิดว่าการมีส่วนร่วมในโครงการความรู้ใหม่ไม่ควรต้องมีขีดกั้นที่สูงเกินเข้าร่วม "
+"เราจึงสร้างให้ Everipediaใช้งานง่าย แก้ไขง่ายและเริ่มใช้งานได้ง่าย "
+"บรรณาธิการทั้งหมดได้รับสิทธิประโยชน์มากขึ้น เมื่อพวกเขาสะสม IQ และไต่เต้าไปตามระดับงาน "
+"บรรณาธิการยอดนิยมของเว็บไซต์จะมีชื่อปรากฏอยู่ในหน้าแรก "
+"บรรณาธิการยอดนิยมของแต่ละหน้าเว็บจะมีชื่อปรากฎด้วยเช่นกัน"
+
+#: templates/enterlink/faq.html:30
+msgid "Try it!"
+msgstr "ลองเลย!"
+
+#: templates/enterlink/faq.html:30
+msgid "Sign up here"
+msgstr "สมัครสมาชิกที่นี่"
+
+#: templates/enterlink/faq.html:32
+msgid "So how is Everipedia different from Wikipedia and similar sites?"
+msgstr "แล้ว Everipedia แตกต่างจาก Wikipedia และเว็บไซต์ที่คล้ายกันอย่างไร"
+
+#: templates/enterlink/faq.html:33
+msgid ""
+"Editing on Everipedia is graphic and modern, talk pages are designed as "
+"discussion threads, celebrities have verified accounts, and anyone can make "
+"pages about anything as long as they are properly cited. Every page from "
+"Wikipedia is already here on Everipedia to build on top of and improve. All "
+"this makes EP the biggest knowledge project ever!"
+msgstr ""
+"การแก้ไขบน Everipedia เป็นรูปแบบและทันสมัย "
+"หน้าเว็บพูดคุยได้รับการออกแบบให้เป็นหัวข้อการสนทนา "
+"คนดังจะมีบัญชียืนยันตัวตนและทุกคนสามารถสร้างหน้าเว็บเกี่ยวกับทุกอย่างได้ตราบเท่าที่มีการอ้างอิงอย่างถูกต้อง "
+"หน้าเว็บของ Wikipedia มาอยู่บน Everipedia เรียบร้อยแล้วเพื่อสร้างและปรับปรุง ทั้งหมดนี้ทำให้ "
+"EP เป็นโครงการความรู้ที่ใหญ่ที่สุดเท่าที่เคยมีมา!"
+
+#: templates/enterlink/faq.html:35
+msgid "Is Everipedia free?"
+msgstr "Everipedia เป็นฟรีหรือไม่"
+
+#: templates/enterlink/faq.html:36
+msgid ""
+"All information found on Everipedia is freely available for anyone to use "
+"and access. All we ask is a link back to the source Everipedia page for "
+"attribution purposes. The information on this encyclopedia is meant to be "
+"free to all. We will never charge for or withhold any of the information on "
+"this website. We just ask that you do not throttle the site and "
+"programmatically harvest information that would dramatically affect our "
+"servers."
+msgstr ""
+"ข้อมูลทั้งหมดที่พบใน Everipedia ใช้และเข้าถึงได้ฟรีทุกคน สิ่งเดียวที่เราขอคือลิงค์ที่มาของหน้าเว็บ "
+"Everipedia เพื่อจุดประสงค์ของความเป็นมา ข้อมูลที่อยู่บนสารานุกรมนี้ฟรีสำหรับทุกคน "
+"เราจะไม่คิดค่าใช้จ่ายหรือจำกัดข้อมูลใด ๆ บนเว็บไซต์นี้ "
+"เราแค่อยากขอให้คุณไม่รบกวนและเก็บข้อมูลเชิงโปรแกรมที่จะส่งผลกระทบต่อเซิร์ฟเวอร์ของเรา"
+
+#: templates/enterlink/faq.html:42
+msgid "Much love,"
+msgstr "ด้วยรัก,"
+
+#: templates/enterlink/footers/desktop_footer.html:5
+#: templates/enterlink/footers/footer_no_extras.html:5
+#: templates/enterlink/footers/index_footer.html:23
+#: templates/enterlink/footers/mobile_footer.html:130
+#: templates/enterlink/template_blockchain_styled_amp.html:548
+msgid "About"
+msgstr "เกี่ยวกับ"
+
+#: templates/enterlink/footers/desktop_footer.html:6
+#: templates/enterlink/footers/footer_no_extras.html:6
+#: templates/enterlink/footers/index_footer.html:7
+#: templates/enterlink/footers/index_footer.html:25
+#: templates/enterlink/footers/mobile_footer.html:131
+#: templates/enterlink/template_blockchain_styled_amp.html:549
+msgid "FAQ"
+msgstr "คำถามที่ถามบ่อย"
+
+#: templates/enterlink/footers/desktop_footer.html:7
+#: templates/enterlink/footers/footer_no_extras.html:7
+#: templates/enterlink/footers/index_footer.html:8
+#: templates/enterlink/footers/index_footer.html:26
+#: templates/enterlink/footers/mobile_footer.html:132
+#: templates/enterlink/template_blockchain_styled_amp.html:550
+msgid "Contact"
+msgstr "ติดต่อเรา"
+
+#: templates/enterlink/footers/desktop_footer.html:8
+#: templates/enterlink/footers/footer_no_extras.html:9
+#: templates/enterlink/footers/index_footer.html:9
+#: templates/enterlink/footers/index_footer.html:27
+#: templates/enterlink/footers/mobile_footer.html:136
+#: templates/enterlink/template_blockchain_styled_amp.html:552
+msgid "Terms"
+msgstr "ข้อกำหนด"
+
+#: templates/enterlink/footers/desktop_footer.html:9
+#: templates/enterlink/footers/footer_no_extras.html:10
+#: templates/enterlink/footers/index_footer.html:10
+#: templates/enterlink/footers/index_footer.html:28
+#: templates/enterlink/footers/mobile_footer.html:134
+#: templates/enterlink/headers/header_dropdown.html:17
+#: templates/enterlink/headers/header_dropdown.html:38
+#: templates/enterlink/headers/index_header.html:164
+#: templates/enterlink/headers/index_header.html:173
+#: templates/enterlink/headers/index_header.html:233
+#: templates/enterlink/headers/index_header.html:242
+#: templates/enterlink/headers/index_header.html:264
+#: templates/enterlink/headers/mobile-navbar.html:131
+#: templates/enterlink/headers/mobile-navbar.html:198
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:190
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:238
+#: templates/enterlink/template_blockchain_styled_amp.html:551
+#: templates/enterlink/template_blockchain_styled_amp.html:629
+#: templates/enterlink/template_blockchain_styled_amp.html:687
+msgid "Forum"
+msgstr "เว็บบอร์ด"
+
+#: templates/enterlink/footers/desktop_footer.html:10
+#: templates/enterlink/footers/footer_no_extras.html:11
+#: templates/enterlink/footers/index_footer.html:11
+#: templates/enterlink/footers/index_footer.html:29
+#: templates/enterlink/footers/mobile_footer.html:137
+#: templates/enterlink/headers/header_dropdown.html:18
+#: templates/enterlink/headers/header_dropdown.html:40
+#: templates/enterlink/template_blockchain_styled_amp.html:553
+msgid "Get IQ"
+msgstr "รับ IQ"
+
+#: templates/enterlink/footers/desktop_footer.html:30
+#: templates/enterlink/footers/footer_no_extras.html:31
+#: templates/enterlink/footers/mobile_footer.html:157
+#: templates/enterlink/template_blockchain_styled_amp.html:577
+msgid "Powered by"
+msgstr "พัฒนาโดย"
+
+#: templates/enterlink/footers/desktop_footer.html:35
+#: templates/enterlink/footers/footer_no_extras.html:36
+#: templates/enterlink/footers/mobile_footer.html:161
+#: templates/enterlink/template_blockchain_styled_amp.html:581
+msgid "API by"
+msgstr "API โดย"
+
+#: templates/enterlink/footers/desktop_footer.html:43
+#: templates/enterlink/footers/footer_no_extras.html:44
+#: templates/enterlink/headers/desktop-navbar-index.html:6
+#: templates/enterlink/headers/index_header.html:93
+#: templates/enterlink/language_selector.html:80
+msgid "Select language"
+msgstr "เลือกภาษา"
+
+#: templates/enterlink/footers/forum_footer.html:6
+#: templates/enterlink/footers/pm_footer.html:6
+msgid "Enter a title for the thread"
+msgstr "ใส่หัวข้อสำหรับข้อความนี้"
+
+#: templates/enterlink/footers/forum_footer.html:7
+msgid "Enter your post here"
+msgstr "ใส่โพสต์ของคุณที่นี่"
+
+#: templates/enterlink/footers/forum_footer.html:8
+#: templates/enterlink/footers/pm_footer.html:7
+msgid "Create New Thread"
+msgstr "สร้างหัวข้อใหม่"
+
+#: templates/enterlink/footers/index_footer.html:5
+msgid "About Everipedia"
+msgstr "เกี่ยวกับ Everipedia"
+
+#: templates/enterlink/footers/index_footer.html:6
+#: templates/enterlink/footers/index_footer.html:24
+msgid "How To Use"
+msgstr "วิธีการใช้"
+
+#: templates/enterlink/footers/index_footer.html:12
+#: templates/enterlink/footers/index_footer.html:30
+#: templates/enterlink/footers/mobile_footer.html:133
+msgid "Donate"
+msgstr "บริจาค"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:559
+msgid "By using this website, you agree to the"
+msgstr "เมื่อใช้เว็บไซต์นี้ถือว่าคุณยอมรับ"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:559
+msgid "Terms of Use"
+msgstr "ข้อกำหนดการใช้บริการ"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:559
+msgid "Everipedia® is a trademark of Everipedia International"
+msgstr "Everipedia® เป็นเครื่องหมายการค้าของ Everipedia International"
+
+#: templates/enterlink/footers/mobile_footer.html:135
+#: templates/enterlink/headers/index_header.html:165
+#: templates/enterlink/headers/index_header.html:174
+#: templates/enterlink/headers/index_header.html:234
+#: templates/enterlink/headers/index_header.html:243
+#: templates/enterlink/headers/index_header.html:265
+#: templates/enterlink/headers/mobile-navbar.html:138
+#: templates/enterlink/headers/mobile-navbar.html:204
+#: templates/enterlink/template_blockchain_styled_amp.html:694
+msgid "Chat"
+msgstr "แชทสด"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:29
+#: templates/enterlink/headers/desktop-navbar.html:39
+#: templates/enterlink/headers/index_header.html:156
+#: templates/enterlink/howto.html:61 templates/enterlink/search.html:7
+msgid "Search"
+msgstr "ค้นหา"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:42
+#: templates/enterlink/headers/desktop-navbar-index.html:50
+#: templates/enterlink/headers/desktop-navbar-index.html:60
+#: templates/enterlink/headers/desktop-navbar.html:20
+#: templates/enterlink/headers/desktop-navbar.html:57
+#: templates/enterlink/headers/desktop-navbar.html:67
+#: templates/enterlink/headers/header_dropdown.html:14
+#: templates/enterlink/headers/header_dropdown.html:36
+#: templates/enterlink/headers/index_header.html:231
+#: templates/enterlink/headers/mobile-navbar.html:145
+#: templates/enterlink/headers/mobile-navbar.html:186
+#: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
+#: templates/enterlink/howto.html:74 templates/enterlink/index.html:64
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:51
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:91
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:196
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:232
+#: templates/enterlink/template_blockchain_styled_amp.html:615
+#: templates/enterlink/template_blockchain_styled_amp.html:701
+#: templates/enterlink/user.html:64
+msgid "Create Page"
+msgstr "สร้างเพจ"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:49
+#: templates/enterlink/headers/desktop-navbar.html:19
+#: templates/enterlink/howto.html:73 templates/enterlink/index.html:63
+msgid "Paste a link or enter a title"
+msgstr "วางลิงก์หรือกรอกชื่อเรื่อง"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:66
+#: templates/enterlink/headers/desktop-navbar.html:73
+#: templates/enterlink/headers/header_dropdown.html:16
+#: templates/enterlink/headers/header_dropdown.html:35
+#: templates/enterlink/headers/index_header.html:162
+#: templates/enterlink/headers/index_header.html:201
+#: templates/enterlink/headers/index_header.html:232
+#: templates/enterlink/headers/mobile-navbar.html:124
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:45
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:184
+#: templates/enterlink/notifications/index.html:67
+#: templates/enterlink/notifications/index.html:97
+#: templates/enterlink/template_blockchain_styled_amp.html:680
+msgid "Messages"
+msgstr "ข้อความ"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:72
+#: templates/enterlink/headers/desktop-navbar.html:79
+#: templates/enterlink/headers/header_dropdown.html:15
+#: templates/enterlink/headers/header_dropdown.html:34
+#: templates/enterlink/headers/index_header.html:206
+#: templates/enterlink/headers/index_header.html:230
+#: templates/enterlink/headers/mobile-navbar.html:117
+#: templates/enterlink/inbox.html:12
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:39
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:178
+#: templates/enterlink/notifications/index.html:96
+#: templates/enterlink/template_blockchain_styled_amp.html:673
+msgid "Notifications"
+msgstr "การแจ้งเตือน"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:84
+#: templates/enterlink/headers/desktop-navbar.html:96
+#: templates/enterlink/headers/index_header.html:217
+msgid "Your IQ Score"
+msgstr "คะแนน IQ ของคุณ"
+
+#: templates/enterlink/headers/desktop-navbar.html:29
+msgid "Table of contents"
+msgstr "สารบัญ"
+
+#: templates/enterlink/headers/desktop-navbar.html:29
+#: templates/enterlink/template_blockchain_styled_amp.html:105
+msgid "Table of contents and facts for this wiki"
+msgstr "สารบัญและข้อเท็จจริงสำหรับ Wiki นี้"
+
+#: templates/enterlink/headers/desktop-navbar.html:62
+#: templates/enterlink/headers/mobile-navbar.html:159
+#: templates/enterlink/headers/mobile-navbar.html:210
+#: templates/enterlink/template_blockchain_styled_amp.html:635
+#: templates/enterlink/template_blockchain_styled_amp.html:715
+msgid "Feed"
+msgstr "ฟีด"
+
+#: templates/enterlink/headers/desktop-navbar.html:87
+msgid "Please log in with Scatter"
+msgstr "กรุณาเข้าสู่ระบบด้วย Scatter"
+
+#: templates/enterlink/headers/header_dropdown.html:8
+#: templates/enterlink/headers/header_dropdown.html:28
+msgid "Claim Rewards"
+msgstr ""
+
+#: templates/enterlink/headers/header_dropdown.html:39
+#: templates/enterlink/headers/mobile-navbar.html:153
+#: templates/enterlink/headers/mobile-navbar.html:192
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:68
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:101
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:208
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:250
+#: templates/enterlink/template_blockchain_styled_amp.html:622
+#: templates/enterlink/template_blockchain_styled_amp.html:708
+#: templates/enterlink/user.html:126
+msgid "Help"
+msgstr "ช่วยเหลือ"
+
+#: templates/enterlink/headers/index_header.html:109
+msgid "View Profile"
+msgstr "ดูโปรไฟล์ของคุณ"
+
+#: templates/enterlink/headers/index_header.html:128
+msgid "Sign In"
+msgstr "ลงชื่อเข้าใช้"
+
+#: templates/enterlink/headers/index_header.html:128
+#: templates/enterlink/headers/index_header.html:172
+#: templates/enterlink/headers/index_header.html:241
+#: templates/enterlink/headers/index_header.html:263
+#: templates/enterlink/index.html:47
+msgid "Register"
+msgstr "สมัครสมาชิก"
+
+#: templates/enterlink/headers/index_header.html:132
+#: templates/enterlink/login.html:36
+msgid "Username"
+msgstr "ชื่อผู้ใช้"
+
+#: templates/enterlink/headers/index_header.html:139
+msgid "Need an account? Register here."
+msgstr "ต้องการสมัครสมาชิก ลงทะเบียนที่นี่!"
+
+#: templates/enterlink/headers/index_header.html:140
+#: templates/enterlink/headers/index_header.html:171
+#: templates/enterlink/login.html:41
+msgid "Forgot your password?"
+msgstr "ลืมรหัสผ่าน ?"
+
+#: templates/enterlink/headers/index_header.html:163
+#: templates/enterlink/inbox.html:23
+msgid "Your Notifications"
+msgstr "การแจ้งเตือนของคุณ"
+
+#: templates/enterlink/headers/index_header.html:222
+msgid "Get an account"
+msgstr "สร้างบัญชี"
+
+#: templates/enterlink/headers/index_header.html:222
+msgid "or Log in"
+msgstr "หรือเข้าสู่ระบบ"
+
+#: templates/enterlink/headers/index_header.html:235
+#: templates/enterlink/headers/index_header.html:244
+#: templates/enterlink/headers/index_header.html:257
+#: templates/enterlink/headers/index_header.html:266
+#: templates/enterlink/headers/mobile-navbar.html:165
+#: templates/enterlink/headers/mobile-navbar.html:216
+#: templates/enterlink/template_blockchain_styled_amp.html:641
+msgid "Language"
+msgstr "ภาษา"
+
+#: templates/enterlink/headers/mobile-navbar.html:178
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:224
+#: templates/enterlink/template_blockchain_styled_amp.html:606
+msgid "Register / Log in"
+msgstr "ลงทะเบียน/เข้าสู่ระบบ"
+
+#: templates/enterlink/hoverblurb_ajax_blockchain.html:65
+msgid "Go to article"
+msgstr "ไปยังบทความ"
+
+#: templates/enterlink/hovereditor_ajax.html:67
+msgid "Self citation by"
+msgstr "การอ้างอิงด้วยตนเองโดย"
+
+#: templates/enterlink/hovereditor_ajax.html:72
+msgid "Title"
+msgstr "ชื่อเรื่อง"
+
+#: templates/enterlink/hovereditor_ajax.html:75
+msgid "Rank"
+msgstr "อันดับ"
+
+#: templates/enterlink/hovereditor_ajax.html:76
+msgid "User since"
+msgstr "ผู้ใช้ตั้งแต่"
+
+#: templates/enterlink/hovereditor_ajax.html:77
+msgid "Last login"
+msgstr "เข้าสู่ระบบครั้งล่าสุด"
+
+#: templates/enterlink/hovereditor_ajax.html:80
+msgid "Go to Editor's Profile"
+msgstr "ไปที่โปรไฟล์บรรณาธิการ"
+
+#: templates/enterlink/hoverlink_ajax_blockchain.html:64
+msgid "Discuss Citation"
+msgstr "พูดคุยเกี่ยวกับการอ้างอิง"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:53
+msgid "Download"
+msgstr "ดาวน์โหลด"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:55
+msgid "Direct Link"
+msgstr "Direct Link"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:64
+#: templates/enterlink/hoverlink_iframe_blockchain.html:65
+#: templates/enterlink/template_blockchain_styled_desktop.html:195
+#: templates/enterlink/template_blockchain_styled_desktop.html:196
+msgid "Share"
+msgstr "แชร์ผ่าน"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:68
+#: templates/enterlink/template_blockchain_styled_desktop.html:202
+msgid "Copy URL"
+msgstr "คัดลอก URL"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:118
+msgid "Play / Pause"
+msgstr "เล่น / พัก"
+
+#: templates/enterlink/howto.html:8 templates/enterlink/howto.html:30
+msgid "How to use Everipedia"
+msgstr "วิธีใช้ Everipedia"
+
+#: templates/enterlink/howto.html:10 templates/enterlink/limitreached.html:9
+msgid ""
+"Everipedia is a free and easy to use wiki platform. Write about anyone and "
+"anything!"
+msgstr "Everipedia เป็นแพลตฟอร์มวิกิพีเดียฟรีและใช้งานง่าย เขียนเกี่ยวกับใครและอะไรก็ได้!"
+
+#: templates/enterlink/howto.html:36 templates/enterlink/howto.html:45
+msgid "Go back to the page you started from"
+msgstr "กลับไปที่หน้าที่คุณเริ่มต้น"
+
+#: templates/enterlink/howto.html:40 templates/enterlink/howto.html:45
+msgid "Go to page"
+msgstr "ไปยังหน้า"
+
+#: templates/enterlink/howto.html:50
+msgid "Go to your editor profile page"
+msgstr "ไปที่หน้าโปรไฟล์บรรณาธิการของคุณ"
+
+#: templates/enterlink/howto.html:50
+msgid "Go to profile"
+msgstr "ไปที่โปรไฟล์"
+
+#: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
+msgid "Create a new page now"
+msgstr "สร้างหน้าเว็บใหม่ตอนนี้"
+
+#: templates/enterlink/howto.html:61
+msgid "Search for an existing page"
+msgstr "ค้นหาหน้าเว็บที่มีอยู่"
+
+#: templates/enterlink/in_progress_404.html:6
+msgid "This page is currently being created by another user"
+msgstr "หน้านี้กำลังสร้างโดยผู้ใช้รายอื่น"
+
+#: templates/enterlink/in_progress_404.html:82
+msgid ""
+"This page is currently in the process of being created by another user. "
+"Please return later!"
+msgstr "หน้านี้อยู่ในระหว่างการสร้างโดยผู้ใช้รายอื่น โปรดกลับมาใหม่!"
+
+#: templates/enterlink/inbox.html:30
+msgid "You have"
+msgstr "คุณมี"
+
+#: templates/enterlink/inbox.html:30
+msgid "unread notifications"
+msgstr "การแจ้งเตือนที่ยังไม่ได้อ่าน"
+
+#: templates/enterlink/inbox.html:45
+msgid "You currently do not have any notifications."
+msgstr "ขณะนี้คุณไม่มีการแจ้งเตือนใด ๆ"
+
+#: templates/enterlink/index.html:40
+msgid "The world's first encyclopedia on the blockchain"
+msgstr "สารานุกรม blockchain แรกของโลก"
+
+#: templates/enterlink/index.html:41
+msgid ""
+"Everipedia's IQ Network is the world's first Encyclopedia that allows anyone "
+"to become a stakeholder in the system and earn rank, rewards & tokens for "
+"curating content."
+msgstr ""
+"เครือข่าย IQ ของ Everipedia "
+"เป็นสารานุกรมแรกของโลกที่ให้ทุกคนได้เป็นผู้มีส่วนได้เสียในระบบและชนะลำดับและรางวัลสำหรับการดูแลเนื้อหา"
+
+#: templates/enterlink/index.html:48
+msgid "Learn more"
+msgstr "เรียนรู้เพิ่มเติม"
+
+#: templates/enterlink/index.html:79
+msgid "As Seen In"
+msgstr ""
+
+#: templates/enterlink/index.html:100
+msgid "An Encyclopedia for the modern age"
+msgstr "สารานุกรมสำหรับยุคโมเดิร์น"
+
+#: templates/enterlink/index.html:104
+msgid ""
+"The Everipedia IQ blockchain provides a new paradigm change and knowledge "
+"economy to disrupt the old centralized internet knowledge encyclopedia model "
+"similar to Wikipedia. By creating a new incentive structure and a "
+"distributed backend hosted within a blockchain, the new Everipedia knowledge "
+"base will be able to improve upon all fundamental features of Wikipedia."
+msgstr ""
+"Everipedia IQ blockchain เปลี่ยนแปลงกระบวนทัศน์และเศรษฐกิจความรู้ใหม่เพื่อทำลายรูปแบบ "
+"สารานุกรมความรู้ทางอินเทอร์เน็ตแบบรวมศูนย์เก่าแก่ที่มีลักษณะคล้ายกับวิกิพีเดีย "
+"การสร้างโครงสร้างแรงจูงใจใหม่และ แบ็กเอนด์แบบกระจายโฮสต์ภายใน blockchain "
+"จะช่วยให้ฐานความรู้ใหม่ของ Everipediaสามารถพัฒนาบนพื้นฐานทั้งหมดของวิกิพีเดียได้"
+
+#: templates/enterlink/index.html:112
+msgid "Decentralized"
+msgstr "กระจายอำนาจ"
+
+#: templates/enterlink/index.html:113
+msgid ""
+"Articles are fetched using IPFS and EOS Storage. Majority of IQ being "
+"distributed during the airdrop."
+msgstr "บทความเรียกใช้โดยใช้ IPFS และ EOS Storageส่วนใหญ่จะแจก IQ ระหว่าง airdrop"
+
+#: templates/enterlink/index.html:117
+msgid "Democratic"
+msgstr "ประชาธิปไตย"
+
+#: templates/enterlink/index.html:118
+msgid ""
+"Proof of Stake (PoS) model allows for voting to change and upgrade the IQ "
+"network as it grows. Also will facilitate batch imports of new content with "
+"no fees."
+msgstr ""
+"Proof of Stake (PoS) ช่วยให้สามารถโหวตและอัพเกรดเครือข่าย IQ เมื่อมีการขยายตัวได้ "
+"นอกจากนี้ยังช่วยนำเข้าเนื้อหาใหม่แบบเป็นชุดโดยไม่คิดค่าใช้จ่าย"
+
+#: templates/enterlink/index.html:122
+msgid "Censorship Resistant"
+msgstr "Censorship Resistant"
+
+#: templates/enterlink/index.html:123
+msgid ""
+"Live and permanent edits of content on the blockchain beyond the control of "
+"a central authority."
+msgstr "แก้ไขเนื้อหาแบบสดและแบบถาวรบน blockchain ที่อยู่เหนือการควบคุมของอำนาจส่วนกลาง"
+
+#: templates/enterlink/index.html:127
+msgid "Financial Incentive"
+msgstr "สิ่งจูงใจทางการเงิน"
+
+#: templates/enterlink/index.html:128
+msgid ""
+"All holders of IQ will be incentivized to create quality, neutral content "
+"and to work together in building the reputation of the network."
+msgstr ""
+"ผู้ถือครอง IQ ทั้งหมดจะได้รับการจูงใจในการสร้างเนื้อหาที่มีคุณภาพ "
+"เป็นกลางและทำงานร่วมกันในการสร้างชื่อเสียงของเครือข่าย"
+
+#: templates/enterlink/index.html:139
+msgid "Become an editor today and start creating your own wiki articles."
+msgstr "มาเป็นบรรณาธิการในวันนี้และเริ่มต้นสร้างบทความ Wiki ของคุณเอง"
+
+#: templates/enterlink/index.html:142
+msgid "Open Community"
+msgstr "เปิดชุมชน"
+
+#: templates/enterlink/index.html:143
+msgid ""
+"Our vibrant community is open and welcoming to people from all backgrounds. "
+"Our guidelines and policies are based on common sense rather than strict "
+"bureaucracy."
+msgstr ""
+"ชุมชนที่มีชีวิตชีวาของเราเปิดกว้างและต้อนรับผู้คนจากทุกภูมิหลัง "
+"หลักเกณฑ์และนโยบายของเราอยู่บนหลักสามัญสำนึกมากกว่าระบบราชการที่เข้มงวด"
+
+#: templates/enterlink/index.html:145
+msgid "Redesigned for the modern age"
+msgstr "ออกแบบใหม่สำหรับยุคโมเดิร์น"
+
+#: templates/enterlink/index.html:146
+msgid ""
+"Everipedia is an encyclopedia modernized and re-designed for the twenty-"
+"first century. Our editing interface makes creating and editing wiki's as "
+"easy as using Facebook."
+msgstr ""
+"Everipedia เป็นสารานุกรมที่ทันสมัยและได้รับการออกแบบใหม่สำหรับศตวรรษที่ 21 "
+"อินเตอร์เฟซการแก้ไขของเราทำให้คุณสร้างและแก้ไข Wiki ได้ง่ายเหมือนใช้ Facebook"
+
+#: templates/enterlink/index.html:155
+msgid "Follow us on Telegram"
+msgstr "ติดตามเราบน Telegram"
+
+#: templates/enterlink/index.html:168
+msgid "Led by the Founder of Wikipedia and Genius.com"
+msgstr "นำโดยผู้ก่อตั้ง Wikipedia และ Genius.com"
+
+#: templates/enterlink/index.html:171
+msgid ""
+"Everipedia is being led by a team with extensive experience and knowledge "
+"both in the online knowledge space as well as the blockchain industry. The "
+"executive team is made up of several prominent individuals in the industry, "
+"the Co-Founder of Wikipedia, Larry Sanger, the founder of Genius.com, Mahbod "
+"Moghadam, and several others. Academic credentials includes UCLA, Stanford, "
+"Yale & Columbia, covering nationalities from America, Sweden, Norway and "
+"Italy. "
+msgstr ""
+"Everipedia นำโดยทีมงานที่มีประสบการณ์และความรู้มากมายทั้งในด้านความรู้ออนไลน์และวงการ "
+"Blockchain ทีมผู้บริหารประกอบด้วยบุคคลที่โดดเด่นในวงการจำนวนมาก ทั้งผู้ร่วมก่อตั้งวิกิพีเดีย ลาร์รี "
+"แซงเจอร์ ผู้ก่อตั้ง Genius.com มาฮ์บอด มอคฮาดัมและอีกหลายคน "
+"มีการรับรองทางวิชาการประกอบด้วย UCLA, Stanford, Yale & Columbia "
+"ครอบคลุมสัญชาติอเมริกัน สวีเดน นอร์เวย์ และอิตาลี"
+
+#: templates/enterlink/index.html:172
+msgid "Executive Team"
+msgstr "ทีมผู้บริหาร"
+
+#: templates/enterlink/leadership.html:7
+msgid "Leadership"
+msgstr "ทีมบริหาร"
+
+#: templates/enterlink/leadership.html:23
+msgid "Executive Leadership"
+msgstr "ภาวะผู้นำของผู้บริหาร"
+
+#: templates/enterlink/leadership.html:35
+msgid "Chief Information Officer"
+msgstr "หัวหน้าเจ้าหน้าที่ข้อมูล"
+
+#: templates/enterlink/leadership.html:41
+msgid "Chief Executive Officer, Co-Founder"
+msgstr "ประธานบริหาร ผู้ร่วมก่อตั้ง"
+
+#: templates/enterlink/leadership.html:47
+msgid "Chief Technology Officer, Co-Founder"
+msgstr "ประธานฝ่ายเทคโนโลยี ผู้ร่วมก่อตั้ง"
+
+#: templates/enterlink/leadership.html:53
+msgid "President, Co-Founder"
+msgstr "ประธาน ผู้ร่วมก่อตั้ง"
+
+#: templates/enterlink/leadership.html:63
+msgid "Director of Software"
+msgstr "ผู้อำนวยการฝ่ายซอฟต์แวร์"
+
+#: templates/enterlink/leadership.html:69
+msgid "Chief Operating Officer"
+msgstr "ประธานเจ้าหน้าที่ฝ่ายปฏิบัติการ"
+
+#: templates/enterlink/leadership.html:75
+msgid "Chief Community Officer, Co-Founder"
+msgstr "ประธานฝ่ายชุมชน, ผู้ร่วมก่อตั้ง"
+
+#: templates/enterlink/limitreached.html:7
+msgid "Activity limit reached"
+msgstr "ถึงขีดจำกัดกิจกรรมแล้ว"
+
+#: templates/enterlink/limitreached.html:23
+msgid ""
+"Hey! You've added 15 morsels of knowledge to Everipedia now, so we have "
+"paused your account until Master Editors have had a chance to review your "
+"work. Shouldn't take too long, you'll probably be good to go in less than 5 "
+"minutes."
+msgstr ""
+"เฮ้! คุณได้เพิ่มความรู้ทั้งหมด 15 เรื่องใน Everipedia "
+"แล้วดังนั้นเราจึงได้ระงับบัญชีของคุณไว้ชั่วคราวจนกว่า Master Editorsจะมีโอกาสทบทวนงานของคุณ "
+"เราจะใช้เวลาไม่นานบัญชีคุณอาจจะตรวจเสร็จเรียบร้อยภายในไม่ถึง 15 นาที"
+
+#: templates/enterlink/limitreached.html:24
+msgid "In the meantime, please join our official Facebook group:"
+msgstr "ในระหว่างนี้ โปรดเข้าร่วมกลุ่ม Facebook ทางการของเรา:"
+
+#: templates/enterlink/limitreached.html:24
+msgid "It’s the best way to reach the community!"
+msgstr "เป็นวิธีที่ดีที่สุดในการเข้าถึงชุมชน!"
+
+#: templates/enterlink/login.html:7
+msgid "Sign in"
+msgstr "เข้าสู่ระบบ"
+
+#: templates/enterlink/login.html:33
+msgid "Sign in to Everipedia"
+msgstr "ลงชื่อเข้าใช้ Everipedia"
+
+#: templates/enterlink/login.html:48
+msgid "Log in with Facebook"
+msgstr "เข้าใช้ด้วย Facebook"
+
+#: templates/enterlink/login.html:49
+msgid "Log in with Twitter"
+msgstr "เข้าสู่ระบบด้วย Twitter"
+
+#: templates/enterlink/login.html:58
+msgid "Need an account?"
+msgstr "ต้องการบัญชี"
+
+#: templates/enterlink/login.html:58
+msgid "Register here"
+msgstr "ลงทะเบียนที่นี่"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:34
+msgid "Visit Profile"
+msgstr "ไปที่โปรไฟล์"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:57
+msgid "Settings"
+msgstr "การตั้งค่า"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:73
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:214
+#: templates/enterlink/template_blockchain_styled_amp.html:721
+msgid "Log Out"
+msgstr "ออกจากระบบ"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:86
+msgid "Register / Log In"
+msgstr "ลงทะเบียน / เข้าสู่ระบบ"
+
+#: templates/enterlink/notifications/index.html:116
+msgid "New message"
+msgstr "ข้อความใหม่"
+
+#: templates/enterlink/recent-activity.html:84
+msgid "by"
+msgstr "โดย"
+
+#: templates/enterlink/register.html:6
+msgid "Create an account"
+msgstr "สร้างบัญชี"
+
+#: templates/enterlink/register.html:26 templates/enterlink/register.html:28
+msgid "Have an account?"
+msgstr "มีบัญชีแล้วใช่ไหม"
+
+#: templates/enterlink/register.html:26 templates/enterlink/register.html:28
+msgid "Login"
+msgstr "เข้าสู่ระบบ"
+
+#: templates/enterlink/register.html:42
+msgid ""
+"Registration is currently invite only due to blockchain software testing. "
+"Join us on Telegram and Reddit in the meantime to become a part of "
+"Everipedia today!"
+msgstr ""
+"การลงทะเบียนจะต้องผ่านการเชิญทั้งหมดเนื่องจากการทดสอบซอฟแวร์ blockchain เข้าร่วมกับ "
+"Telegram และ Reddit ไปก่อนเพื่อร่วมเข้าเป็นส่วนหนึ่งของ Everipedia วันนี้!"
+
+#: templates/enterlink/register.html:60
+msgid "Welcome to the Everipedia editor community!"
+msgstr "ยินดีต้อนรับสู่ชุมชนบรรณาธิการ Everipedia!"
+
+#: templates/enterlink/register.html:63
+msgid ""
+"Sign up to become an editor to access more features and an ad-free "
+"experience."
+msgstr "ลงทะเบียนเป็นบรรณาธิการเพื่อเข้าถึงฟังก์ชันและประสบการณ์แบบไม่มีโฆษณา"
+
+#: templates/enterlink/register.html:96
+msgid "Sign up"
+msgstr "สมัครสมาชิก"
+
+#: templates/enterlink/register.html:97
+msgid "By clicking sign up above you agree to our"
+msgstr "เมื่อคลิกลงชื่อสมัครใช้ด้านบนคุณยินยอมให้เรา"
+
+#: templates/enterlink/register.html:97
+msgid "Terms of Service"
+msgstr "เงื่อนไขการให้บริการ"
+
+#: templates/enterlink/rewardsmgmt.html:4
+#: templates/enterlink/rewardsmgmt.html:132
+#, fuzzy
+#| msgid "Brainpower Management"
+msgid "Rewards Management"
+msgstr "การจัดการกำลังคน"
+
+#: templates/enterlink/rewardsmgmt.html:135
+msgid "Here you can claim rewards for the edits and / or votes that you made."
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:140
+msgid "Proposal Hash"
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:141
+msgid "Finalized Time"
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:142
+#, fuzzy
+#| msgid "Voting Period"
+msgid "Period"
+msgstr "ระยะเวลาโหวต"
+
+#: templates/enterlink/rewardsmgmt.html:143
+msgid "Redeem"
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:150
+#, fuzzy
+#| msgid "Password reset successful"
+msgid "Redeem successful"
+msgstr "การตั้งรหัสผ่านใหม่สำเร็จ"
+
+#: templates/enterlink/search-iframe.html:127
+msgid "Searching..."
+msgstr "กำลังค้นหา..."
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "Can't find it below?"
+msgstr "ไม่พบข้อมูลด้านล่างนี้ใช่ไหม"
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "Create"
+msgstr "สร้าง"
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "a new page titled"
+msgstr "ชื่อเรื่องหน้าเว็บ"
+
+#: templates/enterlink/search.html:45 templates/enterlink/search.html:55
+msgid "Or try the"
+msgstr "หรือลองทำ"
+
+#: templates/enterlink/search.html:45 templates/enterlink/search.html:55
+msgid "advanced search."
+msgstr "การค้นหาขั้นสูง"
+
+#: templates/enterlink/search.html:48
+msgid "Everipedia couldn’t find anything with the name"
+msgstr "Everipedia ไม่พบหน้าเว็บชื่อนี้"
+
+#: templates/enterlink/search.html:50
+msgid ""
+"If you know any links associated with this page, try searching for those "
+"links"
+msgstr "หากคุณรู้จักลิงค์ใด ๆ ที่เชื่อมโยงกับหน้านี้ ให้ลองค้นหาลิงก์เหล่านั้น"
+
+#: templates/enterlink/template_ajax_genius.html:17
+#: templates/enterlink/template_amp_ajax_genius.html:98
+msgid "Verified Editor"
+msgstr "บรรณาธิการที่ยืนยันตัวตนแล้ว"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:123
+msgid "Bullet"
+msgstr "ข่าว"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:185
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid "Recent news"
+msgstr "ข่าวสารล่าสุด"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:185
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid ""
+"Everipedia IQ tokens are now in circulation on the EOS mainnet. Follow "
+"Everipedia on"
+msgstr "ขณะนี้โทเคน Everipedia IQ อยู่บน mainnet EOS ติดตาม Everipedia ได้บน"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:185
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid "to learn about upcoming features and developments!"
+msgstr "เพื่อเรียนรู้เกี่ยวกับฟังก์ชันและการพัฒนาที่กำลังจะมาถึง!"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:197
+#: templates/enterlink/template_blockchain_styled_desktop.html:143
+msgid "Verified Page"
+msgstr "เพจที่ตรวจสอบแล้ว"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:273
+msgid "Quick Biography"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_amp.html:275
+msgid "Quick Facts For This Wiki"
+msgstr "ลิงค์อ้างอิงสำหรับ Wiki นี้"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:304
+#: templates/enterlink/template_blockchain_styled_desktop.html:361
+msgid "Image & Video Gallery"
+msgstr "แกลเลอรี่รูปภาพและวิดีโอ"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:306
+#: templates/enterlink/template_blockchain_styled_desktop.html:363
+msgid "images, pictures, and videos"
+msgstr "รูปภาพและวิดีโอ"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:310
+msgid "Gallery"
+msgstr "แกลลอรี่"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:327
+#: templates/enterlink/template_blockchain_styled_desktop.html:496
+msgid "Reference Links For This Biography"
+msgstr "ลิงค์อ้างอิงสำหรับประวัตินี้"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:329
+#: templates/enterlink/template_blockchain_styled_desktop.html:498
+msgid "Reference Links For This Wiki"
+msgstr "ลิงค์อ้างอิงสำหรับ Wiki นี้"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:332
+#: templates/enterlink/template_blockchain_styled_desktop.html:501
+msgid ""
+"Links to historical reviews, career / educational facts, and other "
+"encyclopedic information"
+msgstr ""
+"ลิงค์ไปยังบทวิจารณ์ทางประวัติศาสตร์ อาชีพ / ข้อเท็จจริงด้านการศึกษาและข้อมูลสารานุกรมอื่น ๆ"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:337
+#: templates/enterlink/template_blockchain_styled_desktop.html:507
+msgid "All information for"
+msgstr "ข้อมูลทั้งหมดสำหรับ"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:337
+#: templates/enterlink/template_blockchain_styled_desktop.html:507
+msgid ""
+"wiki comes from the below links. Any source is valid, including Twitter, "
+"Facebook, Instagram, and LinkedIn. Pictures, videos, biodata, and files "
+"relating to"
+msgstr ""
+"Wiki มาจากลิงก์ด้านล่าง แหล่งข้อมูลใด ๆ ก็ถือนำมาอ้างอิงได้รวมถึง Twitter, Facebook, "
+"Instagram และ LinkedIn รูปภาพวิดีโอ biodata และไฟล์ที่เกี่ยวข้อง"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:337
+#: templates/enterlink/template_blockchain_styled_desktop.html:507
+msgid "are also acceptable encyclopedic sources."
+msgstr "เป็นแหล่งสารานุกรมที่ยอมรับได้"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:352
+#: templates/enterlink/template_blockchain_styled_desktop.html:528
+msgid ""
+"See related encyclopedia articles, biographies, reviews, and historical "
+"facts."
+msgstr "ดูบทความ สารานุกรม ชีวประวัติ บทวิจารณ์และข้อเท็จจริงทางประวัติศาสตร์ที่เกี่ยวข้อง"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:356
+#: templates/enterlink/template_blockchain_styled_desktop.html:535
+msgid "Other wiki pages related to"
+msgstr "หน้า Wiki อื่น ๆ ที่เกี่ยวข้องกับ"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:535
+msgid "Created"
+msgstr "ที่สร้างไว้"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:536
+msgid "Last Modified"
+msgstr "แก้ไขล่าสุด"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:537
+msgid "IPFS"
+msgstr "IPFs"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:757
+msgid "Top Page Editors"
+msgstr "บรรณาธิการหน้ายอดนิยม"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:777
+msgid "Share this page"
+msgstr "แชร์หน้านี้"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:789
+msgid "DIRECT LINK"
+msgstr "Direct Link"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:794
+#: templates/enterlink/template_blockchain_styled_desktop.html:221
+msgid "Suggested Hashtags"
+msgstr "Hashtags ที่แนะนำ"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:828
+#: templates/enterlink/template_blockchain_styled_desktop.html:259
+msgid "QR Code"
+msgstr "รหัส QR"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:14
+#: templates/enterlink/template_blockchain_styled_desktop.html:19
+msgid "Bio"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:16
+#: templates/enterlink/template_blockchain_styled_desktop.html:17
+#: templates/enterlink/template_blockchain_styled_desktop.html:225
+msgid "bio"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:16
+#: templates/enterlink/template_blockchain_styled_desktop.html:17
+#: templates/enterlink/template_blockchain_styled_desktop.html:23
+#: templates/enterlink/template_blockchain_styled_desktop.html:24
+#: templates/enterlink/template_blockchain_styled_desktop.html:30
+#: templates/enterlink/template_blockchain_styled_desktop.html:31
+#: templates/enterlink/template_blockchain_styled_desktop.html:37
+#: templates/enterlink/template_blockchain_styled_desktop.html:38
+msgid "encylopedia"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:21
+#: templates/enterlink/template_blockchain_styled_desktop.html:26
+#: templates/enterlink/template_blockchain_styled_desktop.html:28
+#: templates/enterlink/template_blockchain_styled_desktop.html:33
+msgid "Review"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:23
+#: templates/enterlink/template_blockchain_styled_desktop.html:24
+#: templates/enterlink/template_blockchain_styled_desktop.html:30
+#: templates/enterlink/template_blockchain_styled_desktop.html:31
+#: templates/enterlink/template_blockchain_styled_desktop.html:231
+#: templates/enterlink/template_blockchain_styled_desktop.html:237
+#: templates/enterlink/template_blockchain_styled_desktop.html:243
+msgid "review"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:30
+#: templates/enterlink/template_blockchain_styled_desktop.html:31
+#: templates/enterlink/template_blockchain_styled_desktop.html:232
+#: templates/enterlink/template_blockchain_styled_desktop.html:238
+#: templates/enterlink/template_blockchain_styled_desktop.html:244
+msgid "history"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid "and"
+msgstr "และ"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:187
+#: templates/enterlink/voting_table_of_contents.html:12
+msgid "Edit"
+msgstr "แก้ไข"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:190
+msgid "Vote"
+msgstr "โหวต"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:205
+msgid "Embed / Widget"
+msgstr "Embed / Widget"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:224
+#: templates/enterlink/template_blockchain_styled_desktop.html:230
+#: templates/enterlink/template_blockchain_styled_desktop.html:236
+#: templates/enterlink/template_blockchain_styled_desktop.html:242
+msgid "wiki"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:226
+msgid "net worth"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:227
+msgid "age"
+msgstr "หน้า"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:228
+msgid "married"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:233
+msgid "sales"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:234
+#: templates/enterlink/template_blockchain_styled_desktop.html:240
+#: templates/enterlink/template_blockchain_styled_desktop.html:246
+msgid "facts"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:239
+msgid "founders"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:245
+msgid "encyclopedia"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:329
+msgid "Profiles"
+msgstr "โปรไฟล์"
+
+#: templates/enterlink/transfer-iq.html:5
+#: templates/enterlink/transfer-iq.html:119
+msgid "Transfer IQ"
+msgstr "โอน IQ"
+
+#: templates/enterlink/transfer-iq.html:121
+msgid "Please make sure you have set up"
+msgstr "โปรดตรวจสอบว่าคุณได้ตั้งค่าแล้ว"
+
+#: templates/enterlink/transfer-iq.html:121
+msgid "beforehand"
+msgstr "ล่วงหน้า"
+
+#: templates/enterlink/transfer-iq.html:123
+msgid "Sender"
+msgstr "ส่ง"
+
+#: templates/enterlink/transfer-iq.html:125
+msgid "Recipient"
+msgstr "ผู้รับ"
+
+#: templates/enterlink/transfer-iq.html:129
+msgid "Memo"
+msgstr "บันทึกช่วยจำ"
+
+#: templates/enterlink/transfer-iq.html:134
+msgid "Transaction successful"
+msgstr "ทำธุรกรรมเรียบร้อยแล้ว"
+
+#: templates/enterlink/transfer-iq.html:138
+msgid "Buy RAM"
+msgstr "ซื้อ RAM"
+
+#: templates/enterlink/transfer-iq.html:142
+msgid "See your RAM, CPU, and Bandwidth on FeeXplorer"
+msgstr "ดู RAM, CPU และ Bandwidth ของคุณใน FeeXplorer"
+
+#: templates/enterlink/user.html:12
+msgid "profile"
+msgstr "โปรไฟล์"
+
+#: templates/enterlink/user.html:38
+msgid "Everipedia Rank"
+msgstr "อันดับ Everipedia"
+
+#: templates/enterlink/user.html:53
+msgid "This user is verified"
+msgstr "ผู้ใช้รายนี้ได้รับการยืนยันแล้ว"
+
+#: templates/enterlink/user.html:56
+msgid "Everipedia Staff"
+msgstr "พนักงาน Everipedia"
+
+#: templates/enterlink/user.html:62 templates/enterlink/user.html:67
+msgid "Message"
+msgstr "ข้อความ"
+
+#: templates/enterlink/user.html:71 templates/enterlink/user.html:123
+msgid "Edit Profile"
+msgstr "แก้ไขโปรไฟล์"
+
+#: templates/enterlink/user.html:74
+msgid "Everipedia Page"
+msgstr "หน้า Everipedia"
+
+#: templates/enterlink/user.html:80
+msgid "IQ Score"
+msgstr "คะแนน IQ"
+
+#: templates/enterlink/user.html:81
+msgid "Pages created"
+msgstr "สร้างเพจแล้ว"
+
+#: templates/enterlink/user.html:82
+msgid "Total edits"
+msgstr "การแก้ไขทั้งหมด"
+
+#: templates/enterlink/user.html:94
+msgid "Joined"
+msgstr "เข้าร่วมแล้ว"
+
+#: templates/enterlink/user.html:125
+msgid "Upload Avatar / Profile Picture"
+msgstr "อัปโหลดรูป Avatar / รูปโปรไฟล์"
+
+#: templates/enterlink/user.html:153
+msgid "Enable account? Uncheck to ban"
+msgstr "เปิดใช้งานบัญชีหรือไม่? ยกเลิกการเลือกห้าม"
+
+#: templates/enterlink/user.html:157
+msgid "IP Ban"
+msgstr "IP ที่ห้าม"
+
+#: templates/enterlink/user.html:157
+msgid "Ban"
+msgstr "ห้าม"
+
+#: templates/enterlink/user.html:157
+msgid "Clear"
+msgstr "ยกเลิกการเลือก"
+
+#: templates/enterlink/user.html:159
+msgid "Verify the account?"
+msgstr "ยืนยันบัญชีหรือไม่"
+
+#: templates/enterlink/user.html:163
+msgid "Is Staff?"
+msgstr "เป็นพนักงานใช่ไหม"
+
+#: templates/enterlink/user.html:177
+msgid "Save all changes"
+msgstr "จัดเก็บการเปลี่ยนแปลงทั้งหมด"
+
+#: templates/enterlink/user.html:178
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+#: templates/enterlink/user.html:211
+msgid "Change Avatar Picture"
+msgstr "เปลี่ยนรูป Avatar"
+
+#: templates/enterlink/user.html:219
+msgid "Please select your Everipedia page"
+msgstr "โปรดเลือกหน้าเว็บ Everipedia ของคุณ"
+
+#: templates/enterlink/user.html:224
+msgid "Continue"
+msgstr "ต่อ"
+
+#: templates/enterlink/votehistory.html:7
+msgid "Voting"
+msgstr "การโหวต"
+
+#: templates/enterlink/votehistory.html:95
+msgid "Voting History"
+msgstr "ประวัติการโหวต"
+
+#: templates/enterlink/voting.html:197
+msgid "Before"
+msgstr "ก่อน"
+
+#: templates/enterlink/voting.html:199
+msgid "After"
+msgstr "หลังจาก"
+
+#: templates/enterlink/voting_table_of_contents.html:7
+msgid "Article"
+msgstr "บทความ"
+
+#: templates/enterlink/voting_table_of_contents.html:17
+msgid "Current Vote"
+msgstr "โหวตปัจจุบัน"
+
+#: templates/enterlink/voting_table_of_contents.html:20
+#: templates/enterlink/voting_table_of_contents.html:62
+msgid "Reject"
+msgstr "ปฏิเสธ"
+
+#: templates/enterlink/voting_table_of_contents.html:21
+msgid "Accept"
+msgstr "ยอมรับ"
+
+#: templates/enterlink/voting_table_of_contents.html:28
+msgid "Voting Period"
+msgstr "ระยะเวลาโหวต"
+
+#: templates/enterlink/voting_table_of_contents.html:34
+msgid "to"
+msgstr "ถึง"
+
+#: templates/enterlink/voting_table_of_contents.html:51
+msgid "Place Votes"
+msgstr "โหวต"
+
+#: templates/enterlink/voting_table_of_contents.html:63
+msgid "Approve"
+msgstr "อนุมัติ"
+
+#: templates/enterlink/voting_table_of_contents.html:67
+msgid "Changes"
+msgstr "เปลี่ยน"
+
+#: templates/enterlink/welcome.html:7
+msgid "Welcome to Everipedia, the encyclopedia of everything"
+msgstr "ยินดีต้อนรับสู่ Everipedia สารานุกรมของทุกสิ่งทุกอย่าง"

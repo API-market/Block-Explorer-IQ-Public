@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+{% load i18n %}
+{% load enterlink_custom_tags %}
+<html>
+<head>
+	<script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/jquery.js"></script>
+    {% include 'enterlink/inline-js/enterlink-ajax-tooltippables.html' %}
+    {% include 'enterlink/inline-js/enterlink-ajax-execute-search.html' %}
+    <script type="text/javascript">
+    <!--
+        function toggle_visibility(id) {
+           var e = document.getElementById(id);
+           if(e.style.display == 'block')
+              e.style.display = 'none';
+           else
+              e.style.display = 'block';
+        }
+    //-->
+    </script>
+		
+
+    <title> {% trans "Editors" %} - {% trans "Everipedia, the encyclopedia of everything" %}</title> <!-- ' -->
+    <meta name="description" content="Show {{name}} page on Everipedia. {{linkset.0.linkcomment}}">
+
+    <!--- Include Header -->
+    {% include "enterlink/headers/header-common.html" %}{% include "enterlink/headers/header-navbar.html" %}
+    <link href="/static/css/editors.css" rel="stylesheet">
+    <link href="/static/css/howto_welcome.css" rel="stylesheet">
+	
+	<div class="editors-ct tablet-compatible">
+        <div class="topauthor-ct{% if not user.is_authenticated %} join-the-community-split{% endif %}">
+            <h3>Top Editors Today <span class="icon icon-chevron-down"></span></h3>
+            <ol>
+                {% for editorNugget in top_editors.0 %}
+                <a href="/editor/{{editorNugget.1}}/">
+                    <li>
+                        <img class='lazyloadable' img='https://everipedia-fast-cache.s3.amazonaws.com/images/no-image-slide.png' data-src="{{ editorNugget.2 }}" onError="this.onerror=null;this.src='https://everipedia-fast-cache.s3-accelerate.amazonaws.com/images/noavatar_100x100.png'"/>
+                        <span class="topauthor-name">{{editorNugget.1}}</span>
+                        <div class="topauthor-IQ" title="Everipedia Score">{{editorNugget.4}}</div>
+                    </li>
+                    <hr />
+                </a>
+                {% endfor %}
+            </ol>
+            <h3>Top Editors This Week <span class="icon icon-chevron-down"></span></h3>
+            <ol>
+                {% for editorNugget in top_editors.1 %}
+                <a href="/editor/{{editorNugget.1}}/">
+                    <li>
+                        <img class='lazyloadable' img='https://everipedia-fast-cache.s3.amazonaws.com/images/no-image-slide.png' data-src="{{ editorNugget.2 }}" onError="this.onerror=null;this.src='https://everipedia-fast-cache.s3-accelerate.amazonaws.com/images/noavatar_100x100.png'"/>
+                        <span class="topauthor-name">{{editorNugget.1}}</span>
+                        <div class="topauthor-IQ" title="Everipedia Score">{{editorNugget.4}}</div>
+                    </li>
+                    <hr />
+                </a>
+                {% endfor %}
+            </ol>
+            <h3>Top Editors This Month <span class="icon icon-chevron-down"></span></h3>
+            <ol>
+                {% for editorNugget in top_editors.2 %}
+                <a href="/editor/{{editorNugget.1}}/">
+                    <li>
+                        <img class='lazyloadable' img='https://everipedia-fast-cache.s3.amazonaws.com/images/no-image-slide.png' data-src="{{ editorNugget.2 }}" onError="this.onerror=null;this.src='https://everipedia-fast-cache.s3-accelerate.amazonaws.com/images/noavatar_100x100.png'"/>
+                        <span class="topauthor-name">{{editorNugget.1}}</span>
+                        <div class="topauthor-IQ" title="Everipedia Score">{{editorNugget.4}}</div>
+                    </li>
+                    <hr />
+                </a>
+                {% endfor %}
+            </ol>
+        </div>
+        <div class="col-md-12">
+            <h1>{%  trans 'Everipedia Editors' %}</h1>
+            {% for editor in editors %}
+                <div class="col-md-4 col-xs-12">
+                    <a href="/editor/{{ editor.usertag.username }}">
+                        <div class="editors-avatar" style="background-image:url('{{ editor.usertag.username|thumbnail_from_username }}'), url('https://epcdn-vz.azureedge.net/static/images/noavatar_100x100.png');"></div>
+                        <div class="editors-username">{{ editor.usertag.first_name }} {{ editor.usertag.last_name }} ({{ editor.usertag.username }})
+                            {% if editor.isverified %}
+                                <img alt="Verified" height ="18" width="18" src="https://epcdn-vz.azureedge.net/static/images/verified.png">
+                            {% endif %}
+                        </div>
+                        <div class="editors-points">{% trans editor.rank %}, {{ editor.points }}</div>
+                    </a>
+                </div>
+            {% endfor %}
+		</div>
+
+        <div class="pagination">
+            <span class="step-links">
+                {% if editors.has_previous %}
+                    <a href="?page={{ editors.previous_page_number }}">{% trans "Previous" %}</a>
+                {% endif %}
+
+                <span class="current">
+                    {% trans "Page" %} {{ editors.number }} {% trans "of" %} {{ editors.paginator.num_pages }}.
+                </span>
+
+                {% if editors.has_next %}
+                    <a href="?page={{ editors.next_page_number }}">{% trans "Next" %}</a>
+                {% endif %}
+            </span>
+        </div>
+
+	</div>
+			
+
+{% include "enterlink/inline-js/unveil.html" %}
+<script>
+    // Speed hack to only load main image if human interaction. Needed for bots.
+    $( "html" ).on( "mouseover tap touchstart scroll scrollstart mousewheel", function( event ) {
+        $("img.lazyloadable").unveil();
+        $(this).off('mouseover tap touchstart scroll scrollstart mousewheel');
+    });
+</script>
+
+<!--- Everipedia Footer -->
+{% include "enterlink/footers/footer.html" %}
+{% include "enterlink/footers/deferredJS.html" %}

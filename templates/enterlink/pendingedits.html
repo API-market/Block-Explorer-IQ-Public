@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+{% load enterlink_custom_tags %}
+{% load staticfiles %}
+{% load i18n %}
+<html>
+<head>
+	<!--- Include Header -->
+    <script type="text/javascript" src="/static/js/eosjs-cdn.js"></script>
+    <script type="text/javascript" src="/static/js/easytimer.min.js"></script>
+	{% include "enterlink/headers/header-common.html" %}{% include "enterlink/headers/header-navbar.html" %}
+    {% include 'enterlink/inline-css/voting-css.html' %}
+
+    <style>
+        .proposals-wrap{
+            margin-top: 100px;
+            width: 100%;
+            float: left;
+            padding: 0px 10px;
+        }
+        .proposals-wrap h1, .proposals-wrap h3{
+            float: left;
+            width: 100%;
+            text-align: center;
+            margin: 5px 0px;
+        }
+        .proposals-wrap .proposals-lists{
+            width: 100%;
+            float: left;
+            margin-top: 5px;
+            list-style: none;
+            font-size: 16px;
+        }
+        .proposals-wrap .proposals-lists li{
+            float: left;
+            padding: 5px;
+            width: calc(100% - 6px);
+            border-top: 1px solid rgba(128,128,128,0.13);
+            border-left: 1px solid rgba(128,128,128,0.13);
+            -webkit-box-shadow: 3px 3px 4px 0px rgba(196,196,196,1);
+            -moz-box-shadow: 3px 3px 4px 0px rgba(196,196,196,1);
+            box-shadow: 3px 3px 4px 0px rgba(196,196,196,1);
+        }
+        .proposals-wrap .votes-box{
+            width: 100px;
+            float: left;
+            background: red;
+        }
+        .proposals-wrap .proposal-info-box{
+            width: calc(100% - 100px);
+            /*background: green;*/
+            float: left;
+        }
+        .proposals-wrap .proposal-info-box .proposal-info-table{
+
+        }
+        .proposals-wrap .proposal-info-box .proposal-info-table > tbody > tr {
+
+        }
+        /*.proposals-wrap .proposal-info-box .proposal-info-table > tbody > tr > td {*/
+            /*text-align: center;*/
+        /*}*/
+        .proposals-wrap .proposal-info-box .proposal-info-table > tbody > tr.proposal-top-row > td {
+            text-align: left;
+        }
+        .proposals-wrap .proposal-info-box .proposal-info-table > tbody > tr > td .cell-label {
+            font-weight: bold;
+        }
+
+    </style>
+
+    <script>
+        $(window).load(function() {
+            $(document).on("scatterNavbarDone", function () {
+                var proposalID = ipfs_to_uint64_trunc("{{ old_ipfs_hash }}");
+                var proposalIDPlusOne = proposalID + 1;
+                var proposalObj = "";
+
+                $('#search-form').attr('action', '/controllerName/actionName');
+
+                $.ajax({
+                    type: "POST",
+                    url: EosNetURL + "/v1/chain/get_table_rows",
+                    data: JSON.stringify({"scope":"eparticlectr", "code":"eparticlectr", "table":"propstbl",
+                            "lower_bound":proposalID, "upper_bound":proposalIDPlusOne,
+                            "table_key": "byuser", "json": true}),
+                    beforeSend: function( xhr ) {
+                    },
+                    success: function (data) {
+                        proposalObj = data;
+                        console.log(data);
+
+                    }
+                });
+            });
+        });
+    </script>
+
+</head>
+<div class="proposals-wrap">
+    <h1 class="header-line">Current proposals for</h1>
+    <h3 class="header-line">{{ old_ipfs_hash }}</h3>
+    <ul class="proposals-lists">
+        <li>
+            <div class="votes-box">
+                <div class="against-votes">33</div>
+                <div class="for-votes">9382</div>
+            </div>
+            <div class="proposal-info-box">
+                <table class='proposal-info-table' width="100%">
+                    <tr class="proposal-top-row">
+                        <td colspan="3"><span class="cell-label">To: </span>Qmc7mgdA4Ff8491bQyYeXzLpTamkGG3LJgfqqCL7DHNB6W</td>
+                    </tr>
+                    <tr class="proposal-bottom-row">
+                        <td><span class="cell-label">Start: </span>aaa</td>
+                        <td><span class="cell-label">End: </span>bbb</td>
+                        <td><span class="cell-label">Time Left: </span>ccc</td>
+                    </tr>
+                </table>
+            </div>
+        </li>
+
+    </ul>
+</div>
+</html>

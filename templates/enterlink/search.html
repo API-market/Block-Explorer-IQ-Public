@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+{% load i18n %}
+{% load enterlink_custom_tags %}
+<html>
+<head>
+	<link rel="canonical" href="https://iqnetwork.io/search/" />
+    <title>{%  trans "Search" %} - {% trans "Everipedia, the encyclopedia of everything" %}</title><!-- ' -->
+
+    <meta name="description" content="Everipedia is the world’s largest collection of links grouped by identity.">
+	
+	<!--- Include Header -->
+	{% include "enterlink/headers/header-common.html" %}{% include "enterlink/headers/header-navbar.html" %}
+    <link href="/static/css/search.css" rel="stylesheet">
+
+</head>
+<body class="with-top-navbar mobile-body" id="page-content-wrapper">
+
+	
+{% if request.mobile %}
+	<div class="index-search-ct" style="display:none;">
+		<div class="logo hidden-xs"><a href="/"><img width="35px" height="35px" src="https://epcdn-vz.azureedge.net/static/images/Everipedia_Logo.svg"/></a></div>
+		
+		<div class="global-search" id="searchfield_index">
+			
+				<form action="/search/" method="post" class="search" name="indexsearch">
+					{% csrf_token %}
+					<input class="index-search-query form-control" placeholder="{% trans 'Search Everipedia' %}" name="SearchBox" autocomplete="off" id="AJAXBox" type="text" value="" style="border:0px;">
+					<span class="svgIcon svgIcon--search svgIcon--25px u-textColorNormal u-baseColor--iconLight"><svg class="svgIcon-use" width="25" height="25" viewBox="0 0 25 25"><path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z"></path></svg></span>
+				</form>
+				<div id="indexresult">
+					{% include "enterlink/ajaxresults.html" %}
+				</div>
+		</div>
+	</div>
+{% endif %}
+	<div class="tablet-compatible" id="search-ct">
+		<div class="panel panel-default main-search-panel">
+            <div class="search-ct {% if not request.mobile %}desktop-view {% endif %}" >
+
+			<div class="searchresult-list">
+
+				{% if paginatedresult == "nopersonfoundwiththatname" %}
+					<div class="search-create-new-page">
+						<h4>{% trans "Can't find it below?" %} <a href="/create_page/?newtitle={{searchterm_orig_cap|urlencode}}"  rel="nofollow">{% trans 'Create' %}</a> {% trans 'a new page titled' %}: <a href="/create_page/?newtitle={{searchterm_orig_cap|urlencode}}"><span class="searchterm-search-page">{{searchterm_orig_cap}}</span>.</a></h4>
+						<!--<h4>{% trans "Or try the" %}<a href="/tools/big_data_scholar/" class='scholar-link'> <span style="color:#5baad7;">BigData</span> <span style="color:#878787;">Scholar</span><span style="color:#5baad7;">™</span></a> {% trans 'advanced search.' %}</h4>-->
+					</div>
+					<div class="search_error search-no-result" style="margin-top:10px;">
+						<div style="margin-bottom:5px;">{% trans 'Everipedia couldn’t find anything with the name' %}: <strong>{{searchterm_orig_cap}}</strong>.<br></div>
+			{#            <h4>Click <a href="/create_page/?newtitle={{searchterm_orig_cap|urlencode}}" class="btn btn-sm btn-primary-outline" rel="nofollow"><strong>here</strong></a> to create a brand new Everipedia page based off this search term.</h4>#}
+						<div style="margin-top:5px;">{% trans 'If you know any links associated with this page, try searching for those links' %}.</div>
+					</div>
+				{% else %}
+					<div class="search-create-new-page">
+						<h4>{% trans "Can't find it below?" %} <a href="/create_page/?newtitle={{searchterm_orig_cap|urlencode}}"  rel="nofollow">{% trans 'Create' %}</a> {% trans 'a new page titled' %}: <a href="/create_page/?newtitle={{searchterm_orig_cap|urlencode}}"><span class="searchterm-search-page">{{searchterm_orig_cap}}</span>.</a></h4>
+						<!--<h4>{% trans "Or try the" %}<a href="/tools/big_data_scholar/" class='scholar-link'> <span style="color:#5baad7;">BigData</span> <span style="color:#878787;">Scholar</span><span style="color:#5baad7;">™</span></a> {% trans 'advanced search.' %}</h4>-->
+					</div>
+				{% endif %}
+				<!-- New conditions for search -->
+
+					<!-- FOR USERNAME AND FACEBOOK URL LOOKUP ONLY. if any type or form of facebook URL is searched, it will return 1 or 0 results that contains that facebook url. Notice how the condition is the same for a simple username search -->
+					<!-- if username is searched (ex: tedde.forselius), it will return 1 or 0 result with the person that matches the username. Will not return more than one result as no one can have same username -->
+				{% if paginatedresult != "nopersonfoundwiththatname" and paginatedresult != "urlnoresult" %}
+					{% for paginatedresult in paginatedresult %}
+						<div class="fb_margin"></div>
+						<a class="searchresult-anchor" href="/wiki/{{paginatedresult.1}}/">
+							<div class="searchresult-row">
+								<img class="search_avatar lazyloadable" src="{{paginatedresult.2}}" data-src="{{paginatedresult.6}}">
+								<div class="searchresult-right-container">
+									{% if not request.mobile %}
+										<div class="search_name">{{paginatedresult.0}}</div>
+									{% endif %}
+									{% if request.mobile %}
+										<div class="search_name">{{paginatedresult.0}}</div>
+									{% endif %}
+									<div class="search_blurb">
+										{{ paginatedresult.5|striptags|truncatewords_html:250 }}
+									</div>
+								</div>
+							</div>
+						</a>
+					{% endfor %}
+				{% endif %}
+			</div>
+		</div>
+		    {% if paginatedresult.number > 0 %}
+		    <div class="pagination">
+		    <span class="step-links">
+		        {% if paginatedresult.has_previous %}
+		            <a href="?page={{ paginatedresult.previous_page_number }}&searchterm={{searchterm}}">{% trans 'Previous' %}</a>
+		        {% endif %}
+		
+		        <span class="current">
+		            {% trans 'Page' %} {{ paginatedresult.number }} {% trans 'of' %} {{ paginatedresult.paginator.num_pages }}.
+		        </span>
+		
+		        {% if paginatedresult.has_next %}
+		            <a href="?page={{ paginatedresult.next_page_number }}&searchterm={{searchterm}}">{% trans 'Next' %}</a>
+		        {% endif %}
+		    </span>
+            {% endif %}
+		
+		    </div>
+		
+		
+				
+		</div>
+	</div>
+	
+{% include "enterlink/inline-js/unveil.html" %}
+	
+<script>
+	$("img.lazyloadable").unveil(250);
+    $('#result').html("");
+    $('#indexresult').html("");
+    $('#mobileresult').html("");
+</script>
+	
+
+
+<!--- Everipedia Footer -->
+{% include "enterlink/footers/footer.html" %}
+{#{% include "enterlink/footers/deferredJS.html" %}#}
+
+{% include 'enterlink/inline-css/application.html' %}
+{% include 'enterlink/headers/extra-analytics-right-before-body-end.html' %}
+</body>
+</html>

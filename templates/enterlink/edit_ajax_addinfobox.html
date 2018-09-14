@@ -1,0 +1,159 @@
+{% load i18n %}
+{% load enterlink_custom_tags %}
+<!--<script type="text/javascript">gettext = function(a) {return a;}</script>-->
+<script type="text/javascript" src="/static/tageditor/jquery.tag-editor.js"></script>
+<script type="text/javascript" src="/static/tageditor/jquery.caret.min.js"></script>
+<script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/jquery-ui-min.js"></script>
+<link href="/static/tageditor/jquery.tag-editor.css" rel="stylesheet">
+
+<div class="bio-ct-infobox">
+<ul id="infobox_edit_list" class="edit-infbx-ct">
+<div class="add-new-infobox">{% trans 'Add New Infobox Item' %}</div>
+</form>
+<form id="newinfobox" class="infobox-input-container newinfobox" action="" method="post">
+    <li class="infobox-input-container" data-newbox="true" data-infobox-id="NEWBOX" data-page-id="{{ ARTICLE_SLUG }}">
+        <span class="infobox-infotype infoline" data-type="infotype" title="{% trans 'Enter a classification or category' %}" data-toggle="tooltip">
+            <input id="id_newinfotype" maxlength="2048" name="infotype" type="text" value="" >
+        </span>
+        <span class="infobox-infocontent infoline" data-type="infocontent" title="{% trans 'Enter a value or a description' %}" data-toggle="tooltip">
+            <input id="id_newinfocontent" maxlength="2048" name="infocontent" type="text" value="">
+        </span>
+    </li>
+</form>
+
+<button id="input-infobox-addinfoboxbtn" style="display:none" class="infobox-add-button" onclick="ajaxAddNewInfobox();" type="button" name="addinfoboxbtn">{% trans "Add Infobox Item" %}</button>
+<span id="ajax_addinfobox_result" style="float: left; margin-top: 5px;"></span>
+<button id="infobox-closeinfoboxbtn" class="infobox-close-button" onclick="hideNewInfoboxPane();" type="button" name="closeinfoboxbtn">{% trans "Close" %}</button>
+
+<script>
+    var customStrings = ["{% trans 'Enter type (e.g. Occupation)' %}", "{% trans 'Enter value (e.g. CEO)' %}"];
+
+    function getPageType() {
+        let pageType = $('#form_tinymce_container_ifr').contents().find("[data-key=page_type] .meta-value")[0].innerHTML;
+        return pageType;
+    }
+
+    $("#id_newinfotype").tagEditor({
+        sortable: false,
+        placeholder: customStrings[0],
+        delimiter: "~",
+        maxTags: 1,
+        maxLength: 1024,
+        forceLowercase: false,
+        autocomplete: {
+            source: function( request, response ) {
+                $.ajax({
+                    url: "/AJAX-REQUEST/AJAX_Schema_Search/",
+                    type: 'GET',
+                    dataType: "json",
+                    data: {searchterm: request.term, article_slug: ARTICLE_SLUG, page_type: getPageType() },
+                    success: function( data ) {
+                        var responseSet = [];
+                        $.each(data[1], function( index, value ) {
+                          responseSet[index] = value;
+                        });
+                        response( responseSet );
+                    }
+                });
+              },
+              minLength: 0,
+              classes: {
+                "ui-autocomplete": "schema-autocomplete"
+              },
+              select: function( event, ui ) {
+              },
+              open: function() {
+                $( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );
+              },
+              close: function() {
+                $( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
+              }
+        },
+    });
+
+    $("#id_newinfocontent").tagEditor({
+        sortable: false,
+        delimiter: "|",
+        maxLength: 1024,
+        forceLowercase: false,
+        placeholder: customStrings[1],
+    });
+</script>
+</ul>
+</div>
+<script>
+
+function ajaxAddNewInfobox() {
+    $theMainForm = $("form#newinfobox");
+    var ajaxResultBox = $("span#ajax_addinfobox_result");
+    var serializedData = $theMainForm.serializeArray();
+    serializedData.push({name: 'pageslug', value: ARTICLE_SLUG});
+    $.ajax({
+        type: "POST",
+        url: "/AJAX-REQUEST/AJAX_Add_New_Infobox/",
+        data: serializedData,
+        beforeSend: function( xhr ) {
+            ajaxResultBox.html("<img class='addlink-loading-gif' src='https://epcdn-vz.azureedge.net/static/images/loading.gif'><span style='margin-left: 10px; position: relative; top: 2px; color: goldenrod;'>" + gettext("Adding infobox item, please wait...") + "</span>");
+        },
+        success: function (data) {
+            if (data["type"] == "SINGLE"){
+                $(data["htmlblock"]).appendTo($('#form_tinymce_container_ifr').contents().find(".infobox-wrap .ibox-list-nonplural > tbody > tr > td"));
+                var $el = $("#form_tinymce_container_ifr").contents().find(".infobox-wrap .ibox-list-nonplural > tbody > tr > td table:last-child");
+                var bottomOffset = $el.offset().top + $el.outerHeight();
+                $('html, body').animate({scrollTop: bottomOffset}, 500);
+
+            }
+            else if (data["type"] == "PLURAL"){
+                $(data["htmlblock"]).appendTo($('#form_tinymce_container_ifr').contents().find(".infobox-wrap .ibox-list-plural"));
+                var $el = $("#form_tinymce_container_ifr").contents().find(".infobox-wrap .ibox-list-plural table:last-child");
+                var bottomOffset = $el.offset().top + $el.outerHeight();
+                $('html, body').animate({scrollTop: bottomOffset}, 500);
+            }
+
+            var fadeDuration = 500;
+            var theTarget = $('section.infobox-frame-span');
+            $(theTarget).fadeOut(fadeDuration, function() {
+                $(theTarget).load("/AJAX-REQUEST/AJAX_Fetch_New_Infobox_Form/" + "{{ ARTICLE_SLUG }}" + "/", function () {
+                    setTimeout(window.resetBlobBoxTinyMce(), 1);
+                    theTarget.fadeIn(fadeDuration);
+                });
+            });
+
+            $('#form_tinymce_container_ifr').contents().find(".infobox-wrap .delete-btn-wrap").click(function() {
+                $(this).parent().parent().parent().remove();
+            });
+            $('#form_tinymce_container_ifr').contents().find(".infobox-wrap .ibox-item-nonplural .add-row-btn").click(function() {
+                $('<tr class="ibox-value-row"><td class="ibox-nonplural-value" colspan="2"><br data-mce-bogus="1"></td><td class="delete-row-wrap"><span class="icon icon-circle-with-cross"></span></td></tr>').insertBefore($(this));
+                $('#form_tinymce_container_ifr').contents().find(".infobox-wrap .delete-row-wrap").click(function() {
+                    $(this).parent().remove();
+                });
+            });
+            $('#form_tinymce_container_ifr').contents().find(".infobox-wrap .ibox-item-plural .add-row-btn").click(function() {
+                $('<tr class="ibox-value-row"><td class="ibox-plural-value" colspan="2"><br data-mce-bogus="1"></td><td class="delete-row-wrap"><span class="icon icon-circle-with-cross"></span></td></tr>').insertBefore($(this));
+                $('#form_tinymce_container_ifr').contents().find(".infobox-wrap .delete-row-wrap").click(function() {
+                    $(this).parent().remove();
+                });
+            });
+
+            $.ajax({
+                type: "GET",
+                url: "/AJAX-REQUEST/AJAX_Fetch_New_Infobox_Form/" + ARTICLE_SLUG,
+                success: function (data) {
+                    var theTarget = $('#addinfobox-box');
+                    theTarget.html(data);
+                }
+            });
+        }
+    });
+    return false;
+}
+
+function hideNewInfoboxPane() {
+    $("#addinfobox-box-wrapper").hide();
+}
+
+$( document ).ready(function() {
+    initializeTooltippables();
+});
+
+</script>

@@ -1,0 +1,238 @@
+{% load i18n %}
+<script>
+function confirm_exit(destination) {
+    var r = confirm(gettext("Are you sure you want to exit the page? Unsaved changes will be lost."));
+    if (r == true) {
+        window.location.href = "/" + destination + "/";
+    }
+}
+
+$(window).load(function() {
+
+    $.notify.addStyle('ep_styling', {
+        html: "<div>" +
+                "<span data-notify-text/>" +
+              "</div>",
+        classes: {
+            base: {
+                "white-space": "nowrap",
+                "background-color": "red",
+                "padding": "5px",
+                "text-align": "center",
+                "border-radius": "2px",
+                "z-index": "999",
+                "position": "relative",
+
+            },
+            error_top: {
+                "color": "white",
+                "margin-bottom": "7px",
+            },
+            error_bottom: {
+                "color": "white",
+                "margin-top": "5px",
+                "margin-bottom": "1px",
+            }
+        }
+    });
+});
+
+// Editing tour popups
+function runTour() {
+    var tour = new Tour({
+        storage: false,
+        backdrop: false,
+        steps: [
+            {
+                // Introduction
+                element: $("#form_tinymce_container_ifr").contents().find(".page-title"),
+                smartPlacement: true,
+                placement: "bottom",
+                title: gettext("Introduction"),
+                content: gettext("Everipedia is just like Wikipedia but much simpler to edit and contribute. Each page is composed of an infobox area for short concise facts, a main article written in a neutral 3rd person tense, a media gallery of pictures, videos, audio etc about the topic, a list of references to webpages and files that are used as citations in the article and infobox."),
+            },
+            {
+                // Page title
+                element: $("#form_tinymce_container_ifr").contents().find(".page-title"),
+                smartPlacement: true,
+                placement: "bottom",
+                title: gettext("Title"),
+                content: gettext("Enter the page title here"),
+                onShown: function (tour) {
+                    $("#form_tinymce_container_ifr").contents().find(".page-title").addClass("tour-highlighted");
+                    $('html, body').animate({scrollTop: $("#form_tinymce_container_ifr").contents().find(".page-title").offset().top}, 250);
+                },
+                onHidden: function (tour) {
+                    $("#form_tinymce_container_ifr").contents().find(".page-title").removeClass("tour-highlighted");
+                },
+            },
+            {
+                // Main photo
+                element: $("#form_tinymce_container_ifr").contents().find(".main-photo-wrap"),
+                smartPlacement: true,
+                title: gettext("Main photo"),
+                content: gettext("Here you can add the main photo for the article."),
+                onShown: function (tour) {
+                    $("#form_tinymce_container_ifr").contents().find(".main-photo-wrap").addClass("tour-highlighted");
+                    $('html, body').animate({scrollTop: $("#form_tinymce_container_ifr").contents().find(".main-photo-wrap").offset().top}, 250);
+                },
+                onHidden: function (tour) {
+                    $("#form_tinymce_container_ifr").contents().find(".main-photo-wrap").removeClass("tour-highlighted");
+                },
+            },
+            {
+                // Infobox
+                element: $("#form_tinymce_container_ifr").contents().find(".add-new-ibox"),
+                smartPlacement: true,
+                title: gettext("Infobox"),
+                content: gettext("The infobox is designed for concise, quick facts. Suggested items appear in the dropdown depending on the selected topic, but any type of infobox can be added."),
+                onShown: function (tour) {
+                    $("#form_tinymce_container_ifr").contents().find(".add-new-ibox").addClass("tour-highlighted");
+                    // $('html, body').animate({scrollTop: $("#form_tinymce_container_ifr").contents().find(".add-new-ibox").offset().top}, 250);
+                },
+                onHidden: function (tour) {
+                    $("#form_tinymce_container_ifr").contents().find(".add-new-ibox").removeClass("tour-highlighted");
+                },
+            },
+            {
+                // Reference links
+                element: $("#form_tinymce_container_ifr").contents().find(".lower-body .reference-container .section-headline"),
+                smartPlacement: true,
+                title: gettext("Add Links, Files, Etc."),
+                content: gettext("As you add links and files, they will show up in the Reference Links section. You can edit or remove them as well."),
+                onShown: function (tour) {
+                    $("#form_tinymce_container_ifr").contents().find(".lower-body .reference-container .section-headline").addClass("tour-highlighted");
+                    $('html, body').animate({scrollTop: $("#form_tinymce_container_ifr").contents().find(".lower-body .reference-container .section-headline").offset().top}, 250);
+                },
+                onHidden: function (tour) {
+                    $("#form_tinymce_container_ifr").contents().find(".lower-body .reference-container .section-headline").removeClass("tour-highlighted");
+                },
+            },
+            {
+                // Reference links
+                element: $("#form_tinymce_container_ifr").contents().find(".lower-body .reference-container .section-headline"),
+                smartPlacement: true,
+                title: gettext("Reference links"),
+                content: gettext("Make sure to cite your sources when adding information to the page by adding links and files here so you can show where the information is coming from."),
+                onShown: function (tour) {
+                    $("#form_tinymce_container_ifr").contents().find(".lower-body .reference-container .reference-list").addClass("tour-highlighted");
+                    $('html, body').animate({scrollTop: $("#form_tinymce_container_ifr").contents().find(".lower-body .reference-container .reference-list").offset().top}, 250);
+                },
+                onHidden: function (tour) {
+                    $("#form_tinymce_container_ifr").contents().find(".lower-body .reference-container .reference-list").removeClass("tour-highlighted");
+                },
+            },
+            {
+                // Media gallery
+                element: $("#form_tinymce_container_ifr").contents().find(".lower-body .media-gallery .section-headline"),
+                smartPlacement: true,
+                title: gettext("Media Gallery"),
+                content: gettext("Added pictures will show up here."),
+                onShown: function (tour) {
+                    $("#form_tinymce_container_ifr").contents().find(".lower-body .media-gallery .media-list").addClass("tour-highlighted");
+                    $('html, body').animate({scrollTop: $("#form_tinymce_container_ifr").contents().find(".lower-body .media-gallery .media-list").offset().top}, 250);
+                },
+                onHidden: function (tour) {
+                    $("#form_tinymce_container_ifr").contents().find(".lower-body .media-gallery .media-list").removeClass("tour-highlighted");
+                },
+            },
+            {
+                // Media gallery
+                element: $("#form_tinymce_container_ifr").contents().find(".page-title"),
+                smartPlacement: true,
+                placement: "bottom",
+                title: gettext("Add media to article text"),
+                content: gettext("To add an image or video to the article text, click the 'Media' button."),
+                onShown: function (tour) {
+                    $('.mce-listbox .mce-i-image').each(function() {$(this).parent().addClass("tour-highlighted");});
+                },
+                onHidden: function (tour) {
+                    $('.mce-listbox .mce-i-image').each(function() {$(this).parent().removeClass("tour-highlighted");});
+                },
+            },
+            {
+                // Adding citations to text
+                element: $("#form_tinymce_container_ifr").contents().find(".page-title"),
+                smartPlacement: true,
+                placement: "bottom",
+                title: gettext("Cite links, files, etc"),
+                content: gettext("After you have already added a link, file, or picture to the page, you can cite it by clicking the 'Cite' button. You can also press the '^' or '*' keys when typing and a dropdown should appear."),
+                onShown: function (tour) {
+                    $('.mce-i-icon-book').each(function() {$(this).parent().addClass("tour-highlighted");});
+                },
+                onHidden: function (tour) {
+                    $('.mce-i-icon-book').each(function() {$(this).parent().removeClass("tour-highlighted");});
+                },
+            },
+            {
+                // Linking to other wiki articles
+                element: $("#form_tinymce_container_ifr").contents().find(".page-title"),
+                smartPlacement: true,
+                placement: "bottom",
+                title: gettext("Link to other Everipedia pages"),
+                content: gettext("To link to another Everipedia page click the 'Link Page' button. You can also press the '@' or key when typing and a dropdown should appear. Try to link to as many pages as necessary to make each page as rich and informative as possible."),
+                onShown: function (tour) {
+                    $('.mce-i-icon-link').each(function() {$(this).parent().addClass("tour-highlighted");});
+                },
+                onHidden: function (tour) {
+                    $('.mce-i-icon-link').each(function() {$(this).parent().removeClass("tour-highlighted");});
+                },
+            },
+            {
+                // Main article body
+                element: $("#form_tinymce_container_ifr").contents().find(".blurb-wrap"),
+                smartPlacement: true,
+                placement: "top",
+                title: gettext("Main article body"),
+                content: gettext("Write in an objective manner in third person tense, do not include any marketing speak (exclusive offers, unverifiable claims etc). This is an encyclopedia, not a social media page."),
+                onShown: function (tour) {
+                    $("#form_tinymce_container_ifr").contents().find(".blurb-wrap").addClass("tour-highlighted");
+                    $('html, body').animate({scrollTop: $("#form_tinymce_container_ifr").contents().find(".blurb-wrap").offset().top}, 250);
+                },
+                onHidden: function (tour) {
+                    $("#form_tinymce_container_ifr").contents().find(".blurb-wrap").removeClass("tour-highlighted");
+                },
+
+            },
+            {
+                // Save
+                element: $("#form_tinymce_container_ifr").contents().find(".main-photo-wrap"),
+                smartPlacement: true,
+                placement: "bottom",
+                title: gettext("Save"),
+                content: gettext("When you are finished, click here to save your changes."),
+                onShown: function (tour) {
+                    $('.mce-btn-save-page').each(function() {$(this).parent().addClass("tour-highlighted");});
+                },
+                onHidden: function (tour) {
+                    $('.mce-btn-save-page').each(function() {$(this).parent().removeClass("tour-highlighted");});
+                },
+            },
+        ],
+        template: "<div class='popover tour'>" +
+            "<div class='arrow'></div>" +
+            "<button class='btn btn-default close-tour' data-role='end'><span class='icon icon-circle-with-cross'></span></button>" +
+            "<h3 class='popover-title'></h3>" +
+            "<div class='popover-content'></div>" +
+            "<div class='popover-navigation'>" +
+            "<button class='btn btn-default' style='float:left;' data-role='prev'>« " + gettext("Back") + "</button>" +
+            "<span data-role='separator'></span>" +
+            "<button class='btn btn-default' style='float:right;' data-role='next'>" + gettext("Next") + " »</button>" +
+            "</div>" +
+            "" +
+            "</div>",
+    });
+
+    // Initialize the tour
+    tour.init();
+
+    // Start the tour
+    tour.start();
+}
+
+// Trigger the main photo addition pane
+function initiatePictureDropzone() {
+    var theHtml = "<iframe id='avatar_edit_iframe' src='/dropzone/' class='edit-picture-iframe' sandbox='allow-forms allow-scripts allow-modals allow-same-origin allow-top-navigation' border='0' data-identifier='{{ARTICLE_SLUG}}' data-photo_type='ProfilePics'" + "data-pageID='{{ARTICLE_SLUG}}' data-pic-element-id='edit-profile-pic'></iframe>";
+    $('#edit-profile-pic').html(theHtml);
+}
+</script>

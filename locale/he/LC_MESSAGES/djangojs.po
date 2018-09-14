@@ -1,0 +1,579 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-25 08:59-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: static/js/easytimer.min.js:7
+msgid "secondTenthsUpdated"
+msgstr "עשיריות השניה עודכנו"
+
+#: static/js/easytimer.min.js:7
+msgid "secondsUpdated"
+msgstr "השניות עודכנו"
+
+#: static/js/easytimer.min.js:7
+msgid "minutesUpdated"
+msgstr "הדקות עודכנו"
+
+#: static/js/easytimer.min.js:7
+msgid "hoursUpdated"
+msgstr "השעות עודכנו"
+
+#: static/js/easytimer.min.js:7
+msgid "daysUpdated"
+msgstr "הימים עודכנו"
+
+#: static/js/easytimer.min.js:7
+msgid "targetAchieved"
+msgstr "המטרה הושגה"
+
+#: static/js/easytimer.min.js:7
+msgid "stopped"
+msgstr "עצר"
+
+#: static/js/easytimer.min.js:7
+msgid "started"
+msgstr "התחיל"
+
+#: static/js/easytimer.min.js:7
+msgid "paused"
+msgstr "הושהה"
+
+#: static/js/easytimer.min.js:7
+msgid "reset"
+msgstr "איפוס"
+
+#: static/js/facebook_sdk_local.min.js:4
+msgid "Cancel"
+msgstr "ביטול"
+
+#: static/js/facebook_sdk_local.min.js:4
+msgid "Loading..."
+msgstr "טוען‫...‬"
+
+#: static/js/facebook_sdk_local.min.js:4
+msgid "js_sdk_force_status_on_load"
+msgstr "מעמד כוח js sdk בטעינה"
+
+#: static/js/facebook_sdk_local.min.js:5
+msgid "auth.logout"
+msgstr "יציאה‫.‬אותנטית"
+
+#: static/js/plugins/citepicture/plugin.min.js:16
+#: static/js/plugins/citepicture/plugin.min.js:17
+#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:16
+#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:17
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Media"
+msgstr "מדיה"
+
+#: static/js/plugins/citesource/plugin.min.js:15
+#: static/js/plugins/citesource/plugin.min.js:16
+#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:15
+#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:16
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Cite"
+msgstr "אזכור"
+
+#: static/js/plugins/linkpage/plugin.min.js:1
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:1
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Search Everipedia"
+msgstr "חיפוש ב‫-‬Everipedia"
+
+#: static/js/plugins/linkpage/plugin.min.js:17
+#: static/js/plugins/linkpage/plugin.min.js:18
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:17
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:18
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Link"
+msgstr "קישור"
+
+#: static/js/plugins/mention/plugin.min.js:374
+#: static/tinymce_4.2.3/plugins/mention/plugin.min.js:374
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:162
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:165
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:212
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:215
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:54
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:112
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:115
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:224
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:227
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:331
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:334
+msgid "Cite as verified editor"
+msgstr "אזכר כעורך מאומת"
+
+#: static/js/plugins/rollups/plugin.min.js:3
+#: static/js/plugins/savepage/plugin.min.js:6
+#: static/js/plugins/savepage/plugin.min.js:7
+#: static/tageditor/jquery.tag-editor.js:335
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:3
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:6
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:7
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:191
+msgid "Save"
+msgstr "שמירה"
+
+#: static/js/plugins/rollups/plugin.min.js:4
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:4
+msgid "Edit"
+msgstr "עריכה"
+
+#: static/js/plugins/rollups/plugin.min.js:11
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
+msgid "Font Style"
+msgstr "סגנון גופן"
+
+#: static/js/plugins/rollups/plugin.min.js:11
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
+msgid "Style"
+msgstr "סגנון"
+
+#: static/tageditor/jquery.tag-editor.js:584
+#: static/tageditor/jquery.tag-editor.js:587
+#: static/tageditor/jquery.tag-editor.js:590
+msgid "Add an additional description for this category"
+msgstr "הוסף תיאור נוסף לקטגוריה זו"
+
+#: static/tageditor/jquery.tag-editor.js:584
+#: static/tageditor/jquery.tag-editor.js:587
+#: static/tageditor/jquery.tag-editor.js:590
+msgid "Delete this tag"
+msgstr "מחק תגית זו"
+
+#: templates/enterlink/brainpowermgmt.html:142
+msgid "Claim"
+msgstr "דרישה"
+
+#: templates/enterlink/brainpowermgmt.html:142
+msgid "Not Ready"
+msgstr "לא מוכן"
+
+#: templates/enterlink/dropzone.html:157
+msgid "Drag and drop your photo here or click to upload."
+msgstr "גררו ושחררו את תמונתכם כאן‫,‬ או לחצו להעלאה‫.‬"
+
+#: templates/enterlink/dropzone.html:182
+msgid "Please enter a description for the photo"
+msgstr "אנא הזינו תיאור לתמונה"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:89
+msgid "Adding infobox item, please wait..."
+msgstr "מוסיף פריט לתיבת המידע‫,‬ אנא המתינו‫...‬"
+
+#: templates/enterlink/edit_ajax_addlink.html:64
+msgid "Adding, please wait..."
+msgstr "מוסיף‫,‬ אנא המתינו‫...‬"
+
+#: templates/enterlink/edit_ajax_addlink.html:71
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:354
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:457
+msgid ""
+"You have been posting a lot of links today. Wait a bit for the community to "
+"respond to your content. New editors are limited to posting only 250 "
+"submissions a day."
+msgstr ""
+"העלית קישורים רבים היום‫.‬ המתן‫/‬המתיני שהקהילה תגיב לתוכן שלך‫.‬ עורכים חדשים "
+"מוגבלים לפרסם עד 250 הגשות ביום‫.‬"
+
+#: templates/enterlink/edit_ajax_addlink.html:75
+msgid ""
+"This link is already on this page, you can still edit the link summary to "
+"improve the information on EP!"
+msgstr ""
+"הקישור כבר קיים בעמוד זה‫,‬ באפשרותך לערוך את תיאור הקישור על מנת לשפר את "
+"המידע ב‫-‬EP‫!‬"
+
+#: templates/enterlink/edit_ajax_addlink.html:79
+msgid ""
+"Links to Wikipedia pages are not allowed, for technical reasons. Please try "
+"again."
+msgstr "לא ניתן להוסיף קישורים לדפים בויקיפדיה מסיבות טכניות‫.‬ אנא נסו שוב‫.‬"
+
+#: templates/enterlink/edit_ajax_addlink.html:83
+msgid "No URL provided, please try again"
+msgstr "לא הוזנה כתובת URL‫,‬ אנא נסו שוב"
+
+#: templates/enterlink/edit_ajax_addlink.html:87
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:362
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:465
+msgid "Please provide a description for the link or file."
+msgstr "יש להזין תיאור לקישור או לקובץ‫.‬"
+
+#: templates/enterlink/edit_ajax_addlink.html:91
+msgid "Please provide a more scholarly description."
+msgstr "יש להזין תיאור יותר אקדמי‫.‬"
+
+#: templates/enterlink/edit_ajax_addlink.html:109
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+msgid "File uploaded successfully."
+msgstr "הקובץ הועלה בהצלחה‫.‬"
+
+#: templates/enterlink/edit_ajax_addlink.html:141
+#: templates/enterlink/inline-js/edit-bottom.html:16
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+msgid "Add File"
+msgstr "הוספת קובץ‫.‬"
+
+#: templates/enterlink/edit_ajax_addlink.html:148
+#: templates/enterlink/inline-js/edit-bottom.html:17
+msgid "Add Link"
+msgstr "הוספת קישור‫.‬"
+
+#: templates/enterlink/headers/scatter-header.html:130
+msgid "Claim Rewards"
+msgstr ""
+
+#: templates/enterlink/index.html:236
+msgid "Loading more activity, please wait..."
+msgstr "טוען פעילות נוספת‫,‬ אנא המתינו‫...‬"
+
+#: templates/enterlink/index.html:260
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+msgid "Create page"
+msgstr "יצירת דף"
+
+#: templates/enterlink/inline-js/edit-bottom.html:12
+msgid ""
+"Please stake some IQ into Brainpower before continuing. Click OK to open the "
+"Brainpower management screen in a new tab. NOTE: Please make sure popups are "
+"enabled for this site, as you may receive a warning."
+msgstr ""
+"עליך להמיר IQ לכוח מוח לפני כן‫.‬ לחצו על אישור לפתיחת מסך ניהול כוח מוח "
+"בלשונית חדשה‫.‬ שימו לב‫:‬ אנא ודאו שאפשרתם פופ‫-‬אפ באתר זה‫,‬ אתם עלולים לקבל "
+"אזהרה‫.‬"
+
+#: templates/enterlink/inline-js/edit-bottom.html:13
+msgid ""
+"Note that you will not be able to propose edits without Brainpower. Your "
+"work will be lost!"
+msgstr "שימו לב שלא תוכלו להציע עריכות ללא כוח מוח‫.‬ עבודתכם לא תישמר‫!‬"
+
+#: templates/enterlink/inline-js/edit-bottom.html:14
+msgid "Error: proposal not found. Please try submitting again."
+msgstr "שגיאה‫:‬ ההצעה לא נמצאה‫.‬ נסו לשלוח מחדש‫.‬"
+
+#: templates/enterlink/inline-js/edit-bottom.html:15
+msgid "Article proposal submission failed!"
+msgstr "שליחת הצעת מאמר נכשלה‫!‬"
+
+#: templates/enterlink/inline-js/edit-bottom.html:18
+msgid "Add New Infobox"
+msgstr "הוספת תיבת מידע חדשה"
+
+#: templates/enterlink/inline-js/edit-bottom.html:19
+msgid "Completing transaction..."
+msgstr "משלים העברה‫...‬"
+
+#: templates/enterlink/inline-js/edit-bottom.html:141
+msgid "Add Row"
+msgstr "הוספת שורה"
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:56
+msgid "Are you sure you want to remove this link?"
+msgstr "האם למחוק קישור זה‫?‬"
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:162
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:166
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:212
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:216
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:55
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:112
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:116
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:224
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:228
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:331
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:335
+msgid "Cite my own knowledge / experience as a verified editor"
+msgstr "אזכור הידע‫/‬הניסיון שלי כעורך מאומת"
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:347
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:451
+msgid "Posting comment, please wait.."
+msgstr "מפרסם תגובה‫,‬ אנא המתינו‫...‬"
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:358
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:461
+msgid "This comment is already on this page. Please try again!"
+msgstr "תגובה זו כבר קיימת בעמוד‫.‬ אנא נסו שוב‫!‬"
+
+#: templates/enterlink/inline-js/enterlink-ajax-core.html:450
+msgid "Posting reply, please wait.."
+msgstr "מפרסם תגובה‫,‬ אנא המתינו‫...‬"
+
+#: templates/enterlink/inline-js/enterlink-ajax-execute-search.html:139
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:52
+msgid "Searching..."
+msgstr "מחפש‫...‬"
+
+#: templates/enterlink/inline-js/enterlink-ajax-execute-search.html:167
+msgid "Merging..."
+msgstr "ממזג‫...‬"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:94
+msgid "Are you sure you want to exit the page? Unsaved changes will be lost."
+msgstr "האם לצאת מדף זה‫?‬ שינויים שלא נשמרו יאבדו‫.‬"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:180
+msgid "Introduction"
+msgstr "מבוא"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:180
+msgid ""
+"Everipedia is just like Wikipedia but much simpler to edit and contribute. "
+"Each page is composed of an infobox area for short concise facts, a main "
+"article written in a neutral 3rd person tense, a media gallery of pictures, "
+"videos, audio etc about the topic, a list of references to webpages and "
+"files that are used as citations in the article and infobox."
+msgstr ""
+"Everipedia היא ממש כמו ויקיפדיה‫,‬ רק שהרבה יותר קל לערוך ולתרום לה‫.‬ כל עמוד "
+"מורכב מאיזור ״תיבת מידע״ המכיל עובדות קצרות ומתומצתות‫,‬ מאמר מרכזי שנכתב "
+"בנטיית גוף שלישי‫,‬ גלריית מדיה של תמונות‫,‬ סרטונים‫,‬ קבצי שמע וכו׳ בנוגע לנושא‫,‬ "
+"רשימת מקורות מדפי אינטרנט וקבצים המשמשים כאזכורים במאמר ובתיבת המידע‫.‬"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:181
+msgid "Main photo"
+msgstr "תמונה ראשית"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:181
+msgid "Here you can add the main photo for the article."
+msgstr "כאן תוכלו להוסיף תמונה ראשית עבור המאמר‫.‬"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:182
+msgid "Infobox"
+msgstr "תיבת מידע"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:182
+msgid ""
+"The infobox is designed for concise, quick facts. Suggested items appear in "
+"the dropdown depending on the selected topic, but any type of infobox can be "
+"added."
+msgstr ""
+"תיבת המידע עוצבה לעובדות קצרות ותמציתיות‫.‬ פריטים מומלצים מופיעים בתפריט "
+"הנפתח כתלות בנושא הנבחר‫,‬ אך ניתן להוסיף כל סוג של תיבת מידע‫.‬"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:183
+msgid "Add Links, Files, Etc."
+msgstr "הוספת קישורים‫,‬ קבצים וכו׳‫.‬"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:183
+msgid ""
+"Make sure to cite your sources when adding information to the page by adding "
+"links and files here so you can show where the information is coming from."
+msgstr ""
+"אנא ודאו לצטט את המקורות בהוספת מידע חדש לדף באמצעות הוספת קישורים וקבצים "
+"כאן על מנת שתוכלו להראות מהיכן מגיע המידע‫.‬"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:184
+msgid "Reference links"
+msgstr "קישורי תימוכין"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:184
+msgid ""
+"As you add links and files, they will show up in the Reference Links "
+"section. You can edit or remove them as well."
+msgstr ""
+"כאשר תוסיפו קישורים וקבצים‫,‬ הם יופיעו באיזור קישורי התימוכין‫.‬ באפשרותכם "
+"לערוך או למחוק אותם‫.‬"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:185
+msgid "Media Gallery"
+msgstr "גלריית מדיה"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:185
+msgid "Added pictures will show up here."
+msgstr "תמונות שנוספו יופיעו כאן‫.‬"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
+msgid "Add media to article text"
+msgstr "הוסף מדיה לתוכן המאמר"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
+msgid "To add an image or video to the article text, click the 'Media' button."
+msgstr "על מנת להוסיף תמונה או סרטון לתוכן המאמר‫,‬ לחצו על כפתור ׳מדיה׳‫.‬"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
+msgid "Cite links, files, etc"
+msgstr "אזכור קישורים‫,‬ קבצים וכו׳"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
+msgid ""
+"After you have already added a link, file, or picture to the page, you can "
+"cite it by clicking the 'Cite' button. You can also press the '^' or '*' "
+"keys when typing and a dropdown should appear."
+msgstr ""
+"לאחר הוספת קישור‫,‬ קובץ או תמונה לדף‫,‬ תוכלו לאזכר אותם באמצעות לחיצה על כפתור "
+"׳אזכור׳‫.‬ תוכלו גם ללחוץ על מקש ׳‫^‬׳ או ׳‫*‬׳ בעת ההקלדה ותפריט נפתח יופיע‫.‬"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:188
+msgid "Link to other Everipedia pages"
+msgstr "קישור לדפי Everipedia אחרים"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:188
+msgid ""
+"To link to another Everipedia page click the 'Link Page' button. You can "
+"also press the '@' or key when typing and a dropdown should appear. Try to "
+"link to as many pages as necessary to make each page as rich and informative "
+"as possible."
+msgstr ""
+"על מנת להוסיף קישור לדף Everipedia לחצו על כפתור ׳קישור לדף׳‫.‬ תוכלו ללחוץ גם "
+"על ׳‫@‬׳ בעת ההקלדה ותפריט נפתח יופיע‫.‬ נסו להוסיף קישורים ככל האפשר על מנת "
+"להפוך כל דף לעשיר ואינפורמטיבי במידת האפשר‫.‬"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:189
+msgid "Main article body"
+msgstr "גוף מאמר מרכזי"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:189
+msgid ""
+"Write in an objective manner in third person tense, do not include any "
+"marketing speak (exclusive offers, unverifiable claims etc). This is an "
+"encyclopedia, not a social media page."
+msgstr ""
+"כתבו באופן אובייקטיבי בנטיית גוף שלישי‫,‬ אל תכללו תוכן שיווקי ‫(‬מבצעים "
+"בלעדיים‫,‬ טענות בלתי מאומתות וכד׳‫).‬ זוהי אנציקלופדיה‫,‬ לא דף ברשת חברתית‫.‬"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:190
+msgid "Title"
+msgstr "כותרת"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:190
+msgid "Enter the page title here"
+msgstr "הזן את כותרת הדף כאן"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:191
+msgid "When you are finished, click here to save your changes."
+msgstr "כשתסיימו‫,‬ לחצו כאן על מנת לשמור את השינויים‫.‬"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:193
+msgid "Back"
+msgstr "הקודם"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:193
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:159
+msgid "Next"
+msgstr "הבא"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
+msgid "Formats"
+msgstr "תבניות"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+msgid "File uploaded successfully"
+msgstr "הקובץ הועלה בהצלחה"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:459
+msgid "Please enter a headline"
+msgstr "יש להזין כותרת"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:463
+msgid "Submission Successful!"
+msgstr "השליחה התבצעה בהצלחה‫!‬"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:93
+msgid "Editor profile"
+msgstr "פרופיל העורך"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:95
+msgid ""
+"The editor profile page shows the pages the user has edited, references "
+"they’ve added to a page, and comments they’ve made."
+msgstr ""
+"דף הפרופיל של העורך מציג את הדפים שהמשתמש ערך ואת המקורות והתגובות שהוא "
+"הוסיף לדף‫.‬"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:105
+msgid "Profile photo"
+msgstr "תמונת פרופיל"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:106
+msgid "Click here to upload a picture for your editor profile."
+msgstr "לחץ כאן על מנת להעלות תמונה לפרופיל העורך שלך‫.‬"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:112
+msgid "Enter your profile info"
+msgstr "הזן את תוכן הפרופיל שלך"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:113
+msgid "(Optional) Enter your name, email, nationality, language, etc."
+msgstr "‫(‬לא חובה‫)‬ הזן את השם‫,‬ הדוא׳׳ל‫,‬ האזרחות והשפה שלך"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:119
+msgid "Link your Everipedia page"
+msgstr "קישור לדף ה‫-‬Everipedia שלך"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:120
+msgid ""
+"If you already created an Everipedia article about yourself, you can link to "
+"it here."
+msgstr "אם כבר יצרתם מאמר ב‫-‬Everipedia על עצמכם‫,‬ קשרו אליו כאן‫.‬"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:126
+msgid "(Optional) Add your cryptocurrency wallet addresses"
+msgstr "‫(‬לא חובה‫)‬ הוסף את כתובת ארנק מטבעות הקריפטו שלך"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:127
+msgid ""
+"If you have any cryptocurrencies, add the wallet addresses here. People may "
+"donate to you if they like your work! If you do not have a wallet, you can "
+"get one here: <img class='userview-crypto-logo-helper' src='https://epcdn-vz."
+"azureedge.net/static/images/bitcoin-icon.svg'/><a class='helper-crypto-"
+"anchor' rel='nofollow' target='_blank' href='https://www.coinbase."
+"com/'>Bitcoin</a>, <img class='userview-crypto-logo-helper' style='margin-"
+"right: 0px;' src='https://epcdn-vz.azureedge.net/static/images/ethereum-icon."
+"png'/><a class='helper-crypto-anchor' rel='nofollow' target='_blank' "
+"href='https://www.coinbase.com/'>Ethereum</a>, <img class='userview-crypto-"
+"logo-helper' src='https://epcdn-vz.azureedge.net/static/images/dogecoin-logo."
+"png'/><a class='helper-crypto-anchor' rel='nofollow' target='_blank' "
+"href='https://my.dogechain.info/#/overview'>Dogecoin</a> "
+msgstr ""
+"אם יש ברשותכם מטבעות קריפטו, הוסיפו את כתובות הארנקים שלכם כאן. אנשים שיאהבו "
+"את עבודתכםעשויים לרצות לתרום לכם! אם אין לכם ארנק, תוכלו להשיג אחד כאן:<img "
+"class='userview-crypto-logo-helper' src='https://epcdn-vz.azureedge.net/"
+"static/images/bitcoin-icon.svg'/><a class='helper-crypto-anchor' "
+"rel='nofollow' target='_blank' href='https://www.coinbase.com/'>Bitcoin</a>, "
+"<img class='userview-crypto-logo-helper' style='margin-right: 0px;' "
+"src='https://epcdn-vz.azureedge.net/static/images/ethereum-icon.png'/><a "
+"class='helper-crypto-anchor' rel='nofollow' target='_blank' href='https://"
+"www.coinbase.com/'>Ethereum</a>, <img class='userview-crypto-logo-helper' "
+"src='https://epcdn-vz.azureedge.net/static/images/dogecoin-logo.png'/><a "
+"class='helper-crypto-anchor' rel='nofollow' target='_blank' href='https://my."
+"dogechain.info/#/overview'>Dogecoin</a> "
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:133
+msgid "Save changes"
+msgstr "שמירת שינויים"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:134
+msgid "When you are done, click here to save your changes."
+msgstr "כשתסיימו‫,‬ לחצו כאן על מנת לשמור את השינויים‫.‬"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:140
+msgid "Create Page"
+msgstr "יצירת דף"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:141
+msgid "You can also create a new wiki article by clicking here."
+msgstr "לחץ כאן כדי ליצור מאמר וויקי חדש‫.‬"
+
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:157
+msgid "Pre"
+msgstr "קדם"

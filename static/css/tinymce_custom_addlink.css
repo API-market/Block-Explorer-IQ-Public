@@ -1,0 +1,50 @@
+html{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://epcdn-vz.azureedge.net/static/fonts/Poppins-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('https://epcdn-vz.azureedge.net/static/fonts/Poppins-SemiBold.woff') format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('https://epcdn-vz.azureedge.net/static/fonts/Poppins-RegItalic.woff') format('woff');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('https://epcdn-vz.azureedge.net/static/fonts/Poppins-RegItalic.woff') format('woff');
+    font-style: italic;
+}
+
+#tinymce {
+margin:5px;
+font-size:14px;
+width: calc(100% - 20px);
+padding-right: 30px !important;
+overflow-x: hidden;
+font-family: 'Poppins', Helvetica, Arial;
+font-weight:400;
+height: 80px !important;
+min-height: 50px;
+padding-bottom: 0px !important;
+overflow-y: scroll !important;
+background: white;
+color: #4c4c4c;
+}
+
+#tinymce a{
+text-decoration: none;
+color: #3097d1;
+}

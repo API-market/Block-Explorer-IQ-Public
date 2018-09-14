@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load i18n %}
+{# NEED TO KEEP DISABLED FOR AMP REASONS#}
+{#https://github.com/ampproject/amphtml/issues/10657#}
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-57561457-6', 'auto');
+  ga('set', {
+	'campaignSource': "Everipedia",
+	'campaignMedium': "AJAX",
+	'campaignName': "ajax",
+	'campaignContent': "ajax"
+  });
+  ga('set', 'title', '{{ ARTICLE_NAME }} - Hoverblurb');
+  ga('send', 'pageview', '/hoverblurb/{{ ARTICLE_SLUG }}/');
+
+
+</script>
+
+{% include 'enterlink/headers/extra-analytics-header.html' %}
+
+<!--{% if not fromAmp %}-->
+    <!--{% include 'enterlink/inline-js/enterlink-hovercard.html' %}-->
+<!--{% endif %}-->
+{% include 'enterlink/inline-css/ajax_hoverblurb-css.html' %}
+<title>{{ARTICLE_NAME}}</title>
+
+<script type='text/javascript'>
+    function newWindow() {
+        top.location.href = "https://iqnetwork.io/wiki/{{ ARTICLE_SLUG }}/";
+    }
+</script>
+<div id="hoverblurb_AJAX">
+    <div class="main-content-block">
+        {% if ARTICLE_PHOTO_URL != None and ARTICLE_PHOTO_URL != '' %}
+            <div class="hvrblrb-ajax-picture">
+                <a class="pic-block" href="javascript:void(0);" onclick="newWindow();">
+                    <img id="main_pic" src='{{ARTICLE_THUMB_URL}}' onError="this.onerror=null;this.src='{{ARTICLE_THUMB_URL}}'" />
+                </a>
+            </div>
+            <div class="hvrblrb-ajax-blurb">
+                <a class="name-block" data-fbstrippedname='{{ ARTICLE_SLUG }}' data-fbfacebookusername='{{ ARTICLE_SLUG_ALT }}' href="#" onclick="newWindow();">
+                    {{ARTICLE_NAME|truncatechars:120}}
+                </a>
+                <div class="description-block" onclick="newWindow();">
+                    {{BLURB_SNIPPET|safe}}
+                </div>
+            </div>
+        {% else %}
+            <div class="hvrblrb-ajax-blurb hvrblrb-no-photo">
+                <a class="name-block" data-fbstrippedname='{{ ARTICLE_SLUG }}' data-fbfacebookusername='{{ ARTICLE_SLUG_ALT }}' href="#" onclick="newWindow();">
+                    {{ARTICLE_NAME|truncatechars:120}}
+                </a>
+                <div class="description-block" onclick="newWindow();">
+                    {{BLURB_SNIPPET|safe}}
+                </div>
+            </div>
+        {% endif %}
+        <a class="goto-btn" href="#" onclick="newWindow();">{% trans 'Go to article' %}</a>
+        
+    </div>
+    <script>
+        document.getElementById("main_pic").src = "{{ARTICLE_PHOTO_URL}}";
+    </script>
+</div>

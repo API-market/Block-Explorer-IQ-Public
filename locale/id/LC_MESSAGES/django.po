@@ -1,0 +1,2341 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-25 08:59-0700\n"
+"PO-Revision-Date: 2018-07-30 20:29-0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.1.1\n"
+
+#: enterlink/edit.py:114
+msgid "Page Type"
+msgstr "Halaman"
+
+#: enterlink/edit.py:114
+msgid "Removed From Site"
+msgstr ""
+
+#: enterlink/edit.py:114 templates/enterlink/edit_ajax_editpagemeta.html:12
+msgid "Adult Content"
+msgstr "Konten dewasa"
+
+#: enterlink/edit.py:115
+msgid "Media Gallery"
+msgstr "Galeri"
+
+#: enterlink/edit.py:115
+msgid "References and Citations"
+msgstr ""
+
+#: enterlink/forms.py:9
+msgid "Contains"
+msgstr "Berisi"
+
+#: enterlink/forms.py:9
+msgid "Equal to"
+msgstr "Sama dengan"
+
+#: enterlink/forms.py:10
+msgid "Regular expression"
+msgstr "Ekspresi reguler"
+
+#: enterlink/forms.py:11
+msgid "Starts with"
+msgstr "Diawali dengan"
+
+#: enterlink/forms.py:11
+msgid "Ends with"
+msgstr "Diakhiri dengan"
+
+#: enterlink/forms.py:12
+msgid "Greater than"
+msgstr "Lebih besar dari"
+
+#: enterlink/forms.py:12
+msgid "Greater than or equal to"
+msgstr "Lebih dari atau sama dengan"
+
+#: enterlink/forms.py:13
+msgid "Less than"
+msgstr "Kurang dari"
+
+#: enterlink/forms.py:13
+msgid "Less than or equal to"
+msgstr "Kurang dari atau sama dengan"
+
+#: enterlink/forms.py:42 templates/enterlink/headers/index_header.html:133
+#: templates/enterlink/login.html:40
+msgid "Password"
+msgstr "Kata sandi"
+
+#: enterlink/forms.py:44
+msgid "Please enter a password"
+msgstr "Harap masukkan kata sandi"
+
+#: enterlink/forms.py:45
+msgid "Please enter a valid password"
+msgstr "Harap masukkan kata sandi yang valid"
+
+#: enterlink/forms.py:46
+msgid "Enter an email"
+msgstr "Masukkan email"
+
+#: enterlink/forms.py:47
+msgid "Please enter an email address"
+msgstr "Harap masukkan alamat email"
+
+#: enterlink/forms.py:48
+msgid "Please enter a valid email address"
+msgstr "Harap masukkan alamat email yang valid"
+
+#: enterlink/forms.py:49 enterlink/forms.py:69
+msgid "First Name"
+msgstr "Nama Depan"
+
+#: enterlink/forms.py:51 enterlink/forms.py:71
+msgid "Last Name"
+msgstr "Nama Belakang"
+
+#: enterlink/forms.py:53
+msgid "Enter a username"
+msgstr "Masukkan nama pengguna"
+
+#: enterlink/forms.py:54
+msgid "Please enter a username"
+msgstr "Harap masukkan nama pengguna"
+
+#: enterlink/forms.py:55
+msgid "Please enter a valid username"
+msgstr "Masukkan nama pengguna yang valid"
+
+#: enterlink/forms.py:61
+msgid "This email address already exists! Please use another one."
+msgstr "Alamat email ini sudah dipakai! Harap gunakan yang lain."
+
+#: enterlink/forms.py:73 enterlink/forms.py:83
+msgid "Email"
+msgstr "Email"
+
+#: enterlink/forms.py:82
+msgid "How can we help?"
+msgstr "Bagaimana kami dapat membantu?"
+
+#: enterlink/forms.py:84
+msgid "Full Name"
+msgstr "Nama Lengkap"
+
+#: enterlink/forms.py:85
+msgid "Subject"
+msgstr "Subyek"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Report Abuse"
+msgstr "Laporkan Penyalahgunaan"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Report Bug"
+msgstr "Laporkan Kesalahan"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Verify Account"
+msgstr "Verifikasi Akun"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Anonymous Tip"
+msgstr "Tip Anonim"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Investment Inquiries"
+msgstr "Pertanyaan mengenai Investasi"
+
+#: enterlink/forms.py:86 enterlink/forms.py:175 enterlink/models.py:89
+#: enterlink/models.py:134
+msgid "Other"
+msgstr "Lainnya"
+
+#: enterlink/forms.py:97
+msgid "Search by Entering a Link"
+msgstr "Cari dengan Memasukkan sebuah Tautan"
+
+#: enterlink/forms.py:126
+msgid ""
+"Describe the file briefly. A summary of the information found is best. Avoid "
+"simply repeating the page title."
+msgstr ""
+"Deskripsikan file secara singkat. Sebuah ringkasan informasi yang ditemukan "
+"adalah yang terbaik. Hindari hanya mengulang judul halaman."
+
+#: enterlink/forms.py:148
+msgid "File type not allowed."
+msgstr "Jenis file tidak diizinkan."
+
+#: enterlink/forms.py:153
+msgid "Please ."
+msgstr "Harap ."
+
+#: enterlink/forms.py:154
+msgid "Enter a URL"
+msgstr "Masukkan sebuah URL:"
+
+#: enterlink/forms.py:156
+msgid ""
+"Describe the URL briefly. A summary of the information found is best. Avoid "
+"simply repeating the page title."
+msgstr ""
+"Jelaskan URL secara singkat. Ringkasan informasi yang ditemukan adalah yang "
+"terbaik. Hindari hanya mengulang judul halaman."
+
+#: enterlink/forms.py:165 templates/enterlink/edit_ajax_addinfobox.html:28
+msgid "Enter type (e.g. Occupation)"
+msgstr "Masukkan tipe (contohnya Pekerjaan)"
+
+#: enterlink/forms.py:166 templates/enterlink/edit_ajax_addinfobox.html:28
+msgid "Enter value (e.g. CEO)"
+msgstr "Masukkan nilai (contohnya CEO)"
+
+#: enterlink/forms.py:170 enterlink/models.py:134
+msgid "Person"
+msgstr "Individu"
+
+#: enterlink/forms.py:170 enterlink/models.py:134
+msgid "Place/Location"
+msgstr "Tempat/Lokasi"
+
+#: enterlink/forms.py:171 enterlink/models.py:134
+msgid "Organization/Company/Institution"
+msgstr "Organisasi/Perusahaan/Institusi"
+
+#: enterlink/forms.py:171 enterlink/models.py:134
+msgid "Event"
+msgstr "Kegiatan"
+
+#: enterlink/forms.py:172 enterlink/models.py:134
+msgid "List/Ranking"
+msgstr "Daftar/Peringkat"
+
+#: enterlink/forms.py:172 enterlink/models.py:134
+msgid "Product/Merchandise"
+msgstr "Produk/Barang Dagangan"
+
+#: enterlink/forms.py:173 enterlink/models.py:134
+msgid "Electronics/Software"
+msgstr "Elektronik/Perangkat Lunak"
+
+#: enterlink/forms.py:173 enterlink/models.py:134
+msgid "Medical/Biology"
+msgstr "Kedokteran/Biologi"
+
+#: enterlink/forms.py:174 enterlink/models.py:134
+msgid "Creative Work/Art"
+msgstr "Karya Kreatif/Seni"
+
+#: enterlink/forms.py:175 enterlink/models.py:134
+msgid "Science/Academia/Humanities"
+msgstr "Sains/Akademisi/Kemanusiaan"
+
+#: enterlink/models.py:45 enterlink/models.py:49
+msgid "None"
+msgstr "Nihil"
+
+#: enterlink/models.py:45
+msgid "Featured"
+msgstr "Unggulan"
+
+#: enterlink/models.py:45
+msgid "In the news"
+msgstr "Di berita"
+
+#: enterlink/models.py:46
+msgid "In the news (Editor's Pick)"
+msgstr "Dalam berita (Pilihan Editor)"
+
+#: enterlink/models.py:46
+msgid "In the news (Standout Article)"
+msgstr "Dalam berita (Artikel Menonjol)"
+
+#: enterlink/models.py:47
+msgid "Trending"
+msgstr "Tren"
+
+#: enterlink/models.py:47
+msgid "On this day"
+msgstr "Pada hari ini"
+
+#: enterlink/models.py:47
+msgid "Blog Post (Meta Article)"
+msgstr "Blog Post (Artikel Meta)"
+
+#: enterlink/models.py:49
+msgid "Verified Only"
+msgstr "Hanya Diverifikasi"
+
+#: enterlink/models.py:50
+msgid "Normal (Business)"
+msgstr "Normal (Bisnis)"
+
+#: enterlink/models.py:50
+msgid "Normal (Personal)"
+msgstr "Normal (Pribadi)"
+
+#: enterlink/view_functions.py:144
+msgid ""
+"Your Everipedia editor restrictions have been removed. You can now edit "
+"pages freely!"
+msgstr ""
+"Batasan editor Everipedia Anda telah dihapus. Anda sekarang dapat menyunting "
+"halaman dengan bebas!"
+
+#: enterlink/view_functions.py:607
+msgid "Images & Videos"
+msgstr "Gambar & Video"
+
+#: enterlink/view_functions.py:609
+msgid "References"
+msgstr "Referensi"
+
+#: enterlink/view_functions.py:612
+msgid "Article Discussion"
+msgstr "Diskusi Artikel"
+
+#: enterlink/view_functions.py:615 enterlink/view_functions.py:618
+#: templates/enterlink/template_blockchain_styled_amp.html:350
+#: templates/enterlink/template_blockchain_styled_desktop.html:526
+msgid "See Also"
+msgstr "Lihat Juga"
+
+#: enterlink/view_functions.py:617
+msgid "Top Editors"
+msgstr "Editor Teratas"
+
+#: enterlink/view_functions.py:1625
+msgid "Wiki and references for"
+msgstr "Wiki dan referensi untuk"
+
+#: enterlink/view_functions.py:1626
+msgid "You can edit something on this wiki now!"
+msgstr "Anda dapat menyunting sesuatu di wiki ini sekarang!"
+
+#: local_packages/block_ip/models.py:11
+msgid "IP address or mask"
+msgstr "Alamat IP atau mask"
+
+#: local_packages/block_ip/models.py:12
+msgid "Optional reason for block"
+msgstr "Alasan opsional untuk memblokir"
+
+#: local_packages/block_ip/models.py:25 local_packages/block_ip/models.py:26
+msgid "IPs & masks to ban"
+msgstr "IP & mask untuk melarang"
+
+#: templates/admin/base.html:28
+msgid "Welcome,"
+msgstr "Selamat Datang,"
+
+#: templates/admin/base.html:33
+msgid "Documentation"
+msgstr "Dokumentasi"
+
+#: templates/admin/base.html:36
+msgid "Change password"
+msgstr "Ubah kata sandi"
+
+#: templates/admin/base.html:38 templates/admin/password_change_done.html:57
+#: templates/admin/password_change_form.html:59
+#: templates/enterlink/headers/header_dropdown.html:22
+#: templates/enterlink/headers/header_dropdown.html:44
+#: templates/enterlink/headers/index_header.html:110
+#: templates/enterlink/headers/index_header.html:166
+#: templates/enterlink/headers/index_header.html:236
+#: templates/enterlink/headers/index_header.html:258
+#: templates/enterlink/notifications/index.html:100
+#: templates/enterlink/notifications/index.html:105
+msgid "Log out"
+msgstr "Keluar"
+
+#: templates/admin/base.html:47 templates/admin/logged_out.html:4
+#: templates/admin/password_reset_complete.html:6
+#: templates/admin/password_reset_confirm.html:6
+#: templates/admin/password_reset_done.html:6
+#: templates/admin/password_reset_form.html:6
+#: templates/enterlink/notifications/index.html:61
+#: templates/enterlink/notifications/index.html:94
+msgid "Home"
+msgstr "Beranda"
+
+#: templates/admin/base_site.html:4
+msgid "Django site admin"
+msgstr "Admin situs Django"
+
+#: templates/admin/base_site.html:7
+msgid "Django administration"
+msgstr "Administrasi Django"
+
+#: templates/admin/logged_out.html:8
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr ""
+"Terima kasih telah meluangkan waktu berkualitas dengan situs web hari ini."
+
+#: templates/admin/logged_out.html:10
+msgid "Log in again"
+msgstr "Masuk lagi"
+
+#: templates/admin/password_change_done.html:46
+#: templates/admin/password_change_form.html:48
+#: templates/enterlink/edit.html:145 templates/enterlink/search-iframe.html:122
+#: templates/enterlink/search.html:27 templates/enterlink/user.html:220
+msgid "Search Everipedia"
+msgstr "Cari Everipedia"
+
+#: templates/admin/password_change_done.html:60
+#: templates/admin/password_change_form.html:62
+#: templates/admin/password_reset_complete.html:19
+#: templates/enterlink/headers/index_header.html:135
+#: templates/enterlink/headers/index_header.html:168
+#: templates/enterlink/headers/index_header.html:240
+#: templates/enterlink/headers/index_header.html:262
+#: templates/enterlink/login.html:45
+msgid "Log in"
+msgstr "Masuk"
+
+#: templates/admin/password_change_done.html:71
+msgid "Password change successful"
+msgstr "Kata sandi berhasil diubah"
+
+#: templates/admin/password_reset_complete.html:7
+#: templates/admin/password_reset_confirm.html:11
+#: templates/admin/password_reset_done.html:7
+#: templates/admin/password_reset_form.html:7
+#: templates/admin/password_reset_form.html:11
+#: templates/admin/password_reset_form.html:15
+msgid "Password reset"
+msgstr "पासवर्ड रीसेट करे"
+
+#: templates/admin/password_reset_complete.html:11
+#: templates/admin/password_reset_complete.html:15
+msgid "Password reset complete"
+msgstr "Pengaturan ulang kata sandi selesai"
+
+#: templates/admin/password_reset_complete.html:17
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+"Kata sandi Anda telah diatur. Anda dapat melanjutkan dan masuk sekarang."
+
+#: templates/admin/password_reset_confirm.html:7
+msgid "Password reset confirmation"
+msgstr "Konfirmasi atur ulang sandi"
+
+#: templates/admin/password_reset_confirm.html:17
+msgid "Enter new password"
+msgstr "Masukkan password baru"
+
+#: templates/admin/password_reset_confirm.html:19
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+"Masukkan kata sandi baru Anda dua kali sehingga kami dapat memverifikasi "
+"Anda mengetiknya dengan benar."
+
+#: templates/admin/password_reset_confirm.html:23
+msgid "New password:"
+msgstr "Kata sandi baru:"
+
+#: templates/admin/password_reset_confirm.html:25
+msgid "Confirm password:"
+msgstr "Konfirmasi kata sandi:"
+
+#: templates/admin/password_reset_confirm.html:26
+msgid "Change my password"
+msgstr "Ubah password saya"
+
+#: templates/admin/password_reset_confirm.html:31
+msgid "Password reset unsuccessful"
+msgstr "Atur ulang kata sandi tidak berhasil"
+
+#: templates/admin/password_reset_confirm.html:33
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+"Tautan pengaturan ulang kata sandi tidak valid, mungkin karena sudah "
+"digunakan. Harap minta penyetelan ulang kata sandi baru."
+
+#: templates/admin/password_reset_done.html:11
+#: templates/admin/password_reset_done.html:15
+msgid "Password reset successful"
+msgstr "Berhasil mengatur ulang kata sandi"
+
+#: templates/admin/password_reset_done.html:17
+msgid ""
+"We have emailed you instructions for setting your password. You should be "
+"receiving them shortly."
+msgstr ""
+"Kami telah mengirimi Anda instruksi untuk pengaturan kata sandi Anda. Anda "
+"harus segera menerimanya."
+
+#: templates/admin/password_reset_done.html:19
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+"Jika Anda tidak menerima email, pastikan Anda telah memasukkan alamat yang "
+"Anda daftarkan, dan periksa folder spam Anda."
+
+#: templates/admin/password_reset_email.html:2
+msgid ""
+"You are receiving this email because you requested a password reset for your "
+"Everipedia account."
+msgstr ""
+"Anda menerima email ini karena Anda meminta pengaturan ulang kata sandi "
+"untuk akun Everipedia Anda."
+
+#: templates/admin/password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr "Harap pergi ke halaman berikut dan pilih sebuah kata sandi baru:"
+
+#: templates/admin/password_reset_email.html:8
+msgid "Your username, in case you've forgotten:"
+msgstr "Nama pengguna Anda, jika Anda lupa:"
+
+#: templates/admin/password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr "Terima kasih telah menggunakan situs kami!"
+
+#: templates/admin/password_reset_form.html:17
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+"Lupa kata sandi Anda? Masukkan alamat email Anda di bawah ini, dan kami akan "
+"mengirimi email petunjuk untuk mengatur yang baru."
+
+#: templates/admin/password_reset_form.html:21
+msgid "Email address:"
+msgstr "Alamat email:"
+
+#: templates/admin/password_reset_form.html:21
+msgid "Reset my password"
+msgstr "Reset kata sandi saya"
+
+#: templates/email/sanger_announcement.html:276
+#: templates/email/welcome_email.html:264
+#: templates/email/welcome_email_old.html:68
+#: templates/enterlink/welcome.html:33
+msgid "Learn More"
+msgstr "Pelajari lebih lanjut:"
+
+#: templates/email/welcome_email.html:257
+msgid "View My Profile"
+msgstr "Lihat profil saya"
+
+#: templates/email/welcome_email_old.html:67
+#: templates/enterlink/welcome.html:28 templates/enterlink/welcome.html:30
+msgid "Create a Wiki"
+msgstr "Buat Wiki"
+
+#: templates/endless/show_more.html:5
+msgid "more"
+msgstr "lebih"
+
+#: templates/enterlink/ajax_infobox_singlet.html:14
+#: templates/enterlink/ajax_infobox_singlet.html:42
+msgid "Add Row"
+msgstr ""
+
+#: templates/enterlink/ajax_infobox_singlet.html:17
+#: templates/enterlink/ajax_infobox_singlet.html:45
+msgid "Schema"
+msgstr ""
+
+#: templates/enterlink/ajax_infobox_singlet.html:21
+#: templates/enterlink/ajax_infobox_singlet.html:49
+msgid "Schema Type"
+msgstr ""
+
+#: templates/enterlink/ajax_infobox_singlet.html:25
+#: templates/enterlink/ajax_infobox_singlet.html:53
+msgid "Subschema"
+msgstr ""
+
+#: templates/enterlink/ajax_link_singlet.html:25
+msgid "Social Media"
+msgstr ""
+
+#: templates/enterlink/ajax_link_singlet.html:27
+msgid "Attributes"
+msgstr ""
+
+#: templates/enterlink/ajax_link_singlet.html:29
+#: templates/enterlink/ajax_media_gallery_singlet.html:33
+msgid "Timestamp"
+msgstr ""
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:14
+#: templates/enterlink/ajax_media_gallery_singlet.html:19
+#: templates/enterlink/ajaxresults.html:104
+#: templates/enterlink/hoverlink_iframe_blockchain.html:97
+#: templates/enterlink/template_blockchain_styled_desktop.html:415
+#: templates/enterlink/template_blockchain_styled_desktop.html:438
+#: templates/enterlink/template_photos_amp_json_blockchain.html:79
+msgid "Your browser does not support HTML5 video."
+msgstr "Browser Anda tidak mendukung video HTML5"
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:29
+msgid "Type"
+msgstr ""
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:31
+msgid "MIME Type"
+msgstr ""
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:37
+msgid "Original URL"
+msgstr ""
+
+#: templates/enterlink/ajaxresults.html:57
+msgid "Click to add a new link or file to this list"
+msgstr "Klik untuk menambahkan tautan atau file baru ke daftar ini"
+
+#: templates/enterlink/ajaxresults.html:60
+msgid "Or click an existing link below to add it to the article"
+msgstr "Atau klik tautan yang ada di bawah ini untuk menambahkannya ke artikel"
+
+#: templates/enterlink/ajaxresults.html:135
+#: templates/enterlink/ajaxresults.html:192
+#: templates/enterlink/template_blockchain_styled_desktop.html:167
+msgid "Views"
+msgstr "Dilihat"
+
+#: templates/enterlink/ajaxresults.html:157
+#: templates/enterlink/hovereditor_ajax.html:74
+msgid "IQ"
+msgstr "IQ"
+
+#: templates/enterlink/ajaxresults.html:175
+msgid "page(s) have this link"
+msgstr "halaman memiliki tautan ini"
+
+#: templates/enterlink/analytics.html:7 templates/enterlink/faq.html:6
+msgid "Frequently Asked Questions - Everipedia, everyone's encyclopedia"
+msgstr ""
+"Pertanyaan yang Sering Diajukan - Everipedia, ensiklopedia setiap orang"
+
+#: templates/enterlink/brainpowermgmt.html:4
+#: templates/enterlink/brainpowermgmt.html:114
+msgid "Brainpower Management"
+msgstr "Manajemen Kekuatan Otak"
+
+#: templates/enterlink/brainpowermgmt.html:4 templates/enterlink/contact.html:7
+#: templates/enterlink/edit.html:7 templates/enterlink/editing-disabled.html:7
+#: templates/enterlink/editors.html:23
+#: templates/enterlink/exchange-listings.html:7
+#: templates/enterlink/headers/index_header.html:17
+#: templates/enterlink/headers/index_header.html:18
+#: templates/enterlink/inbox.html:12 templates/enterlink/index.html:7
+#: templates/enterlink/leadership.html:7
+#: templates/enterlink/limitreached.html:7 templates/enterlink/login.html:7
+#: templates/enterlink/recent-activity.html:7
+#: templates/enterlink/register.html:6 templates/enterlink/rewardsmgmt.html:4
+#: templates/enterlink/search.html:7 templates/enterlink/transfer-iq.html:5
+#: templates/enterlink/user.html:12 templates/enterlink/votehistory.html:7
+msgid "Everipedia, the encyclopedia of everything"
+msgstr "Everipedia, ensiklopedia segalanya"
+
+#: templates/enterlink/brainpowermgmt.html:101 templates/enterlink/edit.html:89
+#: templates/enterlink/rewardsmgmt.html:119
+#: templates/enterlink/transfer-iq.html:106 templates/enterlink/voting.html:180
+msgid "Loading Scatter"
+msgstr "Memuat Scatter"
+
+#: templates/enterlink/brainpowermgmt.html:117
+msgid ""
+"Staking IQ tokens will freeze them for 21 days and will generate "
+"nontransferable Brainpower, which can be used for editing and voting on the "
+"Everipedia network. At the end of the 21 days, you can claim back your IQ "
+"tokens and re-stake them for more Brainpower again. Thus, 1 IQ, staked every "
+"21 days, can lead to 365 days / 21 days = 17.38 Brainpower every year."
+msgstr ""
+"Taruhan token IQ akan membekukannya selama 21 hari dan akan menghasilkan "
+"Kekuatan Otak yang tidak dapat ditransfer, yang dapat digunakan untuk "
+"menyunting dan memilih di jaringan Everipedia. Pada akhir hari ke-21, Anda "
+"dapat mengklaim kembali token IQ Anda dan mempertaruhkan kembali mereka "
+"untuk mendapatkan Kekuatan Otak lagi. Dengan demikian, 1 IQ, dipertaruhkan "
+"setiap 21 hari, dapat mencapai 365 hari / 21 hari = 17,38 Kekuatan Otak "
+"setiap tahun."
+
+#: templates/enterlink/brainpowermgmt.html:118
+msgid ""
+"As you make pages, propose edits, and vote on article proposals, you will "
+"consume Brainpower. However, making successful edits and voting on the "
+"winning side of a proposal will generate rewards in IQ, not Brainpower. "
+"Therefore, you can generate more Brainpower (and any profit) by staking the "
+"new IQ you just earned."
+msgstr ""
+"Ketika Anda membuat halaman, mengusulkan pengeditan, dan memberikan suara "
+"pada proposal artikel, Anda akan mengkonsumsi Kekuatan Otak. Namun, membuat "
+"pengeditan dan pemungutan suara yang sukses di pihak pemenang proposal akan "
+"menghasilkan penghargaan dalam IQ, bukan Kekuatan Otak. Oleh karena itu, "
+"Anda dapat menghasilkan lebih banyak Kekuatan Otak (dan keuntungan apa pun) "
+"dengan mempertaruhkan IQ baru yang baru saja Anda dapatkan."
+
+#: templates/enterlink/brainpowermgmt.html:119
+msgid ""
+"Every edit proposal requires a minimum of 10 Brainpower at this time, in "
+"order to prevent spam and poor-quality edits."
+msgstr ""
+"Setiap proposal penyuntingan membutuhkan minimum 10 Kekuatan Otak saat ini, "
+"untuk mencegah spam dan penyuntingan berkualitas buruk."
+
+#: templates/enterlink/brainpowermgmt.html:122
+msgid "Enter an integer amount of IQ to stake"
+msgstr "Masukkan jumlah bilangan bulat IQ untuk dipertaruhkan"
+
+#: templates/enterlink/brainpowermgmt.html:123
+msgid "New Stake"
+msgstr "Taruhan Baru"
+
+#: templates/enterlink/brainpowermgmt.html:128
+msgid "Start"
+msgstr "Mulai"
+
+#: templates/enterlink/brainpowermgmt.html:129
+msgid "End"
+msgstr "Selesai"
+
+#: templates/enterlink/brainpowermgmt.html:130
+#: templates/enterlink/voting_table_of_contents.html:40
+msgid "Time Remaining"
+msgstr "Waktu yang tersisa"
+
+#: templates/enterlink/brainpowermgmt.html:131
+#: templates/enterlink/transfer-iq.html:127
+msgid "Amount"
+msgstr "Jumlah"
+
+#: templates/enterlink/brainpowermgmt.html:132
+msgid "Claim"
+msgstr "Klaim"
+
+#: templates/enterlink/contact.html:7 templates/enterlink/contact.html:24
+msgid "Contact us"
+msgstr "Hubungi Kami"
+
+#: templates/enterlink/contact.html:20
+msgid "To get quicker replies from our community"
+msgstr "Untuk mendapat balasan lebih cepat dari komunitas kami"
+
+#: templates/enterlink/contact.html:20
+msgid "create a post in our forum"
+msgstr "buat posting di forum kami"
+
+#: templates/enterlink/contact.html:25
+msgid "Get in touch with us"
+msgstr "Hubungi kami"
+
+#: templates/enterlink/contact.html:33
+msgid "Thanks, we got your message. We will respond in a bit"
+msgstr ""
+"Terima kasih, kami mendapatkan pesan Anda. Kami akan membalasnya secepatnya"
+
+#: templates/enterlink/contact.html:41 templates/enterlink/transfer-iq.html:131
+msgid "Send"
+msgstr "Kirim"
+
+#: templates/enterlink/dropzone.html:140 templates/enterlink/edit.html:167
+#: templates/enterlink/edit.html:176 templates/enterlink/edit.html:185
+#: templates/enterlink/edit.html:195 templates/enterlink/edit.html:204
+msgid "OK"
+msgstr "Oke"
+
+#: templates/enterlink/dropzone.html:141
+msgid "Enter a caption for the main image of the page."
+msgstr "Masukkan keterangan untuk gambar utama dari laman."
+
+#: templates/enterlink/edit.html:7
+msgid "Edit Page"
+msgstr "Sunting Laman"
+
+#: templates/enterlink/edit.html:85
+msgid "Loading.."
+msgstr "Memuat.."
+
+#: templates/enterlink/edit.html:128
+msgid "Change Picture"
+msgstr "Mengubah Gambar"
+
+#: templates/enterlink/edit.html:144
+msgid "Please enter the destination page you wish to merge this one into"
+msgstr ""
+"Silakan masukkan halaman tujuan yang ingin Anda gabungkan dengan yang ini"
+
+#: templates/enterlink/edit.html:149
+msgid "Merge Page"
+msgstr "Gabungkan Laman"
+
+#: templates/enterlink/edit.html:156 templates/enterlink/edit.html:165
+#: templates/enterlink/edit.html:174 templates/enterlink/edit.html:183
+#: templates/enterlink/edit.html:192 templates/enterlink/edit.html:202
+msgid "Hey there scholar!"
+msgstr "Hei, sarjana!"
+
+#: templates/enterlink/edit.html:157
+msgid ""
+"Looks like you have been editing for a while. You should take a moment to "
+"save your work before continuing!"
+msgstr ""
+"Sepertinya Anda telah menyunting untuk sementara waktu. Anda harus "
+"meluangkan waktu sejenak untuk menyimpan pekerjaan Anda sebelum melanjutkan!"
+
+#: templates/enterlink/edit.html:158
+msgid "Save"
+msgstr "Simpan"
+
+#: templates/enterlink/edit.html:166
+msgid ""
+"Looks like you are using first-person! (ex: Our product, I am, We are, You "
+"should). Everipedia is a neutral encyclopedia written in third-person tense "
+"(ex: It is, They are, The company makes). THIS IS NOT FACEBOOK!!"
+msgstr ""
+"Sepertinya kamu menggunakan orang pertama! (contoh: Produk kami, saya, Kami, "
+"Anda harus). Everipedia adalah ensiklopedia netral yang ditulis dengan "
+"pandangan orang ketiga (contoh: Yaitu, Mereka, Perusahaan membuat). INI "
+"BUKAN FACEBOOK!!"
+
+#: templates/enterlink/edit.html:175
+msgid "Please enter a title for the page."
+msgstr "Harap masukkan judul untuk halaman."
+
+#: templates/enterlink/edit.html:184
+msgid ""
+"Please write something for the article section. Make sure to use citations."
+msgstr ""
+"Silakan tulis sesuatu untuk bagian artikel. Pastikan untuk menggunakan "
+"kutipan."
+
+#: templates/enterlink/edit.html:193
+msgid ""
+"Hello! This page needs citations (also known as footnotes, references, "
+"sources) before it can be saved. Add the links you're using as sources with "
+"the cite button above."
+msgstr ""
+"Halo! Halaman ini membutuhkan kutipan (juga dikenal sebagai catatan kaki, "
+"referensi, sumber) sebelum dapat disimpan. Tambahkan tautan yang Anda "
+"gunakan sebagai sumber dengan tombol kutip di atas."
+
+#: templates/enterlink/edit.html:194
+msgid "Join our official Facebook group if you need help with it!:"
+msgstr ""
+"Bergabunglah dengan grup Facebook resmi kami jika Anda memerlukan bantuan!:"
+
+#: templates/enterlink/edit.html:194
+msgid "- we will hook you up. It's not hard!"
+msgstr "- Kami akan menghubungkan Anda. Itu tidak sulit!"
+
+#: templates/enterlink/edit.html:203
+msgid ""
+"Please cite the link(s) you just added into the main article body. First "
+"click at the end of the sentence or paragraph you want to cite, then click "
+"the (Cite) button on the edit panel above!"
+msgstr ""
+"Harap mengutip tautan yang baru saja Anda tambahkan ke badan artikel utama. "
+"Pertama, klik di akhir kalimat atau paragraf yang ingin Anda kutip, lalu "
+"klik tombol (Kutip) pada panel edit di atas!"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:10
+msgid "Add New Infobox Item"
+msgstr "Tambahkan Item Infobox Baru"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:14
+msgid "Enter a classification or category"
+msgstr "Masukkan klasifikasi atau kategori"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:17
+msgid "Enter a value or a description"
+msgstr "Masukkan nilai atau deskripsi"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:23
+msgid "Add Infobox Item"
+msgstr "Tambahkan Item Infobox"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:25
+#: templates/enterlink/edit_ajax_addlink.html:26
+#: templates/enterlink/edit_ajax_editpagemeta.html:15
+#: templates/enterlink/edit_ajax_page_photo.html:4
+msgid "Close"
+msgstr "Tutup"
+
+#: templates/enterlink/edit_ajax_addlink.html:7
+msgid "Add a Link or File"
+msgstr "Tambahkan Tautan atau File"
+
+#: templates/enterlink/edit_ajax_addlink.html:9
+msgid "File"
+msgstr "File"
+
+#: templates/enterlink/edit_ajax_addlink.html:10
+msgid "URL"
+msgstr "URL"
+
+#: templates/enterlink/edit_ajax_addlink.html:10
+msgid "Link"
+msgstr "Tautan:"
+
+#: templates/enterlink/edit_ajax_addlink.html:14
+msgid "Upload file"
+msgstr "Unggah file"
+
+#: templates/enterlink/edit_ajax_addlink.html:24
+msgid "Add Link"
+msgstr "Tambahkan Tautan"
+
+#: templates/enterlink/edit_ajax_editmainphoto.html:7
+msgid "Reset"
+msgstr "Atur Ulang"
+
+#: templates/enterlink/edit_ajax_editpagemeta.html:4
+msgid "Select the topic of this page"
+msgstr "Pilih topik dari laman ini"
+
+#: templates/enterlink/edit_ajax_editpagemeta.html:8
+msgid "Remove page"
+msgstr "Hapus laman"
+
+#: templates/enterlink/editing-disabled.html:7
+msgid "Editing existing pages temporarily disabled"
+msgstr "Menyunting halaman yang ada untuk dinonaktifkan sementara"
+
+#: templates/enterlink/editors.html:23
+msgid "Editors"
+msgstr "Editor"
+
+#: templates/enterlink/editors.html:74
+msgid "Everipedia Editors"
+msgstr "Editor Everipedia"
+
+#: templates/enterlink/editors.html:93 templates/enterlink/inbox.html:52
+#: templates/enterlink/recent-activity.html:103
+#: templates/enterlink/search.html:89
+msgid "Previous"
+msgstr "Sebelumnya"
+
+#: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
+#: templates/enterlink/recent-activity.html:107
+#: templates/enterlink/search.html:93
+msgid "Page"
+msgstr "Halaman"
+
+#: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
+#: templates/enterlink/recent-activity.html:107
+#: templates/enterlink/search.html:93
+msgid "of"
+msgstr "dari"
+
+#: templates/enterlink/editors.html:101 templates/enterlink/inbox.html:60
+#: templates/enterlink/recent-activity.html:111
+#: templates/enterlink/search.html:97
+msgid "Next"
+msgstr "Berikutnya"
+
+#: templates/enterlink/error.html:6
+msgid "Page not found!"
+msgstr "Halaman tidak ditemukan"
+
+#: templates/enterlink/error.html:211
+msgid "Page not found"
+msgstr "Halaman tidak ditemukan"
+
+#: templates/enterlink/error.html:213
+msgid "In The News"
+msgstr "Dalam Berita"
+
+#: templates/enterlink/error.html:214
+#: templates/enterlink/headers/header_dropdown.html:37
+#: templates/enterlink/recent-activity.html:7
+#: templates/enterlink/recent-activity.html:73
+#: templates/enterlink/user.html:192
+msgid "Recent Activity"
+msgstr "Aktivitas Terbaru"
+
+#: templates/enterlink/error_410.html:6 templates/enterlink/error_410.html:62
+msgid "This page has been removed"
+msgstr "Halaman ini telah dihapus"
+
+#: templates/enterlink/error_410.html:63
+#: templates/enterlink/in_progress_404.html:86
+msgid "Click here to return to recent activity"
+msgstr "Klik di sini untuk kembali ke aktivitas terbaru"
+
+#: templates/enterlink/exchange-listings.html:7
+msgid "Exchange Listings"
+msgstr "Daftar Pertukaran"
+
+#: templates/enterlink/exchange-listings.html:17
+msgid "Supported Exchanges"
+msgstr "Pertukaran yang Didukung"
+
+#: templates/enterlink/exchange-listings.html:18
+msgid "The following exchanges indicated that they will support the IQ airdrop"
+msgstr ""
+"Pertukaran berikut menunjukkan bahwa mereka akan mendukung titrasi udara IQ"
+
+#: templates/enterlink/exchange-listings.html:142
+msgid "Supported Wallets"
+msgstr "Dompet yang didukung"
+
+#: templates/enterlink/exchange-listings.html:176
+msgid "Token Pockets"
+msgstr "Saku Token"
+
+#: templates/enterlink/faq.html:20
+msgid "Frequently Asked Questions"
+msgstr "Pertanyaan Yang Sering Diajukan"
+
+#: templates/enterlink/faq.html:24
+msgid "What is Everipedia?"
+msgstr "Apa itu Everipedia?"
+
+#: templates/enterlink/faq.html:25
+msgid ""
+"Everipedia is a knowledge aggregator and knowledge base. We think it's much "
+"easier to edit than Wikipedia. Anyone can create a page about any person, "
+"place, organization, or thing and populate it with relevant reference links/"
+"sources. The only main rules of EP are: Information on the page must always "
+"be cited and the article must be in a neutral point of view. Check out the "
+"actual entry for Everipedia... on"
+msgstr ""
+"Everipedia adalah agregator pengetahuan dan basis pengetahuan. Kami pikir "
+"itu jauh lebih mudah untuk disunting daripada Wikipedia. Siapa pun dapat "
+"membuat halaman tentang siapa saja, tempat, organisasi, atau benda dan "
+"mengisinya dengan tautan/sumber referensi yang relevan. Satu-satunya aturan "
+"utama EP adalah: Informasi pada halaman harus selalu dikutip dan artikel "
+"harus dalam sudut pandang netral. Lihat entri aktual untuk Everipedia... di"
+
+#: templates/enterlink/faq.html:27
+msgid "Why should I sign up?"
+msgstr "Mengapa saya harus mendaftar?"
+
+#: templates/enterlink/faq.html:28
+msgid ""
+"Because it’s fun and easy! We thought contributing to large knowledge "
+"projects shouldn't require high barriers to entry so we made Everipedia very "
+"easy to navigate, edit, and get started. Editors gain more privileges as "
+"they accumulate IQ and rise through the ranks. Top site-wide editors are "
+"displayed on the front page. Top editors for each page are also displayed."
+msgstr ""
+"Karena itu menyenangkan dan mudah! Kami pikir kontribusi untuk proyek "
+"pengetahuan besar tidak membutuhkan hambatan tinggi untuk masuk sehingga "
+"kami membuat Everipedia sangat mudah dinavigasi, disunting, dan dimulai. "
+"Editor mendapatkan lebih banyak hak istimewa karena mereka mengakumulasi IQ "
+"dan naik melalui pangkat. Editor situs teratas ditampilkan di halaman depan. "
+"Editor teratas untuk setiap halaman juga ditampilkan."
+
+#: templates/enterlink/faq.html:30
+msgid "Try it!"
+msgstr "Cobalah!"
+
+#: templates/enterlink/faq.html:30
+msgid "Sign up here"
+msgstr "Daftar disini"
+
+#: templates/enterlink/faq.html:32
+msgid "So how is Everipedia different from Wikipedia and similar sites?"
+msgstr "Jadi, bagaimana Everipedia berbeda dari Wikipedia dan situs sejenis?"
+
+#: templates/enterlink/faq.html:33
+msgid ""
+"Editing on Everipedia is graphic and modern, talk pages are designed as "
+"discussion threads, celebrities have verified accounts, and anyone can make "
+"pages about anything as long as they are properly cited. Every page from "
+"Wikipedia is already here on Everipedia to build on top of and improve. All "
+"this makes EP the biggest knowledge project ever!"
+msgstr ""
+"Penyuntingan pada Everipedia adalah modern dan grafis, halaman pembicaraan "
+"dirancang sebagai rangkaian diskusi, selebriti telah memverifikasi akun, dan "
+"siapa pun dapat membuat halaman tentang apa saja selama mereka dikutip "
+"dengan benar. Setiap halaman dari Wikipedia sudah ada di sini di Everipedia "
+"untuk mengembangkan dan meningkatkan. Semua ini menjadikan EP sebagai proyek "
+"pengetahuan terbesar yang pernah ada!"
+
+#: templates/enterlink/faq.html:35
+msgid "Is Everipedia free?"
+msgstr "Apakah Everipedia gratis?"
+
+#: templates/enterlink/faq.html:36
+msgid ""
+"All information found on Everipedia is freely available for anyone to use "
+"and access. All we ask is a link back to the source Everipedia page for "
+"attribution purposes. The information on this encyclopedia is meant to be "
+"free to all. We will never charge for or withhold any of the information on "
+"this website. We just ask that you do not throttle the site and "
+"programmatically harvest information that would dramatically affect our "
+"servers."
+msgstr ""
+"Semua informasi yang ditemukan di Everipedia tersedia secara gratis bagi "
+"siapa saja untuk digunakan dan diakses. Yang kami minta adalah tautan "
+"kembali ke laman sumber Everipedia untuk tujuan pengaitan. Informasi tentang "
+"ensiklopedia ini dimaksudkan untuk gratis bagi semua orang. Kami tidak akan "
+"pernah membebankan biaya atau menahan salah satu informasi di situs web ini. "
+"Kami hanya meminta agar Anda tidak menyedot situs dan secara terprogram "
+"memanen informasi yang akan sangat memengaruhi server kami."
+
+#: templates/enterlink/faq.html:42
+msgid "Much love,"
+msgstr "Banyak cinta,"
+
+#: templates/enterlink/footers/desktop_footer.html:5
+#: templates/enterlink/footers/footer_no_extras.html:5
+#: templates/enterlink/footers/index_footer.html:23
+#: templates/enterlink/footers/mobile_footer.html:130
+#: templates/enterlink/template_blockchain_styled_amp.html:548
+msgid "About"
+msgstr "Tentang"
+
+#: templates/enterlink/footers/desktop_footer.html:6
+#: templates/enterlink/footers/footer_no_extras.html:6
+#: templates/enterlink/footers/index_footer.html:7
+#: templates/enterlink/footers/index_footer.html:25
+#: templates/enterlink/footers/mobile_footer.html:131
+#: templates/enterlink/template_blockchain_styled_amp.html:549
+msgid "FAQ"
+msgstr "Pertanyaan yang Sering Diajukan"
+
+#: templates/enterlink/footers/desktop_footer.html:7
+#: templates/enterlink/footers/footer_no_extras.html:7
+#: templates/enterlink/footers/index_footer.html:8
+#: templates/enterlink/footers/index_footer.html:26
+#: templates/enterlink/footers/mobile_footer.html:132
+#: templates/enterlink/template_blockchain_styled_amp.html:550
+msgid "Contact"
+msgstr "Kontak"
+
+#: templates/enterlink/footers/desktop_footer.html:8
+#: templates/enterlink/footers/footer_no_extras.html:9
+#: templates/enterlink/footers/index_footer.html:9
+#: templates/enterlink/footers/index_footer.html:27
+#: templates/enterlink/footers/mobile_footer.html:136
+#: templates/enterlink/template_blockchain_styled_amp.html:552
+msgid "Terms"
+msgstr "Syarat"
+
+#: templates/enterlink/footers/desktop_footer.html:9
+#: templates/enterlink/footers/footer_no_extras.html:10
+#: templates/enterlink/footers/index_footer.html:10
+#: templates/enterlink/footers/index_footer.html:28
+#: templates/enterlink/footers/mobile_footer.html:134
+#: templates/enterlink/headers/header_dropdown.html:17
+#: templates/enterlink/headers/header_dropdown.html:38
+#: templates/enterlink/headers/index_header.html:164
+#: templates/enterlink/headers/index_header.html:173
+#: templates/enterlink/headers/index_header.html:233
+#: templates/enterlink/headers/index_header.html:242
+#: templates/enterlink/headers/index_header.html:264
+#: templates/enterlink/headers/mobile-navbar.html:131
+#: templates/enterlink/headers/mobile-navbar.html:198
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:190
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:238
+#: templates/enterlink/template_blockchain_styled_amp.html:551
+#: templates/enterlink/template_blockchain_styled_amp.html:629
+#: templates/enterlink/template_blockchain_styled_amp.html:687
+msgid "Forum"
+msgstr "Forum"
+
+#: templates/enterlink/footers/desktop_footer.html:10
+#: templates/enterlink/footers/footer_no_extras.html:11
+#: templates/enterlink/footers/index_footer.html:11
+#: templates/enterlink/footers/index_footer.html:29
+#: templates/enterlink/footers/mobile_footer.html:137
+#: templates/enterlink/headers/header_dropdown.html:18
+#: templates/enterlink/headers/header_dropdown.html:40
+#: templates/enterlink/template_blockchain_styled_amp.html:553
+msgid "Get IQ"
+msgstr "Dapatkan IQ"
+
+#: templates/enterlink/footers/desktop_footer.html:30
+#: templates/enterlink/footers/footer_no_extras.html:31
+#: templates/enterlink/footers/mobile_footer.html:157
+#: templates/enterlink/template_blockchain_styled_amp.html:577
+msgid "Powered by"
+msgstr "Didukung oleh"
+
+#: templates/enterlink/footers/desktop_footer.html:35
+#: templates/enterlink/footers/footer_no_extras.html:36
+#: templates/enterlink/footers/mobile_footer.html:161
+#: templates/enterlink/template_blockchain_styled_amp.html:581
+msgid "API by"
+msgstr "API oleh"
+
+#: templates/enterlink/footers/desktop_footer.html:43
+#: templates/enterlink/footers/footer_no_extras.html:44
+#: templates/enterlink/headers/desktop-navbar-index.html:6
+#: templates/enterlink/headers/index_header.html:93
+#: templates/enterlink/language_selector.html:80
+msgid "Select language"
+msgstr "Pilih bahasa"
+
+#: templates/enterlink/footers/forum_footer.html:6
+#: templates/enterlink/footers/pm_footer.html:6
+msgid "Enter a title for the thread"
+msgstr "Masukkan judul untuk thread"
+
+#: templates/enterlink/footers/forum_footer.html:7
+msgid "Enter your post here"
+msgstr "Masukkan postingan Anda di sini"
+
+#: templates/enterlink/footers/forum_footer.html:8
+#: templates/enterlink/footers/pm_footer.html:7
+msgid "Create New Thread"
+msgstr "Buat Thread Baru"
+
+#: templates/enterlink/footers/index_footer.html:5
+msgid "About Everipedia"
+msgstr "Tentang Everipedia"
+
+#: templates/enterlink/footers/index_footer.html:6
+#: templates/enterlink/footers/index_footer.html:24
+msgid "How To Use"
+msgstr "Cara Menggunakan"
+
+#: templates/enterlink/footers/index_footer.html:12
+#: templates/enterlink/footers/index_footer.html:30
+#: templates/enterlink/footers/mobile_footer.html:133
+msgid "Donate"
+msgstr "Donasi"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:559
+msgid "By using this website, you agree to the"
+msgstr "Dengan menggunakan situs web ini, Anda menyetujui"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:559
+msgid "Terms of Use"
+msgstr "Syarat Penggunaan"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:559
+msgid "Everipedia® is a trademark of Everipedia International"
+msgstr "Everipedia® adalah merek dagang dari Everipedia International"
+
+#: templates/enterlink/footers/mobile_footer.html:135
+#: templates/enterlink/headers/index_header.html:165
+#: templates/enterlink/headers/index_header.html:174
+#: templates/enterlink/headers/index_header.html:234
+#: templates/enterlink/headers/index_header.html:243
+#: templates/enterlink/headers/index_header.html:265
+#: templates/enterlink/headers/mobile-navbar.html:138
+#: templates/enterlink/headers/mobile-navbar.html:204
+#: templates/enterlink/template_blockchain_styled_amp.html:694
+msgid "Chat"
+msgstr "Obrolan"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:29
+#: templates/enterlink/headers/desktop-navbar.html:39
+#: templates/enterlink/headers/index_header.html:156
+#: templates/enterlink/howto.html:61 templates/enterlink/search.html:7
+msgid "Search"
+msgstr "Cari"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:42
+#: templates/enterlink/headers/desktop-navbar-index.html:50
+#: templates/enterlink/headers/desktop-navbar-index.html:60
+#: templates/enterlink/headers/desktop-navbar.html:20
+#: templates/enterlink/headers/desktop-navbar.html:57
+#: templates/enterlink/headers/desktop-navbar.html:67
+#: templates/enterlink/headers/header_dropdown.html:14
+#: templates/enterlink/headers/header_dropdown.html:36
+#: templates/enterlink/headers/index_header.html:231
+#: templates/enterlink/headers/mobile-navbar.html:145
+#: templates/enterlink/headers/mobile-navbar.html:186
+#: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
+#: templates/enterlink/howto.html:74 templates/enterlink/index.html:64
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:51
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:91
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:196
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:232
+#: templates/enterlink/template_blockchain_styled_amp.html:615
+#: templates/enterlink/template_blockchain_styled_amp.html:701
+#: templates/enterlink/user.html:64
+msgid "Create Page"
+msgstr "Buat Halaman"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:49
+#: templates/enterlink/headers/desktop-navbar.html:19
+#: templates/enterlink/howto.html:73 templates/enterlink/index.html:63
+msgid "Paste a link or enter a title"
+msgstr "Tempel tautan atau masukkan judul"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:66
+#: templates/enterlink/headers/desktop-navbar.html:73
+#: templates/enterlink/headers/header_dropdown.html:16
+#: templates/enterlink/headers/header_dropdown.html:35
+#: templates/enterlink/headers/index_header.html:162
+#: templates/enterlink/headers/index_header.html:201
+#: templates/enterlink/headers/index_header.html:232
+#: templates/enterlink/headers/mobile-navbar.html:124
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:45
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:184
+#: templates/enterlink/notifications/index.html:67
+#: templates/enterlink/notifications/index.html:97
+#: templates/enterlink/template_blockchain_styled_amp.html:680
+msgid "Messages"
+msgstr "Pesan"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:72
+#: templates/enterlink/headers/desktop-navbar.html:79
+#: templates/enterlink/headers/header_dropdown.html:15
+#: templates/enterlink/headers/header_dropdown.html:34
+#: templates/enterlink/headers/index_header.html:206
+#: templates/enterlink/headers/index_header.html:230
+#: templates/enterlink/headers/mobile-navbar.html:117
+#: templates/enterlink/inbox.html:12
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:39
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:178
+#: templates/enterlink/notifications/index.html:96
+#: templates/enterlink/template_blockchain_styled_amp.html:673
+msgid "Notifications"
+msgstr "Pemberitahuan"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:84
+#: templates/enterlink/headers/desktop-navbar.html:96
+#: templates/enterlink/headers/index_header.html:217
+msgid "Your IQ Score"
+msgstr "Skor IQ Anda"
+
+#: templates/enterlink/headers/desktop-navbar.html:29
+msgid "Table of contents"
+msgstr "Daftar isi"
+
+#: templates/enterlink/headers/desktop-navbar.html:29
+#: templates/enterlink/template_blockchain_styled_amp.html:105
+msgid "Table of contents and facts for this wiki"
+msgstr "Daftar isi dan fakta untuk wiki ini"
+
+#: templates/enterlink/headers/desktop-navbar.html:62
+#: templates/enterlink/headers/mobile-navbar.html:159
+#: templates/enterlink/headers/mobile-navbar.html:210
+#: templates/enterlink/template_blockchain_styled_amp.html:635
+#: templates/enterlink/template_blockchain_styled_amp.html:715
+msgid "Feed"
+msgstr "Feed"
+
+#: templates/enterlink/headers/desktop-navbar.html:87
+msgid "Please log in with Scatter"
+msgstr "Harap masuk dengan Scatter"
+
+#: templates/enterlink/headers/header_dropdown.html:8
+#: templates/enterlink/headers/header_dropdown.html:28
+msgid "Claim Rewards"
+msgstr ""
+
+#: templates/enterlink/headers/header_dropdown.html:39
+#: templates/enterlink/headers/mobile-navbar.html:153
+#: templates/enterlink/headers/mobile-navbar.html:192
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:68
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:101
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:208
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:250
+#: templates/enterlink/template_blockchain_styled_amp.html:622
+#: templates/enterlink/template_blockchain_styled_amp.html:708
+#: templates/enterlink/user.html:126
+msgid "Help"
+msgstr "Bantuan"
+
+#: templates/enterlink/headers/index_header.html:109
+msgid "View Profile"
+msgstr "Lihat Profil"
+
+#: templates/enterlink/headers/index_header.html:128
+msgid "Sign In"
+msgstr "Masuk"
+
+#: templates/enterlink/headers/index_header.html:128
+#: templates/enterlink/headers/index_header.html:172
+#: templates/enterlink/headers/index_header.html:241
+#: templates/enterlink/headers/index_header.html:263
+#: templates/enterlink/index.html:47
+msgid "Register"
+msgstr "Mendaftar"
+
+#: templates/enterlink/headers/index_header.html:132
+#: templates/enterlink/login.html:36
+msgid "Username"
+msgstr "Nama Pengguna"
+
+#: templates/enterlink/headers/index_header.html:139
+msgid "Need an account? Register here."
+msgstr "Perlu akun? Daftar disini."
+
+#: templates/enterlink/headers/index_header.html:140
+#: templates/enterlink/headers/index_header.html:171
+#: templates/enterlink/login.html:41
+msgid "Forgot your password?"
+msgstr "Lupa kata sandi Anda?"
+
+#: templates/enterlink/headers/index_header.html:163
+#: templates/enterlink/inbox.html:23
+msgid "Your Notifications"
+msgstr "Pemberitahuan Anda"
+
+#: templates/enterlink/headers/index_header.html:222
+msgid "Get an account"
+msgstr "Dapatkan akun"
+
+#: templates/enterlink/headers/index_header.html:222
+msgid "or Log in"
+msgstr "atau Masuk"
+
+#: templates/enterlink/headers/index_header.html:235
+#: templates/enterlink/headers/index_header.html:244
+#: templates/enterlink/headers/index_header.html:257
+#: templates/enterlink/headers/index_header.html:266
+#: templates/enterlink/headers/mobile-navbar.html:165
+#: templates/enterlink/headers/mobile-navbar.html:216
+#: templates/enterlink/template_blockchain_styled_amp.html:641
+msgid "Language"
+msgstr "Bahasa"
+
+#: templates/enterlink/headers/mobile-navbar.html:178
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:224
+#: templates/enterlink/template_blockchain_styled_amp.html:606
+msgid "Register / Log in"
+msgstr "Daftar / Masuk"
+
+#: templates/enterlink/hoverblurb_ajax_blockchain.html:65
+msgid "Go to article"
+msgstr "Pergi ke artikel"
+
+#: templates/enterlink/hovereditor_ajax.html:67
+msgid "Self citation by"
+msgstr "Rujukan sendiri oleh"
+
+#: templates/enterlink/hovereditor_ajax.html:72
+msgid "Title"
+msgstr "Judul"
+
+#: templates/enterlink/hovereditor_ajax.html:75
+msgid "Rank"
+msgstr "Peringkat"
+
+#: templates/enterlink/hovereditor_ajax.html:76
+msgid "User since"
+msgstr "Pengguna sejak"
+
+#: templates/enterlink/hovereditor_ajax.html:77
+msgid "Last login"
+msgstr "Masuk terakhir"
+
+#: templates/enterlink/hovereditor_ajax.html:80
+msgid "Go to Editor's Profile"
+msgstr "Pergi ke Profil Editor"
+
+#: templates/enterlink/hoverlink_ajax_blockchain.html:64
+msgid "Discuss Citation"
+msgstr "Diskusikan Kutipan"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:53
+msgid "Download"
+msgstr "Unduh"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:55
+msgid "Direct Link"
+msgstr "Tautan langsung"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:64
+#: templates/enterlink/hoverlink_iframe_blockchain.html:65
+#: templates/enterlink/template_blockchain_styled_desktop.html:195
+#: templates/enterlink/template_blockchain_styled_desktop.html:196
+msgid "Share"
+msgstr "Bagikan"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:68
+#: templates/enterlink/template_blockchain_styled_desktop.html:202
+msgid "Copy URL"
+msgstr "Salin URL"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:118
+msgid "Play / Pause"
+msgstr "Putar / Jeda"
+
+#: templates/enterlink/howto.html:8 templates/enterlink/howto.html:30
+msgid "How to use Everipedia"
+msgstr "Cara menggunakan Everipedia"
+
+#: templates/enterlink/howto.html:10 templates/enterlink/limitreached.html:9
+msgid ""
+"Everipedia is a free and easy to use wiki platform. Write about anyone and "
+"anything!"
+msgstr ""
+"Everipedia adalah platform wiki yang gratis dan mudah digunakan. Tulis "
+"tentang siapa saja dan apa saja!"
+
+#: templates/enterlink/howto.html:36 templates/enterlink/howto.html:45
+msgid "Go back to the page you started from"
+msgstr "Kembali ke halaman yang Anda mulai"
+
+#: templates/enterlink/howto.html:40 templates/enterlink/howto.html:45
+msgid "Go to page"
+msgstr "Menuju halaman"
+
+#: templates/enterlink/howto.html:50
+msgid "Go to your editor profile page"
+msgstr "Buka halaman profil editor Anda"
+
+#: templates/enterlink/howto.html:50
+msgid "Go to profile"
+msgstr "Pergi ke profil"
+
+#: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
+msgid "Create a new page now"
+msgstr "Buat halaman baru sekarang"
+
+#: templates/enterlink/howto.html:61
+msgid "Search for an existing page"
+msgstr "Cari halaman yang ada"
+
+#: templates/enterlink/in_progress_404.html:6
+msgid "This page is currently being created by another user"
+msgstr "Halaman ini saat ini sedang dibuat oleh pengguna lain"
+
+#: templates/enterlink/in_progress_404.html:82
+msgid ""
+"This page is currently in the process of being created by another user. "
+"Please return later!"
+msgstr ""
+"Halaman ini sedang dalam proses dibuat oleh pengguna lain. Silakan kembali "
+"nanti!"
+
+#: templates/enterlink/inbox.html:30
+msgid "You have"
+msgstr "Anda memiliki"
+
+#: templates/enterlink/inbox.html:30
+msgid "unread notifications"
+msgstr "pemberitahuan yang belum dibaca"
+
+#: templates/enterlink/inbox.html:45
+msgid "You currently do not have any notifications."
+msgstr "Anda saat ini tidak memiliki pemberitahuan apa pun."
+
+#: templates/enterlink/index.html:40
+msgid "The world's first encyclopedia on the blockchain"
+msgstr "Ensiklopedia pertama di dunia pada blockchain"
+
+#: templates/enterlink/index.html:41
+msgid ""
+"Everipedia's IQ Network is the world's first Encyclopedia that allows anyone "
+"to become a stakeholder in the system and earn rank, rewards & tokens for "
+"curating content."
+msgstr ""
+"IQ Network Everipedia adalah Ensiklopedia pertama di dunia yang memungkinkan "
+"siapa saja untuk menjadi pemangku kepentingan dalam sistem dan mendapatkan "
+"peringkat, penghargaan & token untuk mengubah konten."
+
+#: templates/enterlink/index.html:48
+msgid "Learn more"
+msgstr "Pelajari lebih lanjut"
+
+#: templates/enterlink/index.html:79
+msgid "As Seen In"
+msgstr ""
+
+#: templates/enterlink/index.html:100
+msgid "An Encyclopedia for the modern age"
+msgstr "Ensiklopedia untuk zaman modern"
+
+#: templates/enterlink/index.html:104
+msgid ""
+"The Everipedia IQ blockchain provides a new paradigm change and knowledge "
+"economy to disrupt the old centralized internet knowledge encyclopedia model "
+"similar to Wikipedia. By creating a new incentive structure and a "
+"distributed backend hosted within a blockchain, the new Everipedia knowledge "
+"base will be able to improve upon all fundamental features of Wikipedia."
+msgstr ""
+"Blockchain IQ Everipedia menyediakan perubahan paradigma baru dan ekonomi "
+"pengetahuan untuk mengganggu model ensiklopedia pengetahuan internet "
+"terpusat lama yang serupa dengan Wikipedia. Dengan membuat struktur insentif "
+"baru dan backend terdistribusi yang dihosting dalam blockchain, basis "
+"pengetahuan Everipedia baru akan dapat meningkatkan semua fitur dasar "
+"Wikipedia."
+
+#: templates/enterlink/index.html:112
+msgid "Decentralized"
+msgstr "Terdesentralisasi"
+
+#: templates/enterlink/index.html:113
+msgid ""
+"Articles are fetched using IPFS and EOS Storage. Majority of IQ being "
+"distributed during the airdrop."
+msgstr ""
+"Artikel diambil menggunakan IPFS dan Penyimpanan EOS. Mayoritas IQ "
+"didistribusikan selama airdrop."
+
+#: templates/enterlink/index.html:117
+msgid "Democratic"
+msgstr "Demokrasi"
+
+#: templates/enterlink/index.html:118
+msgid ""
+"Proof of Stake (PoS) model allows for voting to change and upgrade the IQ "
+"network as it grows. Also will facilitate batch imports of new content with "
+"no fees."
+msgstr ""
+"Model Proof of Stake (PoS) memungkinkan pemungutan suara untuk mengubah dan "
+"meningkatkan jaringan IQ seiring pertumbuhannya. Juga akan memfasilitasi "
+"impor batch konten baru tanpa adanya biaya."
+
+#: templates/enterlink/index.html:122
+msgid "Censorship Resistant"
+msgstr "Tahan Sensor"
+
+#: templates/enterlink/index.html:123
+msgid ""
+"Live and permanent edits of content on the blockchain beyond the control of "
+"a central authority."
+msgstr ""
+"Suntingan konten langsung dan permanen pada blockchain berada di luar "
+"kendali otoritas pusat."
+
+#: templates/enterlink/index.html:127
+msgid "Financial Incentive"
+msgstr "Insentif keuangan"
+
+#: templates/enterlink/index.html:128
+msgid ""
+"All holders of IQ will be incentivized to create quality, neutral content "
+"and to work together in building the reputation of the network."
+msgstr ""
+"Semua pemegang IQ akan diberi insentif untuk menciptakan konten yang "
+"berkualitas, netral, dan bekerja sama dalam membangun reputasi jaringan."
+
+#: templates/enterlink/index.html:139
+msgid "Become an editor today and start creating your own wiki articles."
+msgstr ""
+"Menjadi seorang editor hari ini dan mulailah membuat artikel wiki Anda "
+"sendiri."
+
+#: templates/enterlink/index.html:142
+msgid "Open Community"
+msgstr "Komunitas Terbuka"
+
+#: templates/enterlink/index.html:143
+msgid ""
+"Our vibrant community is open and welcoming to people from all backgrounds. "
+"Our guidelines and policies are based on common sense rather than strict "
+"bureaucracy."
+msgstr ""
+"Komunitas kami yang bersemangat adalah terbuka dan ramah kepada orang-orang "
+"dari semua latar belakang. Pedoman dan kebijakan kami didasarkan pada akal "
+"sehat daripada birokrasi yang ketat."
+
+#: templates/enterlink/index.html:145
+msgid "Redesigned for the modern age"
+msgstr "Didesain ulang untuk zaman modern"
+
+#: templates/enterlink/index.html:146
+msgid ""
+"Everipedia is an encyclopedia modernized and re-designed for the twenty-"
+"first century. Our editing interface makes creating and editing wiki's as "
+"easy as using Facebook."
+msgstr ""
+"Everipedia adalah ensiklopedia yang dimodernisasi dan dirancang ulang untuk "
+"abad ke dua puluh satu. Antarmuka pengeditan kami membuat dan menyunting "
+"wiki semudah menggunakan Facebook."
+
+#: templates/enterlink/index.html:155
+msgid "Follow us on Telegram"
+msgstr "Ikuti kami di Telegram"
+
+#: templates/enterlink/index.html:168
+msgid "Led by the Founder of Wikipedia and Genius.com"
+msgstr "Dipimpin oleh Pendiri Wikipedia dan Genius.com"
+
+#: templates/enterlink/index.html:171
+msgid ""
+"Everipedia is being led by a team with extensive experience and knowledge "
+"both in the online knowledge space as well as the blockchain industry. The "
+"executive team is made up of several prominent individuals in the industry, "
+"the Co-Founder of Wikipedia, Larry Sanger, the founder of Genius.com, Mahbod "
+"Moghadam, and several others. Academic credentials includes UCLA, Stanford, "
+"Yale & Columbia, covering nationalities from America, Sweden, Norway and "
+"Italy. "
+msgstr ""
+"Everipedia sedang dipimpin oleh tim dengan pengalaman dan pengetahuan yang "
+"luas baik di ruang pengetahuan online maupun industri blockchain. Tim "
+"eksekutif terdiri dari beberapa tokoh terkemuka di industri ini, Pendiri "
+"Bersama Wikipedia, Larry Sanger, pendiri Genius.com, Mahbod Moghadam, dan "
+"beberapa lainnya. Kredensial akademik termasuk UCLA, Stanford, Yale & "
+"Columbia, yang meliputi kebangsaan dari Amerika, Swedia, Norwegia dan Italia."
+
+#: templates/enterlink/index.html:172
+msgid "Executive Team"
+msgstr "Tim eksekutif"
+
+#: templates/enterlink/leadership.html:7
+msgid "Leadership"
+msgstr "Pimpinan"
+
+#: templates/enterlink/leadership.html:23
+msgid "Executive Leadership"
+msgstr "Pemimpin Eksekutif"
+
+#: templates/enterlink/leadership.html:35
+msgid "Chief Information Officer"
+msgstr "Kepala Petugas Informasi"
+
+#: templates/enterlink/leadership.html:41
+msgid "Chief Executive Officer, Co-Founder"
+msgstr "Chief Executive Officer, Pendiri Bersama"
+
+#: templates/enterlink/leadership.html:47
+msgid "Chief Technology Officer, Co-Founder"
+msgstr "Chief Technology Officer, Pendiri Bersama"
+
+#: templates/enterlink/leadership.html:53
+msgid "President, Co-Founder"
+msgstr "Presiden, Pendiri Bersama"
+
+#: templates/enterlink/leadership.html:63
+msgid "Director of Software"
+msgstr "Direktur Perangkat Lunak"
+
+#: templates/enterlink/leadership.html:69
+msgid "Chief Operating Officer"
+msgstr "Direktur Operasional"
+
+#: templates/enterlink/leadership.html:75
+msgid "Chief Community Officer, Co-Founder"
+msgstr "Chief Community Officer, Pendiri Bersama"
+
+#: templates/enterlink/limitreached.html:7
+msgid "Activity limit reached"
+msgstr "Batas aktivitas tercapai"
+
+#: templates/enterlink/limitreached.html:23
+msgid ""
+"Hey! You've added 15 morsels of knowledge to Everipedia now, so we have "
+"paused your account until Master Editors have had a chance to review your "
+"work. Shouldn't take too long, you'll probably be good to go in less than 5 "
+"minutes."
+msgstr ""
+"Hei! Anda telah menambahkan 15 lembar pengetahuan ke Everipedia sekarang, "
+"jadi kami telah menghentikan akun Anda sampai Editor Master berkesempatan "
+"meninjau karya Anda. Tidak perlu waktu lama, Anda mungkin dapat pergi dalam "
+"waktu kurang dari 5 menit."
+
+#: templates/enterlink/limitreached.html:24
+msgid "In the meantime, please join our official Facebook group:"
+msgstr "Sementara itu, silakan bergabung dengan grup Facebook resmi kami:"
+
+#: templates/enterlink/limitreached.html:24
+msgid "It’s the best way to reach the community!"
+msgstr "Ini adalah cara terbaik untuk menjangkau komunitas!"
+
+#: templates/enterlink/login.html:7
+msgid "Sign in"
+msgstr "Masuk"
+
+#: templates/enterlink/login.html:33
+msgid "Sign in to Everipedia"
+msgstr "Masuk ke Everipedia"
+
+#: templates/enterlink/login.html:48
+msgid "Log in with Facebook"
+msgstr "Masuk dengan Facebook"
+
+#: templates/enterlink/login.html:49
+msgid "Log in with Twitter"
+msgstr "Masuk dengan Twitter"
+
+#: templates/enterlink/login.html:58
+msgid "Need an account?"
+msgstr "Perlu akun?"
+
+#: templates/enterlink/login.html:58
+msgid "Register here"
+msgstr "Mendaftar di sini"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:34
+msgid "Visit Profile"
+msgstr "Kunjungi Profil"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:57
+msgid "Settings"
+msgstr "Pengaturan"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:73
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:214
+#: templates/enterlink/template_blockchain_styled_amp.html:721
+msgid "Log Out"
+msgstr "Keluar"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:86
+msgid "Register / Log In"
+msgstr "Daftar / Masuk"
+
+#: templates/enterlink/notifications/index.html:116
+msgid "New message"
+msgstr "Pesan Baru"
+
+#: templates/enterlink/recent-activity.html:84
+msgid "by"
+msgstr "oleh"
+
+#: templates/enterlink/register.html:6
+msgid "Create an account"
+msgstr "Buat akun"
+
+#: templates/enterlink/register.html:26 templates/enterlink/register.html:28
+msgid "Have an account?"
+msgstr "Punya Akun?"
+
+#: templates/enterlink/register.html:26 templates/enterlink/register.html:28
+msgid "Login"
+msgstr "Masuk"
+
+#: templates/enterlink/register.html:42
+msgid ""
+"Registration is currently invite only due to blockchain software testing. "
+"Join us on Telegram and Reddit in the meantime to become a part of "
+"Everipedia today!"
+msgstr ""
+"Pendaftaran saat ini hanya diundang karena pengujian perangkat lunak "
+"blockchain. Bergabunglah bersama kami di Telegram dan Reddit untuk menjadi "
+"bagian dari Everipedia hari ini!"
+
+#: templates/enterlink/register.html:60
+msgid "Welcome to the Everipedia editor community!"
+msgstr "Selamat datang di komunitas editor Everipedia!"
+
+#: templates/enterlink/register.html:63
+msgid ""
+"Sign up to become an editor to access more features and an ad-free "
+"experience."
+msgstr ""
+"Mendaftarlah untuk menjadi editor untuk mengakses lebih banyak fitur dan "
+"pengalaman bebas iklan."
+
+#: templates/enterlink/register.html:96
+msgid "Sign up"
+msgstr "Daftar"
+
+#: templates/enterlink/register.html:97
+msgid "By clicking sign up above you agree to our"
+msgstr "Dengan mengklik daftar di atas Anda setuju dengan"
+
+#: templates/enterlink/register.html:97
+msgid "Terms of Service"
+msgstr "Ketentuan Layanan"
+
+#: templates/enterlink/rewardsmgmt.html:4
+#: templates/enterlink/rewardsmgmt.html:132
+#, fuzzy
+#| msgid "Brainpower Management"
+msgid "Rewards Management"
+msgstr "Manajemen Kekuatan Otak"
+
+#: templates/enterlink/rewardsmgmt.html:135
+msgid "Here you can claim rewards for the edits and / or votes that you made."
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:140
+msgid "Proposal Hash"
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:141
+msgid "Finalized Time"
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:142
+#, fuzzy
+#| msgid "Voting Period"
+msgid "Period"
+msgstr "Periode Voting"
+
+#: templates/enterlink/rewardsmgmt.html:143
+msgid "Redeem"
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:150
+#, fuzzy
+#| msgid "Password reset successful"
+msgid "Redeem successful"
+msgstr "Berhasil mengatur ulang kata sandi"
+
+#: templates/enterlink/search-iframe.html:127
+msgid "Searching..."
+msgstr "Mencari..."
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "Can't find it below?"
+msgstr "Tidak dapat menemukannya di bawah ini?"
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "Create"
+msgstr "Buat"
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "a new page titled"
+msgstr "halaman baru berjudul"
+
+#: templates/enterlink/search.html:45 templates/enterlink/search.html:55
+msgid "Or try the"
+msgstr "Atau coba"
+
+#: templates/enterlink/search.html:45 templates/enterlink/search.html:55
+msgid "advanced search."
+msgstr "Pencarian lanjutan"
+
+#: templates/enterlink/search.html:48
+msgid "Everipedia couldn’t find anything with the name"
+msgstr "Everipedia tidak dapat menemukan apa pun dengan nama itu"
+
+#: templates/enterlink/search.html:50
+msgid ""
+"If you know any links associated with this page, try searching for those "
+"links"
+msgstr ""
+"Jika Anda mengetahui tautan apa pun yang terkait dengan laman ini, coba cari "
+"tautan tersebut"
+
+#: templates/enterlink/template_ajax_genius.html:17
+#: templates/enterlink/template_amp_ajax_genius.html:98
+msgid "Verified Editor"
+msgstr "Editor Terverifikasi"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:123
+msgid "Bullet"
+msgstr "Bullet"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:185
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid "Recent news"
+msgstr "Berita Terkini"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:185
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid ""
+"Everipedia IQ tokens are now in circulation on the EOS mainnet. Follow "
+"Everipedia on"
+msgstr ""
+"Token Everipedia IQ sekarang beredar di EOS mainnet. Ikuti Everipedia di"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:185
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid "to learn about upcoming features and developments!"
+msgstr "untuk belajar tentang fitur dan perkembangan yang akan datang!"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:197
+#: templates/enterlink/template_blockchain_styled_desktop.html:143
+msgid "Verified Page"
+msgstr "Halaman Terverifikasi"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:273
+msgid "Quick Biography"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_amp.html:275
+msgid "Quick Facts For This Wiki"
+msgstr "Tautan Referensi Untuk Wiki Ini"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:304
+#: templates/enterlink/template_blockchain_styled_desktop.html:361
+msgid "Image & Video Gallery"
+msgstr "Galeri Foto & Video"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:306
+#: templates/enterlink/template_blockchain_styled_desktop.html:363
+msgid "images, pictures, and videos"
+msgstr "gambar, foto, dan video"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:310
+msgid "Gallery"
+msgstr "Galeri"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:327
+#: templates/enterlink/template_blockchain_styled_desktop.html:496
+msgid "Reference Links For This Biography"
+msgstr "Tautan Referensi Untuk Biografi Ini"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:329
+#: templates/enterlink/template_blockchain_styled_desktop.html:498
+msgid "Reference Links For This Wiki"
+msgstr "Tautan Referensi Untuk Wiki Ini"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:332
+#: templates/enterlink/template_blockchain_styled_desktop.html:501
+msgid ""
+"Links to historical reviews, career / educational facts, and other "
+"encyclopedic information"
+msgstr ""
+"Tautan ke tinjauan historis, fakta karir / pendidikan, dan informasi "
+"ensiklopedis lainnya"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:337
+#: templates/enterlink/template_blockchain_styled_desktop.html:507
+msgid "All information for"
+msgstr "Semua informasi untuk"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:337
+#: templates/enterlink/template_blockchain_styled_desktop.html:507
+msgid ""
+"wiki comes from the below links. Any source is valid, including Twitter, "
+"Facebook, Instagram, and LinkedIn. Pictures, videos, biodata, and files "
+"relating to"
+msgstr ""
+"wiki berasal dari tautan di bawah. Sumber apa pun valid, termasuk Twitter, "
+"Facebook, Instagram, dan LinkedIn. Gambar, video, biodata, dan file yang "
+"berkaitan dengan"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:337
+#: templates/enterlink/template_blockchain_styled_desktop.html:507
+msgid "are also acceptable encyclopedic sources."
+msgstr "juga sumber ensiklopedis yang dapat diterima."
+
+#: templates/enterlink/template_blockchain_styled_amp.html:352
+#: templates/enterlink/template_blockchain_styled_desktop.html:528
+msgid ""
+"See related encyclopedia articles, biographies, reviews, and historical "
+"facts."
+msgstr ""
+"Lihat artikel ensiklopedia terkait, biografi, ulasan, dan fakta historis."
+
+#: templates/enterlink/template_blockchain_styled_amp.html:356
+#: templates/enterlink/template_blockchain_styled_desktop.html:535
+msgid "Other wiki pages related to"
+msgstr "Halaman wiki lain yang terkait dengan"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:535
+msgid "Created"
+msgstr "Dibuat"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:536
+msgid "Last Modified"
+msgstr "Terakhir disunting"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:537
+msgid "IPFS"
+msgstr "IPFS"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:757
+msgid "Top Page Editors"
+msgstr "Editor Halaman Teratas"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:777
+msgid "Share this page"
+msgstr "Bagikan laman ini"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:789
+msgid "DIRECT LINK"
+msgstr "TAUTAN LANGSUNG"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:794
+#: templates/enterlink/template_blockchain_styled_desktop.html:221
+msgid "Suggested Hashtags"
+msgstr "Hashtag yang disarankan"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:828
+#: templates/enterlink/template_blockchain_styled_desktop.html:259
+msgid "QR Code"
+msgstr "Kode QR"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:14
+#: templates/enterlink/template_blockchain_styled_desktop.html:19
+msgid "Bio"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:16
+#: templates/enterlink/template_blockchain_styled_desktop.html:17
+#: templates/enterlink/template_blockchain_styled_desktop.html:225
+msgid "bio"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:16
+#: templates/enterlink/template_blockchain_styled_desktop.html:17
+#: templates/enterlink/template_blockchain_styled_desktop.html:23
+#: templates/enterlink/template_blockchain_styled_desktop.html:24
+#: templates/enterlink/template_blockchain_styled_desktop.html:30
+#: templates/enterlink/template_blockchain_styled_desktop.html:31
+#: templates/enterlink/template_blockchain_styled_desktop.html:37
+#: templates/enterlink/template_blockchain_styled_desktop.html:38
+msgid "encylopedia"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:21
+#: templates/enterlink/template_blockchain_styled_desktop.html:26
+#: templates/enterlink/template_blockchain_styled_desktop.html:28
+#: templates/enterlink/template_blockchain_styled_desktop.html:33
+msgid "Review"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:23
+#: templates/enterlink/template_blockchain_styled_desktop.html:24
+#: templates/enterlink/template_blockchain_styled_desktop.html:30
+#: templates/enterlink/template_blockchain_styled_desktop.html:31
+#: templates/enterlink/template_blockchain_styled_desktop.html:231
+#: templates/enterlink/template_blockchain_styled_desktop.html:237
+#: templates/enterlink/template_blockchain_styled_desktop.html:243
+msgid "review"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:30
+#: templates/enterlink/template_blockchain_styled_desktop.html:31
+#: templates/enterlink/template_blockchain_styled_desktop.html:232
+#: templates/enterlink/template_blockchain_styled_desktop.html:238
+#: templates/enterlink/template_blockchain_styled_desktop.html:244
+msgid "history"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid "and"
+msgstr "dan"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:187
+#: templates/enterlink/voting_table_of_contents.html:12
+msgid "Edit"
+msgstr "Sunting"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:190
+msgid "Vote"
+msgstr "Penilaian"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:205
+msgid "Embed / Widget"
+msgstr "Sematkan / Widget"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:224
+#: templates/enterlink/template_blockchain_styled_desktop.html:230
+#: templates/enterlink/template_blockchain_styled_desktop.html:236
+#: templates/enterlink/template_blockchain_styled_desktop.html:242
+msgid "wiki"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:226
+msgid "net worth"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:227
+msgid "age"
+msgstr "Halaman"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:228
+msgid "married"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:233
+msgid "sales"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:234
+#: templates/enterlink/template_blockchain_styled_desktop.html:240
+#: templates/enterlink/template_blockchain_styled_desktop.html:246
+msgid "facts"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:239
+msgid "founders"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:245
+msgid "encyclopedia"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:329
+msgid "Profiles"
+msgstr "Profil"
+
+#: templates/enterlink/transfer-iq.html:5
+#: templates/enterlink/transfer-iq.html:119
+msgid "Transfer IQ"
+msgstr "Mentransfer IQ"
+
+#: templates/enterlink/transfer-iq.html:121
+msgid "Please make sure you have set up"
+msgstr "Harap pastikan Anda telah mengaturnya"
+
+#: templates/enterlink/transfer-iq.html:121
+msgid "beforehand"
+msgstr "sebelumnya"
+
+#: templates/enterlink/transfer-iq.html:123
+msgid "Sender"
+msgstr "Kirim"
+
+#: templates/enterlink/transfer-iq.html:125
+msgid "Recipient"
+msgstr "Penerima"
+
+#: templates/enterlink/transfer-iq.html:129
+msgid "Memo"
+msgstr "Memo"
+
+#: templates/enterlink/transfer-iq.html:134
+msgid "Transaction successful"
+msgstr "Transaksi berhasil"
+
+#: templates/enterlink/transfer-iq.html:138
+msgid "Buy RAM"
+msgstr "Beli RAM"
+
+#: templates/enterlink/transfer-iq.html:142
+msgid "See your RAM, CPU, and Bandwidth on FeeXplorer"
+msgstr "Lihat RAM, CPU, dan Bandwidth Anda di FeeXplorer"
+
+#: templates/enterlink/user.html:12
+msgid "profile"
+msgstr "profil"
+
+#: templates/enterlink/user.html:38
+msgid "Everipedia Rank"
+msgstr "Peringkat Everipedia"
+
+#: templates/enterlink/user.html:53
+msgid "This user is verified"
+msgstr "Pengguna ini diverifikasi"
+
+#: templates/enterlink/user.html:56
+msgid "Everipedia Staff"
+msgstr "Staf Everipedia"
+
+#: templates/enterlink/user.html:62 templates/enterlink/user.html:67
+msgid "Message"
+msgstr "Pesan"
+
+#: templates/enterlink/user.html:71 templates/enterlink/user.html:123
+msgid "Edit Profile"
+msgstr "Sunting Profil"
+
+#: templates/enterlink/user.html:74
+msgid "Everipedia Page"
+msgstr "Halaman Everipedia"
+
+#: templates/enterlink/user.html:80
+msgid "IQ Score"
+msgstr "Skor IQ"
+
+#: templates/enterlink/user.html:81
+msgid "Pages created"
+msgstr "Halaman dibuat"
+
+#: templates/enterlink/user.html:82
+msgid "Total edits"
+msgstr "Total hasil edit"
+
+#: templates/enterlink/user.html:94
+msgid "Joined"
+msgstr "Bergabung"
+
+#: templates/enterlink/user.html:125
+msgid "Upload Avatar / Profile Picture"
+msgstr "Unggah Avatar / Gambar Profil"
+
+#: templates/enterlink/user.html:153
+msgid "Enable account? Uncheck to ban"
+msgstr "Aktifkan akun? Hapus centang untuk mencekal"
+
+#: templates/enterlink/user.html:157
+msgid "IP Ban"
+msgstr "Ban IP"
+
+#: templates/enterlink/user.html:157
+msgid "Ban"
+msgstr "Blok"
+
+#: templates/enterlink/user.html:157
+msgid "Clear"
+msgstr "Bersihkan"
+
+#: templates/enterlink/user.html:159
+msgid "Verify the account?"
+msgstr "Verifikasi akun?"
+
+#: templates/enterlink/user.html:163
+msgid "Is Staff?"
+msgstr "Apakah Staf?"
+
+#: templates/enterlink/user.html:177
+msgid "Save all changes"
+msgstr "Simpan semua perubahan"
+
+#: templates/enterlink/user.html:178
+msgid "Cancel"
+msgstr "Batal"
+
+#: templates/enterlink/user.html:211
+msgid "Change Avatar Picture"
+msgstr "Ubah Gambar Avatar"
+
+#: templates/enterlink/user.html:219
+msgid "Please select your Everipedia page"
+msgstr "Silakan pilih halaman Everipedia Anda"
+
+#: templates/enterlink/user.html:224
+msgid "Continue"
+msgstr "Lanjutkan"
+
+#: templates/enterlink/votehistory.html:7
+msgid "Voting"
+msgstr "Voting"
+
+#: templates/enterlink/votehistory.html:95
+msgid "Voting History"
+msgstr "Riwayat Voting"
+
+#: templates/enterlink/voting.html:197
+msgid "Before"
+msgstr "Sebelum"
+
+#: templates/enterlink/voting.html:199
+msgid "After"
+msgstr "Sesudah"
+
+#: templates/enterlink/voting_table_of_contents.html:7
+msgid "Article"
+msgstr "Artikel"
+
+#: templates/enterlink/voting_table_of_contents.html:17
+msgid "Current Vote"
+msgstr "Suara Saat Ini"
+
+#: templates/enterlink/voting_table_of_contents.html:20
+#: templates/enterlink/voting_table_of_contents.html:62
+msgid "Reject"
+msgstr "Tolak"
+
+#: templates/enterlink/voting_table_of_contents.html:21
+msgid "Accept"
+msgstr "Terima"
+
+#: templates/enterlink/voting_table_of_contents.html:28
+msgid "Voting Period"
+msgstr "Periode Voting"
+
+#: templates/enterlink/voting_table_of_contents.html:34
+msgid "to"
+msgstr "untuk"
+
+#: templates/enterlink/voting_table_of_contents.html:51
+msgid "Place Votes"
+msgstr "Tempatkan Suara"
+
+#: templates/enterlink/voting_table_of_contents.html:63
+msgid "Approve"
+msgstr "Menyetujui"
+
+#: templates/enterlink/voting_table_of_contents.html:67
+msgid "Changes"
+msgstr "Perubahan"
+
+#: templates/enterlink/welcome.html:7
+msgid "Welcome to Everipedia, the encyclopedia of everything"
+msgstr "Selamat datang di Everipedia, ensiklopedia segalanya"

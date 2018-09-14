@@ -1,0 +1,57 @@
+{% load i18n %}
+{% load enterlink_custom_tags %}
+{% if returnType == "SINGLE" %}
+    <table class="ibox-item-nonplural">
+        <tr class="ibox-key-row">
+            <td class="ibox-nonplural-key" colspan="2">{{ newIboxDict.key }}</td>
+            <td class="delete-btn-wrap"><span class="icon icon-squared-cross"></span></td>
+        </tr>
+        <tr class="ibox-value-row">
+            <td class="ibox-nonplural-value" colspan="2">{{ newIboxDict.value|safe }}</td>
+            <td class="delete-row-wrap"><span class="icon icon-circle-with-cross"></span></td>
+        </tr>
+        <tr class="add-row-btn">
+            <td><span class="icon icon-squared-plus"></span><span class="add-row-label">{% trans 'Add Row' %}</span></td>
+        </tr>
+        <tr class="ibox-schema-row first-schema-row">
+            <td class="ibox-schema-label no-edit">{% trans 'Schema' %}</td>
+            <td class="ibox-schema" colspan="2" >{{ newIboxDict.schema }}</td>
+        </tr>
+        <tr class="ibox-schema-row">
+            <td class="ibox-schema-label no-edit">{% trans 'Schema Type' %}</td>
+            <td class="ibox-additionalschematype" colspan="2">{{ newIboxDict.addlSchematype }}</td>
+        </tr>
+        <tr class="ibox-schema-row">
+            <td class="ibox-schema-label no-edit">{% trans 'Subschema' %}</td>
+            <td class="ibox-addl_schema_itemprop" colspan="2">{{ newIboxDict.addlSchemaItemprop }}</td>
+        </tr>
+    </table>
+{% elif returnType == "PLURAL" %}
+    <table class="ibox-item-plural">
+        <tr class="ibox-plural-key" >
+            <td class="ibox-plural-key-inner" colspan="2">{{ pluralPackages.key }}</td>
+            <td class="delete-btn-wrap"><span class="icon icon-squared-cross"></span></td>
+        </tr>
+        {% for pluralbox in pluralPackages.objects %}
+        <tr class="ibox-value-row">
+            <td class="ibox-plural-value" colspan="2">{{ pluralbox.value|safe }}</td>
+            <td class="delete-row-wrap"><span class="icon icon-circle-with-cross"></span></td>
+        </tr>
+        {% endfor %}
+        <tr class="add-row-btn">
+            <td><span class="icon icon-squared-plus"></span><span class="add-row-label">{% trans 'Add Row' %}</span></td>
+        </tr>
+        <tr class="ibox-schema-row first-schema-row">
+            <td class="ibox-schema-label no-edit">{% trans 'Schema' %}</td>
+            <td class="ibox-schema" colspan="2">{{ pluralPackages.schema }}</td>
+        </tr>
+        <tr class="ibox-schema-row">
+            <td class="ibox-schema-label no-edit">{% trans 'Schema Type' %}</td>
+            <td class="ibox-additionalschematype" colspan="2">{{ pluralPackages.addlSchematype }}</td>
+        </tr>
+        <tr class="ibox-schema-row">
+            <td class="ibox-schema-label no-edit">{% trans 'Subschema' %}</td>
+            <td class="ibox-addl_schema_itemprop" colspan="2">{{ pluralPackages.addlSchemaItemprop }}</td>
+        </tr>
+    </table>
+{% endif %}

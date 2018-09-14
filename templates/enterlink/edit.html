@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+{% load i18n %}
+{% load enterlink_custom_tags %}
+<html>
+<head>
+
+    <meta name="description" content="Edit the page for {{PREFETCH_FBNAME_FACEBOOK_NAME}}">
+    <meta name="robots" content="noindex, noarchive, nofollow">
+    <!-- i18n translations-->
+    <!--<script type="text/javascript">gettext = function(a) {return a;}</script>-->
+
+	<!--- Include Header -->
+	{% include "enterlink/headers/header-common.html" %}{% include "enterlink/headers/header-navbar.html" %}
+    <link rel="prefetch" href="https://epcdn-vz.azureedge.net/static/images/loading2.gif">
+    <link href="/static/css/edit.css" rel="stylesheet">
+    <link href="/static/css/infobox.css" rel="stylesheet">
+    <link href="/static/css/bootstrap-tour-standalone.min.css" rel="stylesheet">
+    <link href="https://epcdn-vz.azureedge.net/static/css/jquery-qtip.css" rel="stylesheet">
+
+
+    {% include 'enterlink/inline-css/qtip2-custom.html' %}
+    <style>
+        a.tooltippableCarat {
+            text-decoration: none;
+        }
+        .mce-tinymce.mce-container.mce-panel{
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .mce-tinymce.mce-container.mce-panel{
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        input#id_blurbcontent{
+            opacity: 0;
+            min-height: 250px;
+        }
+    </style>
+    <script type="text/javascript" src="/static/bootstrap-tour/js/bootstrap-tour-standalone.min.js"></script>
+    <script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/jquery-ui-min.js"></script>
+    <script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/jquery-qtip-min.js"></script>
+
+    <script>
+        var ARTICLE_SLUG = '{{ARTICLE_SLUG}}';
+        var FACEBOOK_ID = '';
+        var FACEBOOK_FBID = '';
+        var CITED_BY = '';
+        var CITER_RANK = '';
+        var CITER_IS_VERIFIED = 0;
+        var PAGE_TYPE = '{{ ARTICLE_PAGE_TYPE }}';
+        var isMobile = parseInt('{{PREFETCH_REQUEST_MOBILE|yesno:"1,0"}}'); var isTablet = parseInt('{{request.tablet|yesno:"1,0"}}');
+        var EDITOR_LANGUAGE = "{{ LANGUAGE_CODE }}";
+    </script>
+
+    <script type="text/javascript" src="/static/tinymce_4.2.3/tinymce.min.js"></script>
+    {% include 'enterlink/inline-js/enterlink-edit-tinyMCEs.html' %}
+    {% include 'enterlink/inline-js/tiny-mce-placeholder.html' %}
+    {% include 'enterlink/inline-js/debounce-min.html' %}
+    {% include 'enterlink/inline-js/enterlink-edit-prefix.html' %}
+
+</head>
+<body class="with-top-navbar {% if request.mobile and not request.tablet %}bb-mobile{% else %}bb-desktop{% endif %}" style="padding-top: 150px; overflow-x: hidden;">
+<div id="submission_waiting" style="display: none;">
+    <div class="waiting-header">{% trans 'Loading' %}...</div>
+    <div class="waiting-header-close"><span class="icon icon-squared-cross"></span></div>
+    <div class="submission-wait-wrap">
+        <img src="/static/images/loading2.gif">
+    </div>
+</div>
+
+<div id="edit-ct" class="p-t-md edit-main-div tablet-compatible {% if request.mobile and not request.tablet %}bb-mobile{% else %}bb-desktop{% endif %}" >
+    <form class="main-edit-form" action="/wiki/{{ARTICLE_SLUG}}/advanced_edit/?submission=1" method="POST" id="form_tinymce_container">
+        {{ ARTICLE_BLOB|safe }}
+    </form>
+</div>
+
+<div id="addlink-box-wrapper" style="display:none;">
+    <div id="addlink-box">
+        {% include "enterlink/edit_ajax_addlink.html" %}
+    </div>
+</div>
+
+<div id="addinfobox-box-wrapper" style="display:none;">
+    <div id="addinfobox-box">
+        {% include "enterlink/edit_ajax_addinfobox.html" %}
+    </div>
+</div>
+
+<div id="pagemeta-box-wrapper" style="display:none;">
+    <div id="pagemeta-box">
+        {% include "enterlink/edit_ajax_editpagemeta.html" %}
+    </div>
+</div>
+
+<div id="mainphoto-edit-box-wrapper" style="display:none;">
+    <div id="mainphoto-edit-box">
+        {% include "enterlink/edit_ajax_editmainphoto.html" %}
+    </div>
+</div>
+
+<!--<div class="lightbox" id="ll3">-->
+    <!--<div id="mergepage_container">-->
+        <!--<div class="merge-page-note">{% trans 'Please enter the destination page you wish to merge this one into' %}:</div>-->
+        <!--<input placeholder="{% trans 'Search Everipedia' %} name='SearchBox-MergePage' autocomplete='off' onclick='this.select();this.focus();' id='AJAXBox-MergePage' type='text' value=''" />-->
+        <!--<div id="processingbox"></div>-->
+        <!--<div id='mergepage_results'>-->
+        <!--</div>-->
+        <!--<a class="btn btn-md btn-primary" onclick="ajax_page_merge();"  id="merge_page_button">{% trans 'Merge Page' %}</a>-->
+    <!--</div>-->
+<!--</div>-->
+
+<div id="myModal-autosave-alert" class="modal">
+  <div class="modal-content">
+    <span class="close close-autosave">x</span>
+    <h1>{% trans 'Hey there scholar!' %}</h1>
+    <p>{% trans "Looks like you have been editing for a while. You should take a moment to save your work before continuing!" %}</p>
+    <button type="button" onclick="$('.mce-tinymce.mce-container.mce-panel .mce-btn-save-page button')[0].click();">{% trans 'Save' %}</button>
+  </div>
+</div>
+
+<div id="myModal-3rdperson-alert" class="modal">
+  <div class="modal-content">
+    <span class="close close-3rdperson">x</span>
+    <h1>{% trans 'Hey there scholar!' %}</h1>
+    <p>{% trans "Looks like you are using first-person! (ex: Our product, I am, We are, You should). Everipedia is a neutral encyclopedia written in third-person tense (ex: It is, They are, The company makes). THIS IS NOT FACEBOOK!!" %}</p>
+    <button type="button" onclick="$('#id_blurbcontent_ifr').focus();$('#myModal-3rdperson-alert').hide();">{% trans 'OK' %}</button>
+  </div>
+</div>
+
+<div id="myModal-notitle-alert" class="modal">
+  <div class="modal-content">
+    <span class="close close-notitle">x</span>
+    <h1>{% trans 'Hey there scholar!' %}</h1>
+    <p>{% trans "Please enter a title for the page." %}</p>
+    <button type="button" onclick="$('input#id_facebook_name').focus();$('#myModal-notitle-alert').hide();">{% trans 'OK' %}</button>
+  </div>
+</div>
+
+<div id="myModal-noblurb-alert" class="modal">
+  <div class="modal-content">
+    <span class="close close-noblurb">x</span>
+    <h1>{% trans 'Hey there scholar!' %}</h1>
+    <p>{% trans "Please write something for the article section. Make sure to use citations." %}</p>
+    <button type="button" onclick="$('#id_blurbcontent_ifr').focus();$('#myModal-noblurb-alert').hide();">{% trans 'OK' %}</button>
+  </div>
+</div>
+
+<div id="myModal-nolinks-alert" class="modal">
+  <div class="modal-content">
+    <span class="close close-nolinks">x</span>
+    <h1>{% trans 'Hey there scholar!' %}</h1>
+    <p>{% trans "Hello! This page needs citations (also known as footnotes, references, sources) before it can be saved. Add the links you're using as sources with the cite button above." %}</p>
+    <p>{% trans 'Join our official Facebook group if you need help with it!:' %} <a href="https://www.facebook.com/groups/832060766909870/">https://www.facebook.com/groups/832060766909870/</a> {% trans "- we will hook you up. It's not hard!" %}</p>
+    <button type="button" onclick="$('input#id_linkurl').focus();$('#myModal-nolinks-alert').hide();">{% trans 'OK' %}</button>
+  </div>
+</div>
+
+<div id="myModal-noblurbcitation-alert" class="modal">
+  <div class="modal-content">
+    <span class="close close-noblurbcitation">x</span>
+    <h1>{% trans 'Hey there scholar!' %}</h1>
+    <p>{% trans "Please cite the link(s) you just added into the main article body. First click at the end of the sentence or paragraph you want to cite, then click the (Cite) button on the edit panel above!" %}</p>
+    <button type="button" onclick="$('#id_blurbcontent_ifr').focus();$('#myModal-noblurbcitation-alert').hide();">{% trans 'OK' %}</button>
+  </div>
+</div>
+
+</div>
+
+
+
+{% include 'enterlink/inline-js/enterlink-ajax-tooltippables.html' %}
+{% include 'enterlink/inline-js/enterlink-ajax-execute-search.html' %}
+{% include 'enterlink/inline-js/enterlink-edit-footer-combined.html' %}
+{% include "enterlink/footers/footer_no_extras.html" %}
+{% include 'enterlink/inline-js/application.html' %}
+{% include 'enterlink/inline-js/enterlink-template-footer.html' %}
+<script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/bootstrap-min-js.js"></script>
+{% include 'enterlink/inline-js/debounce-min.html' %}
+{% include 'enterlink/inline-js/notify-min.html' %}
+{#{% include "enterlink/footers/deferredJS.html" %}#}
+{% include 'enterlink/inline-css/application.html' %}
+
+
+{% if PREFETCH_FBNAME_MAINPHOTO_URL|default_if_none:"" %}
+{% else %}
+<script>initiatePictureDropzone();</script>
+{% endif %}
+
+<script type="text/javascript" src="/static/tageditor/jquery.tag-editor.js"></script>
+<script type="text/javascript" src="/static/tageditor/jquery.caret.min.js"></script>
+<link href="/static/tageditor/jquery.tag-editor.css" rel="stylesheet">
+
+{% include 'enterlink/inline-js/edit-bottom.html' %}
+{% include 'enterlink/headers/extra-analytics-right-before-body-end.html' %}
+</body>
+</html>

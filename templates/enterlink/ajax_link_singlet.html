@@ -1,0 +1,46 @@
+{% load i18n %}
+{% load enterlink_custom_tags %}
+<li class="link-row">
+<table class="mce-item-table">
+<tr>
+    <td class="link-thumb-wrap">
+        {% if theLink.mime != None or theLink.thumb != None %}
+            <img class='link-thumb' src="{{ theLink.thumb }}" onerror="this.onerror=null;this.src='https://epcdn-vz.azureedge.net/static/images/white.png'"/>
+        {% endif %}
+    </td>
+    <td class='link-details-wrap'>
+        <table>
+            <tr class='link-url-container-wrap'>
+                <td class="link-url-citation-number no-edit">{{ theLink.integer }}</td>
+                <td class="link-url-wrap">
+                    <a class="link-url" {{ theLink.attr }} href="{{ theLink.url }}" target="_blank">{{ theLink.url }}</a>
+                </td>
+            </tr>
+            <tr class="link-description-wrap">
+                <td class="link-description">
+                    {{ theLink.description|safe }}
+                </td>
+            </tr>
+            <tr class="link-url-extra-wrap">
+                <td class="link-url-extra-label no-edit">{% trans 'Social Media' %}</td>
+                <td class="link-url-extra-value link-social-media">{{theLink.isSocial}}</td>
+                <td class="link-url-extra-label no-edit">{% trans 'Attributes' %}</td>
+                <td class="link-url-extra-value link-attr">{{ linkChunk.attr }}</td>
+                <td class="link-url-extra-label no-edit">{% trans 'Timestamp' %}</td>
+                <td class="link-url-extra-value link-timestamp">{{ theLink.timestamp|json_fix_time }}</td>
+                <td class="link-url-extra-label no-edit">MIME</td>
+                <td class="link-url-extra-value link-mime">{{ theLink.mime}}</td>
+            </tr>
+        </table>
+    </td>
+</tr>
+</table>
+<div class="button-wrap">
+    <div class="delete-btn-wrap">
+        <span class="icon icon-squared-cross"></span>
+    </div>
+    <div class="add-btn-wrap">
+        <span class="icon icon-squared-plus"></span>
+    </div>
+</div>
+</li>

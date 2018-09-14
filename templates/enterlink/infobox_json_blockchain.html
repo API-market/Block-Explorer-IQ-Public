@@ -1,0 +1,83 @@
+{% load i18n %}
+<ul class="list-unstyled list-spaced list-nonplural" id="infobox">
+<div class="row">
+{% if BLOBBOX|length > 0 %}
+    <div id="blobBox_container">
+        {% include 'enterlink/inline-css/blobbox.html' %}
+        {{ BLOBBOX|safe }}
+    </div>
+{% endif %}
+{% for item in NONPLURAL_INFOBOXES %}
+<li>
+    <div class="col-md-5 col-md-5b col-xs-4" id="info-qt"><h3>{{ item.key }}</h3></div>
+    <div class="col-md-7 col-xs-7" id="info-an">
+    {% spaceless %}
+    {% if item.schema != "None" %}
+        {% if item.addlSchematype != "None" %}
+            {% if item.addlSchemaItemprop == "NOTHING" %}
+                <abbr itemprop="{{ item.schema }}">
+                    <div class="schema addl-schema-line" itemscope itemtype="http://schema.org/{{ item.addlSchematype }}">
+                        {{ item.value|safe }}
+                    </div>
+                </abbr>
+            {% else %}
+                <div itemprop="{{ item.schema }}" class="schema addl-schema-line" itemscope itemtype="http://schema.org/{{ item.addlSchematype }}">
+                    <meta itemprop="{{ item.addlSchemaItemprop }}" content="{{ item.value|striptags }}">
+                    {{ item.value|safe }}
+                </div>
+            {% endif %}
+        {% else %}
+            <meta itemprop="{{ item.schema }}" content="{{ item.value|striptags }}">
+            {{ item.value|safe }}
+        {% endif %}
+    {% else %}
+        {{ item.value|safe }}
+    {% endif %}
+    {% endspaceless %}
+    </div>
+</li>
+{% endfor %}
+</div>
+</ul>
+<ul class="list-unstyled list-spaced list-plural" id="infobox">
+{% for refbox in PLURAL_INFOBOX_PACKAGES %}
+    <div class="plural-div row">
+        <div class="col-md-5 col-md-5b col-xs-4" id="info-qt">
+            <h3>{{ refbox.key }}</h3>
+        </div>
+        {% for pluralbox in refbox.objects %}
+            <div class="col-md-7 col-xs-7" id="info-an" style="float:right;">
+            {% if pluralbox.schema != "None" %}
+                {%  if pluralbox.addlSchematype != "None" %}
+                    <li class="plural-infobox">
+                    {% if pluralbox.addlSchemaItemprop == "NOTHING" %}
+                        <abbr itemprop="{{ pluralbox.schema }}">
+                            <div class="schema addl-schema-line" itemscope itemtype="http://schema.org/{{ pluralbox.addlSchematype }}">
+                                {{ pluralbox.value|safe }}
+                            </div>
+                        </abbr>
+                    {% else %}
+                        <div itemprop="{{ pluralbox.schema }}" class="schema addl-schema-line" itemscope itemtype="http://schema.org/{{ pluralbox.addlSchematype }}">
+                            <meta itemprop="{{ pluralbox.addlSchemaItemprop }}" content="{{ pluralbox.value|striptags }}">
+                            {{ pluralbox.value|safe }}
+                        </div>
+                    {% endif %}
+                    </li>
+                {% else %}
+                    <li class="plural-infobox">
+                        <meta itemprop="{{ pluralbox.schema }}" content="{{ pluralbox.value|striptags }}">
+                        {{ pluralbox.value|safe }}
+                    </li>
+                {% endif %}
+            {% else %}
+                <li class="plural-infobox">
+                    {{ pluralbox.value|safe }}
+                </li>
+            {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+{% endfor %}
+
+</ul>
+</ul>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+{% load i18n %}
+<html>
+    <head>
+ 
+    <title>{% trans 'Editing existing pages temporarily disabled' %} - {% trans "Everipedia, the encyclopedia of everything" %}</title>
+    <!-- ' -->
+    <meta name="description" content=" Everipedia is the world’s largest collection of hyperlinks grouped by identity. ">
+	<link rel="canonical" href="https://everipedia.org/contact/" />
+	<!--- Include Header -->
+	{% include "enterlink/headers/header-common.html" %}{% include "enterlink/headers/header-navbar.html" %}
+    <link href="/static/css/howto_welcome.css" rel="stylesheet">
+	<style>
+		.new-transfer-btn{
+			text-align: center;
+			background: #777;
+			border-radius: 3px;
+			color: #f6f6f6;
+			width: 120px;
+			height: 43px;
+			line-height: 43px;
+			font-size: 18px;
+			cursor: pointer;
+			display: inline-block;
+		}
+		.contact-ct{
+			text-align: center;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="contact-ct tablet-compatible">
+		<h1>Editing existing articles has been temporarily disabled. Please try creating a new one instead.</h1>
+		<div class="new-transfer-btn">
+			Create
+		</div>
+	</div>
+
+<script>
+
+	$(".create-page-plus").click();
+</script>
+
+
+<!--- Everipedia Footer -->
+{% include "enterlink/footers/footer.html" %}
+{#{% include "enterlink/footers/deferredJS.html" %}#}
+{% include 'enterlink/inline-css/application.html' %}
+{% include 'enterlink/headers/extra-analytics-right-before-body-end.html' %}
+</body>
+</html>

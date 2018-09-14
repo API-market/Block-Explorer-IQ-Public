@@ -1,0 +1,117 @@
+<script>
+    $("a.tooltippableCarat, a.imagelink").click(function(e) {
+        e.preventDefault();
+        $('#submission_waiting').show();
+        var theClasses = this.className.split(' ');
+        var isBlurbMedia = false;
+        var isVideo = false;
+        var categoryType = "";
+        theClasses.forEach(function(theClass) {
+            switch (theClass) {
+                case 'imagelink':
+                    isBlurbMedia = true;
+                    break;
+                case 'inline-video-overlay':
+                    isVideo = true;
+                    break;
+            }
+        });
+
+        var hoverlinkBoxWrapper = $("#template-hoverlink-lightbox");
+        var hoverlinkBox = $("#template-hoverlink-lightbox .blurb-compare-hoverbox");
+        var theStrippedUsername = "";
+        var dataUsername = $(this).attr('data-username');
+        var mediaType = "";
+
+        if (dataUsername != 'Cite as verified editor') {
+            try {
+                theStrippedUsername = (window.location.pathname).replace("/wiki/", "/").split("/");
+                theStrippedUsername = theStrippedUsername[1];
+            }
+            catch (err) {
+                theStrippedUsername = ARTICLE_SLUG;
+            }
+
+            var targetURL, targetNode;
+            if (isBlurbMedia && isVideo){
+                mediaType = "VIDEO";
+                targetNode = $(this).find(".caption-video")[0];
+                targetURL = encodeURIComponent($(targetNode).attr("src"));
+            }
+            else if(isBlurbMedia){
+                mediaType = "IMAGE";
+                targetNode = $(this).find(".caption-img")[0];
+                targetURL = encodeURIComponent($(targetNode).attr("src"));
+            }
+            else{
+                mediaType = "OTHER";
+                targetURL = encodeURIComponent(dataUsername);
+            }
+            var workingLink = "/AJAX-REQUEST/AJAX_Hoverlink/" + theStrippedUsername + "/?lightbox=1&media_type=" + mediaType + "&target_url=" + targetURL;
+        }
+        else {
+            var editorUsername = $(this).attr('data-cited_by');
+            var workingLink = "/AJAX-REQUEST/AJAX_Hoverlink/editor/" + editorUsername + "/?lightbox=1";
+        }
+
+        $.ajax({
+            type: "GET",
+            url: workingLink,
+            success: function (data) {
+                var fadeDuration = 250;
+                if (hoverlinkBoxWrapper.is(":visible")){
+                    hoverlinkBoxWrapper.fadeOut(fadeDuration, function() {
+                        hoverlinkBox.html(data);
+                        hoverlinkBoxWrapper.fadeIn(fadeDuration);
+                    });
+                }
+                else {
+                    try{
+                        hoverlinkBox.html(data);
+                    }
+                    catch(err) {}
+                    hoverlinkBoxWrapper.fadeIn(fadeDuration);
+                }
+            },
+            complete: function() {
+                $('#submission_waiting').hide();
+            }
+        });
+        return false;
+    });
+
+
+    $(document).ready(function() {
+        $("#template-genius-lightbox, #template-hoverlink-lightbox, #blurb-compare-hoverbox-wrapper").on("click", function () {
+            $(this).hide();
+            $(this).html('<div class="blurb-compare-hoverbox" ></div>');
+            $("#template-genius-lightbox .blurb-compare-hoverbox, #template-hoverlink-lightbox .blurb-compare-hoverbox, #blurb-compare-hoverbox-wrapper #blurb-compare-hoverbox").on('click', function (event) {
+                event.stopPropagation();
+            });
+        });
+
+        $("#template-genius-lightbox").on("click", function () {
+            $(this).hide();
+            $(this).html('<div class="blurb-compare-hoverbox trending-ct-genius"></div>');
+            $("#template-genius-lightbox .blurb-compare-hoverbox, #template-hoverlink-lightbox .blurb-compare-hoverbox, #blurb-compare-hoverbox-wrapper #blurb-compare-hoverbox").on('click', function (event) {
+                event.stopPropagation();
+            });
+        });
+
+
+        $("#template-genius-lightbox .blurb-compare-hoverbox, #template-hoverlink-lightbox .blurb-compare-hoverbox, #blurb-compare-hoverbox-wrapper #blurb-compare-hoverbox").on('click', function (event) {
+            event.stopPropagation();
+        });
+    });
+
+
+	$('document').ready(function() {
+	    $('#cd-vertical-nav a').click(function(e) {
+	        e.preventDefault();
+	        $('#cd-vertical-nav a').removeClass('is-selected');
+	        $(this).addClass('is-selected');
+	    });
+	});
+
+
+</script>

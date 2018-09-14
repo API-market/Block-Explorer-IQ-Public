@@ -1,0 +1,425 @@
+
+.thread-ct {
+	word-wrap: break-word;
+}
+
+
+.thread-ct .page-header {
+	float: left;
+	width: 100%;
+	border-bottom: 0px solid #ebebeb;
+	padding-bottom: 25px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+@media (max-width:768px) {
+	.thread-ct .page-header {
+		padding-bottom: 5px;
+	}
+}
+
+
+.thread-ct h2 {
+	font-size:26px;
+	float:left;
+	width:auto;
+	margin:0px;
+	cursor:pointer;
+}
+
+.thread-ct h2 a {
+	color:#333;
+	text-decoration: none;	
+}
+
+@media (max-width:768px) {
+	.thread-ct h2 {
+		font-size: 22px;
+		float: left;
+		width:100%;
+		text-align: left;
+	}
+}
+
+.thread-ct h2 .icon::before {
+	top:5px;
+}
+
+
+.create-new-thread {
+    text-align: right;
+    float: right;
+    width: auto;
+    display: inline;
+    margin-top: -2px;
+}
+
+@media (max-width:768px) {
+	.create-new-thread {
+		float:left;
+		margin-top:12px;
+	}
+}
+
+
+@media (max-width:768px) {
+	.create-new-thread .btn {
+		font-size:11px;
+	}
+}
+
+
+.thread-ct ul {
+	float:left;
+	width:100%;
+	list-style-type: none;
+	text-align: left;
+	margin-top: 0px;
+	padding-top: 20px;
+}
+
+@media (max-width:767px) {
+	.thread-ct ul {
+		margin-bottom:0px;	
+	}
+}
+
+.thread-ct ul li {
+	display: block;
+	float: left;
+	width:100%;
+	margin-bottom: 15px;
+	border-bottom: 1px solid #EBEBEB;
+	padding-bottom: 25px;
+	word-break: break-word;
+}
+
+
+.forum-line-item-wrap{
+	float: left;
+	width: 100%;
+}
+
+.thread-ct .thread-right {
+	float:left;
+	width:100%;
+	padding-top:0px;
+	border-top:0px solid rgba(128,128,128,0.38)
+}
+
+@media (max-width:768px) {
+	.thread-ct .thread-right {
+		float:left;
+		padding-left:0px;
+		padding-right:0px;
+	}
+}
+
+.thread-ct .thread-head {
+	float:left;
+	width:100%;	
+}
+
+.thread-ct .thread-head img{
+	margin: 0px 10px 10px 0px;
+	object-fit: cover;
+}
+
+	
+.thread-ct .thread-username {
+	color: #272727;
+	font-weight: bold;
+	font-size: 15px;
+	outline: none;
+	text-decoration: none;
+	float: left;
+	line-height: 18px;
+}
+
+.thread-ct .thread-username a {
+	text-decoration: none;
+}
+
+@media (max-width:768px) {
+	.thread-ct .thread-username {
+		width:auto;
+	}
+}
+
+
+.thread-ct .thread-username:hover{
+	text-decoration: none;
+}
+
+.thread-ct .thread-time {
+	float: left;
+	font-size: 14px;
+	color: #888;
+	width: calc(100% - 50px);
+}
+
+
+
+.thread-ct .thread-message {
+	float: left;
+	width: 100%;
+	font-size: 15px;
+	color: rgba(0, 0, 0, 1);
+	margin-top: 2px;
+	margin-bottom: 5px;
+}
+
+
+.thread-ct .thread-message p {
+    margin-bottom: 5px;
+}
+
+.thread-message br {
+	line-height: 60%;
+}
+	
+.thread-ct .thread-links {
+	font-size: 12px;
+	margin-top: 0px;
+	color: #777;
+	float: left;
+	width: 100%;
+}
+
+.thread-ct .addcomment-ct #postcomment_form{
+    width: 100%;
+	margin: 0px;
+}
+
+.thread-ct .addcomment-ct #postcomment_form #showcomment-btn{
+	margin-left: 0px;
+}
+
+.thread-ct .addcomment-ct #postcomment_form #showcomment-btn.main-post-comment-btn-unregistered{
+	margin: 0px;
+}
+
+
+
+@media (max-width:767px) {
+	#showcomment-btn {
+		width:100% !important;
+	}
+}
+
+.thread-ct .thread-links a {
+	color: #777;
+	margin-right:5px;
+	cursor: pointer;
+}	
+
+.postreply-field {
+	display: block;
+	float: left;
+	background-color: rgba(255,255,255,0.59);
+	border: 1px solid rgba(189,194,198,0.63);
+	border-radius: 4px;
+	width: 100%;
+	text-align: center;
+	margin-left: 0;
+	height: 250px;
+}
+
+.postreply-field textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1;
+    color: #292F33;
+    border-radius: 4px;
+    transition: all .2s ease-in-out 0;
+    background: transparent none repeat scroll 0 0;
+    margin-top: 0;
+    padding: 9px 10px 6px;
+    border: 0 none;
+    outline: medium none;
+    height: 50px;
+}
+
+.postreply-field #showcomment-btn {
+	float:left;
+	margin-top:8px;
+	padding-left:12px;
+	padding-right:12px;
+}
+
+
+
+.comments-ct .edit-link-comment-reply {
+float:none;
+position:relative;
+left:17px;
+top:3.5px
+}
+
+.verified-logo {
+	margin-top: 2px;
+	margin-left: 5px;
+	width: 12px;
+	height: 12px;
+	float: left;
+}
+
+#body-ct .remove_icon,input#remove_icon.remove_icon {
+float:none!important;
+position:relative;
+left:7px;
+top:3.5px;
+line-height:17.6px
+}
+
+.comments-ct .details {
+float:none;
+position:relative;
+top:3.5px;
+left:-2px
+}
+
+.comments-ct .details-cancel-pagecomment-edit {
+position:relative;
+left:2px
+}
+
+.comments-ct .reply-link {
+padding:2px 10px;
+float:left;
+width:auto;
+margin-top:3px
+}
+
+.comments-ct .reply-link a {
+font-size:12px;
+color:#536570;
+text-decoration:none
+}
+
+a.postcomment-avatar {
+float:left
+}
+
+form.postcomment {
+margin-bottom:10px
+}
+
+.comments-ct .reply-ct {
+margin-left:10px
+}
+
+.avatar-wrap{
+float: left;
+}
+
+.avatar {
+width:36px;
+height:36px;
+border-radius:100%;
+float:left;
+object-fit:cover;
+}
+
+.addreply-ct {
+background-color:inherit
+}
+
+#showcomment-btn {
+	margin-top:5px;
+}
+
+.comments-ct .reply-ct ul li {
+float:left
+}
+
+.link-post-comment {
+word-wrap:break-word;
+color:#565656;
+font-size:13px;
+margin:2px 0
+}
+
+.addlink-loading-gif {
+width:22px;
+margin-top:8px
+}
+
+.tw_login {
+width:inherit;
+line-height:1.5;
+margin-top:5px;
+margin-left:5px
+}
+
+.fb_login {
+width:inherit;
+line-height:1.5;
+margin-top:5px;
+margin-left:5px
+}
+
+input.main-post-comment-btn {
+line-height:1.8;
+margin-left:5px
+}
+
+.post-time {
+position:relative
+}
+
+.comments-ct .reply-ct .message {
+word-wrap:break-word;
+margin-top:0;
+color:#565656;
+font-size:13px
+}
+
+.reply-btn {
+cursor:pointer;
+margin-top:10px;
+margin-bottom:15px;
+margin-right:-3px
+}
+
+.page-comment-reply-btn {
+padding:4px 6px;
+line-height:1
+}
+
+.main-post-comment-btn-unregistered {
+max-width:100%;
+font-size:14px;
+padding:5px 10px;
+text-align:center
+}
+
+#id_post_ifr {
+height:auto!important
+}
+
+#back_to_article{
+margin-top: 15px;
+background-color: rgba(48, 151, 209, 0.09);
+color: #337ab7;
+border-color: rgba(51, 122, 183, 0.19);
+}
+
+#back_to_article:hover{
+background-color: rgba(51, 184, 255, 0.09);
+color: #337ab7;
+border-color: rgba(51, 122, 183, 0.19)
+}
+
+@media (max-width:768px) {
+	#back_to_article{
+		margin-top: 75px;
+	}
+}
+
+.bottom-footer-panel{
+display: table;
+}

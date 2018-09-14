@@ -1,0 +1,2132 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-31 15:45-0700\n"
+"PO-Revision-Date: 2018-08-06 23:43+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
+"%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
+"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"X-Generator: Poedit 2.0.8\n"
+
+#: enterlink/forms.py:9
+msgid "Contains"
+msgstr "Zawiera"
+
+#: enterlink/forms.py:9
+msgid "Equal to"
+msgstr "Równy"
+
+#: enterlink/forms.py:10
+msgid "Regular expression"
+msgstr "Regularne wyrażenie "
+
+#: enterlink/forms.py:11
+msgid "Starts with"
+msgstr "Rozpocznij od"
+
+#: enterlink/forms.py:11
+msgid "Ends with"
+msgstr "Zakończ na"
+
+#: enterlink/forms.py:12
+msgid "Greater than"
+msgstr "Więcej niż"
+
+#: enterlink/forms.py:12
+msgid "Greater than or equal to"
+msgstr "Większy lub równy"
+
+#: enterlink/forms.py:13
+msgid "Less than"
+msgstr "Mniej niż"
+
+#: enterlink/forms.py:13
+msgid "Less than or equal to"
+msgstr "Mniejszy lub równy"
+
+#: enterlink/forms.py:42 templates/enterlink/headers/index_header.html:133
+#: templates/enterlink/login.html:40
+msgid "Password"
+msgstr "Hasło"
+
+#: enterlink/forms.py:44
+msgid "Please enter a password"
+msgstr "Proszę wprowadzić hasło."
+
+#: enterlink/forms.py:45
+msgid "Please enter a valid password"
+msgstr "Proszę wprowadzić prawidłowe hasło"
+
+#: enterlink/forms.py:46
+msgid "Enter an email"
+msgstr "Wpisz adres e-mail"
+
+#: enterlink/forms.py:47
+msgid "Please enter an email address"
+msgstr "Proszę wprowadzić adres e-mail"
+
+#: enterlink/forms.py:48
+msgid "Please enter a valid email address"
+msgstr "Proszę wprowadzić poprawny adres e-mail"
+
+#: enterlink/forms.py:49 enterlink/forms.py:69
+msgid "First Name"
+msgstr "Imię"
+
+#: enterlink/forms.py:51 enterlink/forms.py:71
+msgid "Last Name"
+msgstr "Nazwisko"
+
+#: enterlink/forms.py:53
+msgid "Enter a username"
+msgstr "Wprowadź nazwę użytkownika."
+
+#: enterlink/forms.py:54
+msgid "Please enter a username"
+msgstr "Proszę wprowadzić nazwę użytkownika"
+
+#: enterlink/forms.py:55
+msgid "Please enter a valid username"
+msgstr "Proszę wpisać prawidłową nazwę użytkownika."
+
+#: enterlink/forms.py:61
+msgid "This email address already exists! Please use another one."
+msgstr "Ten adres e-mail już istnieje! Proszę użyć innego."
+
+#: enterlink/forms.py:73 enterlink/forms.py:83
+msgid "Email"
+msgstr "Email"
+
+#: enterlink/forms.py:82
+msgid "How can we help?"
+msgstr "Jak możemy Ci pomóc?"
+
+#: enterlink/forms.py:84
+msgid "Full Name"
+msgstr "Imię i nazwisko"
+
+#: enterlink/forms.py:85
+msgid "Subject"
+msgstr "Temat"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Report Abuse"
+msgstr "Zgłoś Nadużycie"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Report Bug"
+msgstr "Zgłoś Błąd"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Verify Account"
+msgstr "Zweryfikuj Konto"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Anonymous Tip"
+msgstr "Anonimowa Wskazówka"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Investment Inquiries"
+msgstr "Zapytania ofertowe dotyczące inwestycji"
+
+#: enterlink/forms.py:86 enterlink/forms.py:175 enterlink/models.py:89
+#: enterlink/models.py:134
+msgid "Other"
+msgstr "Inne"
+
+#: enterlink/forms.py:97
+msgid "Search by Entering a Link"
+msgstr "Wyszukiwanie przez Wpisanie Linku"
+
+#: enterlink/forms.py:126
+msgid ""
+"Describe the file briefly. A summary of the information found is best. Avoid "
+"simply repeating the page title."
+msgstr ""
+"Opisz krótko plik. Najlepsze jest podsumowanie uzyskanych informacji. Unikaj "
+"po prostu powtarzania tytułu strony."
+
+#: enterlink/forms.py:148
+msgid "File type not allowed."
+msgstr "Ten typ pliku jest niedozwolony"
+
+#: enterlink/forms.py:153
+msgid "Please ."
+msgstr "Proszę"
+
+#: enterlink/forms.py:154
+msgid "Enter a URL"
+msgstr "Wpisz adres strony"
+
+#: enterlink/forms.py:156
+msgid ""
+"Describe the URL briefly. A summary of the information found is best. Avoid "
+"simply repeating the page title."
+msgstr ""
+"Opisz krótko adres URL. Najlepsze jest podsumowanie uzyskanych informacji. "
+"Unikaj po prostu powtarzania tytułu strony."
+
+#: enterlink/forms.py:165 templates/enterlink/edit_ajax_addinfobox.html:28
+msgid "Enter type (e.g. Occupation)"
+msgstr "Wprowadź typ (np. zawód)."
+
+#: enterlink/forms.py:166 templates/enterlink/edit_ajax_addinfobox.html:28
+msgid "Enter value (e.g. CEO)"
+msgstr "Wprowadź wartość (np. CEO)."
+
+#: enterlink/forms.py:170 enterlink/models.py:134
+msgid "Person"
+msgstr "Osoba"
+
+#: enterlink/forms.py:170 enterlink/models.py:134
+msgid "Place/Location"
+msgstr "Miejsce/Lokalizacja"
+
+#: enterlink/forms.py:171 enterlink/models.py:134
+msgid "Organization/Company/Institution"
+msgstr "Organizacja/Firma/Instytucja"
+
+#: enterlink/forms.py:171 enterlink/models.py:134
+msgid "Event"
+msgstr "Wydarzenie"
+
+#: enterlink/forms.py:172 enterlink/models.py:134
+msgid "List/Ranking"
+msgstr "Lista/Ranking"
+
+#: enterlink/forms.py:172 enterlink/models.py:134
+msgid "Product/Merchandise"
+msgstr "Produkt/Towar"
+
+#: enterlink/forms.py:173 enterlink/models.py:134
+msgid "Electronics/Software"
+msgstr "Elektronika/Oprogramowanie"
+
+#: enterlink/forms.py:173 enterlink/models.py:134
+msgid "Medical/Biology"
+msgstr "Medycyna/Biologia"
+
+#: enterlink/forms.py:174 enterlink/models.py:134
+msgid "Creative Work/Art"
+msgstr "Praca twórcza/Sztuka"
+
+#: enterlink/forms.py:175 enterlink/models.py:134
+msgid "Science/Academia/Humanities"
+msgstr "Nauki/Akademia/Nauki humanistyczne"
+
+#: enterlink/models.py:45 enterlink/models.py:49
+msgid "None"
+msgstr "Brak"
+
+#: enterlink/models.py:45
+msgid "Featured"
+msgstr "Wyróżnione"
+
+#: enterlink/models.py:45
+msgid "In the news"
+msgstr "W wiadomościach"
+
+#: enterlink/models.py:46
+msgid "In the news (Editor's Pick)"
+msgstr "W wiadomościach (Wybór Redakcji)"
+
+#: enterlink/models.py:46
+msgid "In the news (Standout Article)"
+msgstr "W wiadomościach (Artykuł Wyróżniony)"
+
+#: enterlink/models.py:47
+msgid "Trending"
+msgstr "Tendencje"
+
+#: enterlink/models.py:47
+msgid "On this day"
+msgstr "Dziś..."
+
+#: enterlink/models.py:47
+msgid "Blog Post (Meta Article)"
+msgstr "Post na Blogu (Artykuł Meta)"
+
+#: enterlink/models.py:49
+msgid "Verified Only"
+msgstr "Tylko zweryfikowane"
+
+#: enterlink/models.py:50
+msgid "Normal (Business)"
+msgstr "Normalny (działalność gospodarcza)"
+
+#: enterlink/models.py:50
+msgid "Normal (Personal)"
+msgstr "Normalny (osobisty)"
+
+#: enterlink/view_functions.py:144
+msgid ""
+"Your Everipedia editor restrictions have been removed. You can now edit "
+"pages freely!"
+msgstr ""
+"Ograniczenia edytora Everipedia zostały usunięte. Teraz możesz swobodnie "
+"edytować strony!"
+
+#: enterlink/view_functions.py:607
+msgid "Images & Videos"
+msgstr "Obrazy i filmy wideo"
+
+#: enterlink/view_functions.py:609
+msgid "References"
+msgstr "Referencje"
+
+#: enterlink/view_functions.py:612
+msgid "Article Discussion"
+msgstr "Dyskusja na temat artykułu"
+
+#: enterlink/view_functions.py:615 enterlink/view_functions.py:618
+#: templates/enterlink/template_blockchain_styled_amp.html:349
+#: templates/enterlink/template_blockchain_styled_desktop.html:524
+msgid "See Also"
+msgstr "Zobacz także"
+
+#: enterlink/view_functions.py:617
+msgid "Top Editors"
+msgstr "Najlepsi Edytorzy"
+
+#: enterlink/view_functions.py:1614
+msgid "Wiki and references for"
+msgstr "Wiki i odniesienia"
+
+#: enterlink/view_functions.py:1615
+msgid "You can edit something on this wiki now!"
+msgstr "Już teraz możesz edytować coś na tej wiki!"
+
+#: local_packages/block_ip/models.py:11
+msgid "IP address or mask"
+msgstr "Adres IP lub maska"
+
+#: local_packages/block_ip/models.py:12
+msgid "Optional reason for block"
+msgstr "Opcjonalny powód blokady"
+
+#: local_packages/block_ip/models.py:25 local_packages/block_ip/models.py:26
+msgid "IPs & masks to ban"
+msgstr "IP i maski do zablokowania"
+
+#: templates/admin/base.html:28
+msgid "Welcome,"
+msgstr "Witaj,"
+
+#: templates/admin/base.html:33
+msgid "Documentation"
+msgstr "Dokumentacja"
+
+#: templates/admin/base.html:36
+msgid "Change password"
+msgstr "Zmień hasło"
+
+#: templates/admin/base.html:38 templates/admin/password_change_done.html:57
+#: templates/admin/password_change_form.html:59
+#: templates/enterlink/headers/header_dropdown.html:29
+#: templates/enterlink/headers/header_dropdown.html:58
+#: templates/enterlink/headers/index_header.html:110
+#: templates/enterlink/headers/index_header.html:166
+#: templates/enterlink/headers/index_header.html:236
+#: templates/enterlink/headers/index_header.html:258
+#: templates/enterlink/notifications/index.html:100
+#: templates/enterlink/notifications/index.html:105
+msgid "Log out"
+msgstr "Wyloguj się"
+
+#: templates/admin/base.html:47 templates/admin/logged_out.html:4
+#: templates/admin/password_reset_complete.html:6
+#: templates/admin/password_reset_confirm.html:6
+#: templates/admin/password_reset_done.html:6
+#: templates/admin/password_reset_form.html:6
+#: templates/enterlink/notifications/index.html:61
+#: templates/enterlink/notifications/index.html:94
+msgid "Home"
+msgstr "Strona główna"
+
+#: templates/admin/base_site.html:4
+msgid "Django site admin"
+msgstr "Administrator strony Django"
+
+#: templates/admin/base_site.html:7
+msgid "Django administration"
+msgstr "Administracja Django"
+
+#: templates/admin/logged_out.html:8
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr "Dziękujemy za to, że spędziłeś dzisiaj trochę czasu na tej witrynie."
+
+#: templates/admin/logged_out.html:10
+msgid "Log in again"
+msgstr "Zaloguj się ponownie"
+
+#: templates/admin/password_change_done.html:46
+#: templates/admin/password_change_form.html:48
+#: templates/enterlink/edit.html:145 templates/enterlink/search-iframe.html:123
+#: templates/enterlink/search.html:27 templates/enterlink/user.html:220
+msgid "Search Everipedia"
+msgstr "Wyszukaj w Everipedii"
+
+#: templates/admin/password_change_done.html:60
+#: templates/admin/password_change_form.html:62
+#: templates/admin/password_reset_complete.html:19
+#: templates/enterlink/headers/index_header.html:135
+#: templates/enterlink/headers/index_header.html:168
+#: templates/enterlink/headers/index_header.html:240
+#: templates/enterlink/headers/index_header.html:262
+#: templates/enterlink/login.html:45
+msgid "Log in"
+msgstr "Zaloguj się"
+
+#: templates/admin/password_change_done.html:71
+msgid "Password change successful"
+msgstr "Hasło zmienione"
+
+#: templates/admin/password_reset_complete.html:7
+#: templates/admin/password_reset_confirm.html:11
+#: templates/admin/password_reset_done.html:7
+#: templates/admin/password_reset_form.html:7
+#: templates/admin/password_reset_form.html:11
+#: templates/admin/password_reset_form.html:15
+msgid "Password reset"
+msgstr "Resetuj hasło"
+
+#: templates/admin/password_reset_complete.html:11
+#: templates/admin/password_reset_complete.html:15
+msgid "Password reset complete"
+msgstr "Zakończono resetowanie hasła"
+
+#: templates/admin/password_reset_complete.html:17
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr "Twoje hasło zostało ustawione. Możesz teraz się zalogować."
+
+#: templates/admin/password_reset_confirm.html:7
+msgid "Password reset confirmation"
+msgstr "Potwierdzenie zresetowania hasła"
+
+#: templates/admin/password_reset_confirm.html:17
+msgid "Enter new password"
+msgstr "Wprowadź nowe hasło"
+
+#: templates/admin/password_reset_confirm.html:19
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+"Proszę wpisać dwukrotnie nowe hasło, dzięki czemu możemy sprawdzić czy "
+"wpisałeś je poprawnie."
+
+#: templates/admin/password_reset_confirm.html:23
+msgid "New password:"
+msgstr "Nowe hasło:"
+
+#: templates/admin/password_reset_confirm.html:25
+msgid "Confirm password:"
+msgstr "Potwierdź hasło:"
+
+#: templates/admin/password_reset_confirm.html:26
+msgid "Change my password"
+msgstr "Zmień hasło"
+
+#: templates/admin/password_reset_confirm.html:31
+msgid "Password reset unsuccessful"
+msgstr "Resetowania hasła nieudane"
+
+#: templates/admin/password_reset_confirm.html:33
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+"Link do zresetowania hasła był nieprawidłowy, prawdopodobnie dlatego, że "
+"został już użyty. Proszę ponownie zażądać zresetowania hasła."
+
+#: templates/admin/password_reset_done.html:11
+#: templates/admin/password_reset_done.html:15
+msgid "Password reset successful"
+msgstr "Hasło zostało zresetowane"
+
+#: templates/admin/password_reset_done.html:17
+msgid ""
+"We have emailed you instructions for setting your password. You should be "
+"receiving them shortly."
+msgstr ""
+"Wysłaliśmy do Ciebie e-mail z instrukcją ustawienia hasła. Powinieneś "
+"wkrótce go otrzymać."
+
+#: templates/admin/password_reset_done.html:19
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+"Jeśli nie otrzymasz wiadomości e-mail, upewnij się, że podałeś prawidłowy "
+"adres, który użyłeś w trakcie rejestracji i sprawdź folder spamu."
+
+#: templates/admin/password_reset_email.html:2
+msgid ""
+"You are receiving this email because you requested a password reset for your "
+"Everipedia account."
+msgstr ""
+"Otrzymujesz tę wiadomość e-mail, ponieważ poprosiłeś o zresetowanie hasła do "
+"swojego konta Everipedia."
+
+#: templates/admin/password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr "Proszę przejść do następującej strony i wybrać nowe hasło:"
+
+#: templates/admin/password_reset_email.html:8
+msgid "Your username, in case you've forgotten:"
+msgstr "Twoja nazwa użytkownika, na wypadek zapomnienia:"
+
+#: templates/admin/password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr "Dziękujemy za korzystanie z naszej strony!"
+
+#: templates/admin/password_reset_form.html:17
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+"Zapomniałeś hasła? Wprowadź poniżej swój adres e-mail, a my wyślemy na niego "
+"instrukcje dotyczące ustawienia nowego hasła."
+
+#: templates/admin/password_reset_form.html:21
+msgid "Email address:"
+msgstr "Adres e-mail:"
+
+#: templates/admin/password_reset_form.html:21
+msgid "Reset my password"
+msgstr "Zresetuj hasło"
+
+#: templates/email/sanger_announcement.html:276
+#: templates/email/welcome_email.html:264
+#: templates/email/welcome_email_old.html:68
+#: templates/enterlink/welcome.html:33
+msgid "Learn More"
+msgstr "Dowiedz się więcej"
+
+#: templates/email/welcome_email.html:257
+msgid "View My Profile"
+msgstr "Zobacz mój profil"
+
+#: templates/email/welcome_email_old.html:67
+#: templates/enterlink/welcome.html:28 templates/enterlink/welcome.html:30
+msgid "Create a Wiki"
+msgstr "Utwórz Wiki"
+
+#: templates/endless/show_more.html:5
+msgid "more"
+msgstr "więcej"
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:14
+#: templates/enterlink/ajax_media_gallery_singlet.html:19
+#: templates/enterlink/ajaxresults.html:104
+#: templates/enterlink/hoverlink_iframe_blockchain.html:97
+#: templates/enterlink/template_blockchain_styled_desktop.html:413
+#: templates/enterlink/template_blockchain_styled_desktop.html:436
+#: templates/enterlink/template_photos_amp_json_blockchain.html:79
+msgid "Your browser does not support HTML5 video."
+msgstr "Twoja przeglądarka nie obsługuje video HTML5"
+
+#: templates/enterlink/ajaxresults.html:57
+msgid "Click to add a new link or file to this list"
+msgstr "Kliknij, aby dodać do tej listy nowy link lub plik."
+
+#: templates/enterlink/ajaxresults.html:60
+msgid "Or click an existing link below to add it to the article"
+msgstr "Lub kliknij na istniejący link poniżej, aby dodać go do artykułu."
+
+#: templates/enterlink/ajaxresults.html:135
+#: templates/enterlink/ajaxresults.html:192
+#: templates/enterlink/template_blockchain_styled_desktop.html:165
+msgid "Views"
+msgstr "Widoki"
+
+#: templates/enterlink/ajaxresults.html:157
+#: templates/enterlink/hovereditor_ajax.html:74
+msgid "IQ"
+msgstr "IQ"
+
+#: templates/enterlink/ajaxresults.html:175
+msgid "page(s) have this link"
+msgstr "strona(-y) posiada(-ją) ten link"
+
+#: templates/enterlink/analytics.html:7 templates/enterlink/faq.html:6
+msgid "Frequently Asked Questions - Everipedia, everyone's encyclopedia"
+msgstr ""
+"Najczęściej zadawane pytania - Everipedia, encyklopedia dla każdego z nas..."
+
+#: templates/enterlink/brainpowermgmt.html:5
+#: templates/enterlink/brainpowermgmt.html:115
+msgid "Brainpower Management"
+msgstr "Zarządzanie Mocą mózgu"
+
+#: templates/enterlink/brainpowermgmt.html:5 templates/enterlink/contact.html:7
+#: templates/enterlink/edit.html:7 templates/enterlink/editing-disabled.html:7
+#: templates/enterlink/editors.html:23
+#: templates/enterlink/exchange-listings.html:7
+#: templates/enterlink/headers/index_header.html:17
+#: templates/enterlink/headers/index_header.html:18
+#: templates/enterlink/inbox.html:12 templates/enterlink/index.html:7
+#: templates/enterlink/leadership.html:7
+#: templates/enterlink/limitreached.html:7 templates/enterlink/login.html:7
+#: templates/enterlink/recent-activity.html:7
+#: templates/enterlink/register.html:6 templates/enterlink/search.html:7
+#: templates/enterlink/transfer-iq.html:7 templates/enterlink/user.html:12
+#: templates/enterlink/votehistory.html:7
+msgid "Everipedia, the encyclopedia of everything"
+msgstr "Everipedia, encyklopedia wszystkiego"
+
+#: templates/enterlink/brainpowermgmt.html:102 templates/enterlink/edit.html:89
+#: templates/enterlink/transfer-iq.html:103 templates/enterlink/voting.html:180
+msgid "Loading Scatter"
+msgstr "Ładowanie Rozproszenia"
+
+#: templates/enterlink/brainpowermgmt.html:118
+msgid ""
+"Staking IQ tokens will freeze them for 21 days and will generate "
+"nontransferable Brainpower, which can be used for editing and voting on the "
+"Everipedia network. At the end of the 21 days, you can claim back your IQ "
+"tokens and re-stake them for more Brainpower again. Thus, 1 IQ, staked every "
+"21 days, can lead to 365 days / 21 days = 17.38 Brainpower every year."
+msgstr ""
+"Stawianie tokenów IQ zamrozi je na 21 dni i wygeneruje niezbywalną Moc "
+"mózgu, która może być wykorzystana do edycji i głosowania w sieci "
+"Everipedia. Po upływie 21 dni możesz odzyskać swoje tokeny IQ i ponownie "
+"pobrać je, aby kolejny raz uzyskać większą ilość Mocy mózgu. Tak więc, 1 IQ "
+"postawione co 21 dni, może prowadzić do 365 dni / 21 dni = 17.38 Mocy mózgu "
+"każdego roku."
+
+#: templates/enterlink/brainpowermgmt.html:119
+msgid ""
+"As you make pages, propose edits, and vote on article proposals, you will "
+"consume Brainpower. However, making successful edits and voting on the "
+"winning side of a proposal will generate rewards in IQ, not Brainpower. "
+"Therefore, you can generate more Brainpower (and any profit) by staking the "
+"new IQ you just earned."
+msgstr ""
+"Kiedy tworzysz strony, proponujesz poprawki i głosujesz nad propozycjami "
+"artykułów, zużywasz Moc mózgu. Jednakże udana edycja i głosowanie na "
+"zwycięską propozycję przyniesie Ci nagrody w IQ, a nie w Mocy mózgu. Dlatego "
+"możesz wygenerować więcej mocy mózgu (i innych zysków) poprzez postawienie "
+"nowego IQ, który właśnie zarobiłeś."
+
+#: templates/enterlink/brainpowermgmt.html:120
+msgid ""
+"Every edit proposal requires a minimum of 10 Brainpower at this time, in "
+"order to prevent spam and poor-quality edits."
+msgstr ""
+"Każda propozycja edycji wymaga co najmniej 10 Mocy mózgu w tym samym czasie, "
+"aby zapobiec spamowi i niskiej jakości edycji."
+
+#: templates/enterlink/brainpowermgmt.html:123
+msgid "Enter an integer amount of IQ to stake"
+msgstr "Wprowadź liczbę całkowitą IQ na stosie."
+
+#: templates/enterlink/brainpowermgmt.html:124
+msgid "New Stake"
+msgstr "Nowa Stawka"
+
+#: templates/enterlink/brainpowermgmt.html:129
+msgid "Start"
+msgstr "Start"
+
+#: templates/enterlink/brainpowermgmt.html:130
+msgid "End"
+msgstr "Koniec"
+
+#: templates/enterlink/brainpowermgmt.html:131
+#: templates/enterlink/voting_table_of_contents.html:40
+msgid "Time Remaining"
+msgstr "Pozostały czas"
+
+#: templates/enterlink/brainpowermgmt.html:132
+#: templates/enterlink/transfer-iq.html:124
+msgid "Amount"
+msgstr "Kwota"
+
+#: templates/enterlink/brainpowermgmt.html:133
+msgid "Claim"
+msgstr "Żądanie"
+
+#: templates/enterlink/contact.html:7 templates/enterlink/contact.html:24
+msgid "Contact us"
+msgstr "Skontaktuj się z nami"
+
+#: templates/enterlink/contact.html:20
+msgid "To get quicker replies from our community"
+msgstr "Aby uzyskać szybsze odpowiedzi od naszej społeczności"
+
+#: templates/enterlink/contact.html:20
+msgid "create a post in our forum"
+msgstr "stwórz post na naszym forum"
+
+#: templates/enterlink/contact.html:25
+msgid "Get in touch with us"
+msgstr "Pozostań z nami w kontakcie"
+
+#: templates/enterlink/contact.html:33
+msgid "Thanks, we got your message. We will respond in a bit"
+msgstr "Dzięki, otrzymaliśmy Twoją wiadomość. Odpowiemy na nią wkrótce"
+
+#: templates/enterlink/contact.html:41 templates/enterlink/transfer-iq.html:128
+msgid "Send"
+msgstr "Wyślij"
+
+#: templates/enterlink/dropzone.html:140 templates/enterlink/edit.html:167
+#: templates/enterlink/edit.html:176 templates/enterlink/edit.html:185
+#: templates/enterlink/edit.html:195 templates/enterlink/edit.html:204
+msgid "OK"
+msgstr "OK"
+
+#: templates/enterlink/dropzone.html:141
+msgid "Enter a caption for the main image of the page."
+msgstr "Wprowadź podpis dla głównego obrazu strony."
+
+#: templates/enterlink/edit.html:7
+msgid "Edit Page"
+msgstr "Edytuj stronę"
+
+#: templates/enterlink/edit.html:85
+msgid "Loading.."
+msgstr "Wczytywanie.."
+
+#: templates/enterlink/edit.html:128
+msgid "Change Picture"
+msgstr "Zmień zdjęcie"
+
+#: templates/enterlink/edit.html:144
+msgid "Please enter the destination page you wish to merge this one into"
+msgstr "Wprowadź stronę docelową, którą chcesz połączyć z tą stroną."
+
+#: templates/enterlink/edit.html:149
+msgid "Merge Page"
+msgstr "Strona połączona"
+
+#: templates/enterlink/edit.html:156 templates/enterlink/edit.html:165
+#: templates/enterlink/edit.html:174 templates/enterlink/edit.html:183
+#: templates/enterlink/edit.html:192 templates/enterlink/edit.html:202
+msgid "Hey there scholar!"
+msgstr "Witaj znawco!"
+
+#: templates/enterlink/edit.html:157
+msgid ""
+"Looks like you have been editing for a while. You should take a moment to "
+"save your work before continuing!"
+msgstr ""
+"Wygląda na to, że edytujesz już od jakiegoś czasu. Powinieneś poświęcić "
+"chwilę na zapisanie swojej pracy przed kontynuacją!"
+
+#: templates/enterlink/edit.html:158
+msgid "Save"
+msgstr "Zapisz"
+
+#: templates/enterlink/edit.html:166
+msgid ""
+"Looks like you are using first-person! (ex: Our product, I am, We are, You "
+"should). Everipedia is a neutral encyclopedia written in third-person tense "
+"(ex: It is, They are, The company makes). THIS IS NOT FACEBOOK!!"
+msgstr ""
+"Wygląda na to, że używasz pierwszej osoby! (ex: Nasz produkt, jestem, "
+"jesteśmy, powinieneś). Everipedia jest neutralną encyklopedią napisaną w "
+"formie trzeciej osoby (np.: To jest, Oni są, Firma wytwarza). TO NIE JEST "
+"FACEBOOK!"
+
+#: templates/enterlink/edit.html:175
+msgid "Please enter a title for the page."
+msgstr "Wprowadź tytuł strony."
+
+#: templates/enterlink/edit.html:184
+msgid ""
+"Please write something for the article section. Make sure to use citations."
+msgstr ""
+"Prosimy o napisanie czegoś w sekcji artykułów. Upewnij się, że użyłeś "
+"cytatów."
+
+#: templates/enterlink/edit.html:193
+msgid ""
+"Hello! This page needs citations (also known as footnotes, references, "
+"sources) before it can be saved. Add the links you're using as sources with "
+"the cite button above."
+msgstr ""
+"Witaj! Ta strona potrzebuje cytatów (znanych również jako przypisy, "
+"odnośniki, źródła), zanim będzie mogła zostać zapisana. Dodaj linki, których "
+"używasz jako źródeł, naciskając powyżej przycisk cytuj."
+
+#: templates/enterlink/edit.html:194
+msgid "Join our official Facebook group if you need help with it!:"
+msgstr ""
+"Dołącz do naszej oficjalnej grupy na Facebooku, jeśli potrzebujesz pomocy!:"
+
+#: templates/enterlink/edit.html:194
+msgid "- we will hook you up. It's not hard!"
+msgstr "- połączymy się z Tobą. To nie jest trudne!"
+
+#: templates/enterlink/edit.html:203
+msgid ""
+"Please cite the link(s) you just added into the main article body. First "
+"click at the end of the sentence or paragraph you want to cite, then click "
+"the (Cite) button on the edit panel above!"
+msgstr ""
+"Proszę zacytować link(i), który właśnie dodałeś do głównego artykułu. "
+"Najpierw kliknij na końcu zdania lub akapitu, który chcesz zacytować, a "
+"następnie kliknij przycisk (Cytuj) na panelu edycji powyżej!"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:10
+msgid "Add New Infobox Item"
+msgstr "Dodaj nową skrzynkę Infobox."
+
+#: templates/enterlink/edit_ajax_addinfobox.html:14
+msgid "Enter a classification or category"
+msgstr "Wprowadź klasyfikację lub kategorię"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:17
+msgid "Enter a value or a description"
+msgstr "Wprowadzić wartość lub opis."
+
+#: templates/enterlink/edit_ajax_addinfobox.html:23
+msgid "Add Infobox Item"
+msgstr "Dodaj element Infobox"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:25
+#: templates/enterlink/edit_ajax_addlink.html:26
+#: templates/enterlink/edit_ajax_editpagemeta.html:15
+#: templates/enterlink/edit_ajax_page_photo.html:4
+msgid "Close"
+msgstr "Zamknij"
+
+#: templates/enterlink/edit_ajax_addlink.html:7
+msgid "Add a Link or File"
+msgstr "Dodawanie linku lub pliku"
+
+#: templates/enterlink/edit_ajax_addlink.html:9
+msgid "File"
+msgstr "Plik"
+
+#: templates/enterlink/edit_ajax_addlink.html:10
+msgid "URL"
+msgstr "URL"
+
+#: templates/enterlink/edit_ajax_addlink.html:10
+msgid "Link"
+msgstr "Link"
+
+#: templates/enterlink/edit_ajax_addlink.html:14
+msgid "Upload file"
+msgstr "Wgraj plik"
+
+#: templates/enterlink/edit_ajax_addlink.html:24
+msgid "Add Link"
+msgstr "Dodaj link"
+
+#: templates/enterlink/edit_ajax_editmainphoto.html:7
+msgid "Reset"
+msgstr "Resetuj"
+
+#: templates/enterlink/edit_ajax_editpagemeta.html:4
+msgid "Select the topic of this page"
+msgstr "Wybierz temat na tej stronie"
+
+#: templates/enterlink/edit_ajax_editpagemeta.html:8
+msgid "Remove page"
+msgstr "Usuń stronę"
+
+#: templates/enterlink/edit_ajax_editpagemeta.html:12
+msgid "Adult Content"
+msgstr "Treść dla dorosłych"
+
+#: templates/enterlink/editing-disabled.html:7
+msgid "Editing existing pages temporarily disabled"
+msgstr "Edycja istniejących stron została czasowo wyłączona"
+
+#: templates/enterlink/editors.html:23
+msgid "Editors"
+msgstr "Edytorzy"
+
+#: templates/enterlink/editors.html:74
+msgid "Everipedia Editors"
+msgstr "Edytorzy Everipedia"
+
+#: templates/enterlink/editors.html:93 templates/enterlink/inbox.html:52
+#: templates/enterlink/recent-activity.html:103
+#: templates/enterlink/search.html:89
+msgid "Previous"
+msgstr "Poprzednia"
+
+#: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
+#: templates/enterlink/recent-activity.html:107
+#: templates/enterlink/search.html:93
+msgid "Page"
+msgstr "Strona"
+
+#: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
+#: templates/enterlink/recent-activity.html:107
+#: templates/enterlink/search.html:93
+msgid "of"
+msgstr "z"
+
+#: templates/enterlink/editors.html:101 templates/enterlink/inbox.html:60
+#: templates/enterlink/recent-activity.html:111
+#: templates/enterlink/search.html:97
+msgid "Next"
+msgstr "Następna"
+
+#: templates/enterlink/error.html:6
+msgid "Page not found!"
+msgstr "Strona nie znaleziona!"
+
+#: templates/enterlink/error.html:211
+msgid "Page not found"
+msgstr "Nie znaleziono strony"
+
+#: templates/enterlink/error.html:213
+msgid "In The News"
+msgstr "Wiadomości"
+
+#: templates/enterlink/error.html:214
+#: templates/enterlink/headers/header_dropdown.html:51
+#: templates/enterlink/recent-activity.html:7
+#: templates/enterlink/recent-activity.html:73
+#: templates/enterlink/user.html:192
+msgid "Recent Activity"
+msgstr "Ostatnia aktywność"
+
+#: templates/enterlink/error_410.html:6 templates/enterlink/error_410.html:62
+msgid "This page has been removed"
+msgstr "Ta strona została usunięta"
+
+#: templates/enterlink/error_410.html:63
+#: templates/enterlink/in_progress_404.html:86
+msgid "Click here to return to recent activity"
+msgstr "Kliknij tutaj, aby powrócić do ostatnio wykonywanej czynności"
+
+#: templates/enterlink/exchange-listings.html:7
+msgid "Exchange Listings"
+msgstr "Notowania giełdowe"
+
+#: templates/enterlink/exchange-listings.html:17
+msgid "Supported Exchanges"
+msgstr "Wspierane formy wymiany"
+
+#: templates/enterlink/exchange-listings.html:18
+msgid "The following exchanges indicated that they will support the IQ airdrop"
+msgstr "Następujące formy wymiany wskazały, że będą wspierać zrzut IQ"
+
+#: templates/enterlink/exchange-listings.html:128
+msgid "Supported Wallets"
+msgstr "Wspierane Portfele"
+
+#: templates/enterlink/exchange-listings.html:162
+msgid "Token Pockets"
+msgstr "Token Pocket"
+
+#: templates/enterlink/faq.html:20
+msgid "Frequently Asked Questions"
+msgstr "Często Zadawane Pytania"
+
+#: templates/enterlink/faq.html:24
+msgid "What is Everipedia?"
+msgstr "Czym jest Everipedia?"
+
+#: templates/enterlink/faq.html:25
+msgid ""
+"Everipedia is a knowledge aggregator and knowledge base. We think it's much "
+"easier to edit than Wikipedia. Anyone can create a page about any person, "
+"place, organization, or thing and populate it with relevant reference links/"
+"sources. The only main rules of EP are: Information on the page must always "
+"be cited and the article must be in a neutral point of view. Check out the "
+"actual entry for Everipedia... on"
+msgstr ""
+"Everipedia jest agregatorem wiedzy i bazą wiedzy. Uważamy, że edycja na tej "
+"stronie jest o wiele łatwiejsza niż w Wikipedii. Każdy może utworzyć stronę "
+"o każdej osobie, miejscu, organizacji lub rzeczy i wypełnić ją odpowiednimi "
+"odnośnikami/źródłami. Jedyne główne zasady EP to: Należy zawsze cytować "
+"informacje na stronie, a artykuł musi być neutralny. Sprawdź aktualny wpis w "
+"Everipedii..."
+
+#: templates/enterlink/faq.html:27
+msgid "Why should I sign up?"
+msgstr "Dlaczego powinienem się zarejestrować?"
+
+#: templates/enterlink/faq.html:28
+msgid ""
+"Because it’s fun and easy! We thought contributing to large knowledge "
+"projects shouldn't require high barriers to entry so we made Everipedia very "
+"easy to navigate, edit, and get started. Editors gain more privileges as "
+"they accumulate IQ and rise through the ranks. Top site-wide editors are "
+"displayed on the front page. Top editors for each page are also displayed."
+msgstr ""
+"Ponieważ jest to zabawne i proste! Pomyśleliśmy, że udział w dużych "
+"projektach wiedzy nie powinien wymagać wysokich barier wejścia, więc "
+"uczyniliśmy Everipedię bardzo łatwą w nawigacji, edycji i starcie. Edytorzy "
+"zyskują więcej przywilejów, gdy gromadzą IQ i awansują w rankingach. Na "
+"stronie głównej wyświetlani są najlepsi edytorzy. Wyświetlani są również "
+"najlepsi edytorzy dla każdej strony."
+
+#: templates/enterlink/faq.html:30
+msgid "Try it!"
+msgstr "Spróbuj!"
+
+#: templates/enterlink/faq.html:30
+msgid "Sign up here"
+msgstr "Zapisz się tutaj"
+
+#: templates/enterlink/faq.html:32
+msgid "So how is Everipedia different from Wikipedia and similar sites?"
+msgstr "Czym wiec Everipedia różni się od Wikipedii i podobnych stron?"
+
+#: templates/enterlink/faq.html:33
+msgid ""
+"Editing on Everipedia is graphic and modern, talk pages are designed as "
+"discussion threads, celebrities have verified accounts, and anyone can make "
+"pages about anything as long as they are properly cited. Every page from "
+"Wikipedia is already here on Everipedia to build on top of and improve. All "
+"this makes EP the biggest knowledge project ever!"
+msgstr ""
+"Edycja w Everipedii jest graficzna i nowoczesna, strony dyskusji są "
+"zaprojektowane jako wątki dyskusji, celebryci posiadają zweryfikowane konta, "
+"a każda osoba może stworzyć strony o czymkolwiek, tak długo, jak są one "
+"prawidłowo cytowane. Każda strona z Wikipedii jest już dostępna w "
+"Everipedii, aby ją rozbudowywać i ulepszać. Wszystko to sprawia, że EP jest "
+"największym projektem wiedzy w historii!"
+
+#: templates/enterlink/faq.html:35
+msgid "Is Everipedia free?"
+msgstr "Czy Everipedia jest darmowa?"
+
+#: templates/enterlink/faq.html:36
+msgid ""
+"All information found on Everipedia is freely available for anyone to use "
+"and access. All we ask is a link back to the source Everipedia page for "
+"attribution purposes. The information on this encyclopedia is meant to be "
+"free to all. We will never charge for or withhold any of the information on "
+"this website. We just ask that you do not throttle the site and "
+"programmatically harvest information that would dramatically affect our "
+"servers."
+msgstr ""
+"Wszystkie informacje znajdujące się w Everipedii są dostępne dla każdego, w "
+"celu swobodnego korzystania z nich. Jedyne, o co prosimy, to link do strony "
+"źródłowej Everipedia w celu przypisania. Informacje zawarte w tej "
+"encyklopedii mają być darmowe dla wszystkich. Nigdy nie będziemy pobierać "
+"opłat za informacje zawarte na tej stronie. Prosimy tylko o to, aby Państwo "
+"nie blokowali strony i nie zbierali programowo informacji, co mogłyby mieć "
+"dramatyczny wpływ na nasze serwery."
+
+#: templates/enterlink/faq.html:42
+msgid "Much love,"
+msgstr "Dużo miłości,"
+
+#: templates/enterlink/footers/desktop_footer.html:5
+#: templates/enterlink/footers/footer_no_extras.html:5
+#: templates/enterlink/footers/index_footer.html:23
+#: templates/enterlink/footers/mobile_footer.html:130
+#: templates/enterlink/template_blockchain_styled_amp.html:547
+msgid "About"
+msgstr "O"
+
+#: templates/enterlink/footers/desktop_footer.html:6
+#: templates/enterlink/footers/footer_no_extras.html:6
+#: templates/enterlink/footers/index_footer.html:7
+#: templates/enterlink/footers/index_footer.html:25
+#: templates/enterlink/footers/mobile_footer.html:131
+#: templates/enterlink/template_blockchain_styled_amp.html:548
+msgid "FAQ"
+msgstr "FAQ"
+
+#: templates/enterlink/footers/desktop_footer.html:7
+#: templates/enterlink/footers/footer_no_extras.html:7
+#: templates/enterlink/footers/index_footer.html:8
+#: templates/enterlink/footers/index_footer.html:26
+#: templates/enterlink/footers/mobile_footer.html:132
+#: templates/enterlink/template_blockchain_styled_amp.html:549
+msgid "Contact"
+msgstr "Kontakt"
+
+#: templates/enterlink/footers/desktop_footer.html:8
+#: templates/enterlink/footers/footer_no_extras.html:9
+#: templates/enterlink/footers/index_footer.html:9
+#: templates/enterlink/footers/index_footer.html:27
+#: templates/enterlink/footers/mobile_footer.html:136
+#: templates/enterlink/template_blockchain_styled_amp.html:551
+msgid "Terms"
+msgstr "Warunki"
+
+#: templates/enterlink/footers/desktop_footer.html:9
+#: templates/enterlink/footers/footer_no_extras.html:10
+#: templates/enterlink/footers/index_footer.html:10
+#: templates/enterlink/footers/index_footer.html:28
+#: templates/enterlink/footers/mobile_footer.html:134
+#: templates/enterlink/headers/header_dropdown.html:24
+#: templates/enterlink/headers/header_dropdown.html:52
+#: templates/enterlink/headers/index_header.html:164
+#: templates/enterlink/headers/index_header.html:173
+#: templates/enterlink/headers/index_header.html:233
+#: templates/enterlink/headers/index_header.html:242
+#: templates/enterlink/headers/index_header.html:264
+#: templates/enterlink/headers/mobile-navbar.html:131
+#: templates/enterlink/headers/mobile-navbar.html:198
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:190
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:238
+#: templates/enterlink/template_blockchain_styled_amp.html:550
+#: templates/enterlink/template_blockchain_styled_amp.html:628
+#: templates/enterlink/template_blockchain_styled_amp.html:686
+msgid "Forum"
+msgstr "Forum"
+
+#: templates/enterlink/footers/desktop_footer.html:10
+#: templates/enterlink/footers/footer_no_extras.html:11
+#: templates/enterlink/footers/index_footer.html:11
+#: templates/enterlink/footers/index_footer.html:29
+#: templates/enterlink/footers/mobile_footer.html:137
+#: templates/enterlink/headers/header_dropdown.html:25
+#: templates/enterlink/headers/header_dropdown.html:54
+#: templates/enterlink/template_blockchain_styled_amp.html:552
+msgid "Get IQ"
+msgstr "Zdobądź IQ"
+
+#: templates/enterlink/footers/desktop_footer.html:30
+#: templates/enterlink/footers/footer_no_extras.html:31
+#: templates/enterlink/footers/mobile_footer.html:157
+#: templates/enterlink/template_blockchain_styled_amp.html:576
+msgid "Powered by"
+msgstr "Wspierane przez"
+
+#: templates/enterlink/footers/desktop_footer.html:35
+#: templates/enterlink/footers/footer_no_extras.html:36
+#: templates/enterlink/footers/mobile_footer.html:161
+#: templates/enterlink/template_blockchain_styled_amp.html:580
+msgid "API by"
+msgstr "API przez"
+
+#: templates/enterlink/footers/desktop_footer.html:43
+#: templates/enterlink/footers/footer_no_extras.html:44
+#: templates/enterlink/headers/desktop-navbar-index.html:6
+#: templates/enterlink/headers/index_header.html:93
+#: templates/enterlink/language_selector_mobile.html:65
+msgid "Select language"
+msgstr "Wybierz język"
+
+#: templates/enterlink/footers/forum_footer.html:6
+#: templates/enterlink/footers/pm_footer.html:6
+msgid "Enter a title for the thread"
+msgstr "Wprowadź tytuł wątku."
+
+#: templates/enterlink/footers/forum_footer.html:7
+msgid "Enter your post here"
+msgstr "Wpisz tutaj swój post."
+
+#: templates/enterlink/footers/forum_footer.html:8
+#: templates/enterlink/footers/pm_footer.html:7
+msgid "Create New Thread"
+msgstr "Tworzenie nowego wątku"
+
+#: templates/enterlink/footers/index_footer.html:5
+msgid "About Everipedia"
+msgstr "O Everipedii"
+
+#: templates/enterlink/footers/index_footer.html:6
+#: templates/enterlink/footers/index_footer.html:24
+msgid "How To Use"
+msgstr "Sposób użycia"
+
+#: templates/enterlink/footers/index_footer.html:12
+#: templates/enterlink/footers/index_footer.html:30
+#: templates/enterlink/footers/mobile_footer.html:133
+msgid "Donate"
+msgstr "Wpłać"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:558
+msgid "By using this website, you agree to the"
+msgstr "Korzystając z tej strony zgadzasz się na"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:558
+msgid "Terms of Use"
+msgstr "Warunki korzystania z serwisu"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:558
+msgid "Everipedia® is a trademark of Everipedia International"
+msgstr "Everipedia® jest znakiem towarowym Everipedia International."
+
+#: templates/enterlink/footers/mobile_footer.html:135
+#: templates/enterlink/headers/index_header.html:165
+#: templates/enterlink/headers/index_header.html:174
+#: templates/enterlink/headers/index_header.html:234
+#: templates/enterlink/headers/index_header.html:243
+#: templates/enterlink/headers/index_header.html:265
+#: templates/enterlink/headers/mobile-navbar.html:138
+#: templates/enterlink/headers/mobile-navbar.html:204
+#: templates/enterlink/template_blockchain_styled_amp.html:693
+msgid "Chat"
+msgstr "Czat"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:29
+#: templates/enterlink/headers/desktop-navbar.html:39
+#: templates/enterlink/headers/index_header.html:156
+#: templates/enterlink/howto.html:61 templates/enterlink/search.html:7
+msgid "Search"
+msgstr "Szukaj"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:42
+#: templates/enterlink/headers/desktop-navbar-index.html:50
+#: templates/enterlink/headers/desktop-navbar-index.html:60
+#: templates/enterlink/headers/desktop-navbar.html:20
+#: templates/enterlink/headers/desktop-navbar.html:57
+#: templates/enterlink/headers/desktop-navbar.html:67
+#: templates/enterlink/headers/header_dropdown.html:21
+#: templates/enterlink/headers/header_dropdown.html:50
+#: templates/enterlink/headers/index_header.html:231
+#: templates/enterlink/headers/mobile-navbar.html:145
+#: templates/enterlink/headers/mobile-navbar.html:186
+#: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
+#: templates/enterlink/howto.html:74 templates/enterlink/index.html:64
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:51
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:91
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:196
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:232
+#: templates/enterlink/template_blockchain_styled_amp.html:614
+#: templates/enterlink/template_blockchain_styled_amp.html:700
+#: templates/enterlink/user.html:64
+msgid "Create Page"
+msgstr "Załóż Stronę"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:49
+#: templates/enterlink/headers/desktop-navbar.html:19
+#: templates/enterlink/howto.html:73 templates/enterlink/index.html:63
+msgid "Paste a link or enter a title"
+msgstr "Wklej link lub wprowadź tytuł."
+
+#: templates/enterlink/headers/desktop-navbar-index.html:66
+#: templates/enterlink/headers/desktop-navbar.html:73
+#: templates/enterlink/headers/header_dropdown.html:23
+#: templates/enterlink/headers/header_dropdown.html:49
+#: templates/enterlink/headers/index_header.html:162
+#: templates/enterlink/headers/index_header.html:201
+#: templates/enterlink/headers/index_header.html:232
+#: templates/enterlink/headers/mobile-navbar.html:124
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:45
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:184
+#: templates/enterlink/notifications/index.html:67
+#: templates/enterlink/notifications/index.html:97
+#: templates/enterlink/template_blockchain_styled_amp.html:679
+msgid "Messages"
+msgstr "Wiadomości"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:72
+#: templates/enterlink/headers/desktop-navbar.html:79
+#: templates/enterlink/headers/header_dropdown.html:22
+#: templates/enterlink/headers/header_dropdown.html:48
+#: templates/enterlink/headers/index_header.html:206
+#: templates/enterlink/headers/index_header.html:230
+#: templates/enterlink/headers/mobile-navbar.html:117
+#: templates/enterlink/inbox.html:12
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:39
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:178
+#: templates/enterlink/notifications/index.html:96
+#: templates/enterlink/template_blockchain_styled_amp.html:672
+msgid "Notifications"
+msgstr "Powiadomienia"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:84
+#: templates/enterlink/headers/desktop-navbar.html:96
+#: templates/enterlink/headers/index_header.html:217
+msgid "Your IQ Score"
+msgstr "Twój wynik IQ"
+
+#: templates/enterlink/headers/desktop-navbar.html:29
+msgid "Table of contents"
+msgstr "Spis treści"
+
+#: templates/enterlink/headers/desktop-navbar.html:29
+#: templates/enterlink/template_blockchain_styled_amp.html:104
+msgid "Table of contents and facts for this wiki"
+msgstr "Spis treści i faktów na potrzeby tej wiki"
+
+#: templates/enterlink/headers/desktop-navbar.html:62
+#: templates/enterlink/headers/mobile-navbar.html:159
+#: templates/enterlink/headers/mobile-navbar.html:210
+#: templates/enterlink/template_blockchain_styled_amp.html:634
+#: templates/enterlink/template_blockchain_styled_amp.html:714
+msgid "Feed"
+msgstr "Kanał"
+
+#: templates/enterlink/headers/desktop-navbar.html:87
+msgid "Please log in with Scatter"
+msgstr "Zaloguj się za pomocą Scatter."
+
+#: templates/enterlink/headers/header_dropdown.html:53
+#: templates/enterlink/headers/mobile-navbar.html:153
+#: templates/enterlink/headers/mobile-navbar.html:192
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:68
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:101
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:208
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:250
+#: templates/enterlink/template_blockchain_styled_amp.html:621
+#: templates/enterlink/template_blockchain_styled_amp.html:707
+#: templates/enterlink/user.html:126
+msgid "Help"
+msgstr "Pomoc"
+
+#: templates/enterlink/headers/index_header.html:109
+msgid "View Profile"
+msgstr "Zobacz Profil"
+
+#: templates/enterlink/headers/index_header.html:128
+msgid "Sign In"
+msgstr "Zaloguj się"
+
+#: templates/enterlink/headers/index_header.html:128
+#: templates/enterlink/headers/index_header.html:172
+#: templates/enterlink/headers/index_header.html:241
+#: templates/enterlink/headers/index_header.html:263
+#: templates/enterlink/index.html:47
+msgid "Register"
+msgstr "Zarejestruj się"
+
+#: templates/enterlink/headers/index_header.html:132
+#: templates/enterlink/login.html:36
+msgid "Username"
+msgstr "Nazwa użytkownika"
+
+#: templates/enterlink/headers/index_header.html:139
+msgid "Need an account? Register here."
+msgstr "Nie masz konta? Zarejestruj się tutaj!"
+
+#: templates/enterlink/headers/index_header.html:140
+#: templates/enterlink/headers/index_header.html:171
+#: templates/enterlink/login.html:41
+msgid "Forgot your password?"
+msgstr "Zapomniałeś hasła?"
+
+#: templates/enterlink/headers/index_header.html:163
+#: templates/enterlink/inbox.html:23
+msgid "Your Notifications"
+msgstr "Twoje powiadomienia"
+
+#: templates/enterlink/headers/index_header.html:222
+msgid "Get an account"
+msgstr "Załóż konto"
+
+#: templates/enterlink/headers/index_header.html:222
+msgid "or Log in"
+msgstr "lub Zaloguj się"
+
+#: templates/enterlink/headers/index_header.html:235
+#: templates/enterlink/headers/index_header.html:244
+#: templates/enterlink/headers/index_header.html:257
+#: templates/enterlink/headers/index_header.html:266
+#: templates/enterlink/headers/mobile-navbar.html:165
+#: templates/enterlink/headers/mobile-navbar.html:216
+#: templates/enterlink/template_blockchain_styled_amp.html:640
+msgid "Language"
+msgstr "Język"
+
+#: templates/enterlink/headers/mobile-navbar.html:178
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:224
+#: templates/enterlink/template_blockchain_styled_amp.html:605
+msgid "Register / Log in"
+msgstr "Zarejestruj się / Zaloguj się"
+
+#: templates/enterlink/hoverblurb_ajax_blockchain.html:65
+msgid "Go to article"
+msgstr "Przejdź do artykułu"
+
+#: templates/enterlink/hovereditor_ajax.html:67
+msgid "Self citation by"
+msgstr "Samodzielne cytowanie przez"
+
+#: templates/enterlink/hovereditor_ajax.html:72
+msgid "Title"
+msgstr "Tytuł"
+
+#: templates/enterlink/hovereditor_ajax.html:75
+msgid "Rank"
+msgstr "Ranking"
+
+#: templates/enterlink/hovereditor_ajax.html:76
+msgid "User since"
+msgstr "Użytkownik od"
+
+#: templates/enterlink/hovereditor_ajax.html:77
+msgid "Last login"
+msgstr "Ostatnie logowanie"
+
+#: templates/enterlink/hovereditor_ajax.html:80
+msgid "Go to Editor's Profile"
+msgstr "Przejdź do Profilu Edytora"
+
+#: templates/enterlink/hoverlink_ajax_blockchain.html:64
+msgid "Discuss Citation"
+msgstr "Omów cytat"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:53
+msgid "Download"
+msgstr "Pobierz"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:55
+msgid "Direct Link"
+msgstr "Bezpośredni Link"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:64
+#: templates/enterlink/hoverlink_iframe_blockchain.html:65
+#: templates/enterlink/template_blockchain_styled_desktop.html:193
+#: templates/enterlink/template_blockchain_styled_desktop.html:194
+msgid "Share"
+msgstr "Udostępnij"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:68
+#: templates/enterlink/template_blockchain_styled_desktop.html:200
+msgid "Copy URL"
+msgstr "Kopiuj adres URL"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:118
+msgid "Play / Pause"
+msgstr "Odtwarzaj/ Wstrzymaj"
+
+#: templates/enterlink/howto.html:8 templates/enterlink/howto.html:30
+msgid "How to use Everipedia"
+msgstr "Jak korzystać z Everipedii?"
+
+#: templates/enterlink/howto.html:10 templates/enterlink/limitreached.html:9
+msgid ""
+"Everipedia is a free and easy to use wiki platform. Write about anyone and "
+"anything!"
+msgstr ""
+"Everipedia jest darmową i łatwą w użyciu platformą wiki. Napisz o kimkolwiek "
+"i o czymkolwiek!"
+
+#: templates/enterlink/howto.html:36 templates/enterlink/howto.html:45
+msgid "Go back to the page you started from"
+msgstr "Wróć do strony, od której rozpocząłeś"
+
+#: templates/enterlink/howto.html:40 templates/enterlink/howto.html:45
+msgid "Go to page"
+msgstr "Przejdź do strony"
+
+#: templates/enterlink/howto.html:50
+msgid "Go to your editor profile page"
+msgstr "Przejdź do strony profilu edytora"
+
+#: templates/enterlink/howto.html:50
+msgid "Go to profile"
+msgstr "Przejdź do profilu"
+
+#: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
+msgid "Create a new page now"
+msgstr "Utwórz teraz nową stronę"
+
+#: templates/enterlink/howto.html:61
+msgid "Search for an existing page"
+msgstr "Wyszukiwanie istniejącej strony"
+
+#: templates/enterlink/in_progress_404.html:6
+msgid "This page is currently being created by another user"
+msgstr "Ta strona jest obecnie tworzona przez innego użytkownika."
+
+#: templates/enterlink/in_progress_404.html:82
+msgid ""
+"This page is currently in the process of being created by another user. "
+"Please return later!"
+msgstr ""
+"Strona ta jest obecnie tworzona przez innego użytkownika. Wróć do niej "
+"później!"
+
+#: templates/enterlink/inbox.html:30
+msgid "You have"
+msgstr "Masz"
+
+#: templates/enterlink/inbox.html:30
+msgid "unread notifications"
+msgstr "nieprzeczytanych powiadomień."
+
+#: templates/enterlink/inbox.html:45
+msgid "You currently do not have any notifications."
+msgstr "Obecnie nie masz żadnych powiadomień."
+
+#: templates/enterlink/index.html:40
+msgid "The world's first encyclopedia on the blockchain"
+msgstr "Pierwsza na świecie encyklopedia oparta na łańcuchu bloków"
+
+#: templates/enterlink/index.html:41
+msgid ""
+"Everipedia's IQ Network is the world's first Encyclopedia that allows anyone "
+"to become a stakeholder in the system and earn rank, rewards & tokens for "
+"curating content."
+msgstr ""
+"Sieć IQ Everipedia jest pierwszą na świecie Encyklopedią, która pozwala "
+"każdemu stać się udziałowcem systemu i zyskać miejsce w rankingu, nagrody "
+"oraz żetony za zajmowanie się treścią strony."
+
+#: templates/enterlink/index.html:48
+msgid "Learn more"
+msgstr "Dowiedz się więcej"
+
+#: templates/enterlink/index.html:100
+msgid "An Encyclopedia for the modern age"
+msgstr "Encyklopedia na miarę nowoczesnych czasów"
+
+#: templates/enterlink/index.html:104
+msgid ""
+"The Everipedia IQ blockchain provides a new paradigm change and knowledge "
+"economy to disrupt the old centralized internet knowledge encyclopedia model "
+"similar to Wikipedia. By creating a new incentive structure and a "
+"distributed backend hosted within a blockchain, the new Everipedia knowledge "
+"base will be able to improve upon all fundamental features of Wikipedia."
+msgstr ""
+"Łańcuch bloków Everipedia IQ zapewnia nową zmianę paradygmatu i gospodarkę "
+"opartą na wiedzy w celu przerwania starego, scentralizowanego modelu "
+"internetowej encyklopedii wiedzy, podobnego do modelu Wikipedii. Tworząc "
+"nową strukturę motywacyjną i rozproszony backend mieszczący się w łańcuchu "
+"blokowym, nowa baza wiedzy Everipedia będzie w stanie ulepszyć wszystkie "
+"podstawowe cechy Wikipedii."
+
+#: templates/enterlink/index.html:112
+msgid "Decentralized"
+msgstr "Decentralizacja"
+
+#: templates/enterlink/index.html:113
+msgid ""
+"Articles are fetched using IPFS and EOS Storage. Majority of IQ being "
+"distributed during the airdrop."
+msgstr ""
+"Artykuły są pobierane przy użyciu IPFS i EOS Storage. Większość IQ jest "
+"rozłożona podczas zrzutu."
+
+#: templates/enterlink/index.html:117
+msgid "Democratic"
+msgstr "Demokracja"
+
+#: templates/enterlink/index.html:118
+msgid ""
+"Proof of Stake (PoS) model allows for voting to change and upgrade the IQ "
+"network as it grows. Also will facilitate batch imports of new content with "
+"no fees."
+msgstr ""
+"Model PoS (Proof of Stake) pozwala na głosowanie za zmianą i modernizacją "
+"sieci IQ wraz z jej rozwojem. Ułatwi również import partii nowej zawartości "
+"bez pobierania opłat."
+
+#: templates/enterlink/index.html:122
+msgid "Censorship Resistant"
+msgstr "Odporna na cenzurę"
+
+#: templates/enterlink/index.html:123
+msgid ""
+"Live and permanent edits of content on the blockchain beyond the control of "
+"a central authority."
+msgstr ""
+"Żywe i stałe edycje treści w ramach łańcucha bloków, na które organ "
+"centralny nie ma wpływu."
+
+#: templates/enterlink/index.html:127
+msgid "Financial Incentive"
+msgstr "Zachęta finansowa"
+
+#: templates/enterlink/index.html:128
+msgid ""
+"All holders of IQ will be incentivized to create quality, neutral content "
+"and to work together in building the reputation of the network."
+msgstr ""
+"Wszyscy posiadacze IQ będą zachęcani do tworzenia wysokiej jakości, "
+"neutralnych treści oraz do współpracy w budowaniu reputacji sieci."
+
+#: templates/enterlink/index.html:139
+msgid "Become an editor today and start creating your own wiki articles."
+msgstr "Zostań dzisiaj edytorem i zacznij tworzyć własne artykuły wiki."
+
+#: templates/enterlink/index.html:142
+msgid "Open Community"
+msgstr "Otwarta społeczność"
+
+#: templates/enterlink/index.html:143
+msgid ""
+"Our vibrant community is open and welcoming to people from all backgrounds. "
+"Our guidelines and policies are based on common sense rather than strict "
+"bureaucracy."
+msgstr ""
+"Nasza tętniąca życiem społeczność jest otwarta na ludzi z różnych środowisk. "
+"Nasze wytyczne i polityka opierają się na zdrowym rozsądku, a nie na ścisłej "
+"biurokracji."
+
+#: templates/enterlink/index.html:145
+msgid "Redesigned for the modern age"
+msgstr "Odświeżona z myślą o współczesności"
+
+#: templates/enterlink/index.html:146
+msgid ""
+"Everipedia is an encyclopedia modernized and re-designed for the twenty-"
+"first century. Our editing interface makes creating and editing wiki's as "
+"easy as using Facebook."
+msgstr ""
+"Everipedia to encyklopedia zmodernizowana i przeprojektowana na miarę XXI "
+"wieku. Nasz interfejs edycyjny sprawia, że tworzenie i edycja wiki jest tak "
+"prosta jak korzystanie z Facebooka."
+
+#: templates/enterlink/index.html:155
+msgid "Follow us on Telegram"
+msgstr "Podążaj za nami na Telegramie."
+
+#: templates/enterlink/index.html:168
+msgid "Led by the Founder of Wikipedia and Genius.com"
+msgstr "Pod przewodnictwem założyciela Wikipedii i Geniusa.com."
+
+#: templates/enterlink/index.html:171
+msgid ""
+"Everipedia is being lead by a team with extensive experience and knowledge "
+"both in the online knowledge space as well as the blockchain industry. The "
+"executive team is made up of several prominent individuals in the industry, "
+"the Co-Founder of Wikipedia, Larry Sanger, the founder of Genius.com, Mahbod "
+"Moghadam, and several others. Academic credentials includes UCLA, Stanford, "
+"Yale & Columbia, covering nationalities from America, Sweden, Norway and "
+"Italy. "
+msgstr ""
+"Everipedia jest kierowana przez zespół z dużym doświadczeniem i wiedzą "
+"zarówno w obszarze wiedzy online, jak i w branży łańcuchów blokowych. Kadra "
+"Zarządzająca składa się z kilku wybitnych osób z branży, współzałożyciela "
+"Wikipedii, Larry'ego Sangera, założyciela Genius.com, Mahboda Moghadama i "
+"kilku innych osób. Referencje akademickie obejmują uniwersytety UCLA, "
+"Stanford, Yale i Columbia, obejmując narodowości amerykańskie, szwedzkie, "
+"norweskie i włoskie."
+
+#: templates/enterlink/index.html:172
+msgid "Executive Team"
+msgstr "Kadra Zarządzająca"
+
+#: templates/enterlink/leadership.html:7
+msgid "Leadership"
+msgstr "Kierownictwo"
+
+#: templates/enterlink/leadership.html:23
+msgid "Executive Leadership"
+msgstr "Kadra Kierownicza"
+
+#: templates/enterlink/leadership.html:35
+msgid "Chief Information Officer"
+msgstr "Dyrektor ds. Informacji"
+
+#: templates/enterlink/leadership.html:41
+msgid "Chief Executive Officer, Co-Founder"
+msgstr "Dyrektor Generalny, Współzałożyciel"
+
+#: templates/enterlink/leadership.html:47
+msgid "Chief Technology Officer, Co-Founder"
+msgstr "Dyrektor ds. technologii, Współzałożyciel"
+
+#: templates/enterlink/leadership.html:53
+msgid "President, Co-Founder"
+msgstr "Przewodniczący, Współzałożyciel"
+
+#: templates/enterlink/leadership.html:63
+msgid "Director of Software"
+msgstr "Dyrektor ds. oprogramowania"
+
+#: templates/enterlink/leadership.html:69
+msgid "Chief Operating Officer"
+msgstr "Dyrektor Operacyjny"
+
+#: templates/enterlink/leadership.html:75
+msgid "Chief Community Officer, Co-Founder"
+msgstr "Szef Społeczności, Współzałożyciel"
+
+#: templates/enterlink/limitreached.html:7
+msgid "Activity limit reached"
+msgstr "Osiągnięto limit aktywności"
+
+#: templates/enterlink/limitreached.html:23
+msgid ""
+"Hey! You've added 15 morsels of knowledge to Everipedia now, so we have "
+"paused your account until Master Editors have had a chance to review your "
+"work. Shouldn't take too long, you'll probably be good to go in less than 5 "
+"minutes."
+msgstr ""
+"Dodałeś teraz do Everipedii 15 części wiedzy, więc wstrzymaliśmy Twoje konto "
+"do czasu, aż Główni Edytorzy będą mieli możliwość zapoznania się z Twoją "
+"pracą. Nie powinno to trwać zbyt długo, prawdopodobnie będziesz mógł przejść "
+"dalej w mniej niż 5 minut."
+
+#: templates/enterlink/limitreached.html:24
+msgid "In the meantime, please join our official Facebook group:"
+msgstr "W międzyczasie dołącz do naszej oficjalnej grupy na Facebooku:"
+
+#: templates/enterlink/limitreached.html:24
+msgid "It’s the best way to reach the community!"
+msgstr "To najlepszy sposób na dotarcie do społeczności!"
+
+#: templates/enterlink/login.html:7
+msgid "Sign in"
+msgstr "Zaloguj się"
+
+#: templates/enterlink/login.html:33
+msgid "Sign in to Everipedia"
+msgstr "Zaloguj się do Everipedii."
+
+#: templates/enterlink/login.html:48
+msgid "Log in with Facebook"
+msgstr "Zaloguj się przez Facebooka"
+
+#: templates/enterlink/login.html:49
+msgid "Log in with Twitter"
+msgstr "Zaloguj się przez Twittera."
+
+#: templates/enterlink/login.html:58
+msgid "Need an account?"
+msgstr "Potrzebujesz konta?"
+
+#: templates/enterlink/login.html:58
+msgid "Register here"
+msgstr "Zarejestruj się tutaj"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:34
+msgid "Visit Profile"
+msgstr "Odwiedź Profil"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:57
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:73
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:214
+#: templates/enterlink/template_blockchain_styled_amp.html:720
+msgid "Log Out"
+msgstr "Wyloguj się"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:86
+msgid "Register / Log In"
+msgstr "Zarejestruj się / Zaloguj się"
+
+#: templates/enterlink/notifications/index.html:116
+msgid "New message"
+msgstr "Nowa wiadomość"
+
+#: templates/enterlink/recent-activity.html:84
+msgid "by"
+msgstr "przez"
+
+#: templates/enterlink/register.html:6
+msgid "Create an account"
+msgstr "Utwórz konto"
+
+#: templates/enterlink/register.html:26 templates/enterlink/register.html:28
+msgid "Have an account?"
+msgstr "Masz już konto?"
+
+#: templates/enterlink/register.html:26 templates/enterlink/register.html:28
+msgid "Login"
+msgstr "Zaloguj się"
+
+#: templates/enterlink/register.html:42
+msgid ""
+"Registration is currently invite only due to blockchain software testing. "
+"Join us on Telegram and Reddit in the meantime to become a part of "
+"Everipedia today!"
+msgstr ""
+"Rejestracja przebiega obecnie tylko poprzez zaproszenie, w związku z "
+"testowaniem oprogramowania w ramach łańcucha bloków. W międzyczasie dołącz "
+"do nas na Telegramie i Reddit, aby już dziś stać się częścią Everipedii!"
+
+#: templates/enterlink/register.html:60
+msgid "Welcome to the Everipedia editor community!"
+msgstr "Witamy w społeczności edytorów Everipedia!"
+
+#: templates/enterlink/register.html:63
+msgid ""
+"Sign up to become an editor to access more features and an ad-free "
+"experience."
+msgstr ""
+"Zarejestruj się, aby zostać edytorem, aby uzyskać dostęp do większej liczby "
+"funkcji i darmowych treści reklamowych."
+
+#: templates/enterlink/register.html:96
+msgid "Sign up"
+msgstr "Zarejestruj się"
+
+#: templates/enterlink/register.html:97
+msgid "By clicking sign up above you agree to our"
+msgstr "Klikając na Zarejestruj się powyżej zgadzasz się na nasz"
+
+#: templates/enterlink/register.html:97
+msgid "Terms of Service"
+msgstr "Regulamin Serwisu"
+
+#: templates/enterlink/search-iframe.html:128
+msgid "Searching..."
+msgstr "Wyszukuję..."
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "Can't find it below?"
+msgstr "Nie możesz znaleźć tego poniżej?"
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "Create"
+msgstr "Utwórz"
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "a new page titled"
+msgstr "nową zatytułowaną stronę"
+
+#: templates/enterlink/search.html:45 templates/enterlink/search.html:55
+msgid "Or try the"
+msgstr "Lub spróbuj"
+
+#: templates/enterlink/search.html:45 templates/enterlink/search.html:55
+msgid "advanced search."
+msgstr "wyszukiwanie zaawansowane"
+
+#: templates/enterlink/search.html:48
+msgid "Everipedia couldn’t find anything with the name"
+msgstr "Everipedia nie mogła znaleźć niczego z tą nazwą"
+
+#: templates/enterlink/search.html:50
+msgid ""
+"If you know any links associated with this page, try searching for those "
+"links"
+msgstr "Jeśli znasz linki powiązane z tą stroną, spróbuj wyszukać te linki."
+
+#: templates/enterlink/template_ajax_genius.html:17
+#: templates/enterlink/template_amp_ajax_genius.html:98
+msgid "Verified Editor"
+msgstr "Zweryfikowany edytor"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:122
+msgid "Bullet"
+msgstr "Punktor"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:184
+#: templates/enterlink/template_blockchain_styled_desktop.html:124
+msgid "Recent news"
+msgstr "Aktualności"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:184
+#: templates/enterlink/template_blockchain_styled_desktop.html:124
+msgid ""
+"Everipedia IQ tokens are now in circulation on the EOS mainnet. Follow "
+"Everipedia on"
+msgstr "Żetony Everipedia IQ są teraz w obiegu w sieci EOS. Śledź Everipedia"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:184
+#: templates/enterlink/template_blockchain_styled_desktop.html:124
+msgid "to learn about upcoming features and developments!"
+msgstr "aby dowiedzieć się o nadchodzących funkcjach i nowościach!"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:196
+#: templates/enterlink/template_blockchain_styled_desktop.html:141
+msgid "Verified Page"
+msgstr "Strona zweryfikowana"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:303
+#: templates/enterlink/template_blockchain_styled_desktop.html:359
+msgid "Image & Video Gallery"
+msgstr "Galeria Obrazów i Filmów Wideo"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:305
+#: templates/enterlink/template_blockchain_styled_desktop.html:361
+msgid "images, pictures, and videos"
+msgstr "obrazy, zdjęcia i filmy wideo"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:309
+msgid "Gallery"
+msgstr "Galeria"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:326
+#: templates/enterlink/template_blockchain_styled_desktop.html:494
+msgid "Reference Links For This Biography"
+msgstr "Linki referencyjne do niniejszej biografii"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:328
+#: templates/enterlink/template_blockchain_styled_desktop.html:496
+msgid "Reference Links For This Wiki"
+msgstr "Linki referencyjne do stron Wiki"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:331
+#: templates/enterlink/template_blockchain_styled_desktop.html:499
+msgid ""
+"Links to historical reviews, career / educational facts, and other "
+"encyclopedic information"
+msgstr ""
+"Linki do recenzji historycznych, faktów dotyczących kariery zawodowej/"
+"edukacji oraz innych informacji encyklopedycznych"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:336
+#: templates/enterlink/template_blockchain_styled_desktop.html:505
+msgid "All information for"
+msgstr "Wszystkie informacje dotyczące"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:336
+#: templates/enterlink/template_blockchain_styled_desktop.html:505
+msgid ""
+"wiki comes from the below links. Any source is valid, including Twitter, "
+"Facebook, Instagram, and LinkedIn. Pictures, videos, biodata, and files "
+"relating to"
+msgstr ""
+"wiki pochodzą z poniższych linków. Każde źródło jest prawidłowe, w tym "
+"Twitter, Facebook, Instagram i LinkedIn. Obrazy, filmy wideo, biodane i "
+"pliki odnoszące się do"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:336
+#: templates/enterlink/template_blockchain_styled_desktop.html:505
+msgid "are also acceptable encyclopedic sources."
+msgstr "są również dopuszczalnymi źródłami encyklopedycznymi."
+
+#: templates/enterlink/template_blockchain_styled_amp.html:351
+#: templates/enterlink/template_blockchain_styled_desktop.html:526
+msgid ""
+"See related encyclopedia articles, biographies, reviews, and historical "
+"facts."
+msgstr ""
+"Zobacz powiązane artykuły encyklopedyczne, biografie, recenzje i fakty "
+"historyczne."
+
+#: templates/enterlink/template_blockchain_styled_amp.html:355
+#: templates/enterlink/template_blockchain_styled_desktop.html:533
+msgid "Other wiki pages related to"
+msgstr "Inne strony wiki powiązane z"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:534
+msgid "Created"
+msgstr "Utworzony"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:535
+msgid "Last Modified"
+msgstr "Ostatnio zmodyfikowany"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:536
+msgid "IPFS"
+msgstr "iPFS"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:756
+msgid "Top Page Editors"
+msgstr "Najlepsi Redaktorzy Stron"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:776
+msgid "Share this page"
+msgstr "Udostępnij tę stronę"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:788
+msgid "DIRECT LINK"
+msgstr "Link Bezpośredni"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:793
+#: templates/enterlink/template_blockchain_styled_desktop.html:219
+msgid "Suggested Hashtags"
+msgstr "Sugerowane Hashtagi"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:827
+#: templates/enterlink/template_blockchain_styled_desktop.html:257
+msgid "QR Code"
+msgstr "Kod QR"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:124
+msgid "and"
+msgstr "i"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:185
+#: templates/enterlink/voting_table_of_contents.html:12
+msgid "Edit"
+msgstr "Edytuj"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:188
+msgid "Vote"
+msgstr "Głosuj"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:203
+msgid "Embed / Widget"
+msgstr "Wbudowany / Widżet"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:327
+msgid "Profiles"
+msgstr "Profile"
+
+#: templates/enterlink/transfer-iq.html:7
+#: templates/enterlink/transfer-iq.html:116
+msgid "Transfer IQ"
+msgstr "Transfer IQ"
+
+#: templates/enterlink/transfer-iq.html:118
+msgid "Please make sure you have set up"
+msgstr "Upewnij się, że skonfigurowałeś/aś"
+
+#: templates/enterlink/transfer-iq.html:118
+msgid "beforehand"
+msgstr "wcześniej"
+
+#: templates/enterlink/transfer-iq.html:122
+msgid "Recipient"
+msgstr "Odbiorca"
+
+#: templates/enterlink/transfer-iq.html:126
+msgid "Memo"
+msgstr "Notatka"
+
+#: templates/enterlink/transfer-iq.html:131
+msgid "Transaction successful"
+msgstr "Transakcja zakończona powodzeniem"
+
+#: templates/enterlink/transfer-iq.html:135
+msgid "Buy RAM"
+msgstr "Kup RAM"
+
+#: templates/enterlink/transfer-iq.html:139
+msgid "See your RAM, CPU, and Bandwidth on FeeXplorer"
+msgstr ""
+"Zobacz swoją pamięć RAM, procesor i przepustowość w aplikacji FeeXplorer."
+
+#: templates/enterlink/user.html:12
+msgid "profile"
+msgstr "profil"
+
+#: templates/enterlink/user.html:38
+msgid "Everipedia Rank"
+msgstr "Ranking Everipedii"
+
+#: templates/enterlink/user.html:53
+msgid "This user is verified"
+msgstr "Ten użytkownik jest zweryfikowany"
+
+#: templates/enterlink/user.html:56
+msgid "Everipedia Staff"
+msgstr "Personel Everipedii"
+
+#: templates/enterlink/user.html:62 templates/enterlink/user.html:67
+msgid "Message"
+msgstr "Wiadomość"
+
+#: templates/enterlink/user.html:71 templates/enterlink/user.html:123
+msgid "Edit Profile"
+msgstr "Edytuj profil"
+
+#: templates/enterlink/user.html:74
+msgid "Everipedia Page"
+msgstr "Strona Everipedia"
+
+#: templates/enterlink/user.html:80
+msgid "IQ Score"
+msgstr "Wynik IQ"
+
+#: templates/enterlink/user.html:81
+msgid "Pages created"
+msgstr "Utworzone strony"
+
+#: templates/enterlink/user.html:82
+msgid "Total edits"
+msgstr "Suma edycji"
+
+#: templates/enterlink/user.html:94
+msgid "Joined"
+msgstr "Dołączony"
+
+#: templates/enterlink/user.html:125
+msgid "Upload Avatar / Profile Picture"
+msgstr "Wczytywanie Avataru / Obrazu Profilu"
+
+#: templates/enterlink/user.html:153
+msgid "Enable account? Uncheck to ban"
+msgstr "Aktywne konto? Usuń zaznaczenie, aby zablokować"
+
+#: templates/enterlink/user.html:157
+msgid "IP Ban"
+msgstr "Blokada IP"
+
+#: templates/enterlink/user.html:157
+msgid "Ban"
+msgstr "Zablokuj"
+
+#: templates/enterlink/user.html:157
+msgid "Clear"
+msgstr "Wyczyść"
+
+#: templates/enterlink/user.html:159
+msgid "Verify the account?"
+msgstr "Sprawdzić konto?"
+
+#: templates/enterlink/user.html:163
+msgid "Is Staff?"
+msgstr "Czy jest Personel?"
+
+#: templates/enterlink/user.html:177
+msgid "Save all changes"
+msgstr "Zapisz wszystkie zmiany"
+
+#: templates/enterlink/user.html:178
+msgid "Cancel"
+msgstr "Anuluj"
+
+#: templates/enterlink/user.html:211
+msgid "Change Avatar Picture"
+msgstr "Zmień obraz Avataru"
+
+#: templates/enterlink/user.html:219
+msgid "Please select your Everipedia page"
+msgstr "Proszę wybrać swoją stronę na Everipedii."
+
+#: templates/enterlink/user.html:224
+msgid "Continue"
+msgstr "Kontynuuj"
+
+#: templates/enterlink/votehistory.html:7
+msgid "Voting"
+msgstr "Głosowanie"
+
+#: templates/enterlink/votehistory.html:95
+msgid "Voting History"
+msgstr "Historia głosowania"
+
+#: templates/enterlink/voting.html:197
+msgid "Before"
+msgstr "Przed"
+
+#: templates/enterlink/voting.html:199
+msgid "After"
+msgstr "Po"
+
+#: templates/enterlink/voting_table_of_contents.html:7
+msgid "Article"
+msgstr "Artykuł"
+
+#: templates/enterlink/voting_table_of_contents.html:17
+msgid "Current Vote"
+msgstr "Aktualne głosowanie"
+
+#: templates/enterlink/voting_table_of_contents.html:20
+#: templates/enterlink/voting_table_of_contents.html:62
+msgid "Reject"
+msgstr "Odrzuć"
+
+#: templates/enterlink/voting_table_of_contents.html:21
+msgid "Accept"
+msgstr "Akceptuj"
+
+#: templates/enterlink/voting_table_of_contents.html:28
+msgid "Voting Period"
+msgstr "Okres głosowania"
+
+#: templates/enterlink/voting_table_of_contents.html:34
+msgid "to"
+msgstr "do"
+
+#: templates/enterlink/voting_table_of_contents.html:51
+msgid "Place Votes"
+msgstr "Zagłosuj"
+
+#: templates/enterlink/voting_table_of_contents.html:63
+msgid "Approve"
+msgstr "Zatwierdź"
+
+#: templates/enterlink/voting_table_of_contents.html:67
+msgid "Changes"
+msgstr "Zmiany"
+
+#: templates/enterlink/welcome.html:7
+msgid "Welcome to Everipedia, the encyclopedia of everything"
+msgstr "Witamy w Everipedii, encyklopedii wszystkiego."

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+{% load i18n %}
+<html>
+    <head>
+    <title>{% trans 'Leadership' %} - {% trans "Everipedia, the encyclopedia of everything" %}</title>
+
+    <style>
+	@import url('https://fonts.googleapis.com/css?family=Poppins');
+	</style>
+
+    <!-- ' -->
+    <meta name="description" content=" Everipedia is the world’s largest collection of hyperlinks grouped by identity. ">
+	<link rel="canonical" href="https://everipedia.org/contact/" />
+	<!--- Include Header -->
+	{% include "enterlink/headers/header-common.html" %}{% include "enterlink/headers/header-navbar.html" %}
+    <link href="/static/css/leadership.css" rel="stylesheet">
+</head>
+<body>
+
+	<div class="leadership-header">
+		<h1>{% trans 'Executive Leadership' %}</h1>
+		<hr class="separator-break separator-accent">
+		<br />
+		<br />
+	</div>
+
+	<div class="leadership-ct tablet-compatible">
+
+		<div class="row team-ct">
+			<a class="col-md-3 col-sm-6 teamtile" href="/wiki/Larry_Sanger/">
+				<img src="https://epcdn-vz.azureedge.net/static/images/larry1.jpg"/>
+				<h2>Larry Sanger</h4>
+					<h3>{% trans "Chief Information Officer" %}</h3>
+					<p>Co-Founder Wikipedia, Ph.D. Philosophy Ohio State University</p>
+			</a>
+			<a class="col-md-3 col-sm-6 teamtile" href="/wiki/teddeforselius/">
+				<img src="https://epcdn-vz.azureedge.net/static/images/theodor1.jpg"/>
+				<h2>Theodor Forselius</h4>
+					<h3>{% trans "Chief Executive Officer, Co-Founder" %}</h3>
+					<p>Founder AVO Design, Former Marketing Strategist and Developer at NOGA</p>
+			</a>
+			<a class="col-md-3 col-sm-6 teamtile" href="/wiki/travismoore5036459/">
+				<img src="https://epcdn-vz.azureedge.net/static/images/travis1.png"/>
+				<h2>Travis Moore</h4>
+					<h3>{% trans "Chief Technology Officer, Co-Founder" %}</h3>
+					<p>UCLA Neuroscience Biochemistry & Molecular Cell Development Biology</p>
+			</a>
+			<a class="col-md-3 col-sm-6 teamtile" href="/wiki/samkazemian12/">
+				<img src="https://epcdn-vz.azureedge.net/static/images/sam1.jpg"/>
+				<h2>Sam Kazemian</h4>
+					<h3>{% trans "President, Co-Founder" %}</h3>
+					<p>UCLA Neuroscience & Philosophy, Blockchain Developer, Veteran Crypto Miner</p>
+			</a>
+
+		</div>
+
+		<div class="row team-ct">
+			<a class="col-md-3 col-sm-6 teamtile" href="/wiki/kedar-iyer/">
+				<img src="https://epcdn-vz.azureedge.net/static/images/kedar1.jpg"/>
+				<h2>Kedar Iyer</h4>
+					<h3>{% trans "Director of Software" %}</h3>
+					<p>UCLA (B.S. Mechanical Engineering), Author of Building Games with Ethereum Smart Contracts</p>
+			</a>
+			<a class="col-md-3 col-sm-6 teamtile" href="/wiki/suchet-dhindsa/">
+				<img src="https://epcdn-vz.azureedge.net/static/images/suchet1.png"/>
+				<h2>Suchet Singh Dhindsa</h4>
+					<h3>{% trans "Chief Operating Officer" %}</h3>
+					<p>MBA, BBA, HBV & Environmental Economics at Norwegian University of Life Sciences (UMB) & Vestfold University</p>
+			</a>
+			<a class="col-md-3 col-sm-6 teamtile" href="/wiki/mahbod.moghadam/">
+				<img src="https://epcdn-vz.azureedge.net/static/images/mahbod1.jpg"/>
+				<h2>Mahbod Moghadam</h4>
+					<h3>{% trans "Chief Community Officer, Co-Founder" %}</h3>
+					<p>Founder Genius.com ($57M raised from Andreessen Horowitz, Dan Gilbert, Ashton Kutcher, Eminem & more..), Yale University, Stanford Law.</p>
+			</a>
+		</div>
+
+
+		</div>
+
+	</div>
+
+<!--- Everipedia Footer -->
+{% include "enterlink/footers/footer.html" %}
+{#{% include "enterlink/footers/deferredJS.html" %}#}
+{% include 'enterlink/inline-css/application.html' %}
+{% include 'enterlink/headers/extra-analytics-right-before-body-end.html' %}
+</body>
+</html>

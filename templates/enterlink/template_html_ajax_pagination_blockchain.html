@@ -1,0 +1,35 @@
+{% load enterlink_custom_tags %}
+{% load i18n %}
+{% load tz %}
+{% for linkObject in CITATION_OBJECTS %}
+<li class="link-box" id="link-box" data-citation-integer="{{ linkObject.integer }}" data-mime="{{ linkObject.mime }}"
+    data-category="{{ linkObject.category }}" data-attribution="{{ linkObject.attr }}" data-box_url="{{ linkObject.url }}">
+
+    {% if linkObject.thumb != None and linkObject.thumb != "" %}
+        <a class="linkObject-description-anchor avatar-wrap" rel='nofollow' href="javascript:void(0);" title="Preview Thumbnail">
+            <div class="link-box-picture" >
+                <img class='linkObject-inner-img lazyloadable' src="https://epcdn-vz.azureedge.net/static/images/link-2.png" data-src="{{ linkObject.thumb }}" onerror="this.onerror=null;this.src='https://epcdn-vz.azureedge.net/static/images/link-2.png'"/>
+            </div>
+        </a>
+    {% else %}
+        <a class="linkObject-description-anchor avatar-wrap" style="margin-right: -10px;" rel='nofollow' href="javascript:void(0);" title="Preview Thumbnail">
+        </a>
+    {% endif %}
+    <div class="link-box-right">
+        <div class='linkedit_container' data-role="linkedit_container">
+            {% if linkObject.isSocial == True %}
+                <span itemprop="sameAs"><a href="{{ linkObject.url }}" class="link-box-url" {{ linkObject.attr }} target="_blank">{{ linkObject.url }}</a></span>
+            {% else %}
+                <a href="{{ linkObject.url }}" class="link-box-url" {{ linkObject.attr }} target="_blank">{{ linkObject.url }}</a>
+            {% endif %}
+            <div data-action="linkedit_textarea" class="link-comment">{{ linkObject.description|safe }}</div>
+        </div>
+
+        <div class="link-box-details">
+            <div class="link-date">
+                <a href="/wiki/{{ PAGEMETADATA.url_slug }}/" class="link-date-anchor" rel="nofollow">{{ linkObject.timestamp|json_fix_time }}</a>
+            </div>
+        </div>
+    </div>
+</li>
+{% endfor %}

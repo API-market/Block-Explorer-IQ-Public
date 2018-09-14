@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+{% load i18n %}
+<html>
+<head>
+    <link rel="canonical" href="https://iqnetwork.io/welcome/" />
+    <title> {% trans "Welcome to Everipedia, the encyclopedia of everything" %}</title><!-- ' -->
+
+    <meta name="description" content="Everipedia is a free and easy to use wiki platform. Write about anyone and anything!">
+
+	<!--- Include Header -->
+	{% include "enterlink/headers/header-common.html" %}{% include "enterlink/headers/header-navbar.html" %}
+    <link href="/static/css/howto_welcome.css" rel="stylesheet">
+</head>
+<body>
+	
+		<div class="row">
+			<div class="welcome-ct">
+				<div class="col-md-7 col-xs-12">
+					<div class="tagline">WELCOME TO EVERIPEDIA <strong>USERNAME</strong></div>
+			        <h1>Everipedia is a next generation online encyclopedia built for the twenty-first century.</h1>
+				    <h5>Redesigned for the modern age</h5> Everipedia is an encyclopedia modernized and re-designed for the twenty-first century. Our editing interface makes creating and editing wiki's as easy as using Facebook.
+				    <h5>Over 7 million articles</h5> Everipedia already contains all of Wikipedia's articles plus over a million additional articles created by the Everipedia community.
+				    <h5>Open and welcoming community</h5> Our vibrant community is open and welcoming to people from all backgrounds. Our guidelines and policies are based on common sense rather than strict bureaucracy.
+					<div style="float:left; width:100%; margin-top:20px;">
+						<a href="/register/" class="btn btn-md btn-primary">{% trans 'Create a Wiki' %}</a>
+					    <a href="/wiki/everipedia-faq/" style="float:left; margin-left:10px; margin-top:10px; color: #444; border-color: #444;" class="btn btn-primary-outline ">{% trans "Learn More" %}</a>
+					</div>
+				</div>
+				<div class="col-md-5">
+					<img class="welcome-img" src="https://epcdn-vz.azureedge.net/static/images/iphoneEP.png"/>
+				</div>
+
+			</div>
+	</div>
+
+
+<!--- Everipedia Footer -->
+{% include "enterlink/footers/footer.html" %}
+{#{% include "enterlink/footers/deferredJS.html" %}#}
+{% include 'enterlink/inline-css/application.html' %}
+{% include 'enterlink/headers/extra-analytics-right-before-body-end.html' %}
+</body>
+</html>

@@ -1,0 +1,6 @@
+
+{% if request.mobile %}
+	{% include "enterlink/footers/mobile_footer.html" %}
+{% else %}
+	{% include "enterlink/footers/desktop_footer.html" %}
+{% endif %}

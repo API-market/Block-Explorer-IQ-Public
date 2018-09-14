@@ -1,0 +1,111 @@
+{% load i18n %}
+{% load humanize %}
+<header style="display:none;">
+
+    <aside class="lightbox" id="ll1">
+        <h5>{% trans 'Select language' %}</h5>
+        {% include "enterlink/language_selector.html" %}
+    </aside>
+	<nav>
+	</nav>
+	<nav class="navbar navbar-inverse navbar-fixed-top app-navbar" style="background: #fafafa; border-bottom: 0px !important; padding-top: 24px; max-height: 100px; height: 100px;">
+    <div class="container">
+	    <div class="navbar-header">
+
+	    </div>
+	    <div class="navbar-collapse collapse" id="navbar-collapse-main">
+        {% if request.mobile %}
+            {% include "enterlink/headers/header_dropdown.html" %}
+        {% endif %}
+            </div>
+	        {% if not request.mobile %}
+			<!-- desktop search -->
+	   		<div class="global-search hidden-xs" id="searchfield_desktop" style="display:none;">
+				<div class="logo">
+					<a href="https://iqnetwork.io"><img width="45" height="36" alt="Everipedia Logo" src="https://epcdn-vz.azureedge.net/static/images/Everipedia_Logo.svg"/></a>
+				</div>
+				<form action="/search/" method="post" class="search">
+					{% csrf_token %}
+					<input placeholder="{% trans 'Search' %}" name="SearchBox" autocomplete="off" id="AJAXBox" type="text" value="">
+					<span class="input-group-btn">
+                        <button class="btn" type="submit" value="search">
+                            <span class=" glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+				</form>
+				<div id="result">
+					{% include "enterlink/ajaxresults.html" %}
+				</div>
+			</div>
+            {% endif %}
+
+		<div class="lightbox" id="fl1">
+			<div class="createpage-field">
+				<form action="/search/?create_req=1" method="post" class="search" name="createpagefield" id="createpagefield">
+					{% csrf_token %}
+                    <input type="hidden" value="1" name="create_page_flag" />
+					<input placeholder="{% trans 'Paste a link or enter a title' %}." name="SearchBox" id="CreateBox" autocomplete="off" type="text" value="" style="border:0px;">
+				    <button type="submit" value="search" class="icon-search btn btn-md btn-default">{% trans 'Create Page' %}</button>
+				</form>
+
+			</div>
+		</div>
+        {% if request.mobile and not request.tablet %}
+
+        {% else %}
+	        <ul class="nav navbar-nav navbar-right navbar-tour-point hidden-xs">
+               <li>
+                <a class="app-notifications" data-toggle="tooltip" data-placement="left" data-container="body" title='{% trans 'Create Page' %}' href="#" data-featherlight="#fl1">
+                  <span class="icon icon-new-message"></span>
+{#                  {% if GlobalNewPrivateMessages|length != 0 %}<span class="notify-circle">{{GlobalNewPrivateMessages|length}}</span>{% endif %}#}
+                </a>
+              </li>
+              <li>
+	            <a class="app-notifications" data-toggle="tooltip" data-placement="left" title='{% trans 'Messages' %}' href="/messages/" style="">
+	              <span class="icon icon-chat"></span>
+	              {% if GlobalNewPrivateMessages|length != 0 %}<span class="notify-circle">{{GlobalNewPrivateMessages|length}}</span>{% endif %}
+	            </a>
+	          </li>
+	          <li>
+	            <a class="app-notifications" data-toggle="tooltip" data-placement="left" title='{% trans 'Notifications' %}' href="/notifications/" style="">
+	             <span class="icon icon-globe"></span>
+	             {% if GlobalNewNotifications|length != 0 %}<span class="notify-circle">{{GlobalNewNotifications|length}}</span>{% endif %}
+	            </a>
+	          </li>
+	          <li class="avatar-iq">
+                <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">
+			  </a>
+                <div class="dropdown-menu" id="user-dropdown">
+                    {% include 'enterlink/headers/header_dropdown.html' %}
+                </div>
+	            <span id="iq_count" data-toggle="tooltip" data-placement="bottom" title="{% trans 'Your IQ Score' %}">{{GlobalUserInfo.points|intcomma}} IQ</span>
+	          </li>
+            </ul>
+	      </div>
+        {% endif %}
+	  </div>
+	</nav>
+</header>
+{#<div class="chat-right-panel">#}
+{#    <iframe id="chat_iframe" src="/my_chats/" sandbox="allow-forms allow-scripts allow-same-origin allow-top-navigation allow-modals allow-popups" border="0" style="width:100%; min-height: 375px; display:block; border:0px;" data-identifier="{{pageinfo.facebook_id}}" data-photo_type="ProfilePics" data-pic-element-id="edit-profile-pic"></iframe>#}
+{#</div>#}
+<script>
+    var hoverCardCloseHandler = function() {
+        $('#mobile-hovercard-bottom #card-content').html('');
+        $('#mobile-hovercard-bottom').hide();
+        $(window).unbind('scroll');
+        $('body').unbind('touchmove');
+    };
+{#    $("#header_create_page_btn").click(function() {#}
+{#        var searchValue = $("#custom-search-input #AJAXBox").val();#}
+{#        $(".createpage-field #CreateBox").val(searchValue);#}
+{#    });#}
+</script>
+{% if request.mobile %}
+    <div id="mobile-hovercard-bottom">
+        <div onclick="hoverCardCloseHandler(); return false;" id="card-close-btn"></div>
+        <div id="card-content">
+            {#Content will be injected here#}
+        </div>
+    </div>
+{% endif %}

@@ -1,0 +1,387 @@
+<script>
+
+    /**
+ * Created by travismoore on 8/1/15.
+ */
+
+var tinyMCEtoolbarSize = 'large';
+var tool1 = "savepage undo redo | fontsizeselect fontselect forecolor backcolor | bold italic underline | code";
+var tool2 = "styleselect | outdent indent | bullist numlist table | citepicture | citesource | linkpage | image |";
+var tool1nonblurb = "savepage undo redo | fontsizeselect fontselect forecolor backcolor | bold italic underline | code";
+var tool2nonblurb = "styleselect | outdent indent | bullist numlist table | citesource | linkpage | image |";
+var code_dialog_width_val = 600;
+
+if (isMobile && !isTablet) {
+    tinyMCEtoolbarSize = 'small';
+    tool1 = "savepage | editrollup | fontrollup | forecolor | backcolor | fontsizeselect | styleselect | bullist | numlist table | citepicture | citesource | linkpage | code";
+    tool2 = "";
+    tool1nonblurb = "savepage | editrollup | fontrollup | forecolor | backcolor | fontsizeselect | styleselect | bullist | numlist table | citesource | linkpage";
+    tool2nonblurb = "";
+    code_dialog_width_val = 300;
+  }
+
+
+//this is the tinyMCE for the advanced_edit blurb
+function tinymce_attach_blob() {
+    tinymce.init({
+        selector: '#form_tinymce_container',
+        extended_valid_elements: "strong/b,br,em,a[class|name|href|target|title|onclick|rel],script[*],iframe[src|style|width|height|scrolling|marginwidth|marginheight|frameborder],video[*],source[*],audio[*],embed[*],object[*],figcaption[*],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name]",
+        //theme : "advanced",
+        mode: "textareas",
+        plugins: [
+            "advlist autolink autoresize lists link image charmap print hr anchor pagebreak rollups",
+            "searchreplace wordcount visualchars code fullscreen citesource citepicture linkpage savepage",
+            "insertdatetime placeholder media nonbreaking table directionality mention noneditable",
+            "emoticons template paste textcolor colorpicker textpattern image code fullpage"
+        ],
+        toolbar1: tool1,
+        toolbar2: tool2,
+        language: EDITOR_LANGUAGE,
+        noneditable_noneditable_class: "no-edit",
+        body_id: "tinymce",
+        invalid_elements: "script,link,form,head,meta",
+        fontsize_formats: '10pt 12pt 14pt 16pt 18pt 20pt 22pt 24pt 28pt 32pt',
+        height: 385,
+        code_dialog_width: code_dialog_width_val,
+        browser_spellcheck: true,
+        media_live_embeds: true,
+        media_filter_html: false,
+        menubar: false,
+        verify_html: false, //needed for empty spans to not be removed
+        statusbar: false,
+        cleanup : false,
+        forced_root_block: "p",
+
+        // Works, but is bad for headers
+        // forced_root_block: "",
+        // force_p_newlines : false,
+        // force_br_newlines: true,
+
+        end_container_on_empty_block: false,
+        content_css: '/static/css/tinymce_custom_blockchain_mce.css',
+        font_formats: 'Arial=arial,helvetica,sans-serif;Book Antiqua=book antiqua,palatino;Courier New=courier new,courier;Georgia=georgia,palatino;Helvetica=helvetica;Lato=lato,helvetica,sans-serif;Lora=lora,georgia,serif;Tahoma=tahoma,arial,helvetica,sans-serif;Times New Roman=times new roman,times;Trebuchet MS=trebuchet ms,geneva;Verdana=verdana,geneva;',
+        convert_urls: false,
+        relative_urls: false,
+        toolbar_items_size: tinyMCEtoolbarSize,
+        table_toolbar: "tableprops tabledelete | tableinsertrowbefore tableinsertrowafter tabledeleterow | tableinsertcolbefore tableinsertcolafter tabledeletecol",
+        style_formats_merge: false,
+        mentions: {
+            delimiter: ['@', '^', '*'],
+            delay: 350,
+            source: function (query, process, delimiter) {
+                if (delimiter === '@') {
+                    $.get('/AJAX-REQUEST/AJAX_Search/normal/', {
+                        searchterm: query,
+                        search_type: "tinyMCE_JSON",
+                        tinymceBookmark: ""
+                    }, function (data) {
+                        var body = document.createElement('body');
+                        body.innerHTML = data;
+                        var tbl = $('#search_results tr:has(td)', body).map(function (i, v) {
+                            var $td = $('td', this);
+                            // console.log("================TEST_AMPERSAND================");
+                            // console.log($td.eq(0).text());
+                            // console.log($td.eq(1).text());
+                            // console.log($td.eq(2).text());
+                            // console.log($td.eq(3).text());
+                            // console.log($td.eq(4).text());
+                            // console.log("===============================================");
+                            return {
+                                id: ++i,
+                                name: $td.eq(0).text(),
+                                username: $td.eq(1).text(),
+                                fbid: $td.eq(2).text(),
+                                linkcomment: $td.eq(3).text(),
+                                thumbnail_url: $td.eq(4).text()
+                            }
+                        }).get();
+                        //alert(tbl);
+                        process(tbl);
+                    });
+                }
+                else if ((delimiter === '^') || (delimiter === '*')) {
+                    var dict = [];
+                    $.get('/AJAX-REQUEST/AJAX_Link_Search/', {searchterm: query, article_slug: ARTICLE_SLUG}, function (data) {
+                        if (CITER_IS_VERIFIED) {
+                            if (data.length == 0) {
+                                data = [[gettext("Cite as verified editor")], [gettext("Cite my own knowledge / experience as a verified editor")]];
+                            }
+                            else {
+                                data[0].unshift([gettext("Cite as verified editor")]);
+                                data[1].unshift([gettext("Cite my own knowledge / experience as a verified editor")]);
+                                data[2].unshift([666666]);
+                            }
+                        }
+                        var arrURLs = $.map(data[0], function (el) {
+                            return el;
+                        });
+                        var arrComment = $.map(data[1], function (el) {
+                            return el;
+                        });
+                        var arrCiteInt = $.map(data[2], function (el) {
+                            return el;
+                        });
+                        for (i = 0; i < arrURLs.length; i++) {
+                            dict.push({
+                                id: i,
+                                name: arrURLs[i],
+                                linkcomment: arrComment[i],
+                                cite_integer: arrCiteInt[i],
+                                username: ARTICLE_SLUG,
+                                fbid: FACEBOOK_ID,
+                                cited_by: CITED_BY,
+                                citer_rank: CITER_RANK,
+                                citer_is_verified: CITER_IS_VERIFIED
+                            });
+                        }
+                        process(dict);
+                    });
+                }
+            }
+        },
+        setup: function(editor) {
+            editor.on('focus', function(e) {
+                $(".mce-toolbar-grp.mce-container.mce-panel.mce-stack-layout-item.mce-first").hide();
+                $("#edit-ct .mce-toolbar-grp.mce-container.mce-panel.mce-stack-layout-item.mce-first").show();
+            });
+            editor.on('init', function(e) {
+                if(isMobile != 1) {
+                    var editorInstance = editor.dom.$('#tinymce');
+                }
+            });
+
+        }
+    });
+}
+
+
+//this is used for attaching tinymce iframes (NOT INLINE) to textareas
+function tinymce_attach_textarea_addlink_iframe(targetTag) {
+    //console.log("entered");
+    var editarea = targetTag;  // get the id of the entry box
+    // var theElements = "a[class|name|href|target|title|onclick|rel],script[language|type|src],iframe[src|style|width|height|scrolling|marginwidth|marginheight|frameborder],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name]"
+    var theElements = "a[class|name|href|target|title|onclick|rel],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name]"
+
+    var ed = new tinymce.Editor(editarea, {  // Create new editor for each desired element on the screen
+        extended_valid_elements : theElements,
+
+        selector: editarea,
+        plugins: [
+                "advlist autolink autoresize lists link image charmap print hr anchor pagebreak rollups",
+                "searchreplace wordcount visualchars code fullscreen citesource linkpage savepage",
+                "insertdatetime placeholder media nonbreaking table mention directionality",
+                "emoticons template paste textcolor colorpicker textpattern image code"
+            ],
+        toolbar1: tool1nonblurb,
+        toolbar2: tool2nonblurb,
+        height : 100,
+        language: EDITOR_LANGUAGE,
+        menubar: false,
+        content_css: '/static/css/tinymce_custom_addlink.css',
+        statusbar: false,
+        invalid_elements : "script,img,embed,object,link,iframe,form,head,meta,strong,h1,h2,h3,h4,h5,h6",
+        font_formats: 'Arial=arial,helvetica,sans-serif;Book Antiqua=book antiqua,palatino;Courier New=courier new,courier;Georgia=georgia,palatino;Helvetica=helvetica;Lato=lato,helvetica,sans-serif;Lora=lora,georgia,serif;Tahoma=tahoma,arial,helvetica,sans-serif;Times New Roman=times new roman,times;Trebuchet MS=trebuchet ms,geneva;Verdana=verdana,geneva;',
+        browser_spellcheck : true,
+        forced_root_block: false,
+        force_p_newlines : false,
+        force_br_newlines: false,
+        convert_urls: false,
+        relative_urls: false,
+        toolbar_items_size: tinyMCEtoolbarSize,
+        mentions: {
+            delimiter: ['@', '^', '*'],
+            delay: 250,
+            source: function (query, process, delimiter) {
+                if (delimiter === '@') {
+                    $.get('/AJAX-REQUEST/AJAX_Search/normal/', {searchterm: query, search_type: "tinyMCE_JSON", tinymceBookmark: "",}, function(data) {
+                        var body = document.createElement('body');
+                        body.innerHTML = data;
+                        var tbl = $('#search_results tr:has(td)',body).map(function(i, v) {
+                            var $td =  $('td', this);
+                                return {
+                                         id: ++i,
+                                         name: $td.eq(0).text(),
+                                         username: $td.eq(1).text(),
+                                         fbid: $td.eq(2).text(),
+                                         linkcomment: $td.eq(3).text(),
+                                         thumbnail_url: $td.eq(4).text()
+                                       }
+                        }).get();
+                        process(tbl);
+                    });
+                }
+                else if ((delimiter === '^') || (delimiter === '*')) {
+                    var dict = [];
+                $.get('/AJAX-REQUEST/AJAX_Link_Search/', {searchterm: query, article_slug: FACEBOOK_USERNAME}, function(data) {
+
+                    if (CITER_IS_VERIFIED) {
+                        if (data.length == 0) {
+                            data = [[gettext("Cite as verified editor")], [gettext("Cite my own knowledge / experience as a verified editor")]];
+                        }
+                        else{
+                            data[0].unshift([gettext("Cite as verified editor")]);
+                            data[1].unshift([gettext("Cite my own knowledge / experience as a verified editor")]);
+                            data[2].unshift([666666]);
+                        }
+                    }
+                    var arrURLs = $.map(data[0], function(el) { return el; });
+                    var arrComment = $.map(data[1], function(el) { return el; });
+                    var arrCiteInt = $.map(data[2], function(el) { return el; });
+                    for (i = 0; i < arrURLs.length; i++) {
+                        dict.push({
+                            id: i,
+                            name: arrURLs[i],
+                            linkcomment: arrComment[i],
+                            cite_integer: arrCiteInt[i],
+                            username: FACEBOOK_USERNAME,
+                            fbid: FACEBOOK_ID,
+                            cited_by: CITED_BY,
+                            citer_rank: CITER_RANK,
+                            citer_is_verified: CITER_IS_VERIFIED
+                        });
+                    }
+
+                process(dict);
+            });
+                }
+            }
+        },
+        setup: function(editor) {
+            editor.on('focus', function(e) {
+                $(".mce-toolbar-grp.mce-container.mce-panel.mce-stack-layout-item.mce-first").hide();
+                $("#addlink-box-wrapper .mce-toolbar-grp.mce-container.mce-panel.mce-stack-layout-item.mce-first").show();
+            });
+            editor.on('init', function(e) {
+                if(isMobile != 1) {
+                    var editorInstance = editor.dom.$('#tinymce');
+{#                    initializeTooltippables(editorInstance);#}
+                }
+            });
+        },
+
+
+    }, tinymce.EditorManager);
+    ed.render();
+    return ed;
+ };
+
+
+function tinymce__edit_attach_infobox_iframe(targetTag) {
+    var editarea = targetTag;  // get the id of the entry box
+    // var theElements = "a[class|name|href|target|title|onclick|rel],script[language|type|src],iframe[src|style|width|height|scrolling|marginwidth|marginheight|frameborder],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name]"
+    var theElements = "strong/b,br,em,a[class|name|href|target|title|onclick|rel],iframe[src|style|width|height|scrolling|marginwidth|marginheight|frameborder],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name]";
+
+    var ed = new tinymce.Editor(editarea, {  // Create new editor for each desired element on the screen
+        extended_valid_elements : theElements,
+
+        selector: editarea,
+        plugins: [
+            "advlist autolink autoresize lists link image charmap print hr anchor pagebreak rollups",
+            "searchreplace wordcount visualchars code fullscreen citesource linkpage savepage",
+            "insertdatetime placeholder media nonbreaking table mention directionality link",
+            "emoticons template paste textcolor colorpicker textpattern image code"
+        ],
+        toolbar1: tool1nonblurb,
+        toolbar2: tool2nonblurb + ' link',
+        language: EDITOR_LANGUAGE,
+        menubar: false,
+        statusbar: false,
+        invalid_elements : "script,img,embed,object,link,iframe,form,head,meta,h1,h2,h3,h4,h5,h6",
+        content_css: '/static/css/tinymce_custom_infobox.css',
+        font_formats: 'Arial=arial,helvetica,sans-serif;Book Antiqua=book antiqua,palatino;Courier New=courier new,courier;Georgia=georgia,palatino;Helvetica=helvetica;Lato=lato,helvetica,sans-serif;Lora=lora,georgia,serif;Tahoma=tahoma,arial,helvetica,sans-serif;Times New Roman=times new roman,times;Trebuchet MS=trebuchet ms,geneva;Verdana=verdana,geneva;',
+        browser_spellcheck : true,
+        forced_root_block: "",
+        force_p_newlines : false,
+        force_br_newlines: false,
+        convert_urls: false,
+        relative_urls: false,
+        toolbar_items_size: tinyMCEtoolbarSize,
+        mentions: {
+            delimiter: ['@', '^', '*', 'infobox'],
+            delay: 350,
+            source: function (query, process, delimiter) {
+                if (delimiter === '@') {
+                    $.get('/AJAX-REQUEST/AJAX_Search/normal/', {searchterm: query, search_type: "tinyMCE_JSON", tinymceBookmark: "",}, function(data) {
+                        var body = document.createElement('body');
+                        body.innerHTML = data;
+                        var tbl = $('#search_results tr:has(td)',body).map(function(i, v) {
+                            var $td =  $('td', this);
+                                return {
+                                         id: ++i,
+                                         name: $td.eq(0).text(),
+                                         username: $td.eq(1).text(),
+                                         fbid: $td.eq(2).text(),
+                                         linkcomment: $td.eq(3).text(),
+                                         thumbnail_url: $td.eq(4).text()
+                                       }
+                        }).get();
+                        process(tbl);
+                    });
+                }
+                else if ((delimiter === '^') || (delimiter === '*')) {
+                    var dict = [];
+                    $.get('/AJAX-REQUEST/AJAX_Link_Search/', {searchterm: query, article_slug: FACEBOOK_USERNAME}, function(data) {
+                        if (CITER_IS_VERIFIED) {
+                            if (data.length == 0) {
+                                data = [[gettext("Cite as verified editor")], [gettext("Cite my own knowledge / experience as a verified editor")]];
+                            }
+                            else{
+                                data[0].unshift([gettext("Cite as verified editor")]);
+                                data[1].unshift([gettext("Cite my own knowledge / experience as a verified editor")]);
+                                data[2].unshift([666666]);
+                            }
+                        }
+                        var arrURLs = $.map(data[0], function(el) { return el; });
+                        var arrComment = $.map(data[1], function(el) { return el; });
+                        var arrCiteInt = $.map(data[2], function(el) { return el; });
+                        for (i = 0; i < arrURLs.length; i++) {
+                            dict.push({
+                                id: i,
+                                name: arrURLs[i],
+                                linkcomment: arrComment[i],
+                                cite_integer: arrCiteInt[i],
+                                username: FACEBOOK_USERNAME,
+                                fbid: FACEBOOK_ID,
+                                cited_by: CITED_BY,
+                                citer_rank: CITER_RANK,
+                                citer_is_verified: CITER_IS_VERIFIED
+                            });
+                        }
+                    process(dict);
+                    });
+                }
+                else{
+                    return false;
+                }
+            }
+        },
+        setup: function(editor) {
+            editor.on('focus', function(e) {
+                $(".mce-toolbar-grp.mce-container.mce-panel.mce-stack-layout-item.mce-first").hide();
+                $(this.contentAreaContainer.parentElement).find("div.mce-toolbar-grp").show();
+            });
+            editor.on('init', function(e) {
+                if(isMobile != 1) {
+                    var editorInstance = editor.dom.$('#tinymce');
+{#                    initializeTooltippables(editorInstance);#}
+                }
+            });
+
+        }
+
+
+    }, tinymce.EditorManager);
+    ed.render();
+
+    return ed;
+ };
+
+
+function resetBlobBoxTinyMce() {
+    var blobBoxSelectorString = 'section.infobox-frame-span #id_blobbox';
+    tinymce.remove(blobBoxSelectorString);
+    tinymce_attach_blobbox_iframe($(blobBoxSelectorString));
+}
+
+
+</script>

@@ -1,0 +1,9 @@
+{% load i18n %}
+<div id="edit-profile-pic" class="panel-heading" style="height:280px; background-size:cover; background-size: contain; background-repeat: no-repeat; background-position: center center; background-image: url('{{articleObject.photo_url}}');">
+</div>
+<button id="mainphotoedit-close-btn" class="mainphotoedit-close-button" onclick="hideMainphotoEditPane();" type="button" name="closemainphotoeditbtn">{% trans "Close" %}</button>
+<script>
+    function hideMainphotoEditPane() {
+        $("#mainphoto-edit-box-wrapper").hide();
+    }
+</script>

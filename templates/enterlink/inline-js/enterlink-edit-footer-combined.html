@@ -1,0 +1,96 @@
+<script>
+$(document).ready(function(){
+
+    var blobBoxSelectorString = 'section.infobox-frame-span #id_blobbox';
+    tinymce.remove(blobBoxSelectorString);
+
+
+    // Get the modal
+    var modal, span;
+
+    // 10 minute save alert
+    setInterval(function() {
+        modal = document.getElementById('myModal-autosave-alert');
+        span = document.getElementsByClassName("close-autosave")[0];
+        span.onclick = function() {
+            modal.style.display = "none";
+        };
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                $(modal).fadeOut(500,"swing");
+            }
+        };
+        $(modal).fadeIn(500,"swing");
+    }, 600000);
+});
+</script>
+<style>
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 35% auto; /* 15% from the top and centered */
+        padding: 15px;
+        border: 1px solid #888;
+        width: 300px; /* Could be more or less, depending on screen size */
+    }
+
+    @media (max-width: 565px) {
+        .modal-content {
+            margin: 60% auto 0px auto;
+        }
+    }
+
+    .modal .modal-content h1 {
+        text-align: center;
+        font-size: 24px !important;
+        border-bottom: 1px solid #ededed;
+        padding-bottom: 5px;
+        font-weight: bold;
+        margin-top: 0px;
+        margin-bottom: 3px;
+    }
+
+    .modal .modal-content p {
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 0px;
+    }
+
+    .modal .modal-content button{
+        text-align: center;
+        width:100%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #adadad;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        opacity: 1;
+    }
+
+    .close:hover, .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+</style>
+
+

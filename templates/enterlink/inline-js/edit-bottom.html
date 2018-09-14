@@ -1,0 +1,384 @@
+{% load i18n %}
+
+<!--EOSJS code-->
+<script type="text/javascript" src="/static/js/eosjs-cdn.js"></script>
+
+<!--Help with parsing time and date strings-->
+<script type="text/javascript" src="/static/js/easytimer.min.js"></script>
+
+<!--Page JS-->
+<script language="javascript" type="text/javascript">
+    // Attach TinyMCE to the page
+    tinymce_attach_blob();
+
+    // Scatter dummy variables
+    var eos = "";
+    var scatterAccountName = "";
+    var scatterCallback = (err, res) => {err ? console.error(err) : console.log(res)};
+
+    // Get the translated strings
+    var confirmStrings = [gettext("Please stake some IQ into Brainpower before continuing. Click OK to open the Brainpower management screen in a new tab. NOTE: Please make sure popups are enabled for this site, as you may receive a warning."),
+        gettext("Note that you will not be able to propose edits without Brainpower. Your work will be lost!"),
+        gettext("Error: proposal not found. Please try submitting again."),
+        gettext("Article proposal submission failed!"),
+        gettext("Add File"),
+        gettext("Add Link"),
+        gettext("Add New Infobox"),
+        gettext("Completing transaction...")];
+
+    // Submit the edit form
+    function submitMainForm() {
+        // Fetch the user's Brainpower and make sure they have at least the minimum required to make an edit
+	    var startingBrainpower = getBrainpower();
+	    if (startingBrainpower < 10){
+	        // Notify the user that they need more Brainpower before they can edit and offer to redirect them to the
+            // Brainpower management screen
+	        var r = confirm(confirmStrings[0]);
+
+            // If the user agrees to be redirected, send them to the Brainpower management page
+            if (r == true) {
+                let url = location.origin + "/brainpower/" + scatterAccountName + "/";
+                let win = window.open(url, '_blank');
+                win.focus();
+            } else {
+                // Otherwise, tell them that their edits will not be saved
+                alert(confirmStrings[1])
+            }
+        }
+
+        // Extract the TinyMCE object
+        var tinyEditor = tinyMCE.get("form_tinymce_container");
+
+        // Get the content of the TinyMCE
+        var blurbValue = tinyEditor.getContent();
+
+        // Show the "Wait" box because Scatter can be slow sometimes
+        $('#submission_waiting').show();
+
+        // Submit the article to the server to generate the IPFS hash, which will then be sent to Scatter for the "propose" function.
+        // After Scatter submits the proposal to the EOS chain, the verification AJAX call will make sure, via the get_table_rows API
+        // that the proposal was actually recorded.
+        $.ajax({
+            type: "POST",
+            url: "/wiki/{{ARTICLE_SLUG}}/advanced_edit/?submission=1",
+            data: {"blurbHTML": blurbValue},
+            success: function (data) {
+                // Submit the proposal via Scatter
+                eos.contract('eparticlectr').then(eparticlectr => {
+                    eparticlectr.propose(scatterAccountName, data["newIPFS"], data["oldIPFS"], data["grandparentIPFS"], {authorization: scatterAccountName}
+                    ).then(result => {
+                        // Hide the submission popup
+                        $('#submission_waiting').hide();
+
+                        // Check to make sure that the proposal was recorded on-chain
+                        $.ajax({
+                            type: "POST",
+                            url: "/wiki/{{ARTICLE_SLUG}}/advanced_edit/?verification=1&newIPFS=" + data["newIPFS"],
+                            data: {},
+                            success: function (data) {
+                                // Assuming the proposal was recorded, redirect the user to the proposal voting page
+                                $('#submission_waiting').show();
+                                $('#submission_waiting .waiting-header').html(confirmStrings[7]);
+                                window.location.href = window.location.origin + "/AJAX-REQUEST/AJAX_Fetch_Blurb_Compare/" + data["newIPFS"] + "/" + data["oldIPFS"] + "/";
+                            },
+                            error: function(data){
+                               alert(confirmStrings[2]);
+                           }
+                        });
+                    }).catch(error => {
+                        // Alert the user of any errors
+                        $('#submission_waiting').hide();
+                        console.log(error);
+                        alert(confirmStrings[3]);
+                    });
+                })
+            }
+        });
+    }
+
+    // Do these after the DOM loads
+    $(window).load(function() {
+        // Show the TinyMCE object for the blurb
+        $(".mce-toolbar-grp.mce-container.mce-panel.mce-stack-layout-item.mce-first").hide();
+        $('#edit-ct .mce-toolbar-grp.mce-container.mce-panel.mce-stack-layout-item.mce-first').show();
+
+        // Remove the page loading icon
+        $('#loading').fadeOut(500);
+
+        // Add buttons for deleting and add media and citations, on existing elements
+        $('#form_tinymce_container_ifr').contents().find(".reference-container ul.reference-list li, .media-gallery ul li").each(function() {
+            $('<div class="button-wrap"><div class="delete-btn-wrap"><span class="icon icon-squared-cross"></span></div><div class="add-btn-wrap"><span class="icon icon-squared-plus"></span></div></div>').appendTo($(this));
+        });
+
+        // Add buttons for adding new media and citations, on the section headers
+        $('#form_tinymce_container_ifr').contents().find(".media-gallery .section-headline, .reference-container .section-headline").each(function() {
+            $('<span class="add-heading-wrap"><span class="icon icon-squared-plus"></span></span>').insertAfter($(this));
+        });
+
+        // Handler for removing references and media
+        $('#form_tinymce_container_ifr').contents().find(".reference-container ul.reference-list li .delete-btn-wrap, .media-gallery ul li .delete-btn-wrap").click(function() {
+            $(this).parent().parent().remove();
+        });
+
+        // Handler for the form for adding new media. Opens an interactive pane.
+        $('#form_tinymce_container_ifr').contents().find(".media-gallery ul li .add-btn-wrap, .media-gallery .add-heading-wrap").click(function() {
+            $("#addlink-box-wrapper").show();
+         	$(".mce-toolbar-grp.mce-container.mce-panel.mce-stack-layout-item.mce-first").hide();
+        	$("#addlink-box .mce-toolbar-grp.mce-container.mce-panel.mce-stack-layout-item.mce-first").show();
+        	$("#addlink-box .addlink-radio-container #id_file_radio").prop("checked", true);
+            $(".file-upload-row").show();
+            $(".addlink-newlinkfileform-error").show();
+            $("#id_linkurl").hide();
+            $(".addlink-linkform-error").hide();
+            $('#link_submission_button').val(confirmStrings[4]);
+        });
+
+        // Handler for the form for adding new citations. Opens an interactive pane.
+        $('#form_tinymce_container_ifr').contents().find(".reference-container ul.reference-list li .add-btn-wrap, .reference-container .add-heading-wrap").click(function() {
+            $("#addlink-box-wrapper").show();
+         	$(".mce-toolbar-grp.mce-container.mce-panel.mce-stack-layout-item.mce-first").hide();
+        	$("#addlink-box .mce-toolbar-grp.mce-container.mce-panel.mce-stack-layout-item.mce-first").show();
+        	$("#addlink-box .addlink-radio-container #id_linkurl_radio").prop("checked", true);
+            $(".file-upload-row").hide();
+            $(".addlink-newlinkfileform-error").hide();
+            $("#id_linkurl").show();
+            $(".addlink-linkform-error").show();
+            $('#link_submission_button').val(confirmStrings[5]);
+        });
+
+        // Handler for removing existing infobox inner rows
+        $('#form_tinymce_container_ifr').contents().find(".infobox-wrap .delete-row-wrap").click(function() {
+            $(this).parent().remove();
+        });
+
+        // Handler for removing existing infobox entire rows
+        $('#form_tinymce_container_ifr').contents().find(".infobox-wrap .ibox-item-nonplural .delete-btn-wrap, .infobox-wrap .ibox-item-plural .delete-btn-wrap").click(function() {
+            $(this).parent().parent().parent().remove();
+        });
+
+        // Main "Add New Infobox" button for adding new infoboxes
+        $('#form_tinymce_container_ifr').contents().find(".nonblob-wrap").each(function() {
+            $('<div class="add-new-ibox">' + confirmStrings[6] + '</div>').appendTo($(this));
+        });
+
+        // Handler for when the "Add New Infobox" button is clicked. Opens an interactive pane.
+        $('#form_tinymce_container_ifr').contents().find(".infobox-wrap .add-new-ibox").click(function() {
+            $("#addinfobox-box-wrapper").show();
+        });
+
+        // Add infobox addition buttons to existing infoboxes
+        $('#form_tinymce_container_ifr').contents().find(".infobox-wrap .ibox-item-nonplural > tbody .ibox-schema-row.first-schema-row, .infobox-wrap .ibox-item-plural > tbody .ibox-schema-row.first-schema-row").each(function() {
+            $('<tr class="add-row-btn"><td><span class="icon icon-squared-plus"></span><span class="add-row-label">' + gettext('Add Row')+ '</span></td></tr>').insertBefore($(this));
+        });
+
+        // Handler for adding new blank rows to single infoboxes, and their corresponding delete buttons
+        $('#form_tinymce_container_ifr').contents().find(".infobox-wrap .ibox-item-nonplural .add-row-btn").click(function() {
+            $('<tr class="ibox-value-row"><td class="ibox-nonplural-value" colspan="2"><br data-mce-bogus="1"></td><td class="delete-row-wrap"><span class="icon icon-circle-with-cross"></span></td></tr>').insertBefore($(this));
+            $('#form_tinymce_container_ifr').contents().find(".infobox-wrap .delete-row-wrap").click(function() {
+                $(this).parent().remove();
+            });
+        });
+
+        // Handler for adding new blank rows to plural infoboxes, and their corresponding delete buttons
+        $('#form_tinymce_container_ifr').contents().find(".infobox-wrap .ibox-item-plural .add-row-btn").click(function() {
+            $('<tr class="ibox-value-row"><td class="ibox-plural-value" colspan="2"><br data-mce-bogus="1"></td><td class="delete-row-wrap"><span class="icon icon-circle-with-cross"></span></td></tr>').insertBefore($(this));
+            $('#form_tinymce_container_ifr').contents().find(".infobox-wrap .delete-row-wrap").click(function() {
+                $(this).parent().remove();
+            });
+        });
+
+        // Show the interactive pane for the page metadata when it is clicked
+        $('#form_tinymce_container_ifr').contents().find(".pagemeta-box").click(function() {
+            $("#pagemeta-box-wrapper").show();
+        });
+
+        // Inject the page type selection (from the page metadata pane) into TinyMCE
+        $("#id_page_type").change(function() {
+            var value = $(this).val();
+            $('#form_tinymce_container_ifr').contents().find(".pagemeta-table [data-key='page_type'] td.meta-value").html(value);
+        });
+
+        // Inject the removal status selection (from the page metadata pane) into TinyMCE
+        $("#id_is_removed").change(function() {
+            var value = $(this).is(":checked").toString();
+            value = value[0].toUpperCase() + value.substr(1);
+            $('#form_tinymce_container_ifr').contents().find(".pagemeta-table [data-key='is_removed'] td.meta-value").html(value);
+        });
+
+        // Inject the adult content selection (from the page metadata pane) into TinyMCE
+        $("#id_is_adult_content").change(function() {
+            var value = $(this).is(":checked").toString();
+            value = value[0].toUpperCase() + value.substr(1);
+            $('#form_tinymce_container_ifr').contents().find(".pagemeta-table [data-key='is_adult_content'] td.meta-value").html(value);
+        });
+
+        // Show the page photo interactive pane when it is clicked
+        $('#form_tinymce_container_ifr').contents().find(".main-photo").click(function() {
+            $("#mainphoto-edit-box-wrapper").show();
+        });
+
+        // Handler for when the page is saved
+        $(".mce-btn-save-page").click(function (event) {
+            // Prevent the default form save from occuring
+            event.preventDefault();
+
+            // Get the page title
+            var titleValue = $('#form_tinymce_container_ifr').contents().find(".page-title").html();
+
+            // Get the TinyMCE object
+            var tinyEditor = tinyMCE.get("form_tinymce_container");
+
+            // Get the content from the TinyMCE
+            var blurbValue = tinyEditor.getContent();
+
+            // Detect if the title is blank
+            if (titleValue == "") {
+                // If the title is blank, focus on the title
+                $('#form_tinymce_container_ifr').contents().find(".page-title").focus();
+                $(".notifyjs-ep_styling-base").click(function (event) {
+                    $('#form_tinymce_container_ifr').contents().find(".page-title").focus();
+                });
+
+                // Get the "no title" modal alert
+                modal = document.getElementById('myModal-notitle-alert');
+                span = document.getElementsByClassName("close-notitle")[0];
+                span.onclick = function () {
+                    modal.style.display = "none";
+                };
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        $(modal).fadeOut(500, "swing");
+                    }
+                };
+
+                // Show the modal window
+                $(modal).fadeIn(500, "swing");
+
+
+            }
+            else if (blurbValue == "") {
+                // If the blurb is blank, focus on the blurb area
+                $("#edit_blurb .mce-container").focus();
+                tinyEditor.focus();
+                $(".notifyjs-ep_styling-base").click(function (event) {
+                    $("#edit_blurb .mce-container").focus();
+                    tinyEditor.focus();
+                });
+
+                // Get the "no blurb" modal alert
+                modal = document.getElementById('myModal-noblurb-alert');
+                span = document.getElementsByClassName("close-noblurb")[0];
+                span.onclick = function () {
+                    modal.style.display = "none";
+                };
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        $(modal).fadeOut(500, "swing");
+                    }
+                };
+
+                // Show the modal window
+                $(modal).fadeIn(500, "swing");
+            }
+            else if (blurbValue != "") {
+                $.ajax({
+                    type: "POST",
+                    data: {blurbNugget: blurbValue, pageID: FACEBOOK_FBID},
+                    url: "/AJAX-REQUEST/AJAX_Check_Blurb/",
+                    success: function (data) {
+                        if (data == "NO_LINKS") {
+                            // Get the "no links" modal alert
+                            modal = document.getElementById('myModal-nolinks-alert');
+                            span = document.getElementsByClassName("close-nolinks")[0];
+                            span.onclick = function () {
+                                modal.style.display = "none";
+                            };
+
+                            // When the user clicks anywhere outside of the modal, close it
+                            window.onclick = function (event) {
+                                if (event.target == modal) {
+                                    $(modal).fadeOut(500, "swing");
+                                }
+                            };
+
+                            // Show the modal window
+                            $(modal).fadeIn(500, "swing");
+                        }
+                        else if (data == "NO_CITATION") {
+                            // Get the "no citations" modal alert
+                            modal = document.getElementById('myModal-noblurbcitation-alert');
+                            span = document.getElementsByClassName("close-noblurbcitation")[0];
+                            span.onclick = function () {
+                                modal.style.display = "none";
+                            };
+
+                            // When the user clicks anywhere outside of the modal, close it
+                            window.onclick = function (event) {
+                                if (event.target == modal) {
+                                    $(modal).fadeOut(500, "swing");
+                                }
+                            };
+
+                            // Show the modal window
+                            $(modal).fadeIn(500, "swing");
+
+
+                        }
+                        else if (data == "FIRST_PERSON") {
+                            // Get the "first person" modal alert
+                            modal = document.getElementById('myModal-3rdperson-alert');
+                            span = document.getElementsByClassName("close-3rdperson")[0];
+                            span.onclick = function () {
+                                modal.style.display = "none";
+                            };
+
+                            // When the user clicks anywhere outside of the modal, close it
+                            window.onclick = function (event) {
+                                if (event.target == modal) {
+                                    $(modal).fadeOut(500, "swing");
+                                }
+                            };
+
+                            // Show the modal window
+                            $(modal).fadeIn(500, "swing");
+
+
+                        }
+                        else if (data == "THIRD_PERSON") {
+                            submitMainForm();
+                        }
+                    }
+                });
+            }
+            else {
+                submitMainForm();
+            }
+        });
+
+        // Start the editing tour
+        runTour();
+
+    });
+
+    // Close the link addition box
+    function addlinkClose(){
+        $("#addlink-box-wrapper").hide();
+        $(".mce-toolbar-grp.mce-container.mce-panel.mce-stack-layout-item.mce-first").hide();
+        $("#edit-ct .mce-toolbar-grp.mce-container.mce-panel.mce-stack-layout-item.mce-first").show();
+    }
+
+    // Deselect the TinyMCE container
+    function deselectTinyMCE(){
+        var tinyEditor = tinyMCE.get("form_tinymce_container");
+        tinyEditor.selection.collapse();
+    }
+
+    // Close the waiting GIF box
+    $(".waiting-header-close").click(function() {
+        $(this).parent().hide();
+    });
+</script>

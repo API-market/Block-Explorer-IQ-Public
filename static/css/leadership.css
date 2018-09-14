@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Hind|Catamaran|Poppins|Oswald');
+
+
+*{
+	font-family: 'Poppins', Helevetica, Arial;
+}
+
+
+.leadership-ct {
+	font-family:Open Sans;
+}
+
+.leadership-ct h1 {
+	font-weight:800;
+	font-family:Open Sans;
+	text-align: center;
+	font-size:48px;
+}
+
+hr.separator-break.separator-accent {
+    border-color: #3097d1 !important;
+    width: 90px;
+	border-top-width: 2px;
+	margin: 27px 0px 27px 0px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+
+.leadership-header {
+	background:#141618;
+	margin-top:70px;
+	height:290px;
+}
+
+.leadership-header h1 {
+	font-weight:800;
+	font-family:Open Sans;
+	text-align: center;
+	font-size:48px;
+	padding-top:100px;
+	color:#FFF;
+}
+
+
+.team-ct {
+	margin-bottom:30px;
+}
+
+.team-ct .teamtile {
+	padding:10px;
+}
+
+.team-ct .teamtile:hover {
+	background: #f1f1f1;
+	cursor: pointer;
+}
+
+.team-ct img {
+	width:80%;
+	border-radius:100%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.team-ct h2 {
+	font-size: 20px;
+	line-height: 1.2;
+	color: #303133;
+	margin: 9px 0px 0px 0px;
+	font-weight: 800;
+	font-family: Open Sans;
+	text-align: center;
+}
+
+.team-ct h3 {
+	font-size: 17px;
+	line-height: 1.2;
+	color: #303133;
+	margin: 3px 0px 9px 0px;
+	font-weight: 800;
+	font-family: Open Sans;
+	text-align: center;
+}
+
+.team-ct p {
+	font-size: 14px;
+	line-height: 1.2;
+	color: #666;
+	margin: 0px 0px 6px 0px;
+	font-weight: 600;
+	font-family: Open Sans;
+	text-align: center;
+}
+
+

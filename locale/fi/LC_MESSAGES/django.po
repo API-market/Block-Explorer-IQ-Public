@@ -1,0 +1,2323 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# msandell, 2018.
+# msandell, 2018.
+# msandell, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-25 08:59-0700\n"
+"PO-Revision-Date: 2018-08-04 23:50-0700\n"
+"Last-Translator: msandell <>\n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.1.1\n"
+
+#: enterlink/edit.py:114
+msgid "Page Type"
+msgstr "Sivu"
+
+#: enterlink/edit.py:114
+msgid "Removed From Site"
+msgstr "Poistettu sivustosta"
+
+#: enterlink/edit.py:114 templates/enterlink/edit_ajax_editpagemeta.html:12
+msgid "Adult Content"
+msgstr "Aikuissisältö"
+
+#: enterlink/edit.py:115
+msgid "Media Gallery"
+msgstr "Galleria"
+
+#: enterlink/edit.py:115
+msgid "References and Citations"
+msgstr "Viitteet ja viitteet"
+
+#: enterlink/forms.py:9
+msgid "Contains"
+msgstr "Sisältää"
+
+#: enterlink/forms.py:9
+msgid "Equal to"
+msgstr "Sama kuin"
+
+#: enterlink/forms.py:10
+msgid "Regular expression"
+msgstr "Säännöllinen lauseke"
+
+#: enterlink/forms.py:11
+msgid "Starts with"
+msgstr "Alkaa merkillä"
+
+#: enterlink/forms.py:11
+msgid "Ends with"
+msgstr "Päättyy merkkiin"
+
+#: enterlink/forms.py:12
+msgid "Greater than"
+msgstr "Suurempi kuin"
+
+#: enterlink/forms.py:12
+msgid "Greater than or equal to"
+msgstr "Suurempi tai yhtä suuri kuin"
+
+#: enterlink/forms.py:13
+msgid "Less than"
+msgstr "Pienempi kuin"
+
+#: enterlink/forms.py:13
+msgid "Less than or equal to"
+msgstr "Pienempi tai yhtä suuri kuin"
+
+#: enterlink/forms.py:42 templates/enterlink/headers/index_header.html:133
+#: templates/enterlink/login.html:40
+msgid "Password"
+msgstr "Salasana"
+
+#: enterlink/forms.py:44
+msgid "Please enter a password"
+msgstr "Syötä salasana"
+
+#: enterlink/forms.py:45
+msgid "Please enter a valid password"
+msgstr "Syötä kelvollinen salasana"
+
+#: enterlink/forms.py:46
+msgid "Enter an email"
+msgstr "Anna sähköpostiosoite"
+
+#: enterlink/forms.py:47
+msgid "Please enter an email address"
+msgstr "Syötä sähköpostiosoite"
+
+#: enterlink/forms.py:48
+msgid "Please enter a valid email address"
+msgstr "Anna kelvollinen sähköpostiosoite"
+
+#: enterlink/forms.py:49 enterlink/forms.py:69
+msgid "First Name"
+msgstr "Etunimi"
+
+#: enterlink/forms.py:51 enterlink/forms.py:71
+msgid "Last Name"
+msgstr "Sukunimi"
+
+#: enterlink/forms.py:53
+msgid "Enter a username"
+msgstr "Anna käyttäjänimi"
+
+#: enterlink/forms.py:54
+msgid "Please enter a username"
+msgstr "Anna käyttäjänimi"
+
+#: enterlink/forms.py:55
+msgid "Please enter a valid username"
+msgstr "Syötä voimassa oleva käyttäjänimi"
+
+#: enterlink/forms.py:61
+msgid "This email address already exists! Please use another one."
+msgstr "Tämä sähköpostiosoite on jo olemassa! Käytä toista."
+
+#: enterlink/forms.py:73 enterlink/forms.py:83
+msgid "Email"
+msgstr "Sähköposti"
+
+#: enterlink/forms.py:82
+msgid "How can we help?"
+msgstr "Kuinka voimme auttaa?"
+
+#: enterlink/forms.py:84
+msgid "Full Name"
+msgstr "Koko nimi"
+
+#: enterlink/forms.py:85
+msgid "Subject"
+msgstr "Aihe"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Report Abuse"
+msgstr "Ilmoita Väärinkäytöstä"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Report Bug"
+msgstr "Ilmoita Vika"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Verify Account"
+msgstr "Vahvista Tili"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Anonymous Tip"
+msgstr "Anonyymi Vinkki"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Investment Inquiries"
+msgstr "Sijoitustutkimukset"
+
+#: enterlink/forms.py:86 enterlink/forms.py:175 enterlink/models.py:89
+#: enterlink/models.py:134
+msgid "Other"
+msgstr "Muu"
+
+#: enterlink/forms.py:97
+msgid "Search by Entering a Link"
+msgstr "Hae Syöttämällä Linkin"
+
+#: enterlink/forms.py:126
+msgid ""
+"Describe the file briefly. A summary of the information found is best. Avoid "
+"simply repeating the page title."
+msgstr ""
+"Kuvaile tiedosto lyhyesti. Yhteenveto löydetyistä tiedoista on paras. Vältä "
+"pelkästään sivun otsikon toistoa."
+
+#: enterlink/forms.py:148
+msgid "File type not allowed."
+msgstr "Tiedostotyyppiä ei hyväksytä."
+
+#: enterlink/forms.py:153
+msgid "Please ."
+msgstr "Ole hyvä"
+
+#: enterlink/forms.py:154
+msgid "Enter a URL"
+msgstr "Anna URL -osoite"
+
+#: enterlink/forms.py:156
+msgid ""
+"Describe the URL briefly. A summary of the information found is best. Avoid "
+"simply repeating the page title."
+msgstr ""
+"Kuvaile URL-osoitetta lyhyesti. Yhteenveto löydetyistä tiedoista on paras. "
+"Vältä pelkästään sivun otsikon toistoa."
+
+#: enterlink/forms.py:165 templates/enterlink/edit_ajax_addinfobox.html:28
+msgid "Enter type (e.g. Occupation)"
+msgstr "Anna tyyppi (esim. Ammatti)"
+
+#: enterlink/forms.py:166 templates/enterlink/edit_ajax_addinfobox.html:28
+msgid "Enter value (e.g. CEO)"
+msgstr "Anna arvo (esim. Toimitusjohtaja)"
+
+#: enterlink/forms.py:170 enterlink/models.py:134
+msgid "Person"
+msgstr "Henkilö"
+
+#: enterlink/forms.py:170 enterlink/models.py:134
+msgid "Place/Location"
+msgstr "Paikka/Sijainti"
+
+#: enterlink/forms.py:171 enterlink/models.py:134
+msgid "Organization/Company/Institution"
+msgstr "Organisaatio/Yritys/Instituutio"
+
+#: enterlink/forms.py:171 enterlink/models.py:134
+msgid "Event"
+msgstr "Tapahtuma"
+
+#: enterlink/forms.py:172 enterlink/models.py:134
+msgid "List/Ranking"
+msgstr "Lista/Tasolista"
+
+#: enterlink/forms.py:172 enterlink/models.py:134
+msgid "Product/Merchandise"
+msgstr "Tuote/Kauppatavara"
+
+#: enterlink/forms.py:173 enterlink/models.py:134
+msgid "Electronics/Software"
+msgstr "Elektroniikka/Ohjelmisto"
+
+#: enterlink/forms.py:173 enterlink/models.py:134
+msgid "Medical/Biology"
+msgstr "Lääketieteellinen/Biologia"
+
+#: enterlink/forms.py:174 enterlink/models.py:134
+msgid "Creative Work/Art"
+msgstr "Luova työ/Taide"
+
+#: enterlink/forms.py:175 enterlink/models.py:134
+msgid "Science/Academia/Humanities"
+msgstr "Tiede/Akatemia/Humanistiset"
+
+#: enterlink/models.py:45 enterlink/models.py:49
+msgid "None"
+msgstr "Ei mitään"
+
+#: enterlink/models.py:45
+msgid "Featured"
+msgstr "Suositellut"
+
+#: enterlink/models.py:45
+msgid "In the news"
+msgstr "Uutisissa"
+
+#: enterlink/models.py:46
+msgid "In the news (Editor's Pick)"
+msgstr "Uutisissa (Editorin Valinta)"
+
+#: enterlink/models.py:46
+msgid "In the news (Standout Article)"
+msgstr "Uutisissa (Erottuva Artikkeli)"
+
+#: enterlink/models.py:47
+msgid "Trending"
+msgstr "Nousussa"
+
+#: enterlink/models.py:47
+msgid "On this day"
+msgstr "Tänään"
+
+#: enterlink/models.py:47
+msgid "Blog Post (Meta Article)"
+msgstr "Blogijulkaisu (Meta-artikkeli)"
+
+#: enterlink/models.py:49
+msgid "Verified Only"
+msgstr "Vain Vahvistettu"
+
+#: enterlink/models.py:50
+msgid "Normal (Business)"
+msgstr "Normaali (Liiketoiminta)"
+
+#: enterlink/models.py:50
+msgid "Normal (Personal)"
+msgstr "Normaali (Henkilökohtainen)"
+
+#: enterlink/view_functions.py:144
+msgid ""
+"Your Everipedia editor restrictions have been removed. You can now edit "
+"pages freely!"
+msgstr ""
+"Everipedia-editorirajoituksesi on poistettu. Voit nyt muokata sivuja "
+"vapaasti!"
+
+#: enterlink/view_functions.py:607
+msgid "Images & Videos"
+msgstr "Kuvat ja videot"
+
+#: enterlink/view_functions.py:609
+msgid "References"
+msgstr "Viitteet"
+
+#: enterlink/view_functions.py:612
+msgid "Article Discussion"
+msgstr "Artikkelikeskustelu"
+
+#: enterlink/view_functions.py:615 enterlink/view_functions.py:618
+#: templates/enterlink/template_blockchain_styled_amp.html:350
+#: templates/enterlink/template_blockchain_styled_desktop.html:526
+msgid "See Also"
+msgstr "Tutustu Myös"
+
+#: enterlink/view_functions.py:617
+msgid "Top Editors"
+msgstr "Parhaat Editorit"
+
+#: enterlink/view_functions.py:1625
+msgid "Wiki and references for"
+msgstr "Wiki ja viitteet"
+
+#: enterlink/view_functions.py:1626
+msgid "You can edit something on this wiki now!"
+msgstr "Voit muokata jotain tällä wikillä nyt!"
+
+#: local_packages/block_ip/models.py:11
+msgid "IP address or mask"
+msgstr "IP-osoite tai maski"
+
+#: local_packages/block_ip/models.py:12
+msgid "Optional reason for block"
+msgstr "Vapaaehtoinen syy estoon"
+
+#: local_packages/block_ip/models.py:25 local_packages/block_ip/models.py:26
+msgid "IPs & masks to ban"
+msgstr "Estettävät IP-osoitteet ja maskit"
+
+#: templates/admin/base.html:28
+msgid "Welcome,"
+msgstr "Tervetuloa,"
+
+#: templates/admin/base.html:33
+msgid "Documentation"
+msgstr "Dokumentaatio"
+
+#: templates/admin/base.html:36
+msgid "Change password"
+msgstr "Vaihda salasana"
+
+#: templates/admin/base.html:38 templates/admin/password_change_done.html:57
+#: templates/admin/password_change_form.html:59
+#: templates/enterlink/headers/header_dropdown.html:22
+#: templates/enterlink/headers/header_dropdown.html:44
+#: templates/enterlink/headers/index_header.html:110
+#: templates/enterlink/headers/index_header.html:166
+#: templates/enterlink/headers/index_header.html:236
+#: templates/enterlink/headers/index_header.html:258
+#: templates/enterlink/notifications/index.html:100
+#: templates/enterlink/notifications/index.html:105
+msgid "Log out"
+msgstr "Kirjaudu ulos"
+
+#: templates/admin/base.html:47 templates/admin/logged_out.html:4
+#: templates/admin/password_reset_complete.html:6
+#: templates/admin/password_reset_confirm.html:6
+#: templates/admin/password_reset_done.html:6
+#: templates/admin/password_reset_form.html:6
+#: templates/enterlink/notifications/index.html:61
+#: templates/enterlink/notifications/index.html:94
+msgid "Home"
+msgstr "Etusivu"
+
+#: templates/admin/base_site.html:4
+msgid "Django site admin"
+msgstr "Django-sivuston ylläpitäjä"
+
+#: templates/admin/base_site.html:7
+msgid "Django administration"
+msgstr "Django-hallinto"
+
+#: templates/admin/logged_out.html:8
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr "Kiitos, että vietit laatuaikaa Verkkosivustolla tänään."
+
+#: templates/admin/logged_out.html:10
+msgid "Log in again"
+msgstr "Kirjaudu uudelleen"
+
+#: templates/admin/password_change_done.html:46
+#: templates/admin/password_change_form.html:48
+#: templates/enterlink/edit.html:145 templates/enterlink/search-iframe.html:122
+#: templates/enterlink/search.html:27 templates/enterlink/user.html:220
+msgid "Search Everipedia"
+msgstr "Etsi Everipediasta"
+
+#: templates/admin/password_change_done.html:60
+#: templates/admin/password_change_form.html:62
+#: templates/admin/password_reset_complete.html:19
+#: templates/enterlink/headers/index_header.html:135
+#: templates/enterlink/headers/index_header.html:168
+#: templates/enterlink/headers/index_header.html:240
+#: templates/enterlink/headers/index_header.html:262
+#: templates/enterlink/login.html:45
+msgid "Log in"
+msgstr "Kirjaudu sisään"
+
+#: templates/admin/password_change_done.html:71
+msgid "Password change successful"
+msgstr "Salasanan vaihto onnistui!"
+
+#: templates/admin/password_reset_complete.html:7
+#: templates/admin/password_reset_confirm.html:11
+#: templates/admin/password_reset_done.html:7
+#: templates/admin/password_reset_form.html:7
+#: templates/admin/password_reset_form.html:11
+#: templates/admin/password_reset_form.html:15
+msgid "Password reset"
+msgstr "Salasanan palautus"
+
+#: templates/admin/password_reset_complete.html:11
+#: templates/admin/password_reset_complete.html:15
+msgid "Password reset complete"
+msgstr "Salasanan palautus onnistui"
+
+#: templates/admin/password_reset_complete.html:17
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr "Salasanasi on asetettu. Voit nyt kirjautua sisään."
+
+#: templates/admin/password_reset_confirm.html:7
+msgid "Password reset confirmation"
+msgstr "Salasanan palautusvahvistus"
+
+#: templates/admin/password_reset_confirm.html:17
+msgid "Enter new password"
+msgstr "Syötä uusi salasana"
+
+#: templates/admin/password_reset_confirm.html:19
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+"Syötä uusi salasanasi kaksi kertaa, jotta sen oikeinkirjoitus voidaan "
+"varmistaa."
+
+#: templates/admin/password_reset_confirm.html:23
+msgid "New password:"
+msgstr "Uusi salasana:"
+
+#: templates/admin/password_reset_confirm.html:25
+msgid "Confirm password:"
+msgstr "Vahvista salasana:"
+
+#: templates/admin/password_reset_confirm.html:26
+msgid "Change my password"
+msgstr "Muuta salasana"
+
+#: templates/admin/password_reset_confirm.html:31
+msgid "Password reset unsuccessful"
+msgstr "Salasanan palautus ei onnistunut"
+
+#: templates/admin/password_reset_confirm.html:33
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+"Salasananvaihtolinkkisi vaikuttaa vialliselta, sitä on mahdollisesti "
+"käytetty jo. Pyydä uutta salasanan palautusta."
+
+#: templates/admin/password_reset_done.html:11
+#: templates/admin/password_reset_done.html:15
+msgid "Password reset successful"
+msgstr "Salasanan palautus onnistui"
+
+#: templates/admin/password_reset_done.html:17
+msgid ""
+"We have emailed you instructions for setting your password. You should be "
+"receiving them shortly."
+msgstr ""
+"Olemme lähettäneet sinulle sähköpostitse ohjeet salasanan asettamisesta. "
+"Sinun pitäisi vastaanottaa ne pian."
+
+#: templates/admin/password_reset_done.html:19
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+"Jos et saa sähköpostia, varmista, että antamasi sähköpostiosoite on "
+"käytettävissäsi ja tarkista roskapostikansiosi."
+
+#: templates/admin/password_reset_email.html:2
+msgid ""
+"You are receiving this email because you requested a password reset for your "
+"Everipedia account."
+msgstr ""
+"Olet saanut tämän sähköpostiviestin, koska olet pyytänyt salasanan "
+"palautusta Everipedia-tilillesi."
+
+#: templates/admin/password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr "Mene seuraavalle sivulle uuden salasanan valitsemiseksi:"
+
+#: templates/admin/password_reset_email.html:8
+msgid "Your username, in case you've forgotten:"
+msgstr "Käyttäjätunnuksesi, jos olet unohtanut:"
+
+#: templates/admin/password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr "Kiitos, että käytit sivustoamme!"
+
+#: templates/admin/password_reset_form.html:17
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+"Salasana unohtunut? Kirjoita sähköpostiosoitteesi alle ja lähetämme ohjeet "
+"uuden salasanan asettamista varten."
+
+#: templates/admin/password_reset_form.html:21
+msgid "Email address:"
+msgstr "Sähköposti:"
+
+#: templates/admin/password_reset_form.html:21
+msgid "Reset my password"
+msgstr "Palauta salasanani"
+
+#: templates/email/sanger_announcement.html:276
+#: templates/email/welcome_email.html:264
+#: templates/email/welcome_email_old.html:68
+#: templates/enterlink/welcome.html:33
+msgid "Learn More"
+msgstr "Lue Lisää"
+
+#: templates/email/welcome_email.html:257
+msgid "View My Profile"
+msgstr "Näytä Profiilini"
+
+#: templates/email/welcome_email_old.html:67
+#: templates/enterlink/welcome.html:28 templates/enterlink/welcome.html:30
+msgid "Create a Wiki"
+msgstr "Luo Wiki"
+
+#: templates/endless/show_more.html:5
+msgid "more"
+msgstr "lisää"
+
+#: templates/enterlink/ajax_infobox_singlet.html:14
+#: templates/enterlink/ajax_infobox_singlet.html:42
+msgid "Add Row"
+msgstr "Lisää rivi"
+
+#: templates/enterlink/ajax_infobox_singlet.html:17
+#: templates/enterlink/ajax_infobox_singlet.html:45
+msgid "Schema"
+msgstr "Skeema"
+
+#: templates/enterlink/ajax_infobox_singlet.html:21
+#: templates/enterlink/ajax_infobox_singlet.html:49
+msgid "Schema Type"
+msgstr "Rakennetyyppi"
+
+#: templates/enterlink/ajax_infobox_singlet.html:25
+#: templates/enterlink/ajax_infobox_singlet.html:53
+msgid "Subschema"
+msgstr "Subschema"
+
+#: templates/enterlink/ajax_link_singlet.html:25
+msgid "Social Media"
+msgstr "Sosiaalinen Media"
+
+#: templates/enterlink/ajax_link_singlet.html:27
+msgid "Attributes"
+msgstr "Määritteet"
+
+#: templates/enterlink/ajax_link_singlet.html:29
+#: templates/enterlink/ajax_media_gallery_singlet.html:33
+msgid "Timestamp"
+msgstr "Aikaleima"
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:14
+#: templates/enterlink/ajax_media_gallery_singlet.html:19
+#: templates/enterlink/ajaxresults.html:104
+#: templates/enterlink/hoverlink_iframe_blockchain.html:97
+#: templates/enterlink/template_blockchain_styled_desktop.html:415
+#: templates/enterlink/template_blockchain_styled_desktop.html:438
+#: templates/enterlink/template_photos_amp_json_blockchain.html:79
+msgid "Your browser does not support HTML5 video."
+msgstr "Selaimesi ei tue HTML5-videota."
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:29
+msgid "Type"
+msgstr "Tyyppi"
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:31
+msgid "MIME Type"
+msgstr "MIME-tyyppi"
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:37
+msgid "Original URL"
+msgstr "Alkuperäinen verkko- osoite"
+
+#: templates/enterlink/ajaxresults.html:57
+msgid "Click to add a new link or file to this list"
+msgstr "Napsauta lisätäksesi uuden linkin tai tiedoston tähän luetteloon"
+
+#: templates/enterlink/ajaxresults.html:60
+msgid "Or click an existing link below to add it to the article"
+msgstr "Voit napsauttaa nykyistä linkkiä tai lisätä sen artikkeliin"
+
+#: templates/enterlink/ajaxresults.html:135
+#: templates/enterlink/ajaxresults.html:192
+#: templates/enterlink/template_blockchain_styled_desktop.html:167
+msgid "Views"
+msgstr "Katselukerrat"
+
+#: templates/enterlink/ajaxresults.html:157
+#: templates/enterlink/hovereditor_ajax.html:74
+msgid "IQ"
+msgstr "IQ"
+
+#: templates/enterlink/ajaxresults.html:175
+msgid "page(s) have this link"
+msgstr "sivu(i)lla on tämä linkki"
+
+#: templates/enterlink/analytics.html:7 templates/enterlink/faq.html:6
+msgid "Frequently Asked Questions - Everipedia, everyone's encyclopedia"
+msgstr "Usein Kysytyt Kysymykset - Everipedia, kaikkien tietosanakirja"
+
+#: templates/enterlink/brainpowermgmt.html:4
+#: templates/enterlink/brainpowermgmt.html:114
+msgid "Brainpower Management"
+msgstr "Älykkyyshallinta"
+
+#: templates/enterlink/brainpowermgmt.html:4 templates/enterlink/contact.html:7
+#: templates/enterlink/edit.html:7 templates/enterlink/editing-disabled.html:7
+#: templates/enterlink/editors.html:23
+#: templates/enterlink/exchange-listings.html:7
+#: templates/enterlink/headers/index_header.html:17
+#: templates/enterlink/headers/index_header.html:18
+#: templates/enterlink/inbox.html:12 templates/enterlink/index.html:7
+#: templates/enterlink/leadership.html:7
+#: templates/enterlink/limitreached.html:7 templates/enterlink/login.html:7
+#: templates/enterlink/recent-activity.html:7
+#: templates/enterlink/register.html:6 templates/enterlink/rewardsmgmt.html:4
+#: templates/enterlink/search.html:7 templates/enterlink/transfer-iq.html:5
+#: templates/enterlink/user.html:12 templates/enterlink/votehistory.html:7
+msgid "Everipedia, the encyclopedia of everything"
+msgstr "Everipedia, kaiken tietosanakirja"
+
+#: templates/enterlink/brainpowermgmt.html:101 templates/enterlink/edit.html:89
+#: templates/enterlink/rewardsmgmt.html:119
+#: templates/enterlink/transfer-iq.html:106 templates/enterlink/voting.html:180
+msgid "Loading Scatter"
+msgstr "Lataa Palasia"
+
+#: templates/enterlink/brainpowermgmt.html:117
+msgid ""
+"Staking IQ tokens will freeze them for 21 days and will generate "
+"nontransferable Brainpower, which can be used for editing and voting on the "
+"Everipedia network. At the end of the 21 days, you can claim back your IQ "
+"tokens and re-stake them for more Brainpower again. Thus, 1 IQ, staked every "
+"21 days, can lead to 365 days / 21 days = 17.38 Brainpower every year."
+msgstr ""
+"IQ -merkkien panostaminen jäädyttää ne 21 päiväksi ja tuottavat ei-"
+"siirrettävää Älykkyyttä, jota voidaan käyttää Everipedia -verkon "
+"editoimiseen ja äänestämiseen. 21 päivän jälkeen voi lunastaa IQ -merkkinsä "
+"takaisin ja panostaa ne lisä-Älykkyyteen. Näin ollen 1 IQ, joka panostetaan "
+"joka 21 päivän välein, voi johtaa 365/21 päivää = 17.38 Älykkyyteen joka "
+"vuosi."
+
+#: templates/enterlink/brainpowermgmt.html:118
+msgid ""
+"As you make pages, propose edits, and vote on article proposals, you will "
+"consume Brainpower. However, making successful edits and voting on the "
+"winning side of a proposal will generate rewards in IQ, not Brainpower. "
+"Therefore, you can generate more Brainpower (and any profit) by staking the "
+"new IQ you just earned."
+msgstr ""
+"Kun teet sivuja, ehdotat muokkauksia ja äänestät artikkeliehdotuksista, "
+"kulutat Brainpoweria. Kuitenkin onnistuneiden muokkausten tekeminen ja "
+"äänestäminen ehdotuksen voittavalla puolella tuottavat IQ-palkintoja, ei "
+"Älykkyyttä. Tällä tavalla voit luoda enemmän Älykkyyttä (ja mahdollisia "
+"voittoja) panostamalla juuri ansaitsemasi IQ:t."
+
+#: templates/enterlink/brainpowermgmt.html:119
+msgid ""
+"Every edit proposal requires a minimum of 10 Brainpower at this time, in "
+"order to prevent spam and poor-quality edits."
+msgstr ""
+"Jokainen muokkausehdotus vaatii vähintään 10 Älykkyyttä tällä hetkellä "
+"roskapostin ja huonolaatuisten muokkausten estämiseksi."
+
+#: templates/enterlink/brainpowermgmt.html:122
+msgid "Enter an integer amount of IQ to stake"
+msgstr "Syötä panostettavan IQ:n kokonaislukumäärä "
+
+#: templates/enterlink/brainpowermgmt.html:123
+msgid "New Stake"
+msgstr "Uusi Panos"
+
+#: templates/enterlink/brainpowermgmt.html:128
+msgid "Start"
+msgstr "Alku"
+
+#: templates/enterlink/brainpowermgmt.html:129
+msgid "End"
+msgstr "Loppu"
+
+#: templates/enterlink/brainpowermgmt.html:130
+#: templates/enterlink/voting_table_of_contents.html:40
+msgid "Time Remaining"
+msgstr "Aikaa jäljellä"
+
+#: templates/enterlink/brainpowermgmt.html:131
+#: templates/enterlink/transfer-iq.html:127
+msgid "Amount"
+msgstr "Määrä"
+
+#: templates/enterlink/brainpowermgmt.html:132
+msgid "Claim"
+msgstr "Lunasta"
+
+#: templates/enterlink/contact.html:7 templates/enterlink/contact.html:24
+msgid "Contact us"
+msgstr "Ota Yhteyttä"
+
+#: templates/enterlink/contact.html:20
+msgid "To get quicker replies from our community"
+msgstr "Saadaksesi nopeampia vastauksia yhteisöltämme"
+
+#: templates/enterlink/contact.html:20
+msgid "create a post in our forum"
+msgstr "luo viesti foorumillamme"
+
+#: templates/enterlink/contact.html:25
+msgid "Get in touch with us"
+msgstr "Ota meihin yhteyttä"
+
+#: templates/enterlink/contact.html:33
+msgid "Thanks, we got your message. We will respond in a bit"
+msgstr "Kiitos, saimme viestisi. Vastaamme hetken kuluttua"
+
+#: templates/enterlink/contact.html:41 templates/enterlink/transfer-iq.html:131
+msgid "Send"
+msgstr "Lähetä"
+
+#: templates/enterlink/dropzone.html:140 templates/enterlink/edit.html:167
+#: templates/enterlink/edit.html:176 templates/enterlink/edit.html:185
+#: templates/enterlink/edit.html:195 templates/enterlink/edit.html:204
+msgid "OK"
+msgstr "OK"
+
+#: templates/enterlink/dropzone.html:141
+msgid "Enter a caption for the main image of the page."
+msgstr "Anna kuvateksti sivun pääkuvalle."
+
+#: templates/enterlink/edit.html:7
+msgid "Edit Page"
+msgstr "Muokkaa sivua"
+
+#: templates/enterlink/edit.html:85
+msgid "Loading.."
+msgstr "Ladataan..."
+
+#: templates/enterlink/edit.html:128
+msgid "Change Picture"
+msgstr "Vaihda Kuva"
+
+#: templates/enterlink/edit.html:144
+msgid "Please enter the destination page you wish to merge this one into"
+msgstr "Syötä kohdesivu, johon haluat yhdistää tämän"
+
+#: templates/enterlink/edit.html:149
+msgid "Merge Page"
+msgstr "Yhdistä Sivu"
+
+#: templates/enterlink/edit.html:156 templates/enterlink/edit.html:165
+#: templates/enterlink/edit.html:174 templates/enterlink/edit.html:183
+#: templates/enterlink/edit.html:192 templates/enterlink/edit.html:202
+msgid "Hey there scholar!"
+msgstr "Hei siellä tutkija!"
+
+#: templates/enterlink/edit.html:157
+msgid ""
+"Looks like you have been editing for a while. You should take a moment to "
+"save your work before continuing!"
+msgstr ""
+"Näyttää siltä, ​​että olet muokannut jonkin aikaa. Sinun kannattaa tallentaa "
+"työsi, ennen kuin jatkat!"
+
+#: templates/enterlink/edit.html:158
+msgid "Save"
+msgstr "Tallenna"
+
+#: templates/enterlink/edit.html:166
+msgid ""
+"Looks like you are using first-person! (ex: Our product, I am, We are, You "
+"should). Everipedia is a neutral encyclopedia written in third-person tense "
+"(ex: It is, They are, The company makes). THIS IS NOT FACEBOOK!!"
+msgstr ""
+"Näyttää siltä, ​​että käytät minä-muotoa! (esim. Meidän tuote, Olen, Olemme, "
+"Sinun tulisi). Everipedia on neutraali tietosanakirja, joka on kirjoitettu "
+"kolmannessa persoonassa (esim. Se on, He ovat, Yritys tekee). TÄMÄ EI OLE "
+"FACEBOOK!"
+
+#: templates/enterlink/edit.html:175
+msgid "Please enter a title for the page."
+msgstr "Anna sivulle otsikko."
+
+#: templates/enterlink/edit.html:184
+msgid ""
+"Please write something for the article section. Make sure to use citations."
+msgstr "Kirjoita jotain artkkeliosioon. Varmista, että käytät viitteitä."
+
+#: templates/enterlink/edit.html:193
+msgid ""
+"Hello! This page needs citations (also known as footnotes, references, "
+"sources) before it can be saved. Add the links you're using as sources with "
+"the cite button above."
+msgstr ""
+"Hei! Tämä sivu tarvitsee viitteitä (tunnetaan myös alaviitteinä, "
+"viittauksina, lähteinä) ennen kuin se voidaan tallentaa. Lisää linkit, joita "
+"käytät lähteenä yllä mainituilla viitepainikkeella."
+
+#: templates/enterlink/edit.html:194
+msgid "Join our official Facebook group if you need help with it!:"
+msgstr "Liity viralliseen Facebook-ryhmäämme, jos tarvitset apua sen kanssa!:"
+
+#: templates/enterlink/edit.html:194
+msgid "- we will hook you up. It's not hard!"
+msgstr "- me autamme sinua. Se ei ole vaikeaa!"
+
+#: templates/enterlink/edit.html:203
+msgid ""
+"Please cite the link(s) you just added into the main article body. First "
+"click at the end of the sentence or paragraph you want to cite, then click "
+"the (Cite) button on the edit panel above!"
+msgstr ""
+"Mainitse linkit, jotka lisäsit pääartikkeliin. Napsauta ensin halutun "
+"lauseen tai kappaleen loppusosaa, jonka jälkeen napsauta (Viite) -painiketta "
+"yläpuolella olevassa muokkauspaneelissa!"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:10
+msgid "Add New Infobox Item"
+msgstr "Lisää Uusi Infobox-kohta"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:14
+msgid "Enter a classification or category"
+msgstr "Anna luokitus tai luokka"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:17
+msgid "Enter a value or a description"
+msgstr "Anna arvo tai kuvaus"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:23
+msgid "Add Infobox Item"
+msgstr "Lisää Infobox-kohta"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:25
+#: templates/enterlink/edit_ajax_addlink.html:26
+#: templates/enterlink/edit_ajax_editpagemeta.html:15
+#: templates/enterlink/edit_ajax_page_photo.html:4
+msgid "Close"
+msgstr "Sulje"
+
+#: templates/enterlink/edit_ajax_addlink.html:7
+msgid "Add a Link or File"
+msgstr "Lisää Linkki tai Tiedosto"
+
+#: templates/enterlink/edit_ajax_addlink.html:9
+msgid "File"
+msgstr "Tiedosto"
+
+#: templates/enterlink/edit_ajax_addlink.html:10
+msgid "URL"
+msgstr "URL"
+
+#: templates/enterlink/edit_ajax_addlink.html:10
+msgid "Link"
+msgstr "Linkki"
+
+#: templates/enterlink/edit_ajax_addlink.html:14
+msgid "Upload file"
+msgstr "Lataa tiedosto"
+
+#: templates/enterlink/edit_ajax_addlink.html:24
+msgid "Add Link"
+msgstr "Lisää linkki"
+
+#: templates/enterlink/edit_ajax_editmainphoto.html:7
+msgid "Reset"
+msgstr "Palauta"
+
+#: templates/enterlink/edit_ajax_editpagemeta.html:4
+msgid "Select the topic of this page"
+msgstr "Valitse tämän sivun aihe"
+
+#: templates/enterlink/edit_ajax_editpagemeta.html:8
+msgid "Remove page"
+msgstr "Poista sivu"
+
+#: templates/enterlink/editing-disabled.html:7
+msgid "Editing existing pages temporarily disabled"
+msgstr "Nykyisten sivujen muokkaus on väliaikaisesti poistettu käytöstä"
+
+#: templates/enterlink/editors.html:23
+msgid "Editors"
+msgstr "Editorit"
+
+#: templates/enterlink/editors.html:74
+msgid "Everipedia Editors"
+msgstr "Everipedian Editorit"
+
+#: templates/enterlink/editors.html:93 templates/enterlink/inbox.html:52
+#: templates/enterlink/recent-activity.html:103
+#: templates/enterlink/search.html:89
+msgid "Previous"
+msgstr "Edellinen"
+
+#: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
+#: templates/enterlink/recent-activity.html:107
+#: templates/enterlink/search.html:93
+msgid "Page"
+msgstr "Sivu"
+
+#: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
+#: templates/enterlink/recent-activity.html:107
+#: templates/enterlink/search.html:93
+msgid "of"
+msgstr "/"
+
+#: templates/enterlink/editors.html:101 templates/enterlink/inbox.html:60
+#: templates/enterlink/recent-activity.html:111
+#: templates/enterlink/search.html:97
+msgid "Next"
+msgstr "Seuraava"
+
+#: templates/enterlink/error.html:6
+msgid "Page not found!"
+msgstr "Sivua ei löydy!"
+
+#: templates/enterlink/error.html:211
+msgid "Page not found"
+msgstr "Sivua ei löydy"
+
+#: templates/enterlink/error.html:213
+msgid "In The News"
+msgstr "Uutisissa"
+
+#: templates/enterlink/error.html:214
+#: templates/enterlink/headers/header_dropdown.html:37
+#: templates/enterlink/recent-activity.html:7
+#: templates/enterlink/recent-activity.html:73
+#: templates/enterlink/user.html:192
+msgid "Recent Activity"
+msgstr "Viimeaikaiset Tapahtumat"
+
+#: templates/enterlink/error_410.html:6 templates/enterlink/error_410.html:62
+msgid "This page has been removed"
+msgstr "Tämä sivu on poistettu"
+
+#: templates/enterlink/error_410.html:63
+#: templates/enterlink/in_progress_404.html:86
+msgid "Click here to return to recent activity"
+msgstr "Klikkaa tästä palataksesi viimeiseen tapahtumaan"
+
+#: templates/enterlink/exchange-listings.html:7
+msgid "Exchange Listings"
+msgstr "Pörssilistaukset"
+
+#: templates/enterlink/exchange-listings.html:17
+msgid "Supported Exchanges"
+msgstr "Tuetut Pörssit"
+
+#: templates/enterlink/exchange-listings.html:18
+msgid "The following exchanges indicated that they will support the IQ airdrop"
+msgstr "Seuraavat pörssit ilmaisivat tukevansa IQ -ilmapudotusta"
+
+#: templates/enterlink/exchange-listings.html:142
+msgid "Supported Wallets"
+msgstr "Tuetut Lompakot"
+
+#: templates/enterlink/exchange-listings.html:176
+msgid "Token Pockets"
+msgstr "Merkkitaskut"
+
+#: templates/enterlink/faq.html:20
+msgid "Frequently Asked Questions"
+msgstr "Usein Kysytyt Kysymykset"
+
+#: templates/enterlink/faq.html:24
+msgid "What is Everipedia?"
+msgstr "Mikä on Everipedia?"
+
+#: templates/enterlink/faq.html:25
+msgid ""
+"Everipedia is a knowledge aggregator and knowledge base. We think it's much "
+"easier to edit than Wikipedia. Anyone can create a page about any person, "
+"place, organization, or thing and populate it with relevant reference links/"
+"sources. The only main rules of EP are: Information on the page must always "
+"be cited and the article must be in a neutral point of view. Check out the "
+"actual entry for Everipedia... on"
+msgstr ""
+"Everipedia on tiedon kerääjä ja tietopohja. Mielestämme sitä on paljon "
+"helpompi muokata kuin Wikipediaa. Jokainen voi luoda sivun mistä tahansa "
+"henkilöstä, paikasta, organisaatiosta tai asiasta ja täyttää sen "
+"asiaankuuluvilla linkeillä/lähteillä. EP:n ainoat pääsäännöt ovat: Sivun "
+"tiedoilla on aina oltava lähteet ja artikkelin näkökulman on oltava "
+"neutraali. Tarkista Everipedian oikea merkintä..."
+
+#: templates/enterlink/faq.html:27
+msgid "Why should I sign up?"
+msgstr "Miksi minun pitäisi rekisteröityä?"
+
+#: templates/enterlink/faq.html:28
+msgid ""
+"Because it’s fun and easy! We thought contributing to large knowledge "
+"projects shouldn't require high barriers to entry so we made Everipedia very "
+"easy to navigate, edit, and get started. Editors gain more privileges as "
+"they accumulate IQ and rise through the ranks. Top site-wide editors are "
+"displayed on the front page. Top editors for each page are also displayed."
+msgstr ""
+"Koska se on hauskaa ja helppoa! Ajattelimme, että suuret osaamisprojektit "
+"eivät saisi vaatia liikaa päästäkseen mukaan, joten teimme Everipediasta "
+"helpon navigoida, muokata ja aloittaa. Muokkaajat saavat lisää etuoikeuksia, "
+"kun he keräävät IQ:ta ja nostavat tasoaan. Etusivulla näkyvät sivuston "
+"laajuiset editorit. Jokisen sivun huippueditorit näkyvät myös."
+
+#: templates/enterlink/faq.html:30
+msgid "Try it!"
+msgstr "Kokeile sitä!"
+
+#: templates/enterlink/faq.html:30
+msgid "Sign up here"
+msgstr "Rekisteröidy tästä"
+
+#: templates/enterlink/faq.html:32
+msgid "So how is Everipedia different from Wikipedia and similar sites?"
+msgstr "Joten miten Everipedia eroaa Wikipediasta ja vastaavista sivustoista?"
+
+#: templates/enterlink/faq.html:33
+msgid ""
+"Editing on Everipedia is graphic and modern, talk pages are designed as "
+"discussion threads, celebrities have verified accounts, and anyone can make "
+"pages about anything as long as they are properly cited. Every page from "
+"Wikipedia is already here on Everipedia to build on top of and improve. All "
+"this makes EP the biggest knowledge project ever!"
+msgstr ""
+"Editointi Everipediassa on graafinen ja moderni, keskustelusivut ovat "
+"suunniteltu keskustelukanaviksi, julkkiksilla on vahvistetut tilit ja kuka "
+"tahansa voi tehdä sivun mistä tahansa, kunhan siinä on kunnolliset lähteet. "
+"Jokainen Wikipedian sivu on jo täällä Everipediassa ja niitä voi muokata ja "
+"parantaa. Kaikki tämä tekee EP:stä suurimman tietoprojektin koskaan!"
+
+#: templates/enterlink/faq.html:35
+msgid "Is Everipedia free?"
+msgstr "Onko Everipedia ilmainen?"
+
+#: templates/enterlink/faq.html:36
+msgid ""
+"All information found on Everipedia is freely available for anyone to use "
+"and access. All we ask is a link back to the source Everipedia page for "
+"attribution purposes. The information on this encyclopedia is meant to be "
+"free to all. We will never charge for or withhold any of the information on "
+"this website. We just ask that you do not throttle the site and "
+"programmatically harvest information that would dramatically affect our "
+"servers."
+msgstr ""
+"Kaikki Everipediasta löytyvät tiedot ovat vapaasti kaikkien käytettävissä. "
+"Pyydämme vain viitettä käytettyyn Everipedia -sivuun, jotta tiedon omistus "
+"olisi selvää. Tämän tietosanakirjan tiedot ovat tarkoitettu vapaiksi "
+"kaikille. Emme koskaan veloita sivuston tiedoista tai tai pidätä nitä. "
+"Pyydämme vain, että et sabotoi sivustoa ja kerää järjestelmällisesti "
+"tietoja, jotka vaikuttaisivat dramaattisesti palvelimiimme."
+
+#: templates/enterlink/faq.html:42
+msgid "Much love,"
+msgstr "Rakkaudella,"
+
+#: templates/enterlink/footers/desktop_footer.html:5
+#: templates/enterlink/footers/footer_no_extras.html:5
+#: templates/enterlink/footers/index_footer.html:23
+#: templates/enterlink/footers/mobile_footer.html:130
+#: templates/enterlink/template_blockchain_styled_amp.html:548
+msgid "About"
+msgstr "Tietoja"
+
+#: templates/enterlink/footers/desktop_footer.html:6
+#: templates/enterlink/footers/footer_no_extras.html:6
+#: templates/enterlink/footers/index_footer.html:7
+#: templates/enterlink/footers/index_footer.html:25
+#: templates/enterlink/footers/mobile_footer.html:131
+#: templates/enterlink/template_blockchain_styled_amp.html:549
+msgid "FAQ"
+msgstr "UKK"
+
+#: templates/enterlink/footers/desktop_footer.html:7
+#: templates/enterlink/footers/footer_no_extras.html:7
+#: templates/enterlink/footers/index_footer.html:8
+#: templates/enterlink/footers/index_footer.html:26
+#: templates/enterlink/footers/mobile_footer.html:132
+#: templates/enterlink/template_blockchain_styled_amp.html:550
+msgid "Contact"
+msgstr "Ota yhteyttä"
+
+#: templates/enterlink/footers/desktop_footer.html:8
+#: templates/enterlink/footers/footer_no_extras.html:9
+#: templates/enterlink/footers/index_footer.html:9
+#: templates/enterlink/footers/index_footer.html:27
+#: templates/enterlink/footers/mobile_footer.html:136
+#: templates/enterlink/template_blockchain_styled_amp.html:552
+msgid "Terms"
+msgstr "Ehdot"
+
+#: templates/enterlink/footers/desktop_footer.html:9
+#: templates/enterlink/footers/footer_no_extras.html:10
+#: templates/enterlink/footers/index_footer.html:10
+#: templates/enterlink/footers/index_footer.html:28
+#: templates/enterlink/footers/mobile_footer.html:134
+#: templates/enterlink/headers/header_dropdown.html:17
+#: templates/enterlink/headers/header_dropdown.html:38
+#: templates/enterlink/headers/index_header.html:164
+#: templates/enterlink/headers/index_header.html:173
+#: templates/enterlink/headers/index_header.html:233
+#: templates/enterlink/headers/index_header.html:242
+#: templates/enterlink/headers/index_header.html:264
+#: templates/enterlink/headers/mobile-navbar.html:131
+#: templates/enterlink/headers/mobile-navbar.html:198
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:190
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:238
+#: templates/enterlink/template_blockchain_styled_amp.html:551
+#: templates/enterlink/template_blockchain_styled_amp.html:629
+#: templates/enterlink/template_blockchain_styled_amp.html:687
+msgid "Forum"
+msgstr "Foorumi"
+
+#: templates/enterlink/footers/desktop_footer.html:10
+#: templates/enterlink/footers/footer_no_extras.html:11
+#: templates/enterlink/footers/index_footer.html:11
+#: templates/enterlink/footers/index_footer.html:29
+#: templates/enterlink/footers/mobile_footer.html:137
+#: templates/enterlink/headers/header_dropdown.html:18
+#: templates/enterlink/headers/header_dropdown.html:40
+#: templates/enterlink/template_blockchain_styled_amp.html:553
+msgid "Get IQ"
+msgstr "Hanki IQ"
+
+#: templates/enterlink/footers/desktop_footer.html:30
+#: templates/enterlink/footers/footer_no_extras.html:31
+#: templates/enterlink/footers/mobile_footer.html:157
+#: templates/enterlink/template_blockchain_styled_amp.html:577
+msgid "Powered by"
+msgstr "Mahdollistaa"
+
+#: templates/enterlink/footers/desktop_footer.html:35
+#: templates/enterlink/footers/footer_no_extras.html:36
+#: templates/enterlink/footers/mobile_footer.html:161
+#: templates/enterlink/template_blockchain_styled_amp.html:581
+msgid "API by"
+msgstr "API:n on kehittänyt"
+
+#: templates/enterlink/footers/desktop_footer.html:43
+#: templates/enterlink/footers/footer_no_extras.html:44
+#: templates/enterlink/headers/desktop-navbar-index.html:6
+#: templates/enterlink/headers/index_header.html:93
+#: templates/enterlink/language_selector.html:80
+msgid "Select language"
+msgstr "Valitse kieli"
+
+#: templates/enterlink/footers/forum_footer.html:6
+#: templates/enterlink/footers/pm_footer.html:6
+msgid "Enter a title for the thread"
+msgstr "Syötä ketjun otsikko"
+
+#: templates/enterlink/footers/forum_footer.html:7
+msgid "Enter your post here"
+msgstr "Kirjoita viesti tähän"
+
+#: templates/enterlink/footers/forum_footer.html:8
+#: templates/enterlink/footers/pm_footer.html:7
+msgid "Create New Thread"
+msgstr "Luo Uusi Ketju"
+
+#: templates/enterlink/footers/index_footer.html:5
+msgid "About Everipedia"
+msgstr "Tietoja Everipediasta"
+
+#: templates/enterlink/footers/index_footer.html:6
+#: templates/enterlink/footers/index_footer.html:24
+msgid "How To Use"
+msgstr "Kuinka Käytetään"
+
+#: templates/enterlink/footers/index_footer.html:12
+#: templates/enterlink/footers/index_footer.html:30
+#: templates/enterlink/footers/mobile_footer.html:133
+msgid "Donate"
+msgstr "Lahjoita"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:559
+msgid "By using this website, you agree to the"
+msgstr "Käyttämällä tätä verkkosivustoa hyväksyt"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:559
+msgid "Terms of Use"
+msgstr "Käyttöehdot"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:559
+msgid "Everipedia® is a trademark of Everipedia International"
+msgstr "Everipedia® on Everipedia Internationalin tavaramerkki"
+
+#: templates/enterlink/footers/mobile_footer.html:135
+#: templates/enterlink/headers/index_header.html:165
+#: templates/enterlink/headers/index_header.html:174
+#: templates/enterlink/headers/index_header.html:234
+#: templates/enterlink/headers/index_header.html:243
+#: templates/enterlink/headers/index_header.html:265
+#: templates/enterlink/headers/mobile-navbar.html:138
+#: templates/enterlink/headers/mobile-navbar.html:204
+#: templates/enterlink/template_blockchain_styled_amp.html:694
+msgid "Chat"
+msgstr "Chat"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:29
+#: templates/enterlink/headers/desktop-navbar.html:39
+#: templates/enterlink/headers/index_header.html:156
+#: templates/enterlink/howto.html:61 templates/enterlink/search.html:7
+msgid "Search"
+msgstr "Hae"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:42
+#: templates/enterlink/headers/desktop-navbar-index.html:50
+#: templates/enterlink/headers/desktop-navbar-index.html:60
+#: templates/enterlink/headers/desktop-navbar.html:20
+#: templates/enterlink/headers/desktop-navbar.html:57
+#: templates/enterlink/headers/desktop-navbar.html:67
+#: templates/enterlink/headers/header_dropdown.html:14
+#: templates/enterlink/headers/header_dropdown.html:36
+#: templates/enterlink/headers/index_header.html:231
+#: templates/enterlink/headers/mobile-navbar.html:145
+#: templates/enterlink/headers/mobile-navbar.html:186
+#: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
+#: templates/enterlink/howto.html:74 templates/enterlink/index.html:64
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:51
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:91
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:196
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:232
+#: templates/enterlink/template_blockchain_styled_amp.html:615
+#: templates/enterlink/template_blockchain_styled_amp.html:701
+#: templates/enterlink/user.html:64
+msgid "Create Page"
+msgstr "Luo Sivu"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:49
+#: templates/enterlink/headers/desktop-navbar.html:19
+#: templates/enterlink/howto.html:73 templates/enterlink/index.html:63
+msgid "Paste a link or enter a title"
+msgstr "Liitä linkki tai kirjoita otsikko"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:66
+#: templates/enterlink/headers/desktop-navbar.html:73
+#: templates/enterlink/headers/header_dropdown.html:16
+#: templates/enterlink/headers/header_dropdown.html:35
+#: templates/enterlink/headers/index_header.html:162
+#: templates/enterlink/headers/index_header.html:201
+#: templates/enterlink/headers/index_header.html:232
+#: templates/enterlink/headers/mobile-navbar.html:124
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:45
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:184
+#: templates/enterlink/notifications/index.html:67
+#: templates/enterlink/notifications/index.html:97
+#: templates/enterlink/template_blockchain_styled_amp.html:680
+msgid "Messages"
+msgstr "Viestit"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:72
+#: templates/enterlink/headers/desktop-navbar.html:79
+#: templates/enterlink/headers/header_dropdown.html:15
+#: templates/enterlink/headers/header_dropdown.html:34
+#: templates/enterlink/headers/index_header.html:206
+#: templates/enterlink/headers/index_header.html:230
+#: templates/enterlink/headers/mobile-navbar.html:117
+#: templates/enterlink/inbox.html:12
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:39
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:178
+#: templates/enterlink/notifications/index.html:96
+#: templates/enterlink/template_blockchain_styled_amp.html:673
+msgid "Notifications"
+msgstr "Ilmoitukset"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:84
+#: templates/enterlink/headers/desktop-navbar.html:96
+#: templates/enterlink/headers/index_header.html:217
+msgid "Your IQ Score"
+msgstr "ÄÖ -pisteesi"
+
+#: templates/enterlink/headers/desktop-navbar.html:29
+msgid "Table of contents"
+msgstr "Sisällysluettelo"
+
+#: templates/enterlink/headers/desktop-navbar.html:29
+#: templates/enterlink/template_blockchain_styled_amp.html:105
+msgid "Table of contents and facts for this wiki"
+msgstr "Sisällysluettelo ja faktat tässä wikissä"
+
+#: templates/enterlink/headers/desktop-navbar.html:62
+#: templates/enterlink/headers/mobile-navbar.html:159
+#: templates/enterlink/headers/mobile-navbar.html:210
+#: templates/enterlink/template_blockchain_styled_amp.html:635
+#: templates/enterlink/template_blockchain_styled_amp.html:715
+msgid "Feed"
+msgstr "Syöte"
+
+#: templates/enterlink/headers/desktop-navbar.html:87
+msgid "Please log in with Scatter"
+msgstr "Kirjaudu sisään Scatterin kanssa"
+
+#: templates/enterlink/headers/header_dropdown.html:8
+#: templates/enterlink/headers/header_dropdown.html:28
+msgid "Claim Rewards"
+msgstr ""
+
+#: templates/enterlink/headers/header_dropdown.html:39
+#: templates/enterlink/headers/mobile-navbar.html:153
+#: templates/enterlink/headers/mobile-navbar.html:192
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:68
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:101
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:208
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:250
+#: templates/enterlink/template_blockchain_styled_amp.html:622
+#: templates/enterlink/template_blockchain_styled_amp.html:708
+#: templates/enterlink/user.html:126
+msgid "Help"
+msgstr "Ohje"
+
+#: templates/enterlink/headers/index_header.html:109
+msgid "View Profile"
+msgstr "Näytä profiili"
+
+#: templates/enterlink/headers/index_header.html:128
+msgid "Sign In"
+msgstr "Kirjaudu sisään"
+
+#: templates/enterlink/headers/index_header.html:128
+#: templates/enterlink/headers/index_header.html:172
+#: templates/enterlink/headers/index_header.html:241
+#: templates/enterlink/headers/index_header.html:263
+#: templates/enterlink/index.html:47
+msgid "Register"
+msgstr "Rekisteröidy"
+
+#: templates/enterlink/headers/index_header.html:132
+#: templates/enterlink/login.html:36
+msgid "Username"
+msgstr "Käyttäjätunnus"
+
+#: templates/enterlink/headers/index_header.html:139
+msgid "Need an account? Register here."
+msgstr "Tarvitsetko tilin? Rekisteröidy täällä."
+
+#: templates/enterlink/headers/index_header.html:140
+#: templates/enterlink/headers/index_header.html:171
+#: templates/enterlink/login.html:41
+msgid "Forgot your password?"
+msgstr "Unohditko salasanasi?"
+
+#: templates/enterlink/headers/index_header.html:163
+#: templates/enterlink/inbox.html:23
+msgid "Your Notifications"
+msgstr "Omat ilmoitukset"
+
+#: templates/enterlink/headers/index_header.html:222
+msgid "Get an account"
+msgstr "Hanki tili"
+
+#: templates/enterlink/headers/index_header.html:222
+msgid "or Log in"
+msgstr "tai kirjaudu sisään"
+
+#: templates/enterlink/headers/index_header.html:235
+#: templates/enterlink/headers/index_header.html:244
+#: templates/enterlink/headers/index_header.html:257
+#: templates/enterlink/headers/index_header.html:266
+#: templates/enterlink/headers/mobile-navbar.html:165
+#: templates/enterlink/headers/mobile-navbar.html:216
+#: templates/enterlink/template_blockchain_styled_amp.html:641
+msgid "Language"
+msgstr "Kieli"
+
+#: templates/enterlink/headers/mobile-navbar.html:178
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:224
+#: templates/enterlink/template_blockchain_styled_amp.html:606
+msgid "Register / Log in"
+msgstr "Rekisteröidy / kirjaudu sisään"
+
+#: templates/enterlink/hoverblurb_ajax_blockchain.html:65
+msgid "Go to article"
+msgstr "Siirry artikkeliin"
+
+#: templates/enterlink/hovereditor_ajax.html:67
+msgid "Self citation by"
+msgstr "Itseviittaus"
+
+#: templates/enterlink/hovereditor_ajax.html:72
+msgid "Title"
+msgstr "Otsikko"
+
+#: templates/enterlink/hovereditor_ajax.html:75
+msgid "Rank"
+msgstr "Taso"
+
+#: templates/enterlink/hovereditor_ajax.html:76
+msgid "User since"
+msgstr "Käyttäjä sitten"
+
+#: templates/enterlink/hovereditor_ajax.html:77
+msgid "Last login"
+msgstr "Viimeisin kirjautuminen"
+
+#: templates/enterlink/hovereditor_ajax.html:80
+msgid "Go to Editor's Profile"
+msgstr "Siirry Editorin Profiiliin"
+
+#: templates/enterlink/hoverlink_ajax_blockchain.html:64
+msgid "Discuss Citation"
+msgstr "Keskustele Viitteestä"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:53
+msgid "Download"
+msgstr "Lataa"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:55
+msgid "Direct Link"
+msgstr "Suoralinkki"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:64
+#: templates/enterlink/hoverlink_iframe_blockchain.html:65
+#: templates/enterlink/template_blockchain_styled_desktop.html:195
+#: templates/enterlink/template_blockchain_styled_desktop.html:196
+msgid "Share"
+msgstr "Jaa"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:68
+#: templates/enterlink/template_blockchain_styled_desktop.html:202
+msgid "Copy URL"
+msgstr "Kopioi URL"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:118
+msgid "Play / Pause"
+msgstr "Soita / Tauko"
+
+#: templates/enterlink/howto.html:8 templates/enterlink/howto.html:30
+msgid "How to use Everipedia"
+msgstr "Kuinka käyttää Everipediaa"
+
+#: templates/enterlink/howto.html:10 templates/enterlink/limitreached.html:9
+msgid ""
+"Everipedia is a free and easy to use wiki platform. Write about anyone and "
+"anything!"
+msgstr ""
+"Everipedia on ilmainen ja helppokäyttöinen wiki-alusta. Kirjoita kenestä ja "
+"mistä tahansa!"
+
+#: templates/enterlink/howto.html:36 templates/enterlink/howto.html:45
+msgid "Go back to the page you started from"
+msgstr "Palaa aloittamasi sivuun"
+
+#: templates/enterlink/howto.html:40 templates/enterlink/howto.html:45
+msgid "Go to page"
+msgstr "Mene sivulle"
+
+#: templates/enterlink/howto.html:50
+msgid "Go to your editor profile page"
+msgstr "Siirry editorin profiilisivulle"
+
+#: templates/enterlink/howto.html:50
+msgid "Go to profile"
+msgstr "Siirry profiiliin"
+
+#: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
+msgid "Create a new page now"
+msgstr "Luo uusi sivu nyt"
+
+#: templates/enterlink/howto.html:61
+msgid "Search for an existing page"
+msgstr "Etsi olemassa olevaa sivua"
+
+#: templates/enterlink/in_progress_404.html:6
+msgid "This page is currently being created by another user"
+msgstr "Toinen käyttäjä luo tätä sivua tällä hetkellä"
+
+#: templates/enterlink/in_progress_404.html:82
+msgid ""
+"This page is currently in the process of being created by another user. "
+"Please return later!"
+msgstr "Toinen käyttäjä luo tätä sivua tällä hetkellä. Palaa myöhemmin!"
+
+#: templates/enterlink/inbox.html:30
+msgid "You have"
+msgstr "Sinulla on"
+
+#: templates/enterlink/inbox.html:30
+msgid "unread notifications"
+msgstr "lukemattomia ilmoituksia"
+
+#: templates/enterlink/inbox.html:45
+msgid "You currently do not have any notifications."
+msgstr "Sinulla ei tällä hetkellä ole ilmoituksia."
+
+#: templates/enterlink/index.html:40
+msgid "The world's first encyclopedia on the blockchain"
+msgstr "Maailman ensimmäinen tietosanakirja lohkoketjussa"
+
+#: templates/enterlink/index.html:41
+msgid ""
+"Everipedia's IQ Network is the world's first Encyclopedia that allows anyone "
+"to become a stakeholder in the system and earn rank, rewards & tokens for "
+"curating content."
+msgstr ""
+"Everipedian IQ Verkko on maailman ensimmäinen tietosanakirja, jonka avulla "
+"kuka tahansa voi olla osa järjestelmää ja saada asemia, palkintoja & "
+"pisteitä sisällön valvomisesta."
+
+#: templates/enterlink/index.html:48
+msgid "Learn more"
+msgstr "Lue lisää"
+
+#: templates/enterlink/index.html:79
+msgid "As Seen In"
+msgstr "Kuten nähdään"
+
+#: templates/enterlink/index.html:100
+msgid "An Encyclopedia for the modern age"
+msgstr "Tietosanakirja nykyaikaa varten"
+
+#: templates/enterlink/index.html:104
+msgid ""
+"The Everipedia IQ blockchain provides a new paradigm change and knowledge "
+"economy to disrupt the old centralized internet knowledge encyclopedia model "
+"similar to Wikipedia. By creating a new incentive structure and a "
+"distributed backend hosted within a blockchain, the new Everipedia knowledge "
+"base will be able to improve upon all fundamental features of Wikipedia."
+msgstr ""
+"Everipedian IQ lohkoketju tarjoaa muutoksia ajatusmaailmaan ja "
+"tietoekonomiaan muuttaakseen internetin tavallista, vanhaa Wikipedian "
+"kaltaista tietosanakirjamallia. Luomalla uuden houkuttavan rakenteen ja "
+"jaetun back endin, joka on hostattu lohkoketjussa, Everipedian tietopohja "
+"tulee parantamaan kaikkia Wikipedian perustoimintoja. "
+
+#: templates/enterlink/index.html:112
+msgid "Decentralized"
+msgstr "Desentralisoitu"
+
+#: templates/enterlink/index.html:113
+msgid ""
+"Articles are fetched using IPFS and EOS Storage. Majority of IQ being "
+"distributed during the airdrop."
+msgstr ""
+"Artikkeleita haetaan IPFS- ja EOS-tallennusvälineillä. Suurin osa IQ:sta "
+"jaetaan ilmapudotuksen aikana."
+
+#: templates/enterlink/index.html:117
+msgid "Democratic"
+msgstr "Demokraattinen"
+
+#: templates/enterlink/index.html:118
+msgid ""
+"Proof of Stake (PoS) model allows for voting to change and upgrade the IQ "
+"network as it grows. Also will facilitate batch imports of new content with "
+"no fees."
+msgstr ""
+"Stake-todistus (PoS) -malli mahdollistaa äänestyksen muutoksen ja päivittää "
+"IQ-verkostoa sen kasvaessa. Lisäksi helpotetaan uuden sisällön erätuontia "
+"ilman maksuja."
+
+#: templates/enterlink/index.html:122
+msgid "Censorship Resistant"
+msgstr "Sensuuria Vastustava"
+
+#: templates/enterlink/index.html:123
+msgid ""
+"Live and permanent edits of content on the blockchain beyond the control of "
+"a central authority."
+msgstr ""
+"Sisällön elävät ja pysyvät muokkaukset lohkoketjussa ovat keskushallinnan "
+"valvonnan ulkopuolella."
+
+#: templates/enterlink/index.html:127
+msgid "Financial Incentive"
+msgstr "Taloudellinen Kannustin"
+
+#: templates/enterlink/index.html:128
+msgid ""
+"All holders of IQ will be incentivized to create quality, neutral content "
+"and to work together in building the reputation of the network."
+msgstr ""
+"Kaikkia IQ:n haltijoita kannustetaan luomaan laadukasta, neutraalia sisältöä "
+"ja toimimaan yhdessä verkoston maineen rakentamisessa."
+
+#: templates/enterlink/index.html:139
+msgid "Become an editor today and start creating your own wiki articles."
+msgstr "Ryhdy editoriksi tänään ja aloita omien wikiartikkeleiden luominen."
+
+#: templates/enterlink/index.html:142
+msgid "Open Community"
+msgstr "Avoin Yhteisö"
+
+#: templates/enterlink/index.html:143
+msgid ""
+"Our vibrant community is open and welcoming to people from all backgrounds. "
+"Our guidelines and policies are based on common sense rather than strict "
+"bureaucracy."
+msgstr ""
+"Vilkas yhteisömme on avoin ja tuottaa kaikkien taustojen ihmiset "
+"tervetulleiksi. Ohjeemme ja käytäntömme perustuvat maalaisjärkeen tiukan "
+"byrokratian sijaan."
+
+#: templates/enterlink/index.html:145
+msgid "Redesigned for the modern age"
+msgstr "Uudistettu moderniin aikaan"
+
+#: templates/enterlink/index.html:146
+msgid ""
+"Everipedia is an encyclopedia modernized and re-designed for the twenty-"
+"first century. Our editing interface makes creating and editing wiki's as "
+"easy as using Facebook."
+msgstr ""
+"Everipedia on nykyaikaistettu ja uudelleen suunniteltu tietopaketti 2000-"
+"luvulle. Muokkausliittymämme tekee wikien luomisesta ja muokkaamisesta yhtä "
+"helppoa kuin Facebookin käytöstä."
+
+#: templates/enterlink/index.html:155
+msgid "Follow us on Telegram"
+msgstr "Seuraa meitä Telegramissa"
+
+#: templates/enterlink/index.html:168
+msgid "Led by the Founder of Wikipedia and Genius.com"
+msgstr "Johtaa Wikipedian ja Genius.comin perustaja"
+
+#: templates/enterlink/index.html:171
+msgid ""
+"Everipedia is being led by a team with extensive experience and knowledge "
+"both in the online knowledge space as well as the blockchain industry. The "
+"executive team is made up of several prominent individuals in the industry, "
+"the Co-Founder of Wikipedia, Larry Sanger, the founder of Genius.com, Mahbod "
+"Moghadam, and several others. Academic credentials includes UCLA, Stanford, "
+"Yale & Columbia, covering nationalities from America, Sweden, Norway and "
+"Italy. "
+msgstr ""
+"Everipediaia johtaa tiimi, jolla on laaja kokemus ja tietämys sekä verkko-"
+"osaamisalueella että lohkoketju-alalla. Johtoryhmä koostuu useista "
+"merkittävistä ihmisistä alalla, Wikipedian yhteisperustajasta, Larry "
+"Sangerista, Genius.comin perustajasta, Mahbod Moghadamista ja useista "
+"muista. Akateemiset suositukset ovat muun muassa UCLA, Stanford, Yale & "
+"Columbia, joka kattavat kansallisuudet Amerikasta, Ruotsista, Norjasta ja "
+"Italiasta."
+
+#: templates/enterlink/index.html:172
+msgid "Executive Team"
+msgstr "Yrityksen Johto"
+
+#: templates/enterlink/leadership.html:7
+msgid "Leadership"
+msgstr "Johtajuus"
+
+#: templates/enterlink/leadership.html:23
+msgid "Executive Leadership"
+msgstr "Toimitusjohtajuus"
+
+#: templates/enterlink/leadership.html:35
+msgid "Chief Information Officer"
+msgstr "Tietohallintojohtaja"
+
+#: templates/enterlink/leadership.html:41
+msgid "Chief Executive Officer, Co-Founder"
+msgstr "Toimitusjohtaja, Yhteisperustaja"
+
+#: templates/enterlink/leadership.html:47
+msgid "Chief Technology Officer, Co-Founder"
+msgstr "Teknologiajohtaja, Yhteisperustaja"
+
+#: templates/enterlink/leadership.html:53
+msgid "President, Co-Founder"
+msgstr "Puheenjohtaja, Yhteisperustaja"
+
+#: templates/enterlink/leadership.html:63
+msgid "Director of Software"
+msgstr "Ohjelmiston Johtaja"
+
+#: templates/enterlink/leadership.html:69
+msgid "Chief Operating Officer"
+msgstr "Operatiivinen Johtaja"
+
+#: templates/enterlink/leadership.html:75
+msgid "Chief Community Officer, Co-Founder"
+msgstr "Ylitarkastaja, Yhteisperustaja"
+
+#: templates/enterlink/limitreached.html:7
+msgid "Activity limit reached"
+msgstr "Toiminnan raja saavutettu"
+
+#: templates/enterlink/limitreached.html:23
+msgid ""
+"Hey! You've added 15 morsels of knowledge to Everipedia now, so we have "
+"paused your account until Master Editors have had a chance to review your "
+"work. Shouldn't take too long, you'll probably be good to go in less than 5 "
+"minutes."
+msgstr ""
+"Hei! Olet lisännyt 15 tiedonmurua Everipediaan, joten olemme pysäyttäneet "
+"tilisi, kunnes pääeditorit ovat saaneet tilaisuuden tarkastella työtäsi. Ei "
+"tulisi kestää liian kauan, olet todennäköisesti vapaa lähtemään alle 5 "
+"minuutissa."
+
+#: templates/enterlink/limitreached.html:24
+msgid "In the meantime, please join our official Facebook group:"
+msgstr "Sillä välin, liity mukaan viralliseen Facebook-ryhmäämme:"
+
+#: templates/enterlink/limitreached.html:24
+msgid "It’s the best way to reach the community!"
+msgstr "Se on paras tapa tavoittaa yhteisö!"
+
+#: templates/enterlink/login.html:7
+msgid "Sign in"
+msgstr "Kirjaudu sisään"
+
+#: templates/enterlink/login.html:33
+msgid "Sign in to Everipedia"
+msgstr "Kirjaudu sisään Everipediaan"
+
+#: templates/enterlink/login.html:48
+msgid "Log in with Facebook"
+msgstr "Kirjaudu Facebook-tililläsi"
+
+#: templates/enterlink/login.html:49
+msgid "Log in with Twitter"
+msgstr "Kirjaudu Twitter-tunnuksellasi"
+
+#: templates/enterlink/login.html:58
+msgid "Need an account?"
+msgstr "Tarvitsetko tilin?"
+
+#: templates/enterlink/login.html:58
+msgid "Register here"
+msgstr "Rekisteröidy"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:34
+msgid "Visit Profile"
+msgstr "Vieraile Profiilissa"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:57
+msgid "Settings"
+msgstr "Asetukset"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:73
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:214
+#: templates/enterlink/template_blockchain_styled_amp.html:721
+msgid "Log Out"
+msgstr "Kirjaudu ulos"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:86
+msgid "Register / Log In"
+msgstr "Rekisteröidy / Kirjaudu Sisään"
+
+#: templates/enterlink/notifications/index.html:116
+msgid "New message"
+msgstr "Uusi viesti"
+
+#: templates/enterlink/recent-activity.html:84
+msgid "by"
+msgstr "tekijä"
+
+#: templates/enterlink/register.html:6
+msgid "Create an account"
+msgstr "Luo tunnus"
+
+#: templates/enterlink/register.html:26 templates/enterlink/register.html:28
+msgid "Have an account?"
+msgstr "Onko sinulla tili?"
+
+#: templates/enterlink/register.html:26 templates/enterlink/register.html:28
+msgid "Login"
+msgstr "Kirjaudu"
+
+#: templates/enterlink/register.html:42
+msgid ""
+"Registration is currently invite only due to blockchain software testing. "
+"Join us on Telegram and Reddit in the meantime to become a part of "
+"Everipedia today!"
+msgstr ""
+"Rekisteröinti on tällä hetkellä mahdollista ainoastaan kutsun avulla, "
+"lohkoketjuohjelmiston testaamisen takia. Liity mukaamme Telegramissa ja "
+"Redditissä sillä välin ollaksesi osa Everipediaa tänään!"
+
+#: templates/enterlink/register.html:60
+msgid "Welcome to the Everipedia editor community!"
+msgstr "Tervetuloa Everipedia-editoriyhteisöön!"
+
+#: templates/enterlink/register.html:63
+msgid ""
+"Sign up to become an editor to access more features and an ad-free "
+"experience."
+msgstr ""
+"Kirjaudu sisään ryhtyäksesi editoriksi, jotta pääset käsiksi "
+"lisäominaisuuksiin ja mainosvapaaseen kokemukseen."
+
+#: templates/enterlink/register.html:96
+msgid "Sign up"
+msgstr "Rekisteröidy"
+
+#: templates/enterlink/register.html:97
+msgid "By clicking sign up above you agree to our"
+msgstr "Napsauttamalla yllä olevaa rekisteröintiä hyväksyt meidän"
+
+#: templates/enterlink/register.html:97
+msgid "Terms of Service"
+msgstr "Käyttöehdot"
+
+#: templates/enterlink/rewardsmgmt.html:4
+#: templates/enterlink/rewardsmgmt.html:132
+#, fuzzy
+#| msgid "Brainpower Management"
+msgid "Rewards Management"
+msgstr "Älykkyyshallinta"
+
+#: templates/enterlink/rewardsmgmt.html:135
+msgid "Here you can claim rewards for the edits and / or votes that you made."
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:140
+msgid "Proposal Hash"
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:141
+msgid "Finalized Time"
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:142
+#, fuzzy
+#| msgid "Voting Period"
+msgid "Period"
+msgstr "Äänestyskausi"
+
+#: templates/enterlink/rewardsmgmt.html:143
+msgid "Redeem"
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:150
+#, fuzzy
+#| msgid "Password reset successful"
+msgid "Redeem successful"
+msgstr "Salasanan palautus onnistui"
+
+#: templates/enterlink/search-iframe.html:127
+msgid "Searching..."
+msgstr "Haetaan…"
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "Can't find it below?"
+msgstr "Etkö löydä sitä alta?"
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "Create"
+msgstr "Luo"
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "a new page titled"
+msgstr "uusi sivu nimeltään"
+
+#: templates/enterlink/search.html:45 templates/enterlink/search.html:55
+msgid "Or try the"
+msgstr "Tai kokeile"
+
+#: templates/enterlink/search.html:45 templates/enterlink/search.html:55
+msgid "advanced search."
+msgstr "laajennettu haku."
+
+#: templates/enterlink/search.html:48
+msgid "Everipedia couldn’t find anything with the name"
+msgstr "Everipedia ei löytänyt mitään nimellä"
+
+#: templates/enterlink/search.html:50
+msgid ""
+"If you know any links associated with this page, try searching for those "
+"links"
+msgstr "Jos tiedät tähän sivuun liittyviä linkkejä, yritä etsiä niitä"
+
+#: templates/enterlink/template_ajax_genius.html:17
+#: templates/enterlink/template_amp_ajax_genius.html:98
+msgid "Verified Editor"
+msgstr "Vahvistettu Editori "
+
+#: templates/enterlink/template_blockchain_styled_amp.html:123
+msgid "Bullet"
+msgstr "Piste"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:185
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid "Recent news"
+msgstr "Tuoreimmat uutiset"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:185
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid ""
+"Everipedia IQ tokens are now in circulation on the EOS mainnet. Follow "
+"Everipedia on"
+msgstr ""
+"Everipedia IQ-pelimerkit ovat nyt liikkeessä EOS-verkossa. Seuraa Everipediaa"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:185
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid "to learn about upcoming features and developments!"
+msgstr "oppiaksesi tulevista ominaisuuksista ja kehityksestä!"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:197
+#: templates/enterlink/template_blockchain_styled_desktop.html:143
+msgid "Verified Page"
+msgstr "Vahvistettu Sivu"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:273
+msgid "Quick Biography"
+msgstr "Nopea elämäkerta"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:275
+msgid "Quick Facts For This Wiki"
+msgstr "Tämän Wikin Viitelinkit"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:304
+#: templates/enterlink/template_blockchain_styled_desktop.html:361
+msgid "Image & Video Gallery"
+msgstr "Kuva & Videogalleria"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:306
+#: templates/enterlink/template_blockchain_styled_desktop.html:363
+msgid "images, pictures, and videos"
+msgstr "kuvia, valokuvia ja videoita"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:310
+msgid "Gallery"
+msgstr "Galleria"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:327
+#: templates/enterlink/template_blockchain_styled_desktop.html:496
+msgid "Reference Links For This Biography"
+msgstr "Tämän Biografian Viitelinkit"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:329
+#: templates/enterlink/template_blockchain_styled_desktop.html:498
+msgid "Reference Links For This Wiki"
+msgstr "Tämän Wikin Viitelinkit"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:332
+#: templates/enterlink/template_blockchain_styled_desktop.html:501
+msgid ""
+"Links to historical reviews, career / educational facts, and other "
+"encyclopedic information"
+msgstr ""
+"Linkit historiallisiin arvosteluihin, ura/koulutus faktoihin ja muihin "
+"ensyklopedisiin tietoihin"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:337
+#: templates/enterlink/template_blockchain_styled_desktop.html:507
+msgid "All information for"
+msgstr "Kaikki tiedot"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:337
+#: templates/enterlink/template_blockchain_styled_desktop.html:507
+msgid ""
+"wiki comes from the below links. Any source is valid, including Twitter, "
+"Facebook, Instagram, and LinkedIn. Pictures, videos, biodata, and files "
+"relating to"
+msgstr ""
+"wiki tulee alla olevista linkkeistä. Jokainen lähde on kelvollinen, myös "
+"Twitter, Facebook, Instagram ja LinkedIn. Kuvat, videot, biodata ja "
+"tiedostot liittyen "
+
+#: templates/enterlink/template_blockchain_styled_amp.html:337
+#: templates/enterlink/template_blockchain_styled_desktop.html:507
+msgid "are also acceptable encyclopedic sources."
+msgstr "ovat myös hyväksyttäviä ensyklopedisia lähteitä."
+
+#: templates/enterlink/template_blockchain_styled_amp.html:352
+#: templates/enterlink/template_blockchain_styled_desktop.html:528
+msgid ""
+"See related encyclopedia articles, biographies, reviews, and historical "
+"facts."
+msgstr ""
+"Katso liittyviä ensyklopedia-artikkeleita, elämäkertoja, arvosteluja ja "
+"historiallisia faktoja."
+
+#: templates/enterlink/template_blockchain_styled_amp.html:356
+#: templates/enterlink/template_blockchain_styled_desktop.html:535
+msgid "Other wiki pages related to"
+msgstr "Muita liittyviä wikisivuja"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:535
+msgid "Created"
+msgstr "Luotu"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:536
+msgid "Last Modified"
+msgstr "Viimeksi Muokattu"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:537
+msgid "IPFS"
+msgstr "IPFS"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:757
+msgid "Top Page Editors"
+msgstr "Parhaat Sivueditorit"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:777
+msgid "Share this page"
+msgstr "Jaa tämä sivu"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:789
+msgid "DIRECT LINK"
+msgstr "SUORA LINKKI"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:794
+#: templates/enterlink/template_blockchain_styled_desktop.html:221
+msgid "Suggested Hashtags"
+msgstr "Ehdotetut Hashtagit"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:828
+#: templates/enterlink/template_blockchain_styled_desktop.html:259
+msgid "QR Code"
+msgstr "QR-koodi"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:14
+#: templates/enterlink/template_blockchain_styled_desktop.html:19
+msgid "Bio"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:16
+#: templates/enterlink/template_blockchain_styled_desktop.html:17
+#: templates/enterlink/template_blockchain_styled_desktop.html:225
+msgid "bio"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:16
+#: templates/enterlink/template_blockchain_styled_desktop.html:17
+#: templates/enterlink/template_blockchain_styled_desktop.html:23
+#: templates/enterlink/template_blockchain_styled_desktop.html:24
+#: templates/enterlink/template_blockchain_styled_desktop.html:30
+#: templates/enterlink/template_blockchain_styled_desktop.html:31
+#: templates/enterlink/template_blockchain_styled_desktop.html:37
+#: templates/enterlink/template_blockchain_styled_desktop.html:38
+msgid "encylopedia"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:21
+#: templates/enterlink/template_blockchain_styled_desktop.html:26
+#: templates/enterlink/template_blockchain_styled_desktop.html:28
+#: templates/enterlink/template_blockchain_styled_desktop.html:33
+msgid "Review"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:23
+#: templates/enterlink/template_blockchain_styled_desktop.html:24
+#: templates/enterlink/template_blockchain_styled_desktop.html:30
+#: templates/enterlink/template_blockchain_styled_desktop.html:31
+#: templates/enterlink/template_blockchain_styled_desktop.html:231
+#: templates/enterlink/template_blockchain_styled_desktop.html:237
+#: templates/enterlink/template_blockchain_styled_desktop.html:243
+msgid "review"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:30
+#: templates/enterlink/template_blockchain_styled_desktop.html:31
+#: templates/enterlink/template_blockchain_styled_desktop.html:232
+#: templates/enterlink/template_blockchain_styled_desktop.html:238
+#: templates/enterlink/template_blockchain_styled_desktop.html:244
+msgid "history"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid "and"
+msgstr "ja"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:187
+#: templates/enterlink/voting_table_of_contents.html:12
+msgid "Edit"
+msgstr "Muokkaa"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:190
+msgid "Vote"
+msgstr "Äänestä"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:205
+msgid "Embed / Widget"
+msgstr "Upota/Widgetti"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:224
+#: templates/enterlink/template_blockchain_styled_desktop.html:230
+#: templates/enterlink/template_blockchain_styled_desktop.html:236
+#: templates/enterlink/template_blockchain_styled_desktop.html:242
+msgid "wiki"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:226
+msgid "net worth"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:227
+msgid "age"
+msgstr "Sivu"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:228
+msgid "married"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:233
+msgid "sales"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:234
+#: templates/enterlink/template_blockchain_styled_desktop.html:240
+#: templates/enterlink/template_blockchain_styled_desktop.html:246
+msgid "facts"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:239
+msgid "founders"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:245
+msgid "encyclopedia"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:329
+msgid "Profiles"
+msgstr "Profiilit"
+
+#: templates/enterlink/transfer-iq.html:5
+#: templates/enterlink/transfer-iq.html:119
+msgid "Transfer IQ"
+msgstr "Siirrä IQ"
+
+#: templates/enterlink/transfer-iq.html:121
+msgid "Please make sure you have set up"
+msgstr "Varmista, että olet määrittänyt"
+
+#: templates/enterlink/transfer-iq.html:121
+msgid "beforehand"
+msgstr "etukäteen"
+
+#: templates/enterlink/transfer-iq.html:123
+msgid "Sender"
+msgstr "Lähetä"
+
+#: templates/enterlink/transfer-iq.html:125
+msgid "Recipient"
+msgstr "Vastaanottaja"
+
+#: templates/enterlink/transfer-iq.html:129
+msgid "Memo"
+msgstr "Muistiinpano"
+
+#: templates/enterlink/transfer-iq.html:134
+msgid "Transaction successful"
+msgstr "Tapahtuma onnistui"
+
+#: templates/enterlink/transfer-iq.html:138
+msgid "Buy RAM"
+msgstr "Osta RAM"
+
+#: templates/enterlink/transfer-iq.html:142
+msgid "See your RAM, CPU, and Bandwidth on FeeXplorer"
+msgstr "Katso RAM, CPU ja kaistanleveys FeeXplorerilla"
+
+#: templates/enterlink/user.html:12
+msgid "profile"
+msgstr "profiili"
+
+#: templates/enterlink/user.html:38
+msgid "Everipedia Rank"
+msgstr "Everipedia Taso"
+
+#: templates/enterlink/user.html:53
+msgid "This user is verified"
+msgstr "Tämä käyttäjä on vahvistettu"
+
+#: templates/enterlink/user.html:56
+msgid "Everipedia Staff"
+msgstr "Everipedia Henkilökunta"
+
+#: templates/enterlink/user.html:62 templates/enterlink/user.html:67
+msgid "Message"
+msgstr "Viesti"
+
+#: templates/enterlink/user.html:71 templates/enterlink/user.html:123
+msgid "Edit Profile"
+msgstr "Muokkaa Profiilia"
+
+#: templates/enterlink/user.html:74
+msgid "Everipedia Page"
+msgstr "Everipedia Sivu"
+
+#: templates/enterlink/user.html:80
+msgid "IQ Score"
+msgstr "IQ-pisteet"
+
+#: templates/enterlink/user.html:81
+msgid "Pages created"
+msgstr "Luodut sivut"
+
+#: templates/enterlink/user.html:82
+msgid "Total edits"
+msgstr "Muokkaukset yhteensä"
+
+#: templates/enterlink/user.html:94
+msgid "Joined"
+msgstr "Liittynyt"
+
+#: templates/enterlink/user.html:125
+msgid "Upload Avatar / Profile Picture"
+msgstr "Lataa Avatar/Profiilikuva"
+
+#: templates/enterlink/user.html:153
+msgid "Enable account? Uncheck to ban"
+msgstr "Ota tili käyttöön? Poista valinta estääksesi"
+
+#: templates/enterlink/user.html:157
+msgid "IP Ban"
+msgstr "IP-esto"
+
+#: templates/enterlink/user.html:157
+msgid "Ban"
+msgstr "Esto"
+
+#: templates/enterlink/user.html:157
+msgid "Clear"
+msgstr "Tyhjennä"
+
+#: templates/enterlink/user.html:159
+msgid "Verify the account?"
+msgstr "Varmista tili?"
+
+#: templates/enterlink/user.html:163
+msgid "Is Staff?"
+msgstr "Henkilökuntaa?"
+
+#: templates/enterlink/user.html:177
+msgid "Save all changes"
+msgstr "Tallenna kaikki muutokset"
+
+#: templates/enterlink/user.html:178
+msgid "Cancel"
+msgstr "Peruuta"
+
+#: templates/enterlink/user.html:211
+msgid "Change Avatar Picture"
+msgstr "Muuta Avatar-kuvaa"
+
+#: templates/enterlink/user.html:219
+msgid "Please select your Everipedia page"
+msgstr "Valitse Everipedia-sivu"
+
+#: templates/enterlink/user.html:224
+msgid "Continue"
+msgstr "Jatka"
+
+#: templates/enterlink/votehistory.html:7
+msgid "Voting"
+msgstr "Äänestys"
+
+#: templates/enterlink/votehistory.html:95
+msgid "Voting History"
+msgstr "Äänestyshistoria"
+
+#: templates/enterlink/voting.html:197
+msgid "Before"
+msgstr "Ennen"
+
+#: templates/enterlink/voting.html:199
+msgid "After"
+msgstr "Jälkeen"
+
+#: templates/enterlink/voting_table_of_contents.html:7
+msgid "Article"
+msgstr "Artikkeli"
+
+#: templates/enterlink/voting_table_of_contents.html:17
+msgid "Current Vote"
+msgstr "Nykyinen Äänestys"
+
+#: templates/enterlink/voting_table_of_contents.html:20
+#: templates/enterlink/voting_table_of_contents.html:62
+msgid "Reject"
+msgstr "Hylkää"
+
+#: templates/enterlink/voting_table_of_contents.html:21
+msgid "Accept"
+msgstr "Hyväksy"
+
+#: templates/enterlink/voting_table_of_contents.html:28
+msgid "Voting Period"
+msgstr "Äänestyskausi"
+
+#: templates/enterlink/voting_table_of_contents.html:34
+msgid "to"
+msgstr "vastaanottaja"
+
+#: templates/enterlink/voting_table_of_contents.html:51
+msgid "Place Votes"
+msgstr "Aseta äänet"
+
+#: templates/enterlink/voting_table_of_contents.html:63
+msgid "Approve"
+msgstr "Hyväksy"
+
+#: templates/enterlink/voting_table_of_contents.html:67
+msgid "Changes"
+msgstr "Muutokset"
+
+#: templates/enterlink/welcome.html:7
+msgid "Welcome to Everipedia, the encyclopedia of everything"
+msgstr "Tervetuloa Everipediaan, kaiken tietosanakirjaan"

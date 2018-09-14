@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+{% load i18n %}
+<html>
+<head>
+    <script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/jquery.js"></script>
+    <script src="{{ STATIC_URL }}jsi18n/{{ LANGUAGE_CODE }}/djangojs.js"></script>
+    <link rel="stylesheet" href="/static/dropzone/dropzone.css">
+    <link rel="stylesheet" href="/static/dropzone/style.css">
+    {% include 'enterlink/inline-css/bootstrap-custom-EP.html' %}
+    {% include 'enterlink/inline-css/common-css.html' %}
+	<link href="https://epcdn-vz.azureedge.net/static/css/featherlight-min-css.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+	{% include 'enterlink/inline-js/featherlight.html' %}
+
+    <style>
+        html{
+            background: transparent;
+        }
+        body{
+            background-color: transparent;
+            overflow-x: hidden;
+        }
+        .dropzone .dz-preview .dz-image {
+            width: 255px;
+            height: 255px;
+        }
+
+        .dropzone {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+{#            border: 1px solid #d4dbe0;#}
+            border: none;
+            background: #fff;
+            padding: 0px !important;
+            margin: auto;
+        }
+
+        .dz-message{
+            color: #3B94D9;
+            padding-right: 40px;
+            padding-left: 40px;
+        }
+        .dz-name-input{
+            width: 100%;
+            position: absolute;
+            bottom: 15%;
+            left: 0px;
+            height: 25%;
+            line-height: 20px;
+            border: none;
+            padding: 5px 7px;
+            font-size: 14px;
+            overflow: hidden;
+            color: #536570;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            cursor: pointer !important;
+            border-top: 1px solid #f0f0f0;
+            background: #f5f8fa;
+            float: left;
+        }
+
+        .dz-name-input::-webkit-input-placeholder {color: rgba(83, 101, 112, 0.75);}
+        .dz-name-input:-moz-placeholder {color: rgba(83, 101, 112, 0.75);}
+        .dz-name-input::-moz-placeholder {color: rgba(83, 101, 112, 0.75);}
+        .dz-name-input:-ms-input-placeholder {color: rgba(83, 101, 112, 0.75);}
+
+        .dropzone .dz-preview{
+            width:100%;
+            height: 60%;
+            margin: 0px;
+            float: left;
+            z-index: 1000;
+        }
+        .dropzone .dz-preview.dz-image-preview .dz-details{
+            height: 100%;
+            padding: 0px;
+        }
+        .dropzone .dz-preview.dz-image-preview .dz-details img.dz-preview-thumb{
+            height: 66%;
+            margin: 5px 0px 5px 0px;
+            border-radius: 3px;
+            box-shadow: 4px 4px 5px rgba(0,0,0,.4);
+        }
+        .dropzone .dz-preview .dz-details {
+            opacity: 1;
+        }
+        .dropzone .dz-preview .dz-details .dz-size{
+            font-size: 13px ;
+            margin: 0px;
+        }
+        .dropzone button.submit-picture{
+            width: 100%;
+            height: 15%;
+            border: 1px solid #caddca;
+            position: absolute;
+            bottom: 0px;
+            left:0px;
+            float: left;
+            font-size: 19px;
+            color: #659466;
+            background: #f3fbf3;
+            cursor: pointer;
+        }
+        .dropzone button.submit-picture:hover{
+            background: #e9f1e9;
+        }
+        .dropzone .dz-progress{
+            z-index: 1;
+            visibility: hidden;
+        }
+
+
+    </style>
+
+
+</head>
+
+<script>
+    var identifier = window.parent.document.getElementById('avatar_edit_iframe').getAttribute("data-identifier");
+    // console.log("identifier is " + identifier);
+    var photo_type = window.parent.document.getElementById('avatar_edit_iframe').getAttribute("data-photo_type");
+    var picElementID = window.parent.document.getElementById('avatar_edit_iframe').getAttribute("data-pic-element-id");
+    var localPageID = window.parent.document.getElementById('avatar_edit_iframe').getAttribute("data-pageID");
+    var uploadDestination = "/AJAX-REQUEST/AJAX_Picture_Upload/" + photo_type + "/" + identifier + "/";
+    // console.log("Photo upload destination: " + uploadDestination);
+    $('#myDropzoneElement').attr('action', uploadDestination );
+</script>
+
+
+<script>document.write("<form class='dropzone' id='myDropzoneElement' action='" + uploadDestination + "' method='POST' enctype='multipart/form-data'>");</script>
+    <script>document.write("<input name='pageID' id='pageID' type='hidden' value='" + localPageID + "' />");</script>
+    <div class="fallback">
+        <input name="file" type="file" multiple />
+    </div>
+    <button type="button" class="submit-picture" id="submit-all">{% trans 'OK' %}</button>
+    <textarea id="profile_pic_textarea" class="dz-name-input" name="caption" placeholder="{% trans 'Enter a caption for the main image of the page.' %}"></textarea>
+</form>
+
+<script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/bootstrap-min-js.js"></script>
+
+
+<script src="https://www.iqnetwork.io/static/dropzone/dropzone.js"></script>
+
+
+
+<script>
+    Dropzone.options.myDropzoneElement = {
+        paramName: "file", // The name that will be used to transfer the file
+        uploadMultiple: false,
+        parallelUploads: 1,
+        autoProcessQueue: false,
+        dictDefaultMessage: gettext("Drag and drop your photo here or click to upload.") + " (GIF, PNG, JPEG, SVG, BMP)",
+        acceptedFiles: ".png,.jpg,.gif,.bmp,.jpeg,.jfif,.jif,.svg,.PNG,.JPG,.GIF,.BMP,.JPEG,.SVG,.JFIF,.JIF",
+        maxFilesize: 10, // MB
+        createImageThumbnails: true,
+        addRemoveLinks: true,
+        previewTemplate:
+        '<div class="dz-preview dz-file-preview">' +
+          '<div class="dz-details">' +
+            '<img class="dz-preview-thumb" data-dz-thumbnail />' +
+            '<div class="dz-filename"><span data-dz-name></span></div>' +
+            '<div class="dz-size" data-dz-size></div>' +
+          '</div>' +
+          '<div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>' +
+          '<div class="dz-success-mark"><span>✔</span></div>' +
+          '<div class="dz-error-mark"><span>✘</span></div>' +
+          '<div class="dz-error-message"><span data-dz-errormessage></span></div>' +
+        '</div>',
+        init: function() {
+            myDropzone = this;
+            $('#submit-all').on("click", function () {
+                $('.dz-progress').css('z-index', '1000 !important');
+                $('.dz-progress').css('visibility', 'visible');
+                var theDescription = $('.dz-name-input').val();
+                if (theDescription == "")
+                {
+                    alert(gettext('Please enter a description for the photo'));
+                    return false;
+                }
+
+                myDropzone.processQueue();
+            });
+
+            this.on("addedfile", function() {
+              // console.log("File Added");
+            });
+
+            this.on("success", function(file, responseJSON) {
+                var filename = responseJSON["filename"];
+                var caption = responseJSON["caption"];
+                myDropzone.options.autoProcessQueue = true;
+                // console.log("PHOTO UPLOAD SUCCESSFUL");
+                // console.log(filename);
+                // console.log(caption);
+                var re = /(?:\.([^.]+))?$/;
+                var ext = re.exec(file.name)[1];
+                ext = ext.replace("jpg", "jpeg").toLowerCase();
+                var photo_type = window.parent.document.getElementById('avatar_edit_iframe').getAttribute("data-photo_type");
+                var identifier = window.parent.document.getElementById('avatar_edit_iframe').getAttribute("data-identifier");
+                var pageID = window.parent.document.getElementById('avatar_edit_iframe').getAttribute("data-pageID");
+                var theUrl = "https://everipedia-storage.s3.amazonaws.com/" + photo_type + "/" + filename + "."+ ext; // + "?" + new Date().getTime();
+                var theThumbUrl = "https://everipedia-storage.s3.amazonaws.com/" + photo_type + "/" + filename + "_100x100."+ ext; // + "?" + new Date().getTime();
+
+                if (photo_type == "ProfilePics"){
+                    $('#form_tinymce_container_ifr', window.parent.document).contents().find("img.main-photo").attr("src", theUrl);
+                    $('#form_tinymce_container_ifr', window.parent.document).contents().find("img.main-photo").attr("data-mce-src", theUrl);
+                    $('#form_tinymce_container_ifr', window.parent.document).contents().find("img.main-photo").attr("data-thumbnail", theThumbUrl);
+                    $('#form_tinymce_container_ifr', window.parent.document).contents().find("figcaption.main-photo-caption").html(caption);
+                    var iframe = window.parent.document.getElementById('avatar_edit_iframe');
+                    iframe.src = iframe.src;
+                    window.parent.document.deselectTinyMCE();
+                } else if (photo_type == "EditorAvatar") {
+
+                    $(window.parent.document.getElementById('editor_avatar')).attr('src', theUrl );
+                    $(window.parent.document.querySelector('.avatar-iq .img-circle')).attr('src', theUrl );
+                    $(window.parent.document.querySelector('.featherlight-close-icon')).click();
+
+                }
+
+                this.parent.destroy();
+
+            });
+        },
+
+
+    };
+
+
+</script>
+
+</html>

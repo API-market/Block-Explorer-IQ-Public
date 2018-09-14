@@ -1,0 +1,155 @@
+{% load i18n %}
+
+<linkpost style="">
+    <form class="addlink-form" action="/{{pageinfo.stripped_username}}/advanced_edit/" enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        <div id="addlink_container" class="addlink">
+            <h5>{% trans 'Add a Link or File' %}</h5>
+            <div class="addlink-radio-container" style="float: right; width: auto; margin-top: 9px; margin-left: 10px;">
+                <label class="addlink-radio"><input id="id_file_radio" type="radio" name="group1" value="id_file" style=""> {% trans 'File' %} |  </label>
+                <label class="addlink-radio"><input id="id_linkurl_radio"  type="radio" name="group1" value="id_linkurl"> {% trans 'URL' %} / {% trans 'Link' %}</label>
+            </div>
+            {{ linkform.hidden_newlinktag_field }}
+            <div class="file-upload-row">
+                {% trans "Upload file" %}: {{ newlinkfileform.file  }}
+            </div>
+            {{ linkform.linkurl }}
+            {{ linkform.linkcomment }}
+        <input type="hidden" id="postset_id_input" name="postset_id" value="{{ pageinfo.id }}">
+        <input type="hidden" id="facebookID_id_input" name="facebookID" value="{{pageinfo.facebook_id}}">
+
+        </div>
+    </form>
+</linkpost>
+<input class="ajax-addlink-button" id='link_submission_button' onclick='ajaxAddLink();' type='button' value='{% trans "Add Link" %}' />
+<div class='close-addlink-menu' onclick='addlinkClose();'>
+    {% trans "Close" %}
+</div>
+<span id="ajax_addlink_result" style="font-size:13px; float: left; margin: 5px 0px 0px 10px;"></span>
+<div id="addlink_error">
+    {% if linkform.errors %}
+        <span class="addlink-linkform-error">{{ linkform.linkurl.errors }}</span>
+        <span class="addlink-linkform-error">{{ linkform.linkcomment.errors }}</span>
+    {% endif %}
+    {% if newlinkfileform.errors %}
+        <span class="addlink-newlinkfileform-error">{{ newlinkfileform.linkcomment.errors }}</span>
+        <span class="addlink-newlinkfileform-error">{{ newlinkfileform.file.errors }}</span>
+    {% endif %}
+</div>
+<script>
+function ajaxAddLink() {
+    var formData = new FormData($('form.addlink-form')[0]);
+    var ajaxResultBox = $("span#ajax_addlink_result");
+    try {
+        theContent = window.frames['id_linkcomment_ifr'].document.getElementById('tinymce').innerHTML;
+    }
+    catch(err) {
+        theContent = window.frames['id_linkcomment_ifr'].contentDocument.getElementById('tinymce').innerHTML;
+    }
+    if (theContent != "") {
+        var citeHTML = $('#form_tinymce_container_ifr').contents().find(".reference-container").html();
+        formData.append('nl_linkcomment', theContent);
+        formData.append('pageSlug', ARTICLE_SLUG);
+        formData.append('citeHTML', citeHTML);
+    }
+
+    $.ajax({
+        type: "POST",
+        url: "/AJAX-REQUEST/AJAX_Add_New_Link/",
+        data: formData,
+        processData: false,
+        contentType: false,
+        cache: false,
+        beforeSend: function( xhr ) {
+            ajaxResultBox.html("<img class='addlink-loading-gif' src='https://epcdn-vz.azureedge.net/static/images/loading.gif'><span style='top: 6px; left: 6px; position: relative; color: #666;'>" + gettext("Adding, please wait...") + "</span>");
+        },
+        success:
+            function(data) {
+                switch(data) {
+                    case "ERROR_LINKLIMIT":
+                        ajaxResultBox.css('color', "red");
+                        ajaxResultBox.html(gettext("You have been posting a lot of links today. Wait a bit for the community to respond to your content. New editors are limited to posting only 250 submissions a day."));
+                        break;
+                    case "ERROR_ALREADY_EXISTS":
+                        ajaxResultBox.css('color', "red");
+                        ajaxResultBox.html(gettext("This link is already on this page, you can still edit the link summary to improve the information on EP!"));
+                        break;
+                    case "ERROR_WIKIPEDIA_LINK":
+                        ajaxResultBox.css('color', "red");
+                        ajaxResultBox.html(gettext("Links to Wikipedia pages are not allowed, for technical reasons. Please try again."));
+                        break;
+                    case "ERROR_NO_URL":
+                        ajaxResultBox.css('color', "red");
+                        ajaxResultBox.html(gettext("No URL provided, please try again"));
+                        break;
+                    case "ERROR_NO_DESCRIPTION":
+                        ajaxResultBox.css('color', "red");
+                        ajaxResultBox.html(gettext("Please provide a description for the link or file."));
+                        break;
+                    case "ERROR_VAGUE_DESCRIPTION":
+                        ajaxResultBox.css('color', "red");
+                        ajaxResultBox.html(gettext("Please provide a more scholarly description."));
+                        break;
+                    default:
+                        if (data["type"] == "NORMAL"){
+                            $('#form_tinymce_container_ifr').contents().find(".lower-body .reference-container ul.reference-list").append(data["htmlblock"]);
+                            var $el = $("#form_tinymce_container_ifr").contents().find(".lower-body .reference-container .reference-list li:last-child");
+                            var $linkBox = $("#addlink-box-wrapper");
+                            var bottomOffset = $el.offset().top + $el.outerHeight() - $linkBox.outerHeight();
+                            $('html, body').animate({scrollTop: bottomOffset}, 500);
+                        }
+                        else if (data["type"] == "MEDIA"){
+                            $('#form_tinymce_container_ifr').contents().find(".lower-body .media-gallery ul.media-list").append(data["htmlblock"]);
+                            var $el = $("#form_tinymce_container_ifr").contents().find(".lower-body .media-gallery ul.media-list li:last-child");
+                            var bottomOffset = $el.offset().top + $el.outerHeight();
+                            $('html, body').animate({scrollTop: bottomOffset}, 500);
+
+                        }
+                        ajaxResultBox.css('color', "green");
+                        var htmlBoxResult = "<span style='position: relative; top: 13px;'>" + gettext('File uploaded successfully.') + "</span>";
+                        ajaxResultBox.html(htmlBoxResult);
+                        break;
+                }
+            },
+        complete:
+            function(data) {
+                $('#form_tinymce_container_ifr').contents().find(".reference-container ul.reference-list li .delete-btn-wrap, .media-gallery ul li .delete-btn-wrap").click(function() {
+                    $(this).parent().parent().remove();
+                });
+                $('#form_tinymce_container_ifr').contents().find(".reference-container ul.reference-list li .add-btn-wrap, .media-gallery ul li .add-btn-wrap").click(function() {
+                    $("#addlink-box-wrapper").show();
+                    $(".mce-toolbar-grp.mce-container.mce-panel.mce-stack-layout-item.mce-first").hide();
+                    $("#addlink-box .mce-toolbar-grp.mce-container.mce-panel.mce-stack-layout-item.mce-first").show();
+                });
+            }
+    });
+    return false;
+}
+
+
+
+$(document).ready(function() {
+    $(".file-upload-row").hide();
+    $("#id_linkurl_radio").prop("checked", true);
+    $("input[name$='group1']").click(function () {
+        var test = $(this).val();
+        if (test == "id_file") {
+            $(".file-upload-row").show();
+            $(".addlink-newlinkfileform-error").show();
+            $("#id_linkurl").hide();
+            $(".addlink-linkform-error").hide();
+            $('#link_submission_button').val(gettext("Add File"));
+        }
+        else if (test == "id_linkurl") {
+            $(".file-upload-row").hide();
+            $(".addlink-newlinkfileform-error").hide();
+            $("#id_linkurl").show();
+            $(".addlink-linkform-error").show();
+            $('#link_submission_button').val(gettext("Add Link"));
+        }
+    });
+
+    tinymce_attach_textarea_addlink_iframe("id_linkcomment");
+});
+
+</script>

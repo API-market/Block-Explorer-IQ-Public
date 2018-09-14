@@ -1,0 +1,54 @@
+{% load i18n %}
+
+	<footer class="everi_footer" style="background:none; border:0px;">
+		<ul style="text-align: center;">
+			<li><a href="/everipedia/">{% trans 'About' %}</a></li>
+			<li><a href="/wiki/everipedia-faq/">{% trans 'FAQ' %}</a></li>
+			<li><a href="/contact/">{% trans 'Contact' %}</a></li>
+			<li><a href="/wiki/everipedia-terms/">{% trans 'Terms' %}</a></li>
+            <li><a rel="nofollow" href="https://www.reddit.com/r/Everipedia/">{% trans 'Forum' %}</a></li>
+			<li><a rel="nofollow" href="/exchange-listings/">{% trans 'Get IQ' %}</a></li>
+			<li class="social-line">
+				<div class="footer-social">
+					<a class='social-logo' href="http://facebook.com/everipedia" title="Everipedia on Facebook">
+						<img alt="Facebook" src="https://epcdn-vz.azureedge.net/static/images/facebook.png"/>
+					</a>
+					<a class='social-logo' href="http://twitter.com/everipedia" title="Everipedia on Twitter">
+						<img alt="Twitter" src="https://epcdn-vz.azureedge.net/static/images/twitter.png"/>
+					</a>
+					<a class='social-logo' href="https://www.reddit.com/r/Everipedia/" title="Everipedia on Reddit">
+						<img alt="Reddit" src="https://epcdn-vz.azureedge.net/static/images/reddit.png"/>
+					</a>
+					<a class='social-logo' href="https://t.me/everipedia" title="Everipedia on Telegram">
+						<img alt="Telegram" src="https://epcdn-vz.azureedge.net/static/images/telegram.png"/>
+					</a>
+				</div>
+			</li>
+			<li class="eos-powered-line">
+				<img class='cc-img' src="https://epcdn-vz.azureedge.net/static/images/cc.png" style="width:12px; height:12px;"/>
+				 2018 <span id="page-author">Everipedia International <img class='cayman-flag-footer' src="https://epcdn-vz.azureedge.net/static/images/flags/cayman_flag.svg"></span>
+				<span id="powered-by-eos">{% trans "Powered by" %} <a class="eos-link" href="https://eos.io/">EOS.IO</a>
+					<a class="eos-link" href="https://eos.io/">
+						<img class="eos-footer-img" src="https://epcdn-vz.azureedge.net/static/images/eos-logo.png" >
+					</a>
+				</span>
+				<span id="api-by-libertyblock">{% trans 'API by' %} <a class="liberty-link" href="https://libertyblock.io/">LibertyBlock</a>
+					<a class="liberty-link" href="https://libertyblock.io/">
+						<img class="liberty-footer-img" src="https://epcdn-vz.azureedge.net/static/images/libertyblock.png" >
+					</a>
+				</span>
+			</li>
+        </ul>
+        <div class="lightbox" id="ll1">
+            <h5 style="color:#000;">{% trans 'Select language' %}</h5>
+            {% include "enterlink/language_selector.html" %}
+        </div>
+
+	</footer>
+<!--- Include Footer Scripts -->
+
+{% if not isTemplatePage  %}
+{% include "enterlink/footers/footerJS.html" %}
+{% endif %}
+
+

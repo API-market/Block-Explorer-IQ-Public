@@ -1,0 +1,179 @@
+<script>
+
+
+$( "#editprofile_btn" ).click(function() {
+    $( "#editprofile_ct" ).toggle();
+    $( "#editprofile_btn" ).toggle();
+});
+
+$( "#editprofile_cancel" ).click(function() {
+    $( "#editprofile_ct" ).toggle();
+    $( "#editprofile_btn" ).toggle();
+});
+
+$("#id_isverified").click(function (event) {
+    $.ajax({
+    type: "GET",
+    url: "/AJAX-REQUEST/AJAX_User_Verify_Ban/verify/" + EDITOR_ID + "/",
+    success: function (data) {
+        }
+    });
+});
+$("#id_is_staff").click(function (event) {
+    $.ajax({
+    type: "GET",
+    url: "/AJAX-REQUEST/AJAX_User_Verify_Ban/staff/" + EDITOR_ID + "/",
+    success: function (data) {
+        }
+    });
+});
+$("#id_is_active").change(function (event) {
+    $.ajax({
+    type: "GET",
+    url: "/AJAX-REQUEST/AJAX_User_Verify_Ban/ban/" + EDITOR_ID + "/",
+    success: function (data) {
+        }
+    });
+});
+$(".ipbutton").click(function (event) {
+    var buttonID = $(this).attr('id');
+    var userID = $(this).attr('data-userID');
+    $.ajax({
+        type: "GET",
+        url: "/AJAX-REQUEST/AJAX_IP_Ban/" + buttonID + "/" + userID + "/",
+        success: function (data) {
+            }
+    });
+});
+
+
+function ajax_execute_search_UserEPPage() {
+    var resultBoxSelector = ".featherlight-content #mergepage_results";
+    $(".featherlight-content #mergepage_container #processingbox").html("<img class='addlink-loading-gif' src='https://epcdn-vz.azureedge.net/static/images/loading.gif'><span style='margin-left: 10px; position: relative; top: 2px; color: goldenrod;'>" + gettext("Searching...") + "</span>");
+    var searchedterm;
+    searchedterm = $(this).val();
+    var inputSelector = this;
+    if (searchedterm == "") {
+        $(resultBoxSelector).html("");
+    }
+    else {
+        $.get('/AJAX-REQUEST/AJAX_Search/merge-page/', {searchterm: searchedterm}, function (data) {
+            $(".featherlight-content #mergepage_container #processingbox").html("");
+            $(resultBoxSelector).html(data);
+            $(resultBoxSelector).show();
+            $(resultBoxSelector + " li").each(function () {
+                $(this).on("click", function () {
+                    var tooltipHTML = $(this).find('.tooltip-html').html();
+                    $(inputSelector).val(tooltipHTML);
+                    $(resultBoxSelector).hide();
+                });
+            });
+
+
+        });
+    }
+}
+
+function ajax_ep_page_insert() {
+    var theDest = $(".featherlight-content #mergepage_container #AJAXBox-Userview-EP").val();
+    $(".featherlight-content #mergepage_container #processingbox").html("");
+    $(".featherlight-content .featherlight-close-icon").click();
+};
+
+
+$(document).on('keyup', '#AJAXBox-Userview-EP', jQuery.debounce(600, ajax_execute_search_UserEPPage ));
+
+function runTour() {
+    var tour = new Tour({
+        storage: false,
+        steps: [
+            {
+                element: "#nothing_cuc",
+                backdrop: true,
+                title: gettext("Editor profile"),
+                orphan: true,
+                content: gettext("The editor profile page shows the pages the user has edited, references they’ve added to a page, and comments they’ve made."),
+                onHidden: function () {
+                    $( "#editprofile_ct" ).show();
+                    $( "#editprofile_btn" ).hide();
+                }
+            },
+            {
+                container: "body",
+                element: "#editavatar-btn",
+                placement: "auto right",
+                title: gettext("Profile photo"),
+                content: gettext("Click here to upload a picture for your editor profile."),
+            },
+            {
+                container: "body",
+                element: "#id_first_name",
+                placement: "top",
+                title: gettext("Enter your profile info"),
+                content: gettext("(Optional) Enter your name, email, nationality, language, etc."),
+            },
+            {
+                container: "body",
+                element: "#id_everipediapage",
+                placement: "top",
+                title: gettext("Link your Everipedia page"),
+                content: gettext("If you already created an Everipedia article about yourself, you can link to it here."),
+            },
+            {
+                container: "body",
+                element: "#id_btc_addr",
+                placement: "top",
+                title: gettext("(Optional) Add your cryptocurrency wallet addresses"),
+                content: gettext("If you have any cryptocurrencies, add the wallet addresses here. People may donate to you if they like your work! If you do not have a wallet, you can get one here: <img class='userview-crypto-logo-helper' src='https://epcdn-vz.azureedge.net/static/images/bitcoin-icon.svg'/><a class='helper-crypto-anchor' rel='nofollow' target='_blank' href='https://www.coinbase.com/'>Bitcoin</a>, <img class='userview-crypto-logo-helper' style='margin-right: 0px;' src='https://epcdn-vz.azureedge.net/static/images/ethereum-icon.png'/><a class='helper-crypto-anchor' rel='nofollow' target='_blank' href='https://www.coinbase.com/'>Ethereum</a>, <img class='userview-crypto-logo-helper' src='https://epcdn-vz.azureedge.net/static/images/dogecoin-logo.png'/><a class='helper-crypto-anchor' rel='nofollow' target='_blank' href='https://my.dogechain.info/#/overview'>Dogecoin</a> "),
+            },
+            {
+                container: "body",
+                element: "input.userview-page-save",
+                placement: "auto right",
+                title: gettext("Save changes"),
+                content: gettext("When you are done, click here to save your changes."),
+            },
+            {
+                container: "body",
+                element: "#editprofile_createpage_btn",
+                placement: "bottom",
+                title: gettext("Create Page"),
+                content: gettext("You can also create a new wiki article by clicking here."),
+            },
+            // {
+            //     container: "body",
+            //     element: ".app-navbar",
+            //     placement: "auto bottom",
+            //     title: "Title of my step",
+            //     content: "Content of my step"
+            // }
+        ],
+        template: "<div class='popover tour'>" +
+            "<div class='arrow'></div>" +
+            "<button class='btn btn-default close-tour' data-role='end'><span class='icon icon-circle-with-cross'></span></button>" +
+            "<h3 class='popover-title'></h3>" +
+            "<div class='popover-content'></div>" +
+            "<div class='popover-navigation'>" +
+            "<button class='btn btn-default' style='float:left;' data-role='prev'>« " + gettext("Pre") + "</button>" +
+            "<span data-role='separator'></span>" +
+            "<button class='btn btn-default' style='float:right;' data-role='next'>" + gettext("Next") + " »</button>" +
+            "</div>" +
+            "" +
+            "</div>",
+    });
+
+    // Initialize the tour
+    tour.init();
+
+    // Start the tour
+    tour.start();
+}
+
+// execute/clear BS loaders for docs
+  $(function(){
+    if (window.BS&&window.BS.loader&&window.BS.loader.length) {
+      while(BS.loader.length){(BS.loader.pop())()}
+    }
+  })
+
+</script>

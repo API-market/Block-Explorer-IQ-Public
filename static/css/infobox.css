@@ -1,0 +1,298 @@
+.bio-ct-infobox h5 {
+text-align:center;
+width:100%;
+padding:7px 0;
+border-radius:3px;
+background-color:#f5f8fa;
+font-size:15px;
+}
+
+.infobox-add-button, #infobox-closeinfoboxbtn, #pagemeta-closepagemetabtn, #mainphotoedit-close-btn {
+width:100%;
+padding:5px;
+margin-top:15px;
+border:1px solid transparent;
+border-radius:2px;
+box-shadow:0 1px 0 rgba(255,255,255,0.15) inset;
+background-color:#71B8E3;
+border-color:#71B8E3;
+color:#fff;
+font-size:15px;
+}
+
+.infobox-add-button:hover, #infobox-closeinfoboxbtn:hover, #pagemeta-closepagemetabtn:hover, #mainphotoedit-close-btn:hover {
+color:#FFF;
+background-color:#7bc5f6;
+border-color:#7bc5f6
+}
+
+#pagemeta-closepagemetabtn{
+	font-size: 17px;
+}
+
+.bio-ct-infobox ul {
+width:100%;
+float:left;
+height: 100%;
+}
+
+.bio-ct-infobox ul li {
+width:100%;
+float:left
+}
+
+#newinfobox{
+float: left;
+width: 100%;
+display: block;
+}
+
+.infobox-input-container {
+padding:3px 0!important
+}
+
+.infobox-input-container ul {
+list-style-type:inherit;
+margin-bottom:inherit;
+font:inherit/21px inherit;
+}
+
+.infobox-input-container ul li {
+padding:inherit;
+display:flex;
+font:inherit/21px ;
+}
+
+.infobox-input-container .infobox-infocontent li > div,.infobox-input-container .infobox-infotype li > div {
+line-height:1.2
+}
+
+.infobox-input-container .infobox-infotype li > div:not(.tag-editor-spacer) {
+background-color:#7bc5f6;
+color:#fff;
+white-space:normal;
+padding:5px
+}
+
+.infobox-input-container .infobox-infotype li > div.tag-editor-tag {
+	width: 100%;
+	background-color: #ffffff;
+	font-family: "Poppins", Helvetica, Arial;
+	border: 0px solid green;
+	word-wrap: break-word;
+	text-overflow: ellipsis;
+	font-size: 14px;
+	text-align: center !important;
+	padding: 3px 5px 4px 5px;
+	margin: 0;
+	line-height: inherit;
+	color: #544e52;
+	font-weight: 600;
+}
+
+.infobox-input-container .infobox-infotype li > div.tag-editor-tag.active {
+padding:0!important
+}
+
+.infobox-input-container .infobox-infotype li > div.tag-editor-delete {
+border-top:1px solid #7bc5f6;
+border-right:1px solid #7bc5f6;
+border-bottom:1px solid #7bc5f6;
+background-color:#fff;
+color:#000;
+display:none
+}
+
+.infobox-input-container button.infotype-submit, .bio-ct-infobox input[type="text"].tag-input{
+    font-family: "Poppins", Helvetica, Arial !important;
+}
+
+.infobox-input-container .infobox-infocontent li > div:not(.tag-editor-spacer) {
+	background-color: #ffffff;
+	white-space: normal;
+	padding: 5px !important;
+	width: 100% !important;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	border-left: 0 dashed rgba(128,128,128,0.13);
+	font-size: 13px;
+	padding: 4px 3px 2px 10px;
+	color: #666;
+}
+
+.infobox-input-container .infobox-infocontent li > div.tag-editor-tag.active {
+padding:0 0 7px 3px !important
+}
+
+.infobox-input-container .infobox-infocontent li > div.tag-editor-tag.active > .mce-tinymce.mce-container > .mce-container-body div.mce-edit-area {
+margin-right:0px;
+}
+
+
+.infobox-input-container .infobox-infocontent li > div.tag-editor-delete {
+background-color:#fff;
+color:#000;
+padding: 5px 4px 4px 4px !important;
+width: 21px!important;
+}
+
+.infobox-input-container .bio-ct-infobox ul li:not(:last-child){
+border-bottom: 1px solid rgba(128,128,128,0.13);
+padding: 0px !important;
+}
+
+.tag-editor-tag input {
+padding:2px
+}
+
+span.infobox-infotype {
+width:40%;
+float:left
+}
+
+span.infobox-infocontent {
+width:59%;
+float:right
+}
+
+.infobox-extras{
+float: left;
+display: block;
+width: 100%;
+}
+
+.tag-editor {
+border:none;
+padding:0;
+margin:0
+}
+
+.tag-editor .tag-editor-spacer {
+width:auto!important;
+border:none!important;
+font-size:15px;
+padding:2px 3px 0!important;
+height:auto!important;
+text-align:center!important;
+cursor:pointer!important;
+line-height:1!important
+}
+
+.tag-editor .dummy-spacer {
+display:none
+}
+
+.tag-editor .tag-editor-delete i {
+line-height:8px
+}
+
+.bio-ct-infobox input[type="text"].tag-input {
+padding:2px 0 2px 5px !important;
+height:auto;
+border: 1px solid #f0f0f0;
+border-radius: 4px;
+-webkit-appearance: caret;
+}
+
+
+.bio-ct-infobox #infobox_edit_list .edit-infobox-line{
+float: left;
+width: 100%;
+display: block;
+}
+
+
+.infobox-input-container div.mce-container-body,.infobox-input-container div.mce-tinymce.mce-container,.infobox-input-container div.mce-edit-area {
+padding:0!important
+}
+
+.infobox-input-container div.mce-tinymce.mce-container{
+border-radius: 2px;
+width: calc(100% - 2px) !important;
+}
+
+.infobox-input-container button.infotype-submit {
+background-color: #dff0d8;
+color: green;
+width: 100%;
+margin-top: 5px;
+border-radius: 3px;
+padding: 5px 0px 5px 0px;
+border-style: none;
+font-size: 14px;
+font-weight: 700;
+}
+
+.infobox-input-container button.infotype-submit:hover {
+background: rgba(228, 245, 221, 0.8);
+}
+
+.tag-editor-tag input.tag-input {
+height:auto!important;
+font-size:12px!important;
+width:100%!important;
+margin-bottom:2px!important
+}
+
+.add-new-infobox {
+text-align:center;
+margin-top:10px;
+float:left;
+width:100%;
+margin-bottom:5px;
+font-size:16px;
+}
+
+ul.ui-autocomplete.ui-menu {
+border-color:#e6e6e6
+}
+
+ul.ui-autocomplete.ui-menu li.ui-menu-item {
+font-size:13px;
+padding:3px 4px
+}
+
+ul.ui-autocomplete.ui-menu li.ui-menu-item:not(:last-child) {
+border-bottom:1px solid #f0f0f0
+}
+
+#newinfobox .infobox-input-container .infobox-infotype li > div:not(.tag-editor-spacer):not(.active) {
+background-color:rgba(123,197,246,0);
+border:1px solid #3097d1;
+color:#3097d1;
+text-align:center;
+cursor: pointer;
+font-size: 15px;
+}
+
+#newinfobox .infobox-input-container .infobox-infocontent li > div:not(.tag-editor-spacer):not(.active) {
+background-color: #fff;
+border: 1px solid #d8d8d8;
+color: #838383;
+text-align: center;
+min-height: 48px;
+font-size: 15px;
+cursor: pointer;
+}
+
+#newinfobox .infobox-input-container .infobox-infocontent li:first-child > div.tag-editor-delete {
+display:none;
+}
+
+.infobox-input-container .infobox-infocontent li > div.tag-editor-tag {
+margin-left:3px;
+text-align:left;
+}
+
+#newinfobox .infobox-input-container li .tag-editor-delete {
+border-left:none!important
+}
+
+#newinfobox .infobox-infotype .tag-editor-delete,#newinfobox .infobox-infotype .tag-editor-spacer {
+display:none
+}
+
+#newinfobox .infobox-input-container .infobox-infocontent ul.tag-editor {
+margin-left:5px
+}

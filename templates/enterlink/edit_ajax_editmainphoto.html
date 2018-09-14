@@ -1,0 +1,8 @@
+{% load i18n %}
+{% load enterlink_custom_tags %}
+<span id="profile_photo_container" style="display: block !important;">
+{% include "enterlink/edit_ajax_page_photo.html" %}
+</span>
+<a href="javascript:void(0);" onclick="initiatePictureDropzone();" id="editavatar-btn">
+    <span class="icon icon-cycle"></span><span class="edit-btn-text">{% trans 'Reset' %}</span>
+</a>

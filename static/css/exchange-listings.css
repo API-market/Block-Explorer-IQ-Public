@@ -1,0 +1,72 @@
+*{
+	font-family: 'Poppins', Helevetica, Arial;
+}
+
+h1.exchange-heading{
+	margin-bottom: 30px;
+    text-align: center;
+}
+
+.exchange-subheading{
+	margin-bottom: 30px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.wallet-heading{
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+ul.exchange-list{
+	list-style: none;
+	width: 100%;
+	text-align: center;
+}
+
+ul.exchange-list li{
+	padding: 0px 10px;
+	width: 170px;
+	height: 100px;
+	display: inline-block;
+	border-top: 1px solid rgba(128,128,128,0.13);
+    border-left: 1px solid rgba(128,128,128,0.13);
+    -webkit-box-shadow: 3px 3px 4px 0px rgba(196,196,196,1);
+    -moz-box-shadow: 3px 3px 4px 0px rgba(196,196,196,1);
+    box-shadow: 3px 3px 4px 0px rgba(196,196,196,1);
+	margin: 0px 5px 5px 0px;
+	cursor: pointer;
+}
+ul.exchange-list li:hover{
+	background: rgba(211, 211, 211, 0.22);
+}
+
+ul.exchange-list li a{
+	width: 100%;
+	float: left;
+	height: 100%;
+}
+
+ul.exchange-list li a .logo-wrap{
+	float:	left;
+    width: 150px;
+    text-align: center;
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+ul.exchange-list li a .logo-wrap .exchange-text{
+	margin-left: 7px;
+    color: white;
+    font-size: 17px;
+    position: relative;
+    top: 5px;
+}
+
+
+
+
+ul.exchange-list li a .logo-wrap .exchange-logo{
+	object-fit: contain;
+}

@@ -1,0 +1,10 @@
+./fbwiki/settings.py
+*.pyc
+*__pycache__/
+.idea
+./fbwiki/settings.pyc
+instance_deployer.sh
+bundle.zip
+*.swp
+/.ssh
+

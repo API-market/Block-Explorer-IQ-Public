@@ -1,0 +1,243 @@
+@font-face {
+    font-family:'Lora';
+    font-style:normal;
+    font-weight:400;
+    src:url(https://epcdn-vz.azureedge.net/static/fonts/Lora-Regular.woff) format("woff")
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('https://epcdn-vz.azureedge.net/static/fonts/Lora-Bold.woff') format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('https://epcdn-vz.azureedge.net/static/fonts/Lora-Italic.woff') format('woff');
+    font-style: italic;
+}
+
+p {
+margin:0;
+padding:0 0 0 3px;
+border:0;
+font-weight:400;
+font-size:16px;
+line-height:1.4;
+}
+
+a {
+    color: #3097d1;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #216a94;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#tinymce caption.fn, #tinymce span.fn, #tinymce table caption{
+    font-weight: 500;
+    font-style: normal;
+}
+
+div.mce-edit-area {
+border-radius:12px 12px 12px 12px;
+overflow:hidden;
+font-weight:400;
+font-size:16px;
+line-height:1.4;
+}
+
+@media (max-width: 565px) {
+p {
+font-size:15px
+}
+}
+
+#tinymce {
+width:100%;
+float:left;
+margin:0;
+list-style-position:inside;
+background-color:#FFF;
+font-size: 13px;
+}
+#tinymce td, th{
+font-size: 13px;
+font-weight: 400;
+}
+
+#tinymce table.infobox {
+width:100%!important
+}
+
+#tinymce tr {
+border-bottom:1px solid rgba(128,128,128,0.13);
+max-width:100%
+}
+
+#tinymce tr p {
+margin-bottom:0
+}
+
+#tinymce * {
+max-width:100%
+}
+
+#tinymce img:not(.geodot) {
+float:left
+}
+
+#tinymce td {
+padding-left:7px!important;
+max-width:100%;
+white-space:normal!important
+}
+
+#tinymce td span {
+white-space:normal!important
+}
+
+#tinymce tr th:not([colspan]) {
+text-align:center!important;
+padding:3px 6px 3px 3px !important;
+border-right:1px dashed rgba(128,128,128,0.13)
+}
+
+#tinymce tr th[colspan] {
+font-size:110%
+}
+
+#tinymce tr th[style="text-align:center;background:lavender"] {
+background:rgba(236,236,236,0.62)!important;
+border-radius:2px;
+padding:3px;
+font-size:14px;
+font-weight:400!important
+}
+
+#tinymce tr th.navbox-title {
+background:#f5f5f5!important
+}
+
+#tinymce tr th[style="background-color:#B0C4DE;"] {
+background:rgba(236,236,236,0.62)!important
+}
+
+#tinymce tr td {
+max-width:100%;
+padding-top:3px!important;
+padding-bottom:3px!important;
+vertical-align:middle
+}
+
+#tinymce tr td p {
+word-break:break-all
+}
+
+#tinymce tr td img {
+object-fit:contain
+}
+
+#tinymce tr.mergedtoprow th[colspan="2"] {
+text-align:center!important
+}
+
+#tinymce table.geography tr.mergedtoprow th[colspan="2"] {
+background-color:rgba(78,228,78,0.3)
+}
+
+#tinymce tr td th[style="width:25%"] {
+background-color:red
+}
+
+#tinymce td:first-child img {
+width:100%;
+text-align:center
+}
+
+#tinymce caption.fn,#tinymce span.fn,#tinymce table caption {
+padding-top:0;
+padding-bottom:0;
+color:initial;
+text-align:center;
+font-size:19px;
+}
+
+#tinymce tr td.plainlist {
+padding-left:5px;
+padding-right:5px
+}
+
+#tinymce tr td.plainlist li,#tinymce .hlist li {
+list-style-type:none
+}
+
+#tinymce tr td.plainlist li:last-child,#tinymce .hlist li:last-child,#tinymce li:last-child {
+border-bottom:none
+}
+
+#tinymce li:last-child {
+border-bottom:none
+}
+
+#tinymce li {
+list-style-type:none
+}
+
+#tinymce td.label {
+font-size:100%!important;
+text-align:left;
+font-weight:400;
+display:block;
+line-height:inherit
+}
+
+#tinymce div.geonugget,#tinymce div.geonugget * {
+max-width:initial!important
+}
+
+#tinymce div.geonugget img {
+float:none;
+width:auto
+}
+
+#tinymce .NavFrame,#tinymce .NavHead,#tinymce .NavContent {
+padding:3px!important;
+text-align:center!important
+}
+
+#tinymce .NavFrame .NavToggle {
+display:none
+}
+
+#tinymce .infobox table {
+width:100%!important;
+float:left;
+overflow:hidden
+}
+
+#tinymce .infobox table tr {
+border-bottom:inherit!important
+}
+
+#tinymce .infobox table tr td {
+max-width:100%;
+padding-top:inherit!important;
+padding-bottom:inherit!important;
+vertical-align:middle
+}
+
+#tinymce .infobox table td {
+padding-left:inherit!important
+}
+
+#tinymce table.ep-blobbox-table th {
+border-right:inherit!important
+}
+
+body#tinymce[data-id="id_blobbox"] .mce-item-table, body#tinymce[data-id="id_blobbox"] .mce-item-table td, body#tinymce[data-id="id_blobbox"] .mce-item-table th, body#tinymce[data-id="id_blobbox"] .mce-item-table caption {
+    border: 1px solid rgba(128,128,128,0.13);
+}

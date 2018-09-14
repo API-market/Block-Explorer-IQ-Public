@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+   @font-face {
+    font-family:'Lora';
+    font-style:normal;
+    font-weight:400;
+    src:url('https://epcdn-vz.azureedge.net/static/fonts/Lora-Regular.woff') format("woff")
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('https://epcdn-vz.azureedge.net/static/fonts/Lora-Bold.woff') format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('https://epcdn-vz.azureedge.net/static/fonts/Lora-Italic.woff') format('woff');
+    font-style: italic;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://epcdn-vz.azureedge.net/static/fonts/Poppins-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('https://epcdn-vz.azureedge.net/static/fonts/Poppins-SemiBold.woff') format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('https://epcdn-vz.azureedge.net/static/fonts/Poppins-RegItalic.woff') format('woff');
+    font-style: italic;
+}
+
+
+
+
+.blurb-wrap {
+    font-size: 16px;
+    font-family: 'Lora', 'Garamond', 'Georgia' !important;
+    color: #444;
+}
+
+.blurb-wrap p {
+    line-height: 1.6em;
+    margin: 0px;
+}
+
+body a {
+    color: #3B94D9;
+    text-decoration: none;
+}
+
+ .h1, .h2, .h3, .h4, .h5, .h6, h1,
+ h2, h3, h4, h5, h6 {
+	font-family:inherit;
+	font-weight:bold;
+	line-height:1.2;
+
+}
+
+h1 {
+    display: inline-block;
+    width: 100%;
+    word-break: break-word;
+    height: 55px;
+    padding: 0px;
+    font-size: 2.8em;
+    line-height: 55px;
+    color: #444;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-top: 0;
+    margin-bottom: 3px;
+    float: left;
+}
+
+ .h1, .h2, .h3, h1, h2, h3 {
+    margin-top: 22px;
+    margin-bottom: 11px;
+}
+
+.h2, h2{
+    font-size: 30px;
+}
+
+ .h3, h3{
+    font-size: 24px;
+}
+
+a {
+    color: #3B94D9;
+    text-decoration: none;
+}
+
+#tinymce{
+    margin: 0px;
+}
+.lower-body table.mce-item-table, .lower-body .mce-item-table td, .lower-body .mce-item-table th, .lower-body .mce-item-table caption{
+    border: none;
+    font-size: 15px;
+}
+.left-body {
+   font-family: 'Lora', 'Garamond', 'Georgia';
+}
+.left-body {
+    width: 70%;
+    float: left;
+}
+.left-body .blurb-inline-image-container {
+    float: right;
+    border: 1px solid #c1d0d7;
+    width: 200px;
+}
+.left-body .blurbimage-caption{
+    float: right;
+    padding: 5px;
+    font-size: 14px;
+    text-align: left;
+    font-style: italic;
+}
+.right-body {
+    width: 25%;
+    float: right;
+}
+.right-body .infobox-wrap {
+    float: left;
+    width: 100%;
+}
+.right-body .main-photo-wrap{
+    float: left;
+    display: block;
+    width: 100%;
+    margin: 0px;
+}
+.right-body .main-photo {
+    float: left;
+    display: block;
+    width: 100%;
+}
+.right-body .main-photo-caption {
+    float: left;
+    width: calc(100% - 12px);
+    text-align: center;
+    padding: 5px;
+    min-height: 14px;
+    margin-top: 10px;
+    border: 1px solid rgba(128,128,128,0.25);
+}
+.right-body .media-orig-source-wrap{
+    float: left;
+    width: calc(100% - 2px);
+    border: 1px solid slategray;
+    border-top: 0px;
+    word-break: break-all;
+}
+.right-body .media-orig-source-wrap .main-photo-og-url-label{
+    float: left;
+    font-weight: bold;
+    border-bottom: 1px solid slategray;
+    border-top: 0px;
+    padding: 3px;
+    word-break: break-all;
+    background: #e4ebee;
+    width: calc(100% - 6px);
+    text-align: center;
+    font-size: 16px;
+}
+.right-body .media-orig-source-wrap .main-photo-og-url{
+    float: left;
+    width: calc(100% - 12px);
+    padding: 5px;
+    border-top: 0px;
+    word-break: break-all;
+    font-size: 16px;
+}
+.right-body .nonblob-wrap {
+    float: left;
+    border: 1px solid rgba(128,128,128,0.25);
+    width: calc(100% - 2px);
+    margin-top: 10px;
+    min-height: 24px;
+}
+.right-body .nonblob-wrap .ibox-list-nonplural{
+    background: white;
+    border: none;
+}
+.right-body .nonblob-wrap .ibox-list-nonplural > tbody > tr > td{
+    border: none;
+}
+.right-body .nonblob-wrap .ibox-list-nonplural table td, .right-body .nonblob-wrap .ibox-list-nonplural table tr{
+    padding: 3px 5px 3px 5px;
+    width: calc(100% - 10px);
+}
+.right-body .nonblob-wrap .ibox-item-plural .ibox-schema-row td, .right-body .nonblob-wrap .ibox-item-plural tr{
+    padding: 3px 5px 3px 5px;
+    width: calc(100% - 10px);
+}
+.right-body .nonblob-wrap .ibox-plural-value{
+    float: left;
+    width: 100%;
+    background: white;
+    font-size: 18px;
+}
+.right-body .nonblob-wrap .ibox-plural-value:not(:last-child){
+    border-bottom: 0px solid white !important;
+}
+.right-body .nonblob-wrap .ibox-item-nonplural,.right-body .nonblob-wrap .ibox-item-plural{
+    float: left;
+    width: 100%;
+    background: white;
+    border: none;
+}
+.right-body .nonblob-wrap > ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.right-body .nonblob-wrap > ul > li{
+    border-bottom: 1px solid lightgrey;
+}
+.right-body .nonblob-wrap .ibox-nonplural-key{
+    background: #e7e7e7;
+    color: #303030;
+    text-align: center;
+    font-weight: bold;
+    padding: 3px 0px;
+}
+.right-body .nonblob-wrap .delete-btn-wrap, .right-body .nonblob-wrap .delete-row-wrap{
+    display: none;
+}
+.right-body .nonblob-wrap .ibox-nonplural-value{
+    padding: 2px 5px 2px 0px !important;
+    font-size: 18px;
+}
+.right-body .nonblob-wrap .ibox-item-plural > tbody{
+    display: block;
+    float: left;
+    width: 100%;
+}
+.right-body .nonblob-wrap .ibox-plural-key{
+    background: #e7e7e7;
+    color: #303030;
+    text-align: center;
+    font-weight: bold;
+    float: left;
+    margin-left: 2px;
+    width: calc(100% - 17px) !important;
+}
+.right-body .nonblob-wrap .ibox-item-plural .ibox-value-row{
+    display: grid;
+}
+.right-body .nonblob-wrap .ibox-plural-key .ibox-plural-key-inner{
+    width: 100%;
+    float: left;
+    padding: 0px;
+    border: 0px;
+}
+.right-body .nonblob-wrap .ibox-plural-list{
+    padding: 5px 3px 5px 3px;
+    width: calc(100% - 6px);
+    float: left;
+}
+.right-body .nonblob-wrap .ibox-item-plural tr.ibox-plural-list{
+    width: calc(100% - 7px);
+    border: none;
+    float: left;
+    padding: 0px;
+    margin: 3px 0px 3px 2px;
+}
+.right-body .nonblob-wrap .ibox-item-plural .ibox-schema-row{
+float: left;
+    display: inline-table;
+    width: calc(100% - 1px);
+    margin: 0px 0px 0px 0px;
+    border: 0px solid white;
+    padding: 0px 0px 0px 0px;
+    margin-left: 1px;
+}
+.right-body .nonblob-wrap .ibox-schema-row{
+    border-top: 1px dotted #e7e8e9;
+    background-color: white;
+    padding-left: 5px;
+    font-size: 13px;
+    font-style: italic;
+}
+.right-body .nonblob-wrap .ibox-schema-row .ibox-schema-label{
+    background: #c1d1d770;
+    font-weight: bold;
+    color: #000000;
+    width: 40% !important;
+
+}
+.right-body .nonblob-wrap .ibox-additionalschematype{
+    text-align: left;
+}
+.right-body .pagemeta-box{
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+.right-body .pagemeta-box .pagemeta-table{
+    border: 1px solid slategray;
+    float: left;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+.right-body .pagemeta-box .pagemeta-table td.no-edit{
+    background: #c1d1d770;
+    font-weight: bold;
+    color: #000000;
+    width: 50% !important;
+    padding: 3px 5px 3px 5px;
+    font-size: 13px;
+}
+.right-body .pagemeta-box .pagemeta-table td.meta-value{
+    padding: 3px 5px 3px 5px;
+    width: calc(100% - 10px);
+    background: none;
+}
+.lower-body{
+    float: left;
+    width: 100%;
+}
+.media-row > table{
+    width: 100%;
+}
+.media-row .media-embed-wrap{
+    width: calc(30% - 10px);
+    float: left;
+    border: 1px solid #c1d1d7 !important;
+}
+.media-row .media-embed-wrap .media-obj {
+    width: 100%;
+    float: left;
+}
+.media-row .media-extras-wrap{
+width: calc(70% - 5px);
+float: left;
+font-family: 'Poppins', Helvetica, Arial;
+padding: 0px 0px 0px 5px;
+}
+.media-row .media-extras-wrap > table{
+    width: 100%;
+}
+.media-row .media-extras-wrap .media-meta-wrap tr, .media-row .media-extras-wrap .media-meta-wrap td{
+    border: 1px solid #c1d0d7;
+}
+.media-row .media-extras-wrap .media-meta-wrap .media-label {
+    border-right: 0px solid white;
+}
+.media-row .media-extras-wrap .media-value.media-ogsource {
+    font-size: 15px;
+}
+.media-row .media-caption-wrap{
+    flex-direction: column;
+    font-size: 16px;
+}
+.media-row .media-caption-wrap .media-caption{
+    border: 1px solid #c1d0d7;
+    padding: 5px;
+}
+.media-row .media-caption-wrap .media-caption .magnify, .link-details-wrap .link-description .magnify {
+    display: none;
+}
+.media-row .media-meta-wrap, .media-row .media-orig-source-wrap, .media-row .media-author-comment-wrap{
+    float: left;
+    width: 100%;
+    margin-top: 5px;
+}
+.media-row .media-meta-wrap .media-class-wrap, .media-row .media-meta-wrap .media-mime-wrap, .media-row .media-meta-wrap .media-timestamp-wrap{
+    display: inline-block;
+    font-size: 14px;
+    float: left;
+}
+.media-row .media-meta-wrap .media-class-wrap{
+    border-right: 1px solid lightgrey;
+}
+.media-row .media-meta-wrap .media-label, .media-row .media-orig-source-wrap .media-label, .media-row .media-author-comment-wrap .media-label{
+    border-right: 1px solid lightgrey;
+    background: #e4ebee;
+    color: black;
+    line-height: 14px;
+    padding: 3px 5px 4px 5px;
+    float: left;
+    font-weight: bold;
+}
+.media-row .media-meta-wrap .media-class, .media-row .media-meta-wrap .media-mime, .media-row .media-meta-wrap .media-timestamp{
+    padding: 0px 5px;
+    line-height: 21px;
+    float: left;
+    background: white;
+}
+.media-row .media-orig-source-wrap, .media-row .media-author-comment-wrap{
+    border: 1px solid #c1d0d7;
+    width: calc(100% - 2px);
+}
+.media-row .media-orig-source-wrap .media-label, .media-row .media-author-comment-wrap .media-label{
+    background: #e4ebee;
+}
+.media-gallery, .media-gallery ul, .media-gallery ul li, .reference-container,.reference-container ul,
+.reference-container ul li, .misc-container, .schema-container {
+    float: left;
+    width: 100%;
+    list-style-type: none;
+    padding: 0px;
+}
+.media-gallery ul li, .reference-container ul li {
+    border-top: 5px solid #e4ebee;
+    display: inline-flex;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.reference-container ul li.link-row table {
+    width: 100%;
+}
+
+.link-thumb-wrap {
+    width: calc(10% - 5px);
+    float: left;
+    display: flex;
+    height: 60px;
+    margin: 2px 0px 0px 1px;
+    border: 1px solid #c1d1d7 !important;
+}
+.link-thumb, .link-thumb-wrap > img {
+    width: 100%;
+    object-fit: cover;
+}
+.link-details-wrap{
+width: calc(90% - 5px);
+float: right;
+display: grid;
+font-family: 'Poppins', Helvetica, Arial;
+}
+.link-details-wrap .link-url-container-wrap{
+    float: left;
+    width: 100%;
+    display: inline-flex;
+    border: 1px solid #c1d0d7;
+}
+.link-details-wrap .link-url-citation-number{
+    width: 35px;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    background: #e4ebee;
+}
+.link-details-wrap .link-url-wrap{
+    width: calc(100% - 48px);
+    float: right;
+    padding: 2px 5px 2px 5px;
+    border-left: 1px solid #c1d0d7;
+}
+.link-details-wrap .link-description {
+    float: left;
+    width: calc(100% - 10px);
+    padding: 5px 5px 5px 5px;
+    border: 1px solid #c1d1d7 !important;
+    margin-top: 5px;
+    min-height: 32px;
+    font-size: 16px;
+}
+.link-details-wrap .link-url-extra-wrap{
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    margin: 5px 0px 0px 0px;
+}
+.link-url-extra-wrap tr, .link-url-extra-wrap td{
+    border: 1px solid #c1d0d7 !important;
+}
+.link-url-extra-wrap .link-url-extra-label{
+    background: #c1d1d770;
+    padding: 3px 5px 3px 5px;
+    font-weight: bold;
+    float: left;
+    height: 21px;
+    border-right: 0px solid white !important;
+}
+.link-url-extra-wrap .link-url-extra-value{
+padding: 3px 5px 3px 5px;
+float: left;
+margin-right: 5px;
+height: 21px;
+min-width: 80px;
+}
+.link-details-wrap .link-social-media-wrap, .link-details-wrap .link-timestamp-wrap, .link-details-wrap .link-attr-wrap, .link-details-wrap .link-mime-wrap{
+    width: auto;
+    display: inline-block;
+    padding: 2px 5px 2px 5px;
+    border-right: 1px solid grey;
+}
+.misc-container table {
+    border-collapse: collapse;
+    font-family: 'Poppins', Helvetica, Arial;
+}
+.misc-container table, .misc-container th, .misc-container td {
+    border: 1px solid #c1d0d7 !important;
+    text-align: center;
+}
+.misc-container table td {
+    padding: 2px 5px;
+}
+.misc-container table td.no-edit {
+    background: #c1d1d770;
+}
+.misc-container table td:nth-child(1) {
+    font-weight: bold;
+    text-align: right;
+}
+.misc-container table td:nth-child(2) {
+    text-align: center;
+}
+.schema-container {
+    height: 1px;
+    overflow: hidden;
+}
+.no-edit{
+    cursor: not-allowed;
+}
+
+#blobBox_container {
+width:100%;
+float:left;
+margin:0;
+list-style-position:inside;
+background-color:#FFF;
+font-size: 13px;
+}
+#blobBox_container td, #blobBox_container th{
+font-size: 13px;
+font-weight: 400;
+}
+
+#blobBox_container table.infobox {
+width:100%!important
+}
+
+#blobBox_container tr {
+border-bottom:1px solid rgba(128,128,128,0.13);
+max-width:100%
+}
+
+#blobBox_container tr p {
+margin-bottom:0
+}
+
+#blobBox_container * {
+max-width:100%
+}
+
+#blobBox_container img:not(.geodot) {
+float:left
+}
+
+#blobBox_container td {
+padding-left:7px!important;
+max-width:100%;
+white-space:normal!important
+}
+
+#blobBox_container td span {
+white-space:normal!important
+}
+
+#blobBox_container tr th:not([colspan]) {
+text-align:center!important;
+padding:3px 6px 3px 3px !important;
+border-right:1px dashed rgba(128,128,128,0.13)
+}
+
+#blobBox_container tr th[colspan] {
+font-size:110%
+}
+
+#blobBox_container tr th[style="text-align:center;background:lavender"] {
+background:rgba(236,236,236,0.62)!important;
+border-radius:2px;
+padding:3px;
+font-size:14px;
+font-weight:400!important
+}
+
+#blobBox_container tr th.navbox-title {
+background:#f5f5f5!important
+}
+
+#blobBox_container tr th[style="background-color:#B0C4DE;"] {
+background:rgba(236,236,236,0.62)!important
+}
+
+#blobBox_container tr td {
+max-width:100%;
+padding-top:3px!important;
+padding-bottom:3px!important;
+vertical-align:middle
+}
+
+#blobBox_container tr td p {
+word-break:break-all
+}
+
+#blobBox_container tr td img {
+object-fit:contain
+}
+
+#blobBox_container tr.mergedtoprow th[colspan="2"] {
+text-align:center!important
+}
+
+#blobBox_container table.geography tr.mergedtoprow th[colspan="2"] {
+background-color:rgba(78,228,78,0.3)
+}
+
+#blobBox_container tr td th[style="width:25%"] {
+background-color:red
+}
+
+#blobBox_container td:first-child img {
+width:100%;
+text-align:center
+}
+
+#blobBox_container caption.fn,#blobBox_container span.fn,#blobBox_container table caption {
+padding-top:0;
+padding-bottom:0;
+color:initial;
+text-align:center;
+font-size:19px;
+}
+
+#blobBox_container tr td.plainlist {
+padding-left:5px;
+padding-right:5px
+}
+
+#blobBox_container tr td.plainlist li,#blobBox_container .hlist li {
+list-style-type:none
+}
+
+#blobBox_container tr td.plainlist li:last-child,#blobBox_container .hlist li:last-child,#blobBox_container li:last-child {
+border-bottom:none
+}
+
+#blobBox_container li:last-child {
+border-bottom:none
+}
+
+#blobBox_container li {
+list-style-type:none
+}
+
+#blobBox_container td.label {
+font-size:100%!important;
+text-align:left;
+font-weight:400;
+display:block;
+line-height:inherit
+}
+
+#blobBox_container div.geonugget,#blobBox_container div.geonugget * {
+max-width:initial!important
+}
+
+#blobBox_container div.geonugget img {
+float:none;
+width:auto
+}
+
+#blobBox_container .NavFrame,#blobBox_container .NavHead,#blobBox_container .NavContent {
+padding:3px!important;
+text-align:center!important
+}
+
+#blobBox_container .NavFrame .NavToggle {
+display:none
+}
+
+#blobBox_container .infobox table {
+width:100%!important;
+float:left;
+overflow:hidden
+}
+
+#blobBox_container .infobox table tr {
+border-bottom:inherit!important
+}
+
+#blobBox_container .infobox table tr td {
+max-width:100%;
+padding-top:inherit!important;
+padding-bottom:inherit!important;
+vertical-align:middle
+}
+
+#blobBox_container .infobox table td {
+padding-left:inherit!important
+}
+
+#blobBox_container table.ep-blobbox-table th {
+border-right:inherit!important
+}
+
+body#blobBox_container[data-id="id_blobbox"] .mce-item-table, body#blobBox_container[data-id="id_blobbox"] .mce-item-table td, body#blobBox_container[data-id="id_blobbox"] .mce-item-table th, body#blobBox_container[data-id="id_blobbox"] .mce-item-table caption {
+    border: 1px solid rgba(128,128,128,0.13);
+}
+  </style>
+ </head>
+ <body class="main-article">
+  <section class="left-body">
+   <div class="title-and-header">
+    <h1 class="page-title">
+    </h1>
+   </div>
+   <div class="blurb-wrap"><p></br></p></div>
+  </section>
+  <section class="right-body">
+   <figure class="main-photo-wrap">
+    <img class="main-photo no-edit" data-thumbnail="https://epcdn-vz.azureedge.net/static/images/no-image-slide.png" src="https://epcdn-vz.azureedge.net/static/images/no-image-slide-big.png"/>
+    <figcaption class="main-photo-caption">
+    </figcaption>
+   </figure>
+   <div class="infobox-wrap">
+    <div class="nonblob-wrap">
+     <table class="ibox-list-nonplural">
+      <tbody>
+       <tr>
+        <td>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <div class="ibox-list-plural">
+     </div>
+    </div>
+   </div>
+   <div class="pagemeta-box">
+    <table class="pagemeta-table">
+     <tbody>
+      <tr class="data-pair" data-key="page_type">
+       <td class="no-edit">
+        Page Type
+       </td>
+       <td class="no-edit meta-value">
+        None
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr class="data-pair" data-key="is_removed">
+       <td class="no-edit">
+        Removed From Site
+       </td>
+       <td class="no-edit meta-value">
+        False
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr class="data-pair" data-key="is_adult_content">
+       <td class="no-edit">
+        Adult Content
+       </td>
+       <td class="no-edit meta-value">
+        False
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </section>
+  <div class="lower-body">
+   <section class="media-gallery">
+    <h2 class="section-headline">
+     Media Gallery
+    </h2>
+    <ul class="media-list">
+    </ul>
+   </section>
+   <section class="reference-container">
+    <h2 class="section-headline">
+     References and Citations
+    </h2>
+    <ul class="reference-list">
+    </ul>
+   </section>
+   <section class="misc-container">
+    <table class="page-data">
+     <tbody>
+      <tr class="data-pair" data-key="creation_timestamp">
+       <td class="no-edit">
+        Created
+       </td>
+       <td>
+        05/01/2018 01:41:46 AM UTC
+       </td>
+      </tr>
+      <tr class="data-pair" data-key="last_modified">
+       <td class="no-edit">
+        Last Modified
+       </td>
+       <td>
+        05/01/2018 01:43:37 AM UTC
+       </td>
+      </tr>
+      <tr class="data-pair" data-key="pageviews">
+       <td class="no-edit">
+        Page Views
+       </td>
+       <td>
+        2
+       </td>
+      </tr>
+      <tr class="data-pair" data-key="url_slug">
+       <td class="no-edit">
+        URL Slug
+       </td>
+       <td>
+        everipedia-blank-page-template
+       </td>
+      </tr>
+      <tr class="data-pair" data-key="url_slug_alternate">
+       <td class="no-edit">
+        URL Slug Alternate
+       </td>
+       <td>
+        everipedia-blank-page-template
+       </td>
+      </tr>
+      <tr class="data-pair" data-key="sub_page_type">
+       <td class="no-edit">
+        Sub Page Type
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr class="data-pair" data-key="is_wikipedia_import">
+       <td class="no-edit">
+        Wikipedia Import
+       </td>
+       <td>
+        False
+       </td>
+      </tr>
+      <tr>
+      </tr>
+      <tr class="data-pair" data-key="is_indexed">
+       <td class="no-edit">
+        Removed From Index
+       </td>
+       <td>
+        True
+       </td>
+      </tr>
+      <tr class="data-pair" data-key="bing_index_override">
+       <td class="no-edit">
+        Bing Indexed
+       </td>
+       <td>
+        False
+       </td>
+      </tr>
+      <tr class="data-pair" data-key="is_locked">
+       <td class="no-edit">
+        Locked
+       </td>
+       <td class="meta-value">
+        False
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </section>
+   <section class="schema-container">
+    <abbr itemid="https://everipedia.org/wiki/everipedia-blank-page-template/" itemprop="mainEntityOfPage" itemscope="" itemtype="https://schema.org/WebPage">
+     <meta content="https://everipedia.org/wiki/everipedia-blank-page-template/" itemprop="url"/>
+     <meta content="'s wiki on Everipedia" itemprop="headline"/>
+     <meta content="0" itemprop="commentCount"/>
+     <meta content="Wiki and references for . You can edit something on this wiki now!" itemprop="text"/>
+     <meta content="Everipedia" itemprop="author"/>
+     <meta content="Everipedia" itemprop="copyrightHolder"/>
+     <abbr itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject">
+      <meta content="" itemprop="url"/>
+      <meta content="" itemprop="name"/>
+      <meta content="" itemprop="caption"/>
+      <meta content="2018-05-01T01:43:37.393Z" itemprop="uploadDate"/>
+      <meta content="300" itemprop="height"/>
+      <meta content="300" itemprop="width"/>
+     </abbr>
+     <abbr itemid="https://everipedia.org/" itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
+      <meta content="Everipedia" itemprop="name"/>
+      <meta content="Everipedia, Inc." itemprop="legalName"/>
+      <meta content="https://www.everipedia.org" itemprop="url"/>
+      <meta content="https://twitter.com/everipedia" itemprop="sameAs"/>
+      <meta content="https://www.facebook.com/everipedia/" itemprop="sameAs"/>
+      <meta content="https://www.reddit.com/r/Everipedia/" itemprop="sameAs"/>
+      <abbr itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
+       <meta content="https://epcdn-vz.azureedge.net/static/images/logo_1050x1050.png" itemprop="url"/>
+       <meta content="1050" itemprop="width"/>
+       <meta content="1050" itemprop="height"/>
+      </abbr>
+     </abbr>
+     <meta content="2018-05-01T01:41:46.845Z" itemprop="datePublished"/>
+     <meta content="2018-05-01T01:43:37.393Z" itemprop="dateModified"/>
+     <abbr itemid="" itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+      <meta content="" itemprop="name"/>
+     </abbr>
+    </abbr>
+   </section>
+  </div>
+  <script type="application/ld+json">
+   {
+      "@context":"http://schema.org",
+      "@type":"ItemList",
+      "itemListElement":[
+        {
+          "@type":"ListItem",
+          "position":1,
+          "url":"https://everipedia.org/wiki/everipedia-blank-page-template/"
+        },
+        {
+          "@type":"ListItem",
+          "position":2,
+          "url":"https://everipedia.org/wiki/everipedia-blank-page-template/advanced_edit/history/"
+        },
+        {
+          "@type":"ListItem",
+          "position":3,
+          "url":"https://everipedia.org/pagecomments/17458545/"
+        }
+      ]
+    }
+  </script>
+  <script type="application/ld+json">
+   {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://everipedia.org",
+          "name": "Everipedia",
+          "image": "https://epcdn-vz.azureedge.net/static/images/logo_1050x1050.png"
+        }
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "https://everipedia.org/wiki/everipedia-blank-page-template/",
+          "name": "",
+          "image": "https://epcdn-vz.azureedge.net/static/images/Everipedia_Logo.svg"
+        }
+      }]
+    }
+  </script>
+ </body>
+</html>

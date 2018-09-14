@@ -1,0 +1,2125 @@
+﻿# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-01 11:42-0700\n"
+"PO-Revision-Date: 2018-07-31 20:17-0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.1.1\n"
+
+#: enterlink/forms.py:9
+msgid "Contains"
+msgstr "Indeholder"
+
+#: enterlink/forms.py:9
+msgid "Equal to"
+msgstr "Lig med"
+
+#: enterlink/forms.py:10
+msgid "Regular expression"
+msgstr "Almindeligt udtryk"
+
+#: enterlink/forms.py:11
+msgid "Starts with"
+msgstr "Begynder med"
+
+#: enterlink/forms.py:11
+msgid "Ends with"
+msgstr "Ender med"
+
+#: enterlink/forms.py:12
+msgid "Greater than"
+msgstr "Større end"
+
+#: enterlink/forms.py:12
+msgid "Greater than or equal to"
+msgstr "Større end eller lig med"
+
+#: enterlink/forms.py:13
+msgid "Less than"
+msgstr "Mindre end"
+
+#: enterlink/forms.py:13
+msgid "Less than or equal to"
+msgstr "Mindre end eller lig med"
+
+#: enterlink/forms.py:42 templates/enterlink/headers/index_header.html:133
+#: templates/enterlink/login.html:40
+msgid "Password"
+msgstr "Adgangskode"
+
+#: enterlink/forms.py:44
+msgid "Please enter a password"
+msgstr "Indtast venligst en adgangskode."
+
+#: enterlink/forms.py:45
+msgid "Please enter a valid password"
+msgstr "Indtast en gyldig adgangskode."
+
+#: enterlink/forms.py:46
+msgid "Enter an email"
+msgstr "Indtast en mailadresse."
+
+#: enterlink/forms.py:47
+msgid "Please enter an email address"
+msgstr "Indtast venligst en mailadresse"
+
+#: enterlink/forms.py:48
+msgid "Please enter a valid email address"
+msgstr "Indtast venligst en gyldig mailadresse"
+
+#: enterlink/forms.py:49 enterlink/forms.py:69
+msgid "First Name"
+msgstr "Fornavn"
+
+#: enterlink/forms.py:51 enterlink/forms.py:71
+msgid "Last Name"
+msgstr "Efternavn"
+
+#: enterlink/forms.py:53
+msgid "Enter a username"
+msgstr "Indtast et brugernavn"
+
+#: enterlink/forms.py:54
+msgid "Please enter a username"
+msgstr "Indtast venligst et brugernavn"
+
+#: enterlink/forms.py:55
+msgid "Please enter a valid username"
+msgstr "Indtast et gyldigt brugernavn."
+
+#: enterlink/forms.py:61
+msgid "This email address already exists! Please use another one."
+msgstr "Denne mailadresse eksisterer allerede! Brug venligst en anden."
+
+#: enterlink/forms.py:73 enterlink/forms.py:83
+msgid "Email"
+msgstr "Mail"
+
+#: enterlink/forms.py:82
+msgid "How can we help?"
+msgstr "Hvordan kan vi hjælpe dig?"
+
+#: enterlink/forms.py:84
+msgid "Full Name"
+msgstr "Fulde navn"
+
+#: enterlink/forms.py:85
+msgid "Subject"
+msgstr "Emne"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Report Abuse"
+msgstr "Anmeld misbrug"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Report Bug"
+msgstr "Anmeld programfejl"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Verify Account"
+msgstr "Bekræft konto"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Anonymous Tip"
+msgstr "Anonymt tip"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Investment Inquiries"
+msgstr "Investeringsforespørgsler"
+
+#: enterlink/forms.py:86 enterlink/forms.py:175 enterlink/models.py:89
+#: enterlink/models.py:134
+msgid "Other"
+msgstr "Andet"
+
+#: enterlink/forms.py:97
+msgid "Search by Entering a Link"
+msgstr "Søg ved at indtaste et link"
+
+#: enterlink/forms.py:126
+msgid ""
+"Describe the file briefly. A summary of the information found is best. Avoid "
+"simply repeating the page title."
+msgstr ""
+"Beskriv filen kort. Et resumé af de fundne oplysninger er bedst. Undgå "
+"simpelthen at gentage sidetitlen."
+
+#: enterlink/forms.py:148
+msgid "File type not allowed."
+msgstr "Filtype er ikke tilladt."
+
+#: enterlink/forms.py:153
+msgid "Please ."
+msgstr "Venligst ."
+
+#: enterlink/forms.py:154
+msgid "Enter a URL"
+msgstr "Angiv en webadresse"
+
+#: enterlink/forms.py:156
+msgid ""
+"Describe the URL briefly. A summary of the information found is best. Avoid "
+"simply repeating the page title."
+msgstr ""
+"Beskriv kort webadressen. Et resumé af de fundne oplysninger er bedst. Undgå "
+"blot at gentage sidetitel."
+
+#: enterlink/forms.py:165 templates/enterlink/edit_ajax_addinfobox.html:28
+msgid "Enter type (e.g. Occupation)"
+msgstr "Indtast type (fx Erhverv)"
+
+#: enterlink/forms.py:166 templates/enterlink/edit_ajax_addinfobox.html:28
+msgid "Enter value (e.g. CEO)"
+msgstr "Indtast værdi (fx CEO)"
+
+#: enterlink/forms.py:170 enterlink/models.py:134
+msgid "Person"
+msgstr "Person"
+
+#: enterlink/forms.py:170 enterlink/models.py:134
+msgid "Place/Location"
+msgstr "Sted/Lokation"
+
+#: enterlink/forms.py:171 enterlink/models.py:134
+msgid "Organization/Company/Institution"
+msgstr "Organisation/Firma/Institution"
+
+#: enterlink/forms.py:171 enterlink/models.py:134
+msgid "Event"
+msgstr "Begivenhed"
+
+#: enterlink/forms.py:172 enterlink/models.py:134
+msgid "List/Ranking"
+msgstr "Liste/Placering"
+
+#: enterlink/forms.py:172 enterlink/models.py:134
+msgid "Product/Merchandise"
+msgstr "Produkt/Vare"
+
+#: enterlink/forms.py:173 enterlink/models.py:134
+msgid "Electronics/Software"
+msgstr "Elektronik/Software"
+
+#: enterlink/forms.py:173 enterlink/models.py:134
+msgid "Medical/Biology"
+msgstr "Medicin/Biologi"
+
+#: enterlink/forms.py:174 enterlink/models.py:134
+msgid "Creative Work/Art"
+msgstr "Kreativt arbejde/Kunst"
+
+#: enterlink/forms.py:175 enterlink/models.py:134
+msgid "Science/Academia/Humanities"
+msgstr "Videnskab/Akademia/Humaniora"
+
+#: enterlink/models.py:45 enterlink/models.py:49
+msgid "None"
+msgstr "Ingen"
+
+#: enterlink/models.py:45
+msgid "Featured"
+msgstr "Fremhævet"
+
+#: enterlink/models.py:45
+msgid "In the news"
+msgstr "Nyheder"
+
+#: enterlink/models.py:46
+msgid "In the news (Editor's Pick)"
+msgstr "Nyheder (Redaktørens valg)"
+
+#: enterlink/models.py:46
+msgid "In the news (Standout Article)"
+msgstr "Nyheder (Fremragende artikel)"
+
+#: enterlink/models.py:47
+msgid "Trending"
+msgstr "Trender"
+
+#: enterlink/models.py:47
+msgid "On this day"
+msgstr "På denne dag"
+
+#: enterlink/models.py:47
+msgid "Blog Post (Meta Article)"
+msgstr "Blog-indlæg (Meta-artikel)"
+
+#: enterlink/models.py:49
+msgid "Verified Only"
+msgstr "Kun verificeret"
+
+#: enterlink/models.py:50
+msgid "Normal (Business)"
+msgstr "Normal (Erhverv)"
+
+#: enterlink/models.py:50
+msgid "Normal (Personal)"
+msgstr "Normal (Personlig)"
+
+#: enterlink/view_functions.py:144
+msgid ""
+"Your Everipedia editor restrictions have been removed. You can now edit "
+"pages freely!"
+msgstr ""
+"Dine begrænsninger som Everipedia-redaktør er blevet fjernet. Du kan nu frit "
+" redigere sider!"
+
+#: enterlink/view_functions.py:607
+msgid "Images & Videos"
+msgstr "Billeder og videoer"
+
+#: enterlink/view_functions.py:609
+msgid "References"
+msgstr "Referencer"
+
+#: enterlink/view_functions.py:612
+msgid "Article Discussion"
+msgstr "Artikel diskussion"
+
+#: enterlink/view_functions.py:615 enterlink/view_functions.py:618
+#: templates/enterlink/template_blockchain_styled_amp.html:349
+#: templates/enterlink/template_blockchain_styled_desktop.html:524
+msgid "See Also"
+msgstr "Se også"
+
+#: enterlink/view_functions.py:617
+msgid "Top Editors"
+msgstr "Topredaktører"
+
+#: enterlink/view_functions.py:1614
+msgid "Wiki and references for"
+msgstr "Wiki og referencer for"
+
+#: enterlink/view_functions.py:1615
+msgid "You can edit something on this wiki now!"
+msgstr "Du kan redigere noget på denne wiki nu!"
+
+#: local_packages/block_ip/models.py:11
+msgid "IP address or mask"
+msgstr "IP-adresse eller maske"
+
+#: local_packages/block_ip/models.py:12
+msgid "Optional reason for block"
+msgstr "Valgfri grund til blokering"
+
+#: local_packages/block_ip/models.py:25 local_packages/block_ip/models.py:26
+msgid "IPs & masks to ban"
+msgstr "IP’er og masker til blokering"
+
+#: templates/admin/base.html:28
+msgid "Welcome,"
+msgstr "Velkommen,"
+
+#: templates/admin/base.html:33
+msgid "Documentation"
+msgstr "Dokumentation"
+
+#: templates/admin/base.html:36
+msgid "Change password"
+msgstr "Skift adgangskode"
+
+#: templates/admin/base.html:38 templates/admin/password_change_done.html:57
+#: templates/admin/password_change_form.html:59
+#: templates/enterlink/headers/header_dropdown.html:29
+#: templates/enterlink/headers/header_dropdown.html:58
+#: templates/enterlink/headers/index_header.html:110
+#: templates/enterlink/headers/index_header.html:166
+#: templates/enterlink/headers/index_header.html:236
+#: templates/enterlink/headers/index_header.html:258
+#: templates/enterlink/notifications/index.html:100
+#: templates/enterlink/notifications/index.html:105
+msgid "Log out"
+msgstr "Log ud"
+
+#: templates/admin/base.html:47 templates/admin/logged_out.html:4
+#: templates/admin/password_reset_complete.html:6
+#: templates/admin/password_reset_confirm.html:6
+#: templates/admin/password_reset_done.html:6
+#: templates/admin/password_reset_form.html:6
+#: templates/enterlink/notifications/index.html:61
+#: templates/enterlink/notifications/index.html:94
+msgid "Home"
+msgstr "Hjem"
+
+#: templates/admin/base_site.html:4
+msgid "Django site admin"
+msgstr "Django webstedsadmin"
+
+#: templates/admin/base_site.html:7
+msgid "Django administration"
+msgstr "Django administration"
+
+#: templates/admin/logged_out.html:8
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr "Tak fordi du hyggede dig lidt på hjemmesiden i dag."
+
+#: templates/admin/logged_out.html:10
+msgid "Log in again"
+msgstr "Log ind igen"
+
+#: templates/admin/password_change_done.html:46
+#: templates/admin/password_change_form.html:48
+#: templates/enterlink/edit.html:145 templates/enterlink/search-iframe.html:123
+#: templates/enterlink/search.html:27 templates/enterlink/user.html:220
+msgid "Search Everipedia"
+msgstr "Søg på Everipedia"
+
+#: templates/admin/password_change_done.html:60
+#: templates/admin/password_change_form.html:62
+#: templates/admin/password_reset_complete.html:19
+#: templates/enterlink/headers/index_header.html:135
+#: templates/enterlink/headers/index_header.html:168
+#: templates/enterlink/headers/index_header.html:240
+#: templates/enterlink/headers/index_header.html:262
+#: templates/enterlink/login.html:45
+msgid "Log in"
+msgstr "Log ind"
+
+#: templates/admin/password_change_done.html:71
+msgid "Password change successful"
+msgstr "Ændring af adgangskoden lykkedes"
+
+#: templates/admin/password_reset_complete.html:7
+#: templates/admin/password_reset_confirm.html:11
+#: templates/admin/password_reset_done.html:7
+#: templates/admin/password_reset_form.html:7
+#: templates/admin/password_reset_form.html:11
+#: templates/admin/password_reset_form.html:15
+msgid "Password reset"
+msgstr "Nulstil adgangskode"
+
+#: templates/admin/password_reset_complete.html:11
+#: templates/admin/password_reset_complete.html:15
+msgid "Password reset complete"
+msgstr "Adgangskoden er blevet nulstillet"
+
+#: templates/admin/password_reset_complete.html:17
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr "Din adgangskode er klar. Du kan logge ind nu."
+
+#: templates/admin/password_reset_confirm.html:7
+msgid "Password reset confirmation"
+msgstr "Nulstilling af adgangskode bekræftet"
+
+#: templates/admin/password_reset_confirm.html:17
+msgid "Enter new password"
+msgstr "Indtast ny adgangskode"
+
+#: templates/admin/password_reset_confirm.html:19
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+"Indtast venligst din nye adgangskode to gange, så vi kan bekræfte, at du har indtastet den "
+"korrekt."
+
+#: templates/admin/password_reset_confirm.html:23
+msgid "New password:"
+msgstr "Ny adgangskode:"
+
+#: templates/admin/password_reset_confirm.html:25
+msgid "Confirm password:"
+msgstr "Bekræft adgangskode:"
+
+#: templates/admin/password_reset_confirm.html:26
+msgid "Change my password"
+msgstr "Lav min adgangskode om"
+
+#: templates/admin/password_reset_confirm.html:31
+msgid "Password reset unsuccessful"
+msgstr "Det lykkedes ikke at nulstille adgangskoden"
+
+#: templates/admin/password_reset_confirm.html:33
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+"Linket til nulstilling af adgangskode var ugyldigt, muligvis fordi det allerede er blevet "
+"brugt. Bed om en ny nulstilling af adgangskoden."
+
+#: templates/admin/password_reset_done.html:11
+#: templates/admin/password_reset_done.html:15
+msgid "Password reset successful"
+msgstr "Det lykkedes at nulstille adgangskoden"
+
+#: templates/admin/password_reset_done.html:17
+msgid ""
+"We have emailed you instructions for setting your password. You should be "
+"receiving them shortly."
+msgstr ""
+"Vi har sendt dig anvisninger til indstilling af din adgangskode. Du skulle "
+"modtage dem inden for kort tid."
+
+#: templates/admin/password_reset_done.html:19
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+"Hvis du ikke modtager en mail, skal du sørge for at indtaste den adresse, "
+"du har tilmeldt dig med, og tjekke din spammappe."
+
+#: templates/admin/password_reset_email.html:2
+msgid ""
+"You are receiving this email because you requested a password reset for your "
+"Everipedia account."
+msgstr ""
+"Du modtager denne mail, fordi du har bedt om en nulstilling af adgangskode til din "
+"Everipedia-konto."
+
+#: templates/admin/password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr "Gå venligst til næste side og vælg en ny adgangskode:"
+
+#: templates/admin/password_reset_email.html:8
+msgid "Your username, in case you've forgotten:"
+msgstr "Dit brugernavn, hvis du har glemt det:"
+
+#: templates/admin/password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr "Tak fordi du brugte vores hjemmeside!"
+
+#: templates/admin/password_reset_form.html:17
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+"Har du glemt dit kodeord? Indtast din mailadresse herunder, så sender vi en mail "
+"med anvisninger til indstilling af en ny."
+
+#: templates/admin/password_reset_form.html:21
+msgid "Email address:"
+msgstr "Mailadresse:"
+
+#: templates/admin/password_reset_form.html:21
+msgid "Reset my password"
+msgstr "Nulstil min adgangskode"
+
+#: templates/email/sanger_announcement.html:276
+#: templates/email/welcome_email.html:264
+#: templates/email/welcome_email_old.html:68
+#: templates/enterlink/welcome.html:33
+msgid "Learn More"
+msgstr "Find ud af mere"
+
+#: templates/email/welcome_email.html:257
+msgid "View My Profile"
+msgstr "Se min profil"
+
+#: templates/email/welcome_email_old.html:67
+#: templates/enterlink/welcome.html:28 templates/enterlink/welcome.html:30
+msgid "Create a Wiki"
+msgstr "Opret en Wiki"
+
+#: templates/endless/show_more.html:5
+msgid "more"
+msgstr "mere"
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:14
+#: templates/enterlink/ajax_media_gallery_singlet.html:19
+#: templates/enterlink/ajaxresults.html:104
+#: templates/enterlink/hoverlink_iframe_blockchain.html:97
+#: templates/enterlink/template_blockchain_styled_desktop.html:413
+#: templates/enterlink/template_blockchain_styled_desktop.html:436
+#: templates/enterlink/template_photos_amp_json_blockchain.html:79
+msgid "Your browser does not support HTML5 video."
+msgstr "Din browser understøtter ikke HTML5 videoer"
+
+#: templates/enterlink/ajaxresults.html:57
+msgid "Click to add a new link or file to this list"
+msgstr "Klik for at føje et nyt link eller en fil til denne liste"
+
+#: templates/enterlink/ajaxresults.html:60
+msgid "Or click an existing link below to add it to the article"
+msgstr ""
+"Eller klik på et eksisterende link nedenfor for at føje det til artiklen"
+
+#: templates/enterlink/ajaxresults.html:135
+#: templates/enterlink/ajaxresults.html:192
+#: templates/enterlink/template_blockchain_styled_desktop.html:165
+msgid "Views"
+msgstr "Visninger"
+
+#: templates/enterlink/ajaxresults.html:157
+#: templates/enterlink/hovereditor_ajax.html:74
+msgid "IQ"
+msgstr "IQ"
+
+#: templates/enterlink/ajaxresults.html:175
+msgid "page(s) have this link"
+msgstr "side(r) har dette link"
+
+#: templates/enterlink/analytics.html:7 templates/enterlink/faq.html:6
+msgid "Frequently Asked Questions - Everipedia, everyone's encyclopedia"
+msgstr "Ofte Stillede Spørgsmål - Everipedia, alles encyklopædi"
+
+#: templates/enterlink/brainpowermgmt.html:5
+#: templates/enterlink/brainpowermgmt.html:115
+msgid "Brainpower Management"
+msgstr "Brainpower Management"
+
+#: templates/enterlink/brainpowermgmt.html:5 templates/enterlink/contact.html:7
+#: templates/enterlink/edit.html:7 templates/enterlink/editing-disabled.html:7
+#: templates/enterlink/editors.html:23
+#: templates/enterlink/exchange-listings.html:7
+#: templates/enterlink/headers/index_header.html:17
+#: templates/enterlink/headers/index_header.html:18
+#: templates/enterlink/inbox.html:12 templates/enterlink/index.html:7
+#: templates/enterlink/leadership.html:7
+#: templates/enterlink/limitreached.html:7 templates/enterlink/login.html:7
+#: templates/enterlink/recent-activity.html:7
+#: templates/enterlink/register.html:6 templates/enterlink/search.html:7
+#: templates/enterlink/transfer-iq.html:7 templates/enterlink/user.html:12
+#: templates/enterlink/votehistory.html:7
+msgid "Everipedia, the encyclopedia of everything"
+msgstr "Everipedia, encyklopædi af alt"
+
+#: templates/enterlink/brainpowermgmt.html:102 templates/enterlink/edit.html:89
+#: templates/enterlink/transfer-iq.html:103 templates/enterlink/voting.html:180
+msgid "Loading Scatter"
+msgstr "Indlæser scatter"
+
+#: templates/enterlink/brainpowermgmt.html:118
+msgid ""
+"Staking IQ tokens will freeze them for 21 days and will generate "
+"nontransferable Brainpower, which can be used for editing and voting on the "
+"Everipedia network. At the end of the 21 days, you can claim back your IQ "
+"tokens and re-stake them for more Brainpower again. Thus, 1 IQ, staked every "
+"21 days, can lead to 365 days / 21 days = 17.38 Brainpower every year."
+msgstr ""
+"Hvis du satser IQ tokens, vil det fryse dem i 21 dage, og det vil generere "
+"ikke-overførbar Brainpower, som kan bruges til redigering og afstemning på "
+" Everipedia-netværket. Efter 21 dage kan du gøre krav på at få dine IQ-tokens "
+"tilbage og satse dem igen for at få mere Brainpower. Således kan 1 IQ, satset hver 21 "
+"daeg, føre til 365 dage / 21 dage = 17,38 Brainpower om året."
+
+#: templates/enterlink/brainpowermgmt.html:119
+msgid ""
+"As you make pages, propose edits, and vote on article proposals, you will "
+"consume Brainpower. However, making successful edits and voting on the "
+"winning side of a proposal will generate rewards in IQ, not Brainpower. "
+"Therefore, you can generate more Brainpower (and any profit) by staking the "
+"new IQ you just earned."
+msgstr ""
+"Når du laver sider, foreslår redigeringer og stemmer på artikelforslag, "
+"vil du opbruge Brainpower. Men når du foretager vellykkede redigeringer og stemmer på "
+"den vindende side af et forslag, vil du generere belønninger i form af IQ, ikke Brainpower. "
+"Derfor kan du generere mere Brainpower (og eventual profit) ved at satse den "
+"nye IQ, du lige har optjent."
+
+#: templates/enterlink/brainpowermgmt.html:120
+msgid ""
+"Every edit proposal requires a minimum of 10 Brainpower at this time, in "
+"order to prevent spam and poor-quality edits."
+msgstr ""
+"Hvert redigeringsforslag kræver mindst 10 Brainpower på dette tidspunkt for "
+"at forhindre spam og redigeringer af dårlig kvalitet."
+
+#: templates/enterlink/brainpowermgmt.html:123
+msgid "Enter an integer amount of IQ to stake"
+msgstr "Indtast et helt antal IQ til at satse"
+
+#: templates/enterlink/brainpowermgmt.html:124
+msgid "New Stake"
+msgstr "Ny indsats"
+
+#: templates/enterlink/brainpowermgmt.html:129
+msgid "Start"
+msgstr "Start"
+
+#: templates/enterlink/brainpowermgmt.html:130
+msgid "End"
+msgstr "Slut"
+
+#: templates/enterlink/brainpowermgmt.html:131
+#: templates/enterlink/voting_table_of_contents.html:40
+msgid "Time Remaining"
+msgstr "Resterende tid"
+
+#: templates/enterlink/brainpowermgmt.html:132
+#: templates/enterlink/transfer-iq.html:124
+msgid "Amount"
+msgstr "Beløb"
+
+#: templates/enterlink/brainpowermgmt.html:133
+msgid "Claim"
+msgstr "Bed om"
+
+#: templates/enterlink/contact.html:7 templates/enterlink/contact.html:24
+msgid "Contact us"
+msgstr "Kontakt os"
+
+#: templates/enterlink/contact.html:20
+msgid "To get quicker replies from our community"
+msgstr "For at få hurtigere svar fra vores fællesskab"
+
+#: templates/enterlink/contact.html:20
+msgid "create a post in our forum"
+msgstr "lav et indlæg i vores forum"
+
+#: templates/enterlink/contact.html:25
+msgid "Get in touch with us"
+msgstr "Kontakt os"
+
+#: templates/enterlink/contact.html:33
+msgid "Thanks, we got your message. We will respond in a bit"
+msgstr "Tak, vi har fået din besked. Vi vil svare inden længe"
+
+#: templates/enterlink/contact.html:41 templates/enterlink/transfer-iq.html:128
+msgid "Send"
+msgstr "Send"
+
+#: templates/enterlink/dropzone.html:140 templates/enterlink/edit.html:167
+#: templates/enterlink/edit.html:176 templates/enterlink/edit.html:185
+#: templates/enterlink/edit.html:195 templates/enterlink/edit.html:204
+msgid "OK"
+msgstr "OK"
+
+#: templates/enterlink/dropzone.html:141
+msgid "Enter a caption for the main image of the page."
+msgstr "Indtast en billedtekst til hovedbilledet på siden."
+
+#: templates/enterlink/edit.html:7
+msgid "Edit Page"
+msgstr "Rediger side"
+
+#: templates/enterlink/edit.html:85
+msgid "Loading.."
+msgstr "Indlæser.."
+
+#: templates/enterlink/edit.html:128
+msgid "Change Picture"
+msgstr "Skift billede"
+
+#: templates/enterlink/edit.html:144
+msgid "Please enter the destination page you wish to merge this one into"
+msgstr "Indtast den destinationsside, du ønsker at flette denne ind i"
+
+#: templates/enterlink/edit.html:149
+msgid "Merge Page"
+msgstr "Indflet side"
+
+#: templates/enterlink/edit.html:156 templates/enterlink/edit.html:165
+#: templates/enterlink/edit.html:174 templates/enterlink/edit.html:183
+#: templates/enterlink/edit.html:192 templates/enterlink/edit.html:202
+msgid "Hey there scholar!"
+msgstr "Hej med dig, kloge hoved!"
+
+#: templates/enterlink/edit.html:157
+msgid ""
+"Looks like you have been editing for a while. You should take a moment to "
+"save your work before continuing!"
+msgstr ""
+"Det ser ud som om du har redigeret et stykke tid. Du bør tage et øjeblik "
+"til at gemme dit arbejde, før du fortsætter!"
+
+#: templates/enterlink/edit.html:158
+msgid "Save"
+msgstr "Gem"
+
+#: templates/enterlink/edit.html:166
+msgid ""
+"Looks like you are using first-person! (ex: Our product, I am, We are, You "
+"should). Everipedia is a neutral encyclopedia written in third-person tense "
+"(ex: It is, They are, The company makes). THIS IS NOT FACEBOOK!!"
+msgstr ""
+"Det ser ud til, at du bruger første person! (fx: Vores produkt, jeg er, vi er, du "
+"burde). Everipedia er en neutral encyklopædi skrevet i tredje person perspektiv"
+"(fx: Det er, de er, Virksomheden gør). DET HER ER IKKE FACEBOOK !!"
+
+#: templates/enterlink/edit.html:175
+msgid "Please enter a title for the page."
+msgstr "Indtast venligst en titel til siden."
+
+#: templates/enterlink/edit.html:184
+msgid ""
+"Please write something for the article section. Make sure to use citations."
+msgstr ""
+"Skriv venligst noget til artikelafsnittet. Sørg for at bruge citater."
+
+#: templates/enterlink/edit.html:193
+msgid ""
+"Hello! This page needs citations (also known as footnotes, references, "
+"sources) before it can be saved. Add the links you're using as sources with "
+"the cite button above."
+msgstr ""
+"Hej! Denne side mangler henvisninger (også kaldet fodnoter, referencer, "
+"kilder), før den kan gemmes. Tilføj de links, du bruger som kilder, med "
+"citérknappen ovenfor."
+
+#: templates/enterlink/edit.html:194
+msgid "Join our official Facebook group if you need help with it!:"
+msgstr ""
+"Deltag i vores officielle Facebook-gruppe, hvis du har brug for hjælp til det!:"
+
+#: templates/enterlink/edit.html:194
+msgid "- we will hook you up. It's not hard!"
+msgstr "- Vi vil få dig i gang. Det er ikke svært!"
+
+#: templates/enterlink/edit.html:203
+msgid ""
+"Please cite the link(s) you just added into the main article body. First "
+"click at the end of the sentence or paragraph you want to cite, then click "
+"the (Cite) button on the edit panel above!"
+msgstr ""
+"Venligst citer de(t) link(s), du lige har føjet til hovedartikelens brødtekst. "
+"Klik først på slutningen af den sætning eller det afsnit, du vil citere, og "
+"klik derefter på (Citér)-knappen på redigeringspanelet ovenfor!"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:10
+msgid "Add New Infobox Item"
+msgstr "Tilføj nyt Infobox objekt"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:14
+msgid "Enter a classification or category"
+msgstr "Indtast en klassifikation eller kategori"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:17
+msgid "Enter a value or a description"
+msgstr "Indtast en værdi eller en beskrivelse"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:23
+msgid "Add Infobox Item"
+msgstr "Tilføj Infobox objekt"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:25
+#: templates/enterlink/edit_ajax_addlink.html:26
+#: templates/enterlink/edit_ajax_editpagemeta.html:15
+#: templates/enterlink/edit_ajax_page_photo.html:4
+msgid "Close"
+msgstr "Luk"
+
+#: templates/enterlink/edit_ajax_addlink.html:7
+msgid "Add a Link or File"
+msgstr "Tilføj et link eller en fil"
+
+#: templates/enterlink/edit_ajax_addlink.html:9
+msgid "File"
+msgstr "Fil"
+
+#: templates/enterlink/edit_ajax_addlink.html:10
+msgid "URL"
+msgstr "Webadresse"
+
+#: templates/enterlink/edit_ajax_addlink.html:10
+msgid "Link"
+msgstr "Link"
+
+#: templates/enterlink/edit_ajax_addlink.html:14
+msgid "Upload file"
+msgstr "Upload fil"
+
+#: templates/enterlink/edit_ajax_addlink.html:24
+msgid "Add Link"
+msgstr "Tilføj link"
+
+#: templates/enterlink/edit_ajax_editmainphoto.html:7
+msgid "Reset"
+msgstr "Nulstil"
+
+#: templates/enterlink/edit_ajax_editpagemeta.html:4
+msgid "Select the topic of this page"
+msgstr "Vælg emnet for denne side"
+
+#: templates/enterlink/edit_ajax_editpagemeta.html:8
+msgid "Remove page"
+msgstr "Fjern side"
+
+#: templates/enterlink/edit_ajax_editpagemeta.html:12
+msgid "Adult Content"
+msgstr "Indhold for voksne"
+
+#: templates/enterlink/editing-disabled.html:7
+msgid "Editing existing pages temporarily disabled"
+msgstr "Redigering af eksisterende sider er midlertidigt deaktiveret"
+
+#: templates/enterlink/editors.html:23
+msgid "Editors"
+msgstr "Redaktører"
+
+#: templates/enterlink/editors.html:74
+msgid "Everipedia Editors"
+msgstr "Everipedia Redaktører"
+
+#: templates/enterlink/editors.html:93 templates/enterlink/inbox.html:52
+#: templates/enterlink/recent-activity.html:103
+#: templates/enterlink/search.html:89
+msgid "Previous"
+msgstr "Forrige"
+
+#: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
+#: templates/enterlink/recent-activity.html:107
+#: templates/enterlink/search.html:93
+msgid "Page"
+msgstr "Side"
+
+#: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
+#: templates/enterlink/recent-activity.html:107
+#: templates/enterlink/search.html:93
+msgid "of"
+msgstr "af"
+
+#: templates/enterlink/editors.html:101 templates/enterlink/inbox.html:60
+#: templates/enterlink/recent-activity.html:111
+#: templates/enterlink/search.html:97
+msgid "Next"
+msgstr "Næste"
+
+#: templates/enterlink/error.html:6
+msgid "Page not found!"
+msgstr "Side ikke fundet!"
+
+#: templates/enterlink/error.html:211
+msgid "Page not found"
+msgstr "Side ikke fundet"
+
+#: templates/enterlink/error.html:213
+msgid "In The News"
+msgstr "Nyheder"
+
+#: templates/enterlink/error.html:214
+#: templates/enterlink/headers/header_dropdown.html:51
+#: templates/enterlink/recent-activity.html:7
+#: templates/enterlink/recent-activity.html:73
+#: templates/enterlink/user.html:192
+msgid "Recent Activity"
+msgstr "Seneste aktivitet"
+
+#: templates/enterlink/error_410.html:6 templates/enterlink/error_410.html:62
+msgid "This page has been removed"
+msgstr "Denne side er blevet fjernet"
+
+#: templates/enterlink/error_410.html:63
+#: templates/enterlink/in_progress_404.html:86
+msgid "Click here to return to recent activity"
+msgstr "Klik her for at vende tilbage til den seneste aktivitet"
+
+#: templates/enterlink/exchange-listings.html:7
+msgid "Exchange Listings"
+msgstr "Liste over børser"
+
+#: templates/enterlink/exchange-listings.html:17
+msgid "Supported Exchanges"
+msgstr "Understøttede børser"
+
+#: templates/enterlink/exchange-listings.html:18
+msgid "The following exchanges indicated that they will support the IQ airdrop"
+msgstr "Følgende børser har angivet, at de vil støtte IQ airdrop"
+
+#: templates/enterlink/exchange-listings.html:128
+msgid "Supported Wallets"
+msgstr "Understøttede wallets"
+
+#: templates/enterlink/exchange-listings.html:162
+msgid "Token Pockets"
+msgstr "Tokenlommer"
+
+#: templates/enterlink/faq.html:20
+msgid "Frequently Asked Questions"
+msgstr "Ofte Stillede Spørgsmål"
+
+#: templates/enterlink/faq.html:24
+msgid "What is Everipedia?"
+msgstr "Hvad er Everipedia?"
+
+#: templates/enterlink/faq.html:25
+msgid ""
+"Everipedia is a knowledge aggregator and knowledge base. We think it's much "
+"easier to edit than Wikipedia. Anyone can create a page about any person, "
+"place, organization, or thing and populate it with relevant reference links/"
+"sources. The only main rules of EP are: Information on the page must always "
+"be cited and the article must be in a neutral point of view. Check out the "
+"actual entry for Everipedia... on"
+msgstr ""
+"Everipedia er en aggregator for viden og vidensbase. Vi synes, den er meget "
+"nemmere at redigere end Wikipedia. Enhver kan oprette en side om hvilken som helst "
+"person, sted, organisation eller ting og fylde den med relevante referencelinks/"
+"kilder. De eneste hovedregler i EP er: Oplysninger på siden skal altid "
+"citeres, og artiklen skal være skrevet fra et neutral synspunkt. Tjek det "
+"faktiske indlæg for Everipedia ... på"
+
+#: templates/enterlink/faq.html:27
+msgid "Why should I sign up?"
+msgstr "Hvorfor bør jeg tilmelde mig?"
+
+#: templates/enterlink/faq.html:28
+msgid ""
+"Because it’s fun and easy! We thought contributing to large knowledge "
+"projects shouldn't require high barriers to entry so we made Everipedia very "
+"easy to navigate, edit, and get started. Editors gain more privileges as "
+"they accumulate IQ and rise through the ranks. Top site-wide editors are "
+"displayed on the front page. Top editors for each page are also displayed."
+msgstr ""
+"Fordi det er sjovt og nemt! Vi syntes ikke, der skulle være store adgangsbarrierer "
+"forbundet med at bidrage til store vidensprojekter, så vi gjorde Everipedia meget "
+"nem at navigere, redigere og komme i gang med. Redaktører får flere privilegier, efterhånden som "
+"de akkumulerer IQ og stiger i rang. Topredaktører for hele webstedet "
+"vises på forsiden. Topredaktører for hver side vises også."
+
+#: templates/enterlink/faq.html:30
+msgid "Try it!"
+msgstr "Prøv det!"
+
+#: templates/enterlink/faq.html:30
+msgid "Sign up here"
+msgstr "Tilmeld dig her"
+
+#: templates/enterlink/faq.html:32
+msgid "So how is Everipedia different from Wikipedia and similar sites?"
+msgstr "Hvordan er Everipedia så forskellig fra Wikipedia og lignende websteder?"
+
+#: templates/enterlink/faq.html:33
+msgid ""
+"Editing on Everipedia is graphic and modern, talk pages are designed as "
+"discussion threads, celebrities have verified accounts, and anyone can make "
+"pages about anything as long as they are properly cited. Every page from "
+"Wikipedia is already here on Everipedia to build on top of and improve. All "
+"this makes EP the biggest knowledge project ever!"
+msgstr ""
+"Redigering på Everipedia er grafisk og moderne, talesider er designet som "
+"diskussionstråde, berømtheder har bekræftede konti, og alle kan lave "
+"sider om hvad som helst, så længe det er korrekt citeret. Hver side fra "
+"Wikipedia er allerede her på Everipedia til at bygge på og forbedre. Alt "
+" dette gør EP til det største vidensprojekt nogensinde!"
+
+#: templates/enterlink/faq.html:35
+msgid "Is Everipedia free?"
+msgstr "Er Everipedia gratis?"
+
+#: templates/enterlink/faq.html:36
+msgid ""
+"All information found on Everipedia is freely available for anyone to use "
+"and access. All we ask is a link back to the source Everipedia page for "
+"attribution purposes. The information on this encyclopedia is meant to be "
+"free to all. We will never charge for or withhold any of the information on "
+"this website. We just ask that you do not throttle the site and "
+"programmatically harvest information that would dramatically affect our "
+"servers."
+msgstr ""
+"Alle oplysninger, der findes på Everipedia, er frit tilgængelige, og alle kan bruge "
+"og tilgå dem. Det eneste, vi beder om, er et link tilbage til den Everipedia-side, der er kilden, "
+"som tilskrivning. Det er hensigten, at oplysningerne på denne encyklopædi skal være "
+"gratis. Vi vil aldrig opkræve betaling for eller tilbageholder oplysninger på "
+"denne hjemmeside. Vi beder dig kun om, at overvælder webstedet "
+"og bruger programmer, der dramatisk påvirker vores servere, til at høste "
+"til at høste information."
+
+#: templates/enterlink/faq.html:42
+msgid "Much love,"
+msgstr "Kærlig hilsen,"
+
+#: templates/enterlink/footers/desktop_footer.html:5
+#: templates/enterlink/footers/footer_no_extras.html:5
+#: templates/enterlink/footers/index_footer.html:23
+#: templates/enterlink/footers/mobile_footer.html:130
+#: templates/enterlink/template_blockchain_styled_amp.html:547
+msgid "About"
+msgstr "Om os"
+
+#: templates/enterlink/footers/desktop_footer.html:6
+#: templates/enterlink/footers/footer_no_extras.html:6
+#: templates/enterlink/footers/index_footer.html:7
+#: templates/enterlink/footers/index_footer.html:25
+#: templates/enterlink/footers/mobile_footer.html:131
+#: templates/enterlink/template_blockchain_styled_amp.html:548
+msgid "FAQ"
+msgstr "OSS"
+
+#: templates/enterlink/footers/desktop_footer.html:7
+#: templates/enterlink/footers/footer_no_extras.html:7
+#: templates/enterlink/footers/index_footer.html:8
+#: templates/enterlink/footers/index_footer.html:26
+#: templates/enterlink/footers/mobile_footer.html:132
+#: templates/enterlink/template_blockchain_styled_amp.html:549
+msgid "Contact"
+msgstr "Kontakt"
+
+#: templates/enterlink/footers/desktop_footer.html:8
+#: templates/enterlink/footers/footer_no_extras.html:9
+#: templates/enterlink/footers/index_footer.html:9
+#: templates/enterlink/footers/index_footer.html:27
+#: templates/enterlink/footers/mobile_footer.html:136
+#: templates/enterlink/template_blockchain_styled_amp.html:551
+msgid "Terms"
+msgstr "Betingelser"
+
+#: templates/enterlink/footers/desktop_footer.html:9
+#: templates/enterlink/footers/footer_no_extras.html:10
+#: templates/enterlink/footers/index_footer.html:10
+#: templates/enterlink/footers/index_footer.html:28
+#: templates/enterlink/footers/mobile_footer.html:134
+#: templates/enterlink/headers/header_dropdown.html:24
+#: templates/enterlink/headers/header_dropdown.html:52
+#: templates/enterlink/headers/index_header.html:164
+#: templates/enterlink/headers/index_header.html:173
+#: templates/enterlink/headers/index_header.html:233
+#: templates/enterlink/headers/index_header.html:242
+#: templates/enterlink/headers/index_header.html:264
+#: templates/enterlink/headers/mobile-navbar.html:131
+#: templates/enterlink/headers/mobile-navbar.html:198
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:190
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:238
+#: templates/enterlink/template_blockchain_styled_amp.html:550
+#: templates/enterlink/template_blockchain_styled_amp.html:628
+#: templates/enterlink/template_blockchain_styled_amp.html:686
+msgid "Forum"
+msgstr "Forum"
+
+#: templates/enterlink/footers/desktop_footer.html:10
+#: templates/enterlink/footers/footer_no_extras.html:11
+#: templates/enterlink/footers/index_footer.html:11
+#: templates/enterlink/footers/index_footer.html:29
+#: templates/enterlink/footers/mobile_footer.html:137
+#: templates/enterlink/headers/header_dropdown.html:25
+#: templates/enterlink/headers/header_dropdown.html:54
+#: templates/enterlink/template_blockchain_styled_amp.html:552
+msgid "Get IQ"
+msgstr "Få IQ"
+
+#: templates/enterlink/footers/desktop_footer.html:30
+#: templates/enterlink/footers/footer_no_extras.html:31
+#: templates/enterlink/footers/mobile_footer.html:157
+#: templates/enterlink/template_blockchain_styled_amp.html:576
+msgid "Powered by"
+msgstr "Genereret af"
+
+#: templates/enterlink/footers/desktop_footer.html:35
+#: templates/enterlink/footers/footer_no_extras.html:36
+#: templates/enterlink/footers/mobile_footer.html:161
+#: templates/enterlink/template_blockchain_styled_amp.html:580
+msgid "API by"
+msgstr "API af"
+
+#: templates/enterlink/footers/desktop_footer.html:43
+#: templates/enterlink/footers/footer_no_extras.html:44
+#: templates/enterlink/headers/desktop-navbar-index.html:6
+#: templates/enterlink/headers/index_header.html:93
+#: templates/enterlink/language_selector_mobile.html:65
+msgid "Select language"
+msgstr "Vælg sprog"
+
+#: templates/enterlink/footers/forum_footer.html:6
+#: templates/enterlink/footers/pm_footer.html:6
+msgid "Enter a title for the thread"
+msgstr "Indtast en titel for tråden"
+
+#: templates/enterlink/footers/forum_footer.html:7
+msgid "Enter your post here"
+msgstr "Indtast dit indlæg her"
+
+#: templates/enterlink/footers/forum_footer.html:8
+#: templates/enterlink/footers/pm_footer.html:7
+msgid "Create New Thread"
+msgstr "Opret ny tråd"
+
+#: templates/enterlink/footers/index_footer.html:5
+msgid "About Everipedia"
+msgstr "Om Everipedia"
+
+#: templates/enterlink/footers/index_footer.html:6
+#: templates/enterlink/footers/index_footer.html:24
+msgid "How To Use"
+msgstr "Sådan bruges den"
+
+#: templates/enterlink/footers/index_footer.html:12
+#: templates/enterlink/footers/index_footer.html:30
+#: templates/enterlink/footers/mobile_footer.html:133
+msgid "Donate"
+msgstr "Doner"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:558
+msgid "By using this website, you agree to the"
+msgstr "Ved at bruge denne hjemmeside accepterer du"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:558
+msgid "Terms of Use"
+msgstr "Brugervilkårene"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:558
+msgid "Everipedia® is a trademark of Everipedia International"
+msgstr "Everipedia® er et varemærke tilhørende Everipedia International"
+
+#: templates/enterlink/footers/mobile_footer.html:135
+#: templates/enterlink/headers/index_header.html:165
+#: templates/enterlink/headers/index_header.html:174
+#: templates/enterlink/headers/index_header.html:234
+#: templates/enterlink/headers/index_header.html:243
+#: templates/enterlink/headers/index_header.html:265
+#: templates/enterlink/headers/mobile-navbar.html:138
+#: templates/enterlink/headers/mobile-navbar.html:204
+#: templates/enterlink/template_blockchain_styled_amp.html:693
+msgid "Chat"
+msgstr "Chat"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:29
+#: templates/enterlink/headers/desktop-navbar.html:39
+#: templates/enterlink/headers/index_header.html:156
+#: templates/enterlink/howto.html:61 templates/enterlink/search.html:7
+msgid "Search"
+msgstr "Søg"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:42
+#: templates/enterlink/headers/desktop-navbar-index.html:50
+#: templates/enterlink/headers/desktop-navbar-index.html:60
+#: templates/enterlink/headers/desktop-navbar.html:20
+#: templates/enterlink/headers/desktop-navbar.html:57
+#: templates/enterlink/headers/desktop-navbar.html:67
+#: templates/enterlink/headers/header_dropdown.html:21
+#: templates/enterlink/headers/header_dropdown.html:50
+#: templates/enterlink/headers/index_header.html:231
+#: templates/enterlink/headers/mobile-navbar.html:145
+#: templates/enterlink/headers/mobile-navbar.html:186
+#: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
+#: templates/enterlink/howto.html:74 templates/enterlink/index.html:64
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:51
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:91
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:196
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:232
+#: templates/enterlink/template_blockchain_styled_amp.html:614
+#: templates/enterlink/template_blockchain_styled_amp.html:700
+#: templates/enterlink/user.html:64
+msgid "Create Page"
+msgstr "Opret side"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:49
+#: templates/enterlink/headers/desktop-navbar.html:19
+#: templates/enterlink/howto.html:73 templates/enterlink/index.html:63
+msgid "Paste a link or enter a title"
+msgstr "Indsæt et link eller indtast en titel"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:66
+#: templates/enterlink/headers/desktop-navbar.html:73
+#: templates/enterlink/headers/header_dropdown.html:23
+#: templates/enterlink/headers/header_dropdown.html:49
+#: templates/enterlink/headers/index_header.html:162
+#: templates/enterlink/headers/index_header.html:201
+#: templates/enterlink/headers/index_header.html:232
+#: templates/enterlink/headers/mobile-navbar.html:124
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:45
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:184
+#: templates/enterlink/notifications/index.html:67
+#: templates/enterlink/notifications/index.html:97
+#: templates/enterlink/template_blockchain_styled_amp.html:679
+msgid "Messages"
+msgstr "Beskeder"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:72
+#: templates/enterlink/headers/desktop-navbar.html:79
+#: templates/enterlink/headers/header_dropdown.html:22
+#: templates/enterlink/headers/header_dropdown.html:48
+#: templates/enterlink/headers/index_header.html:206
+#: templates/enterlink/headers/index_header.html:230
+#: templates/enterlink/headers/mobile-navbar.html:117
+#: templates/enterlink/inbox.html:12
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:39
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:178
+#: templates/enterlink/notifications/index.html:96
+#: templates/enterlink/template_blockchain_styled_amp.html:672
+msgid "Notifications"
+msgstr "Notifikationer"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:84
+#: templates/enterlink/headers/desktop-navbar.html:96
+#: templates/enterlink/headers/index_header.html:217
+msgid "Your IQ Score"
+msgstr "Din IQ-score"
+
+#: templates/enterlink/headers/desktop-navbar.html:29
+msgid "Table of contents"
+msgstr "Indholdsfortegnelse"
+
+#: templates/enterlink/headers/desktop-navbar.html:29
+#: templates/enterlink/template_blockchain_styled_amp.html:104
+msgid "Table of contents and facts for this wiki"
+msgstr "Indholdsfortegnelse og fakta for denne wiki"
+
+#: templates/enterlink/headers/desktop-navbar.html:62
+#: templates/enterlink/headers/mobile-navbar.html:159
+#: templates/enterlink/headers/mobile-navbar.html:210
+#: templates/enterlink/template_blockchain_styled_amp.html:634
+#: templates/enterlink/template_blockchain_styled_amp.html:714
+msgid "Feed"
+msgstr "Feed"
+
+#: templates/enterlink/headers/desktop-navbar.html:87
+msgid "Please log in with Scatter"
+msgstr "Log venligst ind med Scatter"
+
+#: templates/enterlink/headers/header_dropdown.html:53
+#: templates/enterlink/headers/mobile-navbar.html:153
+#: templates/enterlink/headers/mobile-navbar.html:192
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:68
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:101
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:208
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:250
+#: templates/enterlink/template_blockchain_styled_amp.html:621
+#: templates/enterlink/template_blockchain_styled_amp.html:707
+#: templates/enterlink/user.html:126
+msgid "Help"
+msgstr "Hjælp"
+
+#: templates/enterlink/headers/index_header.html:109
+msgid "View Profile"
+msgstr "Vis profil"
+
+#: templates/enterlink/headers/index_header.html:128
+msgid "Sign In"
+msgstr "Log ind"
+
+#: templates/enterlink/headers/index_header.html:128
+#: templates/enterlink/headers/index_header.html:172
+#: templates/enterlink/headers/index_header.html:241
+#: templates/enterlink/headers/index_header.html:263
+#: templates/enterlink/index.html:47
+msgid "Register"
+msgstr "Tilmeld dig"
+
+#: templates/enterlink/headers/index_header.html:132
+#: templates/enterlink/login.html:36
+msgid "Username"
+msgstr "Brugernavn"
+
+#: templates/enterlink/headers/index_header.html:139
+msgid "Need an account? Register here."
+msgstr "Har du brug for en konto? Tilmeld dig her."
+
+#: templates/enterlink/headers/index_header.html:140
+#: templates/enterlink/headers/index_header.html:171
+#: templates/enterlink/login.html:41
+msgid "Forgot your password?"
+msgstr "Glemt din adgangskode?"
+
+#: templates/enterlink/headers/index_header.html:163
+#: templates/enterlink/inbox.html:23
+msgid "Your Notifications"
+msgstr "Dine meddelelser"
+
+#: templates/enterlink/headers/index_header.html:222
+msgid "Get an account"
+msgstr "Få en konto"
+
+#: templates/enterlink/headers/index_header.html:222
+msgid "or Log in"
+msgstr "eller log ind"
+
+#: templates/enterlink/headers/index_header.html:235
+#: templates/enterlink/headers/index_header.html:244
+#: templates/enterlink/headers/index_header.html:257
+#: templates/enterlink/headers/index_header.html:266
+#: templates/enterlink/headers/mobile-navbar.html:165
+#: templates/enterlink/headers/mobile-navbar.html:216
+#: templates/enterlink/template_blockchain_styled_amp.html:640
+msgid "Language"
+msgstr "Sprog"
+
+#: templates/enterlink/headers/mobile-navbar.html:178
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:224
+#: templates/enterlink/template_blockchain_styled_amp.html:605
+msgid "Register / Log in"
+msgstr "Tilmeld / Log ind"
+
+#: templates/enterlink/hoverblurb_ajax_blockchain.html:65
+msgid "Go to article"
+msgstr "Gå til artiklen"
+
+#: templates/enterlink/hovereditor_ajax.html:67
+msgid "Self citation by"
+msgstr "Selvcitering af"
+
+#: templates/enterlink/hovereditor_ajax.html:72
+msgid "Title"
+msgstr "Titel"
+
+#: templates/enterlink/hovereditor_ajax.html:75
+msgid "Rank"
+msgstr "Rang"
+
+#: templates/enterlink/hovereditor_ajax.html:76
+msgid "User since"
+msgstr "Bruger siden"
+
+#: templates/enterlink/hovereditor_ajax.html:77
+msgid "Last login"
+msgstr "Sidste logind"
+
+#: templates/enterlink/hovereditor_ajax.html:80
+msgid "Go to Editor's Profile"
+msgstr "Gå til redaktørens profil"
+
+#: templates/enterlink/hoverlink_ajax_blockchain.html:64
+msgid "Discuss Citation"
+msgstr "Diskuter citering"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:53
+msgid "Download"
+msgstr "Download"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:55
+msgid "Direct Link"
+msgstr "Direkte link"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:64
+#: templates/enterlink/hoverlink_iframe_blockchain.html:65
+#: templates/enterlink/template_blockchain_styled_desktop.html:193
+#: templates/enterlink/template_blockchain_styled_desktop.html:194
+msgid "Share"
+msgstr "Del"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:68
+#: templates/enterlink/template_blockchain_styled_desktop.html:200
+msgid "Copy URL"
+msgstr "Kopiér webadresse"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:118
+msgid "Play / Pause"
+msgstr "Spil / Sæt på pause"
+
+#: templates/enterlink/howto.html:8 templates/enterlink/howto.html:30
+msgid "How to use Everipedia"
+msgstr "Sådan bruger du Everipedia"
+
+#: templates/enterlink/howto.html:10 templates/enterlink/limitreached.html:9
+msgid ""
+"Everipedia is a free and easy to use wiki platform. Write about anyone and "
+"anything!"
+msgstr ""
+"Everipedia er en gratis og brugervenlig wiki platform. Skriv om hvem som helst og "
+"hvad som helst!"
+
+#: templates/enterlink/howto.html:36 templates/enterlink/howto.html:45
+msgid "Go back to the page you started from"
+msgstr "Gå tilbage til den side, du startede på"
+
+#: templates/enterlink/howto.html:40 templates/enterlink/howto.html:45
+msgid "Go to page"
+msgstr "Gå til side"
+
+#: templates/enterlink/howto.html:50
+msgid "Go to your editor profile page"
+msgstr "Gå til din redaktørprofilside"
+
+#: templates/enterlink/howto.html:50
+msgid "Go to profile"
+msgstr "Gå til profil"
+
+#: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
+msgid "Create a new page now"
+msgstr "Opret en ny side nu"
+
+#: templates/enterlink/howto.html:61
+msgid "Search for an existing page"
+msgstr "Søg efter en eksisterende side"
+
+#: templates/enterlink/in_progress_404.html:6
+msgid "This page is currently being created by another user"
+msgstr "Denne side er i øjeblikket ved at blive oprettet af en anden bruger"
+
+#: templates/enterlink/in_progress_404.html:82
+msgid ""
+"This page is currently in the process of being created by another user. "
+"Please return later!"
+msgstr ""
+"Denne side er i øjeblikket ved at blive oprettet af en anden bruger. "
+"Vend venligst tilbage senere!"
+
+#: templates/enterlink/inbox.html:30
+msgid "You have"
+msgstr "Du har"
+
+#: templates/enterlink/inbox.html:30
+msgid "unread notifications"
+msgstr "Ulæste notifikationer"
+
+#: templates/enterlink/inbox.html:45
+msgid "You currently do not have any notifications."
+msgstr "Du har i øjeblikket ingen anmeldelser."
+
+#: templates/enterlink/index.html:40
+msgid "The world's first encyclopedia on the blockchain"
+msgstr "Verdens første encyklopædi på blockchain"
+
+#: templates/enterlink/index.html:41
+msgid ""
+"Everipedia's IQ Network is the world's first Encyclopedia that allows anyone "
+"to become a stakeholder in the system and earn rank, rewards & tokens for "
+"curating content."
+msgstr ""
+"Everipis IQ-netværk er verdens første encyklopædi, der gør det muligt for "
+"enhver at blive interessent i systemet og tjene rang, belønninger og tokens "
+"for at være curator for indholdet."
+
+#: templates/enterlink/index.html:48
+msgid "Learn more"
+msgstr "Find ud af mere"
+
+#: templates/enterlink/index.html:100
+msgid "An Encyclopedia for the modern age"
+msgstr "En Encyclopædi for den moderne tidsalder"
+
+#: templates/enterlink/index.html:104
+msgid ""
+"The Everipedia IQ blockchain provides a new paradigm change and knowledge "
+"economy to disrupt the old centralized internet knowledge encyclopedia model "
+"similar to Wikipedia. By creating a new incentive structure and a "
+"distributed backend hosted within a blockchain, the new Everipedia knowledge "
+"base will be able to improve upon all fundamental features of Wikipedia."
+msgstr ""
+"Everipedia IQ blockchain giver en ny paradigmforandring og vidensøkonomi, der "
+"disrupterer den gamle centraliserede internet-videncyklopædemodel, "
+"der svarer til Wikipedia. Ved at oprette en ny incitamentsstruktur og en "
+"distribueret backend, der hostes i en blokkæde, vil den nye Everipedia vidensbase "
+"kunne forbedre alle de grundlæggende funktioner i Wikipedia."
+
+#: templates/enterlink/index.html:112
+msgid "Decentralized"
+msgstr "Decentraliseret"
+
+#: templates/enterlink/index.html:113
+msgid ""
+"Articles are fetched using IPFS and EOS Storage. Majority of IQ being "
+"distributed during the airdrop."
+msgstr ""
+"Artikler hentes ved hjælp af IPFS og EOS Storage. Størstedelen af IQ "
+"distribueres under airdrop."
+
+#: templates/enterlink/index.html:117
+msgid "Democratic"
+msgstr "Demokratisk"
+
+#: templates/enterlink/index.html:118
+msgid ""
+"Proof of Stake (PoS) model allows for voting to change and upgrade the IQ "
+"network as it grows. Also will facilitate batch imports of new content with "
+"no fees."
+msgstr ""
+"Proof of Stake (PoS)-modellen giver mulighed for at stemme om at ændre og opgradere "
+"IQ-netværket, efterhånden som det vokser. Også vil lette batch import af ny indhold "
+" uden gebyrer."
+
+#: templates/enterlink/index.html:122
+msgid "Censorship Resistant"
+msgstr "Censurbestandig"
+
+#: templates/enterlink/index.html:123
+msgid ""
+"Live and permanent edits of content on the blockchain beyond the control of "
+"a central authority."
+msgstr ""
+"Live og permanente redigeringer af indhold på blokkæden uden for en "
+"central myndigheds kontrol."
+
+#: templates/enterlink/index.html:127
+msgid "Financial Incentive"
+msgstr "Finansielt incitament"
+
+#: templates/enterlink/index.html:128
+msgid ""
+"All holders of IQ will be incentivized to create quality, neutral content "
+"and to work together in building the reputation of the network."
+msgstr ""
+"Alle indehavere af IQ vil blive incitiveret til at skabe kvalitet, neutralt "
+"indhold og samarbejde om at opbygge netværkets omdømme."
+
+#: templates/enterlink/index.html:139
+msgid "Become an editor today and start creating your own wiki articles."
+msgstr "Bliv redaktør i dag og begynd at oprette dine egne wiki artikler."
+
+#: templates/enterlink/index.html:142
+msgid "Open Community"
+msgstr "åbent fællesskab"
+
+#: templates/enterlink/index.html:143
+msgid ""
+"Our vibrant community is open and welcoming to people from all backgrounds. "
+"Our guidelines and policies are based on common sense rather than strict "
+"bureaucracy."
+msgstr ""
+"Vores pulserende fællesskab er åbent og indbydende for folk fra alle baggrunde. "
+"Vores retningslinjer og politikker er baseret på sund fornuft i stedet for "
+"strengt bureaukrati."
+
+#: templates/enterlink/index.html:145
+msgid "Redesigned for the modern age"
+msgstr "Omdesignet til den moderne tidsalder"
+
+#: templates/enterlink/index.html:146
+msgid ""
+"Everipedia is an encyclopedia modernized and re-designed for the twenty-"
+"first century. Our editing interface makes creating and editing wiki's as "
+"easy as using Facebook."
+msgstr ""
+"Everipedia er en encyclopædi, der er blevet moderniseret og genudformet til det "
+"enogtyvende århundrede. Vores redigeringsbrugerflade gør det at oprette og redigere wiki’er "
+"så let som at bruge Facebook."
+
+#: templates/enterlink/index.html:155
+msgid "Follow us on Telegram"
+msgstr "Følg os på Telegram"
+
+#: templates/enterlink/index.html:168
+msgid "Led by the Founder of Wikipedia and Genius.com"
+msgstr "Ledet af grundlæggeren af Wikipedia og Genius.com"
+
+#: templates/enterlink/index.html:171
+msgid ""
+"Everipedia is being lead by a team with extensive experience and knowledge "
+"both in the online knowledge space as well as the blockchain industry. The "
+"executive team is made up of several prominent individuals in the industry, "
+"the Co-Founder of Wikipedia, Larry Sanger, the founder of Genius.com, Mahbod "
+"Moghadam, and several others. Academic credentials includes UCLA, Stanford, "
+"Yale & Columbia, covering nationalities from America, Sweden, Norway and "
+"Italy. "
+msgstr ""
+"Everipedia ledes af et hold med stor erfaring og viden "
+"både inden for online viden og inden for blokkædeindustrien. "
+"Ledelsen består af flere fremtrædende personer i branchen, "
+"medstifter af Wikipedia, Larry Sanger, grundlægger af Genius.com, Mahbod "
+"Moghadam og flere andre. Akademiske kvalifikationer omfatter UCLA, Stanford, "
+"Yale & Columbia, og dækker nationaliteter fra Amerika, Sverige, Norge og "
+"Italien."
+
+#: templates/enterlink/index.html:172
+msgid "Executive Team"
+msgstr "Ledelsesteam"
+
+#: templates/enterlink/leadership.html:7
+msgid "Leadership"
+msgstr "Lederskab"
+
+#: templates/enterlink/leadership.html:23
+msgid "Executive Leadership"
+msgstr "Udøvende lederskab"
+
+#: templates/enterlink/leadership.html:35
+msgid "Chief Information Officer"
+msgstr "Informationschef"
+
+#: templates/enterlink/leadership.html:41
+msgid "Chief Executive Officer, Co-Founder"
+msgstr "Administrerende direktør, medstifter"
+
+#: templates/enterlink/leadership.html:47
+msgid "Chief Technology Officer, Co-Founder"
+msgstr "Chief Technology Officer, medstifter"
+
+#: templates/enterlink/leadership.html:53
+msgid "President, Co-Founder"
+msgstr "Præsident, medstifter"
+
+#: templates/enterlink/leadership.html:63
+msgid "Director of Software"
+msgstr "Direktør for software"
+
+#: templates/enterlink/leadership.html:69
+msgid "Chief Operating Officer"
+msgstr "Driftsdirektør"
+
+#: templates/enterlink/leadership.html:75
+msgid "Chief Community Officer, Co-Founder"
+msgstr "Chief Community Officer, medstifter"
+
+#: templates/enterlink/limitreached.html:7
+msgid "Activity limit reached"
+msgstr "Aktivitetsgrænse nået"
+
+#: templates/enterlink/limitreached.html:23
+msgid ""
+"Hey! You've added 15 morsels of knowledge to Everipedia now, so we have "
+"paused your account until Master Editors have had a chance to review your "
+"work. Shouldn't take too long, you'll probably be good to go in less than 5 "
+"minutes."
+msgstr ""
+"Hej! Du har tilføjet 15 guldkorn af viden til Everipedia nu, så vi har standset "
+"din konto, indtil hovedredaktørerne har haft mulighed for at gennemgå dit "
+"arbejde. Det skulle ikke tage for lang tid, du kan sikkert gå i gang igen om mindre end 5 "
+"minutter."
+
+#: templates/enterlink/limitreached.html:24
+msgid "In the meantime, please join our official Facebook group:"
+msgstr "I mellemtiden kan du tilmelde dig vores officielle Facebook-gruppe:"
+
+#: templates/enterlink/limitreached.html:24
+msgid "It’s the best way to reach the community!"
+msgstr "Det er den bedste måde at nå fællesskabet på!"
+
+#: templates/enterlink/login.html:7
+msgid "Sign in"
+msgstr "Log ind"
+
+#: templates/enterlink/login.html:33
+msgid "Sign in to Everipedia"
+msgstr "Log ind på Everipedia"
+
+#: templates/enterlink/login.html:48
+msgid "Log in with Facebook"
+msgstr "Log ind med Facebook"
+
+#: templates/enterlink/login.html:49
+msgid "Log in with Twitter"
+msgstr "Log in med Twitter"
+
+#: templates/enterlink/login.html:58
+msgid "Need an account?"
+msgstr "Har du brug for en konto?"
+
+#: templates/enterlink/login.html:58
+msgid "Register here"
+msgstr "Tilmeld dig her"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:34
+msgid "Visit Profile"
+msgstr "Besøg profil"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:57
+msgid "Settings"
+msgstr "Indstillinger"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:73
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:214
+#: templates/enterlink/template_blockchain_styled_amp.html:720
+msgid "Log Out"
+msgstr "Log Ud"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:86
+msgid "Register / Log In"
+msgstr "Tilmeld / Log ind"
+
+#: templates/enterlink/notifications/index.html:116
+msgid "New message"
+msgstr "Ny besked"
+
+#: templates/enterlink/recent-activity.html:84
+msgid "by"
+msgstr "af"
+
+#: templates/enterlink/register.html:6
+msgid "Create an account"
+msgstr "Opret en konto"
+
+#: templates/enterlink/register.html:26 templates/enterlink/register.html:28
+msgid "Have an account?"
+msgstr "Har du en konto?"
+
+#: templates/enterlink/register.html:26 templates/enterlink/register.html:28
+msgid "Login"
+msgstr "Log ind"
+
+#: templates/enterlink/register.html:42
+msgid ""
+"Registration is currently invite only due to blockchain software testing. "
+"Join us on Telegram and Reddit in the meantime to become a part of "
+"Everipedia today!"
+msgstr ""
+"Tilmelding sker i øjeblikket kun med invitation på grund af testning af blokkæde softwaren. "
+"I mellemtiden kan du slutte dig til os på Telegram og Reddit i mellemtiden for at blive en del af "
+"Everipedia i dag!"
+
+#: templates/enterlink/register.html:60
+msgid "Welcome to the Everipedia editor community!"
+msgstr "Velkommen til Everipedias redaktør fællesskab!"
+
+#: templates/enterlink/register.html:63
+msgid ""
+"Sign up to become an editor to access more features and an ad-free "
+"experience."
+msgstr ""
+"Meld dig til at blive redaktør, så du kan få adgang til flere funktioner og "
+"en annoncefri oplevelse."
+
+#: templates/enterlink/register.html:96
+msgid "Sign up"
+msgstr "Tilmeld dig"
+
+#: templates/enterlink/register.html:97
+msgid "By clicking sign up above you agree to our"
+msgstr "Ved at klikke på Tilmeld dig ovenfor accepterer du vores"
+
+#: templates/enterlink/register.html:97
+msgid "Terms of Service"
+msgstr "Brugervilkår"
+
+#: templates/enterlink/search-iframe.html:128
+msgid "Searching..."
+msgstr "Søger..."
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "Can't find it below?"
+msgstr "Kan du ikke finde det nedenfor?"
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "Create"
+msgstr "Opret"
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "a new page titled"
+msgstr "en ny side med titlen"
+
+#: templates/enterlink/search.html:45 templates/enterlink/search.html:55
+msgid "Or try the"
+msgstr "Eller prøv den"
+
+#: templates/enterlink/search.html:45 templates/enterlink/search.html:55
+msgid "advanced search."
+msgstr "UDVIDEDE SØGNING"
+
+#: templates/enterlink/search.html:48
+msgid "Everipedia couldn’t find anything with the name"
+msgstr "Everipedia kunne ikke finde noget med navnet"
+
+#: templates/enterlink/search.html:50
+msgid ""
+"If you know any links associated with this page, try searching for those "
+"links"
+msgstr ""
+"Hvis du er bekendt med links, der er knyttet til denne side, kan du prøve at "
+"søge efter disse links"
+
+#: templates/enterlink/template_ajax_genius.html:17
+#: templates/enterlink/template_amp_ajax_genius.html:98
+msgid "Verified Editor"
+msgstr "Verificeret redaktør"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:122
+msgid "Bullet"
+msgstr "Kugle"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:184
+#: templates/enterlink/template_blockchain_styled_desktop.html:124
+msgid "Recent news"
+msgstr "Sidste nyt"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:184
+#: templates/enterlink/template_blockchain_styled_desktop.html:124
+msgid ""
+"Everipedia IQ tokens are now in circulation on the EOS mainnet. Follow "
+"Everipedia on"
+msgstr "Everipedia IQ tokens er nu i omløb på EOS mainnet. Følg Everipedia på"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:184
+#: templates/enterlink/template_blockchain_styled_desktop.html:124
+msgid "to learn about upcoming features and developments!"
+msgstr "for at lære om kommende funktioner og udviklinger!"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:196
+#: templates/enterlink/template_blockchain_styled_desktop.html:141
+msgid "Verified Page"
+msgstr "Bekræftet side"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:303
+#: templates/enterlink/template_blockchain_styled_desktop.html:359
+msgid "Image & Video Gallery"
+msgstr "Billed- og videogalleri"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:305
+#: templates/enterlink/template_blockchain_styled_desktop.html:361
+msgid "images, pictures, and videos"
+msgstr "illustrationer, billeder og videoer"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:309
+msgid "Gallery"
+msgstr "Galleri"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:326
+#: templates/enterlink/template_blockchain_styled_desktop.html:494
+msgid "Reference Links For This Biography"
+msgstr "Reference Links for denne biografi"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:328
+#: templates/enterlink/template_blockchain_styled_desktop.html:496
+msgid "Reference Links For This Wiki"
+msgstr "Reference Links for denne Wiki"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:331
+#: templates/enterlink/template_blockchain_styled_desktop.html:499
+msgid ""
+"Links to historical reviews, career / educational facts, and other "
+"encyclopedic information"
+msgstr ""
+"Links til historiske anmeldelser, karriere-/uddannelsesmæssige fakta og "
+"andre encyklopædiske oplysninger"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:336
+#: templates/enterlink/template_blockchain_styled_desktop.html:505
+msgid "All information for"
+msgstr "Alle oplysninger til"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:336
+#: templates/enterlink/template_blockchain_styled_desktop.html:505
+msgid ""
+"wiki comes from the below links. Any source is valid, including Twitter, "
+"Facebook, Instagram, and LinkedIn. Pictures, videos, biodata, and files "
+"relating to"
+msgstr ""
+"wiki kommer fra nedenstående links. Alle kilder er gyldige, herunder Twitter, "
+"Facebook, Instagram og LinkedIn. Billeder, videoer, biodata og filer "
+"relateret til"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:336
+#: templates/enterlink/template_blockchain_styled_desktop.html:505
+msgid "are also acceptable encyclopedic sources."
+msgstr "er også acceptable encyclopædiske kilder."
+
+#: templates/enterlink/template_blockchain_styled_amp.html:351
+#: templates/enterlink/template_blockchain_styled_desktop.html:526
+msgid ""
+"See related encyclopedia articles, biographies, reviews, and historical "
+"facts."
+msgstr ""
+"Se relaterede encyklopædiartikler, biografier, anmeldelser og historiske "
+"fakta."
+
+#: templates/enterlink/template_blockchain_styled_amp.html:355
+#: templates/enterlink/template_blockchain_styled_desktop.html:533
+msgid "Other wiki pages related to"
+msgstr "Andre wiki sider forbundet med"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:534
+msgid "Created"
+msgstr "Oprettet"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:535
+msgid "Last Modified"
+msgstr "Sidst ændret"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:536
+msgid "IPFS"
+msgstr "IPFS"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:756
+msgid "Top Page Editors"
+msgstr "Forsideredaktører"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:776
+msgid "Share this page"
+msgstr "Del denne side"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:788
+msgid "DIRECT LINK"
+msgstr "DIREKTE LINK"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:793
+#: templates/enterlink/template_blockchain_styled_desktop.html:219
+msgid "Suggested Hashtags"
+msgstr "Foreslåede hashtags"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:827
+#: templates/enterlink/template_blockchain_styled_desktop.html:257
+msgid "QR Code"
+msgstr "QR kode"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:124
+msgid "and"
+msgstr "og"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:185
+#: templates/enterlink/voting_table_of_contents.html:12
+msgid "Edit"
+msgstr "Rediger"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:188
+msgid "Vote"
+msgstr "Stem"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:203
+msgid "Embed / Widget"
+msgstr "Indlejr / Widget"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:327
+msgid "Profiles"
+msgstr "Profiler"
+
+#: templates/enterlink/transfer-iq.html:7
+#: templates/enterlink/transfer-iq.html:116
+msgid "Transfer IQ"
+msgstr "Overfør IQ"
+
+#: templates/enterlink/transfer-iq.html:118
+msgid "Please make sure you have set up"
+msgstr "Sørg for at du har konfigureret"
+
+#: templates/enterlink/transfer-iq.html:118
+msgid "beforehand"
+msgstr "på forhånd"
+
+#: templates/enterlink/transfer-iq.html:122
+msgid "Recipient"
+msgstr "Modtager"
+
+#: templates/enterlink/transfer-iq.html:126
+msgid "Memo"
+msgstr "Memo"
+
+#: templates/enterlink/transfer-iq.html:131
+msgid "Transaction successful"
+msgstr "Transaktionen lykkedes"
+
+#: templates/enterlink/transfer-iq.html:135
+msgid "Buy RAM"
+msgstr "Køb RAM"
+
+#: templates/enterlink/transfer-iq.html:139
+msgid "See your RAM, CPU, and Bandwidth on FeeXplorer"
+msgstr "Se din RAM, CPU og båndbredde på FeeXplorer"
+
+#: templates/enterlink/user.html:12
+msgid "profile"
+msgstr "profil"
+
+#: templates/enterlink/user.html:38
+msgid "Everipedia Rank"
+msgstr "Everipedia Rank"
+
+#: templates/enterlink/user.html:53
+msgid "This user is verified"
+msgstr "Denne bruger er bekræftet"
+
+#: templates/enterlink/user.html:56
+msgid "Everipedia Staff"
+msgstr "Everipedia personale"
+
+#: templates/enterlink/user.html:62 templates/enterlink/user.html:67
+msgid "Message"
+msgstr "Besked"
+
+#: templates/enterlink/user.html:71 templates/enterlink/user.html:123
+msgid "Edit Profile"
+msgstr "Rediger profil"
+
+#: templates/enterlink/user.html:74
+msgid "Everipedia Page"
+msgstr "Everipedia side"
+
+#: templates/enterlink/user.html:80
+msgid "IQ Score"
+msgstr "IQ score"
+
+#: templates/enterlink/user.html:81
+msgid "Pages created"
+msgstr "Oprettede sider"
+
+#: templates/enterlink/user.html:82
+msgid "Total edits"
+msgstr "Samlede redigeringer"
+
+#: templates/enterlink/user.html:94
+msgid "Joined"
+msgstr "Tilmeldt"
+
+#: templates/enterlink/user.html:125
+msgid "Upload Avatar / Profile Picture"
+msgstr "Upload Avatar / Profilbillede"
+
+#: templates/enterlink/user.html:153
+msgid "Enable account? Uncheck to ban"
+msgstr "Aktivér konto? Fjern fluebenet for at blokere"
+
+#: templates/enterlink/user.html:157
+msgid "IP Ban"
+msgstr "IP Ban"
+
+#: templates/enterlink/user.html:157
+msgid "Ban"
+msgstr "Blokering"
+
+#: templates/enterlink/user.html:157
+msgid "Clear"
+msgstr "Ryd"
+
+#: templates/enterlink/user.html:159
+msgid "Verify the account?"
+msgstr "Bekræft kontoen?"
+
+#: templates/enterlink/user.html:163
+msgid "Is Staff?"
+msgstr "Er personale?"
+
+#: templates/enterlink/user.html:177
+msgid "Save all changes"
+msgstr "Gem alle ændringer"
+
+#: templates/enterlink/user.html:178
+msgid "Cancel"
+msgstr "Annuller"
+
+#: templates/enterlink/user.html:211
+msgid "Change Avatar Picture"
+msgstr "Skift Avatarbillede"
+
+#: templates/enterlink/user.html:219
+msgid "Please select your Everipedia page"
+msgstr "Vælg venligst din Everipedia-side"
+
+#: templates/enterlink/user.html:224
+msgid "Continue"
+msgstr "Fortsæt"
+
+#: templates/enterlink/votehistory.html:7
+msgid "Voting"
+msgstr "Afstemning"
+
+#: templates/enterlink/votehistory.html:95
+msgid "Voting History"
+msgstr "Afstemningshistorik"
+
+#: templates/enterlink/voting.html:197
+msgid "Before"
+msgstr "Før"
+
+#: templates/enterlink/voting.html:199
+msgid "After"
+msgstr "Efter"
+
+#: templates/enterlink/voting_table_of_contents.html:7
+msgid "Article"
+msgstr "Artikel"
+
+#: templates/enterlink/voting_table_of_contents.html:17
+msgid "Current Vote"
+msgstr "Nuværende afstemning"
+
+#: templates/enterlink/voting_table_of_contents.html:20
+#: templates/enterlink/voting_table_of_contents.html:62
+msgid "Reject"
+msgstr "Afvis"
+
+#: templates/enterlink/voting_table_of_contents.html:21
+msgid "Accept"
+msgstr "Accepter"
+
+#: templates/enterlink/voting_table_of_contents.html:28
+msgid "Voting Period"
+msgstr "Afstemningsperiode"
+
+#: templates/enterlink/voting_table_of_contents.html:34
+msgid "to"
+msgstr "til"
+
+#: templates/enterlink/voting_table_of_contents.html:51
+msgid "Place Votes"
+msgstr "Afgiv stemmer"
+
+#: templates/enterlink/voting_table_of_contents.html:63
+msgid "Approve"
+msgstr "Godkend"
+
+#: templates/enterlink/voting_table_of_contents.html:67
+msgid "Changes"
+msgstr "Ændringer"
+
+#: templates/enterlink/welcome.html:7
+msgid "Welcome to Everipedia, the encyclopedia of everything"
+msgstr "Velkommen til Everipedia, encyklopædi af alt"

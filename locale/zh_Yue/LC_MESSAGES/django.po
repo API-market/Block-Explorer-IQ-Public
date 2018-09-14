@@ -1,0 +1,2261 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-25 08:59-0700\n"
+"PO-Revision-Date: 2018-08-01 14:38-0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: yue\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.1.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: enterlink/edit.py:114
+msgid "Page Type"
+msgstr "網頁"
+
+#: enterlink/edit.py:114
+msgid "Removed From Site"
+msgstr ""
+
+#: enterlink/edit.py:114 templates/enterlink/edit_ajax_editpagemeta.html:12
+msgid "Adult Content"
+msgstr "成人內容"
+
+#: enterlink/edit.py:115
+msgid "Media Gallery"
+msgstr "庫"
+
+#: enterlink/edit.py:115
+msgid "References and Citations"
+msgstr ""
+
+#: enterlink/forms.py:9
+msgid "Contains"
+msgstr "包含"
+
+#: enterlink/forms.py:9
+msgid "Equal to"
+msgstr "等於"
+
+#: enterlink/forms.py:10
+msgid "Regular expression"
+msgstr "正則表達式"
+
+#: enterlink/forms.py:11
+msgid "Starts with"
+msgstr "開始於"
+
+#: enterlink/forms.py:11
+msgid "Ends with"
+msgstr "結束於"
+
+#: enterlink/forms.py:12
+msgid "Greater than"
+msgstr "大於"
+
+#: enterlink/forms.py:12
+msgid "Greater than or equal to"
+msgstr "大於或等於"
+
+#: enterlink/forms.py:13
+msgid "Less than"
+msgstr "少於"
+
+#: enterlink/forms.py:13
+msgid "Less than or equal to"
+msgstr "小於或等於"
+
+#: enterlink/forms.py:42 templates/enterlink/headers/index_header.html:133
+#: templates/enterlink/login.html:40
+msgid "Password"
+msgstr "密碼"
+
+#: enterlink/forms.py:44
+msgid "Please enter a password"
+msgstr "请输入密码"
+
+#: enterlink/forms.py:45
+msgid "Please enter a valid password"
+msgstr "請輸入有效嘅密碼"
+
+#: enterlink/forms.py:46
+msgid "Enter an email"
+msgstr "輸入電子郵件"
+
+#: enterlink/forms.py:47
+msgid "Please enter an email address"
+msgstr "請輸入電子郵件地址"
+
+#: enterlink/forms.py:48
+msgid "Please enter a valid email address"
+msgstr "請輸入有效的電子郵件地址"
+
+#: enterlink/forms.py:49 enterlink/forms.py:69
+msgid "First Name"
+msgstr "名字"
+
+#: enterlink/forms.py:51 enterlink/forms.py:71
+msgid "Last Name"
+msgstr "姓氏"
+
+#: enterlink/forms.py:53
+msgid "Enter a username"
+msgstr "輸入用戶名"
+
+#: enterlink/forms.py:54
+msgid "Please enter a username"
+msgstr "請輸入用戶名"
+
+#: enterlink/forms.py:55
+msgid "Please enter a valid username"
+msgstr "請輸入有效嘅用戶名"
+
+#: enterlink/forms.py:61
+msgid "This email address already exists! Please use another one."
+msgstr "此電子郵件地址已存在! 請先用一個。"
+
+#: enterlink/forms.py:73 enterlink/forms.py:83
+msgid "Email"
+msgstr "郵箱"
+
+#: enterlink/forms.py:82
+msgid "How can we help?"
+msgstr "我能幫上甚麼忙嗎?"
+
+#: enterlink/forms.py:84
+msgid "Full Name"
+msgstr "全名"
+
+#: enterlink/forms.py:85
+msgid "Subject"
+msgstr "主題"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Report Abuse"
+msgstr "報告濫用"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Report Bug"
+msgstr "報告 bug"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Verify Account"
+msgstr "驗證帳戶"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Anonymous Tip"
+msgstr "匿名提示"
+
+#: enterlink/forms.py:86 enterlink/models.py:89
+msgid "Investment Inquiries"
+msgstr "投資查詢"
+
+#: enterlink/forms.py:86 enterlink/forms.py:175 enterlink/models.py:89
+#: enterlink/models.py:134
+msgid "Other"
+msgstr "其他"
+
+#: enterlink/forms.py:97
+msgid "Search by Entering a Link"
+msgstr "透過輸入連結進行搜索"
+
+#: enterlink/forms.py:126
+msgid ""
+"Describe the file briefly. A summary of the information found is best. Avoid "
+"simply repeating the page title."
+msgstr "簡要描述該文件。 搵到嘅信息的摘要係最好嘅。 避免簡單地重複頁面標題。"
+
+#: enterlink/forms.py:148
+msgid "File type not allowed."
+msgstr "唔允許文件類型。"
+
+#: enterlink/forms.py:153
+msgid "Please ."
+msgstr "請。"
+
+#: enterlink/forms.py:154
+msgid "Enter a URL"
+msgstr "輸入 url"
+
+#: enterlink/forms.py:156
+msgid ""
+"Describe the URL briefly. A summary of the information found is best. Avoid "
+"simply repeating the page title."
+msgstr "簡要描述 url。 搵到嘅信息的摘要係最好嘅。 避免簡單地重複頁面標題。"
+
+#: enterlink/forms.py:165 templates/enterlink/edit_ajax_addinfobox.html:28
+msgid "Enter type (e.g. Occupation)"
+msgstr "輸入類型 (如職業)"
+
+#: enterlink/forms.py:166 templates/enterlink/edit_ajax_addinfobox.html:28
+msgid "Enter value (e.g. CEO)"
+msgstr "輸入值 (如 ceo)"
+
+#: enterlink/forms.py:170 enterlink/models.py:134
+msgid "Person"
+msgstr "人員"
+
+#: enterlink/forms.py:170 enterlink/models.py:134
+msgid "Place/Location"
+msgstr "地點/地點"
+
+#: enterlink/forms.py:171 enterlink/models.py:134
+msgid "Organization/Company/Institution"
+msgstr "組織/公司/機構"
+
+#: enterlink/forms.py:171 enterlink/models.py:134
+msgid "Event"
+msgstr "事件"
+
+#: enterlink/forms.py:172 enterlink/models.py:134
+msgid "List/Ranking"
+msgstr "列表/排名"
+
+#: enterlink/forms.py:172 enterlink/models.py:134
+msgid "Product/Merchandise"
+msgstr "產品/商品"
+
+#: enterlink/forms.py:173 enterlink/models.py:134
+msgid "Electronics/Software"
+msgstr "電子/軟件"
+
+#: enterlink/forms.py:173 enterlink/models.py:134
+msgid "Medical/Biology"
+msgstr "醫學/生物學"
+
+#: enterlink/forms.py:174 enterlink/models.py:134
+msgid "Creative Work/Art"
+msgstr "創意工作/藝術"
+
+#: enterlink/forms.py:175 enterlink/models.py:134
+msgid "Science/Academia/Humanities"
+msgstr "科學/學術界/人文科學"
+
+#: enterlink/models.py:45 enterlink/models.py:49
+msgid "None"
+msgstr "冇"
+
+#: enterlink/models.py:45
+msgid "Featured"
+msgstr "特色"
+
+#: enterlink/models.py:45
+msgid "In the news"
+msgstr "在新聞"
+
+#: enterlink/models.py:46
+msgid "In the news (Editor's Pick)"
+msgstr "在新聞 (編輯嘅挑選)"
+
+#: enterlink/models.py:46
+msgid "In the news (Standout Article)"
+msgstr "新聞 (傑出文)"
+
+#: enterlink/models.py:47
+msgid "Trending"
+msgstr "趨勢"
+
+#: enterlink/models.py:47
+msgid "On this day"
+msgstr "喺呢一日"
+
+#: enterlink/models.py:47
+msgid "Blog Post (Meta Article)"
+msgstr "博客文章 (元文)"
+
+#: enterlink/models.py:49
+msgid "Verified Only"
+msgstr "僅驗證"
+
+#: enterlink/models.py:50
+msgid "Normal (Business)"
+msgstr "正常 (業務)"
+
+#: enterlink/models.py:50
+msgid "Normal (Personal)"
+msgstr "正常 (人)"
+
+#: enterlink/view_functions.py:144
+msgid ""
+"Your Everipedia editor restrictions have been removed. You can now edit "
+"pages freely!"
+msgstr "你嘅 everipedia 編輯器制已被刪除。 你而家可以自由編輯網頁!"
+
+#: enterlink/view_functions.py:607
+msgid "Images & Videos"
+msgstr "圖像和視頻"
+
+#: enterlink/view_functions.py:609
+msgid "References"
+msgstr "引用"
+
+#: enterlink/view_functions.py:612
+msgid "Article Discussion"
+msgstr "文章討論"
+
+#: enterlink/view_functions.py:615 enterlink/view_functions.py:618
+#: templates/enterlink/template_blockchain_styled_amp.html:350
+#: templates/enterlink/template_blockchain_styled_desktop.html:526
+msgid "See Also"
+msgstr "另見"
+
+#: enterlink/view_functions.py:617
+msgid "Top Editors"
+msgstr "頂級編輯器"
+
+#: enterlink/view_functions.py:1625
+msgid "Wiki and references for"
+msgstr "wiki 和參考文獻"
+
+#: enterlink/view_functions.py:1626
+msgid "You can edit something on this wiki now!"
+msgstr "你可以編輯呢個 wiki 上嘅嘢啦!"
+
+#: local_packages/block_ip/models.py:11
+msgid "IP address or mask"
+msgstr "ip 地址或掩碼"
+
+#: local_packages/block_ip/models.py:12
+msgid "Optional reason for block"
+msgstr "舊嘅可選原因"
+
+#: local_packages/block_ip/models.py:25 local_packages/block_ip/models.py:26
+msgid "IPs & masks to ban"
+msgstr "禁止嘅 ips 同面具"
+
+#: templates/admin/base.html:28
+msgid "Welcome,"
+msgstr "歡迎"
+
+#: templates/admin/base.html:33
+msgid "Documentation"
+msgstr "快勞"
+
+#: templates/admin/base.html:36
+msgid "Change password"
+msgstr "更改密碼"
+
+#: templates/admin/base.html:38 templates/admin/password_change_done.html:57
+#: templates/admin/password_change_form.html:59
+#: templates/enterlink/headers/header_dropdown.html:22
+#: templates/enterlink/headers/header_dropdown.html:44
+#: templates/enterlink/headers/index_header.html:110
+#: templates/enterlink/headers/index_header.html:166
+#: templates/enterlink/headers/index_header.html:236
+#: templates/enterlink/headers/index_header.html:258
+#: templates/enterlink/notifications/index.html:100
+#: templates/enterlink/notifications/index.html:105
+msgid "Log out"
+msgstr "註銷"
+
+#: templates/admin/base.html:47 templates/admin/logged_out.html:4
+#: templates/admin/password_reset_complete.html:6
+#: templates/admin/password_reset_confirm.html:6
+#: templates/admin/password_reset_done.html:6
+#: templates/admin/password_reset_form.html:6
+#: templates/enterlink/notifications/index.html:61
+#: templates/enterlink/notifications/index.html:94
+msgid "Home"
+msgstr "家"
+
+#: templates/admin/base_site.html:4
+msgid "Django site admin"
+msgstr "django 網站管理員"
+
+#: templates/admin/base_site.html:7
+msgid "Django administration"
+msgstr "django 管理"
+
+#: templates/admin/logged_out.html:8
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr "多謝你今日用咗啲時間喺網站上。"
+
+#: templates/admin/logged_out.html:10
+msgid "Log in again"
+msgstr "再次登錄"
+
+#: templates/admin/password_change_done.html:46
+#: templates/admin/password_change_form.html:48
+#: templates/enterlink/edit.html:145 templates/enterlink/search-iframe.html:122
+#: templates/enterlink/search.html:27 templates/enterlink/user.html:220
+msgid "Search Everipedia"
+msgstr "搜索 everipedia"
+
+#: templates/admin/password_change_done.html:60
+#: templates/admin/password_change_form.html:62
+#: templates/admin/password_reset_complete.html:19
+#: templates/enterlink/headers/index_header.html:135
+#: templates/enterlink/headers/index_header.html:168
+#: templates/enterlink/headers/index_header.html:240
+#: templates/enterlink/headers/index_header.html:262
+#: templates/enterlink/login.html:45
+msgid "Log in"
+msgstr "登錄"
+
+#: templates/admin/password_change_done.html:71
+msgid "Password change successful"
+msgstr "密碼更改成功"
+
+#: templates/admin/password_reset_complete.html:7
+#: templates/admin/password_reset_confirm.html:11
+#: templates/admin/password_reset_done.html:7
+#: templates/admin/password_reset_form.html:7
+#: templates/admin/password_reset_form.html:11
+#: templates/admin/password_reset_form.html:15
+msgid "Password reset"
+msgstr "密碼重置"
+
+#: templates/admin/password_reset_complete.html:11
+#: templates/admin/password_reset_complete.html:15
+msgid "Password reset complete"
+msgstr "密碼重置完成"
+
+#: templates/admin/password_reset_complete.html:17
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr "你嘅密碼已設置。  你可以繼續登錄了。"
+
+#: templates/admin/password_reset_confirm.html:7
+msgid "Password reset confirmation"
+msgstr "密碼復位確認"
+
+#: templates/admin/password_reset_confirm.html:17
+msgid "Enter new password"
+msgstr "輸入新密碼"
+
+#: templates/admin/password_reset_confirm.html:19
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr "請輸入您的新密碼兩次, 以便我地可以驗證你鍵入啱佢。"
+
+#: templates/admin/password_reset_confirm.html:23
+msgid "New password:"
+msgstr "新密碼:"
+
+#: templates/admin/password_reset_confirm.html:25
+msgid "Confirm password:"
+msgstr "確認密碼:"
+
+#: templates/admin/password_reset_confirm.html:26
+msgid "Change my password"
+msgstr "更改我的密碼"
+
+#: templates/admin/password_reset_confirm.html:31
+msgid "Password reset unsuccessful"
+msgstr "密碼重置失敗"
+
+#: templates/admin/password_reset_confirm.html:33
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr "密碼重設連結無效, 可能是因為它已經被使用。  請請求重新設置密碼。"
+
+#: templates/admin/password_reset_done.html:11
+#: templates/admin/password_reset_done.html:15
+msgid "Password reset successful"
+msgstr "密碼重置成功"
+
+#: templates/admin/password_reset_done.html:17
+msgid ""
+"We have emailed you instructions for setting your password. You should be "
+"receiving them shortly."
+msgstr "我哋已經透過電子郵件向你發送設置密碼的說明。 你就好快會收到的。"
+
+#: templates/admin/password_reset_done.html:19
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+"如果你冇收到電子郵件, 請確保你已輸入您註冊的地址, 並檢查您的垃圾郵件文件夾。"
+
+#: templates/admin/password_reset_email.html:2
+msgid ""
+"You are receiving this email because you requested a password reset for your "
+"Everipedia account."
+msgstr "你正在接收此電子郵件, 因為你請求為你嘅 everipedia 帳戶重新設置密碼。"
+
+#: templates/admin/password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr "請轉去下一頁並選擇一個新密碼:"
+
+#: templates/admin/password_reset_email.html:8
+msgid "Your username, in case you've forgotten:"
+msgstr "你個用戶名, 以防你忘記:"
+
+#: templates/admin/password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr "多謝你使用我們的網站!"
+
+#: templates/admin/password_reset_form.html:17
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+"忘記密碼了? 在下面輸入您的電子郵件地址, 我們將通過電子郵件說明設置一個新的。"
+
+#: templates/admin/password_reset_form.html:21
+msgid "Email address:"
+msgstr "郵箱地址:"
+
+#: templates/admin/password_reset_form.html:21
+msgid "Reset my password"
+msgstr "重設密碼"
+
+#: templates/email/sanger_announcement.html:276
+#: templates/email/welcome_email.html:264
+#: templates/email/welcome_email_old.html:68
+#: templates/enterlink/welcome.html:33
+msgid "Learn More"
+msgstr "了解更多信息"
+
+#: templates/email/welcome_email.html:257
+msgid "View My Profile"
+msgstr "查看我嘅個人資料"
+
+#: templates/email/welcome_email_old.html:67
+#: templates/enterlink/welcome.html:28 templates/enterlink/welcome.html:30
+msgid "Create a Wiki"
+msgstr "創建 wiki"
+
+#: templates/endless/show_more.html:5
+msgid "more"
+msgstr "重"
+
+#: templates/enterlink/ajax_infobox_singlet.html:14
+#: templates/enterlink/ajax_infobox_singlet.html:42
+msgid "Add Row"
+msgstr ""
+
+#: templates/enterlink/ajax_infobox_singlet.html:17
+#: templates/enterlink/ajax_infobox_singlet.html:45
+msgid "Schema"
+msgstr ""
+
+#: templates/enterlink/ajax_infobox_singlet.html:21
+#: templates/enterlink/ajax_infobox_singlet.html:49
+msgid "Schema Type"
+msgstr ""
+
+#: templates/enterlink/ajax_infobox_singlet.html:25
+#: templates/enterlink/ajax_infobox_singlet.html:53
+msgid "Subschema"
+msgstr ""
+
+#: templates/enterlink/ajax_link_singlet.html:25
+msgid "Social Media"
+msgstr ""
+
+#: templates/enterlink/ajax_link_singlet.html:27
+msgid "Attributes"
+msgstr ""
+
+#: templates/enterlink/ajax_link_singlet.html:29
+#: templates/enterlink/ajax_media_gallery_singlet.html:33
+msgid "Timestamp"
+msgstr ""
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:14
+#: templates/enterlink/ajax_media_gallery_singlet.html:19
+#: templates/enterlink/ajaxresults.html:104
+#: templates/enterlink/hoverlink_iframe_blockchain.html:97
+#: templates/enterlink/template_blockchain_styled_desktop.html:415
+#: templates/enterlink/template_blockchain_styled_desktop.html:438
+#: templates/enterlink/template_photos_amp_json_blockchain.html:79
+msgid "Your browser does not support HTML5 video."
+msgstr "您的瀏覽器唔支持 html5 視頻。"
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:29
+msgid "Type"
+msgstr ""
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:31
+msgid "MIME Type"
+msgstr ""
+
+#: templates/enterlink/ajax_media_gallery_singlet.html:37
+msgid "Original URL"
+msgstr ""
+
+#: templates/enterlink/ajaxresults.html:57
+msgid "Click to add a new link or file to this list"
+msgstr "单击此處, 將新連結或文件添加到此列表中"
+
+#: templates/enterlink/ajaxresults.html:60
+msgid "Or click an existing link below to add it to the article"
+msgstr "或单击下面的現有連結將其添加到文章中"
+
+#: templates/enterlink/ajaxresults.html:135
+#: templates/enterlink/ajaxresults.html:192
+#: templates/enterlink/template_blockchain_styled_desktop.html:167
+msgid "Views"
+msgstr "视图"
+
+#: templates/enterlink/ajaxresults.html:157
+#: templates/enterlink/hovereditor_ajax.html:74
+msgid "IQ"
+msgstr "智商"
+
+#: templates/enterlink/ajaxresults.html:175
+msgid "page(s) have this link"
+msgstr "頁面具有此連結"
+
+#: templates/enterlink/analytics.html:7 templates/enterlink/faq.html:6
+msgid "Frequently Asked Questions - Everipedia, everyone's encyclopedia"
+msgstr "常見問題解答-everipedia, 大家嘅百科全書"
+
+#: templates/enterlink/brainpowermgmt.html:4
+#: templates/enterlink/brainpowermgmt.html:114
+msgid "Brainpower Management"
+msgstr "智能管理"
+
+#: templates/enterlink/brainpowermgmt.html:4 templates/enterlink/contact.html:7
+#: templates/enterlink/edit.html:7 templates/enterlink/editing-disabled.html:7
+#: templates/enterlink/editors.html:23
+#: templates/enterlink/exchange-listings.html:7
+#: templates/enterlink/headers/index_header.html:17
+#: templates/enterlink/headers/index_header.html:18
+#: templates/enterlink/inbox.html:12 templates/enterlink/index.html:7
+#: templates/enterlink/leadership.html:7
+#: templates/enterlink/limitreached.html:7 templates/enterlink/login.html:7
+#: templates/enterlink/recent-activity.html:7
+#: templates/enterlink/register.html:6 templates/enterlink/rewardsmgmt.html:4
+#: templates/enterlink/search.html:7 templates/enterlink/transfer-iq.html:5
+#: templates/enterlink/user.html:12 templates/enterlink/votehistory.html:7
+msgid "Everipedia, the encyclopedia of everything"
+msgstr "everipedia, 一切嘅百科全書"
+
+#: templates/enterlink/brainpowermgmt.html:101 templates/enterlink/edit.html:89
+#: templates/enterlink/rewardsmgmt.html:119
+#: templates/enterlink/transfer-iq.html:106 templates/enterlink/voting.html:180
+msgid "Loading Scatter"
+msgstr "加载散啲"
+
+#: templates/enterlink/brainpowermgmt.html:117
+msgid ""
+"Staking IQ tokens will freeze them for 21 days and will generate "
+"nontransferable Brainpower, which can be used for editing and voting on the "
+"Everipedia network. At the end of the 21 days, you can claim back your IQ "
+"tokens and re-stake them for more Brainpower again. Thus, 1 IQ, staked every "
+"21 days, can lead to 365 days / 21 days = 17.38 Brainpower every year."
+msgstr ""
+"下注智商令牌會凍結佢哋 21天, 並將產生頂腦力, 可以用於編輯同投票 everipedia 網"
+"絡。 在21天結束, 你可以收回你的智商令牌, 並再次同佢哋再次賭注, 以更多的腦"
+"力。 因此, 1 嘅智商, 每21天押下, 可以導致 365天/21 日 = 17.38 腦力每年。"
+
+#: templates/enterlink/brainpowermgmt.html:118
+msgid ""
+"As you make pages, propose edits, and vote on article proposals, you will "
+"consume Brainpower. However, making successful edits and voting on the "
+"winning side of a proposal will generate rewards in IQ, not Brainpower. "
+"Therefore, you can generate more Brainpower (and any profit) by staking the "
+"new IQ you just earned."
+msgstr ""
+"當你做網頁, 提出編輯, 並投票嘅文建議, 你會消耗腦力。 然而, 成功嘅編輯同投票嘅"
+"勝利一方嘅建議將產生獎嘅智商, 而唔係腦力。 因此, 你可以通過對啱啱掙嚟嘅新智商"
+"進行下注嚟產生更多的腦力 (同任何花紅)。"
+
+#: templates/enterlink/brainpowermgmt.html:119
+msgid ""
+"Every edit proposal requires a minimum of 10 Brainpower at this time, in "
+"order to prevent spam and poor-quality edits."
+msgstr "每一個編輯方案都需要至少10嘅腦力喺呢個時候, 以防止垃圾郵件和劣質編輯。"
+
+#: templates/enterlink/brainpowermgmt.html:122
+msgid "Enter an integer amount of IQ to stake"
+msgstr "輸入一個整數金額嘅智商, 以利害關係"
+
+#: templates/enterlink/brainpowermgmt.html:123
+msgid "New Stake"
+msgstr "新股份"
+
+#: templates/enterlink/brainpowermgmt.html:128
+msgid "Start"
+msgstr "初時"
+
+#: templates/enterlink/brainpowermgmt.html:129
+msgid "End"
+msgstr "結束"
+
+#: templates/enterlink/brainpowermgmt.html:130
+#: templates/enterlink/voting_table_of_contents.html:40
+msgid "Time Remaining"
+msgstr "剩餘時間"
+
+#: templates/enterlink/brainpowermgmt.html:131
+#: templates/enterlink/transfer-iq.html:127
+msgid "Amount"
+msgstr "量"
+
+#: templates/enterlink/brainpowermgmt.html:132
+msgid "Claim"
+msgstr "索賠"
+
+#: templates/enterlink/contact.html:7 templates/enterlink/contact.html:24
+msgid "Contact us"
+msgstr "聯繫我們"
+
+#: templates/enterlink/contact.html:20
+msgid "To get quicker replies from our community"
+msgstr "喺我哋嘅社區得到更快的答覆"
+
+#: templates/enterlink/contact.html:20
+msgid "create a post in our forum"
+msgstr "在論壇中創建帖子"
+
+#: templates/enterlink/contact.html:25
+msgid "Get in touch with us"
+msgstr "同我哋取得聯繫"
+
+#: templates/enterlink/contact.html:33
+msgid "Thanks, we got your message. We will respond in a bit"
+msgstr "唔該晒, 我哋收到你既留言啦 我哋會做出一些反應"
+
+#: templates/enterlink/contact.html:41 templates/enterlink/transfer-iq.html:131
+msgid "Send"
+msgstr "發送"
+
+#: templates/enterlink/dropzone.html:140 templates/enterlink/edit.html:167
+#: templates/enterlink/edit.html:176 templates/enterlink/edit.html:185
+#: templates/enterlink/edit.html:195 templates/enterlink/edit.html:204
+msgid "OK"
+msgstr "仲可以"
+
+#: templates/enterlink/dropzone.html:141
+msgid "Enter a caption for the main image of the page."
+msgstr "輸入頁面的主圖像的標題。"
+
+#: templates/enterlink/edit.html:7
+msgid "Edit Page"
+msgstr "編輯頁面"
+
+#: templates/enterlink/edit.html:85
+msgid "Loading.."
+msgstr "加载。。"
+
+#: templates/enterlink/edit.html:128
+msgid "Change Picture"
+msgstr "更改圖"
+
+#: templates/enterlink/edit.html:144
+msgid "Please enter the destination page you wish to merge this one into"
+msgstr "請輸入您想要將其合併到嘅目標頁面"
+
+#: templates/enterlink/edit.html:149
+msgid "Merge Page"
+msgstr "合併頁"
+
+#: templates/enterlink/edit.html:156 templates/enterlink/edit.html:165
+#: templates/enterlink/edit.html:174 templates/enterlink/edit.html:183
+#: templates/enterlink/edit.html:192 templates/enterlink/edit.html:202
+msgid "Hey there scholar!"
+msgstr "嘿, 學者!"
+
+#: templates/enterlink/edit.html:157
+msgid ""
+"Looks like you have been editing for a while. You should take a moment to "
+"save your work before continuing!"
+msgstr ""
+"睇黎你已經編輯左一段時間了。 在繼續之前, 你應該用啲時間嚟 keep 你既工作!"
+
+#: templates/enterlink/edit.html:158
+msgid "Save"
+msgstr "救"
+
+#: templates/enterlink/edit.html:166
+msgid ""
+"Looks like you are using first-person! (ex: Our product, I am, We are, You "
+"should). Everipedia is a neutral encyclopedia written in third-person tense "
+"(ex: It is, They are, The company makes). THIS IS NOT FACEBOOK!!"
+msgstr ""
+"睇黎你用第一人稱緊! (前: 我哋嘅產品, 我, 我地, 你應該)。 everipedia 係本以第"
+"三人稱时态寫成的中性百科全書 (前: 佢係, 佢地係, 公司製造)。 唔係臉譜網!!"
+
+#: templates/enterlink/edit.html:175
+msgid "Please enter a title for the page."
+msgstr "請輸入該頁的標題。"
+
+#: templates/enterlink/edit.html:184
+msgid ""
+"Please write something for the article section. Make sure to use citations."
+msgstr "請為文部分寫啲嘢。 請務必使用引文。"
+
+#: templates/enterlink/edit.html:193
+msgid ""
+"Hello! This page needs citations (also known as footnotes, references, "
+"sources) before it can be saved. Add the links you're using as sources with "
+"the cite button above."
+msgstr ""
+"你好! 此頁需要引用 (也稱為腳註、引用同源), 然後才能保存。 喺上面嘅 \"引用\" "
+"按鈕中添加你使用的連結。"
+
+#: templates/enterlink/edit.html:194
+msgid "Join our official Facebook group if you need help with it!:"
+msgstr "加入我哋嘅官方 facebook 小組, 如果你需要幫助佢!:"
+
+#: templates/enterlink/edit.html:194
+msgid "- we will hook you up. It's not hard!"
+msgstr "-我哋會幫你。 唔惡!"
+
+#: templates/enterlink/edit.html:203
+msgid ""
+"Please cite the link(s) you just added into the main article body. First "
+"click at the end of the sentence or paragraph you want to cite, then click "
+"the (Cite) button on the edit panel above!"
+msgstr ""
+"請引用你啱啱添加到正文正文中嘅連結。 首先单击要引用的句子或段落的末尾, 然後单"
+"击上面編輯面板上的 (引用) 制!"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:10
+msgid "Add New Infobox Item"
+msgstr "添加新 infobox 項"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:14
+msgid "Enter a classification or category"
+msgstr "輸入分類或類別"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:17
+msgid "Enter a value or a description"
+msgstr "輸入值或說明"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:23
+msgid "Add Infobox Item"
+msgstr "添加 infobox 項"
+
+#: templates/enterlink/edit_ajax_addinfobox.html:25
+#: templates/enterlink/edit_ajax_addlink.html:26
+#: templates/enterlink/edit_ajax_editpagemeta.html:15
+#: templates/enterlink/edit_ajax_page_photo.html:4
+msgid "Close"
+msgstr "關閉"
+
+#: templates/enterlink/edit_ajax_addlink.html:7
+msgid "Add a Link or File"
+msgstr "添加連結或文件"
+
+#: templates/enterlink/edit_ajax_addlink.html:9
+msgid "File"
+msgstr "文件"
+
+#: templates/enterlink/edit_ajax_addlink.html:10
+msgid "URL"
+msgstr "Url"
+
+#: templates/enterlink/edit_ajax_addlink.html:10
+msgid "Link"
+msgstr "連結"
+
+#: templates/enterlink/edit_ajax_addlink.html:14
+msgid "Upload file"
+msgstr "上載文件"
+
+#: templates/enterlink/edit_ajax_addlink.html:24
+msgid "Add Link"
+msgstr "添加連結"
+
+#: templates/enterlink/edit_ajax_editmainphoto.html:7
+msgid "Reset"
+msgstr "重置"
+
+#: templates/enterlink/edit_ajax_editpagemeta.html:4
+msgid "Select the topic of this page"
+msgstr "選擇此頁的主題"
+
+#: templates/enterlink/edit_ajax_editpagemeta.html:8
+msgid "Remove page"
+msgstr "刪除頁面"
+
+#: templates/enterlink/editing-disabled.html:7
+msgid "Editing existing pages temporarily disabled"
+msgstr "編輯已暫時禁用的現有頁面"
+
+#: templates/enterlink/editors.html:23
+msgid "Editors"
+msgstr "編輯"
+
+#: templates/enterlink/editors.html:74
+msgid "Everipedia Editors"
+msgstr "everipedia 編輯器"
+
+#: templates/enterlink/editors.html:93 templates/enterlink/inbox.html:52
+#: templates/enterlink/recent-activity.html:103
+#: templates/enterlink/search.html:89
+msgid "Previous"
+msgstr "上一步"
+
+#: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
+#: templates/enterlink/recent-activity.html:107
+#: templates/enterlink/search.html:93
+msgid "Page"
+msgstr "網頁"
+
+#: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
+#: templates/enterlink/recent-activity.html:107
+#: templates/enterlink/search.html:93
+msgid "of"
+msgstr "的"
+
+#: templates/enterlink/editors.html:101 templates/enterlink/inbox.html:60
+#: templates/enterlink/recent-activity.html:111
+#: templates/enterlink/search.html:97
+msgid "Next"
+msgstr "下一步"
+
+#: templates/enterlink/error.html:6
+msgid "Page not found!"
+msgstr "搵唔到頁面!"
+
+#: templates/enterlink/error.html:211
+msgid "Page not found"
+msgstr "搵唔到頁面"
+
+#: templates/enterlink/error.html:213
+msgid "In The News"
+msgstr "在新聞"
+
+#: templates/enterlink/error.html:214
+#: templates/enterlink/headers/header_dropdown.html:37
+#: templates/enterlink/recent-activity.html:7
+#: templates/enterlink/recent-activity.html:73
+#: templates/enterlink/user.html:192
+msgid "Recent Activity"
+msgstr "最近活動"
+
+#: templates/enterlink/error_410.html:6 templates/enterlink/error_410.html:62
+msgid "This page has been removed"
+msgstr "此頁已被刪除"
+
+#: templates/enterlink/error_410.html:63
+#: templates/enterlink/in_progress_404.html:86
+msgid "Click here to return to recent activity"
+msgstr "单击此處返回最近的活動"
+
+#: templates/enterlink/exchange-listings.html:7
+msgid "Exchange Listings"
+msgstr "交換列表"
+
+#: templates/enterlink/exchange-listings.html:17
+msgid "Supported Exchanges"
+msgstr "支持嘅交流"
+
+#: templates/enterlink/exchange-listings.html:18
+msgid "The following exchanges indicated that they will support the IQ airdrop"
+msgstr "下列交易所表示, 他們會支持 iq 空投"
+
+#: templates/enterlink/exchange-listings.html:142
+msgid "Supported Wallets"
+msgstr "支持個荷包"
+
+#: templates/enterlink/exchange-listings.html:176
+msgid "Token Pockets"
+msgstr "令牌口袋"
+
+#: templates/enterlink/faq.html:20
+msgid "Frequently Asked Questions"
+msgstr "常見問題"
+
+#: templates/enterlink/faq.html:24
+msgid "What is Everipedia?"
+msgstr "咩係 everipedia?"
+
+#: templates/enterlink/faq.html:25
+msgid ""
+"Everipedia is a knowledge aggregator and knowledge base. We think it's much "
+"easier to edit than Wikipedia. Anyone can create a page about any person, "
+"place, organization, or thing and populate it with relevant reference links/"
+"sources. The only main rules of EP are: Information on the page must always "
+"be cited and the article must be in a neutral point of view. Check out the "
+"actual entry for Everipedia... on"
+msgstr ""
+"everipedia 係一個知識聚合器和知識庫。 我哋認為編輯比维基百科容易得多。 任何人"
+"都可以創建一個關於任何人、地點、組織或事物的頁面, 並使用相關的參考連結/來源填"
+"充它。 ep 嘅唯一主要規則係: 頁面上的信息必須始終被引用, 文章必須處於中性嘅角"
+"度。 查看 everipedia 嘅實際條目..。"
+
+#: templates/enterlink/faq.html:27
+msgid "Why should I sign up?"
+msgstr "我點解要報名?"
+
+#: templates/enterlink/faq.html:28
+msgid ""
+"Because it’s fun and easy! We thought contributing to large knowledge "
+"projects shouldn't require high barriers to entry so we made Everipedia very "
+"easy to navigate, edit, and get started. Editors gain more privileges as "
+"they accumulate IQ and rise through the ranks. Top site-wide editors are "
+"displayed on the front page. Top editors for each page are also displayed."
+msgstr ""
+"因为距嘅樂趣同易! 我們認為, 對大型知識項目的貢獻不應該要求高門檻進入, 所以我"
+"哋由 everipedia 好易導航, 編輯, 並開始。 編輯獲得更多的特權, 因為佢哋積累嘅智"
+"商同上升嘅行列。 頂級站點範圍的編輯器顯示喺頭版。 仲會顯示每個頁面的頂級編輯"
+"器。"
+
+#: templates/enterlink/faq.html:30
+msgid "Try it!"
+msgstr "試下!"
+
+#: templates/enterlink/faq.html:30
+msgid "Sign up here"
+msgstr "係呢度註冊"
+
+#: templates/enterlink/faq.html:32
+msgid "So how is Everipedia different from Wikipedia and similar sites?"
+msgstr "咁 everipedia 同維基百科同類似網站有咩唔同呢?"
+
+#: templates/enterlink/faq.html:33
+msgid ""
+"Editing on Everipedia is graphic and modern, talk pages are designed as "
+"discussion threads, celebrities have verified accounts, and anyone can make "
+"pages about anything as long as they are properly cited. Every page from "
+"Wikipedia is already here on Everipedia to build on top of and improve. All "
+"this makes EP the biggest knowledge project ever!"
+msgstr ""
+"everipedia 上嘅編輯係圖形化同現代嘅, 傾偈頁面被設計為討論线程, 名人有驗證帳"
+"戶, 任何人都可以做任何網頁, 只要佢哋被正確引用。 維基百科上的每一頁都已經在 "
+"everipedia 上, 可以在上面進行改進。 所有這些都令 ep 成為有史以來最大的知識項"
+"目!"
+
+#: templates/enterlink/faq.html:35
+msgid "Is Everipedia free?"
+msgstr "everipedia 免費嗎?"
+
+#: templates/enterlink/faq.html:36
+msgid ""
+"All information found on Everipedia is freely available for anyone to use "
+"and access. All we ask is a link back to the source Everipedia page for "
+"attribution purposes. The information on this encyclopedia is meant to be "
+"free to all. We will never charge for or withhold any of the information on "
+"this website. We just ask that you do not throttle the site and "
+"programmatically harvest information that would dramatically affect our "
+"servers."
+msgstr ""
+"喺 everipedia 度搵到嘅所有信息都可以免費供任何人使用同訪問。 所有我哋要求嘅係"
+"一個連結返回到源 everipedia 頁嘅歸屬目的。 本百科全書嘅信息係對所有人都系免費"
+"嘅。 我哋唔會收取或扣留本網站的任何信息。 我地只係要求你唔好節流網站同以編程"
+"方式收穫嘅信息, 將戲劇性地影響我們的服務器。"
+
+#: templates/enterlink/faq.html:42
+msgid "Much love,"
+msgstr "好多愛"
+
+#: templates/enterlink/footers/desktop_footer.html:5
+#: templates/enterlink/footers/footer_no_extras.html:5
+#: templates/enterlink/footers/index_footer.html:23
+#: templates/enterlink/footers/mobile_footer.html:130
+#: templates/enterlink/template_blockchain_styled_amp.html:548
+msgid "About"
+msgstr "關於"
+
+#: templates/enterlink/footers/desktop_footer.html:6
+#: templates/enterlink/footers/footer_no_extras.html:6
+#: templates/enterlink/footers/index_footer.html:7
+#: templates/enterlink/footers/index_footer.html:25
+#: templates/enterlink/footers/mobile_footer.html:131
+#: templates/enterlink/template_blockchain_styled_amp.html:549
+msgid "FAQ"
+msgstr "常見問題"
+
+#: templates/enterlink/footers/desktop_footer.html:7
+#: templates/enterlink/footers/footer_no_extras.html:7
+#: templates/enterlink/footers/index_footer.html:8
+#: templates/enterlink/footers/index_footer.html:26
+#: templates/enterlink/footers/mobile_footer.html:132
+#: templates/enterlink/template_blockchain_styled_amp.html:550
+msgid "Contact"
+msgstr "聯繫我們"
+
+#: templates/enterlink/footers/desktop_footer.html:8
+#: templates/enterlink/footers/footer_no_extras.html:9
+#: templates/enterlink/footers/index_footer.html:9
+#: templates/enterlink/footers/index_footer.html:27
+#: templates/enterlink/footers/mobile_footer.html:136
+#: templates/enterlink/template_blockchain_styled_amp.html:552
+msgid "Terms"
+msgstr "條款"
+
+#: templates/enterlink/footers/desktop_footer.html:9
+#: templates/enterlink/footers/footer_no_extras.html:10
+#: templates/enterlink/footers/index_footer.html:10
+#: templates/enterlink/footers/index_footer.html:28
+#: templates/enterlink/footers/mobile_footer.html:134
+#: templates/enterlink/headers/header_dropdown.html:17
+#: templates/enterlink/headers/header_dropdown.html:38
+#: templates/enterlink/headers/index_header.html:164
+#: templates/enterlink/headers/index_header.html:173
+#: templates/enterlink/headers/index_header.html:233
+#: templates/enterlink/headers/index_header.html:242
+#: templates/enterlink/headers/index_header.html:264
+#: templates/enterlink/headers/mobile-navbar.html:131
+#: templates/enterlink/headers/mobile-navbar.html:198
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:190
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:238
+#: templates/enterlink/template_blockchain_styled_amp.html:551
+#: templates/enterlink/template_blockchain_styled_amp.html:629
+#: templates/enterlink/template_blockchain_styled_amp.html:687
+msgid "Forum"
+msgstr "論壇"
+
+#: templates/enterlink/footers/desktop_footer.html:10
+#: templates/enterlink/footers/footer_no_extras.html:11
+#: templates/enterlink/footers/index_footer.html:11
+#: templates/enterlink/footers/index_footer.html:29
+#: templates/enterlink/footers/mobile_footer.html:137
+#: templates/enterlink/headers/header_dropdown.html:18
+#: templates/enterlink/headers/header_dropdown.html:40
+#: templates/enterlink/template_blockchain_styled_amp.html:553
+msgid "Get IQ"
+msgstr "獲取 iq"
+
+#: templates/enterlink/footers/desktop_footer.html:30
+#: templates/enterlink/footers/footer_no_extras.html:31
+#: templates/enterlink/footers/mobile_footer.html:157
+#: templates/enterlink/template_blockchain_styled_amp.html:577
+msgid "Powered by"
+msgstr "提供者"
+
+#: templates/enterlink/footers/desktop_footer.html:35
+#: templates/enterlink/footers/footer_no_extras.html:36
+#: templates/enterlink/footers/mobile_footer.html:161
+#: templates/enterlink/template_blockchain_styled_amp.html:581
+msgid "API by"
+msgstr "API 的"
+
+#: templates/enterlink/footers/desktop_footer.html:43
+#: templates/enterlink/footers/footer_no_extras.html:44
+#: templates/enterlink/headers/desktop-navbar-index.html:6
+#: templates/enterlink/headers/index_header.html:93
+#: templates/enterlink/language_selector.html:80
+msgid "Select language"
+msgstr "選擇語言"
+
+#: templates/enterlink/footers/forum_footer.html:6
+#: templates/enterlink/footers/pm_footer.html:6
+msgid "Enter a title for the thread"
+msgstr "輸入线程的標題"
+
+#: templates/enterlink/footers/forum_footer.html:7
+msgid "Enter your post here"
+msgstr "在此輸入你嘅帖子"
+
+#: templates/enterlink/footers/forum_footer.html:8
+#: templates/enterlink/footers/pm_footer.html:7
+msgid "Create New Thread"
+msgstr "創建新线程"
+
+#: templates/enterlink/footers/index_footer.html:5
+msgid "About Everipedia"
+msgstr "關於 everipedia"
+
+#: templates/enterlink/footers/index_footer.html:6
+#: templates/enterlink/footers/index_footer.html:24
+msgid "How To Use"
+msgstr "如何使用"
+
+#: templates/enterlink/footers/index_footer.html:12
+#: templates/enterlink/footers/index_footer.html:30
+#: templates/enterlink/footers/mobile_footer.html:133
+msgid "Donate"
+msgstr "捐贈"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:559
+msgid "By using this website, you agree to the"
+msgstr "通過使用本網站, 您同意"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:559
+msgid "Terms of Use"
+msgstr "使用條款"
+
+#: templates/enterlink/footers/mobile_footer.html:124
+#: templates/enterlink/template_blockchain_styled_amp.html:559
+msgid "Everipedia® is a trademark of Everipedia International"
+msgstr "everipedia®係 everipedia 國際嘅商標"
+
+#: templates/enterlink/footers/mobile_footer.html:135
+#: templates/enterlink/headers/index_header.html:165
+#: templates/enterlink/headers/index_header.html:174
+#: templates/enterlink/headers/index_header.html:234
+#: templates/enterlink/headers/index_header.html:243
+#: templates/enterlink/headers/index_header.html:265
+#: templates/enterlink/headers/mobile-navbar.html:138
+#: templates/enterlink/headers/mobile-navbar.html:204
+#: templates/enterlink/template_blockchain_styled_amp.html:694
+msgid "Chat"
+msgstr "聊天"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:29
+#: templates/enterlink/headers/desktop-navbar.html:39
+#: templates/enterlink/headers/index_header.html:156
+#: templates/enterlink/howto.html:61 templates/enterlink/search.html:7
+msgid "Search"
+msgstr "搜尋"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:42
+#: templates/enterlink/headers/desktop-navbar-index.html:50
+#: templates/enterlink/headers/desktop-navbar-index.html:60
+#: templates/enterlink/headers/desktop-navbar.html:20
+#: templates/enterlink/headers/desktop-navbar.html:57
+#: templates/enterlink/headers/desktop-navbar.html:67
+#: templates/enterlink/headers/header_dropdown.html:14
+#: templates/enterlink/headers/header_dropdown.html:36
+#: templates/enterlink/headers/index_header.html:231
+#: templates/enterlink/headers/mobile-navbar.html:145
+#: templates/enterlink/headers/mobile-navbar.html:186
+#: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
+#: templates/enterlink/howto.html:74 templates/enterlink/index.html:64
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:51
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:91
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:196
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:232
+#: templates/enterlink/template_blockchain_styled_amp.html:615
+#: templates/enterlink/template_blockchain_styled_amp.html:701
+#: templates/enterlink/user.html:64
+msgid "Create Page"
+msgstr "創建頁面"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:49
+#: templates/enterlink/headers/desktop-navbar.html:19
+#: templates/enterlink/howto.html:73 templates/enterlink/index.html:63
+msgid "Paste a link or enter a title"
+msgstr "粘貼連結或輸入標題"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:66
+#: templates/enterlink/headers/desktop-navbar.html:73
+#: templates/enterlink/headers/header_dropdown.html:16
+#: templates/enterlink/headers/header_dropdown.html:35
+#: templates/enterlink/headers/index_header.html:162
+#: templates/enterlink/headers/index_header.html:201
+#: templates/enterlink/headers/index_header.html:232
+#: templates/enterlink/headers/mobile-navbar.html:124
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:45
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:184
+#: templates/enterlink/notifications/index.html:67
+#: templates/enterlink/notifications/index.html:97
+#: templates/enterlink/template_blockchain_styled_amp.html:680
+msgid "Messages"
+msgstr "消息"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:72
+#: templates/enterlink/headers/desktop-navbar.html:79
+#: templates/enterlink/headers/header_dropdown.html:15
+#: templates/enterlink/headers/header_dropdown.html:34
+#: templates/enterlink/headers/index_header.html:206
+#: templates/enterlink/headers/index_header.html:230
+#: templates/enterlink/headers/mobile-navbar.html:117
+#: templates/enterlink/inbox.html:12
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:39
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:178
+#: templates/enterlink/notifications/index.html:96
+#: templates/enterlink/template_blockchain_styled_amp.html:673
+msgid "Notifications"
+msgstr "通知"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:84
+#: templates/enterlink/headers/desktop-navbar.html:96
+#: templates/enterlink/headers/index_header.html:217
+msgid "Your IQ Score"
+msgstr "你既智商分數"
+
+#: templates/enterlink/headers/desktop-navbar.html:29
+msgid "Table of contents"
+msgstr "目錄"
+
+#: templates/enterlink/headers/desktop-navbar.html:29
+#: templates/enterlink/template_blockchain_styled_amp.html:105
+msgid "Table of contents and facts for this wiki"
+msgstr "此 wiki 的內容和事實表"
+
+#: templates/enterlink/headers/desktop-navbar.html:62
+#: templates/enterlink/headers/mobile-navbar.html:159
+#: templates/enterlink/headers/mobile-navbar.html:210
+#: templates/enterlink/template_blockchain_styled_amp.html:635
+#: templates/enterlink/template_blockchain_styled_amp.html:715
+msgid "Feed"
+msgstr "飼料"
+
+#: templates/enterlink/headers/desktop-navbar.html:87
+msgid "Please log in with Scatter"
+msgstr "請用散點登錄"
+
+#: templates/enterlink/headers/header_dropdown.html:8
+#: templates/enterlink/headers/header_dropdown.html:28
+msgid "Claim Rewards"
+msgstr ""
+
+#: templates/enterlink/headers/header_dropdown.html:39
+#: templates/enterlink/headers/mobile-navbar.html:153
+#: templates/enterlink/headers/mobile-navbar.html:192
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:68
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:101
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:208
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:250
+#: templates/enterlink/template_blockchain_styled_amp.html:622
+#: templates/enterlink/template_blockchain_styled_amp.html:708
+#: templates/enterlink/user.html:126
+msgid "Help"
+msgstr "幫手"
+
+#: templates/enterlink/headers/index_header.html:109
+msgid "View Profile"
+msgstr "查看配置文件"
+
+#: templates/enterlink/headers/index_header.html:128
+msgid "Sign In"
+msgstr "登錄"
+
+#: templates/enterlink/headers/index_header.html:128
+#: templates/enterlink/headers/index_header.html:172
+#: templates/enterlink/headers/index_header.html:241
+#: templates/enterlink/headers/index_header.html:263
+#: templates/enterlink/index.html:47
+msgid "Register"
+msgstr "註冊"
+
+#: templates/enterlink/headers/index_header.html:132
+#: templates/enterlink/login.html:36
+msgid "Username"
+msgstr "用戶名"
+
+#: templates/enterlink/headers/index_header.html:139
+msgid "Need an account? Register here."
+msgstr "需要帳戶呀? 喺呢度註冊。"
+
+#: templates/enterlink/headers/index_header.html:140
+#: templates/enterlink/headers/index_header.html:171
+#: templates/enterlink/login.html:41
+msgid "Forgot your password?"
+msgstr "忘記密碼了?"
+
+#: templates/enterlink/headers/index_header.html:163
+#: templates/enterlink/inbox.html:23
+msgid "Your Notifications"
+msgstr "你嘅通知"
+
+#: templates/enterlink/headers/index_header.html:222
+msgid "Get an account"
+msgstr "獲取帳戶"
+
+#: templates/enterlink/headers/index_header.html:222
+msgid "or Log in"
+msgstr "或登錄"
+
+#: templates/enterlink/headers/index_header.html:235
+#: templates/enterlink/headers/index_header.html:244
+#: templates/enterlink/headers/index_header.html:257
+#: templates/enterlink/headers/index_header.html:266
+#: templates/enterlink/headers/mobile-navbar.html:165
+#: templates/enterlink/headers/mobile-navbar.html:216
+#: templates/enterlink/template_blockchain_styled_amp.html:641
+msgid "Language"
+msgstr "語言"
+
+#: templates/enterlink/headers/mobile-navbar.html:178
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:224
+#: templates/enterlink/template_blockchain_styled_amp.html:606
+msgid "Register / Log in"
+msgstr "註冊/登錄"
+
+#: templates/enterlink/hoverblurb_ajax_blockchain.html:65
+msgid "Go to article"
+msgstr "轉到文"
+
+#: templates/enterlink/hovereditor_ajax.html:67
+msgid "Self citation by"
+msgstr "自引用嘅"
+
+#: templates/enterlink/hovereditor_ajax.html:72
+msgid "Title"
+msgstr "標題"
+
+#: templates/enterlink/hovereditor_ajax.html:75
+msgid "Rank"
+msgstr "排名"
+
+#: templates/enterlink/hovereditor_ajax.html:76
+msgid "User since"
+msgstr "用戶自"
+
+#: templates/enterlink/hovereditor_ajax.html:77
+msgid "Last login"
+msgstr "上次登錄"
+
+#: templates/enterlink/hovereditor_ajax.html:80
+msgid "Go to Editor's Profile"
+msgstr "轉去編輯器的配置文件"
+
+#: templates/enterlink/hoverlink_ajax_blockchain.html:64
+msgid "Discuss Citation"
+msgstr "討論引文"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:53
+msgid "Download"
+msgstr "下載"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:55
+msgid "Direct Link"
+msgstr "直接連結"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:64
+#: templates/enterlink/hoverlink_iframe_blockchain.html:65
+#: templates/enterlink/template_blockchain_styled_desktop.html:195
+#: templates/enterlink/template_blockchain_styled_desktop.html:196
+msgid "Share"
+msgstr "分享"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:68
+#: templates/enterlink/template_blockchain_styled_desktop.html:202
+msgid "Copy URL"
+msgstr "複製 url"
+
+#: templates/enterlink/hoverlink_iframe_blockchain.html:118
+msgid "Play / Pause"
+msgstr "播放/暫停"
+
+#: templates/enterlink/howto.html:8 templates/enterlink/howto.html:30
+msgid "How to use Everipedia"
+msgstr "如何使用 Everipedia"
+
+#: templates/enterlink/howto.html:10 templates/enterlink/limitreached.html:9
+msgid ""
+"Everipedia is a free and easy to use wiki platform. Write about anyone and "
+"anything!"
+msgstr "everipedia 係一個免費同易於使用的 wiki 平台。 寫關於任何人夾任何嘢!"
+
+#: templates/enterlink/howto.html:36 templates/enterlink/howto.html:45
+msgid "Go back to the page you started from"
+msgstr "返回到你開始嘅頁面"
+
+#: templates/enterlink/howto.html:40 templates/enterlink/howto.html:45
+msgid "Go to page"
+msgstr "轉去第"
+
+#: templates/enterlink/howto.html:50
+msgid "Go to your editor profile page"
+msgstr "轉去編輯器配置文件頁面"
+
+#: templates/enterlink/howto.html:50
+msgid "Go to profile"
+msgstr "轉去配置文件"
+
+#: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
+msgid "Create a new page now"
+msgstr "即刻創建新頁面"
+
+#: templates/enterlink/howto.html:61
+msgid "Search for an existing page"
+msgstr "搜索現有頁面"
+
+#: templates/enterlink/in_progress_404.html:6
+msgid "This page is currently being created by another user"
+msgstr "此頁當前正在由其他用戶創建"
+
+#: templates/enterlink/in_progress_404.html:82
+msgid ""
+"This page is currently in the process of being created by another user. "
+"Please return later!"
+msgstr "此頁當前正在由其他用戶創建。 請稍後返回!"
+
+#: templates/enterlink/inbox.html:30
+msgid "You have"
+msgstr "你有"
+
+#: templates/enterlink/inbox.html:30
+msgid "unread notifications"
+msgstr "未讀通知"
+
+#: templates/enterlink/inbox.html:45
+msgid "You currently do not have any notifications."
+msgstr "您當前冇任何通知。"
+
+#: templates/enterlink/index.html:40
+msgid "The world's first encyclopedia on the blockchain"
+msgstr "世上第一本關於 blockchain 嘅百科全書"
+
+#: templates/enterlink/index.html:41
+msgid ""
+"Everipedia's IQ Network is the world's first Encyclopedia that allows anyone "
+"to become a stakeholder in the system and earn rank, rewards & tokens for "
+"curating content."
+msgstr ""
+"everipedia 嘅 iq 網絡係世上第一個百科全書, 它允許任何人成為系統的利益相關者, "
+"並獲得策劃內容嘅排名, 獎勵同令牌。"
+
+#: templates/enterlink/index.html:48
+msgid "Learn more"
+msgstr "了解更多信息"
+
+#: templates/enterlink/index.html:79
+msgid "As Seen In"
+msgstr "如所見"
+
+#: templates/enterlink/index.html:100
+msgid "An Encyclopedia for the modern age"
+msgstr "現代百科全書"
+
+#: templates/enterlink/index.html:104
+msgid ""
+"The Everipedia IQ blockchain provides a new paradigm change and knowledge "
+"economy to disrupt the old centralized internet knowledge encyclopedia model "
+"similar to Wikipedia. By creating a new incentive structure and a "
+"distributed backend hosted within a blockchain, the new Everipedia knowledge "
+"base will be able to improve upon all fundamental features of Wikipedia."
+msgstr ""
+"everipedia iq blockchain 提供了一個新的範式變化同知識經濟, 擾亂了舊的集中式互"
+"聯網知識百科全書模型類似維基百科。 通過創建一個新的激勵結構和分佈式後端託管喺"
+"一個 blockchain 中, 新的 everipedia 知識庫就可以改進維基百科嘅所有基本功能。"
+
+#: templates/enterlink/index.html:112
+msgid "Decentralized"
+msgstr "分散"
+
+#: templates/enterlink/index.html:113
+msgid ""
+"Articles are fetched using IPFS and EOS Storage. Majority of IQ being "
+"distributed during the airdrop."
+msgstr "文章還使用指規數同 eos 存儲獲取的。 大多數智商分布喺空投期間。"
+
+#: templates/enterlink/index.html:117
+msgid "Democratic"
+msgstr "民主"
+
+#: templates/enterlink/index.html:118
+msgid ""
+"Proof of Stake (PoS) model allows for voting to change and upgrade the IQ "
+"network as it grows. Also will facilitate batch imports of new content with "
+"no fees."
+msgstr ""
+"股份證明 (pos) 模型允許投票改變和升級 iq 網絡, 因為它的增長。 仲會方便批量導"
+"入新內容, 無需付費。"
+
+#: templates/enterlink/index.html:122
+msgid "Censorship Resistant"
+msgstr "審查抵藥性"
+
+#: templates/enterlink/index.html:123
+msgid ""
+"Live and permanent edits of content on the blockchain beyond the control of "
+"a central authority."
+msgstr "對 blockchain 嘅內容進行實時和永久性的編輯, 超出了中央當局的控制範圍。"
+
+#: templates/enterlink/index.html:127
+msgid "Financial Incentive"
+msgstr "財務激勵"
+
+#: templates/enterlink/index.html:128
+msgid ""
+"All holders of IQ will be incentivized to create quality, neutral content "
+"and to work together in building the reputation of the network."
+msgstr "所有嘅 iq 持有人將激勵創造質素, 中性的內容, 並共同努力建立網絡嘅聲譽。"
+
+#: templates/enterlink/index.html:139
+msgid "Become an editor today and start creating your own wiki articles."
+msgstr "今日成為一個編輯, 開始創建自己的 wiki 文。"
+
+#: templates/enterlink/index.html:142
+msgid "Open Community"
+msgstr "開放社區"
+
+#: templates/enterlink/index.html:143
+msgid ""
+"Our vibrant community is open and welcoming to people from all backgrounds. "
+"Our guidelines and policies are based on common sense rather than strict "
+"bureaucracy."
+msgstr ""
+"我哋充滿活力的社區是開放的, 歡迎所有背景嘅人。 我們的方針和政策是基於常識而唔"
+"係嚴格嘅官僚作風。"
+
+#: templates/enterlink/index.html:145
+msgid "Redesigned for the modern age"
+msgstr "重新設計的現代時代"
+
+#: templates/enterlink/index.html:146
+msgid ""
+"Everipedia is an encyclopedia modernized and re-designed for the twenty-"
+"first century. Our editing interface makes creating and editing wiki's as "
+"easy as using Facebook."
+msgstr ""
+"everipedia 係一本百科全書, 為第二十一世紀的現代化和重新設計。 我哋嘅編輯界面"
+"使得創建和編輯 wiki 同使用 facebook 一樣簡單。"
+
+#: templates/enterlink/index.html:155
+msgid "Follow us on Telegram"
+msgstr "同我哋聯繫電報"
+
+#: templates/enterlink/index.html:168
+msgid "Led by the Founder of Wikipedia and Genius.com"
+msgstr "由維基百科同 genius.com 嘅創始人領導"
+
+#: templates/enterlink/index.html:171
+msgid ""
+"Everipedia is being led by a team with extensive experience and knowledge "
+"both in the online knowledge space as well as the blockchain industry. The "
+"executive team is made up of several prominent individuals in the industry, "
+"the Co-Founder of Wikipedia, Larry Sanger, the founder of Genius.com, Mahbod "
+"Moghadam, and several others. Academic credentials includes UCLA, Stanford, "
+"Yale & Columbia, covering nationalities from America, Sweden, Norway and "
+"Italy. "
+msgstr ""
+"everipedia 係一個團隊, 擁有豐富的經驗和知識, 既有在線知識空間, 也有 "
+"blockchain 行業。 執行團隊由業界嘅幾個著名人士組成, 維基百科的共同創始人, "
+"genius.com、mahbod moghadam 的創始人、以及其他幾個人。 學術證書包括加州大學洛"
+"杉磯分校, 斯坦福, 耶魯和哥倫比亞, 涵蓋來自美國, 瑞典, 挪威同意大利嘅民族。"
+
+#: templates/enterlink/index.html:172
+msgid "Executive Team"
+msgstr "執行團隊"
+
+#: templates/enterlink/leadership.html:7
+msgid "Leadership"
+msgstr "領導"
+
+#: templates/enterlink/leadership.html:23
+msgid "Executive Leadership"
+msgstr "行政領導"
+
+#: templates/enterlink/leadership.html:35
+msgid "Chief Information Officer"
+msgstr "首席信息幹事"
+
+#: templates/enterlink/leadership.html:41
+msgid "Chief Executive Officer, Co-Founder"
+msgstr "首席執行幹事, 共同創始人"
+
+#: templates/enterlink/leadership.html:47
+msgid "Chief Technology Officer, Co-Founder"
+msgstr "首席技術官, 共同創始人"
+
+#: templates/enterlink/leadership.html:53
+msgid "President, Co-Founder"
+msgstr "總裁, 共同創始人"
+
+#: templates/enterlink/leadership.html:63
+msgid "Director of Software"
+msgstr "軟件總監"
+
+#: templates/enterlink/leadership.html:69
+msgid "Chief Operating Officer"
+msgstr "首席運營官"
+
+#: templates/enterlink/leadership.html:75
+msgid "Chief Community Officer, Co-Founder"
+msgstr "共同創辦人首席社區幹事"
+
+#: templates/enterlink/limitreached.html:7
+msgid "Activity limit reached"
+msgstr "已達到活動限制"
+
+#: templates/enterlink/limitreached.html:23
+msgid ""
+"Hey! You've added 15 morsels of knowledge to Everipedia now, so we have "
+"paused your account until Master Editors have had a chance to review your "
+"work. Shouldn't take too long, you'll probably be good to go in less than 5 "
+"minutes."
+msgstr ""
+"嘿! 而家你增加了十五 everipedia 嘅知識, 所以我暫停了你的帳戶, 直到主編輯有機"
+"會審查你既工作。 唔應該用咁長時間, 你可能會入唔到5分钟嘅時間內離開。"
+
+#: templates/enterlink/limitreached.html:24
+msgid "In the meantime, please join our official Facebook group:"
+msgstr "在此期間, 請加入我們的官方 facebook 組:"
+
+#: templates/enterlink/limitreached.html:24
+msgid "It’s the best way to reach the community!"
+msgstr "係到達社區嘅最佳途徑!"
+
+#: templates/enterlink/login.html:7
+msgid "Sign in"
+msgstr "登錄"
+
+#: templates/enterlink/login.html:33
+msgid "Sign in to Everipedia"
+msgstr "登錄 everipedia"
+
+#: templates/enterlink/login.html:48
+msgid "Log in with Facebook"
+msgstr "使用 facebook 登錄"
+
+#: templates/enterlink/login.html:49
+msgid "Log in with Twitter"
+msgstr "使用 twitter 登錄"
+
+#: templates/enterlink/login.html:58
+msgid "Need an account?"
+msgstr "需要帳戶呀?"
+
+#: templates/enterlink/login.html:58
+msgid "Register here"
+msgstr "在此註冊"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:34
+msgid "Visit Profile"
+msgstr "訪問簡介"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:57
+msgid "Settings"
+msgstr "設置"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:73
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:214
+#: templates/enterlink/template_blockchain_styled_amp.html:721
+msgid "Log Out"
+msgstr "註銷"
+
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:86
+msgid "Register / Log In"
+msgstr "註冊/登錄"
+
+#: templates/enterlink/notifications/index.html:116
+msgid "New message"
+msgstr "新留言"
+
+#: templates/enterlink/recent-activity.html:84
+msgid "by"
+msgstr "的"
+
+#: templates/enterlink/register.html:6
+msgid "Create an account"
+msgstr "創建帳戶"
+
+#: templates/enterlink/register.html:26 templates/enterlink/register.html:28
+msgid "Have an account?"
+msgstr "有賬戶嗎?"
+
+#: templates/enterlink/register.html:26 templates/enterlink/register.html:28
+msgid "Login"
+msgstr "登錄"
+
+#: templates/enterlink/register.html:42
+msgid ""
+"Registration is currently invite only due to blockchain software testing. "
+"Join us on Telegram and Reddit in the meantime to become a part of "
+"Everipedia today!"
+msgstr ""
+"由于 blockchain 軟件測試, 目前只邀請註冊。 加入我哋嘅電報和 reddit 同時成為 "
+"everipedia 一分子今日!"
+
+#: templates/enterlink/register.html:60
+msgid "Welcome to the Everipedia editor community!"
+msgstr "歡迎來到 everipedia 編輯社區!"
+
+#: templates/enterlink/register.html:63
+msgid ""
+"Sign up to become an editor to access more features and an ad-free "
+"experience."
+msgstr "註冊成為編輯器, 以訪問更多功能同冇廣告體驗。"
+
+#: templates/enterlink/register.html:96
+msgid "Sign up"
+msgstr "註冊"
+
+#: templates/enterlink/register.html:97
+msgid "By clicking sign up above you agree to our"
+msgstr "通過點擊上面的註冊, 你同意我們的"
+
+#: templates/enterlink/register.html:97
+msgid "Terms of Service"
+msgstr "服務條款"
+
+#: templates/enterlink/rewardsmgmt.html:4
+#: templates/enterlink/rewardsmgmt.html:132
+#, fuzzy
+#| msgid "Brainpower Management"
+msgid "Rewards Management"
+msgstr "智能管理"
+
+#: templates/enterlink/rewardsmgmt.html:135
+msgid "Here you can claim rewards for the edits and / or votes that you made."
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:140
+msgid "Proposal Hash"
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:141
+msgid "Finalized Time"
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:142
+#, fuzzy
+#| msgid "Voting Period"
+msgid "Period"
+msgstr "投票期"
+
+#: templates/enterlink/rewardsmgmt.html:143
+msgid "Redeem"
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:150
+#, fuzzy
+#| msgid "Password reset successful"
+msgid "Redeem successful"
+msgstr "密碼重置成功"
+
+#: templates/enterlink/search-iframe.html:127
+msgid "Searching..."
+msgstr "搜尋..."
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "Can't find it below?"
+msgstr "在下面搵唔到呀?"
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "Create"
+msgstr "創建"
+
+#: templates/enterlink/search.html:44 templates/enterlink/search.html:54
+msgid "a new page titled"
+msgstr "一個新的網頁標題"
+
+#: templates/enterlink/search.html:45 templates/enterlink/search.html:55
+msgid "Or try the"
+msgstr "或者嘗試抵"
+
+#: templates/enterlink/search.html:45 templates/enterlink/search.html:55
+msgid "advanced search."
+msgstr "高級搜索。"
+
+#: templates/enterlink/search.html:48
+msgid "Everipedia couldn’t find anything with the name"
+msgstr "everipedia 搵唔到有名嘅嘢"
+
+#: templates/enterlink/search.html:50
+msgid ""
+"If you know any links associated with this page, try searching for those "
+"links"
+msgstr "如果你知道與此網頁相關的任何連結, 請嘗試搜索呢啲連結"
+
+#: templates/enterlink/template_ajax_genius.html:17
+#: templates/enterlink/template_amp_ajax_genius.html:98
+msgid "Verified Editor"
+msgstr "驗證編輯器"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:123
+msgid "Bullet"
+msgstr "子彈"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:185
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid "Recent news"
+msgstr "最新動態"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:185
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid ""
+"Everipedia IQ tokens are now in circulation on the EOS mainnet. Follow "
+"Everipedia on"
+msgstr "everipedia iq 令牌而家喺 eos mainnet 上流通。 遵循 Everipedia"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:185
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid "to learn about upcoming features and developments!"
+msgstr "瞭解即將到來的功能和發展!"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:197
+#: templates/enterlink/template_blockchain_styled_desktop.html:143
+msgid "Verified Page"
+msgstr "驗證頁"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:273
+msgid "Quick Biography"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_amp.html:275
+msgid "Quick Facts For This Wiki"
+msgstr "此 wiki 的參考連結"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:304
+#: templates/enterlink/template_blockchain_styled_desktop.html:361
+msgid "Image & Video Gallery"
+msgstr "圖像和視頻庫"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:306
+#: templates/enterlink/template_blockchain_styled_desktop.html:363
+msgid "images, pictures, and videos"
+msgstr "圖像、圖片和視頻"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:310
+msgid "Gallery"
+msgstr "庫"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:327
+#: templates/enterlink/template_blockchain_styled_desktop.html:496
+msgid "Reference Links For This Biography"
+msgstr "本傳記嘅參考連結"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:329
+#: templates/enterlink/template_blockchain_styled_desktop.html:498
+msgid "Reference Links For This Wiki"
+msgstr "此 wiki 的參考連結"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:332
+#: templates/enterlink/template_blockchain_styled_desktop.html:501
+msgid ""
+"Links to historical reviews, career / educational facts, and other "
+"encyclopedic information"
+msgstr "歷史回顧、職業/教育事實同其他百科全書信息的連結"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:337
+#: templates/enterlink/template_blockchain_styled_desktop.html:507
+msgid "All information for"
+msgstr "所有信息為"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:337
+#: templates/enterlink/template_blockchain_styled_desktop.html:507
+msgid ""
+"wiki comes from the below links. Any source is valid, including Twitter, "
+"Facebook, Instagram, and LinkedIn. Pictures, videos, biodata, and files "
+"relating to"
+msgstr ""
+"wiki 來自下面嘅連結。 任何來源都係有效嘅, 包括 twitter, facebook, instagram "
+"同 linkedin。 與之相關的圖片、視頻、biodata 同文件"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:337
+#: templates/enterlink/template_blockchain_styled_desktop.html:507
+msgid "are also acceptable encyclopedic sources."
+msgstr "都係可以接受嘅百科全書來源。"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:352
+#: templates/enterlink/template_blockchain_styled_desktop.html:528
+msgid ""
+"See related encyclopedia articles, biographies, reviews, and historical "
+"facts."
+msgstr "請參閱相關百科全書文章、傳記、評論和歷史事實。"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:356
+#: templates/enterlink/template_blockchain_styled_desktop.html:535
+msgid "Other wiki pages related to"
+msgstr "其他 wiki 頁面相關"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:535
+msgid "Created"
+msgstr "創建"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:536
+msgid "Last Modified"
+msgstr "上次修改時間"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:537
+msgid "IPFS"
+msgstr "指規數"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:757
+msgid "Top Page Editors"
+msgstr "熱門頁面編輯器"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:777
+msgid "Share this page"
+msgstr "共享此頁"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:789
+msgid "DIRECT LINK"
+msgstr "直接連結"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:794
+#: templates/enterlink/template_blockchain_styled_desktop.html:221
+msgid "Suggested Hashtags"
+msgstr "建議 hashtags"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:828
+#: templates/enterlink/template_blockchain_styled_desktop.html:259
+msgid "QR Code"
+msgstr "qr 碼"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:14
+#: templates/enterlink/template_blockchain_styled_desktop.html:19
+msgid "Bio"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:16
+#: templates/enterlink/template_blockchain_styled_desktop.html:17
+#: templates/enterlink/template_blockchain_styled_desktop.html:225
+msgid "bio"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:16
+#: templates/enterlink/template_blockchain_styled_desktop.html:17
+#: templates/enterlink/template_blockchain_styled_desktop.html:23
+#: templates/enterlink/template_blockchain_styled_desktop.html:24
+#: templates/enterlink/template_blockchain_styled_desktop.html:30
+#: templates/enterlink/template_blockchain_styled_desktop.html:31
+#: templates/enterlink/template_blockchain_styled_desktop.html:37
+#: templates/enterlink/template_blockchain_styled_desktop.html:38
+msgid "encylopedia"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:21
+#: templates/enterlink/template_blockchain_styled_desktop.html:26
+#: templates/enterlink/template_blockchain_styled_desktop.html:28
+#: templates/enterlink/template_blockchain_styled_desktop.html:33
+msgid "Review"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:23
+#: templates/enterlink/template_blockchain_styled_desktop.html:24
+#: templates/enterlink/template_blockchain_styled_desktop.html:30
+#: templates/enterlink/template_blockchain_styled_desktop.html:31
+#: templates/enterlink/template_blockchain_styled_desktop.html:231
+#: templates/enterlink/template_blockchain_styled_desktop.html:237
+#: templates/enterlink/template_blockchain_styled_desktop.html:243
+msgid "review"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:30
+#: templates/enterlink/template_blockchain_styled_desktop.html:31
+#: templates/enterlink/template_blockchain_styled_desktop.html:232
+#: templates/enterlink/template_blockchain_styled_desktop.html:238
+#: templates/enterlink/template_blockchain_styled_desktop.html:244
+msgid "history"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:126
+msgid "and"
+msgstr "和"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:187
+#: templates/enterlink/voting_table_of_contents.html:12
+msgid "Edit"
+msgstr "編輯"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:190
+msgid "Vote"
+msgstr "投票"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:205
+msgid "Embed / Widget"
+msgstr "嵌入/小部件"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:224
+#: templates/enterlink/template_blockchain_styled_desktop.html:230
+#: templates/enterlink/template_blockchain_styled_desktop.html:236
+#: templates/enterlink/template_blockchain_styled_desktop.html:242
+msgid "wiki"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:226
+msgid "net worth"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:227
+msgid "age"
+msgstr "網頁"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:228
+msgid "married"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:233
+msgid "sales"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:234
+#: templates/enterlink/template_blockchain_styled_desktop.html:240
+#: templates/enterlink/template_blockchain_styled_desktop.html:246
+msgid "facts"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:239
+msgid "founders"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:245
+msgid "encyclopedia"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:329
+msgid "Profiles"
+msgstr "配置文件"
+
+#: templates/enterlink/transfer-iq.html:5
+#: templates/enterlink/transfer-iq.html:119
+msgid "Transfer IQ"
+msgstr "傳輸 iq"
+
+#: templates/enterlink/transfer-iq.html:121
+msgid "Please make sure you have set up"
+msgstr "請確保您已設置了"
+
+#: templates/enterlink/transfer-iq.html:121
+msgid "beforehand"
+msgstr "事先"
+
+#: templates/enterlink/transfer-iq.html:123
+msgid "Sender"
+msgstr "發送"
+
+#: templates/enterlink/transfer-iq.html:125
+msgid "Recipient"
+msgstr "收件人"
+
+#: templates/enterlink/transfer-iq.html:129
+msgid "Memo"
+msgstr "備忘錄"
+
+#: templates/enterlink/transfer-iq.html:134
+msgid "Transaction successful"
+msgstr "事務成功"
+
+#: templates/enterlink/transfer-iq.html:138
+msgid "Buy RAM"
+msgstr "購買 ram"
+
+#: templates/enterlink/transfer-iq.html:142
+msgid "See your RAM, CPU, and Bandwidth on FeeXplorer"
+msgstr "查看 feexplorer 上嘅 ram、cpu 同帶寬"
+
+#: templates/enterlink/user.html:12
+msgid "profile"
+msgstr "配置文件"
+
+#: templates/enterlink/user.html:38
+msgid "Everipedia Rank"
+msgstr "everipedia 等級"
+
+#: templates/enterlink/user.html:53
+msgid "This user is verified"
+msgstr "此用戶已驗證"
+
+#: templates/enterlink/user.html:56
+msgid "Everipedia Staff"
+msgstr "everipedia 員工"
+
+#: templates/enterlink/user.html:62 templates/enterlink/user.html:67
+msgid "Message"
+msgstr "消息"
+
+#: templates/enterlink/user.html:71 templates/enterlink/user.html:123
+msgid "Edit Profile"
+msgstr "編輯配置文件"
+
+#: templates/enterlink/user.html:74
+msgid "Everipedia Page"
+msgstr "everipedia 頁"
+
+#: templates/enterlink/user.html:80
+msgid "IQ Score"
+msgstr "iq 評分"
+
+#: templates/enterlink/user.html:81
+msgid "Pages created"
+msgstr "創建的頁"
+
+#: templates/enterlink/user.html:82
+msgid "Total edits"
+msgstr "編輯總數"
+
+#: templates/enterlink/user.html:94
+msgid "Joined"
+msgstr "加入"
+
+#: templates/enterlink/user.html:125
+msgid "Upload Avatar / Profile Picture"
+msgstr "上傳頭像/個人資料圖片"
+
+#: templates/enterlink/user.html:153
+msgid "Enable account? Uncheck to ban"
+msgstr "啟用帳戶? 取消選中禁止"
+
+#: templates/enterlink/user.html:157
+msgid "IP Ban"
+msgstr "知識產權禁令"
+
+#: templates/enterlink/user.html:157
+msgid "Ban"
+msgstr "禁止"
+
+#: templates/enterlink/user.html:157
+msgid "Clear"
+msgstr "清楚"
+
+#: templates/enterlink/user.html:159
+msgid "Verify the account?"
+msgstr "驗證帳戶?"
+
+#: templates/enterlink/user.html:163
+msgid "Is Staff?"
+msgstr "係員工呀?"
+
+#: templates/enterlink/user.html:177
+msgid "Save all changes"
+msgstr "保存所有更改"
+
+#: templates/enterlink/user.html:178
+msgid "Cancel"
+msgstr "取消"
+
+#: templates/enterlink/user.html:211
+msgid "Change Avatar Picture"
+msgstr "更改頭像圖"
+
+#: templates/enterlink/user.html:219
+msgid "Please select your Everipedia page"
+msgstr "請選擇您的 everipedia 頁"
+
+#: templates/enterlink/user.html:224
+msgid "Continue"
+msgstr "繼續"
+
+#: templates/enterlink/votehistory.html:7
+msgid "Voting"
+msgstr "投票"
+
+#: templates/enterlink/votehistory.html:95
+msgid "Voting History"
+msgstr "投票歷史記錄"
+
+#: templates/enterlink/voting.html:197
+msgid "Before"
+msgstr "之前"
+
+#: templates/enterlink/voting.html:199
+msgid "After"
+msgstr "之後"
+
+#: templates/enterlink/voting_table_of_contents.html:7
+msgid "Article"
+msgstr "文章"
+
+#: templates/enterlink/voting_table_of_contents.html:17
+msgid "Current Vote"
+msgstr "當前投票"
+
+#: templates/enterlink/voting_table_of_contents.html:20
+#: templates/enterlink/voting_table_of_contents.html:62
+msgid "Reject"
+msgstr "拒絕"
+
+#: templates/enterlink/voting_table_of_contents.html:21
+msgid "Accept"
+msgstr "接受"
+
+#: templates/enterlink/voting_table_of_contents.html:28
+msgid "Voting Period"
+msgstr "投票期"
+
+#: templates/enterlink/voting_table_of_contents.html:34
+msgid "to"
+msgstr "自"
+
+#: templates/enterlink/voting_table_of_contents.html:51
+msgid "Place Votes"
+msgstr "處飛"
+
+#: templates/enterlink/voting_table_of_contents.html:63
+msgid "Approve"
+msgstr "批准"
+
+#: templates/enterlink/voting_table_of_contents.html:67
+msgid "Changes"
+msgstr "變化"
+
+#: templates/enterlink/welcome.html:7
+msgid "Welcome to Everipedia, the encyclopedia of everything"
+msgstr "歡迎來到 everipedia, 一切嘅百科全書"
