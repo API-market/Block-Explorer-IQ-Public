@@ -263,7 +263,7 @@ msgstr ""
 msgid ""
 "Note that you will not be able to propose edits without Brainpower. Your "
 "work will be lost!"
-msgstr "请注意, 如果没有Brainpower, 您将无法提出编辑。您的工作将会丢失!"
+msgstr "请注意, 如果没有Brainpower, 您将无法提交编辑。您的工作将会丢失!"
 
 #: templates/enterlink/inline-js/edit-bottom.html:14
 msgid "Error: proposal not found. Please try submitting again."
