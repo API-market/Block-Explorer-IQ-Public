@@ -21,7 +21,7 @@ msgstr ""
 
 #: enterlink/edit.py:114
 msgid "Page Type"
-msgstr "页"
+msgstr "页面类型"
 
 #: enterlink/edit.py:114
 msgid "Removed From Site"
@@ -33,7 +33,7 @@ msgstr "涉及成人内容"
 
 #: enterlink/edit.py:115
 msgid "Media Gallery"
-msgstr "画廊"
+msgstr "媒体库"
 
 #: enterlink/edit.py:115
 msgid "References and Citations"
@@ -130,7 +130,7 @@ msgstr "电邮"
 
 #: enterlink/forms.py:82
 msgid "How can we help?"
-msgstr "我们可以如何帮助您呢？"
+msgstr "我们该如何帮助您呢？"
 
 #: enterlink/forms.py:84
 msgid "Full Name"
@@ -173,11 +173,11 @@ msgstr "通过输入链接进行搜索"
 msgid ""
 "Describe the file briefly. A summary of the information found is best. Avoid "
 "simply repeating the page title."
-msgstr "简要描述该文件。找到的信息的摘要是最好的。避免简单地重复页面标题。"
+msgstr "简要描述该文件。找到信息摘要是最好的。避免简单地重复页面标题。"
 
 #: enterlink/forms.py:148
 msgid "File type not allowed."
-msgstr "不允许文件类型。"
+msgstr "不允许的文件类型。"
 
 #: enterlink/forms.py:153
 msgid "Please ."
@@ -191,7 +191,7 @@ msgstr "输入网址"
 msgid ""
 "Describe the URL briefly. A summary of the information found is best. Avoid "
 "simply repeating the page title."
-msgstr "简要描述URL。找到的信息的摘要是最好的。避免简单地重复页面标题。"
+msgstr "简要描述网址。找到信息摘要是最好的。避免简单地重复页面标题。"
 
 #: enterlink/forms.py:165 templates/enterlink/edit_ajax_addinfobox.html:28
 msgid "Enter type (e.g. Occupation)"
@@ -239,7 +239,7 @@ msgstr "创意工作/艺术"
 
 #: enterlink/forms.py:175 enterlink/models.py:134
 msgid "Science/Academia/Humanities"
-msgstr "科学/学术/人文"
+msgstr "科技/学术/人文"
 
 #: enterlink/models.py:45 enterlink/models.py:49
 msgid "None"
@@ -289,7 +289,7 @@ msgstr "正常 (个人)"
 msgid ""
 "Your Everipedia editor restrictions have been removed. You can now edit "
 "pages freely!"
-msgstr "您的Everipedia编辑器限制已删除。您现在可以自由地编辑页面！"
+msgstr "您的Everipedia编辑限制已移除。您现在可以自由地编辑页面！"
 
 #: enterlink/view_functions.py:607
 msgid "Images & Videos"
@@ -319,7 +319,7 @@ msgstr "维基和参考"
 
 #: enterlink/view_functions.py:1626
 msgid "You can edit something on this wiki now!"
-msgstr "您可以立即编辑页面上的内容！"
+msgstr "您现在可以编辑页面上的内容！"
 
 #: local_packages/block_ip/models.py:11
 msgid "IP address or mask"
@@ -327,11 +327,11 @@ msgstr "IP 地址或掩码"
 
 #: local_packages/block_ip/models.py:12
 msgid "Optional reason for block"
-msgstr "块的可选原因"
+msgstr "可选原因"
 
 #: local_packages/block_ip/models.py:25 local_packages/block_ip/models.py:26
 msgid "IPs & masks to ban"
-msgstr "禁止的 IPs 和面具"
+msgstr "禁止的 IP地址和掩码"
 
 #: templates/admin/base.html:28
 msgid "Welcome,"
@@ -374,11 +374,11 @@ msgstr "Django网站管理员"
 
 #: templates/admin/base_site.html:7
 msgid "Django administration"
-msgstr "Django管理"
+msgstr "Django管理组织"
 
 #: templates/admin/logged_out.html:8
 msgid "Thanks for spending some quality time with the Web site today."
-msgstr "感谢您今天花费一些优质的时间与网站。"
+msgstr "感谢您今天在网站上花费了一些宝贵的时间。"
 
 #: templates/admin/logged_out.html:10
 msgid "Log in again"
@@ -469,14 +469,14 @@ msgstr "密码重置成功"
 msgid ""
 "We have emailed you instructions for setting your password. You should be "
 "receiving them shortly."
-msgstr "我们已经通过电子邮件向您发送设置密码的说明。您很快就会收到的。"
+msgstr "我们已经通过电子邮件向您发送设置密码的说明。您很快就会收到。"
 
 #: templates/admin/password_reset_done.html:19
 msgid ""
 "If you don't receive an email, please make sure you've entered the address "
 "you registered with, and check your spam folder."
 msgstr ""
-"如果您没有收到电子邮件, 请确保您已输入您注册的地址, 并检查您的垃圾邮件文件"
+"如果您没有收到电子邮件, 请确保您已输入您注册的邮件地址, 并检查您的垃圾邮件文件"
 "夹。"
 
 #: templates/admin/password_reset_email.html:2
@@ -491,7 +491,7 @@ msgstr "请转到以下页面并选择新密码："
 
 #: templates/admin/password_reset_email.html:8
 msgid "Your username, in case you've forgotten:"
-msgstr "您的用户名，如果您忘记了："
+msgstr "您的用户名，以防您忘记了："
 
 #: templates/admin/password_reset_email.html:10
 msgid "Thanks for using our site!"
@@ -539,7 +539,7 @@ msgstr "添加行"
 #: templates/enterlink/ajax_infobox_singlet.html:17
 #: templates/enterlink/ajax_infobox_singlet.html:45
 msgid "Schema"
-msgstr "Schema架构"
+msgstr "架构"
 
 #: templates/enterlink/ajax_infobox_singlet.html:21
 #: templates/enterlink/ajax_infobox_singlet.html:49
@@ -549,7 +549,7 @@ msgstr "架构类型"
 #: templates/enterlink/ajax_infobox_singlet.html:25
 #: templates/enterlink/ajax_infobox_singlet.html:53
 msgid "Subschema"
-msgstr "Subschema"
+msgstr "子架构"
 
 #: templates/enterlink/ajax_link_singlet.html:25
 msgid "Social Media"
@@ -576,7 +576,7 @@ msgstr "您的浏览器不支持HTML5视频。"
 
 #: templates/enterlink/ajax_media_gallery_singlet.html:29
 msgid "Type"
-msgstr "在此框中输入来筛选可用的%s列表。"
+msgstr "类型。"
 
 #: templates/enterlink/ajax_media_gallery_singlet.html:31
 msgid "MIME Type"
@@ -588,7 +588,7 @@ msgstr "原始链接地址"
 
 #: templates/enterlink/ajaxresults.html:57
 msgid "Click to add a new link or file to this list"
-msgstr "单击此处并将新链接或文件添加到此列表中"
+msgstr "单击此处将新链接或文件添加到此列表中"
 
 #: templates/enterlink/ajaxresults.html:60
 msgid "Or click an existing link below to add it to the article"
@@ -611,12 +611,12 @@ msgstr "页面有此链接"
 
 #: templates/enterlink/analytics.html:7 templates/enterlink/faq.html:6
 msgid "Frequently Asked Questions - Everipedia, everyone's encyclopedia"
-msgstr "常见问题 - Everipedia，属于大家的百科全书"
+msgstr "常见问题 - Everipedia，属于每个人的百科全书"
 
 #: templates/enterlink/brainpowermgmt.html:4
 #: templates/enterlink/brainpowermgmt.html:114
 msgid "Brainpower Management"
-msgstr "智能管理"
+msgstr "Brainpower管理"
 
 #: templates/enterlink/brainpowermgmt.html:4 templates/enterlink/contact.html:7
 #: templates/enterlink/edit.html:7 templates/enterlink/editing-disabled.html:7
@@ -638,7 +638,7 @@ msgstr "Everipedia，百科全书"
 #: templates/enterlink/rewardsmgmt.html:119
 #: templates/enterlink/transfer-iq.html:106 templates/enterlink/voting.html:180
 msgid "Loading Scatter"
-msgstr "加载散点"
+msgstr "加载Scatter"
 
 #: templates/enterlink/brainpowermgmt.html:117
 msgid ""
@@ -648,10 +648,10 @@ msgid ""
 "tokens and re-stake them for more Brainpower again. Thus, 1 IQ, staked every "
 "21 days, can lead to 365 days / 21 days = 17.38 Brainpower every year."
 msgstr ""
-"下注智商代币将冻结他们21天, 并将产生转让脑力, 这可以用于编辑和投票 "
-"Everipedia 网络。在21天结束, 您可以收回您的智商代币, 并再次与他们再次赌注, 以"
-"更多的脑力。因此, 1 的智商, 每21天押下, 可以导致365天/21 天 = 17.38 脑力每"
-"年。"
+"抵押的IQ代币将会被冻结21天, 同时会产出不可转让的Brainpower, Brainpower可以在Everipedia "
+"网络上用于编辑和投票。在21天结束后, 您可以收回您的IQ代币, 并且可以再次抵押他们获得 "
+"更多的Brainpower。这样的话, 1 个IQ代币, 每21天抵押一次, 每年可以产生365天/21 天 = 17.38"
+"单位的Brainpower。"
 
 #: templates/enterlink/brainpowermgmt.html:118
 msgid ""
@@ -661,23 +661,23 @@ msgid ""
 "Therefore, you can generate more Brainpower (and any profit) by staking the "
 "new IQ you just earned."
 msgstr ""
-"当您做网页, 提出编辑, 并投票的文章建议, 您会消耗脑力。然而, 成功的编辑和投票"
-"的胜利一方的建议将产生奖励的智商, 而不是脑力。因此, 您可以通过对刚刚挣来的新"
-"智商进行下注来产生更多的脑力 (和任何利润)。"
+"当您做页面, 提议编辑, 以及给提议的文章投票时, 您将会消耗Brainpower。然而, 成功的编辑以及投票"
+"给提议胜利的一方将产生奖励IQ, 而不是Brainpower。因此, 您可以抵押刚挣来的新的IQ来产生"
+"Brainpower（以及所有的利润）。"
 
 #: templates/enterlink/brainpowermgmt.html:119
 msgid ""
 "Every edit proposal requires a minimum of 10 Brainpower at this time, in "
 "order to prevent spam and poor-quality edits."
-msgstr "每一个编辑方案都需要至少10的脑力在这个时候, 以防止垃圾邮件和劣质编辑。"
+msgstr "目前每一个编辑提案都至少需要10单位Brainpower, 以防止垃圾信息和劣质的编辑。"
 
 #: templates/enterlink/brainpowermgmt.html:122
 msgid "Enter an integer amount of IQ to stake"
-msgstr "输入一个整数金额的智商, 以利害关系"
+msgstr "输入一个整数额的IQ来抵押"
 
 #: templates/enterlink/brainpowermgmt.html:123
 msgid "New Stake"
-msgstr "新股份"
+msgstr "新抵押"
 
 #: templates/enterlink/brainpowermgmt.html:128
 msgid "Start"
@@ -699,7 +699,7 @@ msgstr "数量"
 
 #: templates/enterlink/brainpowermgmt.html:132
 msgid "Claim"
-msgstr "要求"
+msgstr "领取"
 
 #: templates/enterlink/contact.html:7 templates/enterlink/contact.html:24
 msgid "Contact us"
@@ -707,11 +707,11 @@ msgstr "联系我们"
 
 #: templates/enterlink/contact.html:20
 msgid "To get quicker replies from our community"
-msgstr "从我们的社区得到更快的答复"
+msgstr "从我们社区得到更快的答复"
 
 #: templates/enterlink/contact.html:20
 msgid "create a post in our forum"
-msgstr "在论坛中创建帖子"
+msgstr "在我们论坛里创建帖子"
 
 #: templates/enterlink/contact.html:25
 msgid "Get in touch with us"
@@ -719,7 +719,7 @@ msgstr "联系我们"
 
 #: templates/enterlink/contact.html:33
 msgid "Thanks, we got your message. We will respond in a bit"
-msgstr "谢谢，我们收到了您的信息。我们会有所回应"
+msgstr "谢谢，我们收到了您的信息。我们将很快回复"
 
 #: templates/enterlink/contact.html:41 templates/enterlink/transfer-iq.html:131
 msgid "Send"
@@ -778,8 +778,8 @@ msgid ""
 "(ex: It is, They are, The company makes). THIS IS NOT FACEBOOK!!"
 msgstr ""
 "看起来您是使用第一人称！ （例如：我们的产品、我是、我们是、您应该）。 "
-"Everipedia是一个以第三者时态写的中性百科全书（例：它是、它们是、公司制造）。"
-"这不是 Facebook！"
+"Everipedia是一个以第三人称写的中立的百科全书（例：它是、它们是、该公司）。"
+"这并不是Facebook！"
 
 #: templates/enterlink/edit.html:175
 msgid "Please enter a title for the page."
@@ -788,7 +788,7 @@ msgstr "请输入网页的标题。"
 #: templates/enterlink/edit.html:184
 msgid ""
 "Please write something for the article section. Make sure to use citations."
-msgstr "请写文章部分。请务必使用引文。"
+msgstr "请在文章部分写一些内容。务必使用引文。"
 
 #: templates/enterlink/edit.html:193
 msgid ""
@@ -796,16 +796,16 @@ msgid ""
 "sources) before it can be saved. Add the links you're using as sources with "
 "the cite button above."
 msgstr ""
-"您好！此页需要引用 (也称为脚注、引用和源), 然后才能保存。在上面的 \"引用\" 按"
+"您好！此页面需要引用 (也称为脚注、引用和来源), 然后才能保存。在上面的 \"引用\" 按"
 "钮中添加您使用的链接。"
 
 #: templates/enterlink/edit.html:194
 msgid "Join our official Facebook group if you need help with it!:"
-msgstr "加入我们的官方 Facebook 小组, 如果您需要帮助它!:"
+msgstr "加入我们的官方 Facebook 群组, 如果您需要帮助!:"
 
 #: templates/enterlink/edit.html:194
 msgid "- we will hook you up. It's not hard!"
-msgstr "-我们会帮您的。这一点都不难!"
+msgstr "-我们会支持您的。这一点都不难!"
 
 #: templates/enterlink/edit.html:203
 msgid ""
@@ -813,7 +813,7 @@ msgid ""
 "click at the end of the sentence or paragraph you want to cite, then click "
 "the (Cite) button on the edit panel above!"
 msgstr ""
-"请引用您刚添加到主要文章正文中的链接。首先点击要引用的句子或段落的末尾，然后"
+"请为您刚刚加到文章主体正文的内容添加引用链接。首先点击要引用的句子或段落的末尾，然后"
 "单击上面编辑面板上的（引用）按钮！"
 
 #: templates/enterlink/edit_ajax_addinfobox.html:10
@@ -877,7 +877,7 @@ msgstr "删除页面"
 
 #: templates/enterlink/editing-disabled.html:7
 msgid "Editing existing pages temporarily disabled"
-msgstr "编辑已暂时禁用的现有页面"
+msgstr "已暂时禁止编辑已经存在的页面"
 
 #: templates/enterlink/editors.html:23
 msgid "Editors"
@@ -885,7 +885,7 @@ msgstr "编辑"
 
 #: templates/enterlink/editors.html:74
 msgid "Everipedia Editors"
-msgstr "Everipedia编辑"
+msgstr "Everipedia的编辑"
 
 #: templates/enterlink/editors.html:93 templates/enterlink/inbox.html:52
 #: templates/enterlink/recent-activity.html:103
@@ -942,15 +942,15 @@ msgstr "点击此处返回最近活动"
 
 #: templates/enterlink/exchange-listings.html:7
 msgid "Exchange Listings"
-msgstr "交换列表"
+msgstr "交易所列表"
 
 #: templates/enterlink/exchange-listings.html:17
 msgid "Supported Exchanges"
-msgstr "支持的交流"
+msgstr "支持的交易所"
 
 #: templates/enterlink/exchange-listings.html:18
 msgid "The following exchanges indicated that they will support the IQ airdrop"
-msgstr "下列交易所表示, 他们将支持 IQ 空投"
+msgstr "以下交易所表示, 他们将支持IQ空投"
 
 #: templates/enterlink/exchange-listings.html:142
 msgid "Supported Wallets"
@@ -962,7 +962,7 @@ msgstr "代币口袋"
 
 #: templates/enterlink/faq.html:20
 msgid "Frequently Asked Questions"
-msgstr "经常问的问题"
+msgstr "常见问题解答"
 
 #: templates/enterlink/faq.html:24
 msgid "What is Everipedia?"
@@ -977,10 +977,10 @@ msgid ""
 "be cited and the article must be in a neutral point of view. Check out the "
 "actual entry for Everipedia... on"
 msgstr ""
-"Everipedia是一个知识聚合器和知识库。我们认为比维基百科更容易编辑。任何人都可"
-"以创建关于任何人，地点，组织或事物的页面，并使用相关的参考链接/来源填充该页"
-"面。 EP的唯一主要规则是：页面上的信息必须始终引用，文章必须是中立的。查看"
-"Everipedia的实际条目..."
+"Everipedia是一个知识聚合平台和知识库。我们认为它比维基百科更容易编辑。任何人都可"
+"以创建关于任何人，地点，组织或事物的页面，并添加相关的参考链接/来源。"
+"EP 的唯一的主要规则是：页面上的信息必须一直被引用，文章必须是中立的观点。查看"
+"Everipedia的真正入口..."
 
 #: templates/enterlink/faq.html:27
 msgid "Why should I sign up?"
@@ -994,10 +994,10 @@ msgid ""
 "they accumulate IQ and rise through the ranks. Top site-wide editors are "
 "displayed on the front page. Top editors for each page are also displayed."
 msgstr ""
-"因为它的乐趣和容易!我们认为, 对大型知识项目的贡献不应该要求高门槛进入, 所以我"
-"们让 Everipedia 很容易导航, 编辑, 并开始。编辑获得更多的特权, 因为他们积累的"
-"智商和上升的行列。顶级站点范围的编辑器显示在头版。还会显示每个页面的顶级编辑"
-"器。"
+"因为它有趣并且易用!我们认为, 为大规模知识项目贡献内容的准入门槛不应太高，所以我"
+"们让 Everipedia 很容易导航, 编辑和上手。编辑作者们随着IQ的积累和排名的提升可以"
+"获得更多的特权。全网最优秀的编辑还会展示在头版。每个页面最优秀的编辑也会展示出来。"
+
 
 #: templates/enterlink/faq.html:30
 msgid "Try it!"
@@ -1009,7 +1009,7 @@ msgstr "在这里注册"
 
 #: templates/enterlink/faq.html:32
 msgid "So how is Everipedia different from Wikipedia and similar sites?"
-msgstr "那么 Everipedia 和维基百科和类似网站有什么不同呢？"
+msgstr "那么 Everipedia 与维基百科以及类似网站有什么不同呢？"
 
 #: templates/enterlink/faq.html:33
 msgid ""
@@ -1019,9 +1019,9 @@ msgid ""
 "Wikipedia is already here on Everipedia to build on top of and improve. All "
 "this makes EP the biggest knowledge project ever!"
 msgstr ""
-"Everipedia 上的编辑是图形化和现代的, 谈话页面被设计为讨论线程, 名人已经验证了"
-"帐户, 任何人都可以做任何网页, 只要他们被正确引用。维基百科上的每一页都已经在 "
-"Everipedia 上了, 可以在上面进行改进。所有这些都使 EP 成为有史以来最大的知识项"
+"在Everipedia上编辑都是图形化和现代的, 对话页面被设计为讨论线程式, 名人有认证的"
+"帐户, 任何人都可以做任何网页, 只要他们被正确的引用。维基百科上的每个页面都已经在 "
+"Everipedia建立上了, 并且加以改进了。所有这些都使EP成为有史以来最大的知识项"
 "目!"
 
 #: templates/enterlink/faq.html:35
@@ -1038,10 +1038,10 @@ msgid ""
 "programmatically harvest information that would dramatically affect our "
 "servers."
 msgstr ""
-"在Everipedia上找到的所有信息都免费供任何人使用和访问。我们要求的是一个链接回"
-"到源的Everipedia页面为归因的目的。这本百科全书的信息是为所有人免费。我们绝不"
-"会对本网站上的任何信息收费或保留。我们只是要求您不遏制网站，并以编程方式收获"
-"信息，这将大大影响我们的服务器。"
+"在Everipedia上找到的所有信息都可以免费提供给任何人使用和访问。我们只需要一个"
+"返回源Everipedia页面的链接来进行归属确认。这部百科全书上的信息对所有人都是免费的。"
+"我们将永远不会对这个网站上的信息收取费用或进行隐瞒。我们只是要求您不要扼杀网站"
+"以及用程序来获取信息，那会极大影响我们的服务器。"
 
 #: templates/enterlink/faq.html:42
 msgid "Much love,"
@@ -1062,7 +1062,7 @@ msgstr "关于"
 #: templates/enterlink/footers/mobile_footer.html:131
 #: templates/enterlink/template_blockchain_styled_amp.html:549
 msgid "FAQ"
-msgstr "常问问题"
+msgstr "常见问题解答"
 
 #: templates/enterlink/footers/desktop_footer.html:7
 #: templates/enterlink/footers/footer_no_extras.html:7
@@ -1071,7 +1071,7 @@ msgstr "常问问题"
 #: templates/enterlink/footers/mobile_footer.html:132
 #: templates/enterlink/template_blockchain_styled_amp.html:550
 msgid "Contact"
-msgstr "联系"
+msgstr "联系我们"
 
 #: templates/enterlink/footers/desktop_footer.html:8
 #: templates/enterlink/footers/footer_no_extras.html:9
@@ -1113,7 +1113,7 @@ msgstr "论坛"
 #: templates/enterlink/headers/header_dropdown.html:40
 #: templates/enterlink/template_blockchain_styled_amp.html:553
 msgid "Get IQ"
-msgstr "获得智商"
+msgstr "获得IQ"
 
 #: templates/enterlink/footers/desktop_footer.html:30
 #: templates/enterlink/footers/footer_no_extras.html:31
@@ -1127,7 +1127,7 @@ msgstr "技术支持"
 #: templates/enterlink/footers/mobile_footer.html:161
 #: templates/enterlink/template_blockchain_styled_amp.html:581
 msgid "API by"
-msgstr "API 的"
+msgstr "通过API"
 
 #: templates/enterlink/footers/desktop_footer.html:43
 #: templates/enterlink/footers/footer_no_extras.html:44
@@ -1149,7 +1149,7 @@ msgstr "在此输入您的帖子"
 #: templates/enterlink/footers/forum_footer.html:8
 #: templates/enterlink/footers/pm_footer.html:7
 msgid "Create New Thread"
-msgstr "创建新主题"
+msgstr "创建新的主题"
 
 #: templates/enterlink/footers/index_footer.html:5
 msgid "About Everipedia"
@@ -1179,7 +1179,7 @@ msgstr "使用条款"
 #: templates/enterlink/footers/mobile_footer.html:124
 #: templates/enterlink/template_blockchain_styled_amp.html:559
 msgid "Everipedia® is a trademark of Everipedia International"
-msgstr "Everipedia®是Everipedia，Inc.的商标。"
+msgstr "Everipedia®商标归属Everipedia,Inc."
 
 #: templates/enterlink/footers/mobile_footer.html:135
 #: templates/enterlink/headers/index_header.html:165
@@ -1264,7 +1264,7 @@ msgstr "通知"
 #: templates/enterlink/headers/desktop-navbar.html:96
 #: templates/enterlink/headers/index_header.html:217
 msgid "Your IQ Score"
-msgstr "您的智商"
+msgstr "您的IQ值"
 
 #: templates/enterlink/headers/desktop-navbar.html:29
 msgid "Table of contents"
@@ -1273,7 +1273,7 @@ msgstr "目录"
 #: templates/enterlink/headers/desktop-navbar.html:29
 #: templates/enterlink/template_blockchain_styled_amp.html:105
 msgid "Table of contents and facts for this wiki"
-msgstr "此 wiki 的内容和事实表"
+msgstr "此 wiki 的内容和材料表"
 
 #: templates/enterlink/headers/desktop-navbar.html:62
 #: templates/enterlink/headers/mobile-navbar.html:159
@@ -1281,16 +1281,16 @@ msgstr "此 wiki 的内容和事实表"
 #: templates/enterlink/template_blockchain_styled_amp.html:635
 #: templates/enterlink/template_blockchain_styled_amp.html:715
 msgid "Feed"
-msgstr "Feed订阅"
+msgstr "订阅"
 
 #: templates/enterlink/headers/desktop-navbar.html:87
 msgid "Please log in with Scatter"
-msgstr "请用散点登录"
+msgstr "请通过Scatter登陆"
 
 #: templates/enterlink/headers/header_dropdown.html:8
 #: templates/enterlink/headers/header_dropdown.html:28
 msgid "Claim Rewards"
-msgstr ""
+msgstr "领取奖励"
 
 #: templates/enterlink/headers/header_dropdown.html:39
 #: templates/enterlink/headers/mobile-navbar.html:153
@@ -1303,7 +1303,7 @@ msgstr ""
 #: templates/enterlink/template_blockchain_styled_amp.html:708
 #: templates/enterlink/user.html:126
 msgid "Help"
-msgstr "帮帮我"
+msgstr "帮助"
 
 #: templates/enterlink/headers/index_header.html:109
 msgid "View Profile"
@@ -1311,7 +1311,7 @@ msgstr "查看资料"
 
 #: templates/enterlink/headers/index_header.html:128
 msgid "Sign In"
-msgstr "签到"
+msgstr "登陆"
 
 #: templates/enterlink/headers/index_header.html:128
 #: templates/enterlink/headers/index_header.html:172
@@ -1319,7 +1319,7 @@ msgstr "签到"
 #: templates/enterlink/headers/index_header.html:263
 #: templates/enterlink/index.html:47
 msgid "Register"
-msgstr "寄存器"
+msgstr "注册"
 
 #: templates/enterlink/headers/index_header.html:132
 #: templates/enterlink/login.html:36
@@ -1334,7 +1334,7 @@ msgstr "需要一个帐户？在这里注册。"
 #: templates/enterlink/headers/index_header.html:171
 #: templates/enterlink/login.html:41
 msgid "Forgot your password?"
-msgstr "忘记密码了吗？"
+msgstr "忘记密码了？"
 
 #: templates/enterlink/headers/index_header.html:163
 #: templates/enterlink/inbox.html:23
@@ -1367,11 +1367,11 @@ msgstr "注册/登录"
 
 #: templates/enterlink/hoverblurb_ajax_blockchain.html:65
 msgid "Go to article"
-msgstr "转到文章"
+msgstr "前往文章"
 
 #: templates/enterlink/hovereditor_ajax.html:67
 msgid "Self citation by"
-msgstr "自引用的"
+msgstr "自引用"
 
 #: templates/enterlink/hovereditor_ajax.html:72
 msgid "Title"
@@ -1391,7 +1391,7 @@ msgstr "上次登录"
 
 #: templates/enterlink/hovereditor_ajax.html:80
 msgid "Go to Editor's Profile"
-msgstr "转到编辑器的配置文件"
+msgstr "前往编辑的个人简介"
 
 #: templates/enterlink/hoverlink_ajax_blockchain.html:64
 msgid "Discuss Citation"
@@ -1403,7 +1403,7 @@ msgstr "下载"
 
 #: templates/enterlink/hoverlink_iframe_blockchain.html:55
 msgid "Direct Link"
-msgstr "Direct Link"
+msgstr "直接连接"
 
 #: templates/enterlink/hoverlink_iframe_blockchain.html:64
 #: templates/enterlink/hoverlink_iframe_blockchain.html:65
@@ -1419,7 +1419,7 @@ msgstr "复制网址"
 
 #: templates/enterlink/hoverlink_iframe_blockchain.html:118
 msgid "Play / Pause"
-msgstr "放/暂停"
+msgstr "播放/暂停"
 
 #: templates/enterlink/howto.html:8 templates/enterlink/howto.html:30
 msgid "How to use Everipedia"
@@ -1429,7 +1429,7 @@ msgstr "如何使用Everipedia"
 msgid ""
 "Everipedia is a free and easy to use wiki platform. Write about anyone and "
 "anything!"
-msgstr "Everipedia是一个免费的，易于使用的wiki和评论平台。写任何人和任何东西！"
+msgstr "Everipedia是一个免费的，易用的wiki平台。可以写关于任何人和任何事物！"
 
 #: templates/enterlink/howto.html:36 templates/enterlink/howto.html:45
 msgid "Go back to the page you started from"
@@ -1437,15 +1437,15 @@ msgstr "返回您开始的页面"
 
 #: templates/enterlink/howto.html:40 templates/enterlink/howto.html:45
 msgid "Go to page"
-msgstr "转到页面"
+msgstr "前往页面"
 
 #: templates/enterlink/howto.html:50
 msgid "Go to your editor profile page"
-msgstr "转到编辑器个人资料页面"
+msgstr "前往编辑的个人资料页面"
 
 #: templates/enterlink/howto.html:50
 msgid "Go to profile"
-msgstr "转到个人资料"
+msgstr "前往个人资料"
 
 #: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
 msgid "Create a new page now"
@@ -1463,7 +1463,7 @@ msgstr "此页当前正在由其他用户创建"
 msgid ""
 "This page is currently in the process of being created by another user. "
 "Please return later!"
-msgstr "此页当前正在由其他用户创建。请稍后返回!"
+msgstr "此页当前正在由其他用户创建。请稍后再来!"
 
 #: templates/enterlink/inbox.html:30
 msgid "You have"
@@ -1479,7 +1479,7 @@ msgstr "您当前没有任何通知。"
 
 #: templates/enterlink/index.html:40
 msgid "The world's first encyclopedia on the blockchain"
-msgstr "世界上第一本关于 blockchain 的百科全书"
+msgstr "世界上第一部基于区块链的百科全书"
 
 #: templates/enterlink/index.html:41
 msgid ""
@@ -1487,8 +1487,8 @@ msgid ""
 "to become a stakeholder in the system and earn rank, rewards & tokens for "
 "curating content."
 msgstr ""
-"Everipedia 的 IQ 网络是世界上第一个百科全书, 它允许任何人成为系统的利益相关"
-"者, 并获得策划内容的排名, 奖励和代币。"
+"Everipedia的IQ网络是世界上第一部允许任何人成为系统的参与者，"
+"并通过策划内容获得等级、奖励和代币的百科全书"
 
 #: templates/enterlink/index.html:48
 msgid "Learn more"
@@ -1500,7 +1500,7 @@ msgstr "如"
 
 #: templates/enterlink/index.html:100
 msgid "An Encyclopedia for the modern age"
-msgstr "现代百科全书"
+msgstr "现代化的百科全书"
 
 #: templates/enterlink/index.html:104
 msgid ""
@@ -1510,9 +1510,9 @@ msgid ""
 "distributed backend hosted within a blockchain, the new Everipedia knowledge "
 "base will be able to improve upon all fundamental features of Wikipedia."
 msgstr ""
-"Everipedia IQ blockchain 提供了一个新的范式变化和知识经济, 扰乱了旧的集中式互"
-"联网知识百科全书模型类似维基百科。通过创建一个新的激励结构和分布式后端托管在"
-"一个 blockchain 中, 新的 Everipedia 知识库将能够改进维基百科的所有基本功能。"
+"Everipedia的IQ区块链网络提供了一个全新的范式转移和知识经济，以打破像维基百科那样"
+"旧的中心化互联网知识百科全书模型。通过创建一种全新的激励结构和一个托管在区块链上的分布"
+"式后端，新的Everipedia知识库将能够改进维基百科的所有基础特性。"
 
 #: templates/enterlink/index.html:112
 msgid "Decentralized"
@@ -1522,11 +1522,11 @@ msgstr "去中心化"
 msgid ""
 "Articles are fetched using IPFS and EOS Storage. Majority of IQ being "
 "distributed during the airdrop."
-msgstr "文章是使用指规数和 EOS 存储获取的。大多数智商分布在空投期间。"
+msgstr "文章是通过使用IPFS协议和EOS存储来进行读取的。大部分IQ代币已经在空投期间分发出去了。"
 
 #: templates/enterlink/index.html:117
 msgid "Democratic"
-msgstr "Democratic"
+msgstr "民主"
 
 #: templates/enterlink/index.html:118
 msgid ""
@@ -1534,18 +1534,18 @@ msgid ""
 "network as it grows. Also will facilitate batch imports of new content with "
 "no fees."
 msgstr ""
-"股份证明 (PoS) 模型允许投票改变和升级 IQ 网络, 因为它的增长。还将方便批量导入"
-"新内容, 无需付费。"
+"股权证明（POS）模型允许随着它的发展，通过投票来改造和升级IQ网络。这也将促进新内容"
+"的批量引进而无需任何费用。"
 
 #: templates/enterlink/index.html:122
 msgid "Censorship Resistant"
-msgstr "耐审查性"
+msgstr "抵制审查"
 
 #: templates/enterlink/index.html:123
 msgid ""
 "Live and permanent edits of content on the blockchain beyond the control of "
 "a central authority."
-msgstr "对 blockchain 的内容进行实时和永久性的编辑, 超出了中央当局的控制范围。"
+msgstr "可以跳出中央当局的控制，对区块链上的内容进行永久性的编辑。"
 
 #: templates/enterlink/index.html:127
 msgid "Financial Incentive"
@@ -1555,11 +1555,11 @@ msgstr "财务激励"
 msgid ""
 "All holders of IQ will be incentivized to create quality, neutral content "
 "and to work together in building the reputation of the network."
-msgstr "所有的 IQ 持有人将激励创造质量, 中性的内容, 并共同努力建立网络的声誉。"
+msgstr "所有IQ的持有者将受到激励，以创造高质量和中立的内容，并且共同努力来建立网络的声誉。"
 
 #: templates/enterlink/index.html:139
 msgid "Become an editor today and start creating your own wiki articles."
-msgstr "今天成为一个编辑, 开始创建自己的 wiki 文章。"
+msgstr "现在成为一名编辑，并开始创建自己的维基文章。"
 
 #: templates/enterlink/index.html:142
 msgid "Open Community"
@@ -1571,12 +1571,12 @@ msgid ""
 "Our guidelines and policies are based on common sense rather than strict "
 "bureaucracy."
 msgstr ""
-"我们充满活力的社区是开放的, 欢迎所有背景的人。我们的方针和政策是基于常识而不"
-"是严格的官僚作风。"
+"我们社区充满活力并且是开放的，欢迎来自不同背景的人。我们的指导方针和政策是基于共识而"
+"非严格的官僚作风。"
 
 #: templates/enterlink/index.html:145
 msgid "Redesigned for the modern age"
-msgstr "重新设计的现代时代"
+msgstr "面向现代化的重新设计"
 
 #: templates/enterlink/index.html:146
 msgid ""
@@ -1584,12 +1584,12 @@ msgid ""
 "first century. Our editing interface makes creating and editing wiki's as "
 "easy as using Facebook."
 msgstr ""
-"Everipedia 是一本百科全书, 为第二十一世纪的现代化和重新设计。我们的编辑界面使"
-"得创建和编辑 wiki 和使用 Facebook 一样简单。"
+"Everipedia是一部为了面向21世纪，满足现代化需求而重新设计的百科全书。我们的编辑界面"
+"使得创建和编辑维基文章就像使用脸书网一样简单。"
 
 #: templates/enterlink/index.html:155
 msgid "Follow us on Telegram"
-msgstr "跟我们联系电报"
+msgstr "在电报群关注我们"
 
 #: templates/enterlink/index.html:168
 msgid "Led by the Founder of Wikipedia and Genius.com"
@@ -1605,11 +1605,11 @@ msgid ""
 "Yale & Columbia, covering nationalities from America, Sweden, Norway and "
 "Italy. "
 msgstr ""
-"Everipedia 是一个团队, 拥有丰富的经验和知识, 既有在线知识空间, 也有 区块链行"
-"业的知识。执行团队由业界的几个著名人士组成, 维基百科的共同创始人, Genius."
-"com、Mahbod Moghadam 的创始人、以及其他几个人。学术证书包括加州大学洛杉矶分"
-"校、斯坦福大学、耶鲁大学和哥伦比亚大学, 涵盖来自美国、瑞典、挪威和意大利的民"
-"族。"
+"Everipedia 由在线知识领域和区块链行业都具有丰富经验和知识的团队领导。 执行团队由业"
+"内几位知名人士组成，包括维基百科的联合创始人Larry Sanger和Genius.com 的创始人"
+"Mahbod Moghadam和其他几位。学历背景包括加州大学洛杉矶分校、斯坦福大学、耶鲁大学"
+"和哥伦比亚大学，涵盖的国籍有美国、瑞典、挪威和意大利。"
+
 
 #: templates/enterlink/index.html:172
 msgid "Executive Team"
@@ -1617,11 +1617,11 @@ msgstr "执行团队"
 
 #: templates/enterlink/leadership.html:7
 msgid "Leadership"
-msgstr "领导关怀"
+msgstr "领导团队"
 
 #: templates/enterlink/leadership.html:23
 msgid "Executive Leadership"
-msgstr "行政领导"
+msgstr "执行领导"
 
 #: templates/enterlink/leadership.html:35
 msgid "Chief Information Officer"
@@ -1629,15 +1629,15 @@ msgstr "首席信息官"
 
 #: templates/enterlink/leadership.html:41
 msgid "Chief Executive Officer, Co-Founder"
-msgstr "首席执行官, 共同创始人"
+msgstr "首席执行官, 联合创始人"
 
 #: templates/enterlink/leadership.html:47
 msgid "Chief Technology Officer, Co-Founder"
-msgstr "首席技术官, 共同创始人"
+msgstr "首席技术官, 联合创始人"
 
 #: templates/enterlink/leadership.html:53
 msgid "President, Co-Founder"
-msgstr "总裁, 共同创始人"
+msgstr "总裁, 联合创始人"
 
 #: templates/enterlink/leadership.html:63
 msgid "Director of Software"
@@ -1649,7 +1649,7 @@ msgstr "首席运营官"
 
 #: templates/enterlink/leadership.html:75
 msgid "Chief Community Officer, Co-Founder"
-msgstr "共同创办人首席社区干事"
+msgstr "首席社区官，联合创始人"
 
 #: templates/enterlink/limitreached.html:7
 msgid "Activity limit reached"
@@ -1662,20 +1662,20 @@ msgid ""
 "work. Shouldn't take too long, you'll probably be good to go in less than 5 "
 "minutes."
 msgstr ""
-"嘿！现在您增加了 15 个 Everipedia 的知识, 所以我们暂停了您的帐户, 直到主编辑"
-"有机会审查您的工作。不应该花太长时间, 您可能会在不到5分钟的时间内离开。"
+"嘿!你现在已经向Everipedia添加了15点知识，所以我们暂停了您的账户，直到主编辑"
+"有机会检查您的工作。不会花费很长时间，您可能在5分钟内就可以继续。"
 
 #: templates/enterlink/limitreached.html:24
 msgid "In the meantime, please join our official Facebook group:"
-msgstr "在此期间, 请加入我们的官方 Facebook 组:"
+msgstr "同时, 请加入我们的官方 Facebook 群组:"
 
 #: templates/enterlink/limitreached.html:24
 msgid "It’s the best way to reach the community!"
-msgstr "这是到达社区的最佳途径!"
+msgstr "这是加入社区的最佳路径!"
 
 #: templates/enterlink/login.html:7
 msgid "Sign in"
-msgstr "签到"
+msgstr "登陆"
 
 #: templates/enterlink/login.html:33
 msgid "Sign in to Everipedia"
@@ -1683,7 +1683,7 @@ msgstr "登录Everipedia"
 
 #: templates/enterlink/login.html:48
 msgid "Log in with Facebook"
-msgstr "用Facebook登录"
+msgstr "使用Facebook登录"
 
 #: templates/enterlink/login.html:49
 msgid "Log in with Twitter"
@@ -1691,7 +1691,7 @@ msgstr "使用Twitter登录"
 
 #: templates/enterlink/login.html:58
 msgid "Need an account?"
-msgstr "需要帐户吗？"
+msgstr "需要帐户？"
 
 #: templates/enterlink/login.html:58
 msgid "Register here"
@@ -1699,7 +1699,7 @@ msgstr "在此注册"
 
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:34
 msgid "Visit Profile"
-msgstr "用户中心"
+msgstr "访问概况"
 
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:57
 msgid "Settings"
@@ -1717,7 +1717,7 @@ msgstr "注册/登录"
 
 #: templates/enterlink/notifications/index.html:116
 msgid "New message"
-msgstr "新信息"
+msgstr "新消息"
 
 #: templates/enterlink/recent-activity.html:84
 msgid "by"
@@ -1729,7 +1729,7 @@ msgstr "创建帐户"
 
 #: templates/enterlink/register.html:26 templates/enterlink/register.html:28
 msgid "Have an account?"
-msgstr "有账户吗？"
+msgstr "已有账户？"
 
 #: templates/enterlink/register.html:26 templates/enterlink/register.html:28
 msgid "Login"
@@ -1741,8 +1741,8 @@ msgid ""
 "Join us on Telegram and Reddit in the meantime to become a part of "
 "Everipedia today!"
 msgstr ""
-"由于 blockchain 软件测试, 目前只邀请注册。加入我们的电报和 Reddit 同时成为 "
-"Everipedia 的一部分今天!"
+"由于区块链软件测试, 目前只邀请注册。今天加入我们的电报群和 Reddit 同时成为 "
+"Everipedia 的一部分!"
 
 #: templates/enterlink/register.html:60
 msgid "Welcome to the Everipedia editor community!"
@@ -1752,7 +1752,7 @@ msgstr "欢迎来到 Everipedia 编辑社区!"
 msgid ""
 "Sign up to become an editor to access more features and an ad-free "
 "experience."
-msgstr "注册成为编辑者，可以访问更多功能和无广告的体验。"
+msgstr "注册成为编辑，可以访问更多功能和感受没有广告的体验。"
 
 #: templates/enterlink/register.html:96
 msgid "Sign up"
@@ -1771,35 +1771,35 @@ msgstr "服务条款"
 #, fuzzy
 #| msgid "Brainpower Management"
 msgid "Rewards Management"
-msgstr "智能管理"
+msgstr "Brainpower管理"
 
 #: templates/enterlink/rewardsmgmt.html:135
 msgid "Here you can claim rewards for the edits and / or votes that you made."
-msgstr ""
+msgstr "您可以在此领取您参与的编辑或者投票的奖励"
 
 #: templates/enterlink/rewardsmgmt.html:140
 msgid "Proposal Hash"
-msgstr ""
+msgstr "提案哈希"
 
 #: templates/enterlink/rewardsmgmt.html:141
 msgid "Finalized Time"
-msgstr ""
+msgstr "完成时间"
 
 #: templates/enterlink/rewardsmgmt.html:142
 #, fuzzy
 #| msgid "Voting Period"
 msgid "Period"
-msgstr "投票期间"
+msgstr "投票时间"
 
 #: templates/enterlink/rewardsmgmt.html:143
 msgid "Redeem"
-msgstr ""
+msgstr "领取"
 
 #: templates/enterlink/rewardsmgmt.html:150
 #, fuzzy
 #| msgid "Password reset successful"
 msgid "Redeem successful"
-msgstr "密码重置成功"
+msgstr "领取成功"
 
 #: templates/enterlink/search-iframe.html:127
 msgid "Searching..."
@@ -1827,7 +1827,7 @@ msgstr "高级搜索"
 
 #: templates/enterlink/search.html:48
 msgid "Everipedia couldn’t find anything with the name"
-msgstr "Everipedia找不到名字的东西"
+msgstr "Everipedia用该名字找不到任何内容"
 
 #: templates/enterlink/search.html:50
 msgid ""
@@ -1838,7 +1838,7 @@ msgstr "如果您知道与此页面相关联的任何链接，请尝试搜索这
 #: templates/enterlink/template_ajax_genius.html:17
 #: templates/enterlink/template_amp_ajax_genius.html:98
 msgid "Verified Editor"
-msgstr "已验证的编辑"
+msgstr "认证的编辑"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:123
 msgid "Bullet"
@@ -1854,12 +1854,12 @@ msgstr "最新文章"
 msgid ""
 "Everipedia IQ tokens are now in circulation on the EOS mainnet. Follow "
 "Everipedia on"
-msgstr "Everipedia IQ 代币现在在 EOS mainnet 上流通。遵循 Everipedia"
+msgstr "Everipedia IQ 代币现在在 EOS 主网上流通。关注 Everipedia"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:185
 #: templates/enterlink/template_blockchain_styled_desktop.html:126
 msgid "to learn about upcoming features and developments!"
-msgstr "了解即将到来的功能和发展!"
+msgstr "了解即将到来的功能和进展!"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:197
 #: templates/enterlink/template_blockchain_styled_desktop.html:143
@@ -1868,11 +1868,11 @@ msgstr "认证页面"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:273
 msgid "Quick Biography"
-msgstr "快速传记"
+msgstr "人物概览"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:275
 msgid "Quick Facts For This Wiki"
-msgstr "此 Wiki 的参考链接"
+msgstr "此wiki快速预览"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:304
 #: templates/enterlink/template_blockchain_styled_desktop.html:361
@@ -1886,7 +1886,7 @@ msgstr "图像、图片和视频"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:310
 msgid "Gallery"
-msgstr "画廊"
+msgstr "媒体库"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:327
 #: templates/enterlink/template_blockchain_styled_desktop.html:496
@@ -1903,7 +1903,7 @@ msgstr "此 Wiki 的参考链接"
 msgid ""
 "Links to historical reviews, career / educational facts, and other "
 "encyclopedic information"
-msgstr "历史回顾、职业/教育事实和其他百科全书信息的链接"
+msgstr "历史回顾、职业/教育生涯以及其他百科全书信息的链接"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:337
 #: templates/enterlink/template_blockchain_styled_desktop.html:507
@@ -1918,7 +1918,7 @@ msgid ""
 "relating to"
 msgstr ""
 "wiki 来自下面的链接。任何来源都是有效的, 包括 Twitter, Facebook, Instagram "
-"和 LinkedIn。与之相关的图片、视频、biodata 和文件"
+"和 LinkedIn。与之相关的图片、视频、个人档案和文件"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:337
 #: templates/enterlink/template_blockchain_styled_desktop.html:507
@@ -1930,12 +1930,12 @@ msgstr "也是可以接受的百科全书来源。"
 msgid ""
 "See related encyclopedia articles, biographies, reviews, and historical "
 "facts."
-msgstr "请参阅相关百科全书文章、传记、评论和历史事实。"
+msgstr "请参阅相关百科全书的文章、传记、评论和历史资料。"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:356
 #: templates/enterlink/template_blockchain_styled_desktop.html:535
 msgid "Other wiki pages related to"
-msgstr "其他 wiki 页面相关"
+msgstr "其他相关 wiki 页面"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:535
 msgid "Created"
@@ -1947,11 +1947,11 @@ msgstr "上一次更改"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:537
 msgid "IPFS"
-msgstr "指规数"
+msgstr "IPFS协议"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:757
 msgid "Top Page Editors"
-msgstr "首页编辑器"
+msgstr "顶级编辑"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:777
 msgid "Share this page"
@@ -1959,12 +1959,12 @@ msgstr "分享此页面"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:789
 msgid "DIRECT LINK"
-msgstr "Direct Link"
+msgstr "直接连接"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:794
 #: templates/enterlink/template_blockchain_styled_desktop.html:221
 msgid "Suggested Hashtags"
-msgstr "建议 Hashtags"
+msgstr "建议的标签"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:828
 #: templates/enterlink/template_blockchain_styled_desktop.html:259
@@ -1991,14 +1991,14 @@ msgstr ""
 #: templates/enterlink/template_blockchain_styled_desktop.html:37
 #: templates/enterlink/template_blockchain_styled_desktop.html:38
 msgid "encylopedia"
-msgstr ""
+msgstr "百科全书"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:21
 #: templates/enterlink/template_blockchain_styled_desktop.html:26
 #: templates/enterlink/template_blockchain_styled_desktop.html:28
 #: templates/enterlink/template_blockchain_styled_desktop.html:33
 msgid "Review"
-msgstr ""
+msgstr "检查"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:23
 #: templates/enterlink/template_blockchain_styled_desktop.html:24
@@ -2016,7 +2016,7 @@ msgstr ""
 #: templates/enterlink/template_blockchain_styled_desktop.html:238
 #: templates/enterlink/template_blockchain_styled_desktop.html:244
 msgid "history"
-msgstr ""
+msgstr "历史"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:126
 msgid "and"
@@ -2033,7 +2033,7 @@ msgstr "投票"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:205
 msgid "Embed / Widget"
-msgstr "嵌入/小部件"
+msgstr "嵌入/插件"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:224
 #: templates/enterlink/template_blockchain_styled_desktop.html:230
@@ -2044,7 +2044,7 @@ msgstr ""
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:226
 msgid "net worth"
-msgstr ""
+msgstr "净值"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:227
 msgid "age"
@@ -2062,24 +2062,24 @@ msgstr ""
 #: templates/enterlink/template_blockchain_styled_desktop.html:240
 #: templates/enterlink/template_blockchain_styled_desktop.html:246
 msgid "facts"
-msgstr ""
+msgstr "资料"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:239
 msgid "founders"
-msgstr ""
+msgstr "创立者"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:245
 msgid "encyclopedia"
-msgstr ""
+msgstr "百科全书"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:329
 msgid "Profiles"
-msgstr "配置文件"
+msgstr "个人资料"
 
 #: templates/enterlink/transfer-iq.html:5
 #: templates/enterlink/transfer-iq.html:119
 msgid "Transfer IQ"
-msgstr "传输 IQ"
+msgstr "转移IQ"
 
 #: templates/enterlink/transfer-iq.html:121
 msgid "Please make sure you have set up"
@@ -2091,7 +2091,7 @@ msgstr "事先："
 
 #: templates/enterlink/transfer-iq.html:123
 msgid "Sender"
-msgstr "发送"
+msgstr "发送者"
 
 #: templates/enterlink/transfer-iq.html:125
 msgid "Recipient"
@@ -2103,7 +2103,7 @@ msgstr "备注"
 
 #: templates/enterlink/transfer-iq.html:134
 msgid "Transaction successful"
-msgstr "事务成功"
+msgstr "交易成功"
 
 #: templates/enterlink/transfer-iq.html:138
 msgid "Buy RAM"
@@ -2115,15 +2115,15 @@ msgstr "查看 FeeXplorer 上的 RAM、CPU 和带宽"
 
 #: templates/enterlink/user.html:12
 msgid "profile"
-msgstr "配置文件"
+msgstr "个人资料"
 
 #: templates/enterlink/user.html:38
 msgid "Everipedia Rank"
-msgstr "Everipedia排名"
+msgstr "Everipedia 排名"
 
 #: templates/enterlink/user.html:53
 msgid "This user is verified"
-msgstr "此用户已验证"
+msgstr "此用户已认证"
 
 #: templates/enterlink/user.html:56
 msgid "Everipedia Staff"
@@ -2131,7 +2131,7 @@ msgstr "Everipedia员工"
 
 #: templates/enterlink/user.html:62 templates/enterlink/user.html:67
 msgid "Message"
-msgstr "信息"
+msgstr "消息"
 
 #: templates/enterlink/user.html:71 templates/enterlink/user.html:123
 msgid "Edit Profile"
@@ -2139,11 +2139,11 @@ msgstr "编辑个人资料"
 
 #: templates/enterlink/user.html:74
 msgid "Everipedia Page"
-msgstr "Everipedia 页"
+msgstr "Everipedia 页面"
 
 #: templates/enterlink/user.html:80
 msgid "IQ Score"
-msgstr "智商"
+msgstr "IQ值"
 
 #: templates/enterlink/user.html:81
 msgid "Pages created"
@@ -2151,7 +2151,7 @@ msgstr "已创建页面"
 
 #: templates/enterlink/user.html:82
 msgid "Total edits"
-msgstr "总编辑"
+msgstr "编辑汇总"
 
 #: templates/enterlink/user.html:94
 msgid "Joined"
@@ -2167,7 +2167,7 @@ msgstr "启用帐户？取消选中以禁用"
 
 #: templates/enterlink/user.html:157
 msgid "IP Ban"
-msgstr "IP禁令"
+msgstr "禁止IP"
 
 #: templates/enterlink/user.html:157
 msgid "Ban"
@@ -2175,7 +2175,7 @@ msgstr "禁止"
 
 #: templates/enterlink/user.html:157
 msgid "Clear"
-msgstr "明确"
+msgstr "清除"
 
 #: templates/enterlink/user.html:159
 msgid "Verify the account?"
@@ -2211,7 +2211,7 @@ msgstr "投票"
 
 #: templates/enterlink/votehistory.html:95
 msgid "Voting History"
-msgstr "投票历史记录"
+msgstr "投票记录"
 
 #: templates/enterlink/voting.html:197
 msgid "Before"
@@ -2219,7 +2219,7 @@ msgstr "之前"
 
 #: templates/enterlink/voting.html:199
 msgid "After"
-msgstr "后"
+msgstr "之后"
 
 #: templates/enterlink/voting_table_of_contents.html:7
 msgid "Article"
@@ -2240,7 +2240,7 @@ msgstr "接受"
 
 #: templates/enterlink/voting_table_of_contents.html:28
 msgid "Voting Period"
-msgstr "投票期间"
+msgstr "投票时间"
 
 #: templates/enterlink/voting_table_of_contents.html:34
 msgid "to"
@@ -2248,7 +2248,7 @@ msgstr "到"
 
 #: templates/enterlink/voting_table_of_contents.html:51
 msgid "Place Votes"
-msgstr "地方票"
+msgstr "投票处"
 
 #: templates/enterlink/voting_table_of_contents.html:63
 msgid "Approve"
@@ -2260,4 +2260,4 @@ msgstr "保存所有更改"
 
 #: templates/enterlink/welcome.html:7
 msgid "Welcome to Everipedia, the encyclopedia of everything"
-msgstr "欢迎来到Everipedia，包含所有的百科全书"
+msgstr "欢迎来到Everipedia，包含一切的百科全书"
