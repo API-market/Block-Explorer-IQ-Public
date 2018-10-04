@@ -239,7 +239,7 @@ msgstr "创意工作/艺术"
 
 #: enterlink/forms.py:175 enterlink/models.py:134
 msgid "Science/Academia/Humanities"
-msgstr "科学/学术/人文"
+msgstr "科技/学术/人文"
 
 #: enterlink/models.py:45 enterlink/models.py:49
 msgid "None"
@@ -327,7 +327,7 @@ msgstr "IP 地址或掩码"
 
 #: local_packages/block_ip/models.py:12
 msgid "Optional reason for block"
-msgstr "块的可选原因"
+msgstr "可选原因"
 
 #: local_packages/block_ip/models.py:25 local_packages/block_ip/models.py:26
 msgid "IPs & masks to ban"
@@ -476,7 +476,7 @@ msgid ""
 "If you don't receive an email, please make sure you've entered the address "
 "you registered with, and check your spam folder."
 msgstr ""
-"如果您没有收到电子邮件, 请确保您已输入您注册的邮件地址, 并检查您的垃圾邮件文件夹"
+"如果您没有收到电子邮件, 请确保您已输入您注册的邮件地址, 并检查您的垃圾邮件文件"
 "夹。"
 
 #: templates/admin/password_reset_email.html:2
@@ -491,7 +491,7 @@ msgstr "请转到以下页面并选择新密码："
 
 #: templates/admin/password_reset_email.html:8
 msgid "Your username, in case you've forgotten:"
-msgstr "您的用户名，如果您忘记了："
+msgstr "您的用户名，以防您忘记了："
 
 #: templates/admin/password_reset_email.html:10
 msgid "Thanks for using our site!"
@@ -576,7 +576,7 @@ msgstr "您的浏览器不支持HTML5视频。"
 
 #: templates/enterlink/ajax_media_gallery_singlet.html:29
 msgid "Type"
-msgstr "在此框中输入来筛选可用的%s列表。"
+msgstr "类型。"
 
 #: templates/enterlink/ajax_media_gallery_singlet.html:31
 msgid "MIME Type"
@@ -699,7 +699,7 @@ msgstr "数量"
 
 #: templates/enterlink/brainpowermgmt.html:132
 msgid "Claim"
-msgstr "要求"
+msgstr "领取"
 
 #: templates/enterlink/contact.html:7 templates/enterlink/contact.html:24
 msgid "Contact us"
@@ -1445,7 +1445,7 @@ msgstr "前往编辑的个人资料页面"
 
 #: templates/enterlink/howto.html:50
 msgid "Go to profile"
-msgstr "前往个人简介"
+msgstr "前往个人资料"
 
 #: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
 msgid "Create a new page now"
@@ -2175,7 +2175,7 @@ msgstr "禁止"
 
 #: templates/enterlink/user.html:157
 msgid "Clear"
-msgstr "明确"
+msgstr "清除"
 
 #: templates/enterlink/user.html:159
 msgid "Verify the account?"
