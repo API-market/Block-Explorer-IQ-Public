@@ -1795,7 +1795,7 @@ msgstr "完成时间"
 #, fuzzy
 #| msgid "Voting Period"
 msgid "Period"
-msgstr "投票时间"
+msgstr "阶段"
 
 #: templates/enterlink/rewardsmgmt.html:143
 msgid "Redeem"
