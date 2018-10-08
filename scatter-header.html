@@ -50,7 +50,6 @@
         chainId: EosNetChainID // FILL THIS IN WITH MAINNET https://mainnet.libertyblock.io:7777/v1/chain/get_info
     };
 
-	var Eos = new eosjs.Api({ rpc, signatureProvider:ScatterJS.scatter.eosHook(network) });
     var EosNetURL = EosNetProtocol + "://" + EosNetHost + ":" + EosNetPortString;
 
     var eosOptions = {
@@ -71,6 +70,8 @@
         document.dispatchEvent(new CustomEvent("scatterLoaded"));
         // window.scatter = null;
 
+
+
         var requiredFields = {accounts:[ network ]};
         scatter.getIdentity(requiredFields).then(identity => {
             scatterAccountName = identity.accounts[0].name;
@@ -79,17 +80,25 @@
             scatterAccountNameUInt64 = scatterAccountNameBigInt.toString();
             scatterAccountNameCharPlusOne = increaseLastCharByOne(scatterAccountName);
 
-            // eosInstance = ScatterJS.scatter.eos(network, Eos, eosOptions);
-            // eos = scatter.eos();
-            eos = scatter.eos(network, eosjs.Api, {rpc});
-
-            var transactionOptions = {authorization: [`${account.name}@${account.authority}`]};
-            eos.transfer(account.name, 'b1', '1.0000 EOS', 'memo', transactionOptions).then(trx => {
-                // That's it!
-                console.log(`Transaction ID: ${trx.transaction_id}`);
-            }).catch(error => {
-                console.error(error);
-            });
+            var eos = new eosjs.Api({ rpc, signatureProvider:scatter.eosHook(network) });
+            var transactionJSON = {
+                actions: [{
+                        account: 'everipediaiq',
+                        name: 'transfer',
+                        authorization: [{
+                            actor: scatterAccountName,
+                            permission: "active",
+                        }],
+                data: {
+                        from: scatterAccountName,
+                        to: "b1",
+                        quantity: '0.001 IQ',
+                        memo: 'test',
+                    },
+                }]
+            };
+            eos.transact(transactionJSON, { blocksBehind: 3, expireSeconds: 30,});
+            
 
             if (isMobile){
                 // alert(isMobile);
