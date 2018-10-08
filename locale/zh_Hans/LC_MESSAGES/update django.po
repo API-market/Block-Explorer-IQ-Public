@@ -138,7 +138,7 @@ msgstr "全名"
 
 #: enterlink/forms.py:85
 msgid "Subject"
-msgstr "学科"
+msgstr "主题"
 
 #: enterlink/forms.py:86 enterlink/models.py:89
 msgid "Report Abuse"
@@ -539,17 +539,17 @@ msgstr "添加行"
 #: templates/enterlink/ajax_infobox_singlet.html:17
 #: templates/enterlink/ajax_infobox_singlet.html:45
 msgid "Schema"
-msgstr "架构"
+msgstr "概要"
 
 #: templates/enterlink/ajax_infobox_singlet.html:21
 #: templates/enterlink/ajax_infobox_singlet.html:49
 msgid "Schema Type"
-msgstr "架构类型"
+msgstr "概要类型"
 
 #: templates/enterlink/ajax_infobox_singlet.html:25
 #: templates/enterlink/ajax_infobox_singlet.html:53
 msgid "Subschema"
-msgstr "子架构"
+msgstr "子概要"
 
 #: templates/enterlink/ajax_link_singlet.html:25
 msgid "Social Media"
@@ -648,9 +648,9 @@ msgid ""
 "tokens and re-stake them for more Brainpower again. Thus, 1 IQ, staked every "
 "21 days, can lead to 365 days / 21 days = 17.38 Brainpower every year."
 msgstr ""
-"抵押的IQ代币将会被冻结21天, 同时会产出不可转让的Brainpower, Brainpower可以在Everipedia "
-"网络上用于编辑和投票。在21天结束后, 您可以收回您的IQ代币, 并且可以再次抵押他们获得 "
-"更多的Brainpower。这样的话, 1 个IQ代币, 每21天抵押一次, 每年可以产生365天/21 天 = 17.38"
+"抵押的IQ代币将会被冻结21天，同时会产出不可转让的Brainpower，Brainpower可以在Everipedia "
+"网络上用于编辑和投票。在21天结束后，您可以收回您的IQ代币，并且可以再次抵押他们获得 "
+"更多的Brainpower。这样的话，1 个IQ代币，每21天抵押一次，每年可以产生365天/21 天 = 17.38"
 "单位的Brainpower。"
 
 #: templates/enterlink/brainpowermgmt.html:118
@@ -661,15 +661,15 @@ msgid ""
 "Therefore, you can generate more Brainpower (and any profit) by staking the "
 "new IQ you just earned."
 msgstr ""
-"当您做页面, 提议编辑, 以及给提议的文章投票时, 您将会消耗Brainpower。然而, 成功的编辑以及投票"
-"给提议胜利的一方将产生奖励IQ, 而不是Brainpower。因此, 您可以抵押刚挣来的新的IQ来产生"
-"Brainpower（以及所有的利润）。"
+"当您做页面，提议编辑，以及给提议的文章投票时，您将会消耗Brainpower。然而，成功的编辑以及投票"
+"给提议胜利的一方将产生奖励IQ，而不是Brainpower。因此，您可以抵押刚挣来的新的IQ来产生"
+"Brainpower（以及所有的收益）。"
 
 #: templates/enterlink/brainpowermgmt.html:119
 msgid ""
 "Every edit proposal requires a minimum of 10 Brainpower at this time, in "
 "order to prevent spam and poor-quality edits."
-msgstr "目前每一个编辑提案都至少需要10单位Brainpower, 以防止垃圾信息和劣质的编辑。"
+msgstr "目前每一个编辑提案都至少需要10单位Brainpower，以防止垃圾信息和劣质的编辑。"
 
 #: templates/enterlink/brainpowermgmt.html:122
 msgid "Enter an integer amount of IQ to stake"
@@ -801,7 +801,7 @@ msgstr ""
 
 #: templates/enterlink/edit.html:194
 msgid "Join our official Facebook group if you need help with it!:"
-msgstr "加入我们的官方 Facebook 群组, 如果您需要帮助!:"
+msgstr "加入我们的官方 Facebook 群组，如果您需要帮助!:"
 
 #: templates/enterlink/edit.html:194
 msgid "- we will hook you up. It's not hard!"
@@ -1019,9 +1019,9 @@ msgid ""
 "Wikipedia is already here on Everipedia to build on top of and improve. All "
 "this makes EP the biggest knowledge project ever!"
 msgstr ""
-"在Everipedia上编辑都是图形化和现代的, 对话页面被设计为讨论线程式, 名人有认证的"
-"帐户, 任何人都可以做任何网页, 只要他们被正确的引用。维基百科上的每个页面都已经在 "
-"Everipedia建立上了, 并且加以改进了。所有这些都使EP成为有史以来最大的知识项"
+"在Everipedia上编辑都是图形化和现代的，对话页面被设计为讨论线程式，名人有认证的"
+"帐户，任何人都可以做任何网页，只要他们被正确的引用。维基百科上的每个页面都已经在 "
+"Everipedia建立上了，并且加以改进了。所有这些都使EP成为有史以来最大的知识项"
 "目!"
 
 #: templates/enterlink/faq.html:35
@@ -1289,8 +1289,8 @@ msgstr "请通过Scatter登陆"
 
 #: templates/enterlink/headers/header_dropdown.html:8
 #: templates/enterlink/headers/header_dropdown.html:28
-msgid "Claim Rewards"
-msgstr "领取奖励"
+msgid "Claim All Rewards"
+msgstr "领取所有奖励"
 
 #: templates/enterlink/headers/header_dropdown.html:39
 #: templates/enterlink/headers/mobile-navbar.html:153
@@ -1559,7 +1559,7 @@ msgstr "所有IQ的持有者将受到激励，以创造高质量和中立的内�
 
 #: templates/enterlink/index.html:139
 msgid "Become an editor today and start creating your own wiki articles."
-msgstr "现在成为一名编辑，并开始创建自己的维基文章。"
+msgstr "现在成为一名编辑并开始创建自己的维基文章"
 
 #: templates/enterlink/index.html:142
 msgid "Open Community"
@@ -1607,7 +1607,7 @@ msgid ""
 msgstr ""
 "Everipedia 由在线知识领域和区块链行业都具有丰富经验和知识的团队领导。 执行团队由业"
 "内几位知名人士组成，包括维基百科的联合创始人Larry Sanger和Genius.com 的创始人"
-"Mahbod Moghadam和其他几位。学历背景包括加州大学洛杉矶分校、斯坦福大学、耶鲁大学"
+"Mahbod Moghadam以及其他几位。学历背景包括加州大学洛杉矶分校、斯坦福大学、耶鲁大学"
 "和哥伦比亚大学，涵盖的国籍有美国、瑞典、挪威和意大利。"
 
 
@@ -1667,7 +1667,7 @@ msgstr ""
 
 #: templates/enterlink/limitreached.html:24
 msgid "In the meantime, please join our official Facebook group:"
-msgstr "同时, 请加入我们的官方 Facebook 群组:"
+msgstr "同时，请加入我们的官方 Facebook 群组:"
 
 #: templates/enterlink/limitreached.html:24
 msgid "It’s the best way to reach the community!"
@@ -1741,7 +1741,7 @@ msgid ""
 "Join us on Telegram and Reddit in the meantime to become a part of "
 "Everipedia today!"
 msgstr ""
-"由于区块链软件测试, 目前只邀请注册。今天加入我们的电报群和 Reddit 同时成为 "
+"由于区块链软件测试，目前只邀请注册。今天加入我们的电报群和 Reddit 同时成为 "
 "Everipedia 的一部分!"
 
 #: templates/enterlink/register.html:60
@@ -1771,11 +1771,17 @@ msgstr "服务条款"
 #, fuzzy
 #| msgid "Brainpower Management"
 msgid "Rewards Management"
-msgstr "Brainpower管理"
+msgstr "奖励管理"
 
 #: templates/enterlink/rewardsmgmt.html:135
 msgid "Here you can claim rewards for the edits and / or votes that you made."
-msgstr "您可以在此领取您参与的编辑或者投票的奖励"
+"If "Claim All Rewards" does not work initially, try again after 5 - 10 seconds, "
+"as some block producers are faster than others. If it continues to fail,claim a "
+"few rewards manually first, then try again. This is due to transaction time "
+"limitations with EOS."
+msgstr "您可以在此领取您参与的编辑或者投票的奖励。如果一开始点击“领取所有奖励”没有生效"
+"可以过5-10秒再尝试一次，因为一些区块生产节点比其他节点要快。如果还是失败，可以先手"
+"动领取一部分奖励，然后再次尝试。这是由于EOS的事务处理有时间限制。 "
 
 #: templates/enterlink/rewardsmgmt.html:140
 msgid "Proposal Hash"
@@ -1789,7 +1795,7 @@ msgstr "完成时间"
 #, fuzzy
 #| msgid "Voting Period"
 msgid "Period"
-msgstr "投票时间"
+msgstr "阶段"
 
 #: templates/enterlink/rewardsmgmt.html:143
 msgid "Redeem"
