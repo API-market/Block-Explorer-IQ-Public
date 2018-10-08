@@ -62,21 +62,15 @@
         chainId: EosNetChainID // FILL THIS IN WITH MAINNET https://mainnet.libertyblock.io:7777/v1/chain/get_info
     };
 
-
-
+    var scatter = ScatterJS.scatter;
 
     // https://get-scatter.com/docs/dev/setting-up-for-web-apps
-    ScatterJS.scatter.connect("Everipedia").then(function(connected){
+    scatter.connect("Everipedia").then(connected => {
         // User does not have Scatter Desktop, Mobile or Classic installed.
         if(!connected) return false;
         document.dispatchEvent(new CustomEvent("scatterLoaded"));
         // window.scatter = null;
-        console.log(ScatterJS.scatter);
 
-
-        
-        scatter = ScatterJS.scatter;
-        console.log("Asdsad");
         var requiredFields = {accounts:[ network ]};
         scatter.getIdentity(requiredFields).then(identity => {
             scatterAccountName = identity.accounts[0].name;
@@ -90,7 +84,7 @@
             eos = scatter.eos(network, eosjs.Api, {rpc});
 
             var transactionOptions = {authorization: [`${account.name}@${account.authority}`]};
-            eos.transfer(account.name, 'helloworld', '1.0000 EOS', 'memo', transactionOptions).then(trx => {
+            eos.transfer(account.name, 'b1', '1.0000 EOS', 'memo', transactionOptions).then(trx => {
                 // That's it!
                 console.log(`Transaction ID: ${trx.transaction_id}`);
             }).catch(error => {
