@@ -1,7 +1,7 @@
 {% load i18n %}
 
 <!--EOSJS code-->
-<script type="text/javascript" src="/static/js/eosjs-cdn.js"></script>
+<!--<script type="text/javascript" src="/static/js/eosjs-cdn.js"></script>-->
 
 <!--Help with parsing time and date strings-->
 <script type="text/javascript" src="/static/js/easytimer.min.js"></script>
@@ -11,10 +11,10 @@
     // Attach TinyMCE to the page
     tinymce_attach_blob();
 
-    // Scatter dummy variables
-    var eos = "";
-    var scatterAccountName = "";
-    var scatterCallback = (err, res) => {err ? console.error(err) : console.log(res)};
+    // // Scatter dummy variables
+    // var eos = "";
+    // var scatterAccountName = "";
+    // var scatterCallback = (err, res) => {err ? console.error(err) : console.log(res)};
 
     // Get the translated strings
     var confirmStrings = [gettext("Please stake some IQ into Brainpower before continuing. Click OK to open the Brainpower management screen in a new tab. NOTE: Please make sure popups are enabled for this site, as you may receive a warning."),
@@ -26,75 +26,7 @@
         gettext("Add New Infobox"),
         gettext("Completing transaction...")];
 
-    // Submit the edit form
-    function submitMainForm() {
-        // Fetch the user's Brainpower and make sure they have at least the minimum required to make an edit
-	    var startingBrainpower = getBrainpower();
-	    if (startingBrainpower < 10){
-	        // Notify the user that they need more Brainpower before they can edit and offer to redirect them to the
-            // Brainpower management screen
-	        var r = confirm(confirmStrings[0]);
 
-            // If the user agrees to be redirected, send them to the Brainpower management page
-            if (r == true) {
-                let url = location.origin + "/brainpower/" + scatterAccountName + "/";
-                let win = window.open(url, '_blank');
-                win.focus();
-            } else {
-                // Otherwise, tell them that their edits will not be saved
-                alert(confirmStrings[1])
-            }
-        }
-
-        // Extract the TinyMCE object
-        var tinyEditor = tinyMCE.get("form_tinymce_container");
-
-        // Get the content of the TinyMCE
-        var blurbValue = tinyEditor.getContent();
-
-        // Show the "Wait" box because Scatter can be slow sometimes
-        $('#submission_waiting').show();
-
-        // Submit the article to the server to generate the IPFS hash, which will then be sent to Scatter for the "propose" function.
-        // After Scatter submits the proposal to the EOS chain, the verification AJAX call will make sure, via the get_table_rows API
-        // that the proposal was actually recorded.
-        $.ajax({
-            type: "POST",
-            url: "/wiki/{{ARTICLE_SLUG}}/advanced_edit/?submission=1",
-            data: {"blurbHTML": blurbValue},
-            success: function (data) {
-                // Submit the proposal via Scatter
-                eos.contract('eparticlectr').then(eparticlectr => {
-                    eparticlectr.propose(scatterAccountName, data["newIPFS"], data["oldIPFS"], data["grandparentIPFS"], {authorization: scatterAccountName}
-                    ).then(result => {
-                        // Hide the submission popup
-                        $('#submission_waiting').hide();
-
-                        // Check to make sure that the proposal was recorded on-chain
-                        $.ajax({
-                            type: "POST",
-                            url: "/wiki/{{ARTICLE_SLUG}}/advanced_edit/?verification=1&newIPFS=" + data["newIPFS"],
-                            data: {},
-                            success: function (data) {
-                                // Assuming the proposal was recorded, redirect the user to the proposal voting page
-                                $('#submission_waiting').show();
-                                $('#submission_waiting .waiting-header').html(confirmStrings[7]);
-                                window.location.href = window.location.origin + "/AJAX-REQUEST/AJAX_Fetch_Blurb_Compare/" + data["newIPFS"] + "/" + data["oldIPFS"] + "/";
-                            },
-                            error: function(data){
-                               alert(confirmStrings[2]);
-                           }
-                        });
-                    }).catch(error => {
-                        // Alert the user of any errors
-                        $('#submission_waiting').hide();
-                        console.log(error);
-                        alert(confirmStrings[3]);
-                    });
-                })
-            }
-        });
-    }
 
     // Do these after the DOM loads
     $(window).load(function() {
@@ -219,6 +151,30 @@
 
         // Handler for when the page is saved
         $(".mce-btn-save-page").click(function (event) {
+            // Get the TinyMCE object
+            var tinyEditor = tinyMCE.get("form_tinymce_container");
+
+            // Get the content from the TinyMCE
+            var blurbValue = tinyEditor.getContent();
+
+            // Show loading popup
+            $("#submission_waiting").show();
+
+            $.post("/save_draft/", {
+                account_name: $(".scatter-username").text(),
+                article_slug: ARTICLE_SLUG,
+                html_blob: blurbValue
+            }).then(function () {
+                $("#submission_waiting").hide();
+            });
+        });
+
+        $(".mce-btn-load-draft").click(function (event) {
+            window.location = window.location.pathname + "?draft=" + $(".scatter-username").text();
+        });
+
+        // Handler for the Submit button
+        $(".mce-btn-submit").click(function (event) {
             // Prevent the default form save from occuring
             event.preventDefault();
 
@@ -359,8 +315,91 @@
             }
         });
 
-        // Start the editing tour
-        runTour();
+        // Submit the edit form
+        function submitMainForm() {
+            // Fetch the user's Brainpower and make sure they have at least the minimum required to make an edit
+            var startingBrainpower = getBrainpower();
+            if (startingBrainpower < 10){
+                // Notify the user that they need more Brainpower before they can edit and offer to redirect them to the
+                // Brainpower management screen
+                var r = confirm(confirmStrings[0]);
+
+                // If the user agrees to be redirected, send them to the Brainpower management page
+                if (r == true) {
+                    let url = location.origin + "/brainpower/" + scatterAccountName + "/";
+                    let win = window.open(url, '_blank');
+                    win.focus();
+                } else {
+                    // Otherwise, tell them that their edits will not be saved
+                    alert(confirmStrings[1])
+                }
+            }
+
+            // Extract the TinyMCE object
+            var tinyEditor = tinyMCE.get("form_tinymce_container");
+
+            // Get the content of the TinyMCE
+            var blurbValue = tinyEditor.getContent();
+
+            // Show the "Wait" box because Scatter can be slow sometimes
+            $('#submission_waiting').show();
+
+            // Submit the article to the server to generate the IPFS hash, which will then be sent to Scatter for the "propose" function.
+            // After Scatter submits the proposal to the EOS chain, the verification AJAX call will make sure, via the get_table_rows API
+            // that the proposal was actually recorded.
+            $.ajax({
+                type: "POST",
+                url: "/wiki/{{ARTICLE_SLUG}}/advanced_edit/?submission=1",
+                data: {"blurbHTML": blurbValue},
+                success: function (data) {
+                    // Submit the proposal via Scatter
+
+                    var transactionJSON = {
+                        actions: [{
+                            account: 'eparticlectr',
+                            name: 'propose',
+                            authorization: [{
+                                actor: scatterAccountName,
+                                permission: "active",
+                            }],
+                            data: {
+                                proposer: scatterAccountName,
+                                proposed_article_hash: data["newIPFS"],
+                                old_article_hash: data["oldIPFS"],
+                                grandparent_hash: data["grandparentIPFS"],
+                            },
+                        }]
+                    };
+                    eos.transact(transactionJSON, {blocksBehind: 3, expireSeconds: 30,}).then(result => {
+                        // Hide the submission popup
+                        $('#submission_waiting').hide();
+
+                        // Check to make sure that the proposal was recorded on-chain
+                        $.ajax({
+                            type: "POST",
+                            url: "/wiki/{{ARTICLE_SLUG}}/advanced_edit/?verification=1&newIPFS=" + data["newIPFS"],
+                            data: {},
+                            success: function (data) {
+                                // Assuming the proposal was recorded, redirect the user to the proposal voting page
+                                $('#submission_waiting').show();
+                                $('#submission_waiting .waiting-header').html(confirmStrings[7]);
+                                window.location.href = window.location.origin + "/AJAX-REQUEST/AJAX_Fetch_Blurb_Compare/" + data["newIPFS"] + "/" + data["oldIPFS"] + "/";
+                            },
+                            error: function(data){
+                               alert(confirmStrings[2]);
+                           }
+                        });
+                        console.log("Transaction completed:" + result.transaction_id);
+                    }).catch(e => {
+                        $('#submission_waiting').hide();
+                        alert(e);
+                        // if (e instanceof eosjs_jsonrpc.RpcError){
+                        // 	console.log(JSON.stringify(e.json, null, 2));
+                        // }
+                    });
+                }
+            });
+        }
 
     });
 

@@ -5,17 +5,17 @@
  */
 
 var tinyMCEtoolbarSize = 'large';
-var tool1 = "savepage undo redo | fontsizeselect fontselect forecolor backcolor | bold italic underline | code";
-var tool2 = "styleselect | outdent indent | bullist numlist table | citepicture | citesource | linkpage | image |";
-var tool1nonblurb = "savepage undo redo | fontsizeselect fontselect forecolor backcolor | bold italic underline | code";
-var tool2nonblurb = "styleselect | outdent indent | bullist numlist table | citesource | linkpage | image |";
+var tool1 = "savepage submitpage undo redo | fontsizeselect fontselect forecolor backcolor | bold italic underline | code";
+var tool2 = "loaddraft | styleselect | outdent indent | bullist numlist table | citepicture | citesource | linkpage | image | helptour";
+var tool1nonblurb = "savepage submitpage undo redo | fontsizeselect fontselect forecolor backcolor | bold italic underline | code";
+var tool2nonblurb = "loaddraft | styleselect | outdent indent | bullist numlist table | citesource | linkpage | image | helptour";
 var code_dialog_width_val = 600;
 
 if (isMobile && !isTablet) {
     tinyMCEtoolbarSize = 'small';
-    tool1 = "savepage | editrollup | fontrollup | forecolor | backcolor | fontsizeselect | styleselect | bullist | numlist table | citepicture | citesource | linkpage | code";
+    tool1 = "savepage submitpage loaddraft | editrollup | fontrollup | forecolor | backcolor | fontsizeselect | styleselect | bullist | numlist table | citepicture | citesource | linkpage | code";
     tool2 = "";
-    tool1nonblurb = "savepage | editrollup | fontrollup | forecolor | backcolor | fontsizeselect | styleselect | bullist | numlist table | citesource | linkpage";
+    tool1nonblurb = "savepage submitpage loadpage | editrollup | fontrollup | forecolor | backcolor | fontsizeselect | styleselect | bullist | numlist table | citesource | linkpage";
     tool2nonblurb = "";
     code_dialog_width_val = 300;
   }
@@ -30,8 +30,8 @@ function tinymce_attach_blob() {
         mode: "textareas",
         plugins: [
             "advlist autolink autoresize lists link image charmap print hr anchor pagebreak rollups",
-            "searchreplace wordcount visualchars code fullscreen citesource citepicture linkpage savepage",
-            "insertdatetime placeholder media nonbreaking table directionality mention noneditable",
+            "searchreplace wordcount visualchars code fullscreen citesource citepicture linkpage savepage submitpage",
+            "insertdatetime placeholder media nonbreaking table directionality helptour mention noneditable",
             "emoticons template paste textcolor colorpicker textpattern image code fullpage"
         ],
         toolbar1: tool1,
@@ -149,7 +149,6 @@ function tinymce_attach_blob() {
                     var editorInstance = editor.dom.$('#tinymce');
                 }
             });
-
         }
     });
 }
@@ -168,8 +167,8 @@ function tinymce_attach_textarea_addlink_iframe(targetTag) {
         selector: editarea,
         plugins: [
                 "advlist autolink autoresize lists link image charmap print hr anchor pagebreak rollups",
-                "searchreplace wordcount visualchars code fullscreen citesource linkpage savepage",
-                "insertdatetime placeholder media nonbreaking table mention directionality",
+                "searchreplace wordcount visualchars code fullscreen citesource linkpage savepage submitpage",
+                "insertdatetime placeholder media nonbreaking table mention directionality helptour",
                 "emoticons template paste textcolor colorpicker textpattern image code"
             ],
         toolbar1: tool1nonblurb,
@@ -277,8 +276,8 @@ function tinymce__edit_attach_infobox_iframe(targetTag) {
         selector: editarea,
         plugins: [
             "advlist autolink autoresize lists link image charmap print hr anchor pagebreak rollups",
-            "searchreplace wordcount visualchars code fullscreen citesource linkpage savepage",
-            "insertdatetime placeholder media nonbreaking table mention directionality link",
+            "searchreplace wordcount visualchars code fullscreen citesource linkpage savepage submitpage",
+            "insertdatetime placeholder media nonbreaking table mention directionality helptour link",
             "emoticons template paste textcolor colorpicker textpattern image code"
         ],
         toolbar1: tool1nonblurb,

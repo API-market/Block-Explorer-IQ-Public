@@ -1,6 +1,6 @@
 {% load i18n %}
 {% load enterlink_custom_tags %}
-<ul class="list-unstyled list-spaced list-nonplural" id="infobox">
+<ul class="list-unstyled list-spaced list-nonplural infobox">
 <div class="row">
 {% if BLOBBOX|length > 0 %}
     <div id="blobBox_container">
@@ -9,11 +9,11 @@
 {% endif %}
 {% for item in NONPLURAL_INFOBOXES %}
 <li>
-    <div class="col-md-5 col-xs-5" id="info-qt">{{ item.key }}</div>
-    <div class="col-md-7 col-xs-7" id="info-an">
+    <div class="col-md-5 col-xs-5 info-qt">{{ item.key }}</div>
+    <div class="col-md-7 col-xs-7 info-an">
     {% spaceless %}
-    {% if item.schema != none %}
-        {% if item.addlSchematype != None %}
+    {% if item.schema != "None" %}
+        {% if item.addlSchematype != "None" %}
             {% if item.addlSchemaItemprop == "NOTHING" %}
                 <abbr itemprop="{{ item.schema }}">
                     <div class="schema addl-schema-line" itemscope itemtype="http://schema.org/{{ item.addlSchematype }}">
@@ -22,15 +22,14 @@
                 </abbr>
             {% else %}
                 <div itemprop="{{ item.schema }}" class="schema addl-schema-line" itemscope itemtype="http://schema.org/{{ item.addlSchematype }}">
-                    <abbr itemprop="{{ item.addlSchemaItemprop }}">
-                        {{ item.value|safe }}
-                    </abbr>
+                    <abbr itemprop="{{ item.addlSchemaItemprop }}" content="{{ item.value|striptags }}"></abbr>
+                    {{ item.value|safe }}
                 </div>
             {% endif %}
         {% else %}
-            <abbr itemprop="{{ item.schema }}">
-                {{ item.value|safe }}
-            </abbr>
+            <abbr itemprop="{{ item.schema }}" content="{{ item.value|striptags }}"></abbr>
+            {{ item.value|safe }}
+
         {% endif %}
     {% else %}
         {{ item.value|safe }}
@@ -42,15 +41,15 @@
 </div>
 </ul>
 
-<ul class="list-unstyled list-spaced list-plural" id="infobox">
+<ul class="list-unstyled list-spaced list-plural infobox">
 {% for refbox in PLURAL_INFOBOX_PACKAGES %}
 <div class="row">
 <li>
-    <div class="col-md-5 col-xs-5" id="info-qt"><h3>{{ refbox.key }}</h3></div>
+    <div class="col-md-5 col-xs-5 info-qt"><h3>{{ refbox.key }}</h3></div>
     {% for pluralbox in refbox.objects %}
-        <div class="col-md-7 col-xs-7" id="info-an">
-            {% if pluralbox.schema != none %}
-                {%  if pluralbox.addlSchematype != None %}
+        <div class="col-md-7 col-xs-7 info-an">
+            {% if pluralbox.schema != "None" %}
+                {%  if pluralbox.addlSchematype != "None" %}
                     <li class="plural-infobox">
                         {% if pluralbox.addlSchemaItemprop == "NOTHING" %}
                             <abbr itemprop="{{ pluralbox.schema }}">
@@ -60,17 +59,15 @@
                             </abbr>
                         {% else %}
                             <div itemprop="{{ pluralbox.schema }}" class="schema addl-schema-line" itemscope itemtype="http://schema.org/{{ pluralbox.addlSchematype }}">
-                                <abbr itemprop="{{ pluralbox.addlSchemaItemprop }}">
-                                    {{ pluralbox.value|safe }}
-                                </abbr>
+                                <abbr itemprop="{{ pluralbox.addlSchemaItemprop }}" content="{{ pluralbox.value|striptags }}"></abbr>
+                                {{ pluralbox.value|safe }}
                             </div>
                         {% endif %}
                     </li>
                 {% else %}
                     <li class="plural-infobox">
-                        <abbr itemprop="{{ pluralbox.schema }}">
-                            {{ pluralbox.value|safe }}
-                        </abbr>
+                        <abbr itemprop="{{ pluralbox.schema }}" content="{{ pluralbox.value|striptags }}"></abbr>
+                        {{ pluralbox.value|safe }}
                     </li>
                 {% endif %}
 

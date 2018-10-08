@@ -1,7 +1,6 @@
 {% load i18n %}
 {% load humanize %}
 <header>
-	<script type="text/javascript" src="/static/js/eosjs-cdn.js"></script>
 	<script type="text/javascript" src="/static/js/BigInteger.js"></script>
 
     <div class="lightbox" data-featherlight-variant="search-featherlight" id="sl1">
@@ -84,7 +83,7 @@
           <li class="avatar-iq">
 	        <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">
 				<div class="scatter-username">
-					<div class="scatter-link" onclick="window.location='https://chrome.google.com/webstore/detail/scatter/ammjpmhgckkpcamddpolhchgomcojkle';" >{% trans 'Please log in with Scatter' %}</div>
+					<div class="scatter-link" onclick="window.location='https://github.com/GetScatter/ScatterDesktop/releases';" >{% trans 'Please log in with Scatter' %}</div>
 				</div>
 	          <!--<img class="img-circle" data-original="{{ GlobalUserInfo.photo_thumb100url }}" alt="Profile picture for {{ user.username }}" src="{{ GlobalUserInfo.photo_thumb100url }}" onError="this.onerror=null;this.src='https://epcdn-vz.azureedge.net/static/images/noavatar_100x100.png'">-->
 	        </a>
@@ -124,7 +123,7 @@
 
     function insertSearchIframe(){
         var injectionNugget = '<iframe id="desktop_search_iframe" sandbox="allow-scripts allow-pointer-lock' +
-                'allow-popups allow-top-navigation allow-same-origin" frameborder="0" src="https://www.iqnetwork.io' +
+                'allow-popups allow-top-navigation allow-same-origin" frameborder="0" src="https://www.everipedia.org' +
                 '/search/iframe/"></iframe>';
         $('#sl1 #searchfield_index').html(injectionNugget);
     }

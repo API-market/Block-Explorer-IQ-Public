@@ -35,8 +35,8 @@ Noindex: /messages/*
 Noindex: /registerconfirm/*
 Noindex: /registration_login_intermediate/*
 
-Sitemap: https://iqnetwork.io/static/sitemaps/sitemap2.xml
-Sitemap: https://iqnetwork.io/sitemap-edited-this-month.xml
-Sitemap: https://iqnetwork.io/static/sitemaps/all-indexed.xml
-Sitemap: https://iqnetwork.io/google-news-sitemap.xml
-Sitemap: https://iqnetwork.io/google-news-editors-picks-feed.xml
+Sitemap: https://everipedia.org/static/sitemaps/sitemap2.xml
+Sitemap: https://everipedia.org/sitemap-edited-this-month.xml
+Sitemap: https://everipedia.org/static/sitemaps/all-indexed.xml
+Sitemap: https://everipedia.org/google-news-sitemap.xml
+Sitemap: https://everipedia.org/google-news-editors-picks-feed.xml

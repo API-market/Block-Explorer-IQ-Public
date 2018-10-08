@@ -84,7 +84,7 @@ a:hover{
 
 
 
-ul#infobox{
+ul.infobox{
     list-style: none;
     padding: 0px;
     height: auto;
@@ -93,22 +93,22 @@ ul#infobox{
     display: inline-block;
     width: 100%;
 }
-ul#infobox li:first-child #info-an{
+ul.infobox li:first-child .info-an{
     border-top: none;
 }
 
-ul#infobox.list-plural{
+ul.infobox.list-plural{
     display: block
 }
-ul#infobox.list-plural li:first-child{
+ul.infobox.list-plural li:first-child{
     float: left;
 }
-ul#infobox.list-plural li{
+ul.infobox.list-plural li{
     float: right;
     font-size: 12.5px;
 }
 
-ul#infobox.list-plural > .row li:not([class]) > #info-qt{
+ul.infobox.list-plural > .row li:not([class]) > .info-qt{
 	border-top: none;
 	width: 100%;
 	font-size: 13.5px;
@@ -119,7 +119,7 @@ ul#infobox.list-plural > .row li:not([class]) > #info-qt{
 	text-align: center;
 }
 
-ul#infobox.list-plural > .row #info-an{
+ul.infobox.list-plural > .row .info-an{
     width: 100%;
     text-align: center;
     word-break: normal;
@@ -160,7 +160,7 @@ ul#infobox.list-plural > .row #info-an{
 }
 
 
-ul#infobox li {
+ul.infobox li {
     width: 100%;
     float: left;
     line-height: 1.6;
@@ -168,7 +168,7 @@ ul#infobox li {
 	padding-bottom: 3px;
 }
 
-#info-qt{
+.info-qt{
     float: left;
     width: 25%;
     text-align: center;
@@ -178,14 +178,14 @@ ul#infobox li {
     border-right: 1px dashed rgba(128,128,128,0.13);
     padding-right: 5px;
 }
-#infobox #info-qt h3{
+.infobox .info-qt h3{
 font-size: inherit;
 margin-top: inherit;
 margin-bottom: inherit;
 line-height: inherit;
 font-weight: inherit;
 }
-#info-an{
+.info-an{
     width: 100%;
     text-align: left;
     word-break: normal;
@@ -195,7 +195,7 @@ font-weight: inherit;
     line-height: 19px;
     /* border-top: 1px solid rgba(128,128,128,0.13); */
 }
-#infobox #info-an h2{
+.infobox .info-an h2{
 font-size: inherit;
 margin-top: inherit;
 margin-bottom: inherit;
@@ -904,7 +904,7 @@ text-align:center
 display:none
 }
 
-#info-an {
+.info-an {
     width: 69%;
     margin-left:3px;
 }
@@ -940,11 +940,11 @@ padding-left:inherit
 border-right:inherit
 }
 
-#infobox #info-an .addl-schema-line {
+.infobox .info-an .addl-schema-line {
 display:inline
 }
 
-#infobox .plural-div {
+.infobox .plural-div {
 width:auto;
 border-bottom:1px solid rgba(128,128,128,0.13)
 }
@@ -1690,7 +1690,7 @@ button.tooltippable{
     font-family: 'Lora', Garamond, Georgia;
     display: inline;
     cursor: pointer;
-    white-space: wrap;
+    white-space: normal;
     text-align: left;
 }
 button.tooltippableCarat{

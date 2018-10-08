@@ -390,3 +390,4 @@ VALID_VIDEO_EXTENSIONS = ['.mp4', '.m4v', '.flv', '.f4v', '.ogv', '.ogx', '.wmv'
   '.mpg', '.mpeg', '.mov', '.avi']
 
 VALID_AUDIO_EXTENSIONS = ['.mp3', '.ogg', '.wav', '.m4a']
+

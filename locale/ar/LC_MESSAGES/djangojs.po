@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-25 08:59-0700\n"
+"POT-Creation-Date: 2018-10-08 09:47-0700\n"
 "PO-Revision-Date: 2018-08-06 09:11+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -79,7 +79,6 @@ msgstr "auth.logout"
 #: static/js/plugins/citepicture/plugin.min.js:17
 #: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:16
 #: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:17
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
 msgid "Media"
 msgstr "الوسائط"
 
@@ -87,13 +86,11 @@ msgstr "الوسائط"
 #: static/js/plugins/citesource/plugin.min.js:16
 #: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:15
 #: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:16
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
 msgid "Cite"
 msgstr "استشهاد"
 
 #: static/js/plugins/linkpage/plugin.min.js:1
 #: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:1
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
 msgid "Search Everipedia"
 msgstr "بحث في ايفيبيديا"
 
@@ -101,24 +98,17 @@ msgstr "بحث في ايفيبيديا"
 #: static/js/plugins/linkpage/plugin.min.js:18
 #: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:17
 #: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:18
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
 msgid "Link"
 msgstr "رابط"
 
 #: static/js/plugins/mention/plugin.min.js:374
 #: static/tinymce_4.2.3/plugins/mention/plugin.min.js:374
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:162
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:165
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:212
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:215
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:54
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:112
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:115
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:224
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:227
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:331
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:334
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:107
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:110
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:218
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:221
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:325
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:328
 msgid "Cite as verified editor"
 msgstr "الاستشهاد كمحرر موثوق"
 
@@ -127,9 +117,7 @@ msgstr "الاستشهاد كمحرر موثوق"
 #: static/js/plugins/savepage/plugin.min.js:7
 #: static/tageditor/jquery.tag-editor.js:335
 #: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:3
-#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:6
-#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:7
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:191
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:202
 msgid "Save"
 msgstr "حفظ"
 
@@ -148,6 +136,18 @@ msgstr "نوع الخط"
 msgid "Style"
 msgstr "النمط"
 
+#: static/js/scatterjs-plugin-eosjs2.min.js:15
+msgid "entries"
+msgstr ""
+
+#: static/js/scatterjs-plugin-eosjs2.min.js:15
+msgid "values"
+msgstr ""
+
+#: static/js/scatterjs-plugin-eosjs2.min.js:15
+msgid "keys"
+msgstr ""
+
 #: static/tageditor/jquery.tag-editor.js:584
 #: static/tageditor/jquery.tag-editor.js:587
 #: static/tageditor/jquery.tag-editor.js:590
@@ -159,6 +159,11 @@ msgstr "أضف وصفاً إضافياً لهذه الفئة"
 #: static/tageditor/jquery.tag-editor.js:590
 msgid "Delete this tag"
 msgstr "احذف هذا الشعار"
+
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:3
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:4
+msgid "Save Draft"
+msgstr ""
 
 #: templates/enterlink/brainpowermgmt.html:142
 msgid "Claim"
@@ -176,7 +181,7 @@ msgstr "اسحب واسقط صورتك هنا أو انقر للتحميل."
 msgid "Please enter a description for the photo"
 msgstr "يرجى إدخال وصف للصورة"
 
-#: templates/enterlink/edit_ajax_addinfobox.html:89
+#: templates/enterlink/edit_ajax_addinfobox.html:96
 msgid "Adding infobox item, please wait..."
 msgstr "إضافة مربع معلومات، يرجى الانتظار ..."
 
@@ -185,8 +190,6 @@ msgid "Adding, please wait..."
 msgstr "جارٍ الإضافة ، يرجى الانتظار ..."
 
 #: templates/enterlink/edit_ajax_addlink.html:71
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:354
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:457
 msgid ""
 "You have been posting a lot of links today. Wait a bit for the community to "
 "respond to your content. New editors are limited to posting only 250 "
@@ -214,8 +217,6 @@ msgid "No URL provided, please try again"
 msgstr "لم يتم تقديم عنوان URL ، يرجى المحاولة مرة أخرى"
 
 #: templates/enterlink/edit_ajax_addlink.html:87
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:362
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:465
 msgid "Please provide a description for the link or file."
 msgstr "يرجى توفير وصف للارتباط أو الملف."
 
@@ -224,35 +225,32 @@ msgid "Please provide a more scholarly description."
 msgstr "يرجى توفير وصف أكثر علمية."
 
 #: templates/enterlink/edit_ajax_addlink.html:109
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
 msgid "File uploaded successfully."
 msgstr "تم رفع الملف بنجاح."
 
 #: templates/enterlink/edit_ajax_addlink.html:141
-#: templates/enterlink/inline-js/edit-bottom.html:16
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+#: templates/enterlink/inline-js/edit-bottom.html:24
 msgid "Add File"
 msgstr "إضافة ملف"
 
 #: templates/enterlink/edit_ajax_addlink.html:148
-#: templates/enterlink/inline-js/edit-bottom.html:17
+#: templates/enterlink/inline-js/edit-bottom.html:25
 msgid "Add Link"
 msgstr "أضف رابطا"
 
-#: templates/enterlink/headers/scatter-header.html:130
+#: templates/enterlink/headers/scatter-header.html:143
 msgid "Claim Rewards"
 msgstr ""
 
-#: templates/enterlink/index.html:236
+#: templates/enterlink/index.html:231
 msgid "Loading more activity, please wait..."
 msgstr "تحميل المزيد من النشاط ، يرجى الانتظار ..."
 
-#: templates/enterlink/index.html:260
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+#: templates/enterlink/index.html:255
 msgid "Create page"
 msgstr "إنشاء صفحة"
 
-#: templates/enterlink/inline-js/edit-bottom.html:12
+#: templates/enterlink/inline-js/edit-bottom.html:20
 msgid ""
 "Please stake some IQ into Brainpower before continuing. Click OK to open the "
 "Brainpower management screen in a new tab. NOTE: Please make sure popups are "
@@ -262,85 +260,43 @@ msgstr ""
 "إدارة Brainpowerفي علامة تبويب جديدة. ملاحظة: الرجاء التأكد من تمكين النوافذ "
 "المنبثقة لهذا الموقع ، لأنك قد تتلقى تحذيرًا."
 
-#: templates/enterlink/inline-js/edit-bottom.html:13
+#: templates/enterlink/inline-js/edit-bottom.html:21
 msgid ""
 "Note that you will not be able to propose edits without Brainpower. Your "
 "work will be lost!"
 msgstr ""
 "لاحظ أنك لن تكون قادرًا على اقتراح تعديلات بدون Brainpower. سوف تفقد عملك!"
 
-#: templates/enterlink/inline-js/edit-bottom.html:14
+#: templates/enterlink/inline-js/edit-bottom.html:22
 msgid "Error: proposal not found. Please try submitting again."
 msgstr "خطأ: لم يتم العثور على الاقتراح. يرجى محاولة الإرسال مرة أخرى."
 
-#: templates/enterlink/inline-js/edit-bottom.html:15
+#: templates/enterlink/inline-js/edit-bottom.html:23
 msgid "Article proposal submission failed!"
 msgstr "فشل تقديم اقتراح المقال!"
 
-#: templates/enterlink/inline-js/edit-bottom.html:18
+#: templates/enterlink/inline-js/edit-bottom.html:26
 msgid "Add New Infobox"
 msgstr "إضافة مربع معلومات جديد"
 
-#: templates/enterlink/inline-js/edit-bottom.html:19
+#: templates/enterlink/inline-js/edit-bottom.html:27
 msgid "Completing transaction..."
 msgstr "إكمال المعاملة ..."
 
-#: templates/enterlink/inline-js/edit-bottom.html:141
+#: templates/enterlink/inline-js/edit-bottom.html:103
 msgid "Add Row"
 msgstr "إضافة سطر"
 
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:56
-msgid "Are you sure you want to remove this link?"
-msgstr "هل تريد بالتأكيد إزالة هذا الرابط؟"
-
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:162
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:166
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:212
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:216
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:55
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:112
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:116
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:224
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:228
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:331
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:335
-msgid "Cite my own knowledge / experience as a verified editor"
-msgstr "استشهد بمعرفتي وخبرتي الخاصة كمحرر موثوق"
-
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:347
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:451
-msgid "Posting comment, please wait.."
-msgstr "نشر تعليق ، يرجى الانتظار .."
-
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:358
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:461
-msgid "This comment is already on this page. Please try again!"
-msgstr "هذا التعليق موجود بالفعل على هذه الصفحة. حاول مرة اخرى!"
-
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:450
-msgid "Posting reply, please wait.."
-msgstr "نشر الرد ، يرجى الانتظار .."
-
-#: templates/enterlink/inline-js/enterlink-ajax-execute-search.html:139
-#: templates/enterlink/inline-js/enterlink-user-ajax.html:52
-msgid "Searching..."
-msgstr "جار البحث..."
-
-#: templates/enterlink/inline-js/enterlink-ajax-execute-search.html:167
-msgid "Merging..."
-msgstr "الدمج."
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:94
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:4
 msgid "Are you sure you want to exit the page? Unsaved changes will be lost."
 msgstr ""
 "هل أنت متأكد من أنك تريد الخروج من الصفحة؟ سيتم فقد التغييرات غير المحفوظة."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:180
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
 msgid "Introduction"
 msgstr "مقدمة"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:180
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:52
 msgid ""
 "Everipedia is just like Wikipedia but much simpler to edit and contribute. "
 "Each page is composed of an infobox area for short concise facts, a main "
@@ -354,19 +310,27 @@ msgstr ""
 "الأشياء المتعلقة بالموضوع وقائمة مراجع إلى صفحات ويب وملفات تستخدم "
 "كاستشهادات في المقالة و ومربع المعلومات."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:181
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:59
+msgid "Title"
+msgstr "العنوان"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:60
+msgid "Enter the page title here"
+msgstr "أدخل عنوان الصفحة هنا"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:73
 msgid "Main photo"
 msgstr "الصورة الرئيسية"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:181
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:74
 msgid "Here you can add the main photo for the article."
 msgstr "هنا يمكنك إضافة الصورة الرئيسية لهذا المقال."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:182
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:87
 msgid "Infobox"
 msgstr "مربع معلومات"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:182
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:88
 msgid ""
 "The infobox is designed for concise, quick facts. Suggested items appear in "
 "the dropdown depending on the selected topic, but any type of infobox can be "
@@ -376,23 +340,11 @@ msgstr ""
 "القائمة المنسدلة بناءً على الموضوع المحدد ولكن يمكن إضافة أي نوع من أنواع "
 "المعلومات."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:183
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:101
 msgid "Add Links, Files, Etc."
 msgstr "إضافة روابط أو ملفات ، إلخ."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:183
-msgid ""
-"Make sure to cite your sources when adding information to the page by adding "
-"links and files here so you can show where the information is coming from."
-msgstr ""
-"تأكد من الاستشهاد بمصادرك عند إضافة معلومات إلى الصفحة عن طريق إضافة روابط "
-"وملفات هنا حتى يمكنك إظهار مصدر المعلومات."
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:184
-msgid "Reference links"
-msgstr "روابط مرجعية"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:184
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:102
 msgid ""
 "As you add links and files, they will show up in the Reference Links "
 "section. You can edit or remove them as well."
@@ -400,27 +352,39 @@ msgstr ""
 "عند إضافة روابط وملفات، ستظهر في قسم الروابط المرجعية. يمكنك تحريرها أو "
 "إزالتها كذلك."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:185
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:115
+msgid "Reference links"
+msgstr "روابط مرجعية"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:116
+msgid ""
+"Make sure to cite your sources when adding information to the page by adding "
+"links and files here so you can show where the information is coming from."
+msgstr ""
+"تأكد من الاستشهاد بمصادرك عند إضافة معلومات إلى الصفحة عن طريق إضافة روابط "
+"وملفات هنا حتى يمكنك إظهار مصدر المعلومات."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:129
 msgid "Media Gallery"
 msgstr "معرض الوسائط"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:185
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:130
 msgid "Added pictures will show up here."
 msgstr "سوف تظهر الصور المضافة هنا."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:144
 msgid "Add media to article text"
 msgstr "أضف الوسائط إلى نص المقال"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:145
 msgid "To add an image or video to the article text, click the 'Media' button."
 msgstr "لإضافة صورة أو مقطع فيديو إلى نص المقال، انقر فوق الزر \"وسائط\""
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:158
 msgid "Cite links, files, etc"
 msgstr "استشهد بالروابط والملفات، إلخ"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:159
 msgid ""
 "After you have already added a link, file, or picture to the page, you can "
 "cite it by clicking the 'Cite' button. You can also press the '^' or '*' "
@@ -430,11 +394,11 @@ msgstr ""
 "الزر \"استشهاد\". يمكنك أيضًا الضغط على مفتاحي \"^\" أو \"*\" عند الكتابة "
 "وستظهر قائمة منسدلة."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:188
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:172
 msgid "Link to other Everipedia pages"
 msgstr "وصلة لصفحات إيفريبيديا أخرى"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:188
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:173
 msgid ""
 "To link to another Everipedia page click the 'Link Page' button. You can "
 "also press the '@' or key when typing and a dropdown should appear. Try to "
@@ -445,11 +409,11 @@ msgstr ""
 "على \"@\" أو المفتاح عند الكتابة وستظهر قائمة منسدلة. حاول الارتباط بأكبر "
 "عدد ممكن من الصفحات لجعل كل صفحة غنية بالمعلومات قدر الإمكان."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:189
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
 msgid "Main article body"
 msgstr "جسم المقال الرئيسي"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:189
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
 msgid ""
 "Write in an objective manner in third person tense, do not include any "
 "marketing speak (exclusive offers, unverifiable claims etc). This is an "
@@ -459,42 +423,31 @@ msgstr ""
 "ادعاءات لا يمكن التحقق منها ، إلخ). هذه موسوعة ، وليست صفحة من صفحات وسائل "
 "التواصل الاجتماعي."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:190
-msgid "Title"
-msgstr "العنوان"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:190
-msgid "Enter the page title here"
-msgstr "أدخل عنوان الصفحة هنا"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:191
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:203
 msgid "When you are finished, click here to save your changes."
 msgstr "عند الانتهاء ، انقر هنا لحفظ التغييرات."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:193
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:218
 msgid "Back"
 msgstr "رجوع"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:193
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:220
 #: templates/enterlink/inline-js/enterlink-user-ajax.html:159
 msgid "Next"
 msgstr "التالي"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
-msgid "Formats"
-msgstr "التنسيقات"
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:107
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:111
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:218
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:222
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:325
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:329
+msgid "Cite my own knowledge / experience as a verified editor"
+msgstr "استشهد بمعرفتي وخبرتي الخاصة كمحرر موثوق"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
-msgid "File uploaded successfully"
-msgstr "تم رفع الملف بنجاح"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:459
-msgid "Please enter a headline"
-msgstr "يرجى إدخال عنوان"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:463
-msgid "Submission Successful!"
-msgstr "تسليم ناجح!"
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:52
+msgid "Searching..."
+msgstr "جار البحث..."
 
 #: templates/enterlink/inline-js/enterlink-user-ajax.html:93
 msgid "Editor profile"

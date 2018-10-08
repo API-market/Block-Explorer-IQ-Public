@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-25 08:59-0700\n"
+"POT-Creation-Date: 2018-10-08 09:47-0700\n"
 "PO-Revision-Date: 2018-08-01 02:26-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -78,7 +78,6 @@ msgstr "Auth. varesymbol"
 #: static/js/plugins/citepicture/plugin.min.js:17
 #: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:16
 #: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:17
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
 msgid "Media"
 msgstr "Media"
 
@@ -86,13 +85,11 @@ msgstr "Media"
 #: static/js/plugins/citesource/plugin.min.js:16
 #: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:15
 #: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:16
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
 msgid "Cite"
 msgstr "Siter"
 
 #: static/js/plugins/linkpage/plugin.min.js:1
 #: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:1
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
 msgid "Search Everipedia"
 msgstr "Søk Everipedia"
 
@@ -100,24 +97,17 @@ msgstr "Søk Everipedia"
 #: static/js/plugins/linkpage/plugin.min.js:18
 #: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:17
 #: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:18
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
 msgid "Link"
 msgstr "Lenke"
 
 #: static/js/plugins/mention/plugin.min.js:374
 #: static/tinymce_4.2.3/plugins/mention/plugin.min.js:374
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:162
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:165
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:212
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:215
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:54
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:112
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:115
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:224
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:227
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:331
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:334
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:107
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:110
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:218
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:221
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:325
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:328
 msgid "Cite as verified editor"
 msgstr "Sitere som bekreftet redaktør"
 
@@ -126,9 +116,7 @@ msgstr "Sitere som bekreftet redaktør"
 #: static/js/plugins/savepage/plugin.min.js:7
 #: static/tageditor/jquery.tag-editor.js:335
 #: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:3
-#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:6
-#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:7
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:191
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:202
 msgid "Save"
 msgstr "Lagre"
 
@@ -147,6 +135,18 @@ msgstr "Fontstil"
 msgid "Style"
 msgstr "Stil"
 
+#: static/js/scatterjs-plugin-eosjs2.min.js:15
+msgid "entries"
+msgstr ""
+
+#: static/js/scatterjs-plugin-eosjs2.min.js:15
+msgid "values"
+msgstr ""
+
+#: static/js/scatterjs-plugin-eosjs2.min.js:15
+msgid "keys"
+msgstr ""
+
 #: static/tageditor/jquery.tag-editor.js:584
 #: static/tageditor/jquery.tag-editor.js:587
 #: static/tageditor/jquery.tag-editor.js:590
@@ -158,6 +158,11 @@ msgstr "Legg til en tilleggsbeskrivelse for denne kategorien"
 #: static/tageditor/jquery.tag-editor.js:590
 msgid "Delete this tag"
 msgstr "Slette denne koden"
+
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:3
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:4
+msgid "Save Draft"
+msgstr ""
 
 #: templates/enterlink/brainpowermgmt.html:142
 msgid "Claim"
@@ -175,7 +180,7 @@ msgstr "Dra og slipp bildet her eller klikk for å laste opp."
 msgid "Please enter a description for the photo"
 msgstr "Skriv inn en beskrivelse av bildet"
 
-#: templates/enterlink/edit_ajax_addinfobox.html:89
+#: templates/enterlink/edit_ajax_addinfobox.html:96
 msgid "Adding infobox item, please wait..."
 msgstr "Legger til tilgjengelig element, vent litt..."
 
@@ -184,8 +189,6 @@ msgid "Adding, please wait..."
 msgstr "Legger til, vent litt..."
 
 #: templates/enterlink/edit_ajax_addlink.html:71
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:354
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:457
 msgid ""
 "You have been posting a lot of links today. Wait a bit for the community to "
 "respond to your content. New editors are limited to posting only 250 "
@@ -216,8 +219,6 @@ msgid "No URL provided, please try again"
 msgstr "Ingen URL gitt, vennligst prøv igjen"
 
 #: templates/enterlink/edit_ajax_addlink.html:87
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:362
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:465
 msgid "Please provide a description for the link or file."
 msgstr "Vennligst gi en beskrivelse av koblingen eller filen."
 
@@ -226,35 +227,32 @@ msgid "Please provide a more scholarly description."
 msgstr "Vennligst gi en mer akademisk beskrivelse."
 
 #: templates/enterlink/edit_ajax_addlink.html:109
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
 msgid "File uploaded successfully."
 msgstr "Filen er lastet opp."
 
 #: templates/enterlink/edit_ajax_addlink.html:141
-#: templates/enterlink/inline-js/edit-bottom.html:16
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+#: templates/enterlink/inline-js/edit-bottom.html:24
 msgid "Add File"
 msgstr "Legg til fil"
 
 #: templates/enterlink/edit_ajax_addlink.html:148
-#: templates/enterlink/inline-js/edit-bottom.html:17
+#: templates/enterlink/inline-js/edit-bottom.html:25
 msgid "Add Link"
 msgstr "Legg til lenke"
 
-#: templates/enterlink/headers/scatter-header.html:130
+#: templates/enterlink/headers/scatter-header.html:143
 msgid "Claim Rewards"
 msgstr ""
 
-#: templates/enterlink/index.html:236
+#: templates/enterlink/index.html:231
 msgid "Loading more activity, please wait..."
 msgstr "Laster inn mer aktivitet, vent litt..."
 
-#: templates/enterlink/index.html:260
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+#: templates/enterlink/index.html:255
 msgid "Create page"
 msgstr "Lag side"
 
-#: templates/enterlink/inline-js/edit-bottom.html:12
+#: templates/enterlink/inline-js/edit-bottom.html:20
 msgid ""
 "Please stake some IQ into Brainpower before continuing. Click OK to open the "
 "Brainpower management screen in a new tab. NOTE: Please make sure popups are "
@@ -264,7 +262,7 @@ msgstr ""
 "vinduet hjernekraft behandling i en ny fane. Merk: Kontroller at popup-"
 "vinduer er aktivert for dette området, siden du kan motta en advarsel."
 
-#: templates/enterlink/inline-js/edit-bottom.html:13
+#: templates/enterlink/inline-js/edit-bottom.html:21
 msgid ""
 "Note that you will not be able to propose edits without Brainpower. Your "
 "work will be lost!"
@@ -272,78 +270,36 @@ msgstr ""
 "Merk at du ikke vil kunne foreslå endringer uten hjernekraft. Ditt arbeid "
 "vil gå tapt!"
 
-#: templates/enterlink/inline-js/edit-bottom.html:14
+#: templates/enterlink/inline-js/edit-bottom.html:22
 msgid "Error: proposal not found. Please try submitting again."
 msgstr "Feil: finner ikke forslag. Prøv å sende på nytt."
 
-#: templates/enterlink/inline-js/edit-bottom.html:15
+#: templates/enterlink/inline-js/edit-bottom.html:23
 msgid "Article proposal submission failed!"
 msgstr "Artikkel forslag innlevering mislyktes!"
 
-#: templates/enterlink/inline-js/edit-bottom.html:18
+#: templates/enterlink/inline-js/edit-bottom.html:26
 msgid "Add New Infobox"
 msgstr "Legge til nye Infoboks"
 
-#: templates/enterlink/inline-js/edit-bottom.html:19
+#: templates/enterlink/inline-js/edit-bottom.html:27
 msgid "Completing transaction..."
 msgstr "Fullfører transaksjon..."
 
-#: templates/enterlink/inline-js/edit-bottom.html:141
+#: templates/enterlink/inline-js/edit-bottom.html:103
 msgid "Add Row"
 msgstr "Legg til rad"
 
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:56
-msgid "Are you sure you want to remove this link?"
-msgstr "Er du sikker på at du vil fjerne dette?"
-
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:162
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:166
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:212
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:216
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:55
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:112
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:116
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:224
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:228
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:331
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:335
-msgid "Cite my own knowledge / experience as a verified editor"
-msgstr "Sitere min egen kunnskap/erfaring som bekreftet redaktør"
-
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:347
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:451
-msgid "Posting comment, please wait.."
-msgstr "Legger inn kommentar, vennligst vent.."
-
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:358
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:461
-msgid "This comment is already on this page. Please try again!"
-msgstr "Denne kommentaren er allerede på denne siden. Vennligst prøv igjen!"
-
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:450
-msgid "Posting reply, please wait.."
-msgstr "Legger inn svar, vent litt.."
-
-#: templates/enterlink/inline-js/enterlink-ajax-execute-search.html:139
-#: templates/enterlink/inline-js/enterlink-user-ajax.html:52
-msgid "Searching..."
-msgstr "Søker …"
-
-#: templates/enterlink/inline-js/enterlink-ajax-execute-search.html:167
-msgid "Merging..."
-msgstr "Fletter"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:94
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:4
 msgid "Are you sure you want to exit the page? Unsaved changes will be lost."
 msgstr ""
 "Er du sikker på at du vil avslutte siden? Ulagrede endringer vil gå tapt."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:180
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
 msgid "Introduction"
 msgstr "Introduksjon"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:180
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:52
 msgid ""
 "Everipedia is just like Wikipedia but much simpler to edit and contribute. "
 "Each page is composed of an infobox area for short concise facts, a main "
@@ -357,19 +313,27 @@ msgstr ""
 "med bilder, videoer, lyd etc om emnet, en liste over referanser til websider "
 "og filer som brukes som henvisninger i artikkelen og i fobox."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:181
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:59
+msgid "Title"
+msgstr "Tittel"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:60
+msgid "Enter the page title here"
+msgstr "Skriv inn sidetittelen her"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:73
 msgid "Main photo"
 msgstr "Hoved Foto"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:181
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:74
 msgid "Here you can add the main photo for the article."
 msgstr "Her kan du legge til hoved bildet for artikkelen."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:182
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:87
 msgid "Infobox"
 msgstr "Infoboks"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:182
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:88
 msgid ""
 "The infobox is designed for concise, quick facts. Suggested items appear in "
 "the dropdown depending on the selected topic, but any type of infobox can be "
@@ -379,11 +343,23 @@ msgstr ""
 "i rullegardinlisten avhengig av det valgte emnet, men alle typer "
 "tilgjengelige kan legges til."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:183
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:101
 msgid "Add Links, Files, Etc."
 msgstr "Legg til linker, filer, etc."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:183
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:102
+msgid ""
+"As you add links and files, they will show up in the Reference Links "
+"section. You can edit or remove them as well."
+msgstr ""
+"Når du legger til koblinger og filer, vises de i delen referanse koblinger. "
+"Du kan redigere eller fjerne dem også."
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:115
+msgid "Reference links"
+msgstr "Referanse koblinger"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:116
 msgid ""
 "Make sure to cite your sources when adding information to the page by adding "
 "links and files here so you can show where the information is coming from."
@@ -392,41 +368,29 @@ msgstr ""
 "legge til koblinger og filer her, slik at du kan vise hvor informasjonen "
 "kommer fra."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:184
-msgid "Reference links"
-msgstr "Referanse koblinger"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:184
-msgid ""
-"As you add links and files, they will show up in the Reference Links "
-"section. You can edit or remove them as well."
-msgstr ""
-"Når du legger til koblinger og filer, vises de i delen referanse koblinger. "
-"Du kan redigere eller fjerne dem også."
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:185
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:129
 msgid "Media Gallery"
 msgstr "Mediagalleri"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:185
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:130
 msgid "Added pictures will show up here."
 msgstr "Lagt bilder vil dukke opp her."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:144
 msgid "Add media to article text"
 msgstr "Legge til medier i Artikkeltekst"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:145
 msgid "To add an image or video to the article text, click the 'Media' button."
 msgstr ""
 "Du legger til et bilde eller en video i artikkelteksten ved å klikke ' Media "
 "'-knappen."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:158
 msgid "Cite links, files, etc"
 msgstr "Sitere lenker, filer, etc"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:159
 msgid ""
 "After you have already added a link, file, or picture to the page, you can "
 "cite it by clicking the 'Cite' button. You can also press the '^' or '*' "
@@ -436,11 +400,11 @@ msgstr ""
 "sitere den ved å klikke på knappen \"sitere\". Du kanne likeledes presse det "
 "' ^ ' eller ' * ' keys når maskinskrivning og en dropdown burde komme."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:188
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:172
 msgid "Link to other Everipedia pages"
 msgstr "Koble til andre Everipedia-sider"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:188
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:173
 msgid ""
 "To link to another Everipedia page click the 'Link Page' button. You can "
 "also press the '@' or key when typing and a dropdown should appear. Try to "
@@ -452,11 +416,11 @@ msgstr ""
 "og en dropdown burde komme. Prøv å lenke til så mange sider som er nødvendig "
 "for å gjøre hver side så rik og informativ som mulig."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:189
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
 msgid "Main article body"
 msgstr "Hoved artikkel Body"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:189
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
 msgid ""
 "Write in an objective manner in third person tense, do not include any "
 "marketing speak (exclusive offers, unverifiable claims etc). This is an "
@@ -466,42 +430,31 @@ msgstr ""
 "markedsføring snakke (eksklusive tilbud, unverifiserbare krav etc). Dette er "
 "et leksikon, ikke en sosial media side."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:190
-msgid "Title"
-msgstr "Tittel"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:190
-msgid "Enter the page title here"
-msgstr "Skriv inn sidetittelen her"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:191
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:203
 msgid "When you are finished, click here to save your changes."
 msgstr "Når du er ferdig, klikker du her for å lagre endringene."
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:193
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:218
 msgid "Back"
 msgstr "Tilbake"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:193
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:220
 #: templates/enterlink/inline-js/enterlink-user-ajax.html:159
 msgid "Next"
 msgstr "Neste"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
-msgid "Formats"
-msgstr "Format"
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:107
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:111
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:218
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:222
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:325
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:329
+msgid "Cite my own knowledge / experience as a verified editor"
+msgstr "Sitere min egen kunnskap/erfaring som bekreftet redaktør"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
-msgid "File uploaded successfully"
-msgstr "Filen er lastet opp"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:459
-msgid "Please enter a headline"
-msgstr "Skriv inn en overskrift"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:463
-msgid "Submission Successful!"
-msgstr "Innlevering vellykket!"
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:52
+msgid "Searching..."
+msgstr "Søker …"
 
 #: templates/enterlink/inline-js/enterlink-user-ajax.html:93
 msgid "Editor profile"

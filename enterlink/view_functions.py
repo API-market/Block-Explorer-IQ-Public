@@ -22,9 +22,9 @@ import urllib
 
 AMP_REGEXES = [r'<html.*</head>', r'</html', r' style=".*?"', r" style='.*?'", r' scope=".*?"', r' summary=".*?"',
                   r' item=".*?"', r" item='.*?'", r" align='.*?'", r' valign=".*?"', r' v=".*?"', r' rules=".*?"',
-                  r' nowrap=".*?"',
+                  r' nowrap=".*?"', r" type='.*?'", r" aria-describedby='.*?'",
                   r' size=".*?"', r' face=".*?"', r' color=".*?"', r' usemap=".*?"', r'<html><head></head>', r'</html>',
-                  r' unselectable=".*?"', r' target=".*?"', r' onclick=".*?"']
+                  r' unselectable=".*?"', r' target=".*?"', r' onclick=".*?"', r' onmouseout=".*?"']
 
 # Generate the See Also units at the bottom of the article pages
 def get_see_also_units(blurbOverride=""):
@@ -103,6 +103,7 @@ def get_see_also_units(blurbOverride=""):
 
 # Render the table of contents for an article
 def Prerender_Table_Of_Contents(blurbChunk, articleSlug, templateType, pageName, flags=[], isAuthenticated=False):
+    print(templateType)
     # Convert the article blurb into a BeautifulSoup
     pageSoup = BeautifulSoup(blurbChunk, "html5lib")
     
@@ -146,7 +147,7 @@ def Prerender_Table_Of_Contents(blurbChunk, articleSlug, templateType, pageName,
     #     processedHeadings.append([ugettext("Article Discussion"), "pageCommentContainer","pageComments", "menu1-button", "chat", "discussion"])
 
     # Add the See Also pages to the ToC
-    processedHeadings.append([ugettext("See Also"), "link_list_container", "seeAlsoPanel", "menu2-button", "new-message"])
+    processedHeadings.append([ugettext("See Also"), "seeAlsoPanel", "seeAlsoPanel", "menu2-button", "new-message"])
 
     # Render the ToC to a string and return it
     return render_to_string('enterlink/template_table_of_contents.html', {'rawHeadings': processedHeadings,
@@ -286,7 +287,7 @@ def ampSanitizer(inputBlurb, bypassRegex=False, hide_ads=True, pageSlug=""):
                 iframeTag['layout'] = 'fill'
                 iframeTag['frameborder'] = '0'
                 iframeTag['scrolling'] = 'no'
-                iframeTag['src'] = 'https://www.iqnetwork.io/AJAX-REQUEST/AJAX_Hoverblurb/%s/?from-amp=1' % strippedUsername
+                iframeTag['src'] = 'https://www.everipedia.org/AJAX-REQUEST/AJAX_Hoverblurb/%s/?from-amp=1' % strippedUsername
 
                 # Placeholder image (leave this here or it will cause stupid AMP problems)
                 placeholderTag = sanitizedSoup.new_tag('amp-img')
@@ -355,7 +356,7 @@ def ampSanitizer(inputBlurb, bypassRegex=False, hide_ads=True, pageSlug=""):
                 iframeTag['layout'] = 'fill'
                 iframeTag['frameborder'] = '0'
                 iframeTag['scrolling'] = 'no'
-                iframeTag['src'] = 'https://www.iqnetwork.io/AJAX-REQUEST/AJAX_Hoverlink/%s/?from-amp=1&target_url=%s' % (pageSlug, linkURLEncoded)
+                iframeTag['src'] = 'https://www.everipedia.org/AJAX-REQUEST/AJAX_Hoverlink/%s/?from-amp=1&target_url=%s' % (pageSlug, linkURLEncoded)
 
                 # Placeholder image (leave this here or it will cause stupid AMP problems)
                 placeholderTag = sanitizedSoup.new_tag('amp-img')
@@ -507,6 +508,11 @@ def ampSanitizer(inputBlurb, bypassRegex=False, hide_ads=True, pageSlug=""):
                     imgTag.replace_with(ampImgTag)
             except:
                 pass
+
+    # Remove duplicate body tags
+    resultCollection = sanitizedSoup.findAll("body")
+    for item in resultCollection:
+        item.unwrap()
 
     # Convert the BeautifulSoup to a string
     sanitizedText = unicode("".join([unicode(x) for x in sanitizedSoup.contents]))
@@ -764,8 +770,12 @@ def parseBlockchainHTML(htmlBlob, useAMP=False):
         photoNode = targetNode[0].findAll("img", class_="main-photo")
 
         # Collect the photo URL and thumbnail URL
-        photoURL = photoNode[0]["src"]
-        photoThumb = photoNode[0]["data-thumbnail"]
+        try:
+            photoURL = photoNode[0]["src"]
+            photoThumb = photoNode[0]["data-thumbnail"]
+        except:
+            photoURL = "https://epcdn-vz.azureedge.net/static/images/no-image-slide-big.png"
+            photoThumb = "https://epcdn-vz.azureedge.net/static/images/no-image-slide.png"
 
         # Try to find the caption, if present
         try:

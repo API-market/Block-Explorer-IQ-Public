@@ -136,7 +136,7 @@
 		<h1>{% trans 'Rewards Management' %}</h1>
 
 		<div class="explanation-ct">
-			<p>{% trans 'Here you can claim rewards for the edits and / or votes that you made.' %}</p>
+			<p>{% trans 'Here you can claim rewards for the edits and / or votes that you made. If "Claim All Rewards" does not work initially, try again after 5 - 10 seconds, as some block producers are faster than others. If it continues to fail, claim a few rewards manually first, then try again. This is due to transaction time limitations with EOS.' %}</p>
 		</div>
 
 		<div class="claim-all-wrap">
@@ -166,28 +166,39 @@
 
 	$(".claim-all").click(function (event) {
 		$('#submission_waiting').show();
-		eos.contract('eparticlectr').then(eparticlectr => {
-			eparticlectr.rewardclmall(scatterAccountName, {
-					authorization: scatterAccountName,
-					permission: "active"
-				}
-			).then(result => {
-				let txID = result.transaction_id;
-				let theURL = "https://bloks.io/transaction/" + txID;
-				$(".tx-anchor").attr("href", theURL);
-				$(".result-tx .tx-id").html(txID);
-				$(".result-tx").show();
 
-				$('#submission_waiting').hide();
-				$(this).parent().remove();
-				refreshRewards();
-				refreshIQ();
-				refreshBrainpower();
-			}).catch(error => {
-				$('#submission_waiting').hide();
-				error = JSON.parse(error).error.details[0].message.replace('condition: assertion failed: ', '');
-				alert(error);
-			});
+		var transactionJSON = {
+			actions: [{
+				account: 'eparticlectr',
+				name: 'rewardclmall',
+				authorization: [{
+					actor: scatterAccountName,
+					permission: "active",
+				}],
+				data: {
+					user: scatterAccountName,
+				},
+			}]
+		};
+		eos.transact(transactionJSON, {blocksBehind: 3, expireSeconds: 30,}).then(result => {
+			let txID = result.transaction_id;
+			let theURL = "https://bloks.io/transaction/" + txID;
+			$(".tx-anchor").attr("href", theURL);
+			$(".result-tx .tx-id").html(txID);
+			$(".result-tx").show();
+
+			$('#submission_waiting').hide();
+			$(this).parent().remove();
+			refreshRewards();
+			refreshIQ();
+			refreshBrainpower();
+			console.log("Transaction completed:" + result.transaction_id);
+		}).catch(e => {
+			$('#submission_waiting').hide();
+			alert(e);
+			// if (e instanceof eosjs_jsonrpc.RpcError){
+			// 	console.log(JSON.stringify(e.json, null, 2));
+			// }
 		});
 	});
 
@@ -221,56 +232,77 @@
 				$(".final-period").click(function (event) {
 					$('#submission_waiting').show();
 					var periodID = $(this).data("periodid");
-					eos.contract('eparticlectr').then(eparticlectr => {
-						eparticlectr.procrewards(periodID, {
-								authorization: scatterAccountName,
-								permission: "active"
-							}
-						).then(result => {
-						    let txID = result.transaction_id;
-							let theURL = "https://bloks.io/transaction/" + txID;
-							$(".tx-anchor").attr("href", theURL);
-							$(".result-tx .tx-id").html(txID);
-							$(".result-tx").show();
+					var transactionJSON = {
+						actions: [{
+							account: 'eparticlectr',
+							name: 'procrewards',
+							authorization: [{
+								actor: scatterAccountName,
+								permission: "active",
+							}],
+							data: {
+								reward_period: periodID,
+							},
+						}]
+					};
+					eos.transact(transactionJSON, {blocksBehind: 3, expireSeconds: 30,}).then(result => {
+						let txID = result.transaction_id;
+						let theURL = "https://bloks.io/transaction/" + txID;
+						$(".tx-anchor").attr("href", theURL);
+						$(".result-tx .tx-id").html(txID);
+						$(".result-tx").show();
 
-							$('#submission_waiting').hide();
-							$(this).parent().remove();
-							refreshRewards();
-							refreshIQ();
-							refreshBrainpower();
-						}).catch(error => {
-							$('#submission_waiting').hide();
-							error = JSON.parse(error).error.details[0].message.replace('condition: assertion failed: ', '');
-							alert(error);
-						});
+						$('#submission_waiting').hide();
+						$(this).parent().remove();
+						refreshRewards();
+						refreshIQ();
+						refreshBrainpower();
+						console.log("Transaction completed:" + result.transaction_id);
+					}).catch(e => {
+						$('#submission_waiting').hide();
+						alert(e);
+						// if (e instanceof eosjs_jsonrpc.RpcError){
+						// 	console.log(JSON.stringify(e.json, null, 2));
+						// }
 					});
 				});
 
 				$(".redeem-cell").click(function (event) {
 					$('#submission_waiting').show();
 					var rewardID = $(this).data("rewardid");
-					eos.contract('eparticlectr').then(eparticlectr => {
-						eparticlectr.rewardclmid(rewardID, {
-								authorization: scatterAccountName,
-								permission: "active"
-							}
-						).then(result => {
-						    let txID = result.transaction_id;
-							let theURL = "https://bloks.io/transaction/" + txID;
-							$(".tx-anchor").attr("href", theURL);
-							$(".result-tx .tx-id").html(txID);
-							$(".result-tx").show();
 
-							$('#submission_waiting').hide();
-							$(this).parent().remove();
-							refreshRewards();
-							refreshIQ();
-							refreshBrainpower();
-						}).catch(error => {
-							$('#submission_waiting').hide();
-							error = JSON.parse(error).error.details[0].message.replace('condition: assertion failed: ', '');
-							alert(error);
-						});
+					var transactionJSON = {
+						actions: [{
+							account: 'eparticlectr',
+							name: 'rewardclmid',
+							authorization: [{
+								actor: scatterAccountName,
+								permission: "active",
+							}],
+							data: {
+								reward_id: rewardID,
+							},
+						}]
+					};
+					eos.transact(transactionJSON, {blocksBehind: 3, expireSeconds: 30,}).then(result => {
+						let txID = result.transaction_id;
+						let theURL = "https://bloks.io/transaction/" + txID;
+						$(".tx-anchor").attr("href", theURL);
+						$(".result-tx .tx-id").html(txID);
+						$(".result-tx").show();
+
+						$('#submission_waiting').hide();
+						$(this).parent().remove();
+						refreshRewards();
+						refreshIQ();
+						refreshBrainpower();
+						console.log("Transaction completed:" + result.transaction_id);
+					}).catch(e => {
+						$('#submission_waiting').hide();
+						alert(e);
+						// if (e instanceof eosjs_jsonrpc.RpcError){
+						// 	console.log(JSON.stringify(e.json, null, 2));
+						// }
 					});
 				});
 

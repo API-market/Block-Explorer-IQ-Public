@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-25 08:59-0700\n"
+"POT-Creation-Date: 2018-10-08 09:47-0700\n"
 "PO-Revision-Date: 2018-08-05 16:00+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,157 +18,78 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.0.4\n"
 
-#: enterlink/edit.py:114
+#: enterlink/edit.py:105
 msgid "Page Type"
 msgstr "Sida"
 
-#: enterlink/edit.py:114
+#: enterlink/edit.py:105
 msgid "Removed From Site"
 msgstr ""
 
-#: enterlink/edit.py:114 templates/enterlink/edit_ajax_editpagemeta.html:12
+#: enterlink/edit.py:105 templates/enterlink/edit_ajax_editpagemeta.html:12
 msgid "Adult Content"
 msgstr "innehåll för vuxna"
 
-#: enterlink/edit.py:115
+#: enterlink/edit.py:106
 msgid "Media Gallery"
 msgstr "Galleri"
 
-#: enterlink/edit.py:115
+#: enterlink/edit.py:106
 msgid "References and Citations"
 msgstr ""
 
-#: enterlink/forms.py:9
-msgid "Contains"
-msgstr "Innehåller"
-
-#: enterlink/forms.py:9
-msgid "Equal to"
-msgstr "Lika med"
+#: enterlink/edit.py:789
+msgid ""
+"This is the reference link for the lead picture/gif of the page. Delete this "
+"link here or replace the picture/gif above."
+msgstr ""
 
 #: enterlink/forms.py:10
-msgid "Regular expression"
-msgstr "Vanligt uttryck"
-
-#: enterlink/forms.py:11
-msgid "Starts with"
-msgstr "Börjar med"
-
-#: enterlink/forms.py:11
-msgid "Ends with"
-msgstr "Slutar med"
-
-#: enterlink/forms.py:12
-msgid "Greater than"
-msgstr "Större än"
-
-#: enterlink/forms.py:12
-msgid "Greater than or equal to"
-msgstr "Större än eller lika med"
-
-#: enterlink/forms.py:13
-msgid "Less than"
-msgstr "Mindre än"
-
-#: enterlink/forms.py:13
-msgid "Less than or equal to"
-msgstr "Mindre än eller lika med"
-
-#: enterlink/forms.py:42 templates/enterlink/headers/index_header.html:133
-#: templates/enterlink/login.html:40
-msgid "Password"
-msgstr "Lösenord"
-
-#: enterlink/forms.py:44
-msgid "Please enter a password"
-msgstr "Skriv in ett lösenord"
-
-#: enterlink/forms.py:45
-msgid "Please enter a valid password"
-msgstr "Vänligen ange ditt lösenord"
-
-#: enterlink/forms.py:46
-msgid "Enter an email"
-msgstr "Ange en e-postadress."
-
-#: enterlink/forms.py:47
-msgid "Please enter an email address"
-msgstr "Vänligen ange en e-postadress"
-
-#: enterlink/forms.py:48
-msgid "Please enter a valid email address"
-msgstr "Vänligen ange en giltig e-postadress"
-
-#: enterlink/forms.py:49 enterlink/forms.py:69
-msgid "First Name"
-msgstr "Förnamn"
-
-#: enterlink/forms.py:51 enterlink/forms.py:71
-msgid "Last Name"
-msgstr "Efternamn"
-
-#: enterlink/forms.py:53
-msgid "Enter a username"
-msgstr "Ange ett användarnamn"
-
-#: enterlink/forms.py:54
-msgid "Please enter a username"
-msgstr "Var god skriv in ett användarnamn"
-
-#: enterlink/forms.py:55
-msgid "Please enter a valid username"
-msgstr "Var vänlig ange ett giltigt användarnamn"
-
-#: enterlink/forms.py:61
-msgid "This email address already exists! Please use another one."
-msgstr "Den här e-postadressen finns redan! Vänligen använd en annan."
-
-#: enterlink/forms.py:73 enterlink/forms.py:83
-msgid "Email"
-msgstr "E-post"
-
-#: enterlink/forms.py:82
 msgid "How can we help?"
 msgstr "Hur kan jag hjälpa?"
 
-#: enterlink/forms.py:84
+#: enterlink/forms.py:11
+msgid "Email"
+msgstr "E-post"
+
+#: enterlink/forms.py:12
 msgid "Full Name"
 msgstr "Fullständigt namn"
 
-#: enterlink/forms.py:85
+#: enterlink/forms.py:13
 msgid "Subject"
 msgstr "Ämne"
 
-#: enterlink/forms.py:86 enterlink/models.py:89
+#: enterlink/forms.py:14 enterlink/models.py:13
 msgid "Report Abuse"
 msgstr "Rapportera missbruk"
 
-#: enterlink/forms.py:86 enterlink/models.py:89
+#: enterlink/forms.py:14 enterlink/models.py:13
 msgid "Report Bug"
 msgstr "Rapportera fel"
 
-#: enterlink/forms.py:86 enterlink/models.py:89
+#: enterlink/forms.py:14 enterlink/models.py:13
 msgid "Verify Account"
 msgstr "Verifiera konto"
 
-#: enterlink/forms.py:86 enterlink/models.py:89
+#: enterlink/forms.py:14 enterlink/models.py:13
 msgid "Anonymous Tip"
 msgstr "Anonyma tips"
 
-#: enterlink/forms.py:86 enterlink/models.py:89
+#: enterlink/forms.py:14 enterlink/models.py:13
 msgid "Investment Inquiries"
 msgstr "Investeringsförfrågningar"
 
-#: enterlink/forms.py:86 enterlink/forms.py:175 enterlink/models.py:89
-#: enterlink/models.py:134
+#: enterlink/forms.py:14 enterlink/forms.py:75 enterlink/models.py:13
+#: enterlink/models.py:68
 msgid "Other"
 msgstr "Annat"
 
-#: enterlink/forms.py:97
+#: enterlink/forms.py:23
 msgid "Search by Entering a Link"
 msgstr "Sök genom att ange en länk"
 
-#: enterlink/forms.py:126
+#: enterlink/forms.py:28
 msgid ""
 "Describe the file briefly. A summary of the information found is best. Avoid "
 "simply repeating the page title."
@@ -176,19 +97,19 @@ msgstr ""
 "Beskriv filen kortfattat. En sammanfattning av den information som hittats "
 "är bäst. Undvik helt enkelt att upprepa sidtiteln."
 
-#: enterlink/forms.py:148
+#: enterlink/forms.py:51
 msgid "File type not allowed."
 msgstr "Filtyp inte tillåten."
 
-#: enterlink/forms.py:153
+#: enterlink/forms.py:57
 msgid "Please ."
 msgstr "Vänligen"
 
-#: enterlink/forms.py:154
+#: enterlink/forms.py:58
 msgid "Enter a URL"
 msgstr "Ange en webbadress"
 
-#: enterlink/forms.py:156
+#: enterlink/forms.py:60
 msgid ""
 "Describe the URL briefly. A summary of the information found is best. Avoid "
 "simply repeating the page title."
@@ -196,133 +117,73 @@ msgstr ""
 "Beskriv URL:en kortfattat. En sammanfattning av den information som hittats "
 "är bäst. Undvik helt enkelt att upprepa sidtiteln."
 
-#: enterlink/forms.py:165 templates/enterlink/edit_ajax_addinfobox.html:28
+#: enterlink/forms.py:64 templates/enterlink/edit_ajax_addinfobox.html:29
 msgid "Enter type (e.g. Occupation)"
 msgstr "Ange typ (t.ex. civilstatus)"
 
-#: enterlink/forms.py:166 templates/enterlink/edit_ajax_addinfobox.html:28
+#: enterlink/forms.py:65 templates/enterlink/edit_ajax_addinfobox.html:29
 msgid "Enter value (e.g. CEO)"
 msgstr "Ange värde (t.ex. VD)"
 
-#: enterlink/forms.py:170 enterlink/models.py:134
+#: enterlink/forms.py:70 enterlink/models.py:68
 msgid "Person"
 msgstr "Person"
 
-#: enterlink/forms.py:170 enterlink/models.py:134
+#: enterlink/forms.py:70 enterlink/models.py:68
 msgid "Place/Location"
 msgstr "Ort/Plats"
 
-#: enterlink/forms.py:171 enterlink/models.py:134
+#: enterlink/forms.py:71 enterlink/models.py:68
 msgid "Organization/Company/Institution"
 msgstr "Organisation/Företag/Institution"
 
-#: enterlink/forms.py:171 enterlink/models.py:134
+#: enterlink/forms.py:71 enterlink/models.py:68
 msgid "Event"
 msgstr "Evenemang"
 
-#: enterlink/forms.py:172 enterlink/models.py:134
+#: enterlink/forms.py:72 enterlink/models.py:68
 msgid "List/Ranking"
 msgstr "Lista/Ranking"
 
-#: enterlink/forms.py:172 enterlink/models.py:134
+#: enterlink/forms.py:72 enterlink/models.py:68
 msgid "Product/Merchandise"
 msgstr "Produkt/Merchandise"
 
-#: enterlink/forms.py:173 enterlink/models.py:134
+#: enterlink/forms.py:73 enterlink/models.py:68
 msgid "Electronics/Software"
 msgstr "Elektronik/Mjukvara"
 
-#: enterlink/forms.py:173 enterlink/models.py:134
+#: enterlink/forms.py:73 enterlink/models.py:68
 msgid "Medical/Biology"
 msgstr "Medicin/Biologi"
 
-#: enterlink/forms.py:174 enterlink/models.py:134
+#: enterlink/forms.py:74 enterlink/models.py:68
 msgid "Creative Work/Art"
 msgstr "Kreativt arbete/konst"
 
-#: enterlink/forms.py:175 enterlink/models.py:134
+#: enterlink/forms.py:75 enterlink/models.py:68
 msgid "Science/Academia/Humanities"
 msgstr "Vetenskap/Akademisk/Humaniora"
 
-#: enterlink/models.py:45 enterlink/models.py:49
-msgid "None"
-msgstr "Ingen"
-
-#: enterlink/models.py:45
-msgid "Featured"
-msgstr "Utvalda"
-
-#: enterlink/models.py:45
-msgid "In the news"
-msgstr "Nyheter"
-
-#: enterlink/models.py:46
-msgid "In the news (Editor's Pick)"
-msgstr "I nyheterna (Redaktören Väljer)"
-
-#: enterlink/models.py:46
-msgid "In the news (Standout Article)"
-msgstr "I nyheterna (Stor Artikel)"
-
-#: enterlink/models.py:47
-msgid "Trending"
-msgstr "Trendar"
-
-#: enterlink/models.py:47
-msgid "On this day"
-msgstr "Detta datum:"
-
-#: enterlink/models.py:47
-msgid "Blog Post (Meta Article)"
-msgstr "Blogginlägg (metaartikel)"
-
-#: enterlink/models.py:49
-msgid "Verified Only"
-msgstr "Verifierade endast"
-
-#: enterlink/models.py:50
-msgid "Normal (Business)"
-msgstr "Normal (Affärer)"
-
-#: enterlink/models.py:50
-msgid "Normal (Personal)"
-msgstr "Normal (Personlig)"
-
-#: enterlink/view_functions.py:144
-msgid ""
-"Your Everipedia editor restrictions have been removed. You can now edit "
-"pages freely!"
-msgstr ""
-"Din Everipedia-redaktörsrestriktion har tagits bort. Du kan nu redigera "
-"sidor fritt!"
-
-#: enterlink/view_functions.py:607
+#: enterlink/view_functions.py:140
 msgid "Images & Videos"
 msgstr "Bilder och videoklipp"
 
-#: enterlink/view_functions.py:609
+#: enterlink/view_functions.py:143
 msgid "References"
 msgstr "Referenskunder"
 
-#: enterlink/view_functions.py:612
-msgid "Article Discussion"
-msgstr "Artikeldiskussion"
-
-#: enterlink/view_functions.py:615 enterlink/view_functions.py:618
-#: templates/enterlink/template_blockchain_styled_amp.html:350
-#: templates/enterlink/template_blockchain_styled_desktop.html:526
+#: enterlink/view_functions.py:150
+#: templates/enterlink/template_blockchain_styled_amp.html:318
+#: templates/enterlink/template_blockchain_styled_desktop.html:511
 msgid "See Also"
 msgstr "Se också"
 
-#: enterlink/view_functions.py:617
-msgid "Top Editors"
-msgstr "Toppredaktörer"
-
-#: enterlink/view_functions.py:1625
+#: enterlink/view_functions.py:994
 msgid "Wiki and references for"
 msgstr "Wiki och referenser för"
 
-#: enterlink/view_functions.py:1626
+#: enterlink/view_functions.py:995
 msgid "You can edit something on this wiki now!"
 msgstr "Du kan redigera något på denna wiki nu!"
 
@@ -338,198 +199,10 @@ msgstr "Valfri anledning till block"
 msgid "IPs & masks to ban"
 msgstr "IP & masker att förbjuda"
 
-#: templates/admin/base.html:28
-msgid "Welcome,"
-msgstr "Välkommen,"
-
-#: templates/admin/base.html:33
-msgid "Documentation"
-msgstr "Dokumentation"
-
-#: templates/admin/base.html:36
-msgid "Change password"
-msgstr "Ändra lösenord"
-
-#: templates/admin/base.html:38 templates/admin/password_change_done.html:57
-#: templates/admin/password_change_form.html:59
-#: templates/enterlink/headers/header_dropdown.html:22
-#: templates/enterlink/headers/header_dropdown.html:44
-#: templates/enterlink/headers/index_header.html:110
-#: templates/enterlink/headers/index_header.html:166
-#: templates/enterlink/headers/index_header.html:236
-#: templates/enterlink/headers/index_header.html:258
-#: templates/enterlink/notifications/index.html:100
-#: templates/enterlink/notifications/index.html:105
-msgid "Log out"
-msgstr "Logga ut"
-
-#: templates/admin/base.html:47 templates/admin/logged_out.html:4
-#: templates/admin/password_reset_complete.html:6
-#: templates/admin/password_reset_confirm.html:6
-#: templates/admin/password_reset_done.html:6
-#: templates/admin/password_reset_form.html:6
-#: templates/enterlink/notifications/index.html:61
-#: templates/enterlink/notifications/index.html:94
-msgid "Home"
-msgstr "Hem"
-
-#: templates/admin/base_site.html:4
-msgid "Django site admin"
-msgstr "Django site-administration"
-
-#: templates/admin/base_site.html:7
-msgid "Django administration"
-msgstr "Django-administrationen"
-
-#: templates/admin/logged_out.html:8
-msgid "Thanks for spending some quality time with the Web site today."
-msgstr "Tack för att du spenderat lite kvalitetstid på webbplatsen idag."
-
-#: templates/admin/logged_out.html:10
-msgid "Log in again"
-msgstr "Logga in igen"
-
-#: templates/admin/password_change_done.html:46
-#: templates/admin/password_change_form.html:48
-#: templates/enterlink/edit.html:145 templates/enterlink/search-iframe.html:122
-#: templates/enterlink/search.html:27 templates/enterlink/user.html:220
-msgid "Search Everipedia"
-msgstr "Sök på Everipedia"
-
-#: templates/admin/password_change_done.html:60
-#: templates/admin/password_change_form.html:62
-#: templates/admin/password_reset_complete.html:19
-#: templates/enterlink/headers/index_header.html:135
-#: templates/enterlink/headers/index_header.html:168
-#: templates/enterlink/headers/index_header.html:240
-#: templates/enterlink/headers/index_header.html:262
-#: templates/enterlink/login.html:45
-msgid "Log in"
-msgstr "Logga in"
-
-#: templates/admin/password_change_done.html:71
-msgid "Password change successful"
-msgstr "Lösenordsändringen lyckades"
-
-#: templates/admin/password_reset_complete.html:7
-#: templates/admin/password_reset_confirm.html:11
-#: templates/admin/password_reset_done.html:7
-#: templates/admin/password_reset_form.html:7
-#: templates/admin/password_reset_form.html:11
-#: templates/admin/password_reset_form.html:15
-msgid "Password reset"
-msgstr "Byte av lösernord"
-
-#: templates/admin/password_reset_complete.html:11
-#: templates/admin/password_reset_complete.html:15
-msgid "Password reset complete"
-msgstr "Återställ lösenordet"
-
-#: templates/admin/password_reset_complete.html:17
-msgid "Your password has been set.  You may go ahead and log in now."
-msgstr "Ditt lösenord har ändrats. Du kan fortsätta och logga in nu."
-
-#: templates/admin/password_reset_confirm.html:7
-msgid "Password reset confirmation"
-msgstr "Bekräftelse på återställning av lösenord"
-
-#: templates/admin/password_reset_confirm.html:17
-msgid "Enter new password"
-msgstr "Fyll i nytt lösenord"
-
-#: templates/admin/password_reset_confirm.html:19
-msgid ""
-"Please enter your new password twice so we can verify you typed it in "
-"correctly."
-msgstr ""
-"Ange ditt nya lösenord två gånger så vi kan verifiera att du har skrivit in "
-"det korrekt."
-
-#: templates/admin/password_reset_confirm.html:23
-msgid "New password:"
-msgstr "Nytt lösenord:"
-
-#: templates/admin/password_reset_confirm.html:25
-msgid "Confirm password:"
-msgstr "Bekräfta lösenord:"
-
-#: templates/admin/password_reset_confirm.html:26
-msgid "Change my password"
-msgstr "Byta mitt lösenord"
-
-#: templates/admin/password_reset_confirm.html:31
-msgid "Password reset unsuccessful"
-msgstr "Lösenordsåterställning misslyckades"
-
-#: templates/admin/password_reset_confirm.html:33
-msgid ""
-"The password reset link was invalid, possibly because it has already been "
-"used.  Please request a new password reset."
-msgstr ""
-"Länken för lösenordsåterställning var ogiltig, antagligen har den redan har "
-"använts. Begär en ny lösenordsåterställning ."
-
-#: templates/admin/password_reset_done.html:11
-#: templates/admin/password_reset_done.html:15
-msgid "Password reset successful"
-msgstr "Lösenordsåterställning lyckades"
-
-#: templates/admin/password_reset_done.html:17
-msgid ""
-"We have emailed you instructions for setting your password. You should be "
-"receiving them shortly."
-msgstr ""
-"Vi har mailat dig instruktioner för att ställa in ditt lösenord. Du borde få "
-"dem snart."
-
-#: templates/admin/password_reset_done.html:19
-msgid ""
-"If you don't receive an email, please make sure you've entered the address "
-"you registered with, and check your spam folder."
-msgstr ""
-"Om du inte får ett e-postmeddelande, se till att du har angett adressen du "
-"registrerade med och kolla din skräppostmapp."
-
-#: templates/admin/password_reset_email.html:2
-msgid ""
-"You are receiving this email because you requested a password reset for your "
-"Everipedia account."
-msgstr ""
-"Du tar emot det här e-postmeddelandet eftersom du begärde en återställning "
-"av lösenord för ditt Everipedia-konto."
-
-#: templates/admin/password_reset_email.html:4
-msgid "Please go to the following page and choose a new password:"
-msgstr "Gå till nästa sida och välj ett nytt lösenord:"
-
-#: templates/admin/password_reset_email.html:8
-msgid "Your username, in case you've forgotten:"
-msgstr "Ditt användarnamn, ifall du har glömt:"
-
-#: templates/admin/password_reset_email.html:10
-msgid "Thanks for using our site!"
-msgstr "Tack för att du använder vår webbplats!"
-
-#: templates/admin/password_reset_form.html:17
-msgid ""
-"Forgotten your password? Enter your email address below, and we'll email "
-"instructions for setting a new one."
-msgstr ""
-"Glömt ditt lösenord? Ange din e-postadress nedan, och vi skickar en e-post "
-"till instruktioner för att ange en ny."
-
-#: templates/admin/password_reset_form.html:21
-msgid "Email address:"
-msgstr "E-postadress:"
-
-#: templates/admin/password_reset_form.html:21
-msgid "Reset my password"
-msgstr "Återställ mitt lösenord"
-
 #: templates/email/sanger_announcement.html:276
 #: templates/email/welcome_email.html:264
 #: templates/email/welcome_email_old.html:68
-#: templates/enterlink/welcome.html:33
+#: templates/enterlink/welcome.html:27
 msgid "Learn More"
 msgstr "Läs mer"
 
@@ -538,13 +211,9 @@ msgid "View My Profile"
 msgstr "Visa min profil"
 
 #: templates/email/welcome_email_old.html:67
-#: templates/enterlink/welcome.html:28 templates/enterlink/welcome.html:30
+#: templates/enterlink/welcome.html:26
 msgid "Create a Wiki"
 msgstr "Skapa en Wiki"
-
-#: templates/endless/show_more.html:5
-msgid "more"
-msgstr "mer"
 
 #: templates/enterlink/ajax_infobox_singlet.html:14
 #: templates/enterlink/ajax_infobox_singlet.html:42
@@ -582,9 +251,9 @@ msgstr ""
 #: templates/enterlink/ajax_media_gallery_singlet.html:14
 #: templates/enterlink/ajax_media_gallery_singlet.html:19
 #: templates/enterlink/ajaxresults.html:104
-#: templates/enterlink/hoverlink_iframe_blockchain.html:97
-#: templates/enterlink/template_blockchain_styled_desktop.html:415
-#: templates/enterlink/template_blockchain_styled_desktop.html:438
+#: templates/enterlink/hoverlink_iframe_blockchain.html:94
+#: templates/enterlink/template_blockchain_styled_desktop.html:400
+#: templates/enterlink/template_blockchain_styled_desktop.html:423
 #: templates/enterlink/template_photos_amp_json_blockchain.html:79
 msgid "Your browser does not support HTML5 video."
 msgstr "Din webbläsare stöder inte HTML5-video."
@@ -612,7 +281,7 @@ msgstr ""
 
 #: templates/enterlink/ajaxresults.html:135
 #: templates/enterlink/ajaxresults.html:192
-#: templates/enterlink/template_blockchain_styled_desktop.html:167
+#: templates/enterlink/template_blockchain_styled_desktop.html:157
 msgid "Views"
 msgstr "Visningar"
 
@@ -625,7 +294,7 @@ msgstr "Intelligenskvot"
 msgid "page(s) have this link"
 msgstr "sidan(sidorna) har den här länken"
 
-#: templates/enterlink/analytics.html:7 templates/enterlink/faq.html:6
+#: templates/enterlink/analytics.html:7
 msgid "Frequently Asked Questions - Everipedia, everyone's encyclopedia"
 msgstr "Ofta ställda frågor - Everipedia, allas encyklopedi"
 
@@ -634,27 +303,29 @@ msgstr "Ofta ställda frågor - Everipedia, allas encyklopedi"
 msgid "Brainpower Management"
 msgstr "Brainpower Management"
 
-#: templates/enterlink/brainpowermgmt.html:4 templates/enterlink/contact.html:7
-#: templates/enterlink/edit.html:7 templates/enterlink/editing-disabled.html:7
-#: templates/enterlink/editors.html:23
+#: templates/enterlink/brainpowermgmt.html:4 templates/enterlink/contact.html:5
+#: templates/enterlink/editing-disabled.html:7
+#: templates/enterlink/editors.html:22
 #: templates/enterlink/exchange-listings.html:7
 #: templates/enterlink/headers/index_header.html:17
 #: templates/enterlink/headers/index_header.html:18
-#: templates/enterlink/inbox.html:12 templates/enterlink/index.html:7
-#: templates/enterlink/leadership.html:7
+#: templates/enterlink/index.html:7 templates/enterlink/leadership.html:6
 #: templates/enterlink/limitreached.html:7 templates/enterlink/login.html:7
 #: templates/enterlink/recent-activity.html:7
-#: templates/enterlink/register.html:6 templates/enterlink/rewardsmgmt.html:4
-#: templates/enterlink/search.html:7 templates/enterlink/transfer-iq.html:5
-#: templates/enterlink/user.html:12 templates/enterlink/votehistory.html:7
+#: templates/enterlink/rewardsmgmt.html:4 templates/enterlink/search.html:7
+#: templates/enterlink/transfer-iq.html:5
+#: templates/enterlink/votehistory.html:7
 msgid "Everipedia, the encyclopedia of everything"
 msgstr "Everipedia, encyklopedin för allt"
 
-#: templates/enterlink/brainpowermgmt.html:101 templates/enterlink/edit.html:89
-#: templates/enterlink/rewardsmgmt.html:119
-#: templates/enterlink/transfer-iq.html:106 templates/enterlink/voting.html:180
-msgid "Loading Scatter"
-msgstr "Laddar scatter"
+#: templates/enterlink/brainpowermgmt.html:101
+#: templates/enterlink/rewardsmgmt.html:123
+#: templates/enterlink/template_blockchain_styled_desktop.html:688
+#: templates/enterlink/voting.html:200
+#, fuzzy
+#| msgid "Please ."
+msgid "Please wait"
+msgstr "Vänligen"
 
 #: templates/enterlink/brainpowermgmt.html:117
 msgid ""
@@ -710,7 +381,7 @@ msgid "End"
 msgstr "Slut"
 
 #: templates/enterlink/brainpowermgmt.html:130
-#: templates/enterlink/voting_table_of_contents.html:40
+#: templates/enterlink/voting_table_of_contents.html:41
 msgid "Time Remaining"
 msgstr "Återstående tid"
 
@@ -723,33 +394,33 @@ msgstr "Belopp"
 msgid "Claim"
 msgstr "Skada"
 
-#: templates/enterlink/contact.html:7 templates/enterlink/contact.html:24
+#: templates/enterlink/contact.html:5 templates/enterlink/contact.html:22
 msgid "Contact us"
 msgstr "Kontakta oss"
 
-#: templates/enterlink/contact.html:20
+#: templates/enterlink/contact.html:18
 msgid "To get quicker replies from our community"
 msgstr "För att få snabbare svar från vår community"
 
-#: templates/enterlink/contact.html:20
+#: templates/enterlink/contact.html:18
 msgid "create a post in our forum"
 msgstr "skapa ett inlägg i vårt forum"
 
-#: templates/enterlink/contact.html:25
+#: templates/enterlink/contact.html:23
 msgid "Get in touch with us"
 msgstr "Kontakta oss"
 
-#: templates/enterlink/contact.html:33
+#: templates/enterlink/contact.html:31
 msgid "Thanks, we got your message. We will respond in a bit"
 msgstr "Tack, vi fick ditt meddelande. Vi kommer att svara snart"
 
-#: templates/enterlink/contact.html:41 templates/enterlink/transfer-iq.html:131
+#: templates/enterlink/contact.html:39 templates/enterlink/transfer-iq.html:131
 msgid "Send"
 msgstr "Skicka"
 
-#: templates/enterlink/dropzone.html:140 templates/enterlink/edit.html:167
-#: templates/enterlink/edit.html:176 templates/enterlink/edit.html:185
-#: templates/enterlink/edit.html:195 templates/enterlink/edit.html:204
+#: templates/enterlink/dropzone.html:140 templates/enterlink/edit.html:125
+#: templates/enterlink/edit.html:134 templates/enterlink/edit.html:143
+#: templates/enterlink/edit.html:153 templates/enterlink/edit.html:162
 msgid "OK"
 msgstr "OK"
 
@@ -757,33 +428,32 @@ msgstr "OK"
 msgid "Enter a caption for the main image of the page."
 msgstr "Ange en bildtext för huvudbilden på sidan."
 
-#: templates/enterlink/edit.html:7
-msgid "Edit Page"
-msgstr "Ändrar sida"
-
-#: templates/enterlink/edit.html:85
-msgid "Loading.."
+#: templates/enterlink/edit.html:64
+#, fuzzy
+#| msgid "Loading.."
+msgid "Loading"
 msgstr "Laddar.."
 
-#: templates/enterlink/edit.html:128
-msgid "Change Picture"
-msgstr "Ändrar bild"
-
-#: templates/enterlink/edit.html:144
+#: templates/enterlink/edit.html:103
 msgid "Please enter the destination page you wish to merge this one into"
 msgstr "Vänligen ange destinationssidan som du vill slå samman i den här"
 
-#: templates/enterlink/edit.html:149
+#: templates/enterlink/edit.html:104 templates/enterlink/search-iframe.html:122
+#: templates/enterlink/search.html:27
+msgid "Search Everipedia"
+msgstr "Sök på Everipedia"
+
+#: templates/enterlink/edit.html:108
 msgid "Merge Page"
 msgstr "Sammanfoga sida"
 
-#: templates/enterlink/edit.html:156 templates/enterlink/edit.html:165
-#: templates/enterlink/edit.html:174 templates/enterlink/edit.html:183
-#: templates/enterlink/edit.html:192 templates/enterlink/edit.html:202
+#: templates/enterlink/edit.html:115 templates/enterlink/edit.html:123
+#: templates/enterlink/edit.html:132 templates/enterlink/edit.html:141
+#: templates/enterlink/edit.html:150 templates/enterlink/edit.html:160
 msgid "Hey there scholar!"
 msgstr "Hej där lärde!"
 
-#: templates/enterlink/edit.html:157
+#: templates/enterlink/edit.html:116
 msgid ""
 "Looks like you have been editing for a while. You should take a moment to "
 "save your work before continuing!"
@@ -791,11 +461,7 @@ msgstr ""
 "Det ser ut som om du har redigerat ett tag. Du bör ta ett ögonblick för att "
 "spara ditt jobb innan du fortsätter!"
 
-#: templates/enterlink/edit.html:158
-msgid "Save"
-msgstr "Spara"
-
-#: templates/enterlink/edit.html:166
+#: templates/enterlink/edit.html:124
 msgid ""
 "Looks like you are using first-person! (ex: Our product, I am, We are, You "
 "should). Everipedia is a neutral encyclopedia written in third-person tense "
@@ -805,17 +471,17 @@ msgstr ""
 "är, Du borde). Everipedia är ett neutralt encyklopedi skrivet i tredje "
 "persons tid (t.ex: Det är, De är, Företaget gör). DETTA ÄR INTE FACEBOOK!!"
 
-#: templates/enterlink/edit.html:175
+#: templates/enterlink/edit.html:133
 msgid "Please enter a title for the page."
 msgstr "Ange en titel för sidan."
 
-#: templates/enterlink/edit.html:184
+#: templates/enterlink/edit.html:142
 msgid ""
 "Please write something for the article section. Make sure to use citations."
 msgstr ""
 "Vänligen skriv något för artikelavsnittet. Se till att du använder citat."
 
-#: templates/enterlink/edit.html:193
+#: templates/enterlink/edit.html:151
 msgid ""
 "Hello! This page needs citations (also known as footnotes, references, "
 "sources) before it can be saved. Add the links you're using as sources with "
@@ -825,15 +491,15 @@ msgstr ""
 "källor) innan den kan sparas. Lägg till länkarna som du använder som källor "
 "med citatknappen ovan."
 
-#: templates/enterlink/edit.html:194
+#: templates/enterlink/edit.html:152
 msgid "Join our official Facebook group if you need help with it!:"
 msgstr "Gå med i vår officiella Facebook-grupp om du behöver hjälp med det!:"
 
-#: templates/enterlink/edit.html:194
+#: templates/enterlink/edit.html:152
 msgid "- we will hook you up. It's not hard!"
 msgstr "- vi kommer att hämta dig. Det är inte svårt!"
 
-#: templates/enterlink/edit.html:203
+#: templates/enterlink/edit.html:161
 msgid ""
 "Please cite the link(s) you just added into the main article body. First "
 "click at the end of the sentence or paragraph you want to cite, then click "
@@ -843,23 +509,23 @@ msgstr ""
 "först på slutet av meningen eller stycket du vill citera, klicka sedan på "
 "knappen (Citera) på redigeringspanelen ovan!"
 
-#: templates/enterlink/edit_ajax_addinfobox.html:10
+#: templates/enterlink/edit_ajax_addinfobox.html:11
 msgid "Add New Infobox Item"
 msgstr "Lägg till nytt Infobox-objekt"
 
-#: templates/enterlink/edit_ajax_addinfobox.html:14
+#: templates/enterlink/edit_ajax_addinfobox.html:15
 msgid "Enter a classification or category"
 msgstr "Ange en klassificering eller kategori"
 
-#: templates/enterlink/edit_ajax_addinfobox.html:17
+#: templates/enterlink/edit_ajax_addinfobox.html:18
 msgid "Enter a value or a description"
 msgstr "Ange ett värde eller en beskrivning"
 
-#: templates/enterlink/edit_ajax_addinfobox.html:23
+#: templates/enterlink/edit_ajax_addinfobox.html:24
 msgid "Add Infobox Item"
 msgstr "Lägg till Infobox-artikel"
 
-#: templates/enterlink/edit_ajax_addinfobox.html:25
+#: templates/enterlink/edit_ajax_addinfobox.html:26
 #: templates/enterlink/edit_ajax_addlink.html:26
 #: templates/enterlink/edit_ajax_editpagemeta.html:15
 #: templates/enterlink/edit_ajax_page_photo.html:4
@@ -906,34 +572,34 @@ msgstr "Ta bort sida"
 msgid "Editing existing pages temporarily disabled"
 msgstr "Redigering av befintliga sidor tillfälligt inaktiverad"
 
-#: templates/enterlink/editors.html:23
+#: templates/enterlink/editors.html:22
 msgid "Editors"
 msgstr "Redigerare"
 
-#: templates/enterlink/editors.html:74
+#: templates/enterlink/editors.html:73
 msgid "Everipedia Editors"
 msgstr "Everipedia-redaktörer"
 
-#: templates/enterlink/editors.html:93 templates/enterlink/inbox.html:52
-#: templates/enterlink/recent-activity.html:103
+#: templates/enterlink/editors.html:92
+#: templates/enterlink/recent-activity.html:106
 #: templates/enterlink/search.html:89
 msgid "Previous"
 msgstr "Föregående"
 
-#: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
-#: templates/enterlink/recent-activity.html:107
+#: templates/enterlink/editors.html:96
+#: templates/enterlink/recent-activity.html:110
 #: templates/enterlink/search.html:93
 msgid "Page"
 msgstr "Sida"
 
-#: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
-#: templates/enterlink/recent-activity.html:107
+#: templates/enterlink/editors.html:96
+#: templates/enterlink/recent-activity.html:110
 #: templates/enterlink/search.html:93
 msgid "of"
 msgstr "av"
 
-#: templates/enterlink/editors.html:101 templates/enterlink/inbox.html:60
-#: templates/enterlink/recent-activity.html:111
+#: templates/enterlink/editors.html:100
+#: templates/enterlink/recent-activity.html:114
 #: templates/enterlink/search.html:97
 msgid "Next"
 msgstr "Nästa"
@@ -942,19 +608,18 @@ msgstr "Nästa"
 msgid "Page not found!"
 msgstr "Sidan kan inte hittas!"
 
-#: templates/enterlink/error.html:211
+#: templates/enterlink/error.html:195
 msgid "Page not found"
 msgstr "Sidan hittades inte"
 
-#: templates/enterlink/error.html:213
+#: templates/enterlink/error.html:197
 msgid "In The News"
 msgstr "Nyheter"
 
-#: templates/enterlink/error.html:214
-#: templates/enterlink/headers/header_dropdown.html:37
+#: templates/enterlink/error.html:198
+#: templates/enterlink/headers/header_dropdown.html:27
 #: templates/enterlink/recent-activity.html:7
-#: templates/enterlink/recent-activity.html:73
-#: templates/enterlink/user.html:192
+#: templates/enterlink/recent-activity.html:76
 msgid "Recent Activity"
 msgstr "Senaste aktivitet"
 
@@ -963,7 +628,7 @@ msgid "This page has been removed"
 msgstr "Den här sidan har tagits bort"
 
 #: templates/enterlink/error_410.html:63
-#: templates/enterlink/in_progress_404.html:86
+#: templates/enterlink/in_progress_404.html:71
 msgid "Click here to return to recent activity"
 msgstr "Klicka här för att återgå till den senaste aktiviteten"
 
@@ -983,110 +648,15 @@ msgstr "Följande utbyten indikerade att de kommer att stödja IQ-airdrop"
 msgid "Supported Wallets"
 msgstr "Stödda plånböcker"
 
-#: templates/enterlink/exchange-listings.html:176
+#: templates/enterlink/exchange-listings.html:184
 msgid "Token Pockets"
 msgstr "Tokenfickor"
-
-#: templates/enterlink/faq.html:20
-msgid "Frequently Asked Questions"
-msgstr "Vanliga frågor"
-
-#: templates/enterlink/faq.html:24
-msgid "What is Everipedia?"
-msgstr "Vad är Everipedia?"
-
-#: templates/enterlink/faq.html:25
-msgid ""
-"Everipedia is a knowledge aggregator and knowledge base. We think it's much "
-"easier to edit than Wikipedia. Anyone can create a page about any person, "
-"place, organization, or thing and populate it with relevant reference links/"
-"sources. The only main rules of EP are: Information on the page must always "
-"be cited and the article must be in a neutral point of view. Check out the "
-"actual entry for Everipedia... on"
-msgstr ""
-"Everipedia är en kunskapsgenerator och kunskapsbas. Vi tycker att det är "
-"mycket lättare att redigera än Wikipedia. Vem som helst kan skapa en sida om "
-"någon person, plats, organisation eller sak och fylla den med relevanta "
-"referenslänkar/källor. De enda viktigaste reglerna i EP är: Informationen på "
-"sidan måste alltid citeras och artikeln måste vara neutral. Kolla in den "
-"faktiska posten för Everipedia ... på"
-
-#: templates/enterlink/faq.html:27
-msgid "Why should I sign up?"
-msgstr "Varför ska jag anmäla mig?"
-
-#: templates/enterlink/faq.html:28
-msgid ""
-"Because it’s fun and easy! We thought contributing to large knowledge "
-"projects shouldn't require high barriers to entry so we made Everipedia very "
-"easy to navigate, edit, and get started. Editors gain more privileges as "
-"they accumulate IQ and rise through the ranks. Top site-wide editors are "
-"displayed on the front page. Top editors for each page are also displayed."
-msgstr ""
-"Eftersom det är roligt och enkelt! Vi trodde inte att bidragandet till stora "
-"kunskapsprojekt skulle kräva stora hinder för tillträde så avi gjorde "
-"Everipedia väldigt lätt att navigera på, redigera och komma igång. "
-"Redaktörer får fler privilegier eftersom de ackumulerar IQ och stiger genom "
-"ledningarna. De bästa webbplatsredigerarna visas på framsidan. "
-"Toppredigerare för varje sida visas också."
-
-#: templates/enterlink/faq.html:30
-msgid "Try it!"
-msgstr "Testa!"
-
-#: templates/enterlink/faq.html:30
-msgid "Sign up here"
-msgstr "Anmäl dig här"
-
-#: templates/enterlink/faq.html:32
-msgid "So how is Everipedia different from Wikipedia and similar sites?"
-msgstr "Så hur skiljer sig Everipedia från Wikipedia och liknande webbplatser?"
-
-#: templates/enterlink/faq.html:33
-msgid ""
-"Editing on Everipedia is graphic and modern, talk pages are designed as "
-"discussion threads, celebrities have verified accounts, and anyone can make "
-"pages about anything as long as they are properly cited. Every page from "
-"Wikipedia is already here on Everipedia to build on top of and improve. All "
-"this makes EP the biggest knowledge project ever!"
-msgstr ""
-"Redigering på Everipedia är grafisk och modern, pratsidor är utformade som "
-"diskussioner, kändisar har verifierade konton, och alla kan göra sidor om "
-"någonting så länge de är korrekt citerade. Varje sida från Wikipedia finns "
-"redan på Everipedia för att bygga på och förbättra. Allt detta gör EP det "
-"största kunskapsprojektet någonsin!"
-
-#: templates/enterlink/faq.html:35
-msgid "Is Everipedia free?"
-msgstr "Är Everipedia fri?"
-
-#: templates/enterlink/faq.html:36
-msgid ""
-"All information found on Everipedia is freely available for anyone to use "
-"and access. All we ask is a link back to the source Everipedia page for "
-"attribution purposes. The information on this encyclopedia is meant to be "
-"free to all. We will never charge for or withhold any of the information on "
-"this website. We just ask that you do not throttle the site and "
-"programmatically harvest information that would dramatically affect our "
-"servers."
-msgstr ""
-"All information som finns på Everipedia är fritt tillgänglig för alla att "
-"använda och få tillgång till. Allt vi frågar är en länk tillbaka till källan "
-"Everipedia-sida för tillskrivningsändamål. Informationen i denna encyklopedi "
-"är menad att vara fri för alla. Vi tar aldrig ut eller hämtar någon av "
-"informationen på denna webbplats. Vi ber bara att du inte smutsar på sajten "
-"och programmatiskt skördar information som dramatiskt skulle påverka våra "
-"servrar."
-
-#: templates/enterlink/faq.html:42
-msgid "Much love,"
-msgstr "Mycket kärlek,"
 
 #: templates/enterlink/footers/desktop_footer.html:5
 #: templates/enterlink/footers/footer_no_extras.html:5
 #: templates/enterlink/footers/index_footer.html:23
-#: templates/enterlink/footers/mobile_footer.html:130
-#: templates/enterlink/template_blockchain_styled_amp.html:548
+#: templates/enterlink/footers/mobile_footer.html:137
+#: templates/enterlink/template_blockchain_styled_amp.html:516
 msgid "About"
 msgstr "Om"
 
@@ -1094,8 +664,8 @@ msgstr "Om"
 #: templates/enterlink/footers/footer_no_extras.html:6
 #: templates/enterlink/footers/index_footer.html:7
 #: templates/enterlink/footers/index_footer.html:25
-#: templates/enterlink/footers/mobile_footer.html:131
-#: templates/enterlink/template_blockchain_styled_amp.html:549
+#: templates/enterlink/footers/mobile_footer.html:138
+#: templates/enterlink/template_blockchain_styled_amp.html:517
 msgid "FAQ"
 msgstr "FAQ"
 
@@ -1103,8 +673,8 @@ msgstr "FAQ"
 #: templates/enterlink/footers/footer_no_extras.html:7
 #: templates/enterlink/footers/index_footer.html:8
 #: templates/enterlink/footers/index_footer.html:26
-#: templates/enterlink/footers/mobile_footer.html:132
-#: templates/enterlink/template_blockchain_styled_amp.html:550
+#: templates/enterlink/footers/mobile_footer.html:139
+#: templates/enterlink/template_blockchain_styled_amp.html:518
 msgid "Contact"
 msgstr "Kontakt"
 
@@ -1112,8 +682,8 @@ msgstr "Kontakt"
 #: templates/enterlink/footers/footer_no_extras.html:9
 #: templates/enterlink/footers/index_footer.html:9
 #: templates/enterlink/footers/index_footer.html:27
-#: templates/enterlink/footers/mobile_footer.html:136
-#: templates/enterlink/template_blockchain_styled_amp.html:552
+#: templates/enterlink/footers/mobile_footer.html:143
+#: templates/enterlink/template_blockchain_styled_amp.html:520
 msgid "Terms"
 msgstr "Villkor"
 
@@ -1121,21 +691,16 @@ msgstr "Villkor"
 #: templates/enterlink/footers/footer_no_extras.html:10
 #: templates/enterlink/footers/index_footer.html:10
 #: templates/enterlink/footers/index_footer.html:28
-#: templates/enterlink/footers/mobile_footer.html:134
-#: templates/enterlink/headers/header_dropdown.html:17
-#: templates/enterlink/headers/header_dropdown.html:38
-#: templates/enterlink/headers/index_header.html:164
-#: templates/enterlink/headers/index_header.html:173
-#: templates/enterlink/headers/index_header.html:233
-#: templates/enterlink/headers/index_header.html:242
-#: templates/enterlink/headers/index_header.html:264
-#: templates/enterlink/headers/mobile-navbar.html:131
-#: templates/enterlink/headers/mobile-navbar.html:198
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:190
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:238
-#: templates/enterlink/template_blockchain_styled_amp.html:551
-#: templates/enterlink/template_blockchain_styled_amp.html:629
-#: templates/enterlink/template_blockchain_styled_amp.html:687
+#: templates/enterlink/footers/mobile_footer.html:141
+#: templates/enterlink/headers/header_dropdown.html:7
+#: templates/enterlink/headers/header_dropdown.html:28
+#: templates/enterlink/headers/index_header.html:128
+#: templates/enterlink/headers/index_header.html:153
+#: templates/enterlink/headers/index_header.html:157
+#: templates/enterlink/headers/mobile-navbar.html:98
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:138
+#: templates/enterlink/template_blockchain_styled_amp.html:519
+#: templates/enterlink/template_blockchain_styled_amp.html:594
 msgid "Forum"
 msgstr "Forum"
 
@@ -1143,29 +708,36 @@ msgstr "Forum"
 #: templates/enterlink/footers/footer_no_extras.html:11
 #: templates/enterlink/footers/index_footer.html:11
 #: templates/enterlink/footers/index_footer.html:29
-#: templates/enterlink/footers/mobile_footer.html:137
-#: templates/enterlink/headers/header_dropdown.html:18
-#: templates/enterlink/headers/header_dropdown.html:40
-#: templates/enterlink/template_blockchain_styled_amp.html:553
+#: templates/enterlink/footers/mobile_footer.html:144
+#: templates/enterlink/headers/header_dropdown.html:8
+#: templates/enterlink/headers/header_dropdown.html:30
+#: templates/enterlink/template_blockchain_styled_amp.html:521
 msgid "Get IQ"
 msgstr "Få IQ"
 
 #: templates/enterlink/footers/desktop_footer.html:30
 #: templates/enterlink/footers/footer_no_extras.html:31
-#: templates/enterlink/footers/mobile_footer.html:157
-#: templates/enterlink/template_blockchain_styled_amp.html:577
+#: templates/enterlink/footers/mobile_footer.html:164
+#: templates/enterlink/template_blockchain_styled_amp.html:545
 msgid "Powered by"
 msgstr "Drivs av"
 
 #: templates/enterlink/footers/desktop_footer.html:35
 #: templates/enterlink/footers/footer_no_extras.html:36
-#: templates/enterlink/footers/mobile_footer.html:161
-#: templates/enterlink/template_blockchain_styled_amp.html:581
+#: templates/enterlink/footers/mobile_footer.html:168
+#: templates/enterlink/template_blockchain_styled_amp.html:549
 msgid "API by"
 msgstr "API av"
 
-#: templates/enterlink/footers/desktop_footer.html:43
-#: templates/enterlink/footers/footer_no_extras.html:44
+#: templates/enterlink/footers/desktop_footer.html:40
+#: templates/enterlink/footers/footer_no_extras.html:41
+#: templates/enterlink/footers/mobile_footer.html:172
+#: templates/enterlink/template_blockchain_styled_amp.html:553
+msgid "and"
+msgstr "och"
+
+#: templates/enterlink/footers/desktop_footer.html:48
+#: templates/enterlink/footers/footer_no_extras.html:49
 #: templates/enterlink/headers/desktop-navbar-index.html:6
 #: templates/enterlink/headers/index_header.html:93
 #: templates/enterlink/language_selector.html:80
@@ -1197,210 +769,152 @@ msgstr "Användning"
 
 #: templates/enterlink/footers/index_footer.html:12
 #: templates/enterlink/footers/index_footer.html:30
-#: templates/enterlink/footers/mobile_footer.html:133
+#: templates/enterlink/footers/mobile_footer.html:140
 msgid "Donate"
 msgstr "Donera"
 
-#: templates/enterlink/footers/mobile_footer.html:124
-#: templates/enterlink/template_blockchain_styled_amp.html:559
+#: templates/enterlink/footers/mobile_footer.html:131
+#: templates/enterlink/template_blockchain_styled_amp.html:527
 msgid "By using this website, you agree to the"
 msgstr "Genom att använda denna webbplats godkänner du"
 
-#: templates/enterlink/footers/mobile_footer.html:124
-#: templates/enterlink/template_blockchain_styled_amp.html:559
+#: templates/enterlink/footers/mobile_footer.html:131
+#: templates/enterlink/template_blockchain_styled_amp.html:527
 msgid "Terms of Use"
 msgstr "Användningsvillkor"
 
-#: templates/enterlink/footers/mobile_footer.html:124
-#: templates/enterlink/template_blockchain_styled_amp.html:559
+#: templates/enterlink/footers/mobile_footer.html:131
+#: templates/enterlink/template_blockchain_styled_amp.html:527
 msgid "Everipedia® is a trademark of Everipedia International"
 msgstr "Everipedia® är ett varumärke som tillhör Everipedia International"
 
-#: templates/enterlink/footers/mobile_footer.html:135
-#: templates/enterlink/headers/index_header.html:165
-#: templates/enterlink/headers/index_header.html:174
-#: templates/enterlink/headers/index_header.html:234
-#: templates/enterlink/headers/index_header.html:243
-#: templates/enterlink/headers/index_header.html:265
-#: templates/enterlink/headers/mobile-navbar.html:138
-#: templates/enterlink/headers/mobile-navbar.html:204
-#: templates/enterlink/template_blockchain_styled_amp.html:694
+#: templates/enterlink/footers/mobile_footer.html:142
+#: templates/enterlink/headers/mobile-navbar.html:104
 msgid "Chat"
 msgstr "Chatta"
 
 #: templates/enterlink/headers/desktop-navbar-index.html:29
-#: templates/enterlink/headers/desktop-navbar.html:39
-#: templates/enterlink/headers/index_header.html:156
-#: templates/enterlink/howto.html:61 templates/enterlink/search.html:7
+#: templates/enterlink/headers/desktop-navbar.html:38
+#: templates/enterlink/headers/index_header.html:124
+#: templates/enterlink/search.html:7
 msgid "Search"
 msgstr "Sök"
 
-#: templates/enterlink/headers/desktop-navbar-index.html:42
-#: templates/enterlink/headers/desktop-navbar-index.html:50
-#: templates/enterlink/headers/desktop-navbar-index.html:60
-#: templates/enterlink/headers/desktop-navbar.html:20
-#: templates/enterlink/headers/desktop-navbar.html:57
-#: templates/enterlink/headers/desktop-navbar.html:67
-#: templates/enterlink/headers/header_dropdown.html:14
-#: templates/enterlink/headers/header_dropdown.html:36
-#: templates/enterlink/headers/index_header.html:231
-#: templates/enterlink/headers/mobile-navbar.html:145
-#: templates/enterlink/headers/mobile-navbar.html:186
-#: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
-#: templates/enterlink/howto.html:74 templates/enterlink/index.html:64
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:51
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:91
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:196
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:232
-#: templates/enterlink/template_blockchain_styled_amp.html:615
-#: templates/enterlink/template_blockchain_styled_amp.html:701
-#: templates/enterlink/user.html:64
-msgid "Create Page"
-msgstr "Skapa sida"
-
-#: templates/enterlink/headers/desktop-navbar-index.html:49
-#: templates/enterlink/headers/desktop-navbar.html:19
-#: templates/enterlink/howto.html:73 templates/enterlink/index.html:63
+#: templates/enterlink/headers/desktop-navbar-index.html:47
+#: templates/enterlink/headers/desktop-navbar.html:18
+#: templates/enterlink/index.html:62
 msgid "Paste a link or enter a title"
 msgstr "Klistra in en länk eller skriv in en titel"
 
-#: templates/enterlink/headers/desktop-navbar-index.html:66
-#: templates/enterlink/headers/desktop-navbar.html:73
-#: templates/enterlink/headers/header_dropdown.html:16
-#: templates/enterlink/headers/header_dropdown.html:35
-#: templates/enterlink/headers/index_header.html:162
-#: templates/enterlink/headers/index_header.html:201
-#: templates/enterlink/headers/index_header.html:232
-#: templates/enterlink/headers/mobile-navbar.html:124
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:45
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:184
+#: templates/enterlink/headers/desktop-navbar-index.html:48
+#: templates/enterlink/headers/desktop-navbar-index.html:58
+#: templates/enterlink/headers/desktop-navbar.html:19
+#: templates/enterlink/headers/desktop-navbar.html:56
+#: templates/enterlink/headers/desktop-navbar.html:66
+#: templates/enterlink/headers/header_dropdown.html:26
+#: templates/enterlink/index.html:63
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:50
+msgid "Create Page"
+msgstr "Skapa sida"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:64
+#: templates/enterlink/headers/desktop-navbar.html:72
+#: templates/enterlink/headers/header_dropdown.html:25
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:44
 #: templates/enterlink/notifications/index.html:67
 #: templates/enterlink/notifications/index.html:97
-#: templates/enterlink/template_blockchain_styled_amp.html:680
 msgid "Messages"
 msgstr "Meddelanden"
 
-#: templates/enterlink/headers/desktop-navbar-index.html:72
-#: templates/enterlink/headers/desktop-navbar.html:79
-#: templates/enterlink/headers/header_dropdown.html:15
-#: templates/enterlink/headers/header_dropdown.html:34
-#: templates/enterlink/headers/index_header.html:206
-#: templates/enterlink/headers/index_header.html:230
-#: templates/enterlink/headers/mobile-navbar.html:117
-#: templates/enterlink/inbox.html:12
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:39
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:178
+#: templates/enterlink/headers/desktop-navbar-index.html:70
+#: templates/enterlink/headers/desktop-navbar.html:78
+#: templates/enterlink/headers/header_dropdown.html:24
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:38
 #: templates/enterlink/notifications/index.html:96
-#: templates/enterlink/template_blockchain_styled_amp.html:673
 msgid "Notifications"
 msgstr "Notifieringar"
 
-#: templates/enterlink/headers/desktop-navbar-index.html:84
-#: templates/enterlink/headers/desktop-navbar.html:96
-#: templates/enterlink/headers/index_header.html:217
+#: templates/enterlink/headers/desktop-navbar-index.html:81
+#: templates/enterlink/headers/desktop-navbar.html:95
 msgid "Your IQ Score"
 msgstr "Din IQ-poäng"
 
-#: templates/enterlink/headers/desktop-navbar.html:29
+#: templates/enterlink/headers/desktop-navbar.html:28
 msgid "Table of contents"
 msgstr "Innehållsförteckning"
 
-#: templates/enterlink/headers/desktop-navbar.html:29
-#: templates/enterlink/template_blockchain_styled_amp.html:105
+#: templates/enterlink/headers/desktop-navbar.html:28
+#: templates/enterlink/template_blockchain_styled_amp.html:102
 msgid "Table of contents and facts for this wiki"
 msgstr "Innehållsförteckning och fakta för denna wiki"
 
-#: templates/enterlink/headers/desktop-navbar.html:62
-#: templates/enterlink/headers/mobile-navbar.html:159
-#: templates/enterlink/headers/mobile-navbar.html:210
-#: templates/enterlink/template_blockchain_styled_amp.html:635
-#: templates/enterlink/template_blockchain_styled_amp.html:715
+#: templates/enterlink/headers/desktop-navbar.html:61
+#: templates/enterlink/headers/mobile-navbar.html:110
+#: templates/enterlink/template_blockchain_styled_amp.html:600
 msgid "Feed"
 msgstr "Flöde"
 
-#: templates/enterlink/headers/desktop-navbar.html:87
+#: templates/enterlink/headers/desktop-navbar.html:86
 msgid "Please log in with Scatter"
 msgstr "Logga in med Scatter"
 
-#: templates/enterlink/headers/header_dropdown.html:8
-#: templates/enterlink/headers/header_dropdown.html:28
+#: templates/enterlink/headers/header_dropdown.html:12
+#: templates/enterlink/headers/header_dropdown.html:34
+#: templates/enterlink/notifications/index.html:100
+#: templates/enterlink/notifications/index.html:105
+msgid "Log out"
+msgstr "Logga ut"
+
+#: templates/enterlink/headers/header_dropdown.html:18
 msgid "Claim Rewards"
 msgstr ""
 
-#: templates/enterlink/headers/header_dropdown.html:39
-#: templates/enterlink/headers/mobile-navbar.html:153
-#: templates/enterlink/headers/mobile-navbar.html:192
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:68
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:101
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:208
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:250
-#: templates/enterlink/template_blockchain_styled_amp.html:622
-#: templates/enterlink/template_blockchain_styled_amp.html:708
-#: templates/enterlink/user.html:126
+#: templates/enterlink/headers/header_dropdown.html:29
+#: templates/enterlink/headers/mobile-navbar.html:92
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:67
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:90
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:144
+#: templates/enterlink/template_blockchain_styled_amp.html:587
 msgid "Help"
 msgstr "Hjälp"
 
-#: templates/enterlink/headers/index_header.html:109
-msgid "View Profile"
-msgstr "Visa profil"
-
-#: templates/enterlink/headers/index_header.html:128
+#: templates/enterlink/headers/index_header.html:101
 msgid "Sign In"
 msgstr "Logga in"
 
-#: templates/enterlink/headers/index_header.html:128
-#: templates/enterlink/headers/index_header.html:172
-#: templates/enterlink/headers/index_header.html:241
-#: templates/enterlink/headers/index_header.html:263
-#: templates/enterlink/index.html:47
+#: templates/enterlink/headers/index_header.html:101
+#: templates/enterlink/index.html:46
 msgid "Register"
 msgstr "Registrera"
 
-#: templates/enterlink/headers/index_header.html:132
+#: templates/enterlink/headers/index_header.html:105
 #: templates/enterlink/login.html:36
 msgid "Username"
 msgstr "Användarnamn"
 
-#: templates/enterlink/headers/index_header.html:139
-msgid "Need an account? Register here."
-msgstr "Behöver du ett konto? Registrera här!"
+#: templates/enterlink/headers/index_header.html:106
+#: templates/enterlink/login.html:40
+msgid "Password"
+msgstr "Lösenord"
 
-#: templates/enterlink/headers/index_header.html:140
-#: templates/enterlink/headers/index_header.html:171
-#: templates/enterlink/login.html:41
-msgid "Forgot your password?"
-msgstr "Glömt ditt lösenord?"
+#: templates/enterlink/headers/index_header.html:108
+#: templates/enterlink/headers/index_header.html:152
+#: templates/enterlink/login.html:45
+msgid "Log in"
+msgstr "Logga in"
 
-#: templates/enterlink/headers/index_header.html:163
-#: templates/enterlink/inbox.html:23
-msgid "Your Notifications"
-msgstr "Dina notiser"
-
-#: templates/enterlink/headers/index_header.html:222
-msgid "Get an account"
-msgstr "Skaffa ett konto"
-
-#: templates/enterlink/headers/index_header.html:222
-msgid "or Log in"
-msgstr "eller logga in"
-
-#: templates/enterlink/headers/index_header.html:235
-#: templates/enterlink/headers/index_header.html:244
-#: templates/enterlink/headers/index_header.html:257
-#: templates/enterlink/headers/index_header.html:266
-#: templates/enterlink/headers/mobile-navbar.html:165
-#: templates/enterlink/headers/mobile-navbar.html:216
-#: templates/enterlink/template_blockchain_styled_amp.html:641
+#: templates/enterlink/headers/index_header.html:154
+#: templates/enterlink/headers/index_header.html:158
+#: templates/enterlink/headers/mobile-navbar.html:116
+#: templates/enterlink/template_blockchain_styled_amp.html:606
 msgid "Language"
 msgstr "Språk"
 
-#: templates/enterlink/headers/mobile-navbar.html:178
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:224
-#: templates/enterlink/template_blockchain_styled_amp.html:606
+#: templates/enterlink/headers/mobile-navbar.html:84
 msgid "Register / Log in"
 msgstr "Registrera inloggning"
 
-#: templates/enterlink/hoverblurb_ajax_blockchain.html:65
+#: templates/enterlink/hoverblurb_ajax_blockchain.html:64
 msgid "Go to article"
 msgstr "Gå till artikeln"
 
@@ -1428,7 +942,7 @@ msgstr "Senaste inloggning"
 msgid "Go to Editor's Profile"
 msgstr "Gå till redaktörens profil"
 
-#: templates/enterlink/hoverlink_ajax_blockchain.html:64
+#: templates/enterlink/hoverlink_ajax_blockchain.html:59
 msgid "Discuss Citation"
 msgstr "Diskutera citat"
 
@@ -1442,61 +956,25 @@ msgstr "Direktlänk"
 
 #: templates/enterlink/hoverlink_iframe_blockchain.html:64
 #: templates/enterlink/hoverlink_iframe_blockchain.html:65
-#: templates/enterlink/template_blockchain_styled_desktop.html:195
-#: templates/enterlink/template_blockchain_styled_desktop.html:196
+#: templates/enterlink/template_blockchain_styled_desktop.html:185
+#: templates/enterlink/template_blockchain_styled_desktop.html:186
 msgid "Share"
 msgstr "Dela"
 
 #: templates/enterlink/hoverlink_iframe_blockchain.html:68
-#: templates/enterlink/template_blockchain_styled_desktop.html:202
+#: templates/enterlink/template_blockchain_styled_desktop.html:192
 msgid "Copy URL"
 msgstr "Kopiera webbadress"
 
-#: templates/enterlink/hoverlink_iframe_blockchain.html:118
+#: templates/enterlink/hoverlink_iframe_blockchain.html:115
 msgid "Play / Pause"
 msgstr "Spela / Pausa"
-
-#: templates/enterlink/howto.html:8 templates/enterlink/howto.html:30
-msgid "How to use Everipedia"
-msgstr "Hur man använder Everipedia"
-
-#: templates/enterlink/howto.html:10 templates/enterlink/limitreached.html:9
-msgid ""
-"Everipedia is a free and easy to use wiki platform. Write about anyone and "
-"anything!"
-msgstr ""
-"Everipedia är en gratis och lättanvänd wikiplattform. Skriv om någon och "
-"något!"
-
-#: templates/enterlink/howto.html:36 templates/enterlink/howto.html:45
-msgid "Go back to the page you started from"
-msgstr "Gå tillbaka till sidan du startade från"
-
-#: templates/enterlink/howto.html:40 templates/enterlink/howto.html:45
-msgid "Go to page"
-msgstr "Gå till sida"
-
-#: templates/enterlink/howto.html:50
-msgid "Go to your editor profile page"
-msgstr "Gå till din redaktörs profilsida"
-
-#: templates/enterlink/howto.html:50
-msgid "Go to profile"
-msgstr "Gå till profil"
-
-#: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
-msgid "Create a new page now"
-msgstr "Skapa ny sida"
-
-#: templates/enterlink/howto.html:61
-msgid "Search for an existing page"
-msgstr "Sök efter en befintlig sida"
 
 #: templates/enterlink/in_progress_404.html:6
 msgid "This page is currently being created by another user"
 msgstr "Den här sidan skapas för närvarande av en annan användare"
 
-#: templates/enterlink/in_progress_404.html:82
+#: templates/enterlink/in_progress_404.html:67
 msgid ""
 "This page is currently in the process of being created by another user. "
 "Please return later!"
@@ -1504,23 +982,11 @@ msgstr ""
 "Den här sidan är för närvarande på väg att skapas av en annan användare. "
 "Vänligen kom tillbaka senare!"
 
-#: templates/enterlink/inbox.html:30
-msgid "You have"
-msgstr "Du har"
-
-#: templates/enterlink/inbox.html:30
-msgid "unread notifications"
-msgstr "olästa meddelanden."
-
-#: templates/enterlink/inbox.html:45
-msgid "You currently do not have any notifications."
-msgstr "Du har för närvarande inga meddelanden."
-
-#: templates/enterlink/index.html:40
+#: templates/enterlink/index.html:39
 msgid "The world's first encyclopedia on the blockchain"
 msgstr "Världens första encyklopedi på blockchain"
 
-#: templates/enterlink/index.html:41
+#: templates/enterlink/index.html:40
 msgid ""
 "Everipedia's IQ Network is the world's first Encyclopedia that allows anyone "
 "to become a stakeholder in the system and earn rank, rewards & tokens for "
@@ -1530,19 +996,19 @@ msgstr ""
 "för någon att bli en intressent i systemet och tjäna rang, belöningar och "
 "tokens för att kurera innehåll."
 
-#: templates/enterlink/index.html:48
+#: templates/enterlink/index.html:47
 msgid "Learn more"
 msgstr "Läs mer"
 
-#: templates/enterlink/index.html:79
+#: templates/enterlink/index.html:76
 msgid "As Seen In"
 msgstr ""
 
-#: templates/enterlink/index.html:100
+#: templates/enterlink/index.html:97
 msgid "An Encyclopedia for the modern age"
 msgstr "En Encyclopedia för modern ålder"
 
-#: templates/enterlink/index.html:104
+#: templates/enterlink/index.html:101
 msgid ""
 "The Everipedia IQ blockchain provides a new paradigm change and knowledge "
 "economy to disrupt the old centralized internet knowledge encyclopedia model "
@@ -1556,11 +1022,11 @@ msgstr ""
 "backend värd inom en blockchain, kommer den nya kunskapsbasen i Everipedia "
 "att kunna förbättra alla grundläggande funktioner i Wikipedia."
 
-#: templates/enterlink/index.html:112
+#: templates/enterlink/index.html:109
 msgid "Decentralized"
 msgstr "Decentralisering"
 
-#: templates/enterlink/index.html:113
+#: templates/enterlink/index.html:110
 msgid ""
 "Articles are fetched using IPFS and EOS Storage. Majority of IQ being "
 "distributed during the airdrop."
@@ -1568,11 +1034,11 @@ msgstr ""
 "Artiklar hämtas med hjälp av IPFS och EOS Storage. Majoriteten av IQ "
 "distribueras under airdrop."
 
-#: templates/enterlink/index.html:117
+#: templates/enterlink/index.html:114
 msgid "Democratic"
 msgstr "Demokrati"
 
-#: templates/enterlink/index.html:118
+#: templates/enterlink/index.html:115
 msgid ""
 "Proof of Stake (PoS) model allows for voting to change and upgrade the IQ "
 "network as it grows. Also will facilitate batch imports of new content with "
@@ -1582,11 +1048,11 @@ msgstr ""
 "IQ-nätverket när det växer. Också kommer att underlätta satsvis import av "
 "nytt innehåll utan avgifter."
 
-#: templates/enterlink/index.html:122
+#: templates/enterlink/index.html:119
 msgid "Censorship Resistant"
 msgstr "Censurbeständig"
 
-#: templates/enterlink/index.html:123
+#: templates/enterlink/index.html:120
 msgid ""
 "Live and permanent edits of content on the blockchain beyond the control of "
 "a central authority."
@@ -1594,11 +1060,11 @@ msgstr ""
 "Levande och permanenta redigeringar av innehåll på blockchain bortom "
 "kontrollen av en central myndighet."
 
-#: templates/enterlink/index.html:127
+#: templates/enterlink/index.html:124
 msgid "Financial Incentive"
 msgstr "Ekonomiska incitament"
 
-#: templates/enterlink/index.html:128
+#: templates/enterlink/index.html:125
 msgid ""
 "All holders of IQ will be incentivized to create quality, neutral content "
 "and to work together in building the reputation of the network."
@@ -1606,15 +1072,15 @@ msgstr ""
 "Alla innehavare av IQ kommer att incitament för att skapa kvalitet, neutralt "
 "innehåll och att arbeta tillsammans för att bygga nätverkets rykte."
 
-#: templates/enterlink/index.html:139
+#: templates/enterlink/index.html:136
 msgid "Become an editor today and start creating your own wiki articles."
 msgstr "Bli en redaktör idag och börja skapa dina egna wiki-artiklar."
 
-#: templates/enterlink/index.html:142
+#: templates/enterlink/index.html:139
 msgid "Open Community"
 msgstr "öppet växtsamhälle"
 
-#: templates/enterlink/index.html:143
+#: templates/enterlink/index.html:140
 msgid ""
 "Our vibrant community is open and welcoming to people from all backgrounds. "
 "Our guidelines and policies are based on common sense rather than strict "
@@ -1624,11 +1090,11 @@ msgstr ""
 "bakgrunder. Våra riktlinjer och policyer bygger på sunt förnuft snarare än "
 "strikt byråkrati."
 
-#: templates/enterlink/index.html:145
+#: templates/enterlink/index.html:142
 msgid "Redesigned for the modern age"
 msgstr "Redesignad för modern ålder"
 
-#: templates/enterlink/index.html:146
+#: templates/enterlink/index.html:143
 msgid ""
 "Everipedia is an encyclopedia modernized and re-designed for the twenty-"
 "first century. Our editing interface makes creating and editing wiki's as "
@@ -1638,15 +1104,15 @@ msgstr ""
 "århundradet. Vårt redigeringsgränssnitt gör att skapa och redigera wiki är "
 "lika enkelt som att använda Facebook."
 
-#: templates/enterlink/index.html:155
+#: templates/enterlink/index.html:152
 msgid "Follow us on Telegram"
 msgstr "Följ oss på Telegram"
 
-#: templates/enterlink/index.html:168
-msgid "Led by the Founder of Wikipedia and Genius.com"
+#: templates/enterlink/index.html:165
+msgid "Led by the Founders of Wikipedia and Genius.com"
 msgstr "Led av grundaren av Wikipedia och Genius.com"
 
-#: templates/enterlink/index.html:171
+#: templates/enterlink/index.html:168
 msgid ""
 "Everipedia is being led by a team with extensive experience and knowledge "
 "both in the online knowledge space as well as the blockchain industry. The "
@@ -1663,49 +1129,57 @@ msgstr ""
 "credentials inkluderar UCLA, Stanford, Yale &amp; Columbia, som täcker "
 "nationaliteter från Amerika, Sverige, Norge och Italien."
 
-#: templates/enterlink/index.html:172
+#: templates/enterlink/index.html:169
 msgid "Executive Team"
 msgstr "Ledningsgrupp"
 
-#: templates/enterlink/leadership.html:7
+#: templates/enterlink/leadership.html:6
 msgid "Leadership"
 msgstr "Ledarskap"
 
-#: templates/enterlink/leadership.html:23
+#: templates/enterlink/leadership.html:22
 msgid "Executive Leadership"
 msgstr "Ledande ledarskap"
 
-#: templates/enterlink/leadership.html:35
+#: templates/enterlink/leadership.html:34
 msgid "Chief Information Officer"
 msgstr "Direktör för informationssystem"
 
-#: templates/enterlink/leadership.html:41
+#: templates/enterlink/leadership.html:40
 msgid "Chief Executive Officer, Co-Founder"
 msgstr "Verkställande direktör, grundare"
 
-#: templates/enterlink/leadership.html:47
+#: templates/enterlink/leadership.html:46
 msgid "Chief Technology Officer, Co-Founder"
 msgstr "Chief Technology Officer, medgrundare"
 
-#: templates/enterlink/leadership.html:53
+#: templates/enterlink/leadership.html:52
 msgid "President, Co-Founder"
 msgstr "President, medgrundare"
 
-#: templates/enterlink/leadership.html:63
+#: templates/enterlink/leadership.html:62
 msgid "Director of Software"
 msgstr "Chef för programvara"
 
-#: templates/enterlink/leadership.html:69
+#: templates/enterlink/leadership.html:68
 msgid "Chief Operating Officer"
 msgstr "Operativ chef"
 
-#: templates/enterlink/leadership.html:75
+#: templates/enterlink/leadership.html:74
 msgid "Chief Community Officer, Co-Founder"
 msgstr "Chief Community Officer, medgrundare"
 
 #: templates/enterlink/limitreached.html:7
 msgid "Activity limit reached"
 msgstr "Aktivitetsgräns uppnådd"
+
+#: templates/enterlink/limitreached.html:9
+msgid ""
+"Everipedia is a free and easy to use wiki platform. Write about anyone and "
+"anything!"
+msgstr ""
+"Everipedia är en gratis och lättanvänd wikiplattform. Skriv om någon och "
+"något!"
 
 #: templates/enterlink/limitreached.html:23
 msgid ""
@@ -1735,6 +1209,10 @@ msgstr "Logga in"
 msgid "Sign in to Everipedia"
 msgstr "Logga in på Everipedia"
 
+#: templates/enterlink/login.html:41
+msgid "Forgot your password?"
+msgstr "Glömt ditt lösenord?"
+
 #: templates/enterlink/login.html:48
 msgid "Log in with Facebook"
 msgstr "Logga in med Facebook"
@@ -1743,116 +1221,70 @@ msgstr "Logga in med Facebook"
 msgid "Log in with Twitter"
 msgstr "Logga in med Twitter"
 
-#: templates/enterlink/login.html:58
-msgid "Need an account?"
-msgstr "Behöver du ett konto?"
-
-#: templates/enterlink/login.html:58
-msgid "Register here"
-msgstr "Anmäl dig här"
-
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:34
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:33
 msgid "Visit Profile"
 msgstr "Besök Profil"
 
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:57
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:56
 msgid "Settings"
 msgstr "Inställningar"
 
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:73
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:214
-#: templates/enterlink/template_blockchain_styled_amp.html:721
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:72
 msgid "Log Out"
 msgstr "Logga ut"
 
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:86
-msgid "Register / Log In"
-msgstr "Registrera inloggning"
+#: templates/enterlink/notifications/index.html:61
+#: templates/enterlink/notifications/index.html:94
+msgid "Home"
+msgstr "Hem"
 
 #: templates/enterlink/notifications/index.html:116
 msgid "New message"
 msgstr "Nytt meddelande"
 
-#: templates/enterlink/recent-activity.html:84
+#: templates/enterlink/recent-activity.html:87
 msgid "by"
 msgstr "av"
 
-#: templates/enterlink/register.html:6
-msgid "Create an account"
-msgstr "Skapa ett konto"
-
-#: templates/enterlink/register.html:26 templates/enterlink/register.html:28
-msgid "Have an account?"
-msgstr "Konto?"
-
-#: templates/enterlink/register.html:26 templates/enterlink/register.html:28
-msgid "Login"
-msgstr "Logga in"
-
-#: templates/enterlink/register.html:42
-msgid ""
-"Registration is currently invite only due to blockchain software testing. "
-"Join us on Telegram and Reddit in the meantime to become a part of "
-"Everipedia today!"
-msgstr ""
-"Registrering är för närvarande inbjuden endast på grund av "
-"blockchainprogramtestning. Gå med på Telegram och Reddit under tiden för att "
-"bli en del av Everipedia idag!"
-
-#: templates/enterlink/register.html:60
-msgid "Welcome to the Everipedia editor community!"
-msgstr "Välkommen till Everipedia-redaktörsgemenskapen!"
-
-#: templates/enterlink/register.html:63
-msgid ""
-"Sign up to become an editor to access more features and an ad-free "
-"experience."
-msgstr ""
-"Anmäl dig för att bli en redaktör för att få tillgång till fler funktioner "
-"och en annonsfri upplevelse."
-
-#: templates/enterlink/register.html:96
-msgid "Sign up"
-msgstr "Registrera dig"
-
-#: templates/enterlink/register.html:97
-msgid "By clicking sign up above you agree to our"
-msgstr "Genom att klicka på anmälan ovan accepterar du vår"
-
-#: templates/enterlink/register.html:97
-msgid "Terms of Service"
-msgstr "Köpvillkor"
-
 #: templates/enterlink/rewardsmgmt.html:4
-#: templates/enterlink/rewardsmgmt.html:132
+#: templates/enterlink/rewardsmgmt.html:136
 #, fuzzy
 #| msgid "Brainpower Management"
 msgid "Rewards Management"
 msgstr "Brainpower Management"
 
-#: templates/enterlink/rewardsmgmt.html:135
-msgid "Here you can claim rewards for the edits and / or votes that you made."
+#: templates/enterlink/rewardsmgmt.html:139
+msgid ""
+"Here you can claim rewards for the edits and / or votes that you made. If "
+"\"Claim All Rewards\" does not work initially, try again after 5 - 10 "
+"seconds, as some block producers are faster than others. If it continues to "
+"fail, claim a few rewards manually first, then try again. This is due to "
+"transaction time limitations with EOS."
 msgstr ""
 
-#: templates/enterlink/rewardsmgmt.html:140
+#: templates/enterlink/rewardsmgmt.html:143
+msgid "Claim all rewards"
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:148
 msgid "Proposal Hash"
 msgstr ""
 
-#: templates/enterlink/rewardsmgmt.html:141
+#: templates/enterlink/rewardsmgmt.html:149
 msgid "Finalized Time"
 msgstr ""
 
-#: templates/enterlink/rewardsmgmt.html:142
+#: templates/enterlink/rewardsmgmt.html:150
 #, fuzzy
 #| msgid "Voting Period"
 msgid "Period"
 msgstr "Röstnings period"
 
-#: templates/enterlink/rewardsmgmt.html:143
+#: templates/enterlink/rewardsmgmt.html:151
 msgid "Redeem"
 msgstr ""
 
-#: templates/enterlink/rewardsmgmt.html:150
+#: templates/enterlink/rewardsmgmt.html:158
 #, fuzzy
 #| msgid "Password reset successful"
 msgid "Redeem successful"
@@ -1894,71 +1326,58 @@ msgstr ""
 "Om du känner till några länkar som är associerade med den här sidan, försök "
 "att söka efter länkarna"
 
-#: templates/enterlink/template_ajax_genius.html:17
-#: templates/enterlink/template_amp_ajax_genius.html:98
-msgid "Verified Editor"
-msgstr "Verifierad redaktör"
-
-#: templates/enterlink/template_blockchain_styled_amp.html:123
+#: templates/enterlink/template_blockchain_styled_amp.html:113
 msgid "Bullet"
 msgstr "Punkt"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:185
-#: templates/enterlink/template_blockchain_styled_desktop.html:126
+#: templates/enterlink/template_blockchain_styled_amp.html:175
 msgid "Recent news"
 msgstr "Senaste nytt"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:185
-#: templates/enterlink/template_blockchain_styled_desktop.html:126
+#: templates/enterlink/template_blockchain_styled_amp.html:175
 msgid ""
 "Everipedia IQ tokens are now in circulation on the EOS mainnet. Follow "
 "Everipedia on"
 msgstr "Everipedia IQ-tokens är nu i omlopp på EOS mainnet. Följ Everipedia på"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:185
-#: templates/enterlink/template_blockchain_styled_desktop.html:126
+#: templates/enterlink/template_blockchain_styled_amp.html:175
 msgid "to learn about upcoming features and developments!"
 msgstr "att lära sig om kommande funktioner och utveckling!"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:197
-#: templates/enterlink/template_blockchain_styled_desktop.html:143
-msgid "Verified Page"
-msgstr "Verifierad Sida"
-
-#: templates/enterlink/template_blockchain_styled_amp.html:273
+#: templates/enterlink/template_blockchain_styled_amp.html:241
 msgid "Quick Biography"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_amp.html:275
+#: templates/enterlink/template_blockchain_styled_amp.html:243
 msgid "Quick Facts For This Wiki"
 msgstr "Referenslänkar för denna Wiki"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:304
-#: templates/enterlink/template_blockchain_styled_desktop.html:361
+#: templates/enterlink/template_blockchain_styled_amp.html:272
+#: templates/enterlink/template_blockchain_styled_desktop.html:346
 msgid "Image & Video Gallery"
 msgstr "Bild- och videogalleri"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:306
-#: templates/enterlink/template_blockchain_styled_desktop.html:363
+#: templates/enterlink/template_blockchain_styled_amp.html:274
+#: templates/enterlink/template_blockchain_styled_desktop.html:348
 msgid "images, pictures, and videos"
 msgstr "bilder, bilder och videor"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:310
+#: templates/enterlink/template_blockchain_styled_amp.html:278
 msgid "Gallery"
 msgstr "Galleri"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:327
-#: templates/enterlink/template_blockchain_styled_desktop.html:496
+#: templates/enterlink/template_blockchain_styled_amp.html:295
+#: templates/enterlink/template_blockchain_styled_desktop.html:481
 msgid "Reference Links For This Biography"
 msgstr "Referenslänkar för denna biografi"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:329
-#: templates/enterlink/template_blockchain_styled_desktop.html:498
+#: templates/enterlink/template_blockchain_styled_amp.html:297
+#: templates/enterlink/template_blockchain_styled_desktop.html:483
 msgid "Reference Links For This Wiki"
 msgstr "Referenslänkar för denna Wiki"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:332
-#: templates/enterlink/template_blockchain_styled_desktop.html:501
+#: templates/enterlink/template_blockchain_styled_amp.html:300
+#: templates/enterlink/template_blockchain_styled_desktop.html:486
 msgid ""
 "Links to historical reviews, career / educational facts, and other "
 "encyclopedic information"
@@ -1966,13 +1385,13 @@ msgstr ""
 "Länkar till historiska recensioner, karriär / pedagogiska fakta och annan "
 "information om encyklopedin"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:337
-#: templates/enterlink/template_blockchain_styled_desktop.html:507
+#: templates/enterlink/template_blockchain_styled_amp.html:305
+#: templates/enterlink/template_blockchain_styled_desktop.html:492
 msgid "All information for"
 msgstr "All information för"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:337
-#: templates/enterlink/template_blockchain_styled_desktop.html:507
+#: templates/enterlink/template_blockchain_styled_amp.html:305
+#: templates/enterlink/template_blockchain_styled_desktop.html:492
 msgid ""
 "wiki comes from the below links. Any source is valid, including Twitter, "
 "Facebook, Instagram, and LinkedIn. Pictures, videos, biodata, and files "
@@ -1982,13 +1401,13 @@ msgstr ""
 "Facebook, Instagram och LinkedIn. Bilder, videor, biologisk data och filer "
 "relaterade till"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:337
-#: templates/enterlink/template_blockchain_styled_desktop.html:507
+#: templates/enterlink/template_blockchain_styled_amp.html:305
+#: templates/enterlink/template_blockchain_styled_desktop.html:492
 msgid "are also acceptable encyclopedic sources."
 msgstr "är också acceptabla encyklopediska källor."
 
-#: templates/enterlink/template_blockchain_styled_amp.html:352
-#: templates/enterlink/template_blockchain_styled_desktop.html:528
+#: templates/enterlink/template_blockchain_styled_amp.html:320
+#: templates/enterlink/template_blockchain_styled_desktop.html:513
 msgid ""
 "See related encyclopedia articles, biographies, reviews, and historical "
 "facts."
@@ -1996,42 +1415,42 @@ msgstr ""
 "Se relaterade encyklopediartiklar, biografier, recensioner och historiska "
 "fakta."
 
-#: templates/enterlink/template_blockchain_styled_amp.html:356
-#: templates/enterlink/template_blockchain_styled_desktop.html:535
+#: templates/enterlink/template_blockchain_styled_amp.html:324
+#: templates/enterlink/template_blockchain_styled_desktop.html:520
 msgid "Other wiki pages related to"
 msgstr "Andra wikisidor relaterade till"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:535
+#: templates/enterlink/template_blockchain_styled_amp.html:503
 msgid "Created"
 msgstr "Skapad"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:536
+#: templates/enterlink/template_blockchain_styled_amp.html:504
 msgid "Last Modified"
 msgstr "Senast Ändrad"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:537
+#: templates/enterlink/template_blockchain_styled_amp.html:505
 msgid "IPFS"
 msgstr "ipfs"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:757
+#: templates/enterlink/template_blockchain_styled_amp.html:640
 msgid "Top Page Editors"
 msgstr "Toppsideredaktörer"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:777
+#: templates/enterlink/template_blockchain_styled_amp.html:660
 msgid "Share this page"
 msgstr "Dela denna sida"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:789
+#: templates/enterlink/template_blockchain_styled_amp.html:672
 msgid "DIRECT LINK"
 msgstr "DIREKTLÄNK"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:794
-#: templates/enterlink/template_blockchain_styled_desktop.html:221
+#: templates/enterlink/template_blockchain_styled_amp.html:677
+#: templates/enterlink/template_blockchain_styled_desktop.html:211
 msgid "Suggested Hashtags"
 msgstr "Föreslagna hashtags"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:828
-#: templates/enterlink/template_blockchain_styled_desktop.html:259
+#: templates/enterlink/template_blockchain_styled_amp.html:711
+#: templates/enterlink/template_blockchain_styled_desktop.html:249
 msgid "QR Code"
 msgstr "QR-kod"
 
@@ -2042,7 +1461,7 @@ msgstr ""
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:16
 #: templates/enterlink/template_blockchain_styled_desktop.html:17
-#: templates/enterlink/template_blockchain_styled_desktop.html:225
+#: templates/enterlink/template_blockchain_styled_desktop.html:215
 msgid "bio"
 msgstr ""
 
@@ -2068,75 +1487,71 @@ msgstr ""
 #: templates/enterlink/template_blockchain_styled_desktop.html:24
 #: templates/enterlink/template_blockchain_styled_desktop.html:30
 #: templates/enterlink/template_blockchain_styled_desktop.html:31
-#: templates/enterlink/template_blockchain_styled_desktop.html:231
-#: templates/enterlink/template_blockchain_styled_desktop.html:237
-#: templates/enterlink/template_blockchain_styled_desktop.html:243
+#: templates/enterlink/template_blockchain_styled_desktop.html:221
+#: templates/enterlink/template_blockchain_styled_desktop.html:227
+#: templates/enterlink/template_blockchain_styled_desktop.html:233
 msgid "review"
 msgstr ""
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:30
 #: templates/enterlink/template_blockchain_styled_desktop.html:31
-#: templates/enterlink/template_blockchain_styled_desktop.html:232
-#: templates/enterlink/template_blockchain_styled_desktop.html:238
-#: templates/enterlink/template_blockchain_styled_desktop.html:244
+#: templates/enterlink/template_blockchain_styled_desktop.html:222
+#: templates/enterlink/template_blockchain_styled_desktop.html:228
+#: templates/enterlink/template_blockchain_styled_desktop.html:234
 msgid "history"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:126
-msgid "and"
-msgstr "och"
-
-#: templates/enterlink/template_blockchain_styled_desktop.html:187
+#: templates/enterlink/template_blockchain_styled_desktop.html:177
 #: templates/enterlink/voting_table_of_contents.html:12
 msgid "Edit"
 msgstr "Redigera"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:190
+#: templates/enterlink/template_blockchain_styled_desktop.html:180
 msgid "Vote"
 msgstr "Svara"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:205
+#: templates/enterlink/template_blockchain_styled_desktop.html:195
 msgid "Embed / Widget"
 msgstr "Bädda in / Widget"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:214
+#: templates/enterlink/template_blockchain_styled_desktop.html:220
+#: templates/enterlink/template_blockchain_styled_desktop.html:226
+#: templates/enterlink/template_blockchain_styled_desktop.html:232
+msgid "wiki"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:216
+msgid "net worth"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:217
+msgid "age"
+msgstr "Sida"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:218
+msgid "married"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:223
+msgid "sales"
+msgstr ""
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:224
 #: templates/enterlink/template_blockchain_styled_desktop.html:230
 #: templates/enterlink/template_blockchain_styled_desktop.html:236
-#: templates/enterlink/template_blockchain_styled_desktop.html:242
-msgid "wiki"
-msgstr ""
-
-#: templates/enterlink/template_blockchain_styled_desktop.html:226
-msgid "net worth"
-msgstr ""
-
-#: templates/enterlink/template_blockchain_styled_desktop.html:227
-msgid "age"
-msgstr "Sida"
-
-#: templates/enterlink/template_blockchain_styled_desktop.html:228
-msgid "married"
-msgstr ""
-
-#: templates/enterlink/template_blockchain_styled_desktop.html:233
-msgid "sales"
-msgstr ""
-
-#: templates/enterlink/template_blockchain_styled_desktop.html:234
-#: templates/enterlink/template_blockchain_styled_desktop.html:240
-#: templates/enterlink/template_blockchain_styled_desktop.html:246
 msgid "facts"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:239
+#: templates/enterlink/template_blockchain_styled_desktop.html:229
 msgid "founders"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:245
+#: templates/enterlink/template_blockchain_styled_desktop.html:235
 msgid "encyclopedia"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:329
+#: templates/enterlink/template_blockchain_styled_desktop.html:318
 msgid "Profiles"
 msgstr "Profiler"
 
@@ -2144,6 +1559,10 @@ msgstr "Profiler"
 #: templates/enterlink/transfer-iq.html:119
 msgid "Transfer IQ"
 msgstr "Överför IQ"
+
+#: templates/enterlink/transfer-iq.html:106
+msgid "Loading Scatter"
+msgstr "Laddar scatter"
 
 #: templates/enterlink/transfer-iq.html:121
 msgid "Please make sure you have set up"
@@ -2177,113 +1596,33 @@ msgstr "Köp RAM"
 msgid "See your RAM, CPU, and Bandwidth on FeeXplorer"
 msgstr "Se din RAM, CPU och bandbredd på FeeXplorer"
 
-#: templates/enterlink/user.html:12
-msgid "profile"
-msgstr "profil"
-
-#: templates/enterlink/user.html:38
-msgid "Everipedia Rank"
-msgstr "Everipedia-ranking"
-
-#: templates/enterlink/user.html:53
-msgid "This user is verified"
-msgstr "Den här användaren är verifierad"
-
-#: templates/enterlink/user.html:56
-msgid "Everipedia Staff"
-msgstr "Everipedia Staff"
-
-#: templates/enterlink/user.html:62 templates/enterlink/user.html:67
-msgid "Message"
-msgstr "Meddelande"
-
-#: templates/enterlink/user.html:71 templates/enterlink/user.html:123
-msgid "Edit Profile"
-msgstr "Redigera profil"
-
-#: templates/enterlink/user.html:74
-msgid "Everipedia Page"
-msgstr "Everipedia-sida"
-
-#: templates/enterlink/user.html:80
-msgid "IQ Score"
-msgstr "IQ-poäng"
-
-#: templates/enterlink/user.html:81
-msgid "Pages created"
-msgstr "Sidor skapade"
-
-#: templates/enterlink/user.html:82
-msgid "Total edits"
-msgstr "Totala ändringar"
-
-#: templates/enterlink/user.html:94
-msgid "Joined"
-msgstr "Blev medlem"
-
-#: templates/enterlink/user.html:125
-msgid "Upload Avatar / Profile Picture"
-msgstr "Ladda upp Avatar / Profilbild"
-
-#: templates/enterlink/user.html:153
-msgid "Enable account? Uncheck to ban"
-msgstr "Aktivera konto? Avmarkera för att förbjuda"
-
-#: templates/enterlink/user.html:157
-msgid "IP Ban"
-msgstr "IP-banning"
-
-#: templates/enterlink/user.html:157
-msgid "Ban"
-msgstr "Spärra"
-
-#: templates/enterlink/user.html:157
-msgid "Clear"
-msgstr "Rensa"
-
-#: templates/enterlink/user.html:159
-msgid "Verify the account?"
-msgstr "Verifiera kontot?"
-
-#: templates/enterlink/user.html:163
-msgid "Is Staff?"
-msgstr "Är medarbetare"
-
-#: templates/enterlink/user.html:177
-msgid "Save all changes"
-msgstr "Spara ändringar"
-
-#: templates/enterlink/user.html:178
-msgid "Cancel"
-msgstr "Avbryt"
-
-#: templates/enterlink/user.html:211
-msgid "Change Avatar Picture"
-msgstr "Ändra Avatarbild"
-
-#: templates/enterlink/user.html:219
-msgid "Please select your Everipedia page"
-msgstr "Var god välj din Everipedia-sida"
-
-#: templates/enterlink/user.html:224
-msgid "Continue"
-msgstr "Fortsätt"
-
 #: templates/enterlink/votehistory.html:7
 msgid "Voting"
 msgstr "3.6.1"
 
 #: templates/enterlink/votehistory.html:95
-msgid "Voting History"
+msgid "Editing History"
 msgstr "Rösthistorik"
 
-#: templates/enterlink/voting.html:197
+#: templates/enterlink/voting.html:220
 msgid "Before"
 msgstr "Före"
 
-#: templates/enterlink/voting.html:199
+#: templates/enterlink/voting.html:222
 msgid "After"
 msgstr "Efter"
+
+#: templates/enterlink/voting.html:235
+#, fuzzy
+#| msgid "Reject"
+msgid "Rejectors"
+msgstr "Avvisa"
+
+#: templates/enterlink/voting.html:241
+#, fuzzy
+#| msgid "Approve"
+msgid "Approvers"
+msgstr "Godkänn"
 
 #: templates/enterlink/voting_table_of_contents.html:7
 msgid "Article"
@@ -2294,7 +1633,7 @@ msgid "Current Vote"
 msgstr "Nuvarande omröstning"
 
 #: templates/enterlink/voting_table_of_contents.html:20
-#: templates/enterlink/voting_table_of_contents.html:62
+#: templates/enterlink/voting_table_of_contents.html:63
 msgid "Reject"
 msgstr "Avvisa"
 
@@ -2302,25 +1641,21 @@ msgstr "Avvisa"
 msgid "Accept"
 msgstr "Acceptera"
 
-#: templates/enterlink/voting_table_of_contents.html:28
+#: templates/enterlink/voting_table_of_contents.html:29
 msgid "Voting Period"
 msgstr "Röstnings period"
 
-#: templates/enterlink/voting_table_of_contents.html:34
+#: templates/enterlink/voting_table_of_contents.html:35
 msgid "to"
 msgstr "till"
 
-#: templates/enterlink/voting_table_of_contents.html:51
+#: templates/enterlink/voting_table_of_contents.html:52
 msgid "Place Votes"
 msgstr "Placera röster"
 
-#: templates/enterlink/voting_table_of_contents.html:63
+#: templates/enterlink/voting_table_of_contents.html:64
 msgid "Approve"
 msgstr "Godkänn"
-
-#: templates/enterlink/voting_table_of_contents.html:67
-msgid "Changes"
-msgstr "Ändringar"
 
 #: templates/enterlink/welcome.html:7
 msgid "Welcome to Everipedia, the encyclopedia of everything"

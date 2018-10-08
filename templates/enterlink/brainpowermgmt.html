@@ -128,7 +128,7 @@
 					<th class="start-end">{% trans 'Start' %}</th>
 					<th class="start-end">{% trans 'End' %}</th>
 					<th class="remaining">{% trans 'Time Remaining' %}</th>
-					<th class="amount">{% trans 'Amount' %} IQ</th>
+					<th class="amount">IQ {% trans 'Amount' %}</th>
 					<th class="claim-header">{% trans 'Claim' %}</th>
 				</tr>
 			</thead>
@@ -192,22 +192,33 @@
 				$(".claim-cell").click(function (event) {
 					$('#submission_waiting').show();
 					var stakeID = $(this).data("stakeid");
-					eos.contract('eparticlectr').then(eparticlectr => {
-						eparticlectr.brainclmid(scatterAccountName, stakeID, {
-								authorization: scatterAccountName,
-								permission: "active"
-							}
-						).then(result => {
-							$('#submission_waiting').hide();
-							$(this).parent().remove();
-							refreshStakes();
-							refreshIQ();
-							refreshBrainpower();
-						}).catch(error => {
-							$('#submission_waiting').hide();
-							error = JSON.parse(error).error.details[0].message.replace('condition: assertion failed: ', '');
-							alert(error);
-						});
+					var transactionJSON = {
+						actions: [{
+							account: 'eparticlectr',
+							name: 'brainclmid',
+							authorization: [{
+								actor: scatterAccountName,
+								permission: "active",
+							}],
+							data: {
+								claimant: scatterAccountName,
+								stakeid: stakeID,
+							},
+						}]
+					};
+					eos.transact(transactionJSON, {blocksBehind: 3, expireSeconds: 30,}).then(result => {
+						$('#submission_waiting').hide();
+						$(this).parent().remove();
+						refreshStakes();
+						refreshIQ();
+						refreshBrainpower();
+						console.log("Transaction completed:" + result.transaction_id);
+					}).catch(e => {
+						$('#submission_waiting').hide();
+						alert(e);
+						// if (e instanceof eosjs_jsonrpc.RpcError){
+						// 	console.log(JSON.stringify(e.json, null, 2));
+						// }
 					});
 				});
 
@@ -231,19 +242,32 @@
 			}
 			else{
 				$('#submission_waiting').show();
-				eos.contract('everipediaiq').then(everipediaiq => {
-					everipediaiq.brainmeiq(scatterAccountName, stakeAmount, {authorization: scatterAccountName, permission: "active"}
-					).then(result => {
-					    $('#submission_waiting').hide();
-						refreshStakes();
-						refreshIQ();
-						refreshBrainpower();
-					}).catch(error => {
-					    $('#submission_waiting').hide();
-						error = JSON.parse(error).error.details[0].message.replace('condition: assertion failed: ', '');
-						alert(error);
-					});
-
+				var transactionJSON = {
+					actions: [{
+						account: 'everipediaiq',
+						name: 'brainmeiq',
+						authorization: [{
+							actor: scatterAccountName,
+							permission: "active",
+						}],
+						data: {
+							staker: scatterAccountName,
+							amount: stakeAmount,
+						},
+					}]
+				};
+				eos.transact(transactionJSON, {blocksBehind: 3, expireSeconds: 30,}).then(result => {
+					$('#submission_waiting').hide();
+					refreshStakes();
+					refreshIQ();
+					refreshBrainpower();
+					console.log("Transaction completed:" + result.transaction_id);
+				}).catch(e => {
+					$('#submission_waiting').hide();
+					alert(e);
+					// if (e instanceof eosjs_jsonrpc.RpcError){
+					// 	console.log(JSON.stringify(e.json, null, 2));
+					// }
 				});
 			}
 		});

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-25 08:59-0700\n"
+"POT-Creation-Date: 2018-10-08 09:47-0700\n"
 "PO-Revision-Date: 2018-08-08 00:39+0900\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -78,7 +78,6 @@ msgstr "auth.logout"
 #: static/js/plugins/citepicture/plugin.min.js:17
 #: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:16
 #: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:17
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
 msgid "Media"
 msgstr "メディア"
 
@@ -86,13 +85,11 @@ msgstr "メディア"
 #: static/js/plugins/citesource/plugin.min.js:16
 #: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:15
 #: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:16
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
 msgid "Cite"
 msgstr "引用する"
 
 #: static/js/plugins/linkpage/plugin.min.js:1
 #: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:1
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
 msgid "Search Everipedia"
 msgstr "Everipediaを検索"
 
@@ -100,24 +97,17 @@ msgstr "Everipediaを検索"
 #: static/js/plugins/linkpage/plugin.min.js:18
 #: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:17
 #: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:18
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
 msgid "Link"
 msgstr "リンク"
 
 #: static/js/plugins/mention/plugin.min.js:374
 #: static/tinymce_4.2.3/plugins/mention/plugin.min.js:374
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:162
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:165
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:212
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:215
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:54
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:112
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:115
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:224
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:227
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:331
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:334
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:107
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:110
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:218
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:221
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:325
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:328
 msgid "Cite as verified editor"
 msgstr "検証された編集者として引用する"
 
@@ -126,9 +116,7 @@ msgstr "検証された編集者として引用する"
 #: static/js/plugins/savepage/plugin.min.js:7
 #: static/tageditor/jquery.tag-editor.js:335
 #: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:3
-#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:6
-#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:7
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:191
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:202
 msgid "Save"
 msgstr "保存"
 
@@ -147,6 +135,18 @@ msgstr "フォントスタイル"
 msgid "Style"
 msgstr "スタイル"
 
+#: static/js/scatterjs-plugin-eosjs2.min.js:15
+msgid "entries"
+msgstr ""
+
+#: static/js/scatterjs-plugin-eosjs2.min.js:15
+msgid "values"
+msgstr ""
+
+#: static/js/scatterjs-plugin-eosjs2.min.js:15
+msgid "keys"
+msgstr ""
+
 #: static/tageditor/jquery.tag-editor.js:584
 #: static/tageditor/jquery.tag-editor.js:587
 #: static/tageditor/jquery.tag-editor.js:590
@@ -158,6 +158,11 @@ msgstr "このカテゴリの追加説明を追加する"
 #: static/tageditor/jquery.tag-editor.js:590
 msgid "Delete this tag"
 msgstr "このタグを削除する"
+
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:3
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:4
+msgid "Save Draft"
+msgstr ""
 
 #: templates/enterlink/brainpowermgmt.html:142
 msgid "Claim"
@@ -177,7 +182,7 @@ msgstr ""
 msgid "Please enter a description for the photo"
 msgstr "写真の説明を入力してください"
 
-#: templates/enterlink/edit_ajax_addinfobox.html:89
+#: templates/enterlink/edit_ajax_addinfobox.html:96
 msgid "Adding infobox item, please wait..."
 msgstr "情報項目を追加しています。しばらくお待ちください..."
 
@@ -186,8 +191,6 @@ msgid "Adding, please wait..."
 msgstr "追加しています、しばらくお待ちください..."
 
 #: templates/enterlink/edit_ajax_addlink.html:71
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:354
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:457
 msgid ""
 "You have been posting a lot of links today. Wait a bit for the community to "
 "respond to your content. New editors are limited to posting only 250 "
@@ -218,8 +221,6 @@ msgid "No URL provided, please try again"
 msgstr "URLは指定されていません、もう一度お試し下さい"
 
 #: templates/enterlink/edit_ajax_addlink.html:87
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:362
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:465
 msgid "Please provide a description for the link or file."
 msgstr "リンクまたはファイルの説明を入力してください。"
 
@@ -228,35 +229,32 @@ msgid "Please provide a more scholarly description."
 msgstr "より学術的な記述を入力してください。"
 
 #: templates/enterlink/edit_ajax_addlink.html:109
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
 msgid "File uploaded successfully."
 msgstr "ファイルが正常にアップロードされました。"
 
 #: templates/enterlink/edit_ajax_addlink.html:141
-#: templates/enterlink/inline-js/edit-bottom.html:16
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+#: templates/enterlink/inline-js/edit-bottom.html:24
 msgid "Add File"
 msgstr "ファイルを追加する"
 
 #: templates/enterlink/edit_ajax_addlink.html:148
-#: templates/enterlink/inline-js/edit-bottom.html:17
+#: templates/enterlink/inline-js/edit-bottom.html:25
 msgid "Add Link"
 msgstr "リンクを追加する"
 
-#: templates/enterlink/headers/scatter-header.html:130
+#: templates/enterlink/headers/scatter-header.html:143
 msgid "Claim Rewards"
 msgstr ""
 
-#: templates/enterlink/index.html:236
+#: templates/enterlink/index.html:231
 msgid "Loading more activity, please wait..."
 msgstr "アクティビティを読み込んでいます、少々お待ちください…"
 
-#: templates/enterlink/index.html:260
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+#: templates/enterlink/index.html:255
 msgid "Create page"
 msgstr "ページを作成する"
 
-#: templates/enterlink/inline-js/edit-bottom.html:12
+#: templates/enterlink/inline-js/edit-bottom.html:20
 msgid ""
 "Please stake some IQ into Brainpower before continuing. Click OK to open the "
 "Brainpower management screen in a new tab. NOTE: Please make sure popups are "
@@ -267,83 +265,41 @@ msgstr ""
 "が表示される可能性があるため、ポップアップが有効になっていることを確認してく"
 "ださい。"
 
-#: templates/enterlink/inline-js/edit-bottom.html:13
+#: templates/enterlink/inline-js/edit-bottom.html:21
 msgid ""
 "Note that you will not be able to propose edits without Brainpower. Your "
 "work will be lost!"
 msgstr "Brainpowerなしで編集を申請することはできません。仕事が失われます！"
 
-#: templates/enterlink/inline-js/edit-bottom.html:14
+#: templates/enterlink/inline-js/edit-bottom.html:22
 msgid "Error: proposal not found. Please try submitting again."
 msgstr "エラー：申請が見つかりません。もう一度ご提出下さい。"
 
-#: templates/enterlink/inline-js/edit-bottom.html:15
+#: templates/enterlink/inline-js/edit-bottom.html:23
 msgid "Article proposal submission failed!"
 msgstr "記事申請の提出に失敗しました！"
 
-#: templates/enterlink/inline-js/edit-bottom.html:18
+#: templates/enterlink/inline-js/edit-bottom.html:26
 msgid "Add New Infobox"
 msgstr "新しいインフォボックスを追加する"
 
-#: templates/enterlink/inline-js/edit-bottom.html:19
+#: templates/enterlink/inline-js/edit-bottom.html:27
 msgid "Completing transaction..."
 msgstr "トランザクションを完了中..."
 
-#: templates/enterlink/inline-js/edit-bottom.html:141
+#: templates/enterlink/inline-js/edit-bottom.html:103
 msgid "Add Row"
 msgstr "行を追加する"
 
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:56
-msgid "Are you sure you want to remove this link?"
-msgstr "このリンクを削除してよろしいですか？"
-
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:162
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:166
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:212
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:216
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:55
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:112
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:116
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:224
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:228
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:331
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:335
-msgid "Cite my own knowledge / experience as a verified editor"
-msgstr "検証済みの編集者として自分の知識や経験を引用する"
-
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:347
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:451
-msgid "Posting comment, please wait.."
-msgstr "コメントを投稿しています、しばらくお待ちください..."
-
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:358
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:461
-msgid "This comment is already on this page. Please try again!"
-msgstr "このコメントは既にこのページにあります。もう一度お試しください！"
-
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:450
-msgid "Posting reply, please wait.."
-msgstr "返信を投稿しています、お待ちください.."
-
-#: templates/enterlink/inline-js/enterlink-ajax-execute-search.html:139
-#: templates/enterlink/inline-js/enterlink-user-ajax.html:52
-msgid "Searching..."
-msgstr "検索中..."
-
-#: templates/enterlink/inline-js/enterlink-ajax-execute-search.html:167
-msgid "Merging..."
-msgstr "マージ中…"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:94
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:4
 msgid "Are you sure you want to exit the page? Unsaved changes will be lost."
 msgstr "ページを閉じてもよろしいですか？保存していない変更は失われます。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:180
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
 msgid "Introduction"
 msgstr "はじめに"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:180
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:52
 msgid ""
 "Everipedia is just like Wikipedia but much simpler to edit and contribute. "
 "Each page is composed of an infobox area for short concise facts, a main "
@@ -356,19 +312,27 @@ msgstr ""
 "事、トピックに関する写真、ビデオ、オーディオなどのメディアギャラリー、ウェブ"
 "ページへの参照のリスト、および記事や情報の引用から構成されています。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:181
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:59
+msgid "Title"
+msgstr "タイトル"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:60
+msgid "Enter the page title here"
+msgstr "ここにページタイトルを入力してください"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:73
 msgid "Main photo"
 msgstr "メイン写真"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:181
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:74
 msgid "Here you can add the main photo for the article."
 msgstr "ここで記事のメイン写真を追加できます。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:182
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:87
 msgid "Infobox"
 msgstr "インフォボックス"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:182
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:88
 msgid ""
 "The infobox is designed for concise, quick facts. Suggested items appear in "
 "the dropdown depending on the selected topic, but any type of infobox can be "
@@ -378,23 +342,11 @@ msgstr ""
 "ピックに応じて、提案されたアイテムがドロップダウンに表示されますが、任意のタ"
 "イプの情報ボックスを追加できます。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:183
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:101
 msgid "Add Links, Files, Etc."
 msgstr "リンク、ファイルなどを追加する。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:183
-msgid ""
-"Make sure to cite your sources when adding information to the page by adding "
-"links and files here so you can show where the information is coming from."
-msgstr ""
-"ページに情報を追加する際は、リンク先やファイルをここに追加して情報がどこに来"
-"るのかを示すことができるように、ソースを引用してください。"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:184
-msgid "Reference links"
-msgstr "参考リンク"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:184
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:102
 msgid ""
 "As you add links and files, they will show up in the Reference Links "
 "section. You can edit or remove them as well."
@@ -402,28 +354,40 @@ msgstr ""
 "リンクとファイルを追加すると、それらは参考リンクセクションに表示されます。そ"
 "れらは編集または削除することもできます。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:185
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:115
+msgid "Reference links"
+msgstr "参考リンク"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:116
+msgid ""
+"Make sure to cite your sources when adding information to the page by adding "
+"links and files here so you can show where the information is coming from."
+msgstr ""
+"ページに情報を追加する際は、リンク先やファイルをここに追加して情報がどこに来"
+"るのかを示すことができるように、ソースを引用してください。"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:129
 msgid "Media Gallery"
 msgstr "メディアギャラリー"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:185
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:130
 msgid "Added pictures will show up here."
 msgstr "追加された画像がここに表示されます。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:144
 msgid "Add media to article text"
 msgstr "記事のテキストにメディアを追加する"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:145
 msgid "To add an image or video to the article text, click the 'Media' button."
 msgstr ""
 "記事のテキストに画像や動画を追加するには、[Media]ボタンをクリックして下さい。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:158
 msgid "Cite links, files, etc"
 msgstr "リンク、ファイルなどを引用する"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:159
 msgid ""
 "After you have already added a link, file, or picture to the page, you can "
 "cite it by clicking the 'Cite' button. You can also press the '^' or '*' "
@@ -433,11 +397,11 @@ msgstr ""
 "て引用することができます。入力時に”^”または”*”キーを押すと、ドロップダウンが"
 "表示されます。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:188
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:172
 msgid "Link to other Everipedia pages"
 msgstr "他のEveripediaのページへのリンク"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:188
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:173
 msgid ""
 "To link to another Everipedia page click the 'Link Page' button. You can "
 "also press the '@' or key when typing and a dropdown should appear. Try to "
@@ -448,11 +412,11 @@ msgstr ""
 "入力時に”@”キーを押すと、ドロップダウンが表示されます。各ページを情報に富むよ"
 "うに作るのにできるだけ多くのページをリンクして下さい。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:189
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
 msgid "Main article body"
 msgstr "メイン記事本文"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:189
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
 msgid ""
 "Write in an objective manner in third person tense, do not include any "
 "marketing speak (exclusive offers, unverifiable claims etc). This is an "
@@ -462,42 +426,31 @@ msgstr ""
 "ペーン、確認不能な請求など）。これは百科事典であり、ソーシャルメディアのペー"
 "ジではありません。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:190
-msgid "Title"
-msgstr "タイトル"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:190
-msgid "Enter the page title here"
-msgstr "ここにページタイトルを入力してください"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:191
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:203
 msgid "When you are finished, click here to save your changes."
 msgstr "完了したら、ここをクリックして変更を保存して下さい。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:193
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:218
 msgid "Back"
 msgstr "戻る"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:193
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:220
 #: templates/enterlink/inline-js/enterlink-user-ajax.html:159
 msgid "Next"
 msgstr "次へ"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
-msgid "Formats"
-msgstr "フォーマット"
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:107
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:111
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:218
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:222
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:325
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:329
+msgid "Cite my own knowledge / experience as a verified editor"
+msgstr "検証済みの編集者として自分の知識や経験を引用する"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
-msgid "File uploaded successfully"
-msgstr "ファイルが正常にアップロードされました"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:459
-msgid "Please enter a headline"
-msgstr "見出しを入力してください"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:463
-msgid "Submission Successful!"
-msgstr "提出が成功しました！"
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:52
+msgid "Searching..."
+msgstr "検索中..."
 
 #: templates/enterlink/inline-js/enterlink-user-ajax.html:93
 msgid "Editor profile"

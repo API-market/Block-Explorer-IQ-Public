@@ -278,7 +278,7 @@ def getImageData(inputURL):
     return photoDataHere
 
 # Add a file to the Amazon S3 bucket
-def addItemToS3FromURL_local_function(srcURL, destinationFolderPath, destinationFileNamePrefix, itemType, theUser, overrideFBObj="", linkCommentOverride=""):
+def addItemToS3FromURL_local_function(srcURL, destinationFolderPath, destinationFileNamePrefix, itemType):
     headers = {'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36',
        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
        'Accept-Charset': 'utf-8,ISO-8859-1;q=0.7,*;q=0.3',
@@ -667,8 +667,7 @@ def fetchMetaThumbnail(request, linkurlcontent, slug, ipfs_truncated):
         theThumbURL = addItemToS3FromURL_local_function(srcURL=linkToMetaImage,
             destinationFolderPath="/MetaImageThumbnails/",
             destinationFileNamePrefix=unicode(slug) + "___" + unicode(ipfs_truncated) + str(uuid4())[:10],
-            itemType="MetaImageThumbnail",
-            theUser=request.user)
+            itemType="MetaImageThumbnail")
         return theThumbURL
     except:
         return None

@@ -5,7 +5,6 @@
 <html>
 <head>
 	<!--- Include Header -->
-    <script type="text/javascript" src="/static/js/eosjs-cdn.js"></script>
     <script type="text/javascript" src="/static/js/easytimer.min.js"></script>
 	{% include "enterlink/headers/header-common.html" %}{% include "enterlink/headers/header-navbar.html" %}
     {% include 'enterlink/inline-css/voting-css.html' %}
@@ -14,54 +13,47 @@
         $('#submission_waiting').show();
         function fetchVotes(propHashTrunc64, propHashTrunc64PlusOne) {
             $('#submission_waiting').show();
-            $.ajax({
-                type: "POST",
-                url: EosNetURL + "/v1/chain/get_table_rows",
-                // cannot filter by proposal ID until secondary indexes are fixed by Dan. Also cannot set proposal ID as primary key due to uniqueness issues...
-                data: JSON.stringify({"scope":"eparticlectr", "code":"eparticlectr", "table":"votestbl", "limit":"999999999999",
-                        "lower_bound":propHashTrunc64, "upper_bound":propHashTrunc64PlusOne, "key_type":"i64", "index_position":"3", "json": true}),
-                beforeSend: function( xhr ) {
-                },
-                success: function (data) {
-                    var tallyList = [0, 0];
-                    var approvers = [];
-                    var rejectors = [];
-                    $.each(data.rows, function( index, value ) {
-                        if(value.approve == 0 ){
-                            tallyList[0] += value.amount;
-                            rejectors.push([value.voter, value.amount]);
-                        }
-                        else if(value.approve == 1 ){
-                            tallyList[1] += value.amount;
-                            approvers.push([value.voter, value.amount]);
-                        }
+
+            var propHash = "{{ new_ipfs }}";
+            $.get(`https://epmainnet.libertyblock.io:8000/votes/${propHash}`).then(function (docs) {
+                var tallyList = [0, 0];
+                var approvers = [];
+                var rejectors = [];
+                $.each(docs, function( index, value ) {
+                    if(value.act.data.approve == 0 ){
+                        tallyList[0] += value.act.data.amount;
+                        rejectors.push([value.act.data.voter, value.act.data.amount]);
+                    }
+                    else if(value.act.data.approve == 1 ){
+                        tallyList[1] += value.act.data.amount;
+                        approvers.push([value.act.data.voter, value.act.data.amount]);
+                    }
+                });
+                $(".toc-vote-box .reject-tally").html(tallyList[0]);
+                $(".toc-vote-box .accept-tally").html(tallyList[1]);
+
+                var rejectorsLength = rejectors.length;
+                $('.rejectors-list').html("");
+                for (var i = 0; i < rejectorsLength; i++) {
+                    let replacements = {"%VOTER%":rejectors[i][0],"%AMOUNT%":rejectors[i][1]};
+                    let liHTML = '<li class="voter-line"><div class="vote-amount">-%AMOUNT%</div><div class="voter">%VOTER%</div></li>';
+                    liHTML = liHTML.replace(/%\w+%/g, function(all) {
+                        return replacements[all] || all;
                     });
-                    $(".toc-vote-box .reject-tally").html(tallyList[0]);
-                    $(".toc-vote-box .accept-tally").html(tallyList[1]);
-
-                    var rejectorsLength = rejectors.length;
-                    $('.rejectors-list').html("");
-                    for (var i = 0; i < rejectorsLength; i++) {
-                        let replacements = {"%VOTER%":rejectors[i][0],"%AMOUNT%":rejectors[i][1]};
-                        let liHTML = '<li class="voter-line"><div class="vote-amount">-%AMOUNT%</div><div class="voter">%VOTER%</div></li>';
-                        liHTML = liHTML.replace(/%\w+%/g, function(all) {
-                            return replacements[all] || all;
-                        });
-                        $('.rejectors-list').append(liHTML);
-                    }
-
-                    var approversLength = approvers.length;
-                    $('.approvers-list').html("");
-                    for (var i = 0; i < approversLength; i++) {
-                        let replacements = {"%VOTER%":approvers[i][0],"%AMOUNT%":approvers[i][1]};
-                        let liHTML = '<li class="voter-line"><div class="vote-amount">+%AMOUNT%</div><div class="voter">%VOTER%</div></li>';
-                        liHTML = liHTML.replace(/%\w+%/g, function(all) {
-                            return replacements[all] || all;
-                        });
-                        $('.approvers-list').append(liHTML);
-                    }
-                    $('#submission_waiting').hide();
+                    $('.rejectors-list').append(liHTML);
                 }
+
+                var approversLength = approvers.length;
+                $('.approvers-list').html("");
+                for (var i = 0; i < approversLength; i++) {
+                    let replacements = {"%VOTER%":approvers[i][0],"%AMOUNT%":approvers[i][1]};
+                    let liHTML = '<li class="voter-line"><div class="vote-amount">+%AMOUNT%</div><div class="voter">%VOTER%</div></li>';
+                    liHTML = liHTML.replace(/%\w+%/g, function(all) {
+                        return replacements[all] || all;
+                    });
+                    $('.approvers-list').append(liHTML);
+                }
+                $('#submission_waiting').hide();
             });
         }
 
@@ -79,21 +71,32 @@
 
                 function finalizeVote(){
                     $('#submission_waiting').show();
-                    eos.contract('eparticlectr').then(eparticlectr => {
-                        eparticlectr.fnlbyhash('{{ new_ipfs }}', {authorization: scatterAccountName, permission: "active"}
-                        ).then(result => {
-                            $(".place-votes-header, .vote-input-box, .place-votes-btn-rows").hide();
-                            $.ajax({
-                                url: location.origin + "/cachefinalizedresult/" + propHashTrunc64 + "/",
-                                success: function(){}
-                            });
-                            $('#submission_waiting').hide();
-                        }).catch(error => {
-                            error = JSON.parse(error).error.details[0].message.replace('condition: assertion failed: ', '');
-                            alert(error);
-                            $('#submission_waiting').hide();
+                    var transactionJSON = {
+                        actions: [{
+                                account: 'eparticlectr',
+                                name: 'fnlbyhash',
+                                authorization: [{
+                                    actor: scatterAccountName,
+                                    permission: "active",
+                                }],
+                        data: {
+                                proposal_hash: '{{ new_ipfs }}',
+                            },
+                        }]
+                    };
+                    eos.transact(transactionJSON, {blocksBehind: 3, expireSeconds: 30,}).then(result => {
+                        $(".place-votes-header, .vote-input-box, .place-votes-btn-rows").hide();
+                        $.ajax({
+                            url: location.origin + "/cachefinalizedresult/" + propHashTrunc64 + "/",
+                            success: function(){}
                         });
-
+                        $('#submission_waiting').hide();
+                    }).catch(e => {
+                        $('#submission_waiting').hide();
+                        alert(e);
+                        // if (e instanceof eosjs_jsonrpc.RpcError){
+                        // 	console.log(JSON.stringify(e.json, null, 2));
+                        // }
                     });
                 }
 
@@ -155,7 +158,6 @@
                     }
                 });
 
-
                 // Fetch the votes
                 fetchVotes(propHashTrunc64, propHashTrunc64PlusOne);
 
@@ -163,16 +165,33 @@
                 $(".toc-vote-box .reject-vote").on("click", function () {
                     $('#submission_waiting').show();
                     var voteCount = $(".toc-vote-box .vote-input").val();
-                    eos.contract('eparticlectr').then(eparticlectr => {
-                        eparticlectr.votebyhash(scatterAccountName, '{{ new_ipfs }}', 0, voteCount, {authorization: scatterAccountName, permission: "active"}
-                        ).then(result => {
-                            fetchVotes(propHashTrunc64, propHashTrunc64PlusOne);
-                            $('#submission_waiting').hide();
-                        }).catch(error => {
-                            error = JSON.parse(error).error.details[0].message.replace('condition: assertion failed: ', '');
-                            alert(error);
-                            $('#submission_waiting').hide();
-                        });
+
+                    var transactionJSON = {
+                        actions: [{
+                            account: 'eparticlectr',
+                            name: 'votebyhash',
+                            authorization: [{
+                                actor: scatterAccountName,
+                                permission: "active",
+                            }],
+                            data: {
+                                voter: scatterAccountName,
+                                proposal_hash: '{{ new_ipfs }}',
+                                approve: false,
+                                amount: voteCount,
+                            },
+                        }]
+                    };
+                    eos.transact(transactionJSON, {blocksBehind: 3, expireSeconds: 30,}).then(result => {
+                        fetchVotes(propHashTrunc64, propHashTrunc64PlusOne);
+                        $('#submission_waiting').hide();
+                        console.log("Transaction completed:" + result.transaction_id);
+                    }).catch(e => {
+                        $('#submission_waiting').hide();
+                        alert(e);
+                        // if (e instanceof eosjs_jsonrpc.RpcError){
+                        // 	console.log(JSON.stringify(e.json, null, 2));
+                        // }
                     });
                 });
 
@@ -180,17 +199,33 @@
                 $(".toc-vote-box .accept-vote").on("click", function () {
                     $('#submission_waiting').show();
                     var voteCount = $(".toc-vote-box .vote-input").val();
-                    eos.contract('eparticlectr').then(eparticlectr => {
-                        eparticlectr.votebyhash(scatterAccountName, '{{ new_ipfs }}', 1, voteCount, {authorization: scatterAccountName, permission: "active"}
-                        ).then(result => {
-                            fetchVotes(propHashTrunc64, propHashTrunc64PlusOne);
-                            $('#submission_waiting').hide();
-                        }).catch(error => {
-                            error = JSON.parse(error).error.details[0].message.replace('condition: assertion failed: ', '');
-                            alert(error);
-                            $('#submission_waiting').hide();
-                        });
 
+                    var transactionJSON = {
+                        actions: [{
+                            account: 'eparticlectr',
+                            name: 'votebyhash',
+                            authorization: [{
+                                actor: scatterAccountName,
+                                permission: "active",
+                            }],
+                            data: {
+                                voter: scatterAccountName,
+                                proposal_hash: '{{ new_ipfs }}',
+                                approve: true,
+                                amount: voteCount,
+                            },
+                        }]
+                    };
+                    eos.transact(transactionJSON, {blocksBehind: 3, expireSeconds: 30,}).then(result => {
+                        fetchVotes(propHashTrunc64, propHashTrunc64PlusOne);
+                        $('#submission_waiting').hide();
+                        console.log("Transaction completed:" + result.transaction_id);
+                    }).catch(e => {
+                        $('#submission_waiting').hide();
+                        alert(e);
+                        // if (e instanceof eosjs_jsonrpc.RpcError){
+                        // 	console.log(JSON.stringify(e.json, null, 2));
+                        // }
                     });
                 });
 

@@ -1,0 +1,103 @@
+<script>
+function ipfs_to_uint64_trunc(hash){
+    var preHash = hash.replace(/[6789\s]/g, '');
+    var truncatedHash = preHash.substring(2, 14).toLowerCase();
+    var hashNumber = encodeName(truncatedHash, 0);
+    var result = bigInt(hashNumber).mod(9007199254740990).toJSNumber();
+    return(result);
+}
+
+function increaseLastCharByOne(inputString) {
+    let stringLength = inputString.length;
+    let newChar = String.fromCharCode(inputString.charCodeAt(stringLength - 1) + 1);
+    let newString = inputString.slice(0, -1) + newChar;
+    return newString;
+}
+
+function addZeroes(num) {
+   return num.toLocaleString("en", {useGrouping: false, minimumFractionDigits: 3})
+}
+
+function convertSecs(secs) {
+    var d, h, m, s;
+    s = secs;
+    m = Math.floor(s / 60);
+    s = s % 60;
+    h = Math.floor(m / 60);
+    m = m % 60;
+    d = Math.floor(h / 24);
+    h = h % 24;
+    return { d: d, h: h, m: m, s: s };
+}
+
+function isNormalInteger(str) {
+    var n = Math.floor(Number(str));
+    return n !== Infinity && String(n) === str && n >= 0;
+}
+
+function refreshIQ() {
+    $.ajax({
+        type: "POST",
+        url: EosNetURL + "/v1/chain/get_table_rows",
+        // cannot filter by proposal ID until secondary indexes are fixed by Dan. Also cannot set proposal ID as primary key due to uniqueness issues...
+        data: JSON.stringify({"scope":scatterAccountNameUInt64, "code":"everipediaiq", "table":"accounts", "limit":"999999999999", "json": true}),
+        beforeSend: function( xhr ) {
+        },
+        success: function (data) {
+            $.each(data.rows, function( index, value ) {
+                let theBalance = value.balance;
+                let theSplit = theBalance.split(/[ ,]+/);
+                if(theSplit[1] == "IQ" ){
+                    iqBalance = parseFloat(theSplit[0]);
+                    // Fix this later
+                    // var iqElement = '<a href="/editor/' + scatterAccountName + '/">' + iqBalance.toLocaleString() +' IQ</a>';
+                    let iqElement = '<a href="/transfer-iq/"><span id="header_iq_count">' + iqBalance.toLocaleString() +' IQ</span></a>';
+                    $(".navbar-nav #header_iq_count").parent().parent().html(iqElement);
+                    return false;
+                }
+            });
+
+        }
+    });
+}
+
+function refreshBrainpower(){
+    $.ajax({
+        type: "POST",
+        url: EosNetURL + "/v1/chain/get_table_rows",
+        data: JSON.stringify({
+            "scope": "eparticlectr", "code": "eparticlectr", "table": "brainpwrtbl",
+            "lower_bound": scatterAccountName, "upper_bound": scatterAccountNameCharPlusOne, "json": true
+        }),
+        beforeSend: function (xhr) {
+        },
+        success: function (data) {
+            var brainpower;
+            try {
+                brainpower = data.rows[0].power;
+                brainpower = brainpower.toLocaleString() + " BRAIN";
+            }
+            catch(err) {
+                brainpower = "GET BRAINPOWER";
+            }
+            var brainElement = '<a href="/brainpower/' + scatterAccountName + '/"><span id="header_bpwr_count">' + brainpower + '</span></a>';
+            $(".navbar-nav #header_bpwr_count").parent().parent().html(brainElement);
+
+            var rewardElement = '<a href="/rewards/' + scatterAccountName + '/"><span id="header_rwd_claim">' + gettext("Claim Rewards") + '</span></a>';
+            $(".navbar-nav #header_rwd_claim").parent().parent().html(rewardElement);
+        }
+    });
+}
+
+function getBrainpower(){
+    let quickString = $("#header_bpwr_count").html();
+    let quickSplit = quickString.replace(",", "").split(" ");
+    let brainValue = quickSplit[0];
+    if (isNormalInteger(brainValue)){
+        return parseInt(brainValue);
+    }
+    else{
+        return 0;
+    }
+}
+</script>

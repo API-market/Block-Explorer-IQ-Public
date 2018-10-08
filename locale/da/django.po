@@ -1571,7 +1571,7 @@ msgid "Follow us on Telegram"
 msgstr "Følg os på Telegram"
 
 #: templates/enterlink/index.html:168
-msgid "Led by the Founder of Wikipedia and Genius.com"
+msgid "Led by the Founders of Wikipedia and Genius.com"
 msgstr "Ledet af grundlæggeren af Wikipedia og Genius.com"
 
 #: templates/enterlink/index.html:171
@@ -2072,7 +2072,7 @@ msgid "Voting"
 msgstr "Afstemning"
 
 #: templates/enterlink/votehistory.html:95
-msgid "Voting History"
+msgid "Editing History"
 msgstr "Afstemningshistorik"
 
 #: templates/enterlink/voting.html:197

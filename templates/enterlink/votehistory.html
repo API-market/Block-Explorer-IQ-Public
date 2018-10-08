@@ -92,7 +92,7 @@
 			<a class="" href="/wiki/{{ articleObject.slug }}/">GO BACK</a>
 		</h3>
 	{% else %}
-		<h1>{% trans "Voting History" %}</h1>
+		<h1>{% trans "Editing History" %}</h1>
 		<table class="proposal-list">
 		{% for proposal in allProposals %}
 			<tr class="proposal-line propstat-{{ proposal.status }}" data-oldhash="{{ proposal.old_article_hash }}" data-newhash="{{ proposal.proposed_article_hash }}">

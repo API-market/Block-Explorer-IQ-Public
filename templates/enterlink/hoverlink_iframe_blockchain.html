@@ -15,7 +15,7 @@
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-57561457-6', 'auto');
+        ga('create', 'UA-57561457-3', 'auto');
         ga('send', 'pageview');
     </script>
     {% include 'enterlink/headers/extra-analytics-header.html' %}
@@ -65,11 +65,11 @@
                         <span class="icon icon-share" data-delay='{"show":"500", "hide":"300"}' data-toggle="tooltip" data-placement="bottom" title='{% trans "Share" %}'></span>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <div id="copyURL" style="margin-left:16.5px; width:79%;" class="copyURL-btn btn-default btn" onclick="window.prompt(gettext('To copy to clipboard, press Ctrl+C, then Enter'), 'https://iqnetwork.io/wiki/{{ARTICLE_SLUG}}/');">{% trans 'Copy URL' %}</div>
-                        <a rel='nofollow' id="shareURL_fb" style="" class="copyURL-btn embedURL-btn shareURL-btn-fb btn-default btn" href="https://www.facebook.com/sharer/sharer.php?u=https://iqnetwork.io/wiki/{{ARTICLE_SLUG}}/" target="_blank">
+                        <div id="copyURL" style="margin-left:16.5px; width:79%;" class="copyURL-btn btn-default btn" onclick="window.prompt(gettext('To copy to clipboard, press Ctrl+C, then Enter'), 'https://everipedia.org/wiki/{{ARTICLE_SLUG}}/');">{% trans 'Copy URL' %}</div>
+                        <a rel='nofollow' id="shareURL_fb" style="" class="copyURL-btn embedURL-btn shareURL-btn-fb btn-default btn" href="https://www.facebook.com/sharer/sharer.php?u=https://everipedia.org/wiki/{{ARTICLE_SLUG}}/" target="_blank">
                             <img alt="Share {{ ARTICLE_NAME }}'s {% if ARTICLE_PAGE_TYPE == 'Person' %}biography{% else %}wiki{% endif %} on Facebook" src="https://epcdn-vz.azureedge.net/static/images/fb_share_button.png">
                         </a>
-                        <a rel='nofollow' id="shareURL_tw" style="" class="copyURL-btn embedURL-btn shareURL-btn-tw btn-default btn" href="http://www.twitter.com/share?url=https://iqnetwork.io/wiki/{{ARTICLE_SLUG}}/" target="_blank">
+                        <a rel='nofollow' id="shareURL_tw" style="" class="copyURL-btn embedURL-btn shareURL-btn-tw btn-default btn" href="http://www.twitter.com/share?url=https://everipedia.org/wiki/{{ARTICLE_SLUG}}/" target="_blank">
                             <img alt="Share {{ ARTICLE_NAME }}'s wiki on Twitter" src="https://epcdn-vz.azureedge.net/static/images/tw_share_button.png">
                         </a>
                     </ul>

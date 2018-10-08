@@ -117,7 +117,7 @@
 
 	<div class="contact-ct tablet-compatible">
 		<h1>{% trans 'Transfer IQ' %}</h1>
-		<h5 class="fee-notice">NOTE: Everipedia has been paying the RAM costs for stakings, votes, and proposals. To help mitigate this, we are implementing a 0.1% transfer fee (x0.001) for all IQ movements outside of the article and token contracts (eparticlectr and everipediaiq respectively). This will help to reduce speculation and fund the continued use of RAM, as well as introduce some deflation to counteract the inflation introduced by the edit rewards. This is modeled in the same way as EOS's RAM trading fee reward which is taken out of direct circulation.</h5>
+		<!--<h5 class="fee-notice">NOTE: Everipedia has been paying the RAM costs for stakings, votes, and proposals. To help mitigate this, we are implementing a 0.1% transfer fee (x0.001) for all IQ movements outside of the article and token contracts (eparticlectr and everipediaiq respectively). This will help to reduce speculation and fund the continued use of RAM, as well as introduce some deflation to counteract the inflation introduced by the edit rewards. This is modeled in the same way as EOS's RAM trading fee reward which is taken out of direct circulation.</h5>-->
 		<h5 class="scatter-notice">{% trans 'Please make sure you have set up' %} <a href="https://get-scatter.com/">Scatter</a> {% trans 'beforehand' %}.</h5>
 		<div class="new-transfer">
 			<input placeholder="{% trans 'Sender' %}" name="sender" autocomplete="off" id="sender" type="text" value="" class="address-entry" disabled>
@@ -210,25 +210,39 @@
 			let recipient = $("#recipient").val();
 			transferAmount = Number((parseFloat(transferAmount)).toFixed(3));
 			transferAmount = addZeroes(transferAmount) + " IQ";
-			eos.contract('everipediaiq').then(everipediaiq => {
-				everipediaiq.transfer(scatterAccountName, recipient, transferAmount, memoText, {authorization: scatterAccountName, permission: "active"}
-				).then(result => {
-				    $('#submission_waiting').hide();
-					let txID = result.transaction_id;
-					let theURL = "https://bloks.io/transaction/" + txID;
-					$(".tx-anchor").attr("href", theURL);
-					$(".result-tx .tx-id").html(txID);
-					$(".result-tx").show();
-					refreshIQ();
-					refreshBrainpower();
 
-				}).catch(error => {
-				    $('#submission_waiting').hide();
-					error = JSON.parse(error).error.details[0].message.replace('condition: assertion failed: ', '');
-					alert(error);
-				});
+			var transactionJSON = {
+                actions: [{
+                    account: 'everipediaiq',
+                    name: 'transfer',
+                    authorization: [{
+                        actor: scatterAccountName,
+                        permission: "active",
+                    }],
+                    data: {
+                        from: scatterAccountName,
+                        to: recipient,
+                        quantity: transferAmount,
+                        memo: memoText,
+                    },
+                }]
+            };
+			eos.transact(transactionJSON, {blocksBehind: 3, expireSeconds: 30,}).then(result => {
+				$('#submission_waiting').hide();
+				let txID = result.transaction_id;
+				let theURL = "https://bloks.io/transaction/" + txID;
+				$(".tx-anchor").attr("href", theURL);
+				$(".result-tx .tx-id").html(txID);
+				$(".result-tx").show();
+				refreshIQ();
+				refreshBrainpower();
+			}).catch(e => {
+				$('#submission_waiting').hide();
+				alert(e);
+				// if (e instanceof eosjs_jsonrpc.RpcError){
+				// 	console.log(JSON.stringify(e.json, null, 2));
+				// }
 			});
-
         });
 
     });

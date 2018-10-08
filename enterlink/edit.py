@@ -36,8 +36,9 @@ from django.utils import timezone, translation
 from django.utils.html import strip_tags
 from django.utils.translation import ugettext
 from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_GET, require_POST
 from enterlink.forms import NewlinkFileForm, LinkForm, PageMetaForm
-from enterlink.models import ArticleTable, HashCache, SchemaObject, EditProposal
+from enterlink.models import ArticleTable, HashCache, SchemaObject, EditProposal, SavedDraft
 from enterlink.model_functions import linkCategorizer, profileLinkTester, dupeLinkDetector, badLinkSanitizer, \
     entireArticleHTMLSanitizer
 from enterlink.view_functions import getTheArticleObject, parseBlockchainHTML, parseTinyMCE_Citations, getDiffs, ipfs_to_uint64_trunc, encodeNameSwappedEndian, getCleanStrippedSlug
@@ -116,7 +117,8 @@ def create_page(request):
     # Create the article object
     newArticle = ArticleTable.objects.create(ipfs_hash_parent=DEFAULT_PAGE_HASH, ipfs_hash_current=ipfs_created_page, page_title=pagetitle, blurb_snippet="",
             page_type=None, lastmod_timestamp=datetime.datetime.utcnow(), slug=newSlug, slug_alt=newSlug, photo_url="https://epcdn-vz.azureedge.net/static/images/no-image-slide-big.png",
-            photo_thumb_url="https://epcdn-vz.azureedge.net/static/images/no-image-slide.png", is_new_page=True, page_lang=translation.get_language())
+            photo_thumb_url="https://epcdn-vz.azureedge.net/static/images/no-image-slide.png", is_new_page=True,
+            is_removed_from_index=True, page_lang=translation.get_language())
 
     # Cache the IPFS
     HashCache.objects.create(ipfs_hash=ipfs_created_page, timestamp=datetime.datetime.now(tz=pytz.utc), html_blob=alteredDefaultHTML, articletable=newArticle)
@@ -148,8 +150,26 @@ def sync_to_chain(request):
         try:
             print("Processing proposal %s" % proposal.id)
             cacheFinalizedResult(proposal.id, False)
-        except:
-            pass
+        except Exception as e:
+            print(unicode(e))
+
+    # Return the page HTML
+    return HttpResponse("Complete")
+
+@csrf_exempt
+def check_new_articles(request):
+    # Fetch all proposals marked as is_new_page = True
+    newArticles = ArticleTable.objects.filter(is_new_page=True)
+
+    # Loop through all of the articles and check their proposals
+    for article in newArticles:
+        proposals = EditProposal.objects.filter(article_id=article.id)
+        for proposal in proposals:
+            try:
+                print("Processing proposal %s" % proposal.id)
+                cacheFinalizedResult(proposal.id, False)
+            except Exception as e:
+                print(unicode(e))
 
     # Return the page HTML
     return HttpResponse("Complete")
@@ -192,13 +212,27 @@ def cacheFinalizedResult(proposal_id, verify_only=False):
      "lower_bound": proposalID, "upper_bound": proposalIDPlusOne, "json": "true"}
 
     # Get the JSON response
-    page = requests.post('https://mainnet.libertyblock.io:7777/v1/chain/get_table_rows', headers=REQUEST_HEADER, timeout=10, verify=False, json=jsonDict)
+    page = requests.post('https://nodes.get-scatter.com:443/v1/chain/get_table_rows', headers=REQUEST_HEADER, timeout=10, verify=False, json=jsonDict)
 
     # Load the JSON response into a dictionary object
     json_data = json.loads(page.text)
 
     # Get the status of the proposal
-    proposalStatus = int(json_data['rows'][0]['status'])
+    try:
+        proposalStatus = int(json_data['rows'][0]['status'])
+    except:
+        jsonDict = {"scope": "eparticlectr", "code": "eparticlectr", "table": "propstbl", "key_type": "i64",
+                    "index_position": "3",
+                    "lower_bound": proposalID, "upper_bound": proposalIDPlusOne, "json": "true"}
+
+        # Get the JSON response
+        page = requests.post('https://nodes.get-scatter.com:443/v1/chain/get_table_rows', headers=REQUEST_HEADER,
+                             timeout=10, verify=False, json=jsonDict)
+
+        # Load the JSON response into a dictionary object
+        json_data = json.loads(page.text)
+
+        proposalStatus = int(json_data['rows'][0]['status'])
 
     # Update the edit proposal
     quickproposal = EditProposal.objects.get(id=proposal_id)
@@ -227,13 +261,13 @@ def cacheFinalizedResult(proposal_id, verify_only=False):
                 articleObject.is_removed_from_index = True
                 print("REMOVED THE NEW PAGE SINCE IT WAS VOTED DOWN")
 
-
             hashCache = HashCache.objects.get(ipfs_hash=quickproposal.old_article_hash)
             lastCacheRefresh = hashCache.timestamp
             articleObject.lastmod_timestamp = lastCacheRefresh
             print("PROPOSAL REJECTED... REVERTING TO OLD HASHES")
         else:
             articleObject.is_new_page = False
+            print("Removed the new page marker")
 
         # Save the article
         articleObject.save()
@@ -269,6 +303,9 @@ def edit(request, url_param="everipedia-blank-page-template"):
                     item.extract()
         except:
             pass
+
+        # quickTitleNode = theSoup.findAll("h1")
+        # print(unicode(quickTitleNode[0]))
 
         # Convert the BeautifulSoup object back into a string
         innerHTMLBlock = unicode(theSoup)
@@ -316,7 +353,9 @@ def edit(request, url_param="everipedia-blank-page-template"):
                     "index_position": "3", "lower_bound": proposalID, "upper_bound": proposalIDPlusOne, "json": "true"}
 
         # Make the API request and parse the JSON into a variable
-        page = requests.post('https://mainnet.libertyblock.io:7777/v1/chain/get_table_rows', headers=REQUEST_HEADER, timeout=10, verify=False, json=jsonDict)
+        # page = requests.post('https://mainnet.libertyblock.io:7777/v1/chain/get_table_rows', headers=REQUEST_HEADER, timeout=10, verify=False, json=jsonDict)
+        page = requests.post('https://nodes.get-scatter.com:443/v1/chain/get_table_rows', headers=REQUEST_HEADER, timeout=10, verify=False, json=jsonDict)
+
         json_data = json.loads(page.text)
 
         # Get the status of the proposal
@@ -351,6 +390,7 @@ def edit(request, url_param="everipedia-blank-page-template"):
         articleObject.page_title = parsedDict["PAGETITLE"]
         articleObject.lastmod_timestamp = timezone.now()
         articleObject.is_removed = parsedDict["PAGEMETADATA"]["is_removed"]
+        articleObject.is_removed_from_index = False
         articleObject.is_adult_content = parsedDict["PAGEMETADATA"]["is_adult_content"]
         articleObject.save()
 
@@ -366,7 +406,10 @@ def edit(request, url_param="everipedia-blank-page-template"):
     # Temporary
     # if(articleObject.id < 18682257):
     #     return HttpResponseRedirect("/editing-disabled/")
-
+    if 'draft' in request.GET:
+        account_name = request.GET.get('draft')
+        draft = SavedDraft.objects.get(article_slug=articleObject.slug, account_name=account_name)
+        hashObject.html_blob = draft.html_blob
 
     # Update the Django templating dictionary for the edit page
     contextDictionary = {}
@@ -378,6 +421,7 @@ def edit(request, url_param="everipedia-blank-page-template"):
     contextDictionary.update({"ARTICLE_PHOTO_URL": articleObject.photo_url})
     contextDictionary.update({"ARTICLE_THUMB_URL": articleObject.photo_thumb_url})
     contextDictionary.update({"ARTICLE_PAGE_TYPE": articleObject.page_type})
+    # contextDictionary.update({"ARTICLE_PAGEVIEWS": articleObject.pageviews})
     contextDictionary.update({"newlinkfileform": NewlinkFileForm()})
     contextDictionary.update({"linkform": LinkForm()})
     contextDictionary.update({"pagemetaform": PageMetaForm(initial={'page_type': articleObject.page_type, 'sub_page_type': articleObject.page_sub_type, 'is_removed': articleObject.is_removed, 'is_adult_content': articleObject.is_adult_content})})
@@ -457,6 +501,8 @@ def AJAX_Add_New_Link(request):
         return HttpResponse("ERROR_NO_DESCRIPTION")
     else:
         pass
+
+    URLComment = badLinkSanitizer(URLComment)
 
     # Get and format the UTC timestamp
     timestamp = datetime.datetime.utcnow()
@@ -772,4 +818,46 @@ def AJAX_Picture_Upload(request, photo_type, identifier, existingActivity=None):
 
     # Return the result of this upload process
     return JsonResponse(photoResult["returnDict"])
+
+@csrf_exempt
+@require_POST
+def save_draft(request):
+    # Get the POSTed article HTML
+    innerHTMLBlock = request.POST.get("html_blob")
+
+    # Clean up and canonicalize the submitted HTML
+    innerHTMLBlock = entireArticleHTMLSanitizer(innerHTMLBlock)[5:]
+
+    # Remove temporary HTML elements that were injected into the TinyMCE in order to make the page more interactive
+    theSoup = BeautifulSoup(innerHTMLBlock, "html.parser")
+    try:
+        badClasses = [ 'add-row-btn', 'button-wrap', 'add-new-ibox', 'add-heading-wrap',  ]
+        for badClass in badClasses:
+            listOfBads = theSoup.findAll(class_=badClass)
+            for item in listOfBads:
+                item.extract()
+    except:
+        pass
+
+    # Convert the BeautifulSoup object back into a string
+    innerHTMLBlock = unicode(theSoup)
+
+    # Render the article HTML and its wrapper as a string and save it to the variable
+    resultHTML = render_to_string('enterlink/blockchain_article_wrap.html', {'innerHTMLBlock': innerHTMLBlock, })
+
+    SavedDraft.objects.update_or_create(
+        account_name = request.POST.get('account_name'),
+        article_slug = request.POST.get('article_slug'),
+        defaults = { "html_blob": innerHTMLBlock }
+    );
+
+    return JsonResponse({ "success": True })
+
+@require_GET
+def get_draft(request):
+    draft = SavedDraft.objects.filter(
+        account_name=request.GET.get('account_name'),
+        article_slug=request.GET.get('article_slug')
+    ).values('account_name', 'article_slug', 'html_blob')
+    return JsonResponse( list(draft)[0] )
 

@@ -116,4 +116,10 @@ class SeeAlso(models.Model):
     def __unicode__(self):
         return self.see_also_content
 
-
+# Saved Drafts
+class SavedDraft(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    account_name = models.CharField(max_length=20, null=False, blank=False)
+    article_slug = models.CharField(max_length=512, null=False, blank=False)
+    html_blob = models.TextField(null=True, blank=True)
+    updated_at = models.DateTimeField()

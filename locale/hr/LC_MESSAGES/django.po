@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-25 08:59-0700\n"
+"POT-Creation-Date: 2018-10-08 09:47-0700\n"
 "PO-Revision-Date: 2018-07-31 15:48-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -19,178 +19,88 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Poedit 2.1.1\n"
 
-#: enterlink/edit.py:114
+#: enterlink/edit.py:105
 #, fuzzy
 #| msgid "Page"
 msgid "Page Type"
 msgstr "Stranica"
 
-#: enterlink/edit.py:114
+#: enterlink/edit.py:105
 msgid "Removed From Site"
 msgstr ""
 
-#: enterlink/edit.py:114 templates/enterlink/edit_ajax_editpagemeta.html:12
+#: enterlink/edit.py:105 templates/enterlink/edit_ajax_editpagemeta.html:12
 #, fuzzy
 msgid "Adult Content"
 msgstr "Sadržaj samo za odrasle"
 
-#: enterlink/edit.py:115
+#: enterlink/edit.py:106
 #, fuzzy
 #| msgid "Gallery"
 msgid "Media Gallery"
 msgstr "Galerija"
 
-#: enterlink/edit.py:115
+#: enterlink/edit.py:106
 msgid "References and Citations"
 msgstr ""
 
-#: enterlink/forms.py:9
-msgid "Contains"
-msgstr "Sadrži"
-
-#: enterlink/forms.py:9
-msgid "Equal to"
-msgstr "Jednako sa"
+#: enterlink/edit.py:789
+msgid ""
+"This is the reference link for the lead picture/gif of the page. Delete this "
+"link here or replace the picture/gif above."
+msgstr ""
 
 #: enterlink/forms.py:10
-msgid "Regular expression"
-msgstr "Regularni izraz"
-
-#: enterlink/forms.py:11
-#, fuzzy
-msgid "Starts with"
-msgstr "Počinje sa"
-
-#: enterlink/forms.py:11
-#, fuzzy
-msgid "Ends with"
-msgstr "Završava sa"
-
-#: enterlink/forms.py:12
-#, fuzzy
-msgid "Greater than"
-msgstr "Veće od"
-
-#: enterlink/forms.py:12
-#, fuzzy
-msgid "Greater than or equal to"
-msgstr "Veće od ili jednako sa"
-
-#: enterlink/forms.py:13
-msgid "Less than"
-msgstr "Manje od"
-
-#: enterlink/forms.py:13
-#, fuzzy
-msgid "Less than or equal to"
-msgstr "Manje od ili jednako sa"
-
-#: enterlink/forms.py:42 templates/enterlink/headers/index_header.html:133
-#: templates/enterlink/login.html:40
-msgid "Password"
-msgstr "Lozinka"
-
-#: enterlink/forms.py:44
-#, fuzzy
-msgid "Please enter a password"
-msgstr "Molimo unesite lozinku!"
-
-#: enterlink/forms.py:45
-#, fuzzy
-msgid "Please enter a valid password"
-msgstr "Molimo unesite važeću lozinku."
-
-#: enterlink/forms.py:46
-#, fuzzy
-msgid "Enter an email"
-msgstr "Unesite adresu e-pošte"
-
-#: enterlink/forms.py:47
-msgid "Please enter an email address"
-msgstr "Molimo unesite adresu e-pošte"
-
-#: enterlink/forms.py:48
-msgid "Please enter a valid email address"
-msgstr "Molimo unesite važeću adresu e-pošte"
-
-#: enterlink/forms.py:49 enterlink/forms.py:69
-msgid "First Name"
-msgstr "Ime"
-
-#: enterlink/forms.py:51 enterlink/forms.py:71
-msgid "Last Name"
-msgstr "Prezime"
-
-#: enterlink/forms.py:53
-#, fuzzy
-msgid "Enter a username"
-msgstr "Unesite korisničko ime"
-
-#: enterlink/forms.py:54
-msgid "Please enter a username"
-msgstr "Molimo unesite korisničko ime"
-
-#: enterlink/forms.py:55
-#, fuzzy
-msgid "Please enter a valid username"
-msgstr "Molimo unesite važeće korisničko ime"
-
-#: enterlink/forms.py:61
-#, fuzzy
-msgid "This email address already exists! Please use another one."
-msgstr "Ova adresa e-pošte već postoji! Molimo unesite drugu."
-
-#: enterlink/forms.py:73 enterlink/forms.py:83
-msgid "Email"
-msgstr "E-pošta"
-
-#: enterlink/forms.py:82
 msgid "How can we help?"
 msgstr "Kako možemo pomoći?"
 
-#: enterlink/forms.py:84
+#: enterlink/forms.py:11
+msgid "Email"
+msgstr "E-pošta"
+
+#: enterlink/forms.py:12
 msgid "Full Name"
 msgstr "Puno ime i prezime"
 
-#: enterlink/forms.py:85
+#: enterlink/forms.py:13
 msgid "Subject"
 msgstr "Predmet"
 
-#: enterlink/forms.py:86 enterlink/models.py:89
+#: enterlink/forms.py:14 enterlink/models.py:13
 #, fuzzy
 msgid "Report Abuse"
 msgstr "Prijava zloupotrebe"
 
-#: enterlink/forms.py:86 enterlink/models.py:89
+#: enterlink/forms.py:14 enterlink/models.py:13
 msgid "Report Bug"
 msgstr "Prijava greške"
 
-#: enterlink/forms.py:86 enterlink/models.py:89
+#: enterlink/forms.py:14 enterlink/models.py:13
 #, fuzzy
 msgid "Verify Account"
 msgstr "Potvrda računa"
 
-#: enterlink/forms.py:86 enterlink/models.py:89
+#: enterlink/forms.py:14 enterlink/models.py:13
 #, fuzzy
 msgid "Anonymous Tip"
 msgstr "Anonimni savjet"
 
-#: enterlink/forms.py:86 enterlink/models.py:89
+#: enterlink/forms.py:14 enterlink/models.py:13
 #, fuzzy
 msgid "Investment Inquiries"
 msgstr "Investicijski upiti"
 
-#: enterlink/forms.py:86 enterlink/forms.py:175 enterlink/models.py:89
-#: enterlink/models.py:134
+#: enterlink/forms.py:14 enterlink/forms.py:75 enterlink/models.py:13
+#: enterlink/models.py:68
 msgid "Other"
 msgstr "Drugo"
 
-#: enterlink/forms.py:97
+#: enterlink/forms.py:23
 #, fuzzy
 msgid "Search by Entering a Link"
 msgstr "Pretraživanje unosom poveznice"
 
-#: enterlink/forms.py:126
+#: enterlink/forms.py:28
 #, fuzzy
 msgid ""
 "Describe the file briefly. A summary of the information found is best. Avoid "
@@ -199,20 +109,20 @@ msgstr ""
 "Ukratko opišite datoteku. Sažetak pronađenih podataka je najbolji. "
 "Izbjegavajte jednostavno ponavljanje naslova stranice."
 
-#: enterlink/forms.py:148
+#: enterlink/forms.py:51
 #, fuzzy
 msgid "File type not allowed."
 msgstr "Vrsta datoteke nije dopuštena."
 
-#: enterlink/forms.py:153
+#: enterlink/forms.py:57
 msgid "Please ."
 msgstr "Molim."
 
-#: enterlink/forms.py:154
+#: enterlink/forms.py:58
 msgid "Enter a URL"
 msgstr "Unesite URL"
 
-#: enterlink/forms.py:156
+#: enterlink/forms.py:60
 #, fuzzy
 msgid ""
 "Describe the URL briefly. A summary of the information found is best. Avoid "
@@ -221,158 +131,86 @@ msgstr ""
 " Ukratko opišite URL. Sažetak pronađenih podataka je najbolji. Izbjegavajte "
 "jednostavno ponavljanje naslova stranice."
 
-#: enterlink/forms.py:165 templates/enterlink/edit_ajax_addinfobox.html:28
+#: enterlink/forms.py:64 templates/enterlink/edit_ajax_addinfobox.html:29
 #, fuzzy
 msgid "Enter type (e.g. Occupation)"
 msgstr "Unesite vrstu (npr. zanimanje)"
 
-#: enterlink/forms.py:166 templates/enterlink/edit_ajax_addinfobox.html:28
+#: enterlink/forms.py:65 templates/enterlink/edit_ajax_addinfobox.html:29
 #, fuzzy
 msgid "Enter value (e.g. CEO)"
 msgstr "Unesite vrijednost (npr. CEO)"
 
-#: enterlink/forms.py:170 enterlink/models.py:134
+#: enterlink/forms.py:70 enterlink/models.py:68
 msgid "Person"
 msgstr "Osoba"
 
-#: enterlink/forms.py:170 enterlink/models.py:134
+#: enterlink/forms.py:70 enterlink/models.py:68
 #, fuzzy
 msgid "Place/Location"
 msgstr "Mjesto/Lokacija"
 
-#: enterlink/forms.py:171 enterlink/models.py:134
+#: enterlink/forms.py:71 enterlink/models.py:68
 #, fuzzy
 msgid "Organization/Company/Institution"
 msgstr "Organizacija /Tvrtka/Institucija"
 
-#: enterlink/forms.py:171 enterlink/models.py:134
+#: enterlink/forms.py:71 enterlink/models.py:68
 msgid "Event"
 msgstr "Događaj"
 
-#: enterlink/forms.py:172 enterlink/models.py:134
+#: enterlink/forms.py:72 enterlink/models.py:68
 #, fuzzy
 msgid "List/Ranking"
 msgstr "Lista/Rang"
 
-#: enterlink/forms.py:172 enterlink/models.py:134
+#: enterlink/forms.py:72 enterlink/models.py:68
 #, fuzzy
 msgid "Product/Merchandise"
 msgstr "Proizvod/Roba"
 
-#: enterlink/forms.py:173 enterlink/models.py:134
+#: enterlink/forms.py:73 enterlink/models.py:68
 #, fuzzy
 msgid "Electronics/Software"
 msgstr "Elektronika/Softver"
 
-#: enterlink/forms.py:173 enterlink/models.py:134
+#: enterlink/forms.py:73 enterlink/models.py:68
 #, fuzzy
 msgid "Medical/Biology"
 msgstr "Medicina/Biologija"
 
-#: enterlink/forms.py:174 enterlink/models.py:134
+#: enterlink/forms.py:74 enterlink/models.py:68
 #, fuzzy
 msgid "Creative Work/Art"
 msgstr "Kreativni rad/Umjetnost"
 
-#: enterlink/forms.py:175 enterlink/models.py:134
+#: enterlink/forms.py:75 enterlink/models.py:68
 #, fuzzy
 msgid "Science/Academia/Humanities"
 msgstr "Znanost/Akademija/Humanističke znanosti"
 
-#: enterlink/models.py:45 enterlink/models.py:49
-msgid "None"
-msgstr "Nijedan"
-
-#: enterlink/models.py:45
-msgid "Featured"
-msgstr "Istaknuto"
-
-#: enterlink/models.py:45
-#, fuzzy
-msgid "In the news"
-msgstr "U vijestima"
-
-#: enterlink/models.py:46
-#, fuzzy
-msgid "In the news (Editor's Pick)"
-msgstr "U vijestima (Izbor urednika)"
-
-#: enterlink/models.py:46
-#, fuzzy
-msgid "In the news (Standout Article)"
-msgstr "U vijestima (Istaknuti članak)"
-
-#: enterlink/models.py:47
-#, fuzzy
-msgid "Trending"
-msgstr "Popularno"
-
-#: enterlink/models.py:47
-#, fuzzy
-msgid "On this day"
-msgstr "Na današnji dan"
-
-#: enterlink/models.py:47
-#, fuzzy
-msgid "Blog Post (Meta Article)"
-msgstr "Blog post (Meta članak)"
-
-#: enterlink/models.py:49
-#, fuzzy
-msgid "Verified Only"
-msgstr "Samo potvrđeno"
-
-#: enterlink/models.py:50
-#, fuzzy
-msgid "Normal (Business)"
-msgstr "Normalno (Službeno)"
-
-#: enterlink/models.py:50
-#, fuzzy
-msgid "Normal (Personal)"
-msgstr "Normalno (Osobno)"
-
-#: enterlink/view_functions.py:144
-#, fuzzy
-msgid ""
-"Your Everipedia editor restrictions have been removed. You can now edit "
-"pages freely!"
-msgstr ""
-"Vaša ograničenja uređivanja na Everipediji su uklonjena. Sada možete "
-"slobodno uređivati stranice!"
-
-#: enterlink/view_functions.py:607
+#: enterlink/view_functions.py:140
 #, fuzzy
 msgid "Images & Videos"
 msgstr "Slike i videozapisi"
 
-#: enterlink/view_functions.py:609
+#: enterlink/view_functions.py:143
 msgid "References"
 msgstr "Reference"
 
-#: enterlink/view_functions.py:612
-#, fuzzy
-msgid "Article Discussion"
-msgstr "Rasprava o članku"
-
-#: enterlink/view_functions.py:615 enterlink/view_functions.py:618
-#: templates/enterlink/template_blockchain_styled_amp.html:350
-#: templates/enterlink/template_blockchain_styled_desktop.html:526
+#: enterlink/view_functions.py:150
+#: templates/enterlink/template_blockchain_styled_amp.html:318
+#: templates/enterlink/template_blockchain_styled_desktop.html:511
 #, fuzzy
 msgid "See Also"
 msgstr "Također pogledajte"
 
-#: enterlink/view_functions.py:617
-#, fuzzy
-msgid "Top Editors"
-msgstr "Vrhunski urednici"
-
-#: enterlink/view_functions.py:1625
+#: enterlink/view_functions.py:994
 #, fuzzy
 msgid "Wiki and references for"
 msgstr "Wiki i reference za"
 
-#: enterlink/view_functions.py:1626
+#: enterlink/view_functions.py:995
 #, fuzzy
 msgid "You can edit something on this wiki now!"
 msgstr "Sada možete nešto urediti na ovoj wiki!"
@@ -392,217 +230,10 @@ msgstr "Opcionalni razlog za blokiranje"
 msgid "IPs & masks to ban"
 msgstr "IP i maske za zabranu"
 
-#: templates/admin/base.html:28
-#, fuzzy
-msgid "Welcome,"
-msgstr "Dobrodošli"
-
-#: templates/admin/base.html:33
-msgid "Documentation"
-msgstr "Dokumentacija"
-
-#: templates/admin/base.html:36
-msgid "Change password"
-msgstr "Promijeniti lozinku"
-
-#: templates/admin/base.html:38 templates/admin/password_change_done.html:57
-#: templates/admin/password_change_form.html:59
-#: templates/enterlink/headers/header_dropdown.html:22
-#: templates/enterlink/headers/header_dropdown.html:44
-#: templates/enterlink/headers/index_header.html:110
-#: templates/enterlink/headers/index_header.html:166
-#: templates/enterlink/headers/index_header.html:236
-#: templates/enterlink/headers/index_header.html:258
-#: templates/enterlink/notifications/index.html:100
-#: templates/enterlink/notifications/index.html:105
-msgid "Log out"
-msgstr "Odjava"
-
-#: templates/admin/base.html:47 templates/admin/logged_out.html:4
-#: templates/admin/password_reset_complete.html:6
-#: templates/admin/password_reset_confirm.html:6
-#: templates/admin/password_reset_done.html:6
-#: templates/admin/password_reset_form.html:6
-#: templates/enterlink/notifications/index.html:61
-#: templates/enterlink/notifications/index.html:94
-msgid "Home"
-msgstr "Početna"
-
-#: templates/admin/base_site.html:4
-#, fuzzy
-msgid "Django site admin"
-msgstr "Administrator Django stranice"
-
-#: templates/admin/base_site.html:7
-#, fuzzy
-msgid "Django administration"
-msgstr "Django administracija"
-
-#: templates/admin/logged_out.html:8
-#, fuzzy
-msgid "Thanks for spending some quality time with the Web site today."
-msgstr ""
-"Hvala vam što ste danas potrošili nešto kvalitetnog vremena na web stranici."
-
-#: templates/admin/logged_out.html:10
-#, fuzzy
-msgid "Log in again"
-msgstr "Ponovno se prijavite"
-
-#: templates/admin/password_change_done.html:46
-#: templates/admin/password_change_form.html:48
-#: templates/enterlink/edit.html:145 templates/enterlink/search-iframe.html:122
-#: templates/enterlink/search.html:27 templates/enterlink/user.html:220
-#, fuzzy
-msgid "Search Everipedia"
-msgstr "Pretražiti Everipediju"
-
-#: templates/admin/password_change_done.html:60
-#: templates/admin/password_change_form.html:62
-#: templates/admin/password_reset_complete.html:19
-#: templates/enterlink/headers/index_header.html:135
-#: templates/enterlink/headers/index_header.html:168
-#: templates/enterlink/headers/index_header.html:240
-#: templates/enterlink/headers/index_header.html:262
-#: templates/enterlink/login.html:45
-msgid "Log in"
-msgstr "Prijava"
-
-#: templates/admin/password_change_done.html:71
-#, fuzzy
-msgid "Password change successful"
-msgstr "Promjena lozinke uspješna"
-
-#: templates/admin/password_reset_complete.html:7
-#: templates/admin/password_reset_confirm.html:11
-#: templates/admin/password_reset_done.html:7
-#: templates/admin/password_reset_form.html:7
-#: templates/admin/password_reset_form.html:11
-#: templates/admin/password_reset_form.html:15
-msgid "Password reset"
-msgstr "Resetiranje lozinke"
-
-#: templates/admin/password_reset_complete.html:11
-#: templates/admin/password_reset_complete.html:15
-msgid "Password reset complete"
-msgstr "Resetiranje lozinke završeno"
-
-#: templates/admin/password_reset_complete.html:17
-#, fuzzy
-msgid "Your password has been set.  You may go ahead and log in now."
-msgstr "Vaša lozinka je postavljena. Možete sada dalje i prijaviti se."
-
-#: templates/admin/password_reset_confirm.html:7
-#, fuzzy
-msgid "Password reset confirmation"
-msgstr "Potvrda resetiranja lozinke"
-
-#: templates/admin/password_reset_confirm.html:17
-msgid "Enter new password"
-msgstr "Unesite novu lozinku"
-
-#: templates/admin/password_reset_confirm.html:19
-#, fuzzy
-msgid ""
-"Please enter your new password twice so we can verify you typed it in "
-"correctly."
-msgstr ""
-"Molimo unesite svoju novu lozinku dva puta kako bismo provjerili jeste li ju "
-"ispravno upisali."
-
-#: templates/admin/password_reset_confirm.html:23
-msgid "New password:"
-msgstr "Nova lozinka:"
-
-#: templates/admin/password_reset_confirm.html:25
-msgid "Confirm password:"
-msgstr "Potvrda lozinke:"
-
-#: templates/admin/password_reset_confirm.html:26
-msgid "Change my password"
-msgstr "Promjena moje lozinke"
-
-#: templates/admin/password_reset_confirm.html:31
-msgid "Password reset unsuccessful"
-msgstr "Resetiranje lozinke nije uspjelo"
-
-#: templates/admin/password_reset_confirm.html:33
-#, fuzzy
-msgid ""
-"The password reset link was invalid, possibly because it has already been "
-"used.  Please request a new password reset."
-msgstr ""
-"Poveznica za resetiranje lozinke nije bila važeća, vjerojatno zbog toga što "
-"je već upotrebljavana. Molimo zatražite ponovno resetiranje lozinke."
-
-#: templates/admin/password_reset_done.html:11
-#: templates/admin/password_reset_done.html:15
-msgid "Password reset successful"
-msgstr "Resetiranje lozinke je uspjelo"
-
-#: templates/admin/password_reset_done.html:17
-#, fuzzy
-msgid ""
-"We have emailed you instructions for setting your password. You should be "
-"receiving them shortly."
-msgstr ""
-"Poslali smo vam e-poštom upute za postavljanje lozinke. Trebali biste ih "
-"uskoro primiti."
-
-#: templates/admin/password_reset_done.html:19
-#, fuzzy
-msgid ""
-"If you don't receive an email, please make sure you've entered the address "
-"you registered with, and check your spam folder."
-msgstr ""
-"Ako ne primite e-poštu, provjerite jeste li unijeli adresu s kojom ste se "
-"registrirali, a provjerite i svoju mapu s neželjenom poštom."
-
-#: templates/admin/password_reset_email.html:2
-#, fuzzy
-msgid ""
-"You are receiving this email because you requested a password reset for your "
-"Everipedia account."
-msgstr ""
-"Primili ste ovu e-poštu jer ste zatražili poništavanje lozinke za svoj "
-"Everipedija račun."
-
-#: templates/admin/password_reset_email.html:4
-msgid "Please go to the following page and choose a new password:"
-msgstr "Molimo idite na sljedeću stranicu i odaberite novu lozinku:"
-
-#: templates/admin/password_reset_email.html:8
-#, fuzzy
-msgid "Your username, in case you've forgotten:"
-msgstr "Vaše korisničko ime, u slučaju da ste ga zaboravili:"
-
-#: templates/admin/password_reset_email.html:10
-#, fuzzy
-msgid "Thanks for using our site!"
-msgstr "Hvala što koristite našu stranicu!"
-
-#: templates/admin/password_reset_form.html:17
-#, fuzzy
-msgid ""
-"Forgotten your password? Enter your email address below, and we'll email "
-"instructions for setting a new one."
-msgstr ""
-"Zaboravili ste lozinku? U nastavku unesite adresu e-pošte pa ćemo vam "
-"poslati upute za postavljanje nove."
-
-#: templates/admin/password_reset_form.html:21
-msgid "Email address:"
-msgstr "Adresa e-pošte"
-
-#: templates/admin/password_reset_form.html:21
-#, fuzzy
-msgid "Reset my password"
-msgstr "Resetirati moju lozinku"
-
 #: templates/email/sanger_announcement.html:276
 #: templates/email/welcome_email.html:264
 #: templates/email/welcome_email_old.html:68
-#: templates/enterlink/welcome.html:33
+#: templates/enterlink/welcome.html:27
 msgid "Learn More"
 msgstr "Saznajte više"
 
@@ -612,14 +243,10 @@ msgid "View My Profile"
 msgstr "Prikaz mog profila"
 
 #: templates/email/welcome_email_old.html:67
-#: templates/enterlink/welcome.html:28 templates/enterlink/welcome.html:30
+#: templates/enterlink/welcome.html:26
 #, fuzzy
 msgid "Create a Wiki"
 msgstr "Stvorite Wiki"
-
-#: templates/endless/show_more.html:5
-msgid "more"
-msgstr "više"
 
 #: templates/enterlink/ajax_infobox_singlet.html:14
 #: templates/enterlink/ajax_infobox_singlet.html:42
@@ -657,9 +284,9 @@ msgstr ""
 #: templates/enterlink/ajax_media_gallery_singlet.html:14
 #: templates/enterlink/ajax_media_gallery_singlet.html:19
 #: templates/enterlink/ajaxresults.html:104
-#: templates/enterlink/hoverlink_iframe_blockchain.html:97
-#: templates/enterlink/template_blockchain_styled_desktop.html:415
-#: templates/enterlink/template_blockchain_styled_desktop.html:438
+#: templates/enterlink/hoverlink_iframe_blockchain.html:94
+#: templates/enterlink/template_blockchain_styled_desktop.html:400
+#: templates/enterlink/template_blockchain_styled_desktop.html:423
 #: templates/enterlink/template_photos_amp_json_blockchain.html:79
 #, fuzzy
 msgid "Your browser does not support HTML5 video."
@@ -690,7 +317,7 @@ msgstr ""
 
 #: templates/enterlink/ajaxresults.html:135
 #: templates/enterlink/ajaxresults.html:192
-#: templates/enterlink/template_blockchain_styled_desktop.html:167
+#: templates/enterlink/template_blockchain_styled_desktop.html:157
 msgid "Views"
 msgstr "Pregledi"
 
@@ -705,7 +332,7 @@ msgstr "IQ"
 msgid "page(s) have this link"
 msgstr "stranica/e ima ovu poveznicu"
 
-#: templates/enterlink/analytics.html:7 templates/enterlink/faq.html:6
+#: templates/enterlink/analytics.html:7
 #, fuzzy
 msgid "Frequently Asked Questions - Everipedia, everyone's encyclopedia"
 msgstr "Često postavljana pitanja - Everipedija, svačija enciklopedija"
@@ -716,29 +343,30 @@ msgstr "Često postavljana pitanja - Everipedija, svačija enciklopedija"
 msgid "Brainpower Management"
 msgstr " Brainpower upravljanje"
 
-#: templates/enterlink/brainpowermgmt.html:4 templates/enterlink/contact.html:7
-#: templates/enterlink/edit.html:7 templates/enterlink/editing-disabled.html:7
-#: templates/enterlink/editors.html:23
+#: templates/enterlink/brainpowermgmt.html:4 templates/enterlink/contact.html:5
+#: templates/enterlink/editing-disabled.html:7
+#: templates/enterlink/editors.html:22
 #: templates/enterlink/exchange-listings.html:7
 #: templates/enterlink/headers/index_header.html:17
 #: templates/enterlink/headers/index_header.html:18
-#: templates/enterlink/inbox.html:12 templates/enterlink/index.html:7
-#: templates/enterlink/leadership.html:7
+#: templates/enterlink/index.html:7 templates/enterlink/leadership.html:6
 #: templates/enterlink/limitreached.html:7 templates/enterlink/login.html:7
 #: templates/enterlink/recent-activity.html:7
-#: templates/enterlink/register.html:6 templates/enterlink/rewardsmgmt.html:4
-#: templates/enterlink/search.html:7 templates/enterlink/transfer-iq.html:5
-#: templates/enterlink/user.html:12 templates/enterlink/votehistory.html:7
+#: templates/enterlink/rewardsmgmt.html:4 templates/enterlink/search.html:7
+#: templates/enterlink/transfer-iq.html:5
+#: templates/enterlink/votehistory.html:7
 #, fuzzy
 msgid "Everipedia, the encyclopedia of everything"
 msgstr "Everipedija, enciklopedija svega"
 
-#: templates/enterlink/brainpowermgmt.html:101 templates/enterlink/edit.html:89
-#: templates/enterlink/rewardsmgmt.html:119
-#: templates/enterlink/transfer-iq.html:106 templates/enterlink/voting.html:180
+#: templates/enterlink/brainpowermgmt.html:101
+#: templates/enterlink/rewardsmgmt.html:123
+#: templates/enterlink/template_blockchain_styled_desktop.html:688
+#: templates/enterlink/voting.html:200
 #, fuzzy
-msgid "Loading Scatter"
-msgstr "Učitavanje raspršivanja"
+#| msgid "Please ."
+msgid "Please wait"
+msgstr "Molim."
 
 #: templates/enterlink/brainpowermgmt.html:117
 #, fuzzy
@@ -798,7 +426,7 @@ msgid "End"
 msgstr "Kraj"
 
 #: templates/enterlink/brainpowermgmt.html:130
-#: templates/enterlink/voting_table_of_contents.html:40
+#: templates/enterlink/voting_table_of_contents.html:41
 #, fuzzy
 msgid "Time Remaining"
 msgstr "Preostalo vrijeme:"
@@ -813,36 +441,36 @@ msgstr "Iznos"
 msgid "Claim"
 msgstr "Zahtjev"
 
-#: templates/enterlink/contact.html:7 templates/enterlink/contact.html:24
+#: templates/enterlink/contact.html:5 templates/enterlink/contact.html:22
 msgid "Contact us"
 msgstr "Kontaktirajte nas"
 
-#: templates/enterlink/contact.html:20
+#: templates/enterlink/contact.html:18
 #, fuzzy
 msgid "To get quicker replies from our community"
 msgstr "Da biste dobili brže odgovore iz naše zajednice"
 
-#: templates/enterlink/contact.html:20
+#: templates/enterlink/contact.html:18
 #, fuzzy
 msgid "create a post in our forum"
 msgstr "napravite post na našem forumu"
 
-#: templates/enterlink/contact.html:25
+#: templates/enterlink/contact.html:23
 msgid "Get in touch with us"
 msgstr "Ostanite u vezi s nama"
 
-#: templates/enterlink/contact.html:33
+#: templates/enterlink/contact.html:31
 #, fuzzy
 msgid "Thanks, we got your message. We will respond in a bit"
 msgstr "Hvala, dobili smo vašu poruku. Odgovorit ćemo brzo"
 
-#: templates/enterlink/contact.html:41 templates/enterlink/transfer-iq.html:131
+#: templates/enterlink/contact.html:39 templates/enterlink/transfer-iq.html:131
 msgid "Send"
 msgstr "Slanje"
 
-#: templates/enterlink/dropzone.html:140 templates/enterlink/edit.html:167
-#: templates/enterlink/edit.html:176 templates/enterlink/edit.html:185
-#: templates/enterlink/edit.html:195 templates/enterlink/edit.html:204
+#: templates/enterlink/dropzone.html:140 templates/enterlink/edit.html:125
+#: templates/enterlink/edit.html:134 templates/enterlink/edit.html:143
+#: templates/enterlink/edit.html:153 templates/enterlink/edit.html:162
 msgid "OK"
 msgstr "U redu"
 
@@ -851,38 +479,35 @@ msgstr "U redu"
 msgid "Enter a caption for the main image of the page."
 msgstr "Unesite naslov glavne slike stranice."
 
-#: templates/enterlink/edit.html:7
-msgid "Edit Page"
-msgstr "Urediti stranicu"
-
-#: templates/enterlink/edit.html:85
+#: templates/enterlink/edit.html:64
 #, fuzzy
-msgid "Loading.."
+msgid "Loading"
 msgstr "Učitavanje"
 
-#: templates/enterlink/edit.html:128
-#, fuzzy
-msgid "Change Picture"
-msgstr "Promijeniti sliku"
-
-#: templates/enterlink/edit.html:144
+#: templates/enterlink/edit.html:103
 #, fuzzy
 msgid "Please enter the destination page you wish to merge this one into"
 msgstr "Molimo unesite odredišnu stranicu s kojom želite spojiti ovu"
 
-#: templates/enterlink/edit.html:149
+#: templates/enterlink/edit.html:104 templates/enterlink/search-iframe.html:122
+#: templates/enterlink/search.html:27
+#, fuzzy
+msgid "Search Everipedia"
+msgstr "Pretražiti Everipediju"
+
+#: templates/enterlink/edit.html:108
 #, fuzzy
 msgid "Merge Page"
 msgstr "Spojiti stranicu"
 
-#: templates/enterlink/edit.html:156 templates/enterlink/edit.html:165
-#: templates/enterlink/edit.html:174 templates/enterlink/edit.html:183
-#: templates/enterlink/edit.html:192 templates/enterlink/edit.html:202
+#: templates/enterlink/edit.html:115 templates/enterlink/edit.html:123
+#: templates/enterlink/edit.html:132 templates/enterlink/edit.html:141
+#: templates/enterlink/edit.html:150 templates/enterlink/edit.html:160
 #, fuzzy
 msgid "Hey there scholar!"
 msgstr "Pozdrav, učeniče!"
 
-#: templates/enterlink/edit.html:157
+#: templates/enterlink/edit.html:116
 #, fuzzy
 msgid ""
 "Looks like you have been editing for a while. You should take a moment to "
@@ -891,11 +516,7 @@ msgstr ""
 "Izgleda da ste neko vrijeme uređivali. Trebali biste malo zastati da "
 "spremite svoj posao prije nastavka!"
 
-#: templates/enterlink/edit.html:158
-msgid "Save"
-msgstr "Spremiti"
-
-#: templates/enterlink/edit.html:166
+#: templates/enterlink/edit.html:124
 #, fuzzy
 msgid ""
 "Looks like you are using first-person! (ex: Our product, I am, We are, You "
@@ -906,12 +527,12 @@ msgstr ""
 "trebaš). Everipedija je neutralna enciklopedija napisana u trećem licu "
 "(npr.: to je, oni su, tvrtka radi). OVO NIJE FACEBOOK !!"
 
-#: templates/enterlink/edit.html:175
+#: templates/enterlink/edit.html:133
 #, fuzzy
 msgid "Please enter a title for the page."
 msgstr "Molimo unesite naslov stranice."
 
-#: templates/enterlink/edit.html:184
+#: templates/enterlink/edit.html:142
 #, fuzzy
 msgid ""
 "Please write something for the article section. Make sure to use citations."
@@ -919,7 +540,7 @@ msgstr ""
 "Molimo napišite nešto za sekciju članaka. Pazite da upotrebljavate navodne "
 "znakove."
 
-#: templates/enterlink/edit.html:193
+#: templates/enterlink/edit.html:151
 #, fuzzy
 msgid ""
 "Hello! This page needs citations (also known as footnotes, references, "
@@ -930,18 +551,18 @@ msgstr ""
 "reference, izvore) prije nego što se može spremiti. Dodajte poveznice koje "
 "upotrebljavate kao izvore pomoću gore navedenog gumba."
 
-#: templates/enterlink/edit.html:194
+#: templates/enterlink/edit.html:152
 #, fuzzy
 msgid "Join our official Facebook group if you need help with it!:"
 msgstr ""
 "Pridružite se našoj službenoj Facebook grupi ako vam je potrebna pomoć!:"
 
-#: templates/enterlink/edit.html:194
+#: templates/enterlink/edit.html:152
 #, fuzzy
 msgid "- we will hook you up. It's not hard!"
 msgstr "- spojit ćemo vas. Nije teško!"
 
-#: templates/enterlink/edit.html:203
+#: templates/enterlink/edit.html:161
 #, fuzzy
 msgid ""
 "Please cite the link(s) you just added into the main article body. First "
@@ -952,27 +573,27 @@ msgstr ""
 "kliknite na kraj rečenice ili na paragraf koji želite povezati, a zatim "
 "kliknite gumb (Cite) na gornjoj ploči za uređivanje!"
 
-#: templates/enterlink/edit_ajax_addinfobox.html:10
+#: templates/enterlink/edit_ajax_addinfobox.html:11
 #, fuzzy
 msgid "Add New Infobox Item"
 msgstr "Dodati novu Infobox stavku"
 
-#: templates/enterlink/edit_ajax_addinfobox.html:14
+#: templates/enterlink/edit_ajax_addinfobox.html:15
 #, fuzzy
 msgid "Enter a classification or category"
 msgstr "Unesite klasifikaciju ili kategoriju"
 
-#: templates/enterlink/edit_ajax_addinfobox.html:17
+#: templates/enterlink/edit_ajax_addinfobox.html:18
 #, fuzzy
 msgid "Enter a value or a description"
 msgstr "Unesite vrijednost ili opis"
 
-#: templates/enterlink/edit_ajax_addinfobox.html:23
+#: templates/enterlink/edit_ajax_addinfobox.html:24
 #, fuzzy
 msgid "Add Infobox Item"
 msgstr "Dodati Infobox stavku"
 
-#: templates/enterlink/edit_ajax_addinfobox.html:25
+#: templates/enterlink/edit_ajax_addinfobox.html:26
 #: templates/enterlink/edit_ajax_addlink.html:26
 #: templates/enterlink/edit_ajax_editpagemeta.html:15
 #: templates/enterlink/edit_ajax_page_photo.html:4
@@ -1022,35 +643,35 @@ msgstr "Ukloniti stranicu"
 msgid "Editing existing pages temporarily disabled"
 msgstr "Uređivanje postojećih stranica privremeno je onemogućeno"
 
-#: templates/enterlink/editors.html:23
+#: templates/enterlink/editors.html:22
 msgid "Editors"
 msgstr "Urednici"
 
-#: templates/enterlink/editors.html:74
+#: templates/enterlink/editors.html:73
 #, fuzzy
 msgid "Everipedia Editors"
 msgstr "Everipedija urednici"
 
-#: templates/enterlink/editors.html:93 templates/enterlink/inbox.html:52
-#: templates/enterlink/recent-activity.html:103
+#: templates/enterlink/editors.html:92
+#: templates/enterlink/recent-activity.html:106
 #: templates/enterlink/search.html:89
 msgid "Previous"
 msgstr "Prethodni"
 
-#: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
-#: templates/enterlink/recent-activity.html:107
+#: templates/enterlink/editors.html:96
+#: templates/enterlink/recent-activity.html:110
 #: templates/enterlink/search.html:93
 msgid "Page"
 msgstr "Stranica"
 
-#: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
-#: templates/enterlink/recent-activity.html:107
+#: templates/enterlink/editors.html:96
+#: templates/enterlink/recent-activity.html:110
 #: templates/enterlink/search.html:93
 msgid "of"
 msgstr "od"
 
-#: templates/enterlink/editors.html:101 templates/enterlink/inbox.html:60
-#: templates/enterlink/recent-activity.html:111
+#: templates/enterlink/editors.html:100
+#: templates/enterlink/recent-activity.html:114
 #: templates/enterlink/search.html:97
 msgid "Next"
 msgstr "Sljedeći"
@@ -1060,20 +681,19 @@ msgstr "Sljedeći"
 msgid "Page not found!"
 msgstr "Stranica nije pronađena"
 
-#: templates/enterlink/error.html:211
+#: templates/enterlink/error.html:195
 msgid "Page not found"
 msgstr "Stranica nije pronađena"
 
-#: templates/enterlink/error.html:213
+#: templates/enterlink/error.html:197
 #, fuzzy
 msgid "In The News"
 msgstr "U vijestima"
 
-#: templates/enterlink/error.html:214
-#: templates/enterlink/headers/header_dropdown.html:37
+#: templates/enterlink/error.html:198
+#: templates/enterlink/headers/header_dropdown.html:27
 #: templates/enterlink/recent-activity.html:7
-#: templates/enterlink/recent-activity.html:73
-#: templates/enterlink/user.html:192
+#: templates/enterlink/recent-activity.html:76
 #, fuzzy
 msgid "Recent Activity"
 msgstr "Nedavna aktivnost"
@@ -1084,7 +704,7 @@ msgid "This page has been removed"
 msgstr "Ova stranica je uklonjena"
 
 #: templates/enterlink/error_410.html:63
-#: templates/enterlink/in_progress_404.html:86
+#: templates/enterlink/in_progress_404.html:71
 #, fuzzy
 msgid "Click here to return to recent activity"
 msgstr "Kliknite ovdje da biste se vratili na nedavnu aktivnost"
@@ -1109,122 +729,16 @@ msgstr "Sljedeće razmjene ukazuju da će podržati IQ airdrop"
 msgid "Supported Wallets"
 msgstr "Podržani novčanici"
 
-#: templates/enterlink/exchange-listings.html:176
+#: templates/enterlink/exchange-listings.html:184
 #, fuzzy
 msgid "Token Pockets"
 msgstr "Tokenski džepovi"
 
-#: templates/enterlink/faq.html:20
-msgid "Frequently Asked Questions"
-msgstr "Često postavljana pitanja"
-
-#: templates/enterlink/faq.html:24
-#, fuzzy
-msgid "What is Everipedia?"
-msgstr "Što je Everipedija?"
-
-#: templates/enterlink/faq.html:25
-#, fuzzy
-msgid ""
-"Everipedia is a knowledge aggregator and knowledge base. We think it's much "
-"easier to edit than Wikipedia. Anyone can create a page about any person, "
-"place, organization, or thing and populate it with relevant reference links/"
-"sources. The only main rules of EP are: Information on the page must always "
-"be cited and the article must be in a neutral point of view. Check out the "
-"actual entry for Everipedia... on"
-msgstr ""
-"Everipedija je agregat i baza znanja. Mi mislimo da ju je mnogo lakše "
-"uređivati nego Wikipediju. Svatko može stvoriti stranicu o bilo kojoj osobi, "
-"mjestu, organizaciji ili stvari i popuniti ju relevantnim referentnim vezama/"
-"izvorima. Jedina glavna pravila za EP su: Informacije o stranici uvijek "
-"moraju biti citirane, a članak mora biti neutralan. Provjerite aktualne "
-"odrednice za Everipediju ... na "
-
-#: templates/enterlink/faq.html:27
-#, fuzzy
-msgid "Why should I sign up?"
-msgstr "Zašto bi se trebao prijaviti?"
-
-#: templates/enterlink/faq.html:28
-#, fuzzy
-msgid ""
-"Because it’s fun and easy! We thought contributing to large knowledge "
-"projects shouldn't require high barriers to entry so we made Everipedia very "
-"easy to navigate, edit, and get started. Editors gain more privileges as "
-"they accumulate IQ and rise through the ranks. Top site-wide editors are "
-"displayed on the front page. Top editors for each page are also displayed."
-msgstr ""
-"Zato što je zabavno i jednostavno! Mislili smo da doprinos velikim "
-"projektima znanja ne bi trebao zahtijevati velike prepreke za unos pa smo "
-"napravili Everipediju kao vrlo jednostavnu za navigaciju, uređivanje i "
-"početak rada. Urednici dobivaju više povlastica, budući da akumuliraju IQ i "
-"rastu kroz rangove. Na glavnoj stranici prikazuju se vrhunski urednici "
-"cijelog web mjesta. A prikazuju se i vrhunski uređivači za svaku stranicu. "
-
-#: templates/enterlink/faq.html:30
-msgid "Try it!"
-msgstr "Pokušajte!"
-
-#: templates/enterlink/faq.html:30
-#, fuzzy
-msgid "Sign up here"
-msgstr "Prijavite se ovdje!"
-
-#: templates/enterlink/faq.html:32
-#, fuzzy
-msgid "So how is Everipedia different from Wikipedia and similar sites?"
-msgstr ""
-"Pa po čemu je Everipedija drugačija od Wikipedije i sličnih web stranica?"
-
-#: templates/enterlink/faq.html:33
-#, fuzzy
-msgid ""
-"Editing on Everipedia is graphic and modern, talk pages are designed as "
-"discussion threads, celebrities have verified accounts, and anyone can make "
-"pages about anything as long as they are properly cited. Every page from "
-"Wikipedia is already here on Everipedia to build on top of and improve. All "
-"this makes EP the biggest knowledge project ever!"
-msgstr ""
-"Uređivanje na Everipediji je grafički i moderno, stranice za razgovor "
-"dizajnirane su kao teme za raspravu, poznate osobe imaju potvrđene račune i "
-"svatko može napraviti stranice o bilo čemu sve dok su ispravno citirane. "
-"Svaka stranica iz Wikipedije već je ovdje na Everipediji kako bi se mogla "
-"dograđivati i poboljšavati. Sve to čini EP najvećim projektom znanja ikad!"
-
-#: templates/enterlink/faq.html:35
-#, fuzzy
-msgid "Is Everipedia free?"
-msgstr "Je li Everipedija besplatna?"
-
-#: templates/enterlink/faq.html:36
-#, fuzzy
-msgid ""
-"All information found on Everipedia is freely available for anyone to use "
-"and access. All we ask is a link back to the source Everipedia page for "
-"attribution purposes. The information on this encyclopedia is meant to be "
-"free to all. We will never charge for or withhold any of the information on "
-"this website. We just ask that you do not throttle the site and "
-"programmatically harvest information that would dramatically affect our "
-"servers."
-msgstr ""
-"Sve informacije koje se nalaze na Everipediji besplatno su dostupne svakome "
-"za upotrebu i pristup. Sve što tražimo je veza natrag na izvor Everipedija "
-"stranice radi svrhe povezivanja. Podaci o ovoj enciklopediji trebaju biti "
-"besplatni svima. Nikada nećemo naplatiti niti odbiti bilo koju od "
-"informacija na ovoj web stranici. Samo tražimo da ne zagušite stranicu i da "
-"programski prikupljate informacije koje bi mogle dramatično utjecati na naše "
-"poslužitelje."
-
-#: templates/enterlink/faq.html:42
-#, fuzzy
-msgid "Much love,"
-msgstr "Puno ljubavi,"
-
 #: templates/enterlink/footers/desktop_footer.html:5
 #: templates/enterlink/footers/footer_no_extras.html:5
 #: templates/enterlink/footers/index_footer.html:23
-#: templates/enterlink/footers/mobile_footer.html:130
-#: templates/enterlink/template_blockchain_styled_amp.html:548
+#: templates/enterlink/footers/mobile_footer.html:137
+#: templates/enterlink/template_blockchain_styled_amp.html:516
 msgid "About"
 msgstr "O"
 
@@ -1232,8 +746,8 @@ msgstr "O"
 #: templates/enterlink/footers/footer_no_extras.html:6
 #: templates/enterlink/footers/index_footer.html:7
 #: templates/enterlink/footers/index_footer.html:25
-#: templates/enterlink/footers/mobile_footer.html:131
-#: templates/enterlink/template_blockchain_styled_amp.html:549
+#: templates/enterlink/footers/mobile_footer.html:138
+#: templates/enterlink/template_blockchain_styled_amp.html:517
 msgid "FAQ"
 msgstr "Česta pitanja"
 
@@ -1241,8 +755,8 @@ msgstr "Česta pitanja"
 #: templates/enterlink/footers/footer_no_extras.html:7
 #: templates/enterlink/footers/index_footer.html:8
 #: templates/enterlink/footers/index_footer.html:26
-#: templates/enterlink/footers/mobile_footer.html:132
-#: templates/enterlink/template_blockchain_styled_amp.html:550
+#: templates/enterlink/footers/mobile_footer.html:139
+#: templates/enterlink/template_blockchain_styled_amp.html:518
 msgid "Contact"
 msgstr "Kontakt"
 
@@ -1250,8 +764,8 @@ msgstr "Kontakt"
 #: templates/enterlink/footers/footer_no_extras.html:9
 #: templates/enterlink/footers/index_footer.html:9
 #: templates/enterlink/footers/index_footer.html:27
-#: templates/enterlink/footers/mobile_footer.html:136
-#: templates/enterlink/template_blockchain_styled_amp.html:552
+#: templates/enterlink/footers/mobile_footer.html:143
+#: templates/enterlink/template_blockchain_styled_amp.html:520
 msgid "Terms"
 msgstr "Uvjeti"
 
@@ -1259,21 +773,16 @@ msgstr "Uvjeti"
 #: templates/enterlink/footers/footer_no_extras.html:10
 #: templates/enterlink/footers/index_footer.html:10
 #: templates/enterlink/footers/index_footer.html:28
-#: templates/enterlink/footers/mobile_footer.html:134
-#: templates/enterlink/headers/header_dropdown.html:17
-#: templates/enterlink/headers/header_dropdown.html:38
-#: templates/enterlink/headers/index_header.html:164
-#: templates/enterlink/headers/index_header.html:173
-#: templates/enterlink/headers/index_header.html:233
-#: templates/enterlink/headers/index_header.html:242
-#: templates/enterlink/headers/index_header.html:264
-#: templates/enterlink/headers/mobile-navbar.html:131
-#: templates/enterlink/headers/mobile-navbar.html:198
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:190
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:238
-#: templates/enterlink/template_blockchain_styled_amp.html:551
-#: templates/enterlink/template_blockchain_styled_amp.html:629
-#: templates/enterlink/template_blockchain_styled_amp.html:687
+#: templates/enterlink/footers/mobile_footer.html:141
+#: templates/enterlink/headers/header_dropdown.html:7
+#: templates/enterlink/headers/header_dropdown.html:28
+#: templates/enterlink/headers/index_header.html:128
+#: templates/enterlink/headers/index_header.html:153
+#: templates/enterlink/headers/index_header.html:157
+#: templates/enterlink/headers/mobile-navbar.html:98
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:138
+#: templates/enterlink/template_blockchain_styled_amp.html:519
+#: templates/enterlink/template_blockchain_styled_amp.html:594
 msgid "Forum"
 msgstr "Forum"
 
@@ -1281,31 +790,38 @@ msgstr "Forum"
 #: templates/enterlink/footers/footer_no_extras.html:11
 #: templates/enterlink/footers/index_footer.html:11
 #: templates/enterlink/footers/index_footer.html:29
-#: templates/enterlink/footers/mobile_footer.html:137
-#: templates/enterlink/headers/header_dropdown.html:18
-#: templates/enterlink/headers/header_dropdown.html:40
-#: templates/enterlink/template_blockchain_styled_amp.html:553
+#: templates/enterlink/footers/mobile_footer.html:144
+#: templates/enterlink/headers/header_dropdown.html:8
+#: templates/enterlink/headers/header_dropdown.html:30
+#: templates/enterlink/template_blockchain_styled_amp.html:521
 #, fuzzy
 msgid "Get IQ"
 msgstr "Dobiti IQ"
 
 #: templates/enterlink/footers/desktop_footer.html:30
 #: templates/enterlink/footers/footer_no_extras.html:31
-#: templates/enterlink/footers/mobile_footer.html:157
-#: templates/enterlink/template_blockchain_styled_amp.html:577
+#: templates/enterlink/footers/mobile_footer.html:164
+#: templates/enterlink/template_blockchain_styled_amp.html:545
 msgid "Powered by"
 msgstr "Pokrenuto od"
 
 #: templates/enterlink/footers/desktop_footer.html:35
 #: templates/enterlink/footers/footer_no_extras.html:36
-#: templates/enterlink/footers/mobile_footer.html:161
-#: templates/enterlink/template_blockchain_styled_amp.html:581
+#: templates/enterlink/footers/mobile_footer.html:168
+#: templates/enterlink/template_blockchain_styled_amp.html:549
 #, fuzzy
 msgid "API by"
 msgstr "API od"
 
-#: templates/enterlink/footers/desktop_footer.html:43
-#: templates/enterlink/footers/footer_no_extras.html:44
+#: templates/enterlink/footers/desktop_footer.html:40
+#: templates/enterlink/footers/footer_no_extras.html:41
+#: templates/enterlink/footers/mobile_footer.html:172
+#: templates/enterlink/template_blockchain_styled_amp.html:553
+msgid "and"
+msgstr "i"
+
+#: templates/enterlink/footers/desktop_footer.html:48
+#: templates/enterlink/footers/footer_no_extras.html:49
 #: templates/enterlink/headers/desktop-navbar-index.html:6
 #: templates/enterlink/headers/index_header.html:93
 #: templates/enterlink/language_selector.html:80
@@ -1342,222 +858,160 @@ msgstr "Kako koristiti"
 
 #: templates/enterlink/footers/index_footer.html:12
 #: templates/enterlink/footers/index_footer.html:30
-#: templates/enterlink/footers/mobile_footer.html:133
+#: templates/enterlink/footers/mobile_footer.html:140
 msgid "Donate"
 msgstr "Donirati"
 
-#: templates/enterlink/footers/mobile_footer.html:124
-#: templates/enterlink/template_blockchain_styled_amp.html:559
+#: templates/enterlink/footers/mobile_footer.html:131
+#: templates/enterlink/template_blockchain_styled_amp.html:527
 #, fuzzy
 msgid "By using this website, you agree to the"
 msgstr "Korištenjem ove web stranice pristajete na"
 
-#: templates/enterlink/footers/mobile_footer.html:124
-#: templates/enterlink/template_blockchain_styled_amp.html:559
+#: templates/enterlink/footers/mobile_footer.html:131
+#: templates/enterlink/template_blockchain_styled_amp.html:527
 #, fuzzy
 msgid "Terms of Use"
 msgstr "Uvjeti korištenja"
 
-#: templates/enterlink/footers/mobile_footer.html:124
-#: templates/enterlink/template_blockchain_styled_amp.html:559
+#: templates/enterlink/footers/mobile_footer.html:131
+#: templates/enterlink/template_blockchain_styled_amp.html:527
 #, fuzzy
 msgid "Everipedia® is a trademark of Everipedia International"
 msgstr "Everipedija je zaštitni znak tvrtke Everipedia International"
 
-#: templates/enterlink/footers/mobile_footer.html:135
-#: templates/enterlink/headers/index_header.html:165
-#: templates/enterlink/headers/index_header.html:174
-#: templates/enterlink/headers/index_header.html:234
-#: templates/enterlink/headers/index_header.html:243
-#: templates/enterlink/headers/index_header.html:265
-#: templates/enterlink/headers/mobile-navbar.html:138
-#: templates/enterlink/headers/mobile-navbar.html:204
-#: templates/enterlink/template_blockchain_styled_amp.html:694
+#: templates/enterlink/footers/mobile_footer.html:142
+#: templates/enterlink/headers/mobile-navbar.html:104
 msgid "Chat"
 msgstr "Razgovor"
 
 #: templates/enterlink/headers/desktop-navbar-index.html:29
-#: templates/enterlink/headers/desktop-navbar.html:39
-#: templates/enterlink/headers/index_header.html:156
-#: templates/enterlink/howto.html:61 templates/enterlink/search.html:7
+#: templates/enterlink/headers/desktop-navbar.html:38
+#: templates/enterlink/headers/index_header.html:124
+#: templates/enterlink/search.html:7
 msgid "Search"
 msgstr "Traženje"
 
-#: templates/enterlink/headers/desktop-navbar-index.html:42
-#: templates/enterlink/headers/desktop-navbar-index.html:50
-#: templates/enterlink/headers/desktop-navbar-index.html:60
-#: templates/enterlink/headers/desktop-navbar.html:20
-#: templates/enterlink/headers/desktop-navbar.html:57
-#: templates/enterlink/headers/desktop-navbar.html:67
-#: templates/enterlink/headers/header_dropdown.html:14
-#: templates/enterlink/headers/header_dropdown.html:36
-#: templates/enterlink/headers/index_header.html:231
-#: templates/enterlink/headers/mobile-navbar.html:145
-#: templates/enterlink/headers/mobile-navbar.html:186
-#: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
-#: templates/enterlink/howto.html:74 templates/enterlink/index.html:64
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:51
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:91
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:196
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:232
-#: templates/enterlink/template_blockchain_styled_amp.html:615
-#: templates/enterlink/template_blockchain_styled_amp.html:701
-#: templates/enterlink/user.html:64
-msgid "Create Page"
-msgstr "Kreirajte stranicu"
-
-#: templates/enterlink/headers/desktop-navbar-index.html:49
-#: templates/enterlink/headers/desktop-navbar.html:19
-#: templates/enterlink/howto.html:73 templates/enterlink/index.html:63
+#: templates/enterlink/headers/desktop-navbar-index.html:47
+#: templates/enterlink/headers/desktop-navbar.html:18
+#: templates/enterlink/index.html:62
 #, fuzzy
 msgid "Paste a link or enter a title"
 msgstr "Zalijepite poveznicu ili unesite naslov"
 
-#: templates/enterlink/headers/desktop-navbar-index.html:66
-#: templates/enterlink/headers/desktop-navbar.html:73
-#: templates/enterlink/headers/header_dropdown.html:16
-#: templates/enterlink/headers/header_dropdown.html:35
-#: templates/enterlink/headers/index_header.html:162
-#: templates/enterlink/headers/index_header.html:201
-#: templates/enterlink/headers/index_header.html:232
-#: templates/enterlink/headers/mobile-navbar.html:124
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:45
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:184
+#: templates/enterlink/headers/desktop-navbar-index.html:48
+#: templates/enterlink/headers/desktop-navbar-index.html:58
+#: templates/enterlink/headers/desktop-navbar.html:19
+#: templates/enterlink/headers/desktop-navbar.html:56
+#: templates/enterlink/headers/desktop-navbar.html:66
+#: templates/enterlink/headers/header_dropdown.html:26
+#: templates/enterlink/index.html:63
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:50
+msgid "Create Page"
+msgstr "Kreirajte stranicu"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:64
+#: templates/enterlink/headers/desktop-navbar.html:72
+#: templates/enterlink/headers/header_dropdown.html:25
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:44
 #: templates/enterlink/notifications/index.html:67
 #: templates/enterlink/notifications/index.html:97
-#: templates/enterlink/template_blockchain_styled_amp.html:680
 msgid "Messages"
 msgstr "Poruke"
 
-#: templates/enterlink/headers/desktop-navbar-index.html:72
-#: templates/enterlink/headers/desktop-navbar.html:79
-#: templates/enterlink/headers/header_dropdown.html:15
-#: templates/enterlink/headers/header_dropdown.html:34
-#: templates/enterlink/headers/index_header.html:206
-#: templates/enterlink/headers/index_header.html:230
-#: templates/enterlink/headers/mobile-navbar.html:117
-#: templates/enterlink/inbox.html:12
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:39
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:178
+#: templates/enterlink/headers/desktop-navbar-index.html:70
+#: templates/enterlink/headers/desktop-navbar.html:78
+#: templates/enterlink/headers/header_dropdown.html:24
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:38
 #: templates/enterlink/notifications/index.html:96
-#: templates/enterlink/template_blockchain_styled_amp.html:673
 msgid "Notifications"
 msgstr "Obavijesti"
 
-#: templates/enterlink/headers/desktop-navbar-index.html:84
-#: templates/enterlink/headers/desktop-navbar.html:96
-#: templates/enterlink/headers/index_header.html:217
+#: templates/enterlink/headers/desktop-navbar-index.html:81
+#: templates/enterlink/headers/desktop-navbar.html:95
 #, fuzzy
 msgid "Your IQ Score"
 msgstr "Vaša IQ ocjena"
 
-#: templates/enterlink/headers/desktop-navbar.html:29
+#: templates/enterlink/headers/desktop-navbar.html:28
 msgid "Table of contents"
 msgstr "Sadržaj"
 
-#: templates/enterlink/headers/desktop-navbar.html:29
-#: templates/enterlink/template_blockchain_styled_amp.html:105
+#: templates/enterlink/headers/desktop-navbar.html:28
+#: templates/enterlink/template_blockchain_styled_amp.html:102
 #, fuzzy
 msgid "Table of contents and facts for this wiki"
 msgstr "Sadržaj i činjenice za ovaj wiki"
 
-#: templates/enterlink/headers/desktop-navbar.html:62
-#: templates/enterlink/headers/mobile-navbar.html:159
-#: templates/enterlink/headers/mobile-navbar.html:210
-#: templates/enterlink/template_blockchain_styled_amp.html:635
-#: templates/enterlink/template_blockchain_styled_amp.html:715
+#: templates/enterlink/headers/desktop-navbar.html:61
+#: templates/enterlink/headers/mobile-navbar.html:110
+#: templates/enterlink/template_blockchain_styled_amp.html:600
 msgid "Feed"
 msgstr "Nahraniti"
 
-#: templates/enterlink/headers/desktop-navbar.html:87
+#: templates/enterlink/headers/desktop-navbar.html:86
 #, fuzzy
 msgid "Please log in with Scatter"
 msgstr "Molimo prijavite se sa Scatterom"
 
-#: templates/enterlink/headers/header_dropdown.html:8
-#: templates/enterlink/headers/header_dropdown.html:28
+#: templates/enterlink/headers/header_dropdown.html:12
+#: templates/enterlink/headers/header_dropdown.html:34
+#: templates/enterlink/notifications/index.html:100
+#: templates/enterlink/notifications/index.html:105
+msgid "Log out"
+msgstr "Odjava"
+
+#: templates/enterlink/headers/header_dropdown.html:18
 msgid "Claim Rewards"
 msgstr ""
 
-#: templates/enterlink/headers/header_dropdown.html:39
-#: templates/enterlink/headers/mobile-navbar.html:153
-#: templates/enterlink/headers/mobile-navbar.html:192
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:68
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:101
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:208
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:250
-#: templates/enterlink/template_blockchain_styled_amp.html:622
-#: templates/enterlink/template_blockchain_styled_amp.html:708
-#: templates/enterlink/user.html:126
+#: templates/enterlink/headers/header_dropdown.html:29
+#: templates/enterlink/headers/mobile-navbar.html:92
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:67
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:90
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:144
+#: templates/enterlink/template_blockchain_styled_amp.html:587
 msgid "Help"
 msgstr "Pomoć"
 
-#: templates/enterlink/headers/index_header.html:109
-msgid "View Profile"
-msgstr "Pogledajte profil"
-
-#: templates/enterlink/headers/index_header.html:128
+#: templates/enterlink/headers/index_header.html:101
 msgid "Sign In"
 msgstr "Prijava"
 
-#: templates/enterlink/headers/index_header.html:128
-#: templates/enterlink/headers/index_header.html:172
-#: templates/enterlink/headers/index_header.html:241
-#: templates/enterlink/headers/index_header.html:263
-#: templates/enterlink/index.html:47
+#: templates/enterlink/headers/index_header.html:101
+#: templates/enterlink/index.html:46
 msgid "Register"
 msgstr "Registracija"
 
-#: templates/enterlink/headers/index_header.html:132
+#: templates/enterlink/headers/index_header.html:105
 #: templates/enterlink/login.html:36
 msgid "Username"
 msgstr "Korisničko ime"
 
-#: templates/enterlink/headers/index_header.html:139
-#, fuzzy
-msgid "Need an account? Register here."
-msgstr "Potreban vam je korisnički račun? Registrirajte se ovdje!"
+#: templates/enterlink/headers/index_header.html:106
+#: templates/enterlink/login.html:40
+msgid "Password"
+msgstr "Lozinka"
 
-#: templates/enterlink/headers/index_header.html:140
-#: templates/enterlink/headers/index_header.html:171
-#: templates/enterlink/login.html:41
-msgid "Forgot your password?"
-msgstr "Zaboravili ste lozinku?"
+#: templates/enterlink/headers/index_header.html:108
+#: templates/enterlink/headers/index_header.html:152
+#: templates/enterlink/login.html:45
+msgid "Log in"
+msgstr "Prijava"
 
-#: templates/enterlink/headers/index_header.html:163
-#: templates/enterlink/inbox.html:23
-#, fuzzy
-msgid "Your Notifications"
-msgstr "Vaše obavijesti"
-
-#: templates/enterlink/headers/index_header.html:222
-#, fuzzy
-msgid "Get an account"
-msgstr "Napraviti račun"
-
-#: templates/enterlink/headers/index_header.html:222
-#, fuzzy
-msgid "or Log in"
-msgstr "ili Prijaviti se"
-
-#: templates/enterlink/headers/index_header.html:235
-#: templates/enterlink/headers/index_header.html:244
-#: templates/enterlink/headers/index_header.html:257
-#: templates/enterlink/headers/index_header.html:266
-#: templates/enterlink/headers/mobile-navbar.html:165
-#: templates/enterlink/headers/mobile-navbar.html:216
-#: templates/enterlink/template_blockchain_styled_amp.html:641
+#: templates/enterlink/headers/index_header.html:154
+#: templates/enterlink/headers/index_header.html:158
+#: templates/enterlink/headers/mobile-navbar.html:116
+#: templates/enterlink/template_blockchain_styled_amp.html:606
 msgid "Language"
 msgstr "Jezik"
 
-#: templates/enterlink/headers/mobile-navbar.html:178
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:224
-#: templates/enterlink/template_blockchain_styled_amp.html:606
+#: templates/enterlink/headers/mobile-navbar.html:84
 #, fuzzy
 msgid "Register / Log in"
 msgstr "Registrirajte se / Prijavite"
 
-#: templates/enterlink/hoverblurb_ajax_blockchain.html:65
+#: templates/enterlink/hoverblurb_ajax_blockchain.html:64
 #, fuzzy
 msgid "Go to article"
 msgstr "Ići na članak"
@@ -1589,7 +1043,7 @@ msgstr "Zadnja prijava"
 msgid "Go to Editor's Profile"
 msgstr "Ići na profil urednika"
 
-#: templates/enterlink/hoverlink_ajax_blockchain.html:64
+#: templates/enterlink/hoverlink_ajax_blockchain.html:59
 #, fuzzy
 msgid "Discuss Citation"
 msgstr "Rasprava o citatu"
@@ -1605,70 +1059,27 @@ msgstr "Izravna poveznica"
 
 #: templates/enterlink/hoverlink_iframe_blockchain.html:64
 #: templates/enterlink/hoverlink_iframe_blockchain.html:65
-#: templates/enterlink/template_blockchain_styled_desktop.html:195
-#: templates/enterlink/template_blockchain_styled_desktop.html:196
+#: templates/enterlink/template_blockchain_styled_desktop.html:185
+#: templates/enterlink/template_blockchain_styled_desktop.html:186
 msgid "Share"
 msgstr "Podijeliti"
 
 #: templates/enterlink/hoverlink_iframe_blockchain.html:68
-#: templates/enterlink/template_blockchain_styled_desktop.html:202
+#: templates/enterlink/template_blockchain_styled_desktop.html:192
 #, fuzzy
 msgid "Copy URL"
 msgstr "Kopirati URL"
 
-#: templates/enterlink/hoverlink_iframe_blockchain.html:118
+#: templates/enterlink/hoverlink_iframe_blockchain.html:115
 msgid "Play / Pause"
 msgstr "Pokrenuti / Pauza"
-
-#: templates/enterlink/howto.html:8 templates/enterlink/howto.html:30
-#, fuzzy
-msgid "How to use Everipedia"
-msgstr "Kako koristiti Everipediju"
-
-#: templates/enterlink/howto.html:10 templates/enterlink/limitreached.html:9
-#, fuzzy
-msgid ""
-"Everipedia is a free and easy to use wiki platform. Write about anyone and "
-"anything!"
-msgstr ""
-"Everipedija je besplatna i jednostavna wiki platforma za korištenje. Pišite "
-"o bilo kome i o svemu!"
-
-#: templates/enterlink/howto.html:36 templates/enterlink/howto.html:45
-#, fuzzy
-msgid "Go back to the page you started from"
-msgstr "Vratite se na stranicu s koje ste započeli"
-
-#: templates/enterlink/howto.html:40 templates/enterlink/howto.html:45
-msgid "Go to page"
-msgstr "Ići na stranicu"
-
-#: templates/enterlink/howto.html:50
-#, fuzzy
-msgid "Go to your editor profile page"
-msgstr "Ići na stranicu profila urednika"
-
-#: templates/enterlink/howto.html:50
-#, fuzzy
-msgid "Go to profile"
-msgstr "Ići na profil"
-
-#: templates/enterlink/howto.html:55 templates/enterlink/howto.html:57
-#, fuzzy
-msgid "Create a new page now"
-msgstr "Napraviti novu stranicu sada"
-
-#: templates/enterlink/howto.html:61
-#, fuzzy
-msgid "Search for an existing page"
-msgstr "Potražiti postojeću stranicu"
 
 #: templates/enterlink/in_progress_404.html:6
 #, fuzzy
 msgid "This page is currently being created by another user"
 msgstr "Tu stranicu je trenutno izradio drugi korisnik"
 
-#: templates/enterlink/in_progress_404.html:82
+#: templates/enterlink/in_progress_404.html:67
 #, fuzzy
 msgid ""
 "This page is currently in the process of being created by another user. "
@@ -1677,26 +1088,12 @@ msgstr ""
 "Ta stranica je trenutno u procesu stvaranja od strane drugog korisnika. "
 "Molimo vratite se kasnije!"
 
-#: templates/enterlink/inbox.html:30
-msgid "You have"
-msgstr "Imate"
-
-#: templates/enterlink/inbox.html:30
-#, fuzzy
-msgid "unread notifications"
-msgstr "nepročitane obavijesti"
-
-#: templates/enterlink/inbox.html:45
-#, fuzzy
-msgid "You currently do not have any notifications."
-msgstr "Trenutno nemate nikakvih obavijesti."
-
-#: templates/enterlink/index.html:40
+#: templates/enterlink/index.html:39
 #, fuzzy
 msgid "The world's first encyclopedia on the blockchain"
 msgstr "Prva enciklopedija na svijetu o blockchainu"
 
-#: templates/enterlink/index.html:41
+#: templates/enterlink/index.html:40
 #, fuzzy
 msgid ""
 "Everipedia's IQ Network is the world's first Encyclopedia that allows anyone "
@@ -1707,20 +1104,20 @@ msgstr ""
 "da postanu sudionici u sustavu i zarade rang, nagrade i žetone za kuriranje "
 "sadržaja."
 
-#: templates/enterlink/index.html:48
+#: templates/enterlink/index.html:47
 msgid "Learn more"
 msgstr "Saznajte više"
 
-#: templates/enterlink/index.html:79
+#: templates/enterlink/index.html:76
 msgid "As Seen In"
 msgstr ""
 
-#: templates/enterlink/index.html:100
+#: templates/enterlink/index.html:97
 #, fuzzy
 msgid "An Encyclopedia for the modern age"
 msgstr "Enciklopedija za moderno doba"
 
-#: templates/enterlink/index.html:104
+#: templates/enterlink/index.html:101
 #, fuzzy
 msgid ""
 "The Everipedia IQ blockchain provides a new paradigm change and knowledge "
@@ -1735,12 +1132,12 @@ msgstr ""
 "i distribuiranog okruženja smještenog unutar blockchaina, nova Everipedija "
 "baza znanja moći će poboljšati sve temeljne značajke Wikipedije."
 
-#: templates/enterlink/index.html:112
+#: templates/enterlink/index.html:109
 #, fuzzy
 msgid "Decentralized"
 msgstr "Decentralizirano"
 
-#: templates/enterlink/index.html:113
+#: templates/enterlink/index.html:110
 #, fuzzy
 msgid ""
 "Articles are fetched using IPFS and EOS Storage. Majority of IQ being "
@@ -1749,12 +1146,12 @@ msgstr ""
 "Članci se preuzimaju pomoću IPFS i EOS pohrane. Većina IQ-a se distribuira "
 "tijekom airdropa."
 
-#: templates/enterlink/index.html:117
+#: templates/enterlink/index.html:114
 #, fuzzy
 msgid "Democratic"
 msgstr "Demokratski"
 
-#: templates/enterlink/index.html:118
+#: templates/enterlink/index.html:115
 #, fuzzy
 msgid ""
 "Proof of Stake (PoS) model allows for voting to change and upgrade the IQ "
@@ -1765,12 +1162,12 @@ msgstr ""
 "nadogradnju IQ mreže kako ona raste. Također će se olakšati skupni uvoz "
 "novog sadržaja bez naknade."
 
-#: templates/enterlink/index.html:122
+#: templates/enterlink/index.html:119
 #, fuzzy
 msgid "Censorship Resistant"
 msgstr "Otporno na cenzuru"
 
-#: templates/enterlink/index.html:123
+#: templates/enterlink/index.html:120
 #, fuzzy
 msgid ""
 "Live and permanent edits of content on the blockchain beyond the control of "
@@ -1779,12 +1176,12 @@ msgstr ""
 "Stalna uživo uređivanja sadržaja na Blockchainu izvan su kontrole središnjeg "
 "tijela."
 
-#: templates/enterlink/index.html:127
+#: templates/enterlink/index.html:124
 #, fuzzy
 msgid "Financial Incentive"
 msgstr "Financijsko poticanje"
 
-#: templates/enterlink/index.html:128
+#: templates/enterlink/index.html:125
 #, fuzzy
 msgid ""
 "All holders of IQ will be incentivized to create quality, neutral content "
@@ -1793,17 +1190,17 @@ msgstr ""
 "Svi nositelji IQ-a bit će poticani za stvaranje kvalitetnog, neutralnog "
 "sadržaja i za zajednički rad na izgradnji ugleda mreže."
 
-#: templates/enterlink/index.html:139
+#: templates/enterlink/index.html:136
 #, fuzzy
 msgid "Become an editor today and start creating your own wiki articles."
 msgstr "Postanite urednik još danas i započnite stvarati vlastite wiki članke."
 
-#: templates/enterlink/index.html:142
+#: templates/enterlink/index.html:139
 #, fuzzy
 msgid "Open Community"
 msgstr "Otvorena zajednica"
 
-#: templates/enterlink/index.html:143
+#: templates/enterlink/index.html:140
 #, fuzzy
 msgid ""
 "Our vibrant community is open and welcoming to people from all backgrounds. "
@@ -1814,12 +1211,12 @@ msgstr ""
 "Naše smjernice i politika temelje se na zdravom razumu, a ne na strogoj "
 "birokraciji."
 
-#: templates/enterlink/index.html:145
+#: templates/enterlink/index.html:142
 #, fuzzy
 msgid "Redesigned for the modern age"
 msgstr "Redizajnirano za moderno doba"
 
-#: templates/enterlink/index.html:146
+#: templates/enterlink/index.html:143
 #, fuzzy
 msgid ""
 "Everipedia is an encyclopedia modernized and re-designed for the twenty-"
@@ -1830,17 +1227,17 @@ msgstr ""
 "dvadeset i prvo stoljeće. Naše sučelje za uređivanje čini da stvaranje i "
 "uređivanje wikija bude jednako lako kao pomoću Facebooka."
 
-#: templates/enterlink/index.html:155
+#: templates/enterlink/index.html:152
 #, fuzzy
 msgid "Follow us on Telegram"
 msgstr "Pratite nas na Telegramu"
 
-#: templates/enterlink/index.html:168
+#: templates/enterlink/index.html:165
 #, fuzzy
-msgid "Led by the Founder of Wikipedia and Genius.com"
+msgid "Led by the Founders of Wikipedia and Genius.com"
 msgstr "Vođeno od osnivača Wikipedije i Genius.com"
 
-#: templates/enterlink/index.html:171
+#: templates/enterlink/index.html:168
 #, fuzzy
 msgid ""
 "Everipedia is being led by a team with extensive experience and knowledge "
@@ -1858,51 +1255,51 @@ msgstr ""
 "uključuju UCLA, Stanford, Yale i Columbiu, što pokriva nacionalnosti iz "
 "Amerike, Švedske, Norveške i Italije."
 
-#: templates/enterlink/index.html:172
+#: templates/enterlink/index.html:169
 #, fuzzy
 msgid "Executive Team"
 msgstr "Izvršni tim"
 
-#: templates/enterlink/leadership.html:7
+#: templates/enterlink/leadership.html:6
 msgid "Leadership"
 msgstr "Rukovodstvo"
 
-#: templates/enterlink/leadership.html:23
+#: templates/enterlink/leadership.html:22
 #, fuzzy
 msgid "Executive Leadership"
 msgstr "Izvršno vodstvo"
 
-#: templates/enterlink/leadership.html:35
+#: templates/enterlink/leadership.html:34
 #, fuzzy
 msgid "Chief Information Officer"
 msgstr "Šef informativnog odjela"
 
-#: templates/enterlink/leadership.html:41
+#: templates/enterlink/leadership.html:40
 #, fuzzy
 msgid "Chief Executive Officer, Co-Founder"
 msgstr "Glavni izvršni direktor, suosnivač"
 
-#: templates/enterlink/leadership.html:47
+#: templates/enterlink/leadership.html:46
 #, fuzzy
 msgid "Chief Technology Officer, Co-Founder"
 msgstr "Glavni tehnološki direktor, suosnivač"
 
-#: templates/enterlink/leadership.html:53
+#: templates/enterlink/leadership.html:52
 #, fuzzy
 msgid "President, Co-Founder"
 msgstr "Predsjednik, suosnivač"
 
-#: templates/enterlink/leadership.html:63
+#: templates/enterlink/leadership.html:62
 #, fuzzy
 msgid "Director of Software"
 msgstr "Direktor softvera"
 
-#: templates/enterlink/leadership.html:69
+#: templates/enterlink/leadership.html:68
 #, fuzzy
 msgid "Chief Operating Officer"
 msgstr "Šef odjela"
 
-#: templates/enterlink/leadership.html:75
+#: templates/enterlink/leadership.html:74
 #, fuzzy
 msgid "Chief Community Officer, Co-Founder"
 msgstr "Glavni voditelj zajednice, suosnivač"
@@ -1911,6 +1308,15 @@ msgstr "Glavni voditelj zajednice, suosnivač"
 #, fuzzy
 msgid "Activity limit reached"
 msgstr "Dosegnuto je ograničenje aktivnosti"
+
+#: templates/enterlink/limitreached.html:9
+#, fuzzy
+msgid ""
+"Everipedia is a free and easy to use wiki platform. Write about anyone and "
+"anything!"
+msgstr ""
+"Everipedija je besplatna i jednostavna wiki platforma za korištenje. Pišite "
+"o bilo kome i o svemu!"
 
 #: templates/enterlink/limitreached.html:23
 #, fuzzy
@@ -1943,6 +1349,10 @@ msgstr "Prijaviti se"
 msgid "Sign in to Everipedia"
 msgstr "Prijaviti se u Everipedija"
 
+#: templates/enterlink/login.html:41
+msgid "Forgot your password?"
+msgstr "Zaboravili ste lozinku?"
+
 #: templates/enterlink/login.html:48
 msgid "Log in with Facebook"
 msgstr "Facebook prijava"
@@ -1951,123 +1361,69 @@ msgstr "Facebook prijava"
 msgid "Log in with Twitter"
 msgstr "Twitter prijava"
 
-#: templates/enterlink/login.html:58
-#, fuzzy
-msgid "Need an account?"
-msgstr "Trebate li račun?"
-
-#: templates/enterlink/login.html:58
-#, fuzzy
-msgid "Register here"
-msgstr "Registrirajte se ovdje"
-
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:34
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:33
 #, fuzzy
 msgid "Visit Profile"
 msgstr "Posjetite profil"
 
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:57
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:56
 msgid "Settings"
 msgstr "Postavke"
 
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:73
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:214
-#: templates/enterlink/template_blockchain_styled_amp.html:721
+#: templates/enterlink/mobile/inline-css/mobile-navbar.html:72
 msgid "Log Out"
 msgstr "Odjava"
 
-#: templates/enterlink/mobile/inline-css/mobile-navbar.html:86
-#, fuzzy
-msgid "Register / Log In"
-msgstr "Registrirajte se / Prijavite"
+#: templates/enterlink/notifications/index.html:61
+#: templates/enterlink/notifications/index.html:94
+msgid "Home"
+msgstr "Početna"
 
 #: templates/enterlink/notifications/index.html:116
 msgid "New message"
 msgstr "Nova poruka"
 
-#: templates/enterlink/recent-activity.html:84
+#: templates/enterlink/recent-activity.html:87
 msgid "by"
 msgstr "od"
 
-#: templates/enterlink/register.html:6
-msgid "Create an account"
-msgstr "Napravite račun"
-
-#: templates/enterlink/register.html:26 templates/enterlink/register.html:28
-#, fuzzy
-msgid "Have an account?"
-msgstr "Imate li račun?"
-
-#: templates/enterlink/register.html:26 templates/enterlink/register.html:28
-msgid "Login"
-msgstr "Prijava"
-
-#: templates/enterlink/register.html:42
-#, fuzzy
-msgid ""
-"Registration is currently invite only due to blockchain software testing. "
-"Join us on Telegram and Reddit in the meantime to become a part of "
-"Everipedia today!"
-msgstr ""
-"Prijava se trenutačno radi samo zbog testiranja blockchain softvera. "
-"Pridružite nam se u međuvremenu na Telegramu i Redditu kako bi postali dio "
-"Everipedije još danas!"
-
-#: templates/enterlink/register.html:60
-#, fuzzy
-msgid "Welcome to the Everipedia editor community!"
-msgstr "Dobrodošli u zajednicu urednika Everipedije!"
-
-#: templates/enterlink/register.html:63
-#, fuzzy
-msgid ""
-"Sign up to become an editor to access more features and an ad-free "
-"experience."
-msgstr ""
-"Prijavite se kao bi postali urednik i za pristup više značajki te iskustvu "
-"bez oglasa."
-
-#: templates/enterlink/register.html:96
-msgid "Sign up"
-msgstr "Prijava"
-
-#: templates/enterlink/register.html:97
-#, fuzzy
-msgid "By clicking sign up above you agree to our"
-msgstr "Klikom na gornju prijavu slažete se s našim"
-
-#: templates/enterlink/register.html:97
-msgid "Terms of Service"
-msgstr "Uvjetima korištenja"
-
 #: templates/enterlink/rewardsmgmt.html:4
-#: templates/enterlink/rewardsmgmt.html:132
+#: templates/enterlink/rewardsmgmt.html:136
 #, fuzzy
 msgid "Rewards Management"
 msgstr " Brainpower upravljanje"
 
-#: templates/enterlink/rewardsmgmt.html:135
-msgid "Here you can claim rewards for the edits and / or votes that you made."
+#: templates/enterlink/rewardsmgmt.html:139
+msgid ""
+"Here you can claim rewards for the edits and / or votes that you made. If "
+"\"Claim All Rewards\" does not work initially, try again after 5 - 10 "
+"seconds, as some block producers are faster than others. If it continues to "
+"fail, claim a few rewards manually first, then try again. This is due to "
+"transaction time limitations with EOS."
 msgstr ""
 
-#: templates/enterlink/rewardsmgmt.html:140
+#: templates/enterlink/rewardsmgmt.html:143
+msgid "Claim all rewards"
+msgstr ""
+
+#: templates/enterlink/rewardsmgmt.html:148
 msgid "Proposal Hash"
 msgstr ""
 
-#: templates/enterlink/rewardsmgmt.html:141
+#: templates/enterlink/rewardsmgmt.html:149
 msgid "Finalized Time"
 msgstr ""
 
-#: templates/enterlink/rewardsmgmt.html:142
+#: templates/enterlink/rewardsmgmt.html:150
 #, fuzzy
 msgid "Period"
 msgstr "Razdoblje glasovanja"
 
-#: templates/enterlink/rewardsmgmt.html:143
+#: templates/enterlink/rewardsmgmt.html:151
 msgid "Redeem"
 msgstr ""
 
-#: templates/enterlink/rewardsmgmt.html:150
+#: templates/enterlink/rewardsmgmt.html:158
 #, fuzzy
 #| msgid "Password reset successful"
 msgid "Redeem successful"
@@ -2115,24 +1471,16 @@ msgstr ""
 "Ako znate za bilo kakve poveznice vezane s ovom stranicom, pokušajte "
 "potražiti te poveznice"
 
-#: templates/enterlink/template_ajax_genius.html:17
-#: templates/enterlink/template_amp_ajax_genius.html:98
-#, fuzzy
-msgid "Verified Editor"
-msgstr "Verificirani urednik"
-
-#: templates/enterlink/template_blockchain_styled_amp.html:123
+#: templates/enterlink/template_blockchain_styled_amp.html:113
 msgid "Bullet"
 msgstr "Metak"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:185
-#: templates/enterlink/template_blockchain_styled_desktop.html:126
+#: templates/enterlink/template_blockchain_styled_amp.html:175
 #, fuzzy
 msgid "Recent news"
 msgstr "Nedavne vijesti"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:185
-#: templates/enterlink/template_blockchain_styled_desktop.html:126
+#: templates/enterlink/template_blockchain_styled_amp.html:175
 #, fuzzy
 msgid ""
 "Everipedia IQ tokens are now in circulation on the EOS mainnet. Follow "
@@ -2141,56 +1489,50 @@ msgstr ""
 "Everipedija IQ tokeni sada su u opticaju na EOS mainnetu. Pratite "
 "Everipedija na"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:185
-#: templates/enterlink/template_blockchain_styled_desktop.html:126
+#: templates/enterlink/template_blockchain_styled_amp.html:175
 #, fuzzy
 msgid "to learn about upcoming features and developments!"
 msgstr "da biste saznali o nadolazećim značajkama i razvoju!"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:197
-#: templates/enterlink/template_blockchain_styled_desktop.html:143
-msgid "Verified Page"
-msgstr "Verificirana stranica"
-
-#: templates/enterlink/template_blockchain_styled_amp.html:273
+#: templates/enterlink/template_blockchain_styled_amp.html:241
 msgid "Quick Biography"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_amp.html:275
+#: templates/enterlink/template_blockchain_styled_amp.html:243
 #, fuzzy
 msgid "Quick Facts For This Wiki"
 msgstr "Referentne poveznice za ovaj Wiki"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:304
-#: templates/enterlink/template_blockchain_styled_desktop.html:361
+#: templates/enterlink/template_blockchain_styled_amp.html:272
+#: templates/enterlink/template_blockchain_styled_desktop.html:346
 #, fuzzy
 msgid "Image & Video Gallery"
 msgstr "Galerija slika i videozapisa"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:306
-#: templates/enterlink/template_blockchain_styled_desktop.html:363
+#: templates/enterlink/template_blockchain_styled_amp.html:274
+#: templates/enterlink/template_blockchain_styled_desktop.html:348
 #, fuzzy
 msgid "images, pictures, and videos"
 msgstr "slike, fotografije i videozapisi"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:310
+#: templates/enterlink/template_blockchain_styled_amp.html:278
 msgid "Gallery"
 msgstr "Galerija"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:327
-#: templates/enterlink/template_blockchain_styled_desktop.html:496
+#: templates/enterlink/template_blockchain_styled_amp.html:295
+#: templates/enterlink/template_blockchain_styled_desktop.html:481
 #, fuzzy
 msgid "Reference Links For This Biography"
 msgstr "Referentne poveznice za ovu biografiju"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:329
-#: templates/enterlink/template_blockchain_styled_desktop.html:498
+#: templates/enterlink/template_blockchain_styled_amp.html:297
+#: templates/enterlink/template_blockchain_styled_desktop.html:483
 #, fuzzy
 msgid "Reference Links For This Wiki"
 msgstr "Referentne poveznice za ovaj Wiki"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:332
-#: templates/enterlink/template_blockchain_styled_desktop.html:501
+#: templates/enterlink/template_blockchain_styled_amp.html:300
+#: templates/enterlink/template_blockchain_styled_desktop.html:486
 #, fuzzy
 msgid ""
 "Links to historical reviews, career / educational facts, and other "
@@ -2199,14 +1541,14 @@ msgstr ""
 "Poveznice na povijesne recenzije, karijere / obrazovne činjenice i druge "
 "enciklopedijske informacije"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:337
-#: templates/enterlink/template_blockchain_styled_desktop.html:507
+#: templates/enterlink/template_blockchain_styled_amp.html:305
+#: templates/enterlink/template_blockchain_styled_desktop.html:492
 #, fuzzy
 msgid "All information for"
 msgstr "Sve informacije za"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:337
-#: templates/enterlink/template_blockchain_styled_desktop.html:507
+#: templates/enterlink/template_blockchain_styled_amp.html:305
+#: templates/enterlink/template_blockchain_styled_desktop.html:492
 #, fuzzy
 msgid ""
 "wiki comes from the below links. Any source is valid, including Twitter, "
@@ -2217,14 +1559,14 @@ msgstr ""
 "uključujući Twitter, Facebook, Instagram i LinkedIn. Slike, videozapisi, "
 "biografije i datoteke koje se odnose na"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:337
-#: templates/enterlink/template_blockchain_styled_desktop.html:507
+#: templates/enterlink/template_blockchain_styled_amp.html:305
+#: templates/enterlink/template_blockchain_styled_desktop.html:492
 #, fuzzy
 msgid "are also acceptable encyclopedic sources."
 msgstr "također su prihvatljivi i enciklopedijski izvori."
 
-#: templates/enterlink/template_blockchain_styled_amp.html:352
-#: templates/enterlink/template_blockchain_styled_desktop.html:528
+#: templates/enterlink/template_blockchain_styled_amp.html:320
+#: templates/enterlink/template_blockchain_styled_desktop.html:513
 #, fuzzy
 msgid ""
 "See related encyclopedia articles, biographies, reviews, and historical "
@@ -2233,48 +1575,48 @@ msgstr ""
 "Pogledajte povezane enciklopedijske članke, životopise, recenzije i "
 "povijesne činjenice."
 
-#: templates/enterlink/template_blockchain_styled_amp.html:356
-#: templates/enterlink/template_blockchain_styled_desktop.html:535
+#: templates/enterlink/template_blockchain_styled_amp.html:324
+#: templates/enterlink/template_blockchain_styled_desktop.html:520
 #, fuzzy
 msgid "Other wiki pages related to"
 msgstr "Ostale wiki stranice vezane uz"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:535
+#: templates/enterlink/template_blockchain_styled_amp.html:503
 msgid "Created"
 msgstr "Kreirano"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:536
+#: templates/enterlink/template_blockchain_styled_amp.html:504
 msgid "Last Modified"
 msgstr "Posljednja izmjena"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:537
+#: templates/enterlink/template_blockchain_styled_amp.html:505
 #, fuzzy
 msgid "IPFS"
 msgstr "IPFS"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:757
+#: templates/enterlink/template_blockchain_styled_amp.html:640
 #, fuzzy
 msgid "Top Page Editors"
 msgstr "Vrhunski urednici stranica"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:777
+#: templates/enterlink/template_blockchain_styled_amp.html:660
 #, fuzzy
 msgid "Share this page"
 msgstr "Podijeliti ovu stranicu"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:789
+#: templates/enterlink/template_blockchain_styled_amp.html:672
 #, fuzzy
 msgid "DIRECT LINK"
 msgstr "IZRAVNA POVEZNICA"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:794
-#: templates/enterlink/template_blockchain_styled_desktop.html:221
+#: templates/enterlink/template_blockchain_styled_amp.html:677
+#: templates/enterlink/template_blockchain_styled_desktop.html:211
 #, fuzzy
 msgid "Suggested Hashtags"
 msgstr "Predloženi Hashtagovi"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:828
-#: templates/enterlink/template_blockchain_styled_desktop.html:259
+#: templates/enterlink/template_blockchain_styled_amp.html:711
+#: templates/enterlink/template_blockchain_styled_desktop.html:249
 msgid "QR Code"
 msgstr "QR kod"
 
@@ -2285,7 +1627,7 @@ msgstr ""
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:16
 #: templates/enterlink/template_blockchain_styled_desktop.html:17
-#: templates/enterlink/template_blockchain_styled_desktop.html:225
+#: templates/enterlink/template_blockchain_styled_desktop.html:215
 msgid "bio"
 msgstr ""
 
@@ -2311,78 +1653,74 @@ msgstr ""
 #: templates/enterlink/template_blockchain_styled_desktop.html:24
 #: templates/enterlink/template_blockchain_styled_desktop.html:30
 #: templates/enterlink/template_blockchain_styled_desktop.html:31
-#: templates/enterlink/template_blockchain_styled_desktop.html:231
-#: templates/enterlink/template_blockchain_styled_desktop.html:237
-#: templates/enterlink/template_blockchain_styled_desktop.html:243
+#: templates/enterlink/template_blockchain_styled_desktop.html:221
+#: templates/enterlink/template_blockchain_styled_desktop.html:227
+#: templates/enterlink/template_blockchain_styled_desktop.html:233
 msgid "review"
 msgstr ""
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:30
 #: templates/enterlink/template_blockchain_styled_desktop.html:31
-#: templates/enterlink/template_blockchain_styled_desktop.html:232
-#: templates/enterlink/template_blockchain_styled_desktop.html:238
-#: templates/enterlink/template_blockchain_styled_desktop.html:244
+#: templates/enterlink/template_blockchain_styled_desktop.html:222
+#: templates/enterlink/template_blockchain_styled_desktop.html:228
+#: templates/enterlink/template_blockchain_styled_desktop.html:234
 msgid "history"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:126
-msgid "and"
-msgstr "i"
-
-#: templates/enterlink/template_blockchain_styled_desktop.html:187
+#: templates/enterlink/template_blockchain_styled_desktop.html:177
 #: templates/enterlink/voting_table_of_contents.html:12
 msgid "Edit"
 msgstr "Urediti"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:190
+#: templates/enterlink/template_blockchain_styled_desktop.html:180
 msgid "Vote"
 msgstr "Glasati"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:205
+#: templates/enterlink/template_blockchain_styled_desktop.html:195
 #, fuzzy
 msgid "Embed / Widget"
 msgstr "Ugraditi / Widget"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:224
-#: templates/enterlink/template_blockchain_styled_desktop.html:230
-#: templates/enterlink/template_blockchain_styled_desktop.html:236
-#: templates/enterlink/template_blockchain_styled_desktop.html:242
+#: templates/enterlink/template_blockchain_styled_desktop.html:214
+#: templates/enterlink/template_blockchain_styled_desktop.html:220
+#: templates/enterlink/template_blockchain_styled_desktop.html:226
+#: templates/enterlink/template_blockchain_styled_desktop.html:232
 msgid "wiki"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:226
+#: templates/enterlink/template_blockchain_styled_desktop.html:216
 msgid "net worth"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:227
+#: templates/enterlink/template_blockchain_styled_desktop.html:217
 #, fuzzy
 #| msgid "Page"
 msgid "age"
 msgstr "Stranica"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:228
+#: templates/enterlink/template_blockchain_styled_desktop.html:218
 msgid "married"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:233
+#: templates/enterlink/template_blockchain_styled_desktop.html:223
 msgid "sales"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:234
-#: templates/enterlink/template_blockchain_styled_desktop.html:240
-#: templates/enterlink/template_blockchain_styled_desktop.html:246
+#: templates/enterlink/template_blockchain_styled_desktop.html:224
+#: templates/enterlink/template_blockchain_styled_desktop.html:230
+#: templates/enterlink/template_blockchain_styled_desktop.html:236
 msgid "facts"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:239
+#: templates/enterlink/template_blockchain_styled_desktop.html:229
 msgid "founders"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:245
+#: templates/enterlink/template_blockchain_styled_desktop.html:235
 msgid "encyclopedia"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:329
+#: templates/enterlink/template_blockchain_styled_desktop.html:318
 msgid "Profiles"
 msgstr "Profili"
 
@@ -2391,6 +1729,11 @@ msgstr "Profili"
 #, fuzzy
 msgid "Transfer IQ"
 msgstr "Prijenos IQ"
+
+#: templates/enterlink/transfer-iq.html:106
+#, fuzzy
+msgid "Loading Scatter"
+msgstr "Učitavanje raspršivanja"
 
 #: templates/enterlink/transfer-iq.html:121
 #, fuzzy
@@ -2431,128 +1774,34 @@ msgstr "Kupite RAM"
 msgid "See your RAM, CPU, and Bandwidth on FeeXplorer"
 msgstr "Pregledajte svoj RAM, CPU i širinu pojasa na FeeXploreru"
 
-#: templates/enterlink/user.html:12
-msgid "profile"
-msgstr "profil"
-
-#: templates/enterlink/user.html:38
-#, fuzzy
-msgid "Everipedia Rank"
-msgstr "Everipedija rang"
-
-#: templates/enterlink/user.html:53
-#, fuzzy
-msgid "This user is verified"
-msgstr "Ovaj korisnik je verificiran"
-
-#: templates/enterlink/user.html:56
-#, fuzzy
-msgid "Everipedia Staff"
-msgstr "Everipedija osoblje"
-
-#: templates/enterlink/user.html:62 templates/enterlink/user.html:67
-msgid "Message"
-msgstr "Poruka"
-
-#: templates/enterlink/user.html:71 templates/enterlink/user.html:123
-msgid "Edit Profile"
-msgstr "Urediti profil"
-
-#: templates/enterlink/user.html:74
-#, fuzzy
-msgid "Everipedia Page"
-msgstr "Stranica Everipedije"
-
-#: templates/enterlink/user.html:80
-#, fuzzy
-msgid "IQ Score"
-msgstr "IQ rezultat"
-
-#: templates/enterlink/user.html:81
-#, fuzzy
-msgid "Pages created"
-msgstr "Stranice su stvorene"
-
-#: templates/enterlink/user.html:82
-#, fuzzy
-msgid "Total edits"
-msgstr "Ukupno uređivanja"
-
-#: templates/enterlink/user.html:94
-msgid "Joined"
-msgstr "Pridružen"
-
-#: templates/enterlink/user.html:125
-#, fuzzy
-msgid "Upload Avatar / Profile Picture"
-msgstr "Učitati Avatar / Profilna Slika"
-
-#: templates/enterlink/user.html:153
-#, fuzzy
-msgid "Enable account? Uncheck to ban"
-msgstr "Omogućiti račun? Poništiti zabranu"
-
-#: templates/enterlink/user.html:157
-#, fuzzy
-msgid "IP Ban"
-msgstr "IP Zabrana"
-
-#: templates/enterlink/user.html:157
-msgid "Ban"
-msgstr "Zabrana"
-
-#: templates/enterlink/user.html:157
-msgid "Clear"
-msgstr "Očistiti"
-
-#: templates/enterlink/user.html:159
-#, fuzzy
-msgid "Verify the account?"
-msgstr "Verificirati račun?"
-
-#: templates/enterlink/user.html:163
-#, fuzzy
-msgid "Is Staff?"
-msgstr "Je li osoblje?"
-
-#: templates/enterlink/user.html:177
-msgid "Save all changes"
-msgstr "Spremiti sve promjene"
-
-#: templates/enterlink/user.html:178
-msgid "Cancel"
-msgstr "Otkazati"
-
-#: templates/enterlink/user.html:211
-#, fuzzy
-msgid "Change Avatar Picture"
-msgstr "Promjena Avatar slike"
-
-#: templates/enterlink/user.html:219
-#, fuzzy
-msgid "Please select your Everipedia page"
-msgstr "Molimo odaberite svoju Everipedija stranicu"
-
-#: templates/enterlink/user.html:224
-msgid "Continue"
-msgstr "Nastaviti"
-
 #: templates/enterlink/votehistory.html:7
 msgid "Voting"
 msgstr "Glasovanje"
 
 #: templates/enterlink/votehistory.html:95
 #, fuzzy
-msgid "Voting History"
+msgid "Editing History"
 msgstr "Povijest glasovanja"
 
-#: templates/enterlink/voting.html:197
+#: templates/enterlink/voting.html:220
 msgid "Before"
 msgstr "Prije"
 
-#: templates/enterlink/voting.html:199
+#: templates/enterlink/voting.html:222
 msgid "After"
 msgstr "Nakon"
+
+#: templates/enterlink/voting.html:235
+#, fuzzy
+#| msgid "Reject"
+msgid "Rejectors"
+msgstr "Odbiti"
+
+#: templates/enterlink/voting.html:241
+#, fuzzy
+#| msgid "Approve"
+msgid "Approvers"
+msgstr "Odobriti"
 
 #: templates/enterlink/voting_table_of_contents.html:7
 msgid "Article"
@@ -2564,7 +1813,7 @@ msgid "Current Vote"
 msgstr "Trenutno glasovanje"
 
 #: templates/enterlink/voting_table_of_contents.html:20
-#: templates/enterlink/voting_table_of_contents.html:62
+#: templates/enterlink/voting_table_of_contents.html:63
 msgid "Reject"
 msgstr "Odbiti"
 
@@ -2572,27 +1821,23 @@ msgstr "Odbiti"
 msgid "Accept"
 msgstr "Prihvatiti"
 
-#: templates/enterlink/voting_table_of_contents.html:28
+#: templates/enterlink/voting_table_of_contents.html:29
 #, fuzzy
 msgid "Voting Period"
 msgstr "Razdoblje glasovanja"
 
-#: templates/enterlink/voting_table_of_contents.html:34
+#: templates/enterlink/voting_table_of_contents.html:35
 msgid "to"
 msgstr "do"
 
-#: templates/enterlink/voting_table_of_contents.html:51
+#: templates/enterlink/voting_table_of_contents.html:52
 #, fuzzy
 msgid "Place Votes"
 msgstr "Mjesto glasovanja"
 
-#: templates/enterlink/voting_table_of_contents.html:63
+#: templates/enterlink/voting_table_of_contents.html:64
 msgid "Approve"
 msgstr "Odobriti"
-
-#: templates/enterlink/voting_table_of_contents.html:67
-msgid "Changes"
-msgstr "Promjene"
 
 #: templates/enterlink/welcome.html:7
 #, fuzzy

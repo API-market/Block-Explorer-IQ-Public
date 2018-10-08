@@ -4,6 +4,7 @@ from django.core import management
 from django.db import connection
 from django.db.models import Q
 from django.template.defaultfilters import slugify
+from django.utils.html import strip_tags
 from threading import Thread
 from operator import itemgetter
 import os
@@ -14,7 +15,13 @@ from fbwiki.settings import VALID_VIDEO_EXTENSIONS, VALID_AUDIO_EXTENSIONS
 
 # Tags to replace in BeautifulSoup
 BAD_TAGS = ['audio', 'head', 'map', 'math', 'mi', 'mo', 'mtd', 'mrow', 'mspace', 'mtext', 'msub', 'msup', 'mstyle',
-            'semantics', 'usemap', 'xml', 'w:worddocument', 'm:mathpr', 'm:mathfont', 'code']
+            'semantics', 'usemap', 'xml', 'w:worddocument', 'm:mathpr', 'm:mathfont', 'code', 'picture']
+
+# BAD TAGS UNWRAP ONLY
+BAD_TAGS_UNWRAP_ONLY = ['g']
+
+# Tags allowed in the page, but not in the infobox
+BAD_TAGS_LINK_AND_INFOBOX = ["html", "head", "body", "header", "section", "input", "article", "img", "video", "script"]
 
 # Tags to remove that BeautifulSoup introduces
 BAD_TAGS_BY_BEAUTIFULSOUP = ["<html>", "</html>", "<head>", "</head>", "<body>", "</body>", "<p>html</p>"]
@@ -29,7 +36,10 @@ WHITELIST_LINK_CLASSES = ['tooltippable', 'tooltippableCarat', 'imagelink', 'too
                           'copyURL-btn', 'mainphoto-anchor', 'dropdown-toggle', 'app-notifications', 'link-url', 'external']
 
 # String to replace in BeautifulSoup
-BLURB_STRING_REPLACES = [[u"<p></p>", u"<p><br></p>"]]
+BLURB_STRING_REPLACES = [
+    [u"<p></p>", u"<p><br></p>"],
+    [u"<p><span></span></p>", u"<p><br></p>"],
+]
 
 # Remove warnings that BeautifulSoup sometimes throws
 warnings.filterwarnings("ignore", category=UserWarning, module='bs4')
@@ -134,6 +144,11 @@ def badLinkSanitizer(inputString):
         except:
             link.replace_with(link.text)
 
+    # Check for page-allowed, but locally disallowed tags (like section and header)
+    for badTag in BAD_TAGS_LINK_AND_INFOBOX:
+        for match in soup.findAll(badTag):
+            match.unwrap()
+
     # Reconstruct the string and remove bad tags that are introduced by BeautifulSoup
     enteredcontent = "".join([unicode(item) for item in soup.contents])
     for badTag in BAD_TAGS_BY_BEAUTIFULSOUP:
@@ -157,6 +172,11 @@ def entireArticleHTMLSanitizer(inputString):
     for tagType in BAD_TAGS:
         for tagNode in mainSoup.find_all(tagType):
             tagNode.extract()
+
+    # Check for unwrap only bad tags like <g> (from Grammarly)
+    for badTag in BAD_TAGS_UNWRAP_ONLY:
+        for match in soup.findAll(badTag):
+            match.unwrap()
 
     # Loop down the HTML structure and look for bad attributes
     for tag in mainSoup.recursiveChildGenerator():
@@ -208,12 +228,18 @@ def entireArticleHTMLSanitizer(inputString):
         except:
             pass
 
+    # Strip HTML appearing in the title
+    titleSoup = mainSoup.findAll("h1", class_='page-title')
+    for anyTag in titleSoup[0].findAll():
+        anyTag.unwrap()
+    # titleSoup[0].string = strip_tags(unicode(titleSoup[0].encode_contents(indent_level=None, encoding='utf-8').strip()))
+
     # Get the blurb
     blurbSoup = mainSoup.findAll(class_='blurb-wrap')
 
     # Find all the header tags and make sure they have ids. This is necessary for making the table of contents.
     for headingTag in blurbSoup[0].find_all(['h1','h2','h3','h4','h5','h6' ]):
-        # Change h1's to h2's
+        # Change h1's to h2's if they appear inside the main article text
         if headingTag.name == 'h1':
             headingTag.name = 'h2'
 
@@ -242,6 +268,13 @@ def entireArticleHTMLSanitizer(inputString):
                     headingTag['id'] = slugify(unicode(headingTag))
         except:
             pass
+
+    # Check the infoboxes and citation descriptions for page-allowed, but locally disallowed tags (like section and header)
+    littleBoxes = mainSoup.findAll(True, {'class':['link-description', 'media-caption', 'ibox-nonplural-value', 'ibox-plural-value']})
+    for littleBox in littleBoxes:
+        for badTag in BAD_TAGS_LINK_AND_INFOBOX:
+            for match in littleBox.findAll(badTag):
+                match.unwrap()
 
     # Turn the HTML back into a string
     cleanedcontent = "".join([unicode(item) for item in soup.contents])

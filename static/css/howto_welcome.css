@@ -716,3 +716,7 @@ ul.address-list{
     position: absolute;
     transform: translate(-50%, -50%);
 }
+
+.alert-success{
+	font-size: 15px;
+}

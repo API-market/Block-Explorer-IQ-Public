@@ -33,7 +33,7 @@
     <meta property="og:type" content="article"/>
     <meta name="twitter:card" content="summary">
     {% if IS_REMOVED_FROM_INDEX %}
-        <meta name="robots" content="noindex, nofollow, noarchive">
+        <meta name="googlebot" content="noindex, nofollow, noarchive">
     {% endif %}
 
     {% if PAGEMETADATA.page_type == 'Person' %}
@@ -99,18 +99,18 @@
         <ul>
             <li class="amp-header-toc">
                 <button on='tap:sidebar.toggle'>
-                    <amp-img height="24.3438" width="30" layout="fixed" alt="{% trans 'Table of contents and facts for this wiki' %}" src="https://epcdn-vz.azureedge.net/static/images/bull-icon.png"/></amp-img>
+                    <amp-img height="24.3438" width="30" layout="fixed" alt="{% trans 'Table of contents and facts for this wiki' %}" src="https://epcdn-vz.azureedge.net/static/images/bull-icon.png" ></amp-img>
                 </button>
             </li>
             <li class="amp-header-logo">
-                <a rel='nofollow' href="https://iqnetwork.io">
+                <a rel='nofollow' href="https://everipedia.org">
                     <amp-img width='45' height='36' layout='fixed' src='https://epcdn-vz.azureedge.net/static/images/Everipedia_Logo.svg' alt='Everipedia Logo' ></amp-img>
                 </a>
             </li>
             <li class="amp-header-menu">
                 <button on='tap:guestmenu-lightbox'>
                    <span class="bull-menu">
-                       <amp-img height="25" width="7" layout="fixed" alt={% trans 'Bullet' %} src="https://epcdn-vz.azureedge.net/static/images/bull-menu.png"/></amp-img>
+                       <amp-img height="25" width="7" layout="fixed" alt="{% trans 'Bullet' %}" src="https://epcdn-vz.azureedge.net/static/images/bull-menu.png" ></amp-img>
                    </span>
                 </button>
             </li>
@@ -135,7 +135,7 @@
 
         <article class="schema-wrap" itemprop="about" itemscope itemtype="http://schema.org/{% if PageAttr.sub_page_type != None %}{{ PageAttr.sub_page_type }}{% elif PAGEMETADATA.page_type != None %}{{ PAGEMETADATA.page_type }}{% else %}Thing{% endif %}">
             {% if PAGEMETADATA.page_type == 'Person' %}
-            <abbr itemprop="homeLocation" itemscope itemtype="http://schema.org/Place" />
+            <abbr itemprop="homeLocation" itemscope itemtype="http://schema.org/Place" >
                 <meta itemprop="name" content="Earth" />
             </abbr>
             {% endif %}
@@ -197,10 +197,10 @@
                     <div class="tlbx-ct">
                         <ul>
                             <li><button on="tap:share-lightbox" aria-label="Share" class="icon"><i class="fa fa-share-alt"></i></button></li>
-                            <li><a rel='nofollow' href="https://iqnetwork.io/vote/{{ PAGEMETADATA.url_slug }}/" class="icon"><i class="fa fa-archive"></i></a></li>
+                            <li><a rel='nofollow' href="https://everipedia.org/vote/{{ PAGEMETADATA.url_slug }}/" class="icon"><i class="fa fa-archive"></i></a></li>
                             <li><a rel='nofollow' href="#" class="icon"><i class="fa fa-eye"></i></a>
-                                {% if PAGEMETADATA.pageviews >= 100 %}
-                                <span class="views-nr">{{ PAGEMETADATA.pageviews|intcomma }}</span>
+                                {% if CURRENT_PAGEVIEWS >= 100 %}
+                                <span class="views-nr">{{ CURRENT_PAGEVIEWS|intcomma }}</span>
                                 {% endif %}
                             </li>
                             {% if PAGEMETADATA.page_type == 'Person' %}
@@ -395,7 +395,8 @@
             </div>
             {% endif %}
 
-            <meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/"/>
+            <!--<meta itemscope itemprop="mainEntityOfPage" itemid="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/"/>-->
+            <meta itemprop="mainEntityOfPage" content="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/"/>
             <meta itemprop="url" content="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/">
             {% if PAGEMETADATA.page_type == 'Person' %}
                 <meta itemprop="headline" content="{{ PAGETITLE }}'s biography and wiki on Everipedia">
@@ -412,7 +413,7 @@
             <meta itemprop="copyrightHolder" content="Everipedia">
 
             {% if PHOTOOBJECT.url != None %}
-                <abbr itemprop="image" itemscope itemtype="http://schema.org/ImageObject" />
+                <abbr itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
                     <meta itemprop="url" content="{{ PHOTOOBJECT.url }}">
                     <meta itemprop="name" content="{{ PAGETITLE }}">
                     <meta itemprop="caption" content="{{ PAGETITLE }}">
@@ -421,26 +422,25 @@
                     <meta itemprop="width" content="300">
                 </abbr>
             {% else %}
-                <abbr itemprop="image" itemscope itemtype="http://schema.org/ImageObject" />
+                <abbr itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
                     <meta itemprop="url" content="https://epcdn-vz.azureedge.net/static/images/logo_1050x1050.png">
                     <meta itemprop="name" content="{{ PAGETITLE }}">
                     <meta itemprop="caption" content="{{ PAGETITLE }}">
                     <meta itemprop="uploadDate" content="{{ PAGEMETADATA.last_modified }}">
-                    <meta itemprop="height" content="300">
-                    <meta itemprop="width" content="300">
+                    <meta itemprop="height" content="300px">
+                    <meta itemprop="width" content="300px">
                 </abbr>
             {% endif %}
 
             <abbr itemprop="publisher" itemid="https://everipedia.org/" itemscope itemtype="https://schema.org/Organization">
                 <meta itemprop="name" content="Everipedia">
                 <meta itemprop="legalName" content="Everipedia International">
-                <meta itemprop="name" content="Everipedia International">
                 <meta itemprop="sameAs" content="https://twitter.com/everipedia">
                 <meta itemprop="sameAs" content="https://www.facebook.com/everipedia/">
                 <abbr itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-                    <meta itemprop="url" content="https://epcdn-vz.azureedge.net/static/images/logo_1050x1050.png">
-                    <meta itemprop="width" content="1050">
-                    <meta itemprop="height" content="1050">
+                    <meta itemprop="url" content="https://epcdn-vz.azureedge.net/static/images/logo_600x60.png">
+                    <meta itemprop="width" content="600">
+                    <meta itemprop="height" content="60">
                 </abbr >
             </abbr >
             <meta itemprop="datePublished" content="{{ PAGEMETADATA.creation_timestamp }}"/>
@@ -449,7 +449,7 @@
             <span class="hidden-meta">
                 {% for media in mediaNewLinks %} 
                 {% if media.2 == "PICTURE" %} 
-                <abbr itemprop="image" itemscope itemtype="http://schema.org/ImageObject" />
+                <abbr itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
                     <meta itemprop="url" content="{{ media.0 }}">
                     <meta itemprop="name" content="{{ PAGETITLE }} Image #{{ forloop.counter }}">
                     <meta itemprop="caption" content="{{ media.1|striptags }}">
@@ -459,7 +459,7 @@
                 </abbr>
                 {% endif %}
                 {% if media.2 == "GIF" %} 
-                    <abbr itemprop="image" itemscope itemtype="http://schema.org/ImageObject" />
+                    <abbr itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
                         <meta itemprop="url" content="{{ media.0 }}">
                         <meta itemprop="name" content="{{ PAGETITLE }} GIF Image #{{ forloop.counter }}">
                         <meta itemprop="caption" content="{{ media.1|striptags }}">
@@ -469,7 +469,7 @@
                     </abbr>
                 {% endif %}
                 {% if media.2 == "YOUTUBE" %} 
-                    <abbr itemprop="video" itemscope itemtype="http://schema.org/VideoObject" />
+                    <abbr itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
                         <meta itemprop="url" content="{{ media.0 }}">
                         <meta itemprop="name" content="{{ PAGETITLE }} YouTube Video #{{ forloop.counter }}">
                         <meta itemprop="description" content="{{ media.1|striptags }}">
@@ -480,7 +480,7 @@
                     </abbr>
                 {% endif %}
                 {% if media.2 == "NORMAL_VIDEO" %} 
-                    <abbr itemprop="video" itemscope itemtype="http://schema.org/VideoObject" />
+                    <abbr itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
                         <meta itemprop="url" content="{{ media.0 }}">
                         <meta itemprop="name" content="{{ PAGETITLE }} Video #{{ forloop.counter }}">
                         <meta itemprop="description" content="{{ media.1|striptags }}">
@@ -522,23 +522,23 @@
         </div>
         <div class="footer-separator"></div>
         <div class="copyright">
-          <amp-img class='cc-img' width="15" height="15" layout='fixed' alt="Creative Commons" src="https://epcdn-vz.azureedge.net/static/images/cc.png"/></amp-img>&nbsp;<span>2018 Everipedia International</span>
-            <amp-img class='cayman-flag-footer' width="21" height="20" layout='fixed' alt="Cayman Flag" src="https://epcdn-vz.azureedge.net/static/images/flags/cayman_flag.svg"/></amp-img>
+          <amp-img class='cc-img' width="15" height="15" layout='fixed' alt="Creative Commons" src="https://epcdn-vz.azureedge.net/static/images/cc.png"></amp-img>&nbsp;<span>2018 Everipedia International</span>
+            <amp-img class='cayman-flag-footer' width="21" height="20" layout='fixed' alt="Cayman Flag" src="https://epcdn-vz.azureedge.net/static/images/flags/cayman_flag.svg"></amp-img>
             <span class="disclaimer">{% trans 'By using this website, you agree to the' %} <a href="/wiki/everipedia-terms/">{% trans 'Terms of Use' %}</a>. {% trans 'Everipedia® is a trademark of Everipedia International' %}.</span>
         </div>
     </div>
     <div class="footer-social">
         <a class='social-logo' href="http://facebook.com/everipedia" title="Everipedia on Facebook">
-            <amp-img height="26" width="26" layout="fixed" alt="Facebook" src="https://epcdn-vz.azureedge.net/static/images/facebook.png"/></amp-img>
+            <amp-img height="26" width="26" layout="fixed" alt="Facebook" src="https://epcdn-vz.azureedge.net/static/images/facebook.png"></amp-img>
         </a>
         <a class='social-logo' href="http://twitter.com/everipedia" title="Everipedia on Twitter">
-            <amp-img height="26" width="26" layout="fixed" alt="Twitter" src="https://epcdn-vz.azureedge.net/static/images/twitter.png"/></amp-img>
+            <amp-img height="26" width="26" layout="fixed" alt="Twitter" src="https://epcdn-vz.azureedge.net/static/images/twitter.png"></amp-img>
         </a>
             <a class='social-logo' href="https://www.reddit.com/r/Everipedia/" title="Everipedia on Reddit">
-            <amp-img height="26" width="26" layout="fixed" alt="Reddit" src="https://epcdn-vz.azureedge.net/static/images/reddit.png"/></amp-img>
+            <amp-img height="26" width="26" layout="fixed" alt="Reddit" src="https://epcdn-vz.azureedge.net/static/images/reddit.png"></amp-img>
         </a>
         <a class='social-logo' href="https://t.me/everipedia" title="Everipedia on Telegram">
-            <amp-img height="26" width="26" layout="fixed" alt="Telegram" src="https://epcdn-vz.azureedge.net/static/images/telegram.png"/></amp-img>
+            <amp-img height="26" width="26" layout="fixed" alt="Telegram" src="https://epcdn-vz.azureedge.net/static/images/telegram.png"></amp-img>
         </a>
     </div>
     <div class="eos-powered-line">
@@ -549,6 +549,10 @@
         <span id="api-by-libertyblock">{% trans 'API by' %} <a class="liberty-link" href="https://libertyblock.io/">LibertyBlock</a></span>
         <a class="liberty-link" href="https://eos.io/">
             <amp-img class="liberty-footer-img" height="40" width="50" layout="fixed" src="https://epcdn-vz.azureedge.net/static/images/libertyblock.png" ></amp-img>
+        </a>
+        <span id="api-by-scatter">{% trans 'and' %} <a class="scatter-link" href="https://get-scatter.com/">Scatter</a></span>
+        <a class="scatter-link" href="https://get-scatter.com/">
+            <amp-img class="scatter-footer-img" height="35" width="26" layout="fixed" src="https://epcdn-vz.azureedge.net/static/images/scatter.png" ></amp-img>
         </a>
     </div>
 </footer>
@@ -617,7 +621,7 @@
                     sandbox="allow-scripts allow-pointer-lock allow-popups allow-top-navigation allow-same-origin"
                     layout="flex-item"
                     frameborder="0"
-                    src="https://www.iqnetwork.io/search/iframe/">
+                    src="https://www.everipedia.org/search/iframe/">
                     <div placeholder></div>
                 </amp-iframe>
 			</div>
@@ -640,7 +644,7 @@
                     <!--sandbox="allow-scripts allow-pointer-lock allow-popups allow-top-navigation"-->
                     <!--layout="flex-item"-->
                     <!--frameborder="0"-->
-                    <!--src="https://www.iqnetwork.io/AJAX-REQUEST/AJAX_Fetch_Geniuses/{{ PREFETCH_FBNAME_ID }}/?amp=1">-->
+                    <!--src="https://www.everipedia.org/AJAX-REQUEST/AJAX_Fetch_Geniuses/{{ PREFETCH_FBNAME_ID }}/?amp=1">-->
                     <!--<div placeholder></div>-->
                 <!--</amp-iframe>-->
             <!--</div>-->
@@ -656,17 +660,17 @@
                 <h2>{% trans 'Share this page' %}</h2>
                 <div class="social-share-block-wrap">
                     <div class="social-share-block">
-                        <a class="email social-share-btn" rel='nofollow' href="mailto:email@email.com?&body=https://iqnetwork.io/wiki/{{ PAGEMETADATA.url_slug }}/"></a>
-                        <a class="facebook social-share-btn" rel='nofollow' href="https://www.facebook.com/sharer/sharer.php?u=https://iqnetwork.io/wiki/{{ PAGEMETADATA.url_slug }}/"></a>
-                        <a class="twitter social-share-btn" rel='nofollow' href="http://twitter.com/share?text=https://iqnetwork.io/wiki/{{ PAGEMETADATA.url_slug }}/"></a>
-                        <a class="reddit social-share-btn" rel='nofollow' href="https://reddit.com/submit?url=https://iqnetwork.io/wiki/{{ PAGEMETADATA.url_slug }}/"></a>
+                        <a class="email social-share-btn" rel='nofollow' href="mailto:email@email.com?&body=https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/"></a>
+                        <a class="facebook social-share-btn" rel='nofollow' href="https://www.facebook.com/sharer/sharer.php?u=https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/"></a>
+                        <a class="twitter social-share-btn" rel='nofollow' href="http://twitter.com/share?text=https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/"></a>
+                        <a class="reddit social-share-btn" rel='nofollow' href="https://reddit.com/submit?url=https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/"></a>
                     </div>
                 </div>
             </div>
             <div class="share-pad"></div>
             <div class="share-ct-link">
                 <h4>{% trans 'DIRECT LINK' %}</h4>
-                <a href="https://iqnetwork.io/wiki/{{ PAGEMETADATA.url_slug }}/">https://iqnetwork.io/wiki/{{ PAGEMETADATA.url_slug }}/</a>
+                <a href="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/">https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/</a>
             </div>
             <div class="share-pad"></div>
             <div class="share-hshtgs">
@@ -711,7 +715,7 @@
                     height="225"
                     width="216"
                     frameborder="0"
-                    src="https://www.iqnetwork.io/AJAX-REQUEST/AJAX_QR_Code_Iframe/{{ PAGEMETADATA.url_slug }}/">
+                    src="https://www.everipedia.org/AJAX-REQUEST/AJAX_QR_Code_Iframe/{{ PAGEMETADATA.url_slug }}/">
                     <div placeholder></div>
                 </amp-iframe>
             </div>
@@ -725,13 +729,13 @@
     <!-- Lightbox declarations -->
     {{splitBlurbSet.2|safe}}
 
-    <amp-pixel src="https://iqnetwork.io/pagecounter/{{ PAGEMETADATA.url_slug }}/"></amp-pixel>
+    <amp-pixel src="https://everipedia.org/pagecounter/{{ PAGEMETADATA.url_slug }}/"></amp-pixel>
 
     <amp-analytics type="googleanalytics" id="analytics1">
           <script type="application/json">
             {
               "vars": {
-                "account": "UA-57561457-6"
+                "account": "UA-57561457-3"
               },
               "triggers": {
                 "trackPageview": {
@@ -757,49 +761,6 @@
     </amp-analytics>
 
 </body>
-
-    <script type="application/ld+json">
-        {
-          "@context":"http://schema.org",
-          "@type":"ItemList",
-          "itemListElement":[
-            {
-              "@type":"ListItem",
-              "position":1,
-              "url":"https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/"
-            },
-            {
-              "@type":"ListItem",
-              "position":2,
-              "url":"https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/advanced_edit/history/"
-            }
-          ]
-        }
-    </script>
-
-    <script type="application/ld+json">
-        {
-          "@context": "http://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [{
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-              "@id": "https://everipedia.org",
-              "name": "Everipedia",
-              "image": "https://epcdn-vz.azureedge.net/static/images/logo_1050x1050.png"
-            }
-          },{
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-              "@id": "https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/",
-              "name": "{{ PAGETITLE }}",
-              "image": "{{ PHOTOOBJECT.url_FOR_OG }}"
-            }
-          }]
-        }
-    </script>
 </html>
 {% endspaceless %}
 {% endlanguage %}

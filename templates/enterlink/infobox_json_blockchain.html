@@ -1,5 +1,5 @@
 {% load i18n %}
-<ul class="list-unstyled list-spaced list-nonplural" id="infobox">
+<ul class="list-unstyled list-spaced list-nonplural infobox">
 <div class="row">
 {% if BLOBBOX|length > 0 %}
     <div id="blobBox_container">
@@ -9,8 +9,8 @@
 {% endif %}
 {% for item in NONPLURAL_INFOBOXES %}
 <li>
-    <div class="col-md-5 col-md-5b col-xs-4" id="info-qt"><h3>{{ item.key }}</h3></div>
-    <div class="col-md-7 col-xs-7" id="info-an">
+    <div class="col-md-5 col-md-5b col-xs-4 info-qt"><h3>{{ item.key }}</h3></div>
+    <div class="col-md-7 col-xs-7 info-an">
     {% spaceless %}
     {% if item.schema != "None" %}
         {% if item.addlSchematype != "None" %}
@@ -39,14 +39,14 @@
 {% endfor %}
 </div>
 </ul>
-<ul class="list-unstyled list-spaced list-plural" id="infobox">
+<ul class="list-unstyled list-spaced list-plural infobox">
 {% for refbox in PLURAL_INFOBOX_PACKAGES %}
     <div class="plural-div row">
-        <div class="col-md-5 col-md-5b col-xs-4" id="info-qt">
+        <div class="col-md-5 col-md-5b col-xs-4 info-qt">
             <h3>{{ refbox.key }}</h3>
         </div>
         {% for pluralbox in refbox.objects %}
-            <div class="col-md-7 col-xs-7" id="info-an" style="float:right;">
+            <div class="col-md-7 col-xs-7 info-an" style="float:right;">
             {% if pluralbox.schema != "None" %}
                 {%  if pluralbox.addlSchematype != "None" %}
                     <li class="plural-infobox">

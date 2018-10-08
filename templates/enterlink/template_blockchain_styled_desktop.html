@@ -12,28 +12,28 @@
 
     {% if PAGEMETADATA.page_type == 'Person' %}
         <title>{{ PAGETITLE }} | Wiki & {% trans 'Bio' %} | Everipedia</title><!-- ' -->
-        <meta name="description" content="{{ PAGETITLE }}'s wiki: {{BLURB|truncatechars_html:255}}">
+        <meta name="description" content="{{ PAGETITLE }}'s wiki: {{BLURB|truncatechars_html:255|striptags}}">
         <meta name="keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} {% trans 'bio' %}, {{ PAGETITLE }} {% trans 'encylopedia' %}">
         <meta name="news_keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} {% trans 'bio' %}, {{ PAGETITLE }} {% trans 'encylopedia' %}">
         <meta property="og:title" content="{{ PAGETITLE }}"/>
         <meta name="twitter:title" content="{{ PAGETITLE }} | Wiki & {% trans 'Bio' %} |">
     {% elif PAGEMETADATA.page_type == 'Product'%}
         <title>{{ PAGETITLE }} | Wiki & {% trans 'Review' %} | Everipedia</title><!-- ' -->
-        <meta name="description" content="{{ PAGETITLE }}'s wiki: {{BLURB|truncatechars_html:255}}">
+        <meta name="description" content="{{ PAGETITLE }}'s wiki: {{BLURB|truncatechars_html:255|striptags}}">
         <meta name="keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} {% trans 'encylopedia' %}, {{ PAGETITLE }} {% trans 'review' %}">
         <meta name="news_keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} {% trans 'encylopedia' %}, {{ PAGETITLE }} {% trans 'review' %}">
         <meta property="og:title" content="{{ PAGETITLE }}"/>
         <meta name="twitter:title" content="{{ PAGETITLE }} | Wiki & {% trans 'Review' %} |">
     {% elif PAGEMETADATA.page_type == 'Organization'%}
         <title>{{ PAGETITLE }} | Wiki & {% trans 'Review' %} | Everipedia</title><!-- ' -->
-        <meta name="description" content="{{ PAGETITLE }}'s wiki: {{BLURB|truncatechars_html:255}}">
+        <meta name="description" content="{{ PAGETITLE }}'s wiki: {{BLURB|truncatechars_html:255|striptags}}">
         <meta name="keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} {% trans 'history' %}, {{ PAGETITLE }} {% trans 'review' %}, {{ PAGETITLE }} {% trans 'encylopedia' %}">
         <meta name="news_keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} {% trans 'history' %}, {{ PAGETITLE }} {% trans 'review' %}, {{ PAGETITLE }} {% trans 'encylopedia' %}">
         <meta property="og:title" content="{{ PAGETITLE }}"/>
         <meta name="twitter:title" content="{{ PAGETITLE }} | Wiki & {% trans 'Review' %} |">
     {% else %}
         <title>{{ PAGETITLE }} | Wiki | Everipedia</title><!-- ' -->
-        <meta name="description" content="{{ PAGETITLE }}'s wiki: {{BLURB|truncatechars_html:255}}">
+        <meta name="description" content="{{ PAGETITLE }}'s wiki: {{BLURB|truncatechars_html:255|striptags}}">
         <meta name="keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} {% trans 'encylopedia' %}">
         <meta name="news_keywords" content="{{ PAGETITLE }}, {{ PAGETITLE }} wiki, {{ PAGETITLE }} {% trans 'encylopedia' %}">
         <meta property="og:title" content="{{ PAGETITLE }}"/>
@@ -44,7 +44,7 @@
     <meta property="article:published_time" content="{{ PAGEMETADATA.creation_timestamp }}" />
     <meta property="article:modified_time" content="{{ PAGEMETADATA.last_modified }}" />
     <meta property="og:image" content="{{ PHOTOOBJECT.url }}" />
-    <meta property="og:description" content="{{ BLURB|truncatewords_html:125 }}"/>
+    <meta property="og:description" content="{{ BLURB|truncatewords_html:255|striptags }}"/>
     <meta name="og:url" content="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/">
     {% if .PHOTOOBJECT.thumb != 'NOPICTURE' %}
     <meta property="og:image" content="{{ PHOTOOBJECT.thumb }}" />
@@ -54,21 +54,16 @@
     {% if .PHOTOOBJECT.thumb != 'NOPICTURE' %}
     <meta name="twitter:image" content="{{ PHOTOOBJECT.thumb }}">
     {% endif %}
-    <meta name="twitter:description" content="{{ BLURB|truncatewords_html:125 }}">
+    <meta name="twitter:description" content="{{ BLURB|truncatewords_html:255|striptags }}">
         {% if passedLanguage == 'en' %}
         <meta name="twitter:url" content="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/">
     {% else %}
         <meta name="twitter:url" content="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/?wiki-lang={{ passedLanguage }}">
     {% endif %}
 
-    {% if PAGEMETADATA.is_indexed %}
-        {% if PAGEMETADATA.bing_index_override %}
-            <meta name="googlebot" content="noindex, nofollow, noarchive">
-        {% else %}
-            <meta name="robots" content="noindex, nofollow, noarchive">
-        {% endif %}
+    {% if IS_REMOVED_FROM_INDEX %}
+        <meta name="googlebot" content="noindex, nofollow, noarchive">
     {% endif %}
-
 
     <!-- <link rel="dns-prefetch" href="//s.skimresources.com"> -->
     <link rel="dns-prefetch" href="//connect.facebook.net">
@@ -79,7 +74,7 @@
         var ARTICLE_SLUG = '{{ PAGEMETADATA.url_slug }}';
         var CITED_BY = '';
         var CITER_RANK = '';
-        var initializeTooltippables;
+        //var initializeTooltippables;
         var isMobile = parseInt('{{PREFETCH_REQUEST_MOBILE|yesno:"1,0"}}'); var isTablet = parseInt('{{request.tablet|yesno:"1,0"}}');
         var embedHTML = "<a href='https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/'><img alt='Everipedia Logo' width='25' height='25' src='https://epcdn-vz.azureedge.net/static/images/everipedia_logo_small.png'></a>";
     </script>
@@ -161,9 +156,9 @@
 				<div class="name-icons">
                     <div class="corner-ct-desktop" data-delay='{"show":"500", "hide":"300"}' data-toggle="tooltip" data-placement="right" title="{% trans 'Views' %}">
                         <div class="corner-views" style="display:block;">
-                            {% if PAGEMETADATA.pageviews >= 100 %}
+                            {% if CURRENT_PAGEVIEWS >= 100 %}
                             <span class="icon icon-eye"></span>
-                            <span class="views-text">{{ PAGEMETADATA.pageviews|intcomma }}</span>
+                            <span class="views-text">{{ CURRENT_PAGEVIEWS|intcomma }}</span>
                             {% endif %}
                             <!-- Second half -->
                             {% if PAGEMETADATA.page_type == 'Person' %}
@@ -610,7 +605,7 @@
 <meta itemprop="author" content="Everipedia">
 <meta itemprop="copyrightHolder" content="Everipedia">
 {% if PHOTOOBJECT.url != None %}
-    <abbr itemprop="image" itemscope itemtype="http://schema.org/ImageObject" />
+    <abbr itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
         <meta itemprop="url" content="{{ PHOTOOBJECT.url }}">
         <meta itemprop="name" content="{{ PAGETITLE }}">
         <meta itemprop="caption" content="{{ PAGETITLE }}">
@@ -619,13 +614,13 @@
         <meta itemprop="width" content="300">
     </abbr>
 {% else %}
-    <abbr itemprop="image" itemscope itemtype="http://schema.org/ImageObject" />
+    <abbr itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
         <meta itemprop="url" content="https://epcdn-vz.azureedge.net/static/images/logo_1050x1050.png">
         <meta itemprop="name" content="{{ PAGETITLE }}">
         <meta itemprop="caption" content="{{ PAGETITLE }}">
         <meta itemprop="uploadDate" content="{{ PAGEMETADATA.last_modified }}">
-        <meta itemprop="height" content="300">
-        <meta itemprop="width" content="300">
+        <meta itemprop="height" content="300px">
+        <meta itemprop="width" content="300px">
     </abbr>
 {% endif %}
 <abbr itemprop="publisher" itemid="https://everipedia.org/" itemscope itemtype="https://schema.org/Organization">
@@ -636,8 +631,8 @@
     <meta itemprop="sameAs" content="https://www.reddit.com/r/Everipedia/">
     <abbr itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
         <meta itemprop="url" content="https://epcdn-vz.azureedge.net/static/images/logo_1050x1050.png">
-        <meta itemprop="width" content="1050">
-        <meta itemprop="height" content="1050">
+        <meta itemprop="width" content="1050px">
+        <meta itemprop="height" content="1050px">
     </abbr >
 </abbr >
 <meta itemprop="datePublished" content="{{ PAGEMETADATA.creation_timestamp }}"/>
@@ -645,7 +640,7 @@
 
 {% for media in MEDIA_OBJECTS %}
     {% if media.class == "PICTURE" %} 
-    <abbr itemprop="image" itemscope itemtype="http://schema.org/ImageObject" />
+    <abbr itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
         <meta itemprop="url" content="{{ media.url }}">
         <meta itemprop="name" content="{{ PAGETITLE }} Image #{{ forloop.counter }}">
         <meta itemprop="caption" content="{{ media.caption|striptags }}">
@@ -656,7 +651,7 @@
     {% endif %}
 
     {% if media.class == "YOUTUBE" %} 
-        <abbr itemprop="video" itemscope itemtype="http://schema.org/VideoObject" />
+        <abbr itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
             <meta itemprop="url" content="{{ media.url }}">
             <meta itemprop="name" content="{{ PAGETITLE }} YouTube Video #{{ forloop.counter }}">
             <meta itemprop="description" content="{{ media.caption|striptags }}">
@@ -667,7 +662,7 @@
         </abbr>
     {% endif %}
     {% if media.class == "NORMAL_VIDEO" %} 
-        <abbr itemprop="video" itemscope itemtype="http://schema.org/VideoObject" />
+        <abbr itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
             <meta itemprop="url" content="{{ media.url }}">
             <meta itemprop="name" content="{{ PAGETITLE }} Video #{{ forloop.counter }}">
             <meta itemprop="description" content="{{ media.caption|striptags }}">
@@ -721,7 +716,7 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-57561457-6', 'auto');
+  ga('create', 'UA-57561457-3', 'auto');
   ga('send', {
       hitType: 'pageview',
       page: location.pathname,
@@ -960,7 +955,7 @@
     document.querySelector('head').innerHTML += '<link href="https://epcdn-vz.azureedge.net/static/css/jquery-qtip.css" rel="stylesheet">';
 
     var trackingPixel = new Image();
-    trackingPixel.src="https://iqnetwork.io/pagecounter/{{ PAGEMETADATA.url_slug }}/";
+    trackingPixel.src="https://everipedia.org/pagecounter/{{ PAGEMETADATA.url_slug }}/";
 
 </script>
 
@@ -980,30 +975,6 @@
           "url":"https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/advanced_edit/history/"
         }
       ]
-    }
-</script>
-
-<script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@id": "https://everipedia.org",
-          "name": "Everipedia",
-          "image": "https://epcdn-vz.azureedge.net/static/images/logo_1050x1050.png"
-        }
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@id": "https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/",
-          "name": "{{ PAGETITLE }}",
-          "image": "{{ PHOTOOBJECT.url }}"
-        }
-      }]
     }
 </script>
 </html>

@@ -350,6 +350,9 @@ def search(request, useIframe=False):
             searchterm = ""
             original_searchterm = searchterm
 
+    # Remove leading and trailing whitespaces, if present
+    searchterm = searchterm.strip()
+
     # Process the main search
     BLURB_CHAR_LIMIT = 650
     result = mainSearch(None, "tinyMCE_JSON", searchterm, 80, BLURB_CHAR_LIMIT)
@@ -386,6 +389,7 @@ def search(request, useIframe=False):
 @csrf_exempt
 def pagecounter(request, page_slug):
     ArticleTable.objects.filter(Q(slug__iexact=page_slug) | Q(slug_alt__iexact=page_slug)).update(pageviews=F('pageviews') + 1)
+
     return HttpResponse("")
 
 # Hover blurb (when a blue link is hovered over on an article page)
@@ -726,7 +730,10 @@ def edit_301(url_param="create_page"):
 
 # Redirect to the main article page
 @csrf_exempt
-def template_handler_301(url_param):
+def template_handler_301(self, **kwargs):
+    # For some reason, it is coming through as a kwarg
+    url_param = kwargs["url_param"]
+
     # Fetch the article object from the url parameter
     cleanedParamList = getTheArticleObject(url_param)
     cleaned_url_param = cleanedParamList[0]
@@ -736,7 +743,10 @@ def template_handler_301(url_param):
 
 # Redirect to the main article page, AMP version
 @csrf_exempt
-def template_handler_301_amp(url_param):
+def template_handler_301_amp(self, **kwargs):
+    # For some reason, it is coming through as a kwarg
+    url_param = kwargs["url_param"]
+
     # Fetch the article object from the url parameter
     cleanedParamList = getTheArticleObject(url_param)
     cleaned_url_param = cleanedParamList[0]
@@ -808,6 +818,9 @@ def template_handler_blockchain(request, url_param='url_param'):
     # Get the article object from the url parameter
     cleanedParamList = getTheArticleObject(url_param)
     articleObject = cleanedParamList[1]
+
+    if(articleObject.is_removed):
+        return HttpResponseRedirect('/error/')
 
     # See if the request is from mobile or tablet
     useMobile = False
@@ -890,6 +903,7 @@ def template_handler_blockchain(request, url_param='url_param'):
             newDictionary.update({"LANG_OVERRIDE": renderLang})
             newDictionary.update({'SITE_NOTICE': theNotice.mobile_html})
             newDictionary.update({'IS_REMOVED_FROM_INDEX': articleObject.is_removed_from_index})
+            newDictionary.update({'CURRENT_PAGEVIEWS': articleObject.pageviews})
 
             # Generate the CSS-styled page from the template, filling in variables parsed from the unstyled/raw HTML
             styledHTMLResponse =  render(request, 'enterlink/template_blockchain_styled_amp.html', newDictionary)
@@ -909,6 +923,8 @@ def template_handler_blockchain(request, url_param='url_param'):
             newDictionary.update({"CURRENT_IPFS_HASH": articleObject.ipfs_hash_current})
             newDictionary.update({"LANG_OVERRIDE": renderLang})
             newDictionary.update({'IS_REMOVED_FROM_INDEX': articleObject.is_removed_from_index})
+            newDictionary.update({'CURRENT_PAGEVIEWS': articleObject.pageviews})
+            newDictionary.update({'isTemplatePage': True})
 
             # Generate the CSS-styled page from the template, filling in variables parsed from the unstyled/raw HTML
             styledHTMLResponse = render(request, 'enterlink/template_blockchain_styled_desktop.html', newDictionary)
