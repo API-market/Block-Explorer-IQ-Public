@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-25 08:59-0700\n"
+"POT-Creation-Date: 2018-10-08 09:47-0700\n"
 "PO-Revision-Date: 2018-07-30 18:52-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -79,7 +79,6 @@ msgstr "授权注销"
 #: static/js/plugins/citepicture/plugin.min.js:17
 #: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:16
 #: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:17
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
 msgid "Media"
 msgstr "媒体"
 
@@ -87,13 +86,11 @@ msgstr "媒体"
 #: static/js/plugins/citesource/plugin.min.js:16
 #: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:15
 #: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:16
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
 msgid "Cite"
 msgstr "引用"
 
 #: static/js/plugins/linkpage/plugin.min.js:1
 #: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:1
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
 msgid "Search Everipedia"
 msgstr "搜索Everipedia"
 
@@ -101,24 +98,17 @@ msgstr "搜索Everipedia"
 #: static/js/plugins/linkpage/plugin.min.js:18
 #: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:17
 #: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:18
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
 msgid "Link"
 msgstr "链接"
 
 #: static/js/plugins/mention/plugin.min.js:374
 #: static/tinymce_4.2.3/plugins/mention/plugin.min.js:374
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:162
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:165
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:212
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:215
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:54
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:112
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:115
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:224
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:227
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:331
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:334
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:107
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:110
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:218
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:221
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:325
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:328
 msgid "Cite as verified editor"
 msgstr "引用为验证作者"
 
@@ -127,9 +117,7 @@ msgstr "引用为验证作者"
 #: static/js/plugins/savepage/plugin.min.js:7
 #: static/tageditor/jquery.tag-editor.js:335
 #: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:3
-#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:6
-#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:7
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:191
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:202
 msgid "Save"
 msgstr "保存"
 
@@ -148,6 +136,18 @@ msgstr "字体样式"
 msgid "Style"
 msgstr "样式"
 
+#: static/js/scatterjs-plugin-eosjs2.min.js:15
+msgid "entries"
+msgstr ""
+
+#: static/js/scatterjs-plugin-eosjs2.min.js:15
+msgid "values"
+msgstr ""
+
+#: static/js/scatterjs-plugin-eosjs2.min.js:15
+msgid "keys"
+msgstr ""
+
 #: static/tageditor/jquery.tag-editor.js:584
 #: static/tageditor/jquery.tag-editor.js:587
 #: static/tageditor/jquery.tag-editor.js:590
@@ -159,6 +159,11 @@ msgstr "添加该类目的其他描述"
 #: static/tageditor/jquery.tag-editor.js:590
 msgid "Delete this tag"
 msgstr "删除该标签"
+
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:3
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:4
+msgid "Save Draft"
+msgstr ""
 
 #: templates/enterlink/brainpowermgmt.html:142
 msgid "Claim"
@@ -176,7 +181,7 @@ msgstr "请在此处拖放照片或单击 \"上传\"。"
 msgid "Please enter a description for the photo"
 msgstr "请输入照片的描述"
 
-#: templates/enterlink/edit_ajax_addinfobox.html:89
+#: templates/enterlink/edit_ajax_addinfobox.html:96
 msgid "Adding infobox item, please wait..."
 msgstr "添加信息框项, 请稍候..。"
 
@@ -185,15 +190,13 @@ msgid "Adding, please wait..."
 msgstr "添加中, 请稍候..。"
 
 #: templates/enterlink/edit_ajax_addlink.html:71
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:354
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:457
 msgid ""
 "You have been posting a lot of links today. Wait a bit for the community to "
 "respond to your content. New editors are limited to posting only 250 "
 "submissions a day."
 msgstr ""
-"您今天发布了很多链接。稍微等待一下社区对您的内容做出响应。新作者每天仅限每天发布250"
-"篇文章。"
+"您今天发布了很多链接。稍微等待一下社区对您的内容做出响应。新作者每天仅限每天"
+"发布250篇文章。"
 
 #: templates/enterlink/edit_ajax_addlink.html:75
 msgid ""
@@ -212,8 +215,6 @@ msgid "No URL provided, please try again"
 msgstr "没有提供 URL, 请重试"
 
 #: templates/enterlink/edit_ajax_addlink.html:87
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:362
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:465
 msgid "Please provide a description for the link or file."
 msgstr "请提供链接或文件的描述。"
 
@@ -222,120 +223,76 @@ msgid "Please provide a more scholarly description."
 msgstr "请提供更学术性的描述。"
 
 #: templates/enterlink/edit_ajax_addlink.html:109
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
 msgid "File uploaded successfully."
 msgstr "文件上传成功"
 
 #: templates/enterlink/edit_ajax_addlink.html:141
-#: templates/enterlink/inline-js/edit-bottom.html:16
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+#: templates/enterlink/inline-js/edit-bottom.html:24
 msgid "Add File"
 msgstr "添加文件"
 
 #: templates/enterlink/edit_ajax_addlink.html:148
-#: templates/enterlink/inline-js/edit-bottom.html:17
+#: templates/enterlink/inline-js/edit-bottom.html:25
 msgid "Add Link"
 msgstr "添加链接"
 
-#: templates/enterlink/headers/scatter-header.html:130
+#: templates/enterlink/headers/scatter-header.html:143
 msgid "Claim Rewards"
 msgstr "领取奖励"
 
-#: templates/enterlink/index.html:236
+#: templates/enterlink/index.html:231
 msgid "Loading more activity, please wait..."
 msgstr "加载更多活动, 请稍候..。"
 
-#: templates/enterlink/index.html:260
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
+#: templates/enterlink/index.html:255
 msgid "Create page"
 msgstr "创建页面"
 
-#: templates/enterlink/inline-js/edit-bottom.html:12
+#: templates/enterlink/inline-js/edit-bottom.html:20
 msgid ""
 "Please stake some IQ into Brainpower before continuing. Click OK to open the "
 "Brainpower management screen in a new tab. NOTE: Please make sure popups are "
 "enabled for this site, as you may receive a warning."
 msgstr ""
-"在继续之前, 请抵押一些IQ获取Brainpower。单击 \"确定\", 在新选项卡中打开 \"Brainpower管理\" 屏"
-"幕. 注意: 请确保此网站启用了弹出窗口, 因为您可能会收到警告。"
+"在继续之前, 请抵押一些IQ获取Brainpower。单击 \"确定\", 在新选项卡中打开 "
+"\"Brainpower管理\" 屏幕. 注意: 请确保此网站启用了弹出窗口, 因为您可能会收到警"
+"告。"
 
-#: templates/enterlink/inline-js/edit-bottom.html:13
+#: templates/enterlink/inline-js/edit-bottom.html:21
 msgid ""
 "Note that you will not be able to propose edits without Brainpower. Your "
 "work will be lost!"
 msgstr "请注意, 如果没有Brainpower, 您将无法提交编辑。您的工作将会丢失!"
 
-#: templates/enterlink/inline-js/edit-bottom.html:14
+#: templates/enterlink/inline-js/edit-bottom.html:22
 msgid "Error: proposal not found. Please try submitting again."
 msgstr "错误: 找不到提案。请尝试再次提交。"
 
-#: templates/enterlink/inline-js/edit-bottom.html:15
+#: templates/enterlink/inline-js/edit-bottom.html:23
 msgid "Article proposal submission failed!"
 msgstr "文章提案提交失败!"
 
-#: templates/enterlink/inline-js/edit-bottom.html:18
+#: templates/enterlink/inline-js/edit-bottom.html:26
 msgid "Add New Infobox"
 msgstr "添加新信息框项"
 
-#: templates/enterlink/inline-js/edit-bottom.html:19
+#: templates/enterlink/inline-js/edit-bottom.html:27
 msgid "Completing transaction..."
 msgstr "正在完成事务..。"
 
-#: templates/enterlink/inline-js/edit-bottom.html:141
+#: templates/enterlink/inline-js/edit-bottom.html:103
 msgid "Add Row"
 msgstr "添加行"
 
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:56
-msgid "Are you sure you want to remove this link?"
-msgstr "您确定要移除该链接？"
-
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:162
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:166
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:212
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:216
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:55
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:112
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:116
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:224
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:228
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:331
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:335
-msgid "Cite my own knowledge / experience as a verified editor"
-msgstr "作为一名认证作者引用我自己的知识/经验"
-
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:347
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:451
-msgid "Posting comment, please wait.."
-msgstr "评论发表中，请稍候…"
-
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:358
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:461
-msgid "This comment is already on this page. Please try again!"
-msgstr "此评论已在该页上。请重试!"
-
-#: templates/enterlink/inline-js/enterlink-ajax-core.html:450
-msgid "Posting reply, please wait.."
-msgstr "回帖中, 请稍候..。"
-
-#: templates/enterlink/inline-js/enterlink-ajax-execute-search.html:139
-#: templates/enterlink/inline-js/enterlink-user-ajax.html:52
-msgid "Searching..."
-msgstr "正在搜索..."
-
-#: templates/enterlink/inline-js/enterlink-ajax-execute-search.html:167
-msgid "Merging..."
-msgstr "合并选项..."
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:94
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:4
 msgid "Are you sure you want to exit the page? Unsaved changes will be lost."
 msgstr "是否确定要退出该页？未保存的更改将丢失。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:180
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:51
 msgid "Introduction"
 msgstr "介绍"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:180
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:52
 msgid ""
 "Everipedia is just like Wikipedia but much simpler to edit and contribute. "
 "Each page is composed of an infobox area for short concise facts, a main "
@@ -343,23 +300,32 @@ msgid ""
 "videos, audio etc about the topic, a list of references to webpages and "
 "files that are used as citations in the article and infobox."
 msgstr ""
-"Everipedia 就像维基百科那样, 但编辑和贡献内容则更加容易。每个页面都由以下几个部分组成：一个描"
-"述简短事实的信息框区域, 一篇以中性第三人称写的主要文章,  一个由图片、视频、音频等等跟主题相 "
-"关媒体组成的媒体库, 一组作为对信息框和文章的引用的网页和文件参考列表,。"
+"Everipedia 就像维基百科那样, 但编辑和贡献内容则更加容易。每个页面都由以下几个"
+"部分组成：一个描述简短事实的信息框区域, 一篇以中性第三人称写的主要文章,  一个"
+"由图片、视频、音频等等跟主题相 关媒体组成的媒体库, 一组作为对信息框和文章的引"
+"用的网页和文件参考列表,。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:181
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:59
+msgid "Title"
+msgstr "标题"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:60
+msgid "Enter the page title here"
+msgstr "在此处输入页面标题。"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:73
 msgid "Main photo"
 msgstr "主照片"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:181
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:74
 msgid "Here you can add the main photo for the article."
 msgstr "在这里, 你可以为文章添加主图。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:182
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:87
 msgid "Infobox"
 msgstr "信息框"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:182
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:88
 msgid ""
 "The infobox is designed for concise, quick facts. Suggested items appear in "
 "the dropdown depending on the selected topic, but any type of infobox can be "
@@ -368,50 +334,50 @@ msgstr ""
 "信息框是为了描述简明、快速的事实而设计的。根据所选主题, 建议项显示在下拉列表"
 "中, 但任何类型的信息框都可以添加。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:183
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:101
 msgid "Add Links, Files, Etc."
 msgstr "添加链接、文件等。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:183
-msgid ""
-"Make sure to cite your sources when adding information to the page by adding "
-"links and files here so you can show where the information is coming from."
-msgstr ""
-"在向页面添加信息时, 请务必引用您的信息来源, 为此请在此处添加链接和文件, 这样你就能展示"
-"信息来自何处。"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:184
-msgid "Reference links"
-msgstr "参考链接"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:184
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:102
 msgid ""
 "As you add links and files, they will show up in the Reference Links "
 "section. You can edit or remove them as well."
 msgstr ""
 "在添加链接和文件时, 它们将显示在 \"参考链接\" 区域。你也可以编辑或删除它们。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:185
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:115
+msgid "Reference links"
+msgstr "参考链接"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:116
+msgid ""
+"Make sure to cite your sources when adding information to the page by adding "
+"links and files here so you can show where the information is coming from."
+msgstr ""
+"在向页面添加信息时, 请务必引用您的信息来源, 为此请在此处添加链接和文件, 这样"
+"你就能展示信息来自何处。"
+
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:129
 msgid "Media Gallery"
 msgstr "媒体库"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:185
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:130
 msgid "Added pictures will show up here."
 msgstr "添加的图片将显示在这里。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:144
 msgid "Add media to article text"
 msgstr "将媒体添加到文章文本中"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:145
 msgid "To add an image or video to the article text, click the 'Media' button."
 msgstr "要向文章文本中添加图像或视频, 请单击 \"媒体\" 按钮。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:158
 msgid "Cite links, files, etc"
 msgstr "引用链接、文件等"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:159
 msgid ""
 "After you have already added a link, file, or picture to the page, you can "
 "cite it by clicking the 'Cite' button. You can also press the '^' or '*' "
@@ -420,11 +386,11 @@ msgstr ""
 "在您已经将链接、文件或图片添加到页面之后, 您可以通过单击 \"引用\" 按钮来引用"
 "它。您还可以在键入时按 \"^\" 或 \"*\" 键, 会出现一个下拉框。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:188
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:172
 msgid "Link to other Everipedia pages"
 msgstr "链接到其他 Everipedia 页面"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:188
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:173
 msgid ""
 "To link to another Everipedia page click the 'Link Page' button. You can "
 "also press the '@' or key when typing and a dropdown should appear. Try to "
@@ -432,58 +398,47 @@ msgid ""
 "as possible."
 msgstr ""
 "若要链接到其他 Everipedia 页, 请单击 \"链接页\" 按钮。您还可以在键入时按 \"@"
-"\" 键, 会出现一个下拉框。尝试链接到尽可能多的页面, 以使每个页面内容和信息尽可能的丰"
-"富。"
+"\" 键, 会出现一个下拉框。尝试链接到尽可能多的页面, 以使每个页面内容和信息尽可"
+"能的丰富。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:189
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:186
 msgid "Main article body"
 msgstr "主要文章的正文"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:189
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:187
 msgid ""
 "Write in an objective manner in third person tense, do not include any "
 "marketing speak (exclusive offers, unverifiable claims etc). This is an "
 "encyclopedia, not a social media page."
 msgstr ""
-"以第三人称客观的方式写, 不要加入任何营销内容 (独家报价, 无法证实的消息等)。"
-"这是一部百科全书, 而不是社交媒体页面。"
+"以第三人称客观的方式写, 不要加入任何营销内容 (独家报价, 无法证实的消息等)。这"
+"是一部百科全书, 而不是社交媒体页面。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:190
-msgid "Title"
-msgstr "标题"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:190
-msgid "Enter the page title here"
-msgstr "在此处输入页面标题。"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:191
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:203
 msgid "When you are finished, click here to save your changes."
 msgstr "完成后, 单击此处保存更改。"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:193
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:218
 msgid "Back"
 msgstr "返回"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:193
+#: templates/enterlink/inline-js/enterlink-edit-prefix.html:220
 #: templates/enterlink/inline-js/enterlink-user-ajax.html:159
 msgid "Next"
 msgstr "下一页"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:195
-msgid "Formats"
-msgstr "格式"
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:107
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:111
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:218
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:222
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:325
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:329
+msgid "Cite my own knowledge / experience as a verified editor"
+msgstr "作为一名认证作者引用我自己的知识/经验"
 
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:196
-msgid "File uploaded successfully"
-msgstr "文件上传成功"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:459
-msgid "Please enter a headline"
-msgstr "请输入标题"
-
-#: templates/enterlink/inline-js/enterlink-edit-prefix.html:463
-msgid "Submission Successful!"
-msgstr "提交成功"
+#: templates/enterlink/inline-js/enterlink-user-ajax.html:52
+msgid "Searching..."
+msgstr "正在搜索..."
 
 #: templates/enterlink/inline-js/enterlink-user-ajax.html:93
 msgid "Editor profile"
@@ -494,8 +449,8 @@ msgid ""
 "The editor profile page shows the pages the user has edited, references "
 "they’ve added to a page, and comments they’ve made."
 msgstr ""
-"\"作者个人信息页面\" 显示该用户已编辑的页面、已添加到页面中的引用以及它们所做的评"
-"论。"
+"\"作者个人信息页面\" 显示该用户已编辑的页面、已添加到页面中的引用以及它们所做"
+"的评论。"
 
 #: templates/enterlink/inline-js/enterlink-user-ajax.html:105
 msgid "Profile photo"
@@ -543,18 +498,18 @@ msgid ""
 "png'/><a class='helper-crypto-anchor' rel='nofollow' target='_blank' "
 "href='https://my.dogechain.info/#/overview'>Dogecoin</a> "
 msgstr ""
-"如果您有任何种类的加密货币, 请在此处添加钱包地址。如果人们喜欢您的工作, 他们可能会"
-"给您捐赠!如果您没有钱包, 您可以在这里得到一个: <img class='userview-crypto-"
-"logo-helper' src='https://epcdn-vz.azureedge.net/static/images/bitcoin-icon."
-"svg'/> <a class='helper-crypto-anchor' rel='nofollow' target='_blank' "
-"href='https://www.coinbase.com/'>比特币 </a>, <img class='userview-crypto-"
-"logo-helper' style='margin-right: 0px;' src='https://epcdn-vz.azureedge.net/"
-"static/images/ethereum-icon.png'/> <a class='helper-crypto-anchor' "
-"rel='nofollow' target='_blank' href='https://www.coinbase.com/'>以太坊 </"
-"a>, <img class='userview-crypto-logo-helper' src='https://epcdn-vz.azureedge."
-"net/static/images/dogecoin-logo.png'/> <a class='helper-crypto-anchor' "
-"rel='nofollow' target='_blank' href='https://my.dogechain.info/#/"
-"overview'>Dogecoin </a>"
+"如果您有任何种类的加密货币, 请在此处添加钱包地址。如果人们喜欢您的工作, 他们"
+"可能会给您捐赠!如果您没有钱包, 您可以在这里得到一个: <img class='userview-"
+"crypto-logo-helper' src='https://epcdn-vz.azureedge.net/static/images/"
+"bitcoin-icon.svg'/> <a class='helper-crypto-anchor' rel='nofollow' "
+"target='_blank' href='https://www.coinbase.com/'>比特币 </a>, <img "
+"class='userview-crypto-logo-helper' style='margin-right: 0px;' src='https://"
+"epcdn-vz.azureedge.net/static/images/ethereum-icon.png'/> <a class='helper-"
+"crypto-anchor' rel='nofollow' target='_blank' href='https://www.coinbase."
+"com/'>以太坊 </a>, <img class='userview-crypto-logo-helper' src='https://"
+"epcdn-vz.azureedge.net/static/images/dogecoin-logo.png'/> <a class='helper-"
+"crypto-anchor' rel='nofollow' target='_blank' href='https://my.dogechain."
+"info/#/overview'>Dogecoin </a>"
 
 #: templates/enterlink/inline-js/enterlink-user-ajax.html:133
 msgid "Save changes"
