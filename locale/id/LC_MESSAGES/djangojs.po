@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-08 09:47-0700\n"
+"POT-Creation-Date: 2018-11-10 16:54+0900\n"
 "PO-Revision-Date: 2018-07-30 20:30-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -104,10 +104,10 @@ msgstr "Tautan"
 #: static/tinymce_4.2.3/plugins/mention/plugin.min.js:374
 #: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:107
 #: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:110
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:218
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:221
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:325
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:328
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:234
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:237
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:341
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:344
 msgid "Cite as verified editor"
 msgstr "Kutip sebagai editor terverifikasi"
 
@@ -135,16 +135,8 @@ msgstr "Jenis Font"
 msgid "Style"
 msgstr "Jenis"
 
-#: static/js/scatterjs-plugin-eosjs2.min.js:15
-msgid "entries"
-msgstr ""
-
-#: static/js/scatterjs-plugin-eosjs2.min.js:15
-msgid "values"
-msgstr ""
-
-#: static/js/scatterjs-plugin-eosjs2.min.js:15
-msgid "keys"
+#: static/js/scatter-header-js.js:85
+msgid "Claim Rewards"
 msgstr ""
 
 #: static/tageditor/jquery.tag-editor.js:584
@@ -159,9 +151,29 @@ msgstr "Tambahkan deskripsi tambahan untuk kategori ini"
 msgid "Delete this tag"
 msgstr "Hapus tag ini"
 
+#: static/tinymce_4.2.3/plugins/helptour/plugin.min.js:3
+#: static/tinymce_4.2.3/plugins/helptour/plugin.min.js:4
+msgid "Help"
+msgstr ""
+
+#: static/tinymce_4.2.3/plugins/merge/plugin.min.js:3
+#: static/tinymce_4.2.3/plugins/merge/plugin.min.js:4
+msgid "Merge"
+msgstr ""
+
 #: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:3
 #: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:4
 msgid "Save Draft"
+msgstr ""
+
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:10
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:11
+msgid "Load Draft"
+msgstr ""
+
+#: static/tinymce_4.2.3/plugins/submitpage/plugin.min.js:3
+#: static/tinymce_4.2.3/plugins/submitpage/plugin.min.js:4
+msgid "Submit"
 msgstr ""
 
 #: templates/enterlink/brainpowermgmt.html:142
@@ -240,15 +252,11 @@ msgstr "Tambahkan File"
 msgid "Add Link"
 msgstr "Tambahkan Tautan"
 
-#: templates/enterlink/headers/scatter-header.html:143
-msgid "Claim Rewards"
-msgstr ""
-
-#: templates/enterlink/index.html:231
+#: templates/enterlink/index.html:234
 msgid "Loading more activity, please wait..."
 msgstr "Memuat lebih banyak aktivitas, harap tunggu..."
 
-#: templates/enterlink/index.html:255
+#: templates/enterlink/index.html:258
 msgid "Create page"
 msgstr "Buat Halaman"
 
@@ -446,10 +454,10 @@ msgstr "Berikutnya"
 
 #: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:107
 #: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:111
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:218
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:222
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:325
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:329
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:234
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:238
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:341
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:345
 msgid "Cite my own knowledge / experience as a verified editor"
 msgstr ""
 "Kutip pengetahuan / pengalaman saya sendiri sebagai editor terverifikasi"

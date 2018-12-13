@@ -36,7 +36,7 @@
 	<div class="container index-container">
 		<div class="laptop-ct row">
 			<div class="col-md-6 intro-blurb-wrap">
-				<h1>{% trans "The world's first encyclopedia on the blockchain" %}</h1>
+				<h1>{% trans "The world's largest encyclopedia on the blockchain" %}</h1>
 				<p>{% trans "Everipedia's IQ Network is the world's first Encyclopedia that allows anyone to become a stakeholder in the system and earn rank, rewards & tokens for curating content." %}</p>
 				
 
@@ -59,8 +59,11 @@
 		        <form action="/search/?create_req=1" method="post" class="search" name="createpagefield" id="createpagefield">
 		            {% csrf_token %}
 		            <input type="hidden" value="1" name="create_page_flag" />
-		            <input placeholder="{% trans 'Paste a link or enter a title' %}." name="SearchBox" id="CreateBox" autocomplete="off" type="text" value="" style="border:0px;">
-		            <button type="submit" value="search" class="icon-search btn-index-create-page">{% trans 'Create Page' %}</button>
+		            <input placeholder="{% trans 'Paste a link or enter a title' %}." name="CreateBox" id="CreateBox" autocomplete="off" type="text" value="" style="border:0px;">
+					<div id="createResult">
+						{% include "enterlink/ajaxresults.html" %}
+					</div>
+					<button type="submit" value="search" class="icon-search btn-index-create-page">{% trans 'Create Page' %}</button>
 		        </form>
 		    </div>
 		    </div>
@@ -165,7 +168,7 @@
 			<h2>{% trans "Led by the Founders of Wikipedia and Genius.com" %}</h2>
 			<hr class="separator-break separator-accent" style="margin-left:0;">
 
-			<p>{% trans "Everipedia is being led by a team with extensive experience and knowledge both in the online knowledge space as well as the blockchain industry. The executive team is made up of several prominent individuals in the industry, the Co-Founder of Wikipedia, Larry Sanger, the founder of Genius.com, Mahbod Moghadam, and several others. Academic credentials includes UCLA, Stanford, Yale & Columbia, covering nationalities from America, Sweden, Norway and Italy. " %}</p>
+			<p>{% trans "Everipedia is being led by a team with extensive experience and knowledge both in the online knowledge space as well as the blockchain industry. The executive team is made up of several prominent individuals in the industry, the Co-Founder of Wikipedia, Larry Sanger, the founder of Genius.com, Mahbod Moghadam, and several others. Academic credentials includes UCLA, Stanford, Yale & Columbia, covering nationalities from the United States, Sweden, Norway and Italy. " %}</p>
 			<a id="become_an_editor" href="/leadership/" target="_blank" class="laptop-btn2">{% trans "Executive Team" %}</a>
 		</div>
 		<div class="col-md-6 teamphoto hidden-sm hidden-xs"></div>
@@ -252,8 +255,8 @@ $("img.lazyloadable").unveil(250);
 
 
 $(document).on("scatterNavbarDone", function () {
-	$("#become_an_editor").html(gettext("Create page"));
-	$("#become_an_editor").attr("href", "/wiki/everipedia-blank-page-template/advanced_edit/");
+	$("#become_an_editor").html(django.gettext("Create page"));
+	$("#become_an_editor").attr("href", "/wiki/everipedia-blank-page-template/edit/");
     $("#become_an_editor").click(function(event) {
         event.preventDefault();
         $("#createpage_box_wrap").show();

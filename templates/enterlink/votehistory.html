@@ -8,6 +8,7 @@
     <!-- ' -->
     <meta name="description" content=" Everipedia is the world’s largest collection of hyperlinks grouped by identity. ">
 	<link rel="canonical" href="https://everipedia.org/contact/" />
+	<meta name="robots" content="noindex, nofollow, noarchive">
 	<!--- Include Header -->
 	{% include "enterlink/headers/header-common.html" %}{% include "enterlink/headers/header-navbar.html" %}
     <link href="/static/css/howto_welcome.css" rel="stylesheet">
@@ -89,7 +90,7 @@
 	{% if allProposals|length == 0 %}
 		<h1>There are currently no votes in progress for this article</h1>
 		<h3 class="go-back">
-			<a class="" href="/wiki/{{ articleObject.slug }}/">GO BACK</a>
+			<a class="" href="/wiki/lang_{{ articleObject.page_lang }}/{{ articleObject.slug }}/">GO BACK</a>
 		</h3>
 	{% else %}
 		<h1>{% trans "Editing History" %}</h1>

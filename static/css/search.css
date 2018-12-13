@@ -124,6 +124,9 @@ color:#5F5F5F;
 font-style:italic
 }
 
+.search-create-new-page{
+	display: none;
+}
 
 .search-ct .search-no-result h2 {
 margin:15px 0

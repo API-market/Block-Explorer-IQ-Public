@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-08 09:47-0700\n"
+"POT-Creation-Date: 2018-11-10 16:54+0900\n"
 "PO-Revision-Date: 2018-07-31 21:59-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,82 +18,84 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.1.1\n"
 
-#: enterlink/edit.py:105
-#, fuzzy
-#| msgid "Page"
+#: enterlink/edit.py:105 enterlink/model_functions.py:368
+#: enterlink/view_functions.py:727
+msgid "Page Language"
+msgstr "שפה"
+
+#: enterlink/edit.py:106 enterlink/model_functions.py:353
 msgid "Page Type"
 msgstr "עמוד"
 
-#: enterlink/edit.py:105
+#: enterlink/edit.py:106 enterlink/model_functions.py:358
 msgid "Removed From Site"
 msgstr ""
 
-#: enterlink/edit.py:105 templates/enterlink/edit_ajax_editpagemeta.html:12
+#: enterlink/edit.py:106 enterlink/model_functions.py:363
+#: templates/enterlink/edit_ajax_editpagemeta.html:12
 msgid "Adult Content"
 msgstr "תוכן למבוגרים"
 
-#: enterlink/edit.py:106
-#, fuzzy
-#| msgid "Gallery"
+#: enterlink/edit.py:107 enterlink/model_functions.py:343
 msgid "Media Gallery"
 msgstr "גלרייה"
 
-#: enterlink/edit.py:106
+#: enterlink/edit.py:107 enterlink/model_functions.py:348
 msgid "References and Citations"
 msgstr ""
 
-#: enterlink/edit.py:789
+#: enterlink/edit.py:821
 msgid ""
 "This is the reference link for the lead picture/gif of the page. Delete this "
 "link here or replace the picture/gif above."
 msgstr ""
 
-#: enterlink/forms.py:10
+#: enterlink/forms.py:11
 msgid "How can we help?"
 msgstr "?איך נוכל לעזור"
 
-#: enterlink/forms.py:11
+#: enterlink/forms.py:12
 msgid "Email"
 msgstr "דוא׳׳ל"
 
-#: enterlink/forms.py:12
+#: enterlink/forms.py:13
 msgid "Full Name"
 msgstr "שם מלא"
 
-#: enterlink/forms.py:13
+#: enterlink/forms.py:14
 msgid "Subject"
 msgstr "נושא"
 
-#: enterlink/forms.py:14 enterlink/models.py:13
+#: enterlink/forms.py:15 enterlink/models.py:13
 msgid "Report Abuse"
 msgstr "דווח על שימוש לרעה"
 
-#: enterlink/forms.py:14 enterlink/models.py:13
+#: enterlink/forms.py:15 enterlink/models.py:13
 msgid "Report Bug"
 msgstr "דווח על תקלה@ info: tooltip"
 
-#: enterlink/forms.py:14 enterlink/models.py:13
+#: enterlink/forms.py:15 enterlink/models.py:13
 msgid "Verify Account"
 msgstr "אמת את החשבון שלך"
 
-#: enterlink/forms.py:14 enterlink/models.py:13
+#: enterlink/forms.py:15 enterlink/models.py:13
 msgid "Anonymous Tip"
 msgstr "עצה אנונימית"
 
-#: enterlink/forms.py:14 enterlink/models.py:13
+#: enterlink/forms.py:15 enterlink/models.py:13
 msgid "Investment Inquiries"
 msgstr "שאילתות השקעה"
 
-#: enterlink/forms.py:14 enterlink/forms.py:75 enterlink/models.py:13
+#: enterlink/forms.py:15 enterlink/forms.py:76 enterlink/models.py:13
 #: enterlink/models.py:68
 msgid "Other"
 msgstr "אחר"
 
-#: enterlink/forms.py:23
+#: enterlink/forms.py:24
 msgid "Search by Entering a Link"
 msgstr "חיפוש על-ידי הזנת קישור"
 
-#: enterlink/forms.py:28
+#: enterlink/forms.py:29
 msgid ""
 "Describe the file briefly. A summary of the information found is best. Avoid "
 "simply repeating the page title."
@@ -101,19 +103,19 @@ msgstr ""
 "תאר את הקובץ בקצרה. מומלץ ביותר לכתוב סיכום של המידע הנמצא. אנא הימנע מחזרה "
 "על כותרת הדף."
 
-#: enterlink/forms.py:51
+#: enterlink/forms.py:52
 msgid "File type not allowed."
 msgstr "סוג הקובץ אינו מורשה."
 
-#: enterlink/forms.py:57
+#: enterlink/forms.py:58
 msgid "Please ."
 msgstr "בבקשה ‫.‬"
 
-#: enterlink/forms.py:58
+#: enterlink/forms.py:59
 msgid "Enter a URL"
 msgstr "הכנס כתובת URL"
 
-#: enterlink/forms.py:60
+#: enterlink/forms.py:61
 msgid ""
 "Describe the URL briefly. A summary of the information found is best. Avoid "
 "simply repeating the page title."
@@ -121,73 +123,73 @@ msgstr ""
 "תאר את כתובת ה-URL בקצרה. מומלץ ביותר לכתוב סיכום של המידע הנמצא. אנא הימנע "
 "מחזרה על  כותרת הדף."
 
-#: enterlink/forms.py:64 templates/enterlink/edit_ajax_addinfobox.html:29
+#: enterlink/forms.py:65 templates/enterlink/edit_ajax_addinfobox.html:29
 msgid "Enter type (e.g. Occupation)"
 msgstr "הזן סוג (לדוגמא‫,‬ עיסוק)"
 
-#: enterlink/forms.py:65 templates/enterlink/edit_ajax_addinfobox.html:29
+#: enterlink/forms.py:66 templates/enterlink/edit_ajax_addinfobox.html:29
 msgid "Enter value (e.g. CEO)"
 msgstr "הזן ערך (לדוגמא, מנכ׳׳ל)"
 
-#: enterlink/forms.py:70 enterlink/models.py:68
+#: enterlink/forms.py:71 enterlink/models.py:68
 msgid "Person"
 msgstr "אדם"
 
-#: enterlink/forms.py:70 enterlink/models.py:68
+#: enterlink/forms.py:71 enterlink/models.py:68
 msgid "Place/Location"
 msgstr "מיקום"
 
-#: enterlink/forms.py:71 enterlink/models.py:68
+#: enterlink/forms.py:72 enterlink/models.py:68
 msgid "Organization/Company/Institution"
 msgstr "ארגון/חברה/מוסד"
 
-#: enterlink/forms.py:71 enterlink/models.py:68
+#: enterlink/forms.py:72 enterlink/models.py:68
 msgid "Event"
 msgstr "אירוע"
 
-#: enterlink/forms.py:72 enterlink/models.py:68
+#: enterlink/forms.py:73 enterlink/models.py:68
 msgid "List/Ranking"
 msgstr "רשימה/דירוג"
 
-#: enterlink/forms.py:72 enterlink/models.py:68
+#: enterlink/forms.py:73 enterlink/models.py:68
 msgid "Product/Merchandise"
 msgstr "מוצר/סחורה"
 
-#: enterlink/forms.py:73 enterlink/models.py:68
+#: enterlink/forms.py:74 enterlink/models.py:68
 msgid "Electronics/Software"
 msgstr "אלקטרוניקה/תוכנה"
 
-#: enterlink/forms.py:73 enterlink/models.py:68
+#: enterlink/forms.py:74 enterlink/models.py:68
 msgid "Medical/Biology"
 msgstr "רפואה/ביולוגיה"
 
-#: enterlink/forms.py:74 enterlink/models.py:68
+#: enterlink/forms.py:75 enterlink/models.py:68
 msgid "Creative Work/Art"
 msgstr "יצירה/אמנות"
 
-#: enterlink/forms.py:75 enterlink/models.py:68
+#: enterlink/forms.py:76 enterlink/models.py:68
 msgid "Science/Academia/Humanities"
 msgstr "מדע/אקדמיה/מדעי הרוח"
 
-#: enterlink/view_functions.py:140
+#: enterlink/view_functions.py:150
 msgid "Images & Videos"
 msgstr "תמונות & סרטונים"
 
-#: enterlink/view_functions.py:143
+#: enterlink/view_functions.py:153
 msgid "References"
 msgstr "הפניות"
 
-#: enterlink/view_functions.py:150
+#: enterlink/view_functions.py:160
 #: templates/enterlink/template_blockchain_styled_amp.html:318
-#: templates/enterlink/template_blockchain_styled_desktop.html:511
+#: templates/enterlink/template_blockchain_styled_desktop.html:518
 msgid "See Also"
 msgstr "ראה גם"
 
-#: enterlink/view_functions.py:994
+#: enterlink/view_functions.py:1103
 msgid "Wiki and references for"
 msgstr "וויקי והפניות ל"
 
-#: enterlink/view_functions.py:995
+#: enterlink/view_functions.py:1104
 msgid "You can edit something on this wiki now!"
 msgstr "אתה יכול לערוך משהו בוויקי הזה עכשיו!"
 
@@ -256,8 +258,8 @@ msgstr ""
 #: templates/enterlink/ajax_media_gallery_singlet.html:19
 #: templates/enterlink/ajaxresults.html:104
 #: templates/enterlink/hoverlink_iframe_blockchain.html:94
-#: templates/enterlink/template_blockchain_styled_desktop.html:400
-#: templates/enterlink/template_blockchain_styled_desktop.html:423
+#: templates/enterlink/template_blockchain_styled_desktop.html:407
+#: templates/enterlink/template_blockchain_styled_desktop.html:430
 #: templates/enterlink/template_photos_amp_json_blockchain.html:79
 msgid "Your browser does not support HTML5 video."
 msgstr "הדפדפן שלך אינו תומך בסרטוני HTML5"
@@ -282,18 +284,20 @@ msgstr "לחץ להוספת קישור או קובץ חדש לרשימה זו"
 msgid "Or click an existing link below to add it to the article"
 msgstr "לחלופין, לחץ על קישור קיים להלן כדי להוסיפו למאמר"
 
-#: templates/enterlink/ajaxresults.html:135
-#: templates/enterlink/ajaxresults.html:192
-#: templates/enterlink/template_blockchain_styled_desktop.html:157
+#: templates/enterlink/ajaxresults.html:142
+#: templates/enterlink/ajaxresults.html:193
+#: templates/enterlink/ajaxresults.html:230
+#: templates/enterlink/template_blockchain_styled_desktop.html:160
 msgid "Views"
 msgstr "צפיות"
 
-#: templates/enterlink/ajaxresults.html:157
+#: templates/enterlink/ajaxresults.html:165
 #: templates/enterlink/hovereditor_ajax.html:74
 msgid "IQ"
 msgstr "IQ"
 
-#: templates/enterlink/ajaxresults.html:175
+#: templates/enterlink/ajaxresults.html:176
+#: templates/enterlink/ajaxresults.html:213
 msgid "page(s) have this link"
 msgstr "לעמוד‫/‬ים יש קישור זה"
 
@@ -323,10 +327,8 @@ msgstr "Everipedia, האנציקלופדיה של הכל"
 
 #: templates/enterlink/brainpowermgmt.html:101
 #: templates/enterlink/rewardsmgmt.html:123
-#: templates/enterlink/template_blockchain_styled_desktop.html:688
-#: templates/enterlink/voting.html:200
-#, fuzzy
-#| msgid "Please ."
+#: templates/enterlink/template_blockchain_styled_desktop.html:695
+#: templates/enterlink/voting.html:194
 msgid "Please wait"
 msgstr "בבקשה ‫.‬"
 
@@ -359,7 +361,7 @@ msgstr ""
 
 #: templates/enterlink/brainpowermgmt.html:119
 msgid ""
-"Every edit proposal requires a minimum of 10 Brainpower at this time, in "
+"Every edit proposal requires a minimum of 50 Brainpower at this time, in "
 "order to prevent spam and poor-quality edits."
 msgstr ""
 "כל הצעת עריכה דורשת לפחות 10 כוח מוח בשלב זה, כדי למנוע ספאם ועריכות באיכות "
@@ -419,9 +421,9 @@ msgstr ".תודה, הודעתך התקבלה. נגיב בקרוב"
 msgid "Send"
 msgstr "שלח"
 
-#: templates/enterlink/dropzone.html:140 templates/enterlink/edit.html:125
-#: templates/enterlink/edit.html:134 templates/enterlink/edit.html:143
-#: templates/enterlink/edit.html:153 templates/enterlink/edit.html:162
+#: templates/enterlink/dropzone.html:140 templates/enterlink/edit.html:131
+#: templates/enterlink/edit.html:140 templates/enterlink/edit.html:149
+#: templates/enterlink/edit.html:159 templates/enterlink/edit.html:168
 msgid "OK"
 msgstr "אישור"
 
@@ -430,31 +432,29 @@ msgid "Enter a caption for the main image of the page."
 msgstr "הזינו תיאור לתמונה הראשית של העמוד."
 
 #: templates/enterlink/edit.html:64
-#, fuzzy
-#| msgid "Loading.."
 msgid "Loading"
 msgstr "‫..‬טוען"
 
-#: templates/enterlink/edit.html:103
+#: templates/enterlink/edit.html:109
 msgid "Please enter the destination page you wish to merge this one into"
 msgstr "אנא הכנס את עמוד היעד שברצונך למזג עם עמוד זה"
 
-#: templates/enterlink/edit.html:104 templates/enterlink/search-iframe.html:122
+#: templates/enterlink/edit.html:110 templates/enterlink/search-iframe.html:122
 #: templates/enterlink/search.html:27
 msgid "Search Everipedia"
 msgstr "חפש ב‫-‬ Everipedia"
 
-#: templates/enterlink/edit.html:108
+#: templates/enterlink/edit.html:114
 msgid "Merge Page"
 msgstr "מיזוג עמוד"
 
-#: templates/enterlink/edit.html:115 templates/enterlink/edit.html:123
-#: templates/enterlink/edit.html:132 templates/enterlink/edit.html:141
-#: templates/enterlink/edit.html:150 templates/enterlink/edit.html:160
+#: templates/enterlink/edit.html:121 templates/enterlink/edit.html:129
+#: templates/enterlink/edit.html:138 templates/enterlink/edit.html:147
+#: templates/enterlink/edit.html:156 templates/enterlink/edit.html:166
 msgid "Hey there scholar!"
 msgstr "היי, מלומד‫/‬ת‫!‬"
 
-#: templates/enterlink/edit.html:116
+#: templates/enterlink/edit.html:122
 msgid ""
 "Looks like you have been editing for a while. You should take a moment to "
 "save your work before continuing!"
@@ -462,7 +462,7 @@ msgstr ""
 ". נראה שאת/ה עורך/ת כבר זמן מה. מומלץ שתעצור/י לרגע לשמור את עבודתך לפני "
 "שתמשיך/י!"
 
-#: templates/enterlink/edit.html:124
+#: templates/enterlink/edit.html:130
 msgid ""
 "Looks like you are using first-person! (ex: Our product, I am, We are, You "
 "should). Everipedia is a neutral encyclopedia written in third-person tense "
@@ -472,16 +472,16 @@ msgstr ""
 "Everipedia היא אנציקלופדיה ניטראלית הנכתבת בנטייה של גוף שלישי (לדוגמא: זה, "
 "הם, החברה יוצרת). כאן זה לא פייסבוק!!"
 
-#: templates/enterlink/edit.html:133
+#: templates/enterlink/edit.html:139
 msgid "Please enter a title for the page."
 msgstr "יש להזין כותרת לדף."
 
-#: templates/enterlink/edit.html:142
+#: templates/enterlink/edit.html:148
 msgid ""
 "Please write something for the article section. Make sure to use citations."
 msgstr "יש לכתוב דבר מה עבור הפרק במאמר. ודא‫/‬י שאת‫/‬ה משתמש‫/‬ת באזכורים."
 
-#: templates/enterlink/edit.html:151
+#: templates/enterlink/edit.html:157
 msgid ""
 "Hello! This page needs citations (also known as footnotes, references, "
 "sources) before it can be saved. Add the links you're using as sources with "
@@ -491,15 +491,15 @@ msgstr ""
 "לשמור אותו. ניתן להוסיף את הקישורים שתשתמשו בהם כמקורות באמצעות לחיצה על "
 "כפתור ״אזכור״ שלעיל."
 
-#: templates/enterlink/edit.html:152
+#: templates/enterlink/edit.html:158
 msgid "Join our official Facebook group if you need help with it!:"
 msgstr "הצטרפו לקבוצה הרשמית שלנו בפייסבוק אם אתם צריכים עזרה עם זה‫!:‬"
 
-#: templates/enterlink/edit.html:152
+#: templates/enterlink/edit.html:158
 msgid "- we will hook you up. It's not hard!"
 msgstr "‫-‬ אנחנו נסדר לך משהו‫.‬ זה לא קשה‫!‬"
 
-#: templates/enterlink/edit.html:161
+#: templates/enterlink/edit.html:167
 msgid ""
 "Please cite the link(s) you just added into the main article body. First "
 "click at the end of the sentence or paragraph you want to cite, then click "
@@ -526,7 +526,8 @@ msgstr "הוסף פריט לתיבת המידע"
 
 #: templates/enterlink/edit_ajax_addinfobox.html:26
 #: templates/enterlink/edit_ajax_addlink.html:26
-#: templates/enterlink/edit_ajax_editpagemeta.html:15
+#: templates/enterlink/edit_ajax_editpagemeta.html:16
+#: templates/enterlink/edit_ajax_merge.html:19
 #: templates/enterlink/edit_ajax_page_photo.html:4
 msgid "Close"
 msgstr "סגור"
@@ -567,6 +568,22 @@ msgstr "בחר את נושא העמוד"
 msgid "Remove page"
 msgstr "מחיקת העמוד"
 
+#: templates/enterlink/edit_ajax_merge.html:12
+msgid "Merge this page into:"
+msgstr "שיתוף דף זה"
+
+#: templates/enterlink/edit_ajax_merge.html:13
+#: templates/enterlink/headers/desktop-navbar-index.html:29
+#: templates/enterlink/headers/desktop-navbar.html:43
+#: templates/enterlink/headers/index_header.html:124
+#: templates/enterlink/search.html:7
+msgid "Search"
+msgstr "חיפוש"
+
+#: templates/enterlink/edit_ajax_merge.html:17
+msgid "Merge"
+msgstr "מיזוג עמוד"
+
 #: templates/enterlink/editing-disabled.html:7
 msgid "Editing existing pages temporarily disabled"
 msgstr "לא ניתן לערוך עמודים קיימים באופן זמני"
@@ -580,25 +597,25 @@ msgid "Everipedia Editors"
 msgstr "עורכי Everipedia"
 
 #: templates/enterlink/editors.html:92
-#: templates/enterlink/recent-activity.html:106
+#: templates/enterlink/recent-activity.html:119
 #: templates/enterlink/search.html:89
 msgid "Previous"
 msgstr "הקודם"
 
 #: templates/enterlink/editors.html:96
-#: templates/enterlink/recent-activity.html:110
+#: templates/enterlink/recent-activity.html:123
 #: templates/enterlink/search.html:93
 msgid "Page"
 msgstr "עמוד"
 
 #: templates/enterlink/editors.html:96
-#: templates/enterlink/recent-activity.html:110
+#: templates/enterlink/recent-activity.html:123
 #: templates/enterlink/search.html:93
 msgid "of"
 msgstr "של"
 
 #: templates/enterlink/editors.html:100
-#: templates/enterlink/recent-activity.html:114
+#: templates/enterlink/recent-activity.html:127
 #: templates/enterlink/search.html:97
 msgid "Next"
 msgstr "הבא"
@@ -607,18 +624,18 @@ msgstr "הבא"
 msgid "Page not found!"
 msgstr "הדף לא נמצא‫!‬"
 
-#: templates/enterlink/error.html:195
+#: templates/enterlink/error.html:194
 msgid "Page not found"
 msgstr "הדף לא נמצא"
 
-#: templates/enterlink/error.html:197
+#: templates/enterlink/error.html:196
 msgid "In The News"
 msgstr "בחדשות"
 
-#: templates/enterlink/error.html:198
-#: templates/enterlink/headers/header_dropdown.html:27
+#: templates/enterlink/error.html:197
+#: templates/enterlink/headers/header_dropdown.html:28
 #: templates/enterlink/recent-activity.html:7
-#: templates/enterlink/recent-activity.html:76
+#: templates/enterlink/recent-activity.html:84
 msgid "Recent Activity"
 msgstr "פעילות אחרונה"
 
@@ -643,11 +660,11 @@ msgstr "המרות נתמכות"
 msgid "The following exchanges indicated that they will support the IQ airdrop"
 msgstr "ההמרות הבאות העידו כי יתמכו בצניחת ה‫-‬IQ"
 
-#: templates/enterlink/exchange-listings.html:142
+#: templates/enterlink/exchange-listings.html:149
 msgid "Supported Wallets"
 msgstr "ארנקים נתמכים"
 
-#: templates/enterlink/exchange-listings.html:184
+#: templates/enterlink/exchange-listings.html:198
 msgid "Token Pockets"
 msgstr "כיסי אסימונים"
 
@@ -692,14 +709,14 @@ msgstr "תנאים"
 #: templates/enterlink/footers/index_footer.html:28
 #: templates/enterlink/footers/mobile_footer.html:141
 #: templates/enterlink/headers/header_dropdown.html:7
-#: templates/enterlink/headers/header_dropdown.html:28
+#: templates/enterlink/headers/header_dropdown.html:29
 #: templates/enterlink/headers/index_header.html:128
 #: templates/enterlink/headers/index_header.html:153
 #: templates/enterlink/headers/index_header.html:157
 #: templates/enterlink/headers/mobile-navbar.html:98
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:138
 #: templates/enterlink/template_blockchain_styled_amp.html:519
-#: templates/enterlink/template_blockchain_styled_amp.html:594
+#: templates/enterlink/template_blockchain_styled_amp.html:597
 msgid "Forum"
 msgstr "פורום"
 
@@ -709,42 +726,41 @@ msgstr "פורום"
 #: templates/enterlink/footers/index_footer.html:29
 #: templates/enterlink/footers/mobile_footer.html:144
 #: templates/enterlink/headers/header_dropdown.html:8
-#: templates/enterlink/headers/header_dropdown.html:30
+#: templates/enterlink/headers/header_dropdown.html:31
 #: templates/enterlink/template_blockchain_styled_amp.html:521
 msgid "Get IQ"
 msgstr "השגת IQ"
 
-#: templates/enterlink/footers/desktop_footer.html:30
-#: templates/enterlink/footers/footer_no_extras.html:31
-#: templates/enterlink/footers/mobile_footer.html:164
-#: templates/enterlink/template_blockchain_styled_amp.html:545
+#: templates/enterlink/footers/desktop_footer.html:33
+#: templates/enterlink/footers/footer_no_extras.html:34
+#: templates/enterlink/footers/mobile_footer.html:167
+#: templates/enterlink/template_blockchain_styled_amp.html:548
 msgid "Powered by"
 msgstr "מופעל עי"
 
-#: templates/enterlink/footers/desktop_footer.html:35
-#: templates/enterlink/footers/footer_no_extras.html:36
-#: templates/enterlink/footers/mobile_footer.html:168
-#: templates/enterlink/template_blockchain_styled_amp.html:549
+#: templates/enterlink/footers/desktop_footer.html:38
+#: templates/enterlink/footers/footer_no_extras.html:39
+#: templates/enterlink/footers/mobile_footer.html:171
+#: templates/enterlink/template_blockchain_styled_amp.html:552
 msgid "API by"
 msgstr "API באמצעות"
 
-#: templates/enterlink/footers/desktop_footer.html:40
-#: templates/enterlink/footers/footer_no_extras.html:41
-#: templates/enterlink/footers/mobile_footer.html:172
-#: templates/enterlink/template_blockchain_styled_amp.html:553
+#: templates/enterlink/footers/desktop_footer.html:43
+#: templates/enterlink/footers/footer_no_extras.html:44
+#: templates/enterlink/footers/mobile_footer.html:175
+#: templates/enterlink/template_blockchain_styled_amp.html:556
 msgid "and"
 msgstr "ו"
 
-#: templates/enterlink/footers/desktop_footer.html:48
-#: templates/enterlink/footers/footer_no_extras.html:49
+#: templates/enterlink/footers/desktop_footer.html:51
+#: templates/enterlink/footers/footer_no_extras.html:52
 #: templates/enterlink/headers/desktop-navbar-index.html:6
 #: templates/enterlink/headers/index_header.html:93
-#: templates/enterlink/language_selector.html:80
+#: templates/enterlink/language_selector.html:79
 msgid "Select language"
 msgstr "בחירת שפה"
 
 #: templates/enterlink/footers/forum_footer.html:6
-#: templates/enterlink/footers/pm_footer.html:6
 msgid "Enter a title for the thread"
 msgstr "הזן כותרת עבור השרשור"
 
@@ -753,7 +769,6 @@ msgid "Enter your post here"
 msgstr "הזן את הפוסט שלך כאן"
 
 #: templates/enterlink/footers/forum_footer.html:8
-#: templates/enterlink/footers/pm_footer.html:7
 msgid "Create New Thread"
 msgstr "יצירת שרשור חדש"
 
@@ -792,32 +807,30 @@ msgstr "Everipedia ® הוא סימן מסחרי של Everipedia International"
 msgid "Chat"
 msgstr "צ'אט"
 
-#: templates/enterlink/headers/desktop-navbar-index.html:29
-#: templates/enterlink/headers/desktop-navbar.html:38
-#: templates/enterlink/headers/index_header.html:124
-#: templates/enterlink/search.html:7
-msgid "Search"
-msgstr "חיפוש"
-
 #: templates/enterlink/headers/desktop-navbar-index.html:47
-#: templates/enterlink/headers/desktop-navbar.html:18
+#: templates/enterlink/headers/desktop-navbar.html:16
 #: templates/enterlink/index.html:62
 msgid "Paste a link or enter a title"
 msgstr "הדבק קישור או הזן כותרת"
 
-#: templates/enterlink/headers/desktop-navbar-index.html:48
-#: templates/enterlink/headers/desktop-navbar-index.html:58
-#: templates/enterlink/headers/desktop-navbar.html:19
-#: templates/enterlink/headers/desktop-navbar.html:56
-#: templates/enterlink/headers/desktop-navbar.html:66
-#: templates/enterlink/headers/header_dropdown.html:26
-#: templates/enterlink/index.html:63
+#: templates/enterlink/headers/desktop-navbar-index.html:50
+#: templates/enterlink/search-iframe.html:127
+msgid "Searching..."
+msgstr "מחפש‫...‬"
+
+#: templates/enterlink/headers/desktop-navbar-index.html:55
+#: templates/enterlink/headers/desktop-navbar-index.html:65
+#: templates/enterlink/headers/desktop-navbar.html:24
+#: templates/enterlink/headers/desktop-navbar.html:61
+#: templates/enterlink/headers/desktop-navbar.html:71
+#: templates/enterlink/headers/header_dropdown.html:27
+#: templates/enterlink/index.html:66
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:50
 msgid "Create Page"
 msgstr "יצירת דף"
 
-#: templates/enterlink/headers/desktop-navbar-index.html:64
-#: templates/enterlink/headers/desktop-navbar.html:72
+#: templates/enterlink/headers/desktop-navbar-index.html:71
+#: templates/enterlink/headers/desktop-navbar.html:77
 #: templates/enterlink/headers/header_dropdown.html:25
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:44
 #: templates/enterlink/notifications/index.html:67
@@ -825,40 +838,50 @@ msgstr "יצירת דף"
 msgid "Messages"
 msgstr "הודעות"
 
-#: templates/enterlink/headers/desktop-navbar-index.html:70
-#: templates/enterlink/headers/desktop-navbar.html:78
+#: templates/enterlink/headers/desktop-navbar-index.html:77
+#: templates/enterlink/headers/desktop-navbar.html:83
 #: templates/enterlink/headers/header_dropdown.html:24
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:38
 #: templates/enterlink/notifications/index.html:96
 msgid "Notifications"
 msgstr "התראות"
 
-#: templates/enterlink/headers/desktop-navbar-index.html:81
-#: templates/enterlink/headers/desktop-navbar.html:95
+#: templates/enterlink/headers/desktop-navbar-index.html:88
+#: templates/enterlink/headers/desktop-navbar.html:105
 msgid "Your IQ Score"
 msgstr "ציון ה‫-‬IQ שלך"
 
-#: templates/enterlink/headers/desktop-navbar.html:28
+#: templates/enterlink/headers/desktop-navbar.html:19
+#, fuzzy
+#| msgid "Searching..."
+msgid "Searching for duplicates..."
+msgstr "מחפש‫...‬"
+
+#: templates/enterlink/headers/desktop-navbar.html:33
 msgid "Table of contents"
 msgstr "תוכן עניינים"
 
-#: templates/enterlink/headers/desktop-navbar.html:28
+#: templates/enterlink/headers/desktop-navbar.html:33
 #: templates/enterlink/template_blockchain_styled_amp.html:102
 msgid "Table of contents and facts for this wiki"
 msgstr "תוכן העניינים והעובדות עבור ויקי זה"
 
-#: templates/enterlink/headers/desktop-navbar.html:61
+#: templates/enterlink/headers/desktop-navbar.html:66
 #: templates/enterlink/headers/mobile-navbar.html:110
-#: templates/enterlink/template_blockchain_styled_amp.html:600
+#: templates/enterlink/template_blockchain_styled_amp.html:603
 msgid "Feed"
 msgstr "פיד"
 
-#: templates/enterlink/headers/desktop-navbar.html:86
+#: templates/enterlink/headers/desktop-navbar.html:91
 msgid "Please log in with Scatter"
 msgstr "יש להתחבר עם Scatter"
 
+#: templates/enterlink/headers/desktop-navbar.html:95
+msgid "Menu"
+msgstr ""
+
 #: templates/enterlink/headers/header_dropdown.html:12
-#: templates/enterlink/headers/header_dropdown.html:34
+#: templates/enterlink/headers/header_dropdown.html:35
 #: templates/enterlink/notifications/index.html:100
 #: templates/enterlink/notifications/index.html:105
 msgid "Log out"
@@ -868,12 +891,16 @@ msgstr "התנתק"
 msgid "Claim Rewards"
 msgstr ""
 
-#: templates/enterlink/headers/header_dropdown.html:29
+#: templates/enterlink/headers/header_dropdown.html:26
+msgid "Get Scatter"
+msgstr "טוען את Scatter"
+
+#: templates/enterlink/headers/header_dropdown.html:30
 #: templates/enterlink/headers/mobile-navbar.html:92
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:67
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:90
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:144
-#: templates/enterlink/template_blockchain_styled_amp.html:587
+#: templates/enterlink/template_blockchain_styled_amp.html:590
 msgid "Help"
 msgstr "עזרה"
 
@@ -905,7 +932,7 @@ msgstr "התחבר"
 #: templates/enterlink/headers/index_header.html:154
 #: templates/enterlink/headers/index_header.html:158
 #: templates/enterlink/headers/mobile-navbar.html:116
-#: templates/enterlink/template_blockchain_styled_amp.html:606
+#: templates/enterlink/template_blockchain_styled_amp.html:609
 msgid "Language"
 msgstr "שפה"
 
@@ -955,13 +982,13 @@ msgstr "קישור ישיר"
 
 #: templates/enterlink/hoverlink_iframe_blockchain.html:64
 #: templates/enterlink/hoverlink_iframe_blockchain.html:65
-#: templates/enterlink/template_blockchain_styled_desktop.html:185
-#: templates/enterlink/template_blockchain_styled_desktop.html:186
+#: templates/enterlink/template_blockchain_styled_desktop.html:188
+#: templates/enterlink/template_blockchain_styled_desktop.html:189
 msgid "Share"
 msgstr "שיתוף"
 
 #: templates/enterlink/hoverlink_iframe_blockchain.html:68
-#: templates/enterlink/template_blockchain_styled_desktop.html:192
+#: templates/enterlink/template_blockchain_styled_desktop.html:195
 msgid "Copy URL"
 msgstr "העתק כתובת"
 
@@ -980,7 +1007,7 @@ msgid ""
 msgstr "דף זה נמצא כעת בתהליך יצירה על ידי משתמש אחר. אנא חזרו מאוחר יותר‫!‬"
 
 #: templates/enterlink/index.html:39
-msgid "The world's first encyclopedia on the blockchain"
+msgid "The world's largest encyclopedia on the blockchain"
 msgstr "אנציקלופדיית הבלוקצ׳יין הראשונה בעולם"
 
 #: templates/enterlink/index.html:40
@@ -996,23 +1023,15 @@ msgstr ""
 msgid "Learn more"
 msgstr "קרא עוד"
 
-#: templates/enterlink/index.html:76
+#: templates/enterlink/index.html:79
 msgid "As Seen In"
 msgstr ""
 
-#: templates/enterlink/index.html:97
+#: templates/enterlink/index.html:100
 msgid "An Encyclopedia for the modern age"
 msgstr "אנציקלופדיה לעידן המודרני"
 
-#: templates/enterlink/index.html:101
-#, fuzzy
-#| msgid ""
-#| "The Everipedia IQ blockchain provides a new paradigm change and knowledge "
-#| "economy to disrupt the old centralized internet knowledge encyclopedia "
-#| "model similar to Wikipedia. By creating a new incentive structure and a "
-#| "distributed backend hosted within a blockchain, the new Everipedia "
-#| "knowledge base will be able to improve upon all fundamental features of "
-#| "Wikipedia."
+#: templates/enterlink/index.html:104
 msgid ""
 "The Everipedia IQ blockchain provides a new paradigm change and knowledge "
 "economy to disrupt the old centralized internet knowledge encyclopedia model "
@@ -1025,21 +1044,21 @@ msgstr ""
 "מבנה ממריץ חדש וצד שרת מבוזר המתארח בתוך הבלוקצ׳יין, מאגר הידע החדש של "
 "Everipedia יוכל לשפר את כל המאפיינים הבסיסיים של ויקיפדיה. "
 
-#: templates/enterlink/index.html:109
+#: templates/enterlink/index.html:112
 msgid "Decentralized"
 msgstr "מבוזר"
 
-#: templates/enterlink/index.html:110
+#: templates/enterlink/index.html:113
 msgid ""
 "Articles are fetched using IPFS and EOS Storage. Majority of IQ being "
 "distributed during the airdrop."
 msgstr "המאמרים מונחתים באמצעות אחסון IPFS ו-EOS. רוב ה‫-‬IQ מופץ במהלך ההנחתה."
 
-#: templates/enterlink/index.html:114
+#: templates/enterlink/index.html:117
 msgid "Democratic"
 msgstr "דמוקרטי"
 
-#: templates/enterlink/index.html:115
+#: templates/enterlink/index.html:118
 msgid ""
 "Proof of Stake (PoS) model allows for voting to change and upgrade the IQ "
 "network as it grows. Also will facilitate batch imports of new content with "
@@ -1048,21 +1067,21 @@ msgstr ""
 "מודל הוכחת סיכון (PoS) מאפשר הצבעה על שינוי ושדרוג רשת IQ בעודה צומחת. הוא "
 "גם מאפשר יבוא מרוכז של תוכן חדש ללא עמלות."
 
-#: templates/enterlink/index.html:119
+#: templates/enterlink/index.html:122
 msgid "Censorship Resistant"
 msgstr "התנגדות לצנזורה"
 
-#: templates/enterlink/index.html:120
+#: templates/enterlink/index.html:123
 msgid ""
 "Live and permanent edits of content on the blockchain beyond the control of "
 "a central authority."
 msgstr "עריכות תוכן קבועות או ״בלייב״ בבלוקצ׳יין מעבר לשליטת הרשות המרכזית‫.‬"
 
-#: templates/enterlink/index.html:124
+#: templates/enterlink/index.html:127
 msgid "Financial Incentive"
 msgstr "תמריץ כספי"
 
-#: templates/enterlink/index.html:125
+#: templates/enterlink/index.html:128
 msgid ""
 "All holders of IQ will be incentivized to create quality, neutral content "
 "and to work together in building the reputation of the network."
@@ -1070,15 +1089,15 @@ msgstr ""
 "כל בעלי ה-IQ יומרצו ליצור תוכן ניטרלי ואיכותי, ולעבוד יחד בבניית המוניטין של "
 "הרשת."
 
-#: templates/enterlink/index.html:136
+#: templates/enterlink/index.html:139
 msgid "Become an editor today and start creating your own wiki articles."
 msgstr "הפכו לעורכים עוד היום‫,‬ והתחילו ליצור ערכי וויקי משלכם‫.‬"
 
-#: templates/enterlink/index.html:139
+#: templates/enterlink/index.html:142
 msgid "Open Community"
 msgstr "קהילה פתוחה"
 
-#: templates/enterlink/index.html:140
+#: templates/enterlink/index.html:143
 msgid ""
 "Our vibrant community is open and welcoming to people from all backgrounds. "
 "Our guidelines and policies are based on common sense rather than strict "
@@ -1087,11 +1106,11 @@ msgstr ""
 "הקהילה התוססת שלנו פתוחה ומקבלת אנשים בעלי רקעים שונים. ההנחיות והמדיניות "
 "שלנו מבוססות על השכל הישר ולא על ביורוקרטיה קפדנית."
 
-#: templates/enterlink/index.html:142
+#: templates/enterlink/index.html:145
 msgid "Redesigned for the modern age"
 msgstr "עוצב מחדש עבור העידן המודרני"
 
-#: templates/enterlink/index.html:143
+#: templates/enterlink/index.html:146
 msgid ""
 "Everipedia is an encyclopedia modernized and re-designed for the twenty-"
 "first century. Our editing interface makes creating and editing wiki's as "
@@ -1100,34 +1119,23 @@ msgstr ""
 "Everipedia היא אנציקלופדיה מודרנית שעוצבה מחדש עבור המאה ה-21. ממשק העריכה "
 "שלנו הופך את יצירת ועריכת ערכי הוויקי לקלה ממש כמו שימוש בפייסבוק."
 
-#: templates/enterlink/index.html:152
+#: templates/enterlink/index.html:155
 msgid "Follow us on Telegram"
 msgstr "עקבו אחרינו בטלגרם"
 
-#: templates/enterlink/index.html:165
-#, fuzzy
-#| msgid "Led by the Founders of Wikipedia and Genius.com"
+#: templates/enterlink/index.html:168
 msgid "Led by the Founders of Wikipedia and Genius.com"
 msgstr "בראשות מייסד ויקיפדיה ו‫-‬Genius.com"
 
-#: templates/enterlink/index.html:168
-#, fuzzy
-#| msgid ""
-#| "Everipedia is being lead by a team with extensive experience and "
-#| "knowledge both in the online knowledge space as well as the blockchain "
-#| "industry. The executive team is made up of several prominent individuals "
-#| "in the industry, the Co-Founder of Wikipedia, Larry Sanger, the founder "
-#| "of Genius.com, Mahbod Moghadam, and several others. Academic credentials "
-#| "includes UCLA, Stanford, Yale & Columbia, covering nationalities from "
-#| "America, Sweden, Norway and Italy. "
+#: templates/enterlink/index.html:171
 msgid ""
 "Everipedia is being led by a team with extensive experience and knowledge "
 "both in the online knowledge space as well as the blockchain industry. The "
 "executive team is made up of several prominent individuals in the industry, "
 "the Co-Founder of Wikipedia, Larry Sanger, the founder of Genius.com, Mahbod "
 "Moghadam, and several others. Academic credentials includes UCLA, Stanford, "
-"Yale & Columbia, covering nationalities from America, Sweden, Norway and "
-"Italy. "
+"Yale & Columbia, covering nationalities from the United States, Sweden, "
+"Norway and Italy. "
 msgstr ""
 "Everipedia מובלת על ידי צוות עם ניסיון רב וידע הן במרחב הידע המקוון "
 "והןבתעשיית הבלוקצ׳יין. הצוות הניהולי מורכב ממספר אנשים בולטים בענף: לארי "
@@ -1135,7 +1143,7 @@ msgstr ""
 "התעודות האקדמיות ניתן למצוא את אוניברסיטת UCLA, סטנפורד, ייל וקולומביה, "
 "המכסות אזרחויות מאמריקה, שבדיה, נורבגיה ואיטליה."
 
-#: templates/enterlink/index.html:169
+#: templates/enterlink/index.html:172
 msgid "Executive Team"
 msgstr "צוות מנהלים"
 
@@ -1246,14 +1254,27 @@ msgstr "דף הבית"
 msgid "New message"
 msgstr "הודעה חדשה"
 
-#: templates/enterlink/recent-activity.html:87
+#: templates/enterlink/recent-activity.html:96
 msgid "by"
 msgstr "באמצעות"
 
+#: templates/enterlink/recent-activity.html:105
+#: templates/enterlink/template_blockchain_styled_desktop.html:183
+msgid "Vote"
+msgstr "הצבעה"
+
+#: templates/enterlink/recent-activity.html:106
+#: templates/enterlink/template_blockchain_styled_desktop.html:180
+#: templates/enterlink/voting_table_of_contents.html:12
+msgid "Edit"
+msgstr "עריכה"
+
+#: templates/enterlink/recent-activity.html:107
+msgid "View"
+msgstr "צפיות"
+
 #: templates/enterlink/rewardsmgmt.html:4
 #: templates/enterlink/rewardsmgmt.html:136
-#, fuzzy
-#| msgid "Brainpower Management"
 msgid "Rewards Management"
 msgstr "ניהול כוח מוח"
 
@@ -1279,8 +1300,6 @@ msgid "Finalized Time"
 msgstr ""
 
 #: templates/enterlink/rewardsmgmt.html:150
-#, fuzzy
-#| msgid "Voting Period"
 msgid "Period"
 msgstr "תקופת ההצבעה"
 
@@ -1289,14 +1308,8 @@ msgid "Redeem"
 msgstr ""
 
 #: templates/enterlink/rewardsmgmt.html:158
-#, fuzzy
-#| msgid "Password reset successful"
 msgid "Redeem successful"
 msgstr "איפוס הסיסמא הצליח"
-
-#: templates/enterlink/search-iframe.html:127
-msgid "Searching..."
-msgstr "מחפש‫...‬"
 
 #: templates/enterlink/search.html:44 templates/enterlink/search.html:54
 msgid "Can't find it below?"
@@ -1352,18 +1365,16 @@ msgid "Quick Biography"
 msgstr ""
 
 #: templates/enterlink/template_blockchain_styled_amp.html:243
-#, fuzzy
-#| msgid "Reference Links For This Wiki"
 msgid "Quick Facts For This Wiki"
 msgstr "קישורי תימוכין עבור וויקי זה"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:272
-#: templates/enterlink/template_blockchain_styled_desktop.html:346
+#: templates/enterlink/template_blockchain_styled_desktop.html:353
 msgid "Image & Video Gallery"
 msgstr "גלריית תמונות וסרטונים"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:274
-#: templates/enterlink/template_blockchain_styled_desktop.html:348
+#: templates/enterlink/template_blockchain_styled_desktop.html:355
 msgid "images, pictures, and videos"
 msgstr "תמונות‫,‬ צילומים וסרטונים"
 
@@ -1372,17 +1383,17 @@ msgid "Gallery"
 msgstr "גלרייה"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:295
-#: templates/enterlink/template_blockchain_styled_desktop.html:481
+#: templates/enterlink/template_blockchain_styled_desktop.html:488
 msgid "Reference Links For This Biography"
 msgstr "קישורי תימוכין לביוגרפיה הזו"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:297
-#: templates/enterlink/template_blockchain_styled_desktop.html:483
+#: templates/enterlink/template_blockchain_styled_desktop.html:490
 msgid "Reference Links For This Wiki"
 msgstr "קישורי תימוכין עבור וויקי זה"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:300
-#: templates/enterlink/template_blockchain_styled_desktop.html:486
+#: templates/enterlink/template_blockchain_styled_desktop.html:493
 msgid ""
 "Links to historical reviews, career / educational facts, and other "
 "encyclopedic information"
@@ -1390,12 +1401,12 @@ msgstr ""
 "קישורים לסקירות וקריירות היסטוריות או עובדות חינוכיות ומידע אנציקלופדי אחר"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:305
-#: templates/enterlink/template_blockchain_styled_desktop.html:492
+#: templates/enterlink/template_blockchain_styled_desktop.html:499
 msgid "All information for"
 msgstr "כל המידע עבור"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:305
-#: templates/enterlink/template_blockchain_styled_desktop.html:492
+#: templates/enterlink/template_blockchain_styled_desktop.html:499
 msgid ""
 "wiki comes from the below links. Any source is valid, including Twitter, "
 "Facebook, Instagram, and LinkedIn. Pictures, videos, biodata, and files "
@@ -1405,19 +1416,19 @@ msgstr ""
 "אינסטגרם, ולינקדאין. תמונות, סרטונים, קורות חיים וקבצים הקשורים ל"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:305
-#: templates/enterlink/template_blockchain_styled_desktop.html:492
+#: templates/enterlink/template_blockchain_styled_desktop.html:499
 msgid "are also acceptable encyclopedic sources."
 msgstr "הם גם מקורות אנציקלופדיים מקובלים."
 
 #: templates/enterlink/template_blockchain_styled_amp.html:320
-#: templates/enterlink/template_blockchain_styled_desktop.html:513
+#: templates/enterlink/template_blockchain_styled_desktop.html:520
 msgid ""
 "See related encyclopedia articles, biographies, reviews, and historical "
 "facts."
 msgstr "ראו ביוגרפיות, סקירות‫,‬ עובדות היסטוריות ומאמרים קשורים באנציקלופדיה."
 
 #: templates/enterlink/template_blockchain_styled_amp.html:324
-#: templates/enterlink/template_blockchain_styled_desktop.html:520
+#: templates/enterlink/template_blockchain_styled_desktop.html:527
 msgid "Other wiki pages related to"
 msgstr "דפי וויקי נוספים הקשורים ל"
 
@@ -1433,128 +1444,117 @@ msgstr "שונה לאחרונה"
 msgid "IPFS"
 msgstr "IPFS"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:640
+#: templates/enterlink/template_blockchain_styled_amp.html:643
 msgid "Top Page Editors"
 msgstr "עורכי הדף המובילים"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:660
+#: templates/enterlink/template_blockchain_styled_amp.html:663
 msgid "Share this page"
 msgstr "שיתוף דף זה"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:672
+#: templates/enterlink/template_blockchain_styled_amp.html:675
 msgid "DIRECT LINK"
 msgstr "קישור ישיר"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:677
-#: templates/enterlink/template_blockchain_styled_desktop.html:211
+#: templates/enterlink/template_blockchain_styled_amp.html:680
+#: templates/enterlink/template_blockchain_styled_desktop.html:214
 msgid "Suggested Hashtags"
 msgstr "תגיות מוצעות"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:711
-#: templates/enterlink/template_blockchain_styled_desktop.html:249
+#: templates/enterlink/template_blockchain_styled_amp.html:714
+#: templates/enterlink/template_blockchain_styled_desktop.html:252
 msgid "QR Code"
 msgstr "קוד QR"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:14
-#: templates/enterlink/template_blockchain_styled_desktop.html:19
+#: templates/enterlink/template_blockchain_styled_desktop.html:15
+#: templates/enterlink/template_blockchain_styled_desktop.html:20
 msgid "Bio"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:16
 #: templates/enterlink/template_blockchain_styled_desktop.html:17
-#: templates/enterlink/template_blockchain_styled_desktop.html:215
+#: templates/enterlink/template_blockchain_styled_desktop.html:18
+#: templates/enterlink/template_blockchain_styled_desktop.html:218
 msgid "bio"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:16
 #: templates/enterlink/template_blockchain_styled_desktop.html:17
-#: templates/enterlink/template_blockchain_styled_desktop.html:23
+#: templates/enterlink/template_blockchain_styled_desktop.html:18
 #: templates/enterlink/template_blockchain_styled_desktop.html:24
-#: templates/enterlink/template_blockchain_styled_desktop.html:30
+#: templates/enterlink/template_blockchain_styled_desktop.html:25
 #: templates/enterlink/template_blockchain_styled_desktop.html:31
-#: templates/enterlink/template_blockchain_styled_desktop.html:37
+#: templates/enterlink/template_blockchain_styled_desktop.html:32
 #: templates/enterlink/template_blockchain_styled_desktop.html:38
+#: templates/enterlink/template_blockchain_styled_desktop.html:39
 msgid "encylopedia"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:21
-#: templates/enterlink/template_blockchain_styled_desktop.html:26
-#: templates/enterlink/template_blockchain_styled_desktop.html:28
-#: templates/enterlink/template_blockchain_styled_desktop.html:33
+#: templates/enterlink/template_blockchain_styled_desktop.html:22
+#: templates/enterlink/template_blockchain_styled_desktop.html:27
+#: templates/enterlink/template_blockchain_styled_desktop.html:29
+#: templates/enterlink/template_blockchain_styled_desktop.html:34
 msgid "Review"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:23
 #: templates/enterlink/template_blockchain_styled_desktop.html:24
-#: templates/enterlink/template_blockchain_styled_desktop.html:30
+#: templates/enterlink/template_blockchain_styled_desktop.html:25
 #: templates/enterlink/template_blockchain_styled_desktop.html:31
-#: templates/enterlink/template_blockchain_styled_desktop.html:221
-#: templates/enterlink/template_blockchain_styled_desktop.html:227
-#: templates/enterlink/template_blockchain_styled_desktop.html:233
-msgid "review"
-msgstr ""
-
-#: templates/enterlink/template_blockchain_styled_desktop.html:30
-#: templates/enterlink/template_blockchain_styled_desktop.html:31
-#: templates/enterlink/template_blockchain_styled_desktop.html:222
-#: templates/enterlink/template_blockchain_styled_desktop.html:228
-#: templates/enterlink/template_blockchain_styled_desktop.html:234
-msgid "history"
-msgstr ""
-
-#: templates/enterlink/template_blockchain_styled_desktop.html:177
-#: templates/enterlink/voting_table_of_contents.html:12
-msgid "Edit"
-msgstr "עריכה"
-
-#: templates/enterlink/template_blockchain_styled_desktop.html:180
-msgid "Vote"
-msgstr "הצבעה"
-
-#: templates/enterlink/template_blockchain_styled_desktop.html:195
-msgid "Embed / Widget"
-msgstr "הטמעה ‫/‬ רכיב ווידג׳ט"
-
-#: templates/enterlink/template_blockchain_styled_desktop.html:214
-#: templates/enterlink/template_blockchain_styled_desktop.html:220
-#: templates/enterlink/template_blockchain_styled_desktop.html:226
-#: templates/enterlink/template_blockchain_styled_desktop.html:232
-msgid "wiki"
-msgstr ""
-
-#: templates/enterlink/template_blockchain_styled_desktop.html:216
-msgid "net worth"
-msgstr ""
-
-#: templates/enterlink/template_blockchain_styled_desktop.html:217
-#, fuzzy
-#| msgid "Page"
-msgid "age"
-msgstr "עמוד"
-
-#: templates/enterlink/template_blockchain_styled_desktop.html:218
-msgid "married"
-msgstr ""
-
-#: templates/enterlink/template_blockchain_styled_desktop.html:223
-msgid "sales"
-msgstr ""
-
+#: templates/enterlink/template_blockchain_styled_desktop.html:32
 #: templates/enterlink/template_blockchain_styled_desktop.html:224
 #: templates/enterlink/template_blockchain_styled_desktop.html:230
 #: templates/enterlink/template_blockchain_styled_desktop.html:236
+msgid "review"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:31
+#: templates/enterlink/template_blockchain_styled_desktop.html:32
+#: templates/enterlink/template_blockchain_styled_desktop.html:225
+#: templates/enterlink/template_blockchain_styled_desktop.html:231
+#: templates/enterlink/template_blockchain_styled_desktop.html:237
+msgid "history"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:198
+msgid "Embed / Widget"
+msgstr "הטמעה ‫/‬ רכיב ווידג׳ט"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:217
+#: templates/enterlink/template_blockchain_styled_desktop.html:223
+#: templates/enterlink/template_blockchain_styled_desktop.html:229
+#: templates/enterlink/template_blockchain_styled_desktop.html:235
+msgid "wiki"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:219
+msgid "net worth"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:220
+msgid "age"
+msgstr "עמוד"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:221
+msgid "married"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:226
+msgid "sales"
+msgstr ""
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:227
+#: templates/enterlink/template_blockchain_styled_desktop.html:233
+#: templates/enterlink/template_blockchain_styled_desktop.html:239
 msgid "facts"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:229
+#: templates/enterlink/template_blockchain_styled_desktop.html:232
 msgid "founders"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:235
+#: templates/enterlink/template_blockchain_styled_desktop.html:238
 msgid "encyclopedia"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:318
+#: templates/enterlink/template_blockchain_styled_desktop.html:325
 msgid "Profiles"
 msgstr "פרופילים"
 
@@ -1576,8 +1576,6 @@ msgid "beforehand"
 msgstr "מראש"
 
 #: templates/enterlink/transfer-iq.html:123
-#, fuzzy
-#| msgid "Send"
 msgid "Sender"
 msgstr "שלח"
 
@@ -1605,27 +1603,15 @@ msgstr "בדוק את ה‫-‬RAM‫,‬ CPU ורוחב הפס שלך ב‫-‬
 msgid "Voting"
 msgstr "הצבעה"
 
-#: templates/enterlink/votehistory.html:95
+#: templates/enterlink/votehistory.html:96
 msgid "Editing History"
 msgstr "היסטוריית הצבעות"
 
-#: templates/enterlink/voting.html:220
-msgid "Before"
-msgstr "לפני"
-
-#: templates/enterlink/voting.html:222
-msgid "After"
-msgstr "אחרי"
-
-#: templates/enterlink/voting.html:235
-#, fuzzy
-#| msgid "Reject"
+#: templates/enterlink/voting.html:225
 msgid "Rejectors"
 msgstr "דחה"
 
-#: templates/enterlink/voting.html:241
-#, fuzzy
-#| msgid "Approve"
+#: templates/enterlink/voting.html:231
 msgid "Approvers"
 msgstr "אשר"
 

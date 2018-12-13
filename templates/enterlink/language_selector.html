@@ -1,5 +1,5 @@
 {% load i18n %}
-<script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/jquery.js"></script>
+<script src="https://epcdn-vz.azureedge.net/static/js/jquery.js"></script>
 
 <style>
 
@@ -75,7 +75,6 @@
 
 </style>
 
-<body>
 <div class="language-selector-desktop">
     <h2 class="language-selector-header">{% trans 'Select language' %}</h2>
     <form action="{% url 'set_language' %}" method="post" class="language-post">
@@ -102,4 +101,3 @@
         document.getElementById("selected-language").src = "https://epcdn-vz.azureedge.net/static/images/flags/png/48/languages/" + $( "#language-selector" ).val() + ".png";
     </script>
 </div>
-</body>

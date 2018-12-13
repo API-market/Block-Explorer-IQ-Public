@@ -35,6 +35,12 @@ word-wrap: break-word;
 float:left
 }
 
+#blobBox_container .flagicon img:not(.geodot){
+float: none;
+position: relative;
+top: -1px;
+}
+
 #blobBox_container td {
 padding-left:7px!important;
 max-width:100%;
@@ -54,12 +60,17 @@ white-space:normal!important
 display: inline-block;
 }
 
+#blobBox_container #coordinates {
+display: none;
+}
+
+
 #blobBox_container tr th:not([colspan]) {
 	text-align: center !important;
 	padding: 3px 6px 4px 3px !important;
 	border-right: 0px dashed rgba(128,128,128,0.13);
 	font-weight: 600;
-	font-size: 14px;
+	font-size: 15px;
 }
 
 #blobBox_container tr th[colspan] {
@@ -89,7 +100,7 @@ max-width:100%;
 padding-top:3px!important;
 padding-bottom:3px!important;
 vertical-align:middle;
-font-size: 14px;
+font-size: 15px;
 color: #666;
 }
 

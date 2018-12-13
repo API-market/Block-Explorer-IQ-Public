@@ -1,8 +1,6 @@
 {% load i18n %}
 {% load humanize %}
 <header>
-	<script type="text/javascript" src="/static/js/BigInteger.js"></script>
-
     <div class="lightbox" data-featherlight-variant="search-featherlight" id="sl1">
         <div class="search-lb-ct">
             <div class="global-search" id="searchfield_index"  style="display:block;">
@@ -15,8 +13,15 @@
 			<form action="/create_page/" method="post" class="search" name="createpagefield" id="createpagefield">
 				{% csrf_token %}
 				<input type="hidden" value="1" name="create_page_flag" />
-				<input placeholder="{% trans 'Paste a link or enter a title' %}." name="SearchBox" id="CreateBox" autocomplete="off" type="text" value="" style="border:0px;">
-				<button type="submit" value="search" class="icon-search btn btn-md btn-default">{% trans 'Create Page' %}</button>
+				<input placeholder="{% trans 'Paste a link or enter a title' %}." name="CreateBox" id="CreateBox" autocomplete="off" type="text" value="" style="border:0px;">
+				<div id="AJAX-SpinBox">
+					<img class='loading-spinner' src='https://epcdn-vz.azureedge.net/static/images/loading.gif'>
+					<span class="spinner-label">{% trans 'Searching for duplicates...' %}</span>
+				</div>
+				<div id="createResult">
+					{% include "enterlink/ajaxresults.html" %}
+				</div>
+				<button type="submit" id="CreatePage_Button" value="search" class="icon-search btn btn-md btn-default">{% trans 'Create Page' %}</button>
 			</form>
 		</div>
 	</div>
@@ -25,7 +30,7 @@
     <div class="container">
 		<section class="buttonset">
 			<!-- Class "cbp-spmenu-open" gets applied to menu and "cbp-spmenu-push-toleft" or "cbp-spmenu-push-toright" to the body -->
-			<button id="showLeft" title="{% trans 'Table of contents' %}"><img alt="{% trans 'Table of contents and facts for this wiki' %}" class="triggertoc-icon" height="24.3438" width="30" layout="fixed" src="https://epcdn-vz.azureedge.net/static/images/bull-icon.png"/></button>
+			<button id="showLeft" title="{% trans 'Table of contents' %}"><img alt="{% trans 'Table of contents and facts for this wiki' %}" class="triggertoc-icon" height="24" width="30" src="https://epcdn-vz.azureedge.net/static/images/bull-icon.png"/></button>
 		</section>
 	    <div class="logo">
 	        <a href="/"><img alt="Everipedia Logo" width="45" height="36" src="https://epcdn-vz.azureedge.net/static/images/Everipedia_Logo.svg"/></a>
@@ -53,7 +58,7 @@
 
 	    <ul class="nav navbar-nav navbar-right navbar-tour-point right-login-area">
 	      <li>
-	        <a class="app-notifications create-page-plus" data-toggle="tooltip" data-placement="bottom" title="{% trans 'Create Page' %}" href="/create_page/advanced_edit/?key=" style="margin-right:10px;">
+	        <a class="app-notifications create-page-plus" data-toggle="tooltip" data-placement="bottom" title="{% trans 'Create Page' %}" href="/create_page/edit/?key=" style="margin-right:10px;">
 	          <span class="icon icon-plus"></span>
 	        </a>
 	      </li>
@@ -82,9 +87,14 @@
 	      <!--</li>-->
           <li class="avatar-iq">
 	        <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">
+				<!--<div class="scatter-username">-->
+					<!--<div class="scatter-link" onclick="window.location='https://github.com/GetScatter/ScatterDesktop/releases';" >{% trans 'Please log in with Scatter' %}</div>-->
+				<!--</div>-->
+
 				<div class="scatter-username">
-					<div class="scatter-link" onclick="window.location='https://github.com/GetScatter/ScatterDesktop/releases';" >{% trans 'Please log in with Scatter' %}</div>
+					<div class="scatter-link" >{% trans 'Menu' %}</div>
 				</div>
+
 	          <!--<img class="img-circle" data-original="{{ GlobalUserInfo.photo_thumb100url }}" alt="Profile picture for {{ user.username }}" src="{{ GlobalUserInfo.photo_thumb100url }}" onError="this.onerror=null;this.src='https://epcdn-vz.azureedge.net/static/images/noavatar_100x100.png'">-->
 	        </a>
 

@@ -25,8 +25,15 @@
 
         if (dataUsername != 'Cite as verified editor') {
             try {
-                theStrippedUsername = (window.location.pathname).replace("/wiki/", "/").split("/");
-                theStrippedUsername = theStrippedUsername[1];
+                var splitPath = (window.location.pathname).replace("/wiki/", "/").split("/");
+                theStrippedUsername = splitPath[1];
+                try {
+                    theStrippedUsername += "/" + splitPath[2];
+                    if (theStrippedUsername.endsWith("/")) {
+                        theStrippedUsername = theStrippedUsername.slice(0, -1);
+                    }
+                }
+                catch{}
             }
             catch (err) {
                 theStrippedUsername = ARTICLE_SLUG;

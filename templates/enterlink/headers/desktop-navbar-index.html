@@ -2,10 +2,10 @@
 {% load humanize %}
 <header style="display:none;">
 
-    <aside class="lightbox" id="ll1">
-        <h5>{% trans 'Select language' %}</h5>
-        {% include "enterlink/language_selector.html" %}
-    </aside>
+    <!--<aside class="lightbox" id="ll1">-->
+        <!--<h5>{% trans 'Select language' %}</h5>-->
+        <!--{% include "enterlink/language_selector.html" %}-->
+    <!--</aside>-->
 	<nav>
 	</nav>
 	<nav class="navbar navbar-inverse navbar-fixed-top app-navbar" style="background: #fafafa; border-bottom: 0px !important; padding-top: 24px; max-height: 100px; height: 100px;">
@@ -44,8 +44,15 @@
 				<form action="/search/?create_req=1" method="post" class="search" name="createpagefield" id="createpagefield">
 					{% csrf_token %}
                     <input type="hidden" value="1" name="create_page_flag" />
-					<input placeholder="{% trans 'Paste a link or enter a title' %}." name="SearchBox" id="CreateBox" autocomplete="off" type="text" value="" style="border:0px;">
-				    <button type="submit" value="search" class="icon-search btn btn-md btn-default">{% trans 'Create Page' %}</button>
+					<input placeholder="{% trans 'Paste a link or enter a title' %}." name="CreateBox" id="CreateBox" autocomplete="off" type="text" value="" style="border:0px;">
+					<div id="AJAX-SpinBox">
+						<img class='loading-spinner' src='https://epcdn-vz.azureedge.net/static/images/loading.gif'>
+						<span class="spinner-label">{% trans 'Searching...' %}</span>
+					</div>
+					<div id="createResult">
+						{% include "enterlink/ajaxresults.html" %}
+					</div>
+					<button type="submit" value="search" id="CreatePage_Button" class="icon-search btn btn-md btn-default">{% trans 'Create Page' %}</button>
 				</form>
 
 			</div>

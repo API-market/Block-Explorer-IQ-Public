@@ -623,7 +623,7 @@ msgstr ""
 
 #: templates/enterlink/brainpowermgmt.html:120
 msgid ""
-"Every edit proposal requires a minimum of 10 Brainpower at this time, in "
+"Every edit proposal requires a minimum of 50 Brainpower at this time, in "
 "order to prevent spam and poor-quality edits."
 msgstr ""
 "Każda propozycja edycji wymaga co najmniej 10 Mocy mózgu w tym samym czasie, "
@@ -1456,7 +1456,7 @@ msgid "You currently do not have any notifications."
 msgstr "Obecnie nie masz żadnych powiadomień."
 
 #: templates/enterlink/index.html:40
-msgid "The world's first encyclopedia on the blockchain"
+msgid "The world's largest encyclopedia on the blockchain"
 msgstr "Pierwsza na świecie encyklopedia oparta na łańcuchu bloków"
 
 #: templates/enterlink/index.html:41
@@ -1589,7 +1589,7 @@ msgid ""
 "executive team is made up of several prominent individuals in the industry, "
 "the Co-Founder of Wikipedia, Larry Sanger, the founder of Genius.com, Mahbod "
 "Moghadam, and several others. Academic credentials includes UCLA, Stanford, "
-"Yale & Columbia, covering nationalities from America, Sweden, Norway and "
+"Yale & Columbia, covering nationalities from the United States, Sweden, Norway and "
 "Italy. "
 msgstr ""
 "Everipedia jest kierowana przez zespół z dużym doświadczeniem i wiedzą "

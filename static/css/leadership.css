@@ -7,12 +7,12 @@
 
 
 .leadership-ct {
-	font-family:Open Sans;
+	font-family: 'Poppins', Helvetica, Arial;
 }
 
 .leadership-ct h1 {
 	font-weight:800;
-	font-family:Open Sans;
+	font-family: 'Poppins', Helvetica, Arial;
 	text-align: center;
 	font-size:48px;
 }
@@ -35,7 +35,7 @@ hr.separator-break.separator-accent {
 
 .leadership-header h1 {
 	font-weight:800;
-	font-family:Open Sans;
+	font-family: 'Poppins', Helvetica, Arial;
 	text-align: center;
 	font-size:48px;
 	padding-top:100px;
@@ -70,7 +70,6 @@ hr.separator-break.separator-accent {
 	color: #303133;
 	margin: 9px 0px 0px 0px;
 	font-weight: 800;
-	font-family: Open Sans;
 	text-align: center;
 }
 
@@ -80,7 +79,7 @@ hr.separator-break.separator-accent {
 	color: #303133;
 	margin: 3px 0px 9px 0px;
 	font-weight: 800;
-	font-family: Open Sans;
+	font-family: 'Poppins', Helvetica, Arial;
 	text-align: center;
 }
 
@@ -90,7 +89,7 @@ hr.separator-break.separator-accent {
 	color: #666;
 	margin: 0px 0px 6px 0px;
 	font-weight: 600;
-	font-family: Open Sans;
+	font-family: 'Poppins', Helvetica, Arial;
 	text-align: center;
 }
 

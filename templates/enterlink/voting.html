@@ -5,13 +5,16 @@
 <html>
 <head>
 	<!--- Include Header -->
-    <script type="text/javascript" src="/static/js/easytimer.min.js"></script>
+    <script src="/static/js/easytimer.min.js"></script>
+    <meta name="robots" content="noindex, nofollow, noarchive">
 	{% include "enterlink/headers/header-common.html" %}{% include "enterlink/headers/header-navbar.html" %}
     {% include 'enterlink/inline-css/voting-css.html' %}
+    {% include "enterlink/inline-css/template_blockchain_css.html" %}
+
 
     <script>
         $('#submission_waiting').show();
-        function fetchVotes(propHashTrunc64, propHashTrunc64PlusOne) {
+        function fetchVotes() {
             $('#submission_waiting').show();
 
             var propHash = "{{ new_ipfs }}";
@@ -63,178 +66,126 @@
             return s.substr(s.length - size);
         }
 
-        // $(document).on("scatterNavbarDone", function () {
-            $(window).load(function() {
-                var propHashTrunc64 = ipfs_to_uint64_trunc("{{ new_ipfs }}");
-                var propHashTrunc64PlusOne = propHashTrunc64 + 1;
-                var proposalObj = "";
+                
+        // Show Voting Panel
+        $(document).on("scatterNavbarDone", function () {
+            $(".place-votes-header, .vote-input-box, .place-votes-btn-rows").css("display", "inline-table");
+        });
 
-                function finalizeVote(){
-                    $('#submission_waiting').show();
-                    var transactionJSON = {
-                        actions: [{
-                                account: 'eparticlectr',
-                                name: 'fnlbyhash',
-                                authorization: [{
-                                    actor: scatterAccountName,
-                                    permission: "active",
-                                }],
-                        data: {
-                                proposal_hash: '{{ new_ipfs }}',
-                            },
-                        }]
-                    };
-                    eos.transact(transactionJSON, {blocksBehind: 3, expireSeconds: 30,}).then(result => {
-                        $(".place-votes-header, .vote-input-box, .place-votes-btn-rows").hide();
-                        $.ajax({
-                            url: location.origin + "/cachefinalizedresult/" + propHashTrunc64 + "/",
-                            success: function(){}
-                        });
-                        $('#submission_waiting').hide();
-                    }).catch(e => {
-                        $('#submission_waiting').hide();
-                        alert(e);
-                        // if (e instanceof eosjs_jsonrpc.RpcError){
-                        // 	console.log(JSON.stringify(e.json, null, 2));
-                        // }
-                    });
+        $(document).on("ready", function () {
+            var propHash = "{{ new_ipfs }}";
+
+            $.get(`https://epmainnet.libertyblock.io:8000/proposal/${propHash}`).then(function (doc) {
+                var startTime = new Date(doc.createdAt);
+                var endTime = new Date(startTime.getTime() + 6*3600*1000);
+                var timezone = startTime.toLocaleString("en", {timeZoneName: "short"}).split(' ').pop();
+
+
+                startString = pad((startTime.getMonth() + 1), 2) + "/" + startTime.getDate() + "/" + startTime.getFullYear() + " " + pad(startTime.getHours(), 2);
+                startString += ":" + pad(startTime.getMinutes(), 2) + ":" + pad(startTime.getSeconds(), 2) + " " + timezone;
+
+                endString = pad((endTime.getMonth() + 1), 2) + "/" + endTime.getDate() + "/" + endTime.getFullYear() + " " + pad(endTime.getHours(), 2);
+                endString += ":" + pad(endTime.getMinutes(), 2) + ":" + pad(endTime.getSeconds(), 2) + " " + timezone;
+
+                $(".toc-vote-box .voting-period .period-start").html(startString);
+                $(".toc-vote-box .voting-period .period-end").html(endString);
+
+                var currentTime = new Date().getTime(); 
+                var timeDifference = (endTime - currentTime) / 1000;
+
+                if (timeDifference < 0){
+                    $('.voting-timer .timer-right').html('---COMPLETE---');
                 }
-
-
-                var jData = JSON.stringify({"scope":"eparticlectr", "code":"eparticlectr", "table":"propstbl", "lower_bound":propHashTrunc64,
-                        "upper_bound":propHashTrunc64PlusOne, "key_type":"i64", "index_position":"3", "json": true});
-                $.ajax({
-                    type: "POST",
-                    url: EosNetURL + "/v1/chain/get_table_rows",
-                    data: jData,
-                    beforeSend: function( xhr ) {
-                        // console.log(jData);
-                    },
-                    success: function (data) {
-                        // console.log(data);
-                        if(data.rows[0]["status"] == 0){
-                            $(".place-votes-header, .vote-input-box, .place-votes-btn-rows").css("display", "inline-table");
-                        }
-                        proposalObj = data;
-                        var startTime = new Date(0);
-                        var endTime = new Date(0);
-                        var startTimeInt = data.rows[0]["starttime"];
-                        var endTimeInt = data.rows[0]["endtime"];
-                        startTime.setUTCSeconds(startTimeInt);
-                        endTime.setUTCSeconds(endTimeInt);
-
-                        startString = pad((startTime.getUTCMonth() + 1), 2) + "/" + startTime.getUTCDate() + "/" + startTime.getUTCFullYear() + " " + pad(startTime.getUTCHours(), 2);
-                        startString += ":" + pad(startTime.getUTCMinutes(), 2) + ":" + pad(startTime.getUTCSeconds(), 2) + " UTC";
-
-                        endString = pad((endTime.getUTCMonth() + 1), 2) + "/" + endTime.getUTCDate() + "/" + endTime.getUTCFullYear() + " " + pad(endTime.getUTCHours(), 2);
-                        endString += ":" + pad(endTime.getUTCMinutes(), 2) + ":" + pad(endTime.getUTCSeconds(), 2) + " UTC";
-
-                        $(".toc-vote-box .voting-period .period-start").html(startString);
-                        $(".toc-vote-box .voting-period .period-end").html(endString);
-
-                        var currentTime = Math.round((new Date()).getTime() / 1000);
-                        var timeDifference = endTimeInt - currentTime;
-
-                        if (currentTime > endTimeInt){
-                            $('.voting-timer .timer-right').html('---COMPLETE---');
-                            if(data.rows[0]["status"] == 0){
-                                finalizeVote();
-                            }
-
-                        }
-                        else{
-                            var timer = new Timer();
-                            timer.start({countdown: true, startValues: {seconds: timeDifference}});
-                            $('.voting-timer .timer-right').html(timer.getTimeValues().toString());
-                            timer.addEventListener('secondsUpdated', function (e) {
-                                $('.voting-timer .timer-right').html(timer.getTimeValues().toString());
-                            });
-                            timer.addEventListener('targetAchieved', function (e) {
-                                $('.voting-timer .timer-right').html('---COMPLETE---');
-                                finalizeVote();
-                            });
-
-                        }
-                    }
-                });
-
-                // Fetch the votes
-                fetchVotes(propHashTrunc64, propHashTrunc64PlusOne);
-
-                // Handle the reject vote
-                $(".toc-vote-box .reject-vote").on("click", function () {
-                    $('#submission_waiting').show();
-                    var voteCount = $(".toc-vote-box .vote-input").val();
-
-                    var transactionJSON = {
-                        actions: [{
-                            account: 'eparticlectr',
-                            name: 'votebyhash',
-                            authorization: [{
-                                actor: scatterAccountName,
-                                permission: "active",
-                            }],
-                            data: {
-                                voter: scatterAccountName,
-                                proposal_hash: '{{ new_ipfs }}',
-                                approve: false,
-                                amount: voteCount,
-                            },
-                        }]
-                    };
-                    eos.transact(transactionJSON, {blocksBehind: 3, expireSeconds: 30,}).then(result => {
-                        fetchVotes(propHashTrunc64, propHashTrunc64PlusOne);
-                        $('#submission_waiting').hide();
-                        console.log("Transaction completed:" + result.transaction_id);
-                    }).catch(e => {
-                        $('#submission_waiting').hide();
-                        alert(e);
-                        // if (e instanceof eosjs_jsonrpc.RpcError){
-                        // 	console.log(JSON.stringify(e.json, null, 2));
-                        // }
+                else{
+                    var timer = new Timer();
+                    timer.start({countdown: true, startValues: {seconds: timeDifference}});
+                    $('.voting-timer .timer-right').html(timer.getTimeValues().toString());
+                    timer.addEventListener('secondsUpdated', function (e) {
+                        $('.voting-timer .timer-right').html(timer.getTimeValues().toString());
                     });
-                });
-
-                // handle the accept vote
-                $(".toc-vote-box .accept-vote").on("click", function () {
-                    $('#submission_waiting').show();
-                    var voteCount = $(".toc-vote-box .vote-input").val();
-
-                    var transactionJSON = {
-                        actions: [{
-                            account: 'eparticlectr',
-                            name: 'votebyhash',
-                            authorization: [{
-                                actor: scatterAccountName,
-                                permission: "active",
-                            }],
-                            data: {
-                                voter: scatterAccountName,
-                                proposal_hash: '{{ new_ipfs }}',
-                                approve: true,
-                                amount: voteCount,
-                            },
-                        }]
-                    };
-                    eos.transact(transactionJSON, {blocksBehind: 3, expireSeconds: 30,}).then(result => {
-                        fetchVotes(propHashTrunc64, propHashTrunc64PlusOne);
-                        $('#submission_waiting').hide();
-                        console.log("Transaction completed:" + result.transaction_id);
-                    }).catch(e => {
-                        $('#submission_waiting').hide();
-                        alert(e);
-                        // if (e instanceof eosjs_jsonrpc.RpcError){
-                        // 	console.log(JSON.stringify(e.json, null, 2));
-                        // }
+                    timer.addEventListener('targetAchieved', function (e) {
+                        $('.voting-timer .timer-right').html('---COMPLETE---');
                     });
-                });
 
-                $(".vote-inl-tbl .icon-cycle").on("click", function () {
-                    fetchVotes(propHashTrunc64, propHashTrunc64PlusOne);
-                });
-
+                }
             });
-        // });
+
+            // Fetch the votes
+            fetchVotes();
+
+            // Handle the reject vote
+            $(".toc-vote-box .reject-vote").on("click", function () {
+                $('#submission_waiting').show();
+                var voteCount = $(".toc-vote-box .vote-input").val();
+
+                var transactionJSON = {
+                    actions: [{
+                        account: 'eparticlectr',
+                        name: 'votebyhash',
+                        authorization: [{
+                            actor: scatterAccountName,
+                            permission: "active",
+                        }],
+                        data: {
+                            voter: scatterAccountName,
+                            proposal_hash: '{{ new_ipfs }}',
+                            approve: false,
+                            amount: voteCount,
+                        },
+                    }]
+                };
+                eos.transact(transactionJSON, {blocksBehind: 3, expireSeconds: 30,}).then(result => {
+                    fetchVotes();
+                    $('#submission_waiting').hide();
+                    console.log("Transaction completed:" + result.transaction_id);
+                }).catch(e => {
+                    $('#submission_waiting').hide();
+                    alert(e);
+                    // if (e instanceof eosjs_jsonrpc.RpcError){
+                    // 	console.log(JSON.stringify(e.json, null, 2));
+                    // }
+                });
+            });
+
+            // handle the accept vote
+            $(".toc-vote-box .accept-vote").on("click", function () {
+                $('#submission_waiting').show();
+                var voteCount = $(".toc-vote-box .vote-input").val();
+
+                var transactionJSON = {
+                    actions: [{
+                        account: 'eparticlectr',
+                        name: 'votebyhash',
+                        authorization: [{
+                            actor: scatterAccountName,
+                            permission: "active",
+                        }],
+                        data: {
+                            voter: scatterAccountName,
+                            proposal_hash: '{{ new_ipfs }}',
+                            approve: true,
+                            amount: voteCount,
+                        },
+                    }]
+                };
+                eos.transact(transactionJSON, {blocksBehind: 3, expireSeconds: 30,}).then(result => {
+                    fetchVotes();
+                    $('#submission_waiting').hide();
+                    console.log("Transaction completed:" + result.transaction_id);
+                }).catch(e => {
+                    $('#submission_waiting').hide();
+                    alert(e);
+                    // if (e instanceof eosjs_jsonrpc.RpcError){
+                    // 	console.log(JSON.stringify(e.json, null, 2));
+                    // }
+                });
+            });
+
+            $(".vote-inl-tbl .icon-cycle").on("click", function () {
+                fetchVotes();
+            });
+
+        });
 
 
     </script>
@@ -243,7 +194,7 @@
     <div class="waiting-header">{% trans 'Please wait' %}...</div>
     <div class="waiting-header-close"><span class="icon icon-squared-cross"></span></div>
     <div class="submission-wait-wrap">
-        <img src="/static/images/loading2.gif">
+        <img src="/static/images/loading2.gif" alt="Loading Spinner">
     </div>
     <script>
         $(".waiting-header-close").click(function() {
@@ -259,16 +210,20 @@
         </div>
         <div class="voting-container col-md-9" id="voting-ct">
             <table class='header-table' width="100%">
-                <tr class="table-header-row">
-                    <th style="text-align: center;">{% trans 'Before' %}</th>
-                    <th class="arrow-container" rowspan="2"><span class="icon icon-arrow-long-right"></span></th>
-                    <th style="text-align: center;">{% trans 'After' %}</th>
-                </tr>
                 <tr class="ipfs-hash-row">
+                    <td>{{proposer}}</td>
+                    <td class="arrow-container"><span class="icon icon-arrow-long-right"></span></td>
                     <td>{{old_ipfs}}</td>
+                    <td class="arrow-container"><span class="icon icon-arrow-long-right"></span></td>
                     <td>{{new_ipfs}}</td>
                 </tr>
             </table>
+            <div id="different-diffs">
+                <span>View: </span>
+                <a href="/html-diff/{{old_ipfs}}/{{new_ipfs}}">Raw HTML Diff</a>
+                <span>--</span>
+                <a href="/text-diff/{{old_ipfs}}/{{new_ipfs}}">Raw Text Diff</a>
+            </div>
             {{ compareBlob|safe }}
         </div>
     </div>

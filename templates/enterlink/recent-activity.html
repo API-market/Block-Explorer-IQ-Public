@@ -20,12 +20,13 @@
 			float: left;
     		width: 100%;
 			margin: 5px 0px;
-			border-top: 1px solid rgba(128,128,128,0.13);
-			border-left: 1px solid rgba(128,128,128,0.13);
-			-webkit-box-shadow: 3px 3px 4px 0px rgba(196,196,196,1);
-			-moz-box-shadow: 3px 3px 4px 0px rgba(196,196,196,1);
-			box-shadow: 3px 3px 4px 0px rgba(196,196,196,1);
+            padding: 5px;
+			border: 2px solid #AAAAAA;
+            border-radius: 5px;
 		}
+		ul.recent-activity li:hover {
+			border: 2px solid #A1C2E0;
+        }
 		ul.recent-activity li a.act-anchor{
 			float: left;
 			width: 100%;
@@ -37,6 +38,7 @@
 		.recent-activity .line-picture{
 			width: 50px;
 			height: 50px;
+            object-fit: contain;
 		}
 		.recent-activity .line-data-wrap{
 			float: right;
@@ -67,6 +69,12 @@
 			color: #5a5a5a;
 			font-size: 12px;
 		}
+        .recent-activity .info-col {
+            float: left;
+        }
+        .recent-activity .action-button-section {
+            float: right;
+        }
 
 	</style>
 
@@ -76,26 +84,31 @@
 		<h1>{% trans 'Recent Activity' %}</h1>
 		<ul class="recent-activity">
 			{% for lineItem in theProposals %}
-				<li class="activity-line">
-					<a class="act-anchor" href="/wiki/{{ lineItem.article.slug }}/">
-						<div class="act-img-wrap">
-							<img class="lazyloadable line-picture" src="{{ lineItem.article.photo_thumb_url }}" data-src="{{ lineItem.article.photo_url }}">
-						</div>
-						<div class="line-data-wrap">
-							<div class="title-row">
-								<span class="page-title">{{ lineItem.article.page_title }}</span>
-								<span class="page-author"> {% trans 'by' %} {{ lineItem.proposer }}</span>
-								<span class="page-separator"></span>
-								<span class="page-timestamp">{{ lineItem.starttime|parsetimestamp }}</span>
-							</div>
-							<div class="change-row">
-								<span class="before-hash">{{ lineItem.old_article_hash }}</span>
-								<span class="icon icon-arrow-long-right"></span>
-								<span class="after-hash">{{ lineItem.proposed_article_hash }}</span>
-							</div>
-						</div>
-					</a>
-				</li>
+                <a href="/wiki/lang_{{ lineItem.article.page_lang }}/{{ lineItem.article.slug }}">
+                    <li class="activity-line">
+                        <div class="act-img-wrap">
+                            <img class="lazyloadable line-picture" src="{{ lineItem.article.photo_thumb_url }}" data-src="{{ lineItem.article.photo_url }}">
+                        </div>
+                        <div class="line-data-wrap">
+                            <div class="info-col">
+                                <div class="title-row">
+                                    <span class="page-title">{{ lineItem.article.page_title }}</span>
+                                    <span class="page-author"> {% trans 'by' %} {{ lineItem.proposer }}</span>
+                                    <span class="page-separator"></span>
+                                    <span class="page-timestamp">{{ lineItem.starttime }}</span>
+                                </div>
+                                <div class="change-row">
+                                    <span class="after-hash">{{ lineItem.proposed_article_hash }}</span>
+                                </div>
+                            </div>
+                            <div class="action-button-section">
+                                <a href="/AJAX-REQUEST/AJAX_Fetch_Blurb_Compare/{{ lineItem.proposed_article_hash }}/{{ lineItem.old_article_hash }}/"><button class="btn btn-info">{% trans 'Vote' %}</button></a>
+                                <a href="/wiki/lang_{{ lineItem.article.page_lang }}/{{ lineItem.article.slug }}/edit"><button class="btn btn-info">{% trans 'Edit' %}</button></a>
+                                <a href="/wiki/lang_{{ lineItem.article.page_lang }}/{{ lineItem.article.slug }}/"><button class="btn btn-info">{% trans 'View' %}</button></a>
+                            </div>
+                        </div>
+                    </li>
+                </a>
 			{% endfor %}
 		</ul>
 
@@ -119,6 +132,12 @@
 
 	</div>
 
+<script>
+    document.querySelectorAll(".page-timestamp").forEach(function (e) {
+        var d = new Date(Number(e.textContent) * 1000);
+        e.textContent = d.toLocaleString();
+    });
+</script>
 <!--- Everipedia Footer -->
 {% include "enterlink/footers/footer.html" %}
 {#{% include "enterlink/footers/deferredJS.html" %}#}

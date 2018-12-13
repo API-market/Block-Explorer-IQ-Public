@@ -7,7 +7,7 @@
     <meta name="description" content="Edit the page for {{PREFETCH_FBNAME_FACEBOOK_NAME}}">
     <meta name="robots" content="noindex, noarchive, nofollow">
     <!-- i18n translations-->
-    <!--<script type="text/javascript">gettext = function(a) {return a;}</script>-->
+    <!--<script>gettext = function(a) {return a;}</script>-->
 
 	<!--- Include Header -->
 	{% include "enterlink/headers/header-common.html" %}{% include "enterlink/headers/header-navbar.html" %}
@@ -36,9 +36,9 @@
             min-height: 250px;
         }
     </style>
-    <script type="text/javascript" src="/static/bootstrap-tour/js/bootstrap-tour-standalone.min.js"></script>
-    <script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/jquery-ui-min.js"></script>
-    <script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/jquery-qtip-min.js"></script>
+    <script src="/static/bootstrap-tour/js/bootstrap-tour-standalone.min.js"></script>
+    <script src="https://epcdn-vz.azureedge.net/static/js/jquery-ui-min.js"></script>
+    <script src="https://epcdn-vz.azureedge.net/static/js/jquery-qtip-min.js"></script>
 
     <script>
         var ARTICLE_SLUG = '{{ARTICLE_SLUG}}';
@@ -52,7 +52,7 @@
         var EDITOR_LANGUAGE = "{{ LANGUAGE_CODE }}";
     </script>
 
-    <script type="text/javascript" src="/static/tinymce_4.2.3/tinymce.min.js"></script>
+    <script src="/static/tinymce_4.2.3/tinymce.min.js"></script>
     {% include 'enterlink/inline-js/enterlink-edit-tinyMCEs.html' %}
     {% include 'enterlink/inline-js/tiny-mce-placeholder.html' %}
     {% include 'enterlink/inline-js/debounce-min.html' %}
@@ -64,12 +64,12 @@
     <div class="waiting-header">{% trans 'Loading' %}...</div>
     <div class="waiting-header-close"><span class="icon icon-squared-cross"></span></div>
     <div class="submission-wait-wrap">
-        <img src="/static/images/loading2.gif">
+        <img src="/static/images/loading2.gif" alt="Loading Spinner">
     </div>
 </div>
 
 <div id="edit-ct" class="p-t-md edit-main-div tablet-compatible {% if request.mobile and not request.tablet %}bb-mobile{% else %}bb-desktop{% endif %}" >
-    <form class="main-edit-form" action="/wiki/{{ARTICLE_SLUG}}/advanced_edit/?submission=1" method="POST" id="form_tinymce_container">
+    <form class="main-edit-form" action="/wiki/lang_{{ PAGE_LANG }}/{{ARTICLE_SLUG}}/edit/?submission=1" method="POST" id="form_tinymce_container">
         {{ ARTICLE_BLOB|safe }}
     </form>
 </div>
@@ -95,6 +95,12 @@
 <div id="mainphoto-edit-box-wrapper" style="display:none;">
     <div id="mainphoto-edit-box">
         {% include "enterlink/edit_ajax_editmainphoto.html" %}
+    </div>
+</div>
+
+<div id="merge-box-wrapper" style="display:none;">
+    <div id="merge-box">
+        {% include "enterlink/edit_ajax_merge.html" %}
     </div>
 </div>
 
@@ -173,7 +179,7 @@
 {% include "enterlink/footers/footer_no_extras.html" %}
 {% include 'enterlink/inline-js/application.html' %}
 {% include 'enterlink/inline-js/enterlink-template-footer.html' %}
-<script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/bootstrap-min-js.js"></script>
+<script src="https://epcdn-vz.azureedge.net/static/js/bootstrap-min-js.js"></script>
 {% include 'enterlink/inline-js/debounce-min.html' %}
 {% include 'enterlink/inline-js/notify-min.html' %}
 {#{% include "enterlink/footers/deferredJS.html" %}#}
@@ -185,8 +191,8 @@
 <script>initiatePictureDropzone();</script>
 {% endif %}
 
-<script type="text/javascript" src="/static/tageditor/jquery.tag-editor.js"></script>
-<script type="text/javascript" src="/static/tageditor/jquery.caret.min.js"></script>
+<script src="/static/tageditor/jquery.tag-editor.js"></script>
+<script src="/static/tageditor/jquery.caret.min.js"></script>
 <link href="/static/tageditor/jquery.tag-editor.css" rel="stylesheet">
 
 {% include 'enterlink/inline-js/edit-bottom.html' %}

@@ -1,9 +1,9 @@
 {% load i18n %}
 {% load enterlink_custom_tags %}
-<!--<script type="text/javascript">gettext = function(a) {return a;}</script>-->
-<script type="text/javascript" src="/static/tageditor/jquery.tag-editor.js"></script>
-<script type="text/javascript" src="/static/tageditor/jquery.caret.min.js"></script>
-<script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/jquery-ui-min.js"></script>
+<!--<script>gettext = function(a) {return a;}</script>-->
+<script src="/static/tageditor/jquery.tag-editor.js"></script>
+<script src="/static/tageditor/jquery.caret.min.js"></script>
+<script src="https://epcdn-vz.azureedge.net/static/js/jquery-ui-min.js"></script>
 <link href="/static/tageditor/jquery.tag-editor.css" rel="stylesheet">
 
 <div class="bio-ct-infobox">
@@ -88,6 +88,7 @@ function ajaxAddNewInfobox() {
     var ajaxResultBox = $("span#ajax_addinfobox_result");
     var serializedData = $theMainForm.serializeArray();
     serializedData.push({name: 'pageslug', value: ARTICLE_SLUG});
+    serializedData.push({name: 'page_type', value: getPageType()});
     $.ajax({
         type: "POST",
         url: "/AJAX-REQUEST/AJAX_Add_New_Infobox/",

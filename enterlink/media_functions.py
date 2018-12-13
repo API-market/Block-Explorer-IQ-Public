@@ -6,6 +6,7 @@ from django.http import HttpResponse
 from django.utils.html import strip_tags
 from mimetypes import MimeTypes
 from PIL import Image
+import urllib2
 from urlparse import urlparse
 import StringIO
 import cStringIO
@@ -396,11 +397,20 @@ def addMediaImage(request, pageID, theFile, fileComment, PLACEHOLDER_LIST, input
     theFile.seek(0)
 
     # Create the file name and suffix
-    unique_id = str(uuid4())
+    unique_id = unicode(uuid4())
     mimeSuffixWithDot = MimeTypes().guess_extension(theMIME)
     theSlug = DjangoText.slugify(unicode(strip_tags(fileComment)).encode('utf-8'), allow_unicode=True)[:50]
-    theNameSlugged = DjangoText.slugify(unicode(pageID).encode('utf-8'), allow_unicode=True)
-    k.key = u"NewlinkFiles/" + unicode(pageID) + u"/" + unique_id[:5] + "___" +  theNameSlugged + u"/" + theSlug + mimeSuffixWithDot
+    theNameSlugged = DjangoText.slugify(pageID, allow_unicode=True)
+
+    try:
+        k.key = u"NewlinkFiles/" + pageID
+        k.key += u"/" + unique_id[:5]
+        k.key += u"___" + theNameSlugged + u"/" + theSlug + mimeSuffixWithDot
+    except:
+        pageID = unicode(pageID).encode('utf-8')
+        k.key = u"NewlinkFiles/" + pageID
+        k.key += u"/" + unique_id[:5]
+        k.key += u"___" + theNameSlugged + u"/" + theSlug + mimeSuffixWithDot
 
     # Upload the file to the S3 bucket
     if "video" in theMIME:

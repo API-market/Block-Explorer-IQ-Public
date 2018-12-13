@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 {% load i18n %}
-{% language LANG_OVERRIDE %}
+{% language PAGE_LANG %}
 {% load humanize %}
 {% load enterlink_custom_tags %}
 {% spaceless %}
-<html amp lang="en">
+<html amp lang="{{ PAGE_LANG }}">
   <head>
     <meta charset="utf-8">
     <meta name="theme-color" content="#FFFFFF">
@@ -76,18 +76,21 @@
     <meta property="og:image" content="{{ PHOTOOBJECT.url }}" />
     <meta property="og:image" content="{{ PHOTOOBJECT.thumb }}" />
     <meta property="og:description" content="{{ PREFETCH_BLURB_255_STRIPPED }}"/>
-    <meta name="og:url" content="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/">
+    <meta name="og:url" content="https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/">
 
     <meta name="twitter:image" content="{{ PHOTOOBJECT.url }}">
     <meta name="twitter:image" content="{{ PHOTOOBJECT.thumb }}">
     <meta name="twitter:description" content="{{ PREFETCH_BLURB_255_STRIPPED }}">
-    <meta name="twitter:url" content="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/">
+    <meta name="twitter:url" content="https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/">
 
     <meta property="fb:app_id" content="1617004011913755" />
     <meta property="fb:pages" content="328643504006398"/>
     <meta property="article:author" content="https://www.facebook.com/everipedia">
 
-    <link rel="canonical" href="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/" />
+    <link rel="canonical" href="https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/" />
+    {% for altLangPage in ALT_LANG_PAGES %}
+    <link rel="alternate" href="https://everipedia.org/wiki/lang_{{ altLangPage.page_lang }}/{{ altLangPage.slug }}/" hreflang="{{ altLangPage.page_lang }}" />
+    {% endfor %}
 
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
@@ -99,7 +102,7 @@
         <ul>
             <li class="amp-header-toc">
                 <button on='tap:sidebar.toggle'>
-                    <amp-img height="24.3438" width="30" layout="fixed" alt="{% trans 'Table of contents and facts for this wiki' %}" src="https://epcdn-vz.azureedge.net/static/images/bull-icon.png" ></amp-img>
+                    <amp-img height="24" width="30" layout="fixed" alt="{% trans 'Table of contents and facts for this wiki' %}" src="https://epcdn-vz.azureedge.net/static/images/bull-icon.png" ></amp-img>
                 </button>
             </li>
             <li class="amp-header-logo">
@@ -120,7 +123,7 @@
 
         </ul>
     </nav>
-    <main id="mainEntityId" itemscope itemtype="http://schema.org/NewsArticle" itemid="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/" class="schema">
+    <main id="mainEntityId" itemscope itemtype="http://schema.org/NewsArticle" itemid="https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/" class="schema">
         {% if PAGEMETADATA.page_type == 'Person' %}
             <meta itemprop="keywords" content="{{ PAGETITLE }} wiki, {{ PAGETITLE }} bio" >
         {% elif PAGEMETADATA.page_type == 'Product'%}
@@ -133,7 +136,7 @@
 
 
 
-        <article class="schema-wrap" itemprop="about" itemscope itemtype="http://schema.org/{% if PageAttr.sub_page_type != None %}{{ PageAttr.sub_page_type }}{% elif PAGEMETADATA.page_type != None %}{{ PAGEMETADATA.page_type }}{% else %}Thing{% endif %}">
+        <article class="schema-wrap" itemprop="about" itemscope itemtype="http://schema.org/{% if PAGEMETADATA.page_type == None or PAGEMETADATA.page_type == 'None' %}Thing{% else %}{{ PAGEMETADATA.page_type }}{% endif %}">
             {% if PAGEMETADATA.page_type == 'Person' %}
             <abbr itemprop="homeLocation" itemscope itemtype="http://schema.org/Place" >
                 <meta itemprop="name" content="Earth" />
@@ -173,6 +176,9 @@
             <aside id="welcomeBanner">
                 {{ SITE_NOTICE|safe }}
                 <!--<strong>{% trans 'Recent news' %}:</strong> {% trans 'Everipedia IQ tokens are now in circulation on the EOS mainnet. Follow Everipedia on' %} <a rel="nofollow" target="_blank" href="https://t.me/everipedia">Telegram</a> and <a rel="nofollow" class="reddit-link" target="_blank" href="https://www.reddit.com/r/Everipedia/">Reddit</a> {% trans 'to learn about upcoming features and developments!' %}-->
+                <button class='close-banner-btn' on="tap:welcomeBanner.hide">
+                    <i class="fa fa-window-close" aria-hidden="true"></i>
+                </button>
             </aside>
 
 
@@ -197,11 +203,17 @@
                     <div class="tlbx-ct">
                         <ul>
                             <li><button on="tap:share-lightbox" aria-label="Share" class="icon"><i class="fa fa-share-alt"></i></button></li>
-                            <li><a rel='nofollow' href="https://everipedia.org/vote/{{ PAGEMETADATA.url_slug }}/" class="icon"><i class="fa fa-archive"></i></a></li>
+                            <li><a rel='nofollow' href="https://everipedia.org/vote/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/" class="icon"><i class="fa fa-archive"></i></a></li>
                             <li><a rel='nofollow' href="#" class="icon"><i class="fa fa-eye"></i></a>
                                 {% if CURRENT_PAGEVIEWS >= 100 %}
                                 <span class="views-nr">{{ CURRENT_PAGEVIEWS|intcomma }}</span>
                                 {% endif %}
+                            </li>
+                            <li>
+                                <button on="tap:language-lightbox" aria-label="Languages" class="icon">
+                                    <amp-img id="flag-button" height="35" width="35" alt="Language flag" layout="fixed" class="page-lang-dropdown-flag" src="https://epcdn-vz.azureedge.net/static/images/flags/png/48/languages/{{ PAGE_LANG }}.png"></amp-img>
+                                    <!--<i class="fa fa-language"></i>-->
+                                </button>
                             </li>
                             {% if PAGEMETADATA.page_type == 'Person' %}
                                 <amp-anim height='1' width='1' layout='fixed' class='micro-image-top' src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt="{{ PAGETITLE }} religion, {{ PAGETITLE }} interview, {{ PAGETITLE }} life, {{ PAGETITLE }} website" ></amp-anim>
@@ -233,7 +245,7 @@
                 </div>
             </div>
             
-            {% if NONPLURAL_INFOBOXES|length > 0 or PLURAL_INFOBOXES|length > 0 or BLOBBOX|length > 0 %}
+            {% if NONPLURAL_INFOBOXES|length > 0 or PLURAL_INFOBOX_PACKAGES|length > 0 or BLOBBOX|length > 0 %}
             <amp-accordion class="infobox-accordion">
                 <section id="infobox_section" class="infobox-main-wrap" expanded>
                     <h2 class="qf-header">
@@ -244,7 +256,7 @@
                         {% endif %}
                         <span class="icon"><i class="fa fa-chevron-down"></i></span></h2>
                     <div >
-                        {% if NONPLURAL_INFOBOXES|length > 0 or PLURAL_INFOBOXES|length > 0 or BLOBBOX|length > 0%}
+                        {% if NONPLURAL_INFOBOXES|length > 0 or PLURAL_INFOBOX_PACKAGES|length > 0 or BLOBBOX|length > 0%}
                             <div class="infbx-ct">
                                 {{ ampSanitizedInfobox|safe }}
                             </div>
@@ -323,7 +335,7 @@
                 <div>
                     <div class="disclaimer">{% trans 'Other wiki pages related to' %} {{ PAGETITLE }}.</div>
                     {% if SEEALSOS.3 %}
-                        <a class='sa-ancr-wrp' href="/wiki/{{SEEALSOS.3.slug}}/">
+                        <a class='sa-ancr-wrp' href="/wiki/lang_{{ PAGE_LANG }}/{{SEEALSOS.3.slug}}/">
                             {% with picture_type=SEEALSOS.3.photo_thumb_url|get_picture_type_from_url %}
                                 {% if picture_type == 'PICTURE' %}
                                     <amp-img layout="fixed-height" height=80 src="{{SEEALSOS.3.photo_thumb_url}}" alt="{{SEEALSOS.3.page_title}} wiki">
@@ -345,7 +357,7 @@
                     {% endif %}
 
                     {% if SEEALSOS.4 %}
-                        <a class='sa-ancr-wrp' href="/wiki/{{SEEALSOS.4.slug}}/">
+                        <a class='sa-ancr-wrp' href="/wiki/lang_{{ PAGE_LANG }}/{{SEEALSOS.4.slug}}/">
                             {% with picture_type=SEEALSOS.4.photo_thumb_url|get_picture_type_from_url %}
                                 {% if picture_type == 'PICTURE' %}
                                     <amp-img layout="fixed-height" height=80 src="{{SEEALSOS.4.photo_thumb_url}}" alt="{{SEEALSOS.4.page_title}} wiki">
@@ -395,9 +407,9 @@
             </div>
             {% endif %}
 
-            <!--<meta itemscope itemprop="mainEntityOfPage" itemid="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/"/>-->
-            <meta itemprop="mainEntityOfPage" content="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/"/>
-            <meta itemprop="url" content="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/">
+            <!--<meta itemscope itemprop="mainEntityOfPage" itemid="https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/"/>-->
+            <meta itemprop="mainEntityOfPage" content="https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/"/>
+            <meta itemprop="url" content="https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/">
             {% if PAGEMETADATA.page_type == 'Person' %}
                 <meta itemprop="headline" content="{{ PAGETITLE }}'s biography and wiki on Everipedia">
             {% elif PAGEMETADATA.page_type == 'Product'%}
@@ -519,6 +531,7 @@
             <a rel="nofollow" href="https://www.reddit.com/r/Everipedia/">{% trans 'Forum' %}</a>
             <a href="/wiki/everipedia-terms/">{% trans 'Terms' %}</a>
             <a href="/exchange-listings/">{% trans 'Get IQ' %}</a>
+            <a rel="nofollow" href="/investor-relations/">{% trans 'Investors' %}</a>
         </div>
         <div class="footer-separator"></div>
         <div class="copyright">
@@ -539,6 +552,9 @@
         </a>
         <a class='social-logo' href="https://t.me/everipedia" title="Everipedia on Telegram">
             <amp-img height="26" width="26" layout="fixed" alt="Telegram" src="https://epcdn-vz.azureedge.net/static/images/telegram.png"></amp-img>
+        </a>
+        <a class='social-logo' href="https://blockfolio.com/coin/IQ" title="IQ token on Blockfolio">
+            <amp-img height="26" width="26" layout="fixed" alt="Blockfolio" src="https://epcdn-vz.azureedge.net/static/images/blockfolio.svg"></amp-img>
         </a>
     </div>
     <div class="eos-powered-line">
@@ -660,17 +676,17 @@
                 <h2>{% trans 'Share this page' %}</h2>
                 <div class="social-share-block-wrap">
                     <div class="social-share-block">
-                        <a class="email social-share-btn" rel='nofollow' href="mailto:email@email.com?&body=https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/"></a>
-                        <a class="facebook social-share-btn" rel='nofollow' href="https://www.facebook.com/sharer/sharer.php?u=https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/"></a>
-                        <a class="twitter social-share-btn" rel='nofollow' href="http://twitter.com/share?text=https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/"></a>
-                        <a class="reddit social-share-btn" rel='nofollow' href="https://reddit.com/submit?url=https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/"></a>
+                        <a class="email social-share-btn" rel='nofollow' href="mailto:email@email.com?&body=https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/"></a>
+                        <a class="facebook social-share-btn" rel='nofollow' href="https://www.facebook.com/sharer/sharer.php?u=https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/"></a>
+                        <a class="twitter social-share-btn" rel='nofollow' href="http://twitter.com/share?text=https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/"></a>
+                        <a class="reddit social-share-btn" rel='nofollow' href="https://reddit.com/submit?url=https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/"></a>
                     </div>
                 </div>
             </div>
             <div class="share-pad"></div>
             <div class="share-ct-link">
                 <h4>{% trans 'DIRECT LINK' %}</h4>
-                <a href="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/">https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/</a>
+                <a href="https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/">https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/</a>
             </div>
             <div class="share-pad"></div>
             <div class="share-hshtgs">
@@ -715,7 +731,7 @@
                     height="225"
                     width="216"
                     frameborder="0"
-                    src="https://www.everipedia.org/AJAX-REQUEST/AJAX_QR_Code_Iframe/{{ PAGEMETADATA.url_slug }}/">
+                    src="https://www.everipedia.org/AJAX-REQUEST/AJAX_QR_Code_Iframe/{{ PAGE_SLUG }}/">
                     <div placeholder></div>
                 </amp-iframe>
             </div>
@@ -725,11 +741,30 @@
     </nav>
 	</amp-lightbox>
 
+    <amp-lightbox id="language-lightbox" layout="nodisplay">
+	<span class="lb-button cls-lang-lgbx"><button  on='tap:language-lightbox.close'></button></span>
+    <nav class="lightbox" tabindex="7" role="widget">
+        <div class="lang-ct">
+            <h2>{% trans 'Alternate Languages' %}</h2>
+            <ul class="lang-ul">
+            {% for altLangPage in ALT_LANG_PAGES %}
+                <li class="lang-li">
+                    <a rel="nofollow" href="/wiki/lang_{{ altLangPage.page_lang }}/{{ altLangPage.slug }}/">
+                        <amp-img class="mini-lang-flag" height="35" width="35" layout="fixed" alt="Telegram" src="https://epcdn-vz.azureedge.net/static/images/flags/png/48/languages/{{ altLangPage.page_lang }}.png"></amp-img>
+                        <span class="mini-lang-title">{{ altLangPage.page_title }}</span>
+                    </a>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+    </nav>
+	</amp-lightbox>
+
     
     <!-- Lightbox declarations -->
     {{splitBlurbSet.2|safe}}
 
-    <amp-pixel src="https://everipedia.org/pagecounter/{{ PAGEMETADATA.url_slug }}/"></amp-pixel>
+    <amp-pixel src="https://everipedia.org/pagecounter/{{ PAGE_SLUG }}/"></amp-pixel>
 
     <amp-analytics type="googleanalytics" id="analytics1">
           <script type="application/json">

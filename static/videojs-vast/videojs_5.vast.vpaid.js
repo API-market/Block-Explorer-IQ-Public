@@ -1758,8 +1758,8 @@ var defaultTemplate = '<!DOCTYPE html>' +
     '<html lang="en">' +
     '<head><meta charset="UTF-8"></head>' +
     '<body style="margin:0;padding:0"><div class="ad-element"></div>' +
-    '<script type="text/javascript" src="{{iframeURL_JS}}"></script>' +
-    '<script type="text/javascript">' +
+    '<script src="{{iframeURL_JS}}"></script>' +
+    '<script>' +
     'window.parent.postMessage(\'{"event": "ready", "id": "{{iframeID}}"}\', \'{{origin}}\');' +
     '</script>' +
     '</body>' +

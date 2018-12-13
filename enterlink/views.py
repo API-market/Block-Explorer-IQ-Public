@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# 2014 - 2017 Travis Moore, Sam Kazemian, Theodor Forselius
+# 2014 - 2018 Travis Moore, Sam Kazemian, Theodor Forselius
 # MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 # MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 # MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
@@ -47,15 +47,17 @@ from django.shortcuts import render
 from django.utils import timezone, translation
 from django.utils.translation import LANGUAGE_SESSION_KEY, ugettext
 from django.views.decorators.csrf import csrf_exempt
+from elasticsearch import Elasticsearch
 from enterlink.forms import ContactForm, SearchBox
-from enterlink.models import HashCache, SchemaObject, ArticleTable, EditProposal, SiteNotice
-from enterlink.view_functions import parseBlockchainHTML, \
+from enterlink.models import HashCache, SchemaObject, ArticleTable, EditProposal, SiteNotice, PressRelease
+from enterlink.view_functions import parseBlockchainHTML, createRedirect, \
     blurbSplitter, parseTinyMCE_Citations, getTheArticleObject, \
     refreshTemplateCacheBlockchain, whiteSpaceStripper, parseTinyMCE_Media
 from enterlink.media_functions import addItemToS3FromURL_local_function, getYouTubeIdIfPresent
 from enterlink.model_functions import getIPAddress, mainSearch
 from fbwiki import settings
-from fbwiki.settings import VALID_VIDEO_EXTENSIONS, VALID_AUDIO_EXTENSIONS
+from fbwiki.settings import VALID_VIDEO_EXTENSIONS, VALID_AUDIO_EXTENSIONS, ELASTICSEARCH_HOST, ELASTICSEARCH_PORT, ELASTICSEARCH_PROTOCOL, \
+    ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASSWORD, ELASTICSEARCH_INDEX_NAME, ELASTICSEARCH_DOCUMENT_TYPE
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 import warnings
@@ -131,7 +133,10 @@ def AJAX_Schema_Search(request):
     articleObject = cleanedParamList[1]
 
     # Determine what the page type is. Example: https://schema.org/Person
-    pageTypeToUse = "Person" if (articleObject.page_type is None or articleObject.page_type == "") else articleObject.page_type
+    try:
+        pageTypeToUse = request.GET['page_type']
+    except:
+        pageTypeToUse = "Person" if ( articleObject.page_type is None or articleObject.page_type == "") else articleObject.page_type
 
     # Fetch all the possible schema properties for the given page type
     schemaSet = SchemaObject.objects.filter(Q(schema_for=pageTypeToUse) | Q(schema_for='Thing'), Q(exclude_from_dropdown=0))
@@ -187,7 +192,15 @@ def AJAX_Check_Blurb(request):
     if citeIndex != -1:
         pass
     else:
-        return HttpResponse("NO_CITATION")
+        # See if the page is removed or not
+        theSoup = BeautifulSoup(blurbText, "html.parser")
+
+        removedParent = theSoup.find_all("tr", attrs={"data-key": "is_removed"})
+        removedTds = removedParent[0].find_all("td")
+        if (removedTds[1].string == "True"):
+            pass
+        else:
+            return HttpResponse("NO_CITATION")
 
     # Deprecated
     return HttpResponse("THIRD_PERSON")
@@ -201,7 +214,7 @@ def dropzone(request):
 # A test page
 @csrf_exempt
 def test_page(request):
-    return render(request, 'enterlink/test_page.html')
+    pass
 
 # Language selection page
 @csrf_exempt
@@ -210,7 +223,11 @@ def language_selector(request):
         redirect_to = request.META['HTTP_REFERER']
     except:
         redirect_to = "/"
-    return render(request, 'enterlink/language_selector.html', { 'redirect_to': redirect_to})
+
+    try:
+        return render(request, 'enterlink/language_selector.html', { 'redirect_to': redirect_to})
+    except:
+        return render(request, 'enterlink/language_selector.html', {'redirect_to': "/"})
 
 # Sometimes /favicon.ico is pinged by browsers.
 @csrf_exempt
@@ -303,6 +320,12 @@ def contact(request):
     # Return the page HTML
     return render(request, 'enterlink/contact.html', {'form': form, 'sent': sent})
 
+# Investor Relations page
+@csrf_exempt
+def investor_relations(request):
+    pressReleases = PressRelease.objects.all().order_by('-timestamp')[:10]
+    return render(request, 'enterlink/investor-relations.html', {"pressReleases": pressReleases})
+
 # Generate the QR page for the page
 @csrf_exempt
 def AJAX_QR_Code_Iframe(request, inputslug):
@@ -312,7 +335,8 @@ def AJAX_QR_Code_Iframe(request, inputslug):
 # Error page (a wiki)
 @csrf_exempt
 def error(request):
-    response = template_handler_blockchain(request, 'HTTP_404')
+    userLang = translation.get_language()
+    response = template_handler_blockchain(request, 'HTTP_404', lang_param=userLang)
     response.status_code = 404
     response['X-Robots-Tag'] = 'noindex, noarchive'
     return response
@@ -376,7 +400,7 @@ def search(request, useIframe=False):
             paginatedresult = 'nopersonfoundwiththatname'
             try:
                 if request.GET['create_req'] == '1':
-                    return HttpResponseRedirect("/create_page/advanced_edit/?key=" + searchterm)
+                    return HttpResponseRedirect("/create_page/edit/?key=" + searchterm)
             except:
                 pass
     except:
@@ -394,9 +418,9 @@ def pagecounter(request, page_slug):
 
 # Hover blurb (when a blue link is hovered over on an article page)
 @csrf_exempt
-def hoverBlurb(request, url_param, isAJAX=False):
+def hoverBlurb(request, url_param, isAJAX=False, lang_param=""):
     # Get the article object from the URL parameter
-    cleanedParamList = getTheArticleObject(url_param)
+    cleanedParamList = getTheArticleObject(url_param, passedLang=lang_param)
     articleObject = cleanedParamList[1]
 
     # Handle removed pages
@@ -414,6 +438,7 @@ def hoverBlurb(request, url_param, isAJAX=False):
     contextDictionary.update({"ARTICLE_IS_REMOVED": articleObject.is_removed})
     contextDictionary.update({"ARTICLE_PHOTO_URL": articleObject.photo_url})
     contextDictionary.update({"ARTICLE_THUMB_URL": articleObject.photo_thumb_url})
+    contextDictionary.update({"ARTICLE_LANG": articleObject.page_lang})
     contextDictionary.update({"BLURB_SNIPPET": articleObject.blurb_snippet})
 
     # Return the hoverblurb HTML
@@ -424,14 +449,14 @@ def hoverBlurb(request, url_param, isAJAX=False):
 
 # Hover blurb bubble for the Google AMP page
 @csrf_exempt
-def AJAX_Hoverblurb(request, url_param):
-    return hoverBlurb(request, url_param, isAJAX=True)
+def AJAX_Hoverblurb(request, url_param, lang_param=""):
+    return hoverBlurb(request, url_param, isAJAX=True, lang_param=lang_param)
 
 # Hover pane bubble for citations when they are clicked
 @csrf_exempt
-def AJAX_Hoverlink(request, url_param):
+def AJAX_Hoverlink(request, url_param, lang_param=""):
     # Get the article from the url parameter
-    cleanedParamList = getTheArticleObject(url_param)
+    cleanedParamList = getTheArticleObject(url_param, passedLang=lang_param)
     articleObject = cleanedParamList[1]
 
     # Fail if the article has been removed
@@ -465,7 +490,7 @@ def AJAX_Hoverlink(request, url_param):
     cacheObject = HashCache.objects.get(ipfs_hash=articleObject.ipfs_hash_current)
 
     # Parse the HTML
-    resultDictionary = parseBlockchainHTML(cacheObject.html_blob)
+    resultDictionary = parseBlockchainHTML(cacheObject.html_blob, articleObj=articleObject)
 
     # Check for YouTube
     youtubeResult = getYouTubeIdIfPresent(linkURL)
@@ -554,25 +579,48 @@ def AJAX_Search(request, url_param):
 
         # Get the POST variables
         slug = request.POST['slug']
-        htmlBlock = request.POST['htmlblock']
 
-        # Create the BeautifulSoup object
-        theSoup = BeautifulSoup(htmlBlock, "html5lib")
+        citeBlock = request.POST['cite_block']
+        mediaBlock = request.POST['media_block']
+
+        # Create the BeautifulSoup objects
+        theCiteSoup = BeautifulSoup(citeBlock, "html5lib")
+        theMediaSoup = BeautifulSoup(mediaBlock, "html5lib")
 
         # Parse the citations from the HTML and add them to the context dictionary
-        parseTinyMCE_Citations(theSoup, resultDictionary)
+        parseTinyMCE_Citations(theCiteSoup, resultDictionary)
+        parseTinyMCE_Media(theMediaSoup, resultDictionary)
 
         # Create the citation HTML (e.g. [26])
         resultArray = []
         for linkNugget in resultDictionary["CITATION_OBJECTS"]:
             stringToRespond = u"<span class='tooltip-wrap'><a class='tooltippableCarat' rel='nofollow'"
             stringToRespond = stringToRespond + u" href='/wiki/" + unicode(slug) + u"/"
-            stringToRespond = stringToRespond + u"' data-username='" + unicode(linkNugget["url"]) + \
+            try:
+                theURL = urllib2.quote(linkNugget[u"url"]).encode('latin-1').decode('utf-8')
+            except:
+                theURL = linkNugget[u"url"]
+            stringToRespond = stringToRespond + u"' data-username='" + theURL + \
                               u"' data-cited_by='" + unicode(cited_by) + \
                               u"' data-cited_rank='" + unicode(citer_rank) + \
                               u"' data-citer_is_verified='" + unicode(citer_is_verified) + \
                               u"' ><sup>"
             stringToRespond = stringToRespond + u"[" + unicode(linkNugget["integer"]) + u"]"
+            stringToRespond = stringToRespond + u"</sup></a></span>&#8203;"
+            linkNugget["tooltipHTML"] = stringToRespond
+            resultArray.append(linkNugget)
+
+        for linkNugget in resultDictionary["MEDIA_OBJECTS"]:
+            stringToRespond = u"<span class='tooltip-wrap'><a class='tooltippableCarat' rel='nofollow'"
+            stringToRespond = stringToRespond + u" href='/wiki/" + unicode(slug) + u"/"
+            try:
+                theURL = urllib2.quote(linkNugget[u"url"]).encode('latin-1').decode('utf-8')
+            except:
+                theURL = linkNugget[u"url"]
+            stringToRespond = stringToRespond + u"' data-username='" + theURL + \
+                              u"' data-mimetype='" + linkNugget["mime"] + \
+                              u"' data-category='" + linkNugget["class"] + u"' ><sup>"
+            stringToRespond = stringToRespond + u"[&#128193]"
             stringToRespond = stringToRespond + u"</sup></a></span>&#8203;"
             linkNugget["tooltipHTML"] = stringToRespond
             resultArray.append(linkNugget)
@@ -721,25 +769,32 @@ def nonPOSTSetLanguage(request, theLanguage):
 # Redirect to the edit page
 @csrf_exempt
 def edit_301(url_param="create_page"):
+    # If the incoming URL is language naïve, try to fetch in the user's language
+    lang_param = translation.get_language()
+
     # Fetch the article object from the url parameter
-    cleanedParamList = getTheArticleObject(url_param)
+    cleanedParamList = getTheArticleObject(url_param, passedLang=lang_param)
     cleaned_url_param = cleanedParamList[0]
 
     # Do the redirect
-    return HttpResponsePermanentRedirect("/wiki/%s/advanced_edit/" % cleaned_url_param)
+    return HttpResponsePermanentRedirect("/wiki/lang_%s/%s/edit/" % (cleanedParamList[1].page_lang, cleaned_url_param))
 
 # Redirect to the main article page
 @csrf_exempt
 def template_handler_301(self, **kwargs):
+
     # For some reason, it is coming through as a kwarg
     url_param = kwargs["url_param"]
 
+    # If the incoming URL is language naïve, try to fetch in the user's language
+    lang_param = translation.get_language()
+
     # Fetch the article object from the url parameter
-    cleanedParamList = getTheArticleObject(url_param)
+    cleanedParamList = getTheArticleObject(url_param, passedLang=lang_param)
     cleaned_url_param = cleanedParamList[0]
 
     # Do the redirect
-    return HttpResponsePermanentRedirect("/wiki/%s/" % cleaned_url_param)
+    return HttpResponsePermanentRedirect("/wiki/lang_%s/%s/" % (cleanedParamList[1].page_lang, cleaned_url_param))
 
 # Redirect to the main article page, AMP version
 @csrf_exempt
@@ -747,12 +802,15 @@ def template_handler_301_amp(self, **kwargs):
     # For some reason, it is coming through as a kwarg
     url_param = kwargs["url_param"]
 
+    # If the incoming URL is language naïve, try to fetch in the user's language
+    lang_param = translation.get_language()
+
     # Fetch the article object from the url parameter
-    cleanedParamList = getTheArticleObject(url_param)
+    cleanedParamList = getTheArticleObject(url_param, passedLang=lang_param)
     cleaned_url_param = cleanedParamList[0]
 
     # Do the redirect
-    return HttpResponsePermanentRedirect("/wiki/%s/amp/" % cleaned_url_param)
+    return HttpResponsePermanentRedirect("/wiki/lang_%s/%s/amp/" % (cleanedParamList[1].page_lang, cleaned_url_param))
 
 # Get the HTML for an article
 @csrf_exempt
@@ -810,17 +868,27 @@ def get_article_raw_html(ipfs_hash="", lastactivity="", articletable=""):
 
 # Main article handler
 @csrf_exempt
-def template_handler_blockchain(request, url_param='url_param'):
+def template_handler_blockchain(request, url_param="url_param", lang_param=""):
     # Handle blank requests
     if ("/None" in url_param):
         return HttpResponse("")
 
+    # If the incoming URL is language naïve, try to fetch in the user's language
+    guessedLang = False
+    if lang_param == "":
+        lang_param = translation.get_language()
+        guessedLang = True
+
     # Get the article object from the url parameter
-    cleanedParamList = getTheArticleObject(url_param)
+    cleanedParamList = getTheArticleObject(url_param, passedLang=lang_param)
     articleObject = cleanedParamList[1]
+    altLangPages = cleanedParamList[2]
 
     if(articleObject.is_removed):
         return HttpResponseRedirect('/error/')
+
+    if guessedLang:
+        return HttpResponsePermanentRedirect("/wiki/lang_%s/%s/" % (articleObject.page_lang, cleanedParamList[0]))
 
     # See if the request is from mobile or tablet
     useMobile = False
@@ -853,6 +921,10 @@ def template_handler_blockchain(request, url_param='url_param'):
 
     # Detect the incoming language
     incomingLanguage = translation.get_language()
+
+    if settings.DEBUG_ON:
+        useStyledHTMLCache = False
+        print("DEBUG ON, SO PAGE CACHE IS DISABLED")
 
     # Determine whether to pull the cached CSS-stylized pages from Azure blob storage, or to generate new ones
     if useStyledHTMLCache == True:
@@ -896,17 +968,20 @@ def template_handler_blockchain(request, url_param='url_param'):
         unstyledHTML = get_article_raw_html(ipfs_hash=articleObject.ipfs_hash_current, lastactivity=lastActivityTime, articletable=articleObject )
         if useMobile:
             # Parse the HTML for relevant data
-            newDictionary = parseBlockchainHTML(unstyledHTML, useAMP=True)
+            unstyledHTML = unstyledHTML.replace(u"\u200B", "").replace(u"\u00A0", " ")
+            newDictionary = parseBlockchainHTML(unstyledHTML, useAMP=True, articleObj=articleObject)
 
             # Set some variables
             newDictionary.update({"CURRENT_IPFS_HASH": articleObject.ipfs_hash_current})
-            newDictionary.update({"LANG_OVERRIDE": renderLang})
+            newDictionary.update({"PAGE_SLUG": articleObject.slug})
+            newDictionary.update({"PAGE_LANG": renderLang})
             newDictionary.update({'SITE_NOTICE': theNotice.mobile_html})
             newDictionary.update({'IS_REMOVED_FROM_INDEX': articleObject.is_removed_from_index})
             newDictionary.update({'CURRENT_PAGEVIEWS': articleObject.pageviews})
+            newDictionary.update({'ALT_LANG_PAGES': altLangPages})
 
             # Generate the CSS-styled page from the template, filling in variables parsed from the unstyled/raw HTML
-            styledHTMLResponse =  render(request, 'enterlink/template_blockchain_styled_amp.html', newDictionary)
+            styledHTMLResponse = render(request, 'enterlink/template_blockchain_styled_amp.html', newDictionary)
 
             # Store the CSS-styled mobile page to Azure blob
             refreshTemplateCacheBlockchain(articleObject.ipfs_hash_current, styledHTMLResponse.content, 'mobile-template-blockchain')
@@ -916,15 +991,17 @@ def template_handler_blockchain(request, url_param='url_param'):
             articleObject.save()
         else:
             # Parse the HTML for relevant data
-            newDictionary = parseBlockchainHTML(unstyledHTML, useAMP=False)
+            newDictionary = parseBlockchainHTML(unstyledHTML, useAMP=False, articleObj=articleObject)
             newDictionary.update({'SITE_NOTICE': theNotice.desktop_html})
 
             # Set some variables
             newDictionary.update({"CURRENT_IPFS_HASH": articleObject.ipfs_hash_current})
-            newDictionary.update({"LANG_OVERRIDE": renderLang})
+            newDictionary.update({"PAGE_SLUG": articleObject.slug})
+            newDictionary.update({"PAGE_LANG": renderLang})
             newDictionary.update({'IS_REMOVED_FROM_INDEX': articleObject.is_removed_from_index})
             newDictionary.update({'CURRENT_PAGEVIEWS': articleObject.pageviews})
             newDictionary.update({'isTemplatePage': True})
+            newDictionary.update({'ALT_LANG_PAGES': altLangPages})
 
             # Generate the CSS-styled page from the template, filling in variables parsed from the unstyled/raw HTML
             styledHTMLResponse = render(request, 'enterlink/template_blockchain_styled_desktop.html', newDictionary)
@@ -937,22 +1014,22 @@ def template_handler_blockchain(request, url_param='url_param'):
             articleObject.save()
 
         # Construct a blurb snippet
-        miniBlurb = blurbSplitter(newDictionary["BLURB"], truncateLimit=2048, miniblurb=True)[0]
-        miniBlurb = whiteSpaceStripper(miniBlurb)
+        # miniBlurb = blurbSplitter(newDictionary["BLURB"], truncateLimit=2048, miniblurb=True, minimizeHTML=True)[0]
+        # miniBlurb = whiteSpaceStripper(miniBlurb)
 
         # Update the article object with info from the HTML
-        ArticleTable.objects.filter(slug__iexact=articleObject.slug).update(
-            page_title=newDictionary["PAGETITLE"],
-            blurb_snippet=miniBlurb,
-            photo_url=newDictionary["PHOTOOBJECT"]["url"],
-            photo_thumb_url=newDictionary["PHOTOOBJECT"]["thumb"],
-            page_type=newDictionary["PAGEMETADATA"]["page_type"],
-            page_sub_type=newDictionary["PAGEMETADATA"]["sub_page_type"],
-            is_removed=newDictionary["PAGEMETADATA"]["is_removed"],
-            is_removed_from_index=newDictionary["PAGEMETADATA"]["is_indexed"],
-            bing_index_override=newDictionary["PAGEMETADATA"]["bing_index_override"],
-            is_adult_content=newDictionary["PAGEMETADATA"]["is_adult_content"]
-        )
+        # ArticleTable.objects.filter(slug__iexact=articleObject.slug).update(
+        #     page_title=newDictionary["PAGETITLE"],
+        #     blurb_snippet=miniBlurb,
+        #     photo_url=newDictionary["PHOTOOBJECT"]["url"],
+        #     photo_thumb_url=newDictionary["PHOTOOBJECT"]["thumb"],
+        #     page_type=(None if newDictionary["PAGEMETADATA"]["page_type"] == "None" else newDictionary["PAGEMETADATA"]["page_type"]),
+        #     page_sub_type=(None if newDictionary["PAGEMETADATA"]["sub_page_type"] == "None" else newDictionary["PAGEMETADATA"]["sub_page_type"]),
+        #     is_removed=newDictionary["PAGEMETADATA"]["is_removed"],
+        #     is_removed_from_index=newDictionary["PAGEMETADATA"]["is_indexed"],
+        #     bing_index_override=newDictionary["PAGEMETADATA"]["bing_index_override"],
+        #     is_adult_content=newDictionary["PAGEMETADATA"]["is_adult_content"]
+        # )
 
         # Set the pageviews
         if articleObject.pageviews == None:

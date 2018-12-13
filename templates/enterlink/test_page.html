@@ -2,35 +2,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script type="text/javascript" src="/static/js/mongodb.js"></script>
-    {% include "enterlink/inline-js/eosio-mongodb-queries.html" %}
-    <script>
-		(async () => {
-            // import MongoClient from "mongodb";
-            // import getAccount from "eosio-mongodb-queries";
-			const client = await mongodb.MongoClient.connect("mongodb://localhost:27017", { useNewUrlParser: true });
 
-			// Optional Parameters
-			const options = {
-				gte_block_num: 0,
-				lte_block_num: Infinity,
-			};
-			const result = await eosio-mongodb-queries.getAccount(client, "eosnationftw", options);
-			// {
-			//   name: 'eosnationftw',
-			//   block_num: 6101090,
-			//   stake_quantity: 2.8,
-			//   stake_net_quantity: 0.4,
-			//   stake_cpu_quantity: 2.4
-			// }
-			console.log(result);
-		})();
-
-    </script>
   </head>
 
   <body>
   	TEST
+  ||||||||||||{{ theString|safe }}|||||||||||||
   </body>
 </html>
 

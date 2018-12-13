@@ -2,6 +2,8 @@ from __future__ import unicode_literals
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import ugettext_lazy
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 # "Contact Us" object
 class Contact(models.Model):
@@ -80,6 +82,16 @@ class ArticleTable(models.Model):
     is_new_page = models.BooleanField(default=False)
     redirect_page = models.ForeignKey('ArticleTable', null=True, related_name='redirectpage')
     page_lang = models.CharField(max_length=16, default="en")
+    page_note = models.CharField(max_length=255, blank=True, null=True)
+    article_group_id = models.BigIntegerField(null=True)
+
+# Grouping different-language articles by their same topic
+class ArticleGroup(models.Model):
+    id = models.BigAutoField(primary_key=True)
+    group_id = models.BigIntegerField()
+    canonical_article = models.ForeignKey('ArticleTable', null=True, related_name='canonicalpage')
+    canonical_lang = models.CharField(max_length=16, blank=True, null=True)
+
 
 # Locally cached info about the on-chain edit proposals
 class EditProposal(models.Model):
@@ -123,3 +135,10 @@ class SavedDraft(models.Model):
     article_slug = models.CharField(max_length=512, null=False, blank=False)
     html_blob = models.TextField(null=True, blank=True)
     updated_at = models.DateTimeField()
+
+# Press Releases
+class PressRelease(models.Model):
+    id = models.BigIntegerField(primary_key=True)
+    link = models.URLField(max_length=1024)
+    headline = models.CharField(max_length=1024, null=True, blank=True)
+    timestamp = models.DateField(auto_now_add=True)

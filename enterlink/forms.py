@@ -4,6 +4,7 @@ from django.forms import ModelForm
 from enterlink.models import Contact
 from django import forms
 from django.utils.translation import ugettext_lazy
+from fbwiki.settings import LANGUAGES
 
 # "Contact Us" page
 class ContactForm(ModelForm):
@@ -75,4 +76,5 @@ class PageMetaForm(forms.Form):
         ('MedicalEntity', ugettext_lazy('Science/Academia/Humanities')), ('Thing', ugettext_lazy('Other')), (None, None)))
     is_removed = forms.BooleanField(required=False)
     is_adult_content = forms.BooleanField(required=False)
+    page_lang = forms.ChoiceField(required=False, choices=LANGUAGES)
 

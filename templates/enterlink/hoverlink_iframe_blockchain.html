@@ -47,7 +47,7 @@
 <body>
 	<div class="container linkview-container" id="linkview-ct" style="">
         <ul class="l-lst">
-            <li class="link-box" id="link-box" style="margin-bottom:0px; border-color:#DB7B7B;">
+            <li class="link-box" style="margin-bottom:0px; border-color:#DB7B7B;">
                 <div class="link-box-right">
                     {% if linkJSON.fields.mimetype_if_applicable != None %}
                         <a href="{{ CITATION_URL }}" rel="nofollow" target="_blank"><span class="link-direct-url">[{% trans "Download" %}]</span>: {{CITATION_URL|filename}}</a>
@@ -65,11 +65,11 @@
                         <span class="icon icon-share" data-delay='{"show":"500", "hide":"300"}' data-toggle="tooltip" data-placement="bottom" title='{% trans "Share" %}'></span>
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                        <div id="copyURL" style="margin-left:16.5px; width:79%;" class="copyURL-btn btn-default btn" onclick="window.prompt(gettext('To copy to clipboard, press Ctrl+C, then Enter'), 'https://everipedia.org/wiki/{{ARTICLE_SLUG}}/');">{% trans 'Copy URL' %}</div>
-                        <a rel='nofollow' id="shareURL_fb" style="" class="copyURL-btn embedURL-btn shareURL-btn-fb btn-default btn" href="https://www.facebook.com/sharer/sharer.php?u=https://everipedia.org/wiki/{{ARTICLE_SLUG}}/" target="_blank">
+                        <div id="copyURL" style="margin-left:16.5px; width:79%;" class="copyURL-btn btn-default btn" onclick="window.prompt(gettext('To copy to clipboard, press Ctrl+C, then Enter'), 'https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ARTICLE_SLUG}}/');">{% trans 'Copy URL' %}</div>
+                        <a rel='nofollow' id="shareURL_fb" style="" class="copyURL-btn embedURL-btn shareURL-btn-fb btn-default btn" href="https://www.facebook.com/sharer/sharer.php?u=https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ARTICLE_SLUG}}/" target="_blank">
                             <img alt="Share {{ ARTICLE_NAME }}'s {% if ARTICLE_PAGE_TYPE == 'Person' %}biography{% else %}wiki{% endif %} on Facebook" src="https://epcdn-vz.azureedge.net/static/images/fb_share_button.png">
                         </a>
-                        <a rel='nofollow' id="shareURL_tw" style="" class="copyURL-btn embedURL-btn shareURL-btn-tw btn-default btn" href="http://www.twitter.com/share?url=https://everipedia.org/wiki/{{ARTICLE_SLUG}}/" target="_blank">
+                        <a rel='nofollow' id="shareURL_tw" style="" class="copyURL-btn embedURL-btn shareURL-btn-tw btn-default btn" href="http://www.twitter.com/share?url=https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ARTICLE_SLUG}}/" target="_blank">
                             <img alt="Share {{ ARTICLE_NAME }}'s wiki on Twitter" src="https://epcdn-vz.azureedge.net/static/images/tw_share_button.png">
                         </a>
                     </ul>

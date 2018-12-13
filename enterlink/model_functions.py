@@ -1,17 +1,27 @@
+# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from bs4 import BeautifulSoup
 from django.core import management
 from django.db import connection
 from django.db.models import Q
-from django.template.defaultfilters import slugify
+from django.utils.text import slugify
+from django.utils import translation
+from django.utils.translation import gettext, ugettext
 from django.utils.html import strip_tags
+from elasticsearch import Elasticsearch
+import json
 from threading import Thread
 from operator import itemgetter
 import os
 import re
 import unicodedata
 import warnings
-from fbwiki.settings import VALID_VIDEO_EXTENSIONS, VALID_AUDIO_EXTENSIONS
+from fbwiki.settings import VALID_VIDEO_EXTENSIONS, VALID_AUDIO_EXTENSIONS, ELASTICSEARCH_HOST, ELASTICSEARCH_PORT, ELASTICSEARCH_PROTOCOL, \
+    ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASSWORD, ELASTICSEARCH_INDEX_NAME, ELASTICSEARCH_DOCUMENT_TYPE, ELASTICSEARCH_URL_PREFIX
+
+# Create the Elasticsearch connection
+ELASTIC_OBJECT = Elasticsearch(hosts=[ELASTICSEARCH_HOST], http_auth=(ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASSWORD),
+                               scheme=ELASTICSEARCH_PROTOCOL, port=ELASTICSEARCH_PORT, use_ssl=True, url_prefix=ELASTICSEARCH_URL_PREFIX)
 
 # Tags to replace in BeautifulSoup
 BAD_TAGS = ['audio', 'head', 'map', 'math', 'mi', 'mo', 'mtd', 'mrow', 'mspace', 'mtext', 'msub', 'msup', 'mstyle',
@@ -197,7 +207,7 @@ def entireArticleHTMLSanitizer(inputString):
         for item in listOfReplaces:
             item.name = replaceTagPair[1]
 
-    # Clean up non-Everipedia leaks
+    # Clean up non-Everipedia links
     for link in soup.find_all('a'):
         try:
             if link['href'][0:22] == "https://www.everipedia" or (link['href'][0] == "/" or link['href'][0:3] == "../"):
@@ -234,6 +244,65 @@ def entireArticleHTMLSanitizer(inputString):
         anyTag.unwrap()
     # titleSoup[0].string = strip_tags(unicode(titleSoup[0].encode_contents(indent_level=None, encoding='utf-8').strip()))
 
+    # Correct plural infoboxes if they are incorrectly marked as non-plural
+    iboxItems = mainSoup.find_all("table", class_="ibox-item-nonplural")
+    movedTables = []
+    for iboxTable in iboxItems:
+        iboxRows = iboxTable.find_all("tr", class_="ibox-value-row")
+        try:
+            # If there is more than one value row, then it is automatically plural
+            if (len(iboxRows) > 1):
+                for indivRow in iboxRows:
+                    try:
+                        theTD = indivRow.find_all("td", class_="ibox-nonplural-value")
+                        tdNode = theTD[0]
+                        # Rename classes for the values
+                        tdNode['class'] = "ibox-plural-value"
+                    except:
+                        pass
+                    try:
+                        rootTable = tdNode.find_parents("table", class_="ibox-item-nonplural")
+                        rootTable[0]["class"] = "ibox-item-plural"
+                    except:
+                        pass
+
+                # Rename the class for the table from nonplural to plural
+                iboxTable["class"] = "ibox-item-plural"
+
+                # Rename the class of the key row
+                try:
+                    iboxKeyRow = iboxTable.select("tr.ibox-key-row")
+                    iboxKeyRow[0]["class"] = "ibox-plural-key"
+                except:
+                    pass
+
+                # Rename the class of the key inner row
+                try:
+                    iboxKeyRowInner = iboxTable.select("td.ibox-nonplural-key")
+                    iboxKeyRowInner[0]["class"] = "ibox-plural-key-inner"
+                except:
+                    pass
+
+                # Append the table to the list of tables to be moved
+                movedTables.append(iboxTable)
+        except Exception as e:
+            print(unicode(e))
+
+
+
+    # Get or create the plural infobox list
+    nonBlobWrapTag = mainSoup.find_all("div", class_="nonblob-wrap")
+    try:
+        iboxListPlural = mainSoup.find_all("div", class_="ibox-list-plural")
+        iboxListPlural = iboxListPlural[0]
+    except:
+        iboxListPlural = mainSoup.new_tag("div", class_="ibox-list-plural")
+        nonBlobWrapTag.append(iboxListPlural)
+
+    # Move the table from nonplural to plural
+    for movingTable in movedTables:
+        iboxListPlural.append(movingTable.extract())
+
     # Get the blurb
     blurbSoup = mainSoup.findAll(class_='blurb-wrap')
 
@@ -250,9 +319,9 @@ def entireArticleHTMLSanitizer(inputString):
                 # Create an id string from the header text
                 innerText = possibleWikiSpan[0].text
                 if innerText != "":
-                    headingTag['id'] = slugify(innerText)
+                    headingTag['id'] = slugify(innerText, allow_unicode=True)
                 else:
-                    headingTag['id'] = slugify(unicode(headingTag))
+                    headingTag['id'] = slugify(unicode(headingTag), allow_unicode=True)
 
                 # Remove the span tag
                 try:
@@ -263,11 +332,50 @@ def entireArticleHTMLSanitizer(inputString):
                 # Create an id string from the header text
                 innerText = headingTag.text
                 if innerText != "":
-                    headingTag['id'] = slugify(innerText)
+                    headingTag['id'] = slugify(innerText, allow_unicode=True)
                 else:
-                    headingTag['id'] = slugify(unicode(headingTag))
+                    headingTag['id'] = slugify(unicode(headingTag), allow_unicode=True)
         except:
             pass
+
+    # See what the page language is and make sure that certain strings are changed if it changes
+    langRow = mainSoup.findAll("tr", {"data-key": "page_lang"})
+    langTd = langRow[0].findAll("td", class_=re.compile(ur"meta-value", flags=re.UNICODE))
+    theParsedLocale = langTd[0].string
+
+    with translation.override(theParsedLocale):
+        # Media Gallery
+        theSection = mainSoup.findAll("section", class_='media-gallery')
+        theHeader = theSection[0].findAll("h2", class_='section-headline')
+        theHeader[0].string = gettext("Media Gallery")
+
+        # References and Citations
+        theSection = mainSoup.findAll("section", class_='reference-container')
+        theHeader = theSection[0].findAll("h2", class_='section-headline')
+        theHeader[0].string = gettext("References and Citations")
+
+        # Page Type
+        theRow = mainSoup.findAll("tr", {"data-key": "page_type"})
+        theLabel = theRow[0].findAll("td", class_="no-edit")
+        theLabel[0].string = gettext("Page Type")
+
+        # Is Removed
+        theRow = mainSoup.findAll("tr", {"data-key": "is_removed"})
+        theLabel = theRow[0].findAll("td", class_="no-edit")
+        theLabel[0].string = gettext("Removed From Site")
+
+        # Is Adult Content
+        theRow = mainSoup.findAll("tr", {"data-key": "is_adult_content"})
+        theLabel = theRow[0].findAll("td", class_="no-edit")
+        theLabel[0].string = gettext("Adult Content")
+
+        # Page Language
+        theRow = mainSoup.findAll("tr", {"data-key": "page_lang"})
+        theLabel = theRow[0].findAll("td", class_="no-edit")
+        theLabel[0].string = gettext("Page Language")
+
+        # TODO
+        # Link and media object rows labels need to be translated
 
     # Check the infoboxes and citation descriptions for page-allowed, but locally disallowed tags (like section and header)
     littleBoxes = mainSoup.findAll(True, {'class':['link-description', 'media-caption', 'ibox-nonplural-value', 'ibox-plural-value']})
@@ -276,8 +384,12 @@ def entireArticleHTMLSanitizer(inputString):
             for match in littleBox.findAll(badTag):
                 match.unwrap()
 
+    return deBeautifySoup(soup)
+
+# BeautifulSoup has a tendency to add weird crap, so remove this and return
+def deBeautifySoup(inputSoup, skipSlice=False):
     # Turn the HTML back into a string
-    cleanedcontent = "".join([unicode(item) for item in soup.contents])
+    cleanedcontent = "".join([unicode(item) for item in inputSoup.contents])
 
     # Remove bad tags that BeautifulSoup tends to add
     for badTag in BAD_TAGS_BY_BEAUTIFULSOUP:
@@ -288,7 +400,10 @@ def entireArticleHTMLSanitizer(inputString):
         cleanedcontent = cleanedcontent.replace(replaceStringPair[0], replaceStringPair[1])
 
     # Return the cleaned string
-    return cleanedcontent.strip()
+    if (skipSlice == False):
+        return cleanedcontent.strip()[5:]
+    else:
+        return cleanedcontent.strip()
 
 # Detect duplicate citation links
 def dupeLinkDetector(inputURL, comparisonURLs=[]):
@@ -314,125 +429,105 @@ def dupeLinkDetector(inputURL, comparisonURLs=[]):
         pass
     return False
 
+# Generate the sitemap
+def dispatchSitemapCreation():
+    try:
+        management.call_command('refresh_sitemap')
+    except:
+        pass
+
 # Functionalized search. Allows for parallelization and threading
-def normalSearch(searchterm, resultItem, index):
-    # Set variables
-    searchString = searchterm + '%'
-    FETCH_LIMIT = 2500
-    exclusionString = ""
-    cursor = connection.cursor()
+def normalSearch(searchterm):
+    # jsonRequest = {
+    #     "size": 20,
+    #     "query": {
+    #         "match_phrase_prefix": {
+    #             "page_title": {
+    #                 "query": searchterm,
+    #                 "slop": 5,
+    #                 "max_expansions": 500
+    #             }
+    #         }
+    #     },
+    #     "_source": []
+    # }
 
-    # Search string to be executed
-    queryString = """SELECT art.page_title, art.slug, NULL, art.pageviews, art.is_adult_content, NULL, 
-                      NULL, COALESCE(art.redirect_page_id, art.id), %s
-                      FROM enterlink_articletable art 
-                      WHERE art.page_title LIKE %s 
-                      AND art.page_title !=%s 
-                      AND art.is_removed=0 
-                      ORDER BY art.pageviews DESC LIMIT %s"""
+    jsonRequest = {
+        "size": 20,
+        "query": {
+            "bool": {
+              "should": [
+                  {
+                      "multi_match": {
+                          "query": searchterm,
+                          "fields": [
+                              "page_title"
+                          ],
+                          "type": "phrase_prefix",
+                          "slop": 5,
+                          "max_expansions": 250
+                      }
+                  },
+                  {
+                      "multi_match": {
+                          "query": searchterm,
+                          "fields": [
+                              "page_title"
+                          ],
+                          "type": "phrase",
+                          "boost": 5
+                      }
+                  }
+              ],
+            }
+          },
+        "_source": []
+    }
 
-    # Execute the search
-    cursor.execute(queryString, (index, searchString, exclusionString, FETCH_LIMIT))
+    res = ELASTIC_OBJECT.search(index=ELASTICSEARCH_INDEX_NAME, body=jsonRequest)
+    # parsed_json = json.loads(res)
+    resultsList = []
+    for item in res['hits']['hits']:
+        sourceJSON = item['_source']
+        resultsList.append({"id": sourceJSON["id"], "canonical_id": sourceJSON["canonical_id"], "page_title": sourceJSON["page_title"],
+                            "score": item["_score"]})
 
-    # Pass the result by reference, essentially, to the caller. Used for threads.
-    resultItem[index] = cursor.fetchall()
+    return resultsList
+
 
 # Main search. Calls the normalSearch function with parallel threads
-def mainSearch(url_param, search_type, searchterm, FETCH_LIMIT, BLURB_CHAR_LIMIT):
+def mainSearch(url_param, search_type, searchterm, FETCH_LIMIT, BLURB_CHAR_LIMIT, passedLang='en'):
     try:
-        # Split the search term into multiple parts. For example, Travis Moore would be ["Travis", "Moore", "Travis Moore"]
-        # searchterm is added to handle exact matches
-        searchTermList = [searchterm] + searchterm.split(" ")
-        
-        # See how many elements are in the search list
-        try:
-            splitLength = len(searchTermList)
-        except:
-            splitLength = []
-
-        # Prepare variables for the parallel threads
-        threadlist = []
-        resultsList = [None] * splitLength
-        
-        # Create threads for each item in the search term list
-        for index, searchitem in enumerate(searchTermList):
-            thisThread = Thread(target=normalSearch, args=(searchitem, resultsList, index))
-            threadlist.append(thisThread)
-            thisThread.start()
-
-        # Set a timeout of 30 seconds
-        for threadItem in threadlist:
-            threadItem.join(30)
-
-        # Join all the thread results together
-        comboList = []
-        for resultItem in resultsList:
-            comboList += list(resultItem)  # [[i[0],i[1]] for i in resultItem]
-
-        # NFKD normalize the search terms so unicode ones are handled properly
-        searchTermList = [unicodedata.normalize('NFKD', x).encode('ASCII', 'ignore').lower() for x in searchTermList]
-
-        # Count the number of times a search term appears in a search result. For an example, "1960 Summer Olympics" has three terms:
-        # "1960", "Summer", and "Olympics". If "1964 Summer Olympics" appeared in the search result, it would have a matchcount of 2
-        # "1964 Winter Olympics" would only have a matchcount of 1. The purpose here it to rank the matches in terms if relevance.
-        # The search result for "1960 Summer Olympics" would have a matchcount of 3, and would rank the highest.
-        multiMatches = []
-        for index, item in enumerate(comboList):
-            matchcount = 0
-            failcount = 0
-            try:
-                for match in searchTermList:
-                    # Check how many times a search term appears in the search result
-                    if (match in unicodedata.normalize('NFKD', item[0]).encode('ASCII', 'ignore').lower()):
-                        matchcount += 1
-                    else:
-                        failcount += 1
-                # Make sure a match occurs at least once
-                if (splitLength <= 2):
-                    if (failcount > 0):
-                        raise
-                else:
-                    if (matchcount < 2):
-                        raise
-                # Append the match count and the length of the search result to the search result list
-                resultNugget = list(item) + [matchcount] + [len(item[0])]
-                multiMatches.append(resultNugget)
-
-            except:
-                continue
-
-
-        # Sort the search results. Adult content is pushed down first, exact matches, high numbers of matches are surfaced and shorter titles
-        # appear closer to the top.
-        # Sorted sort order is outside in, remember that
-        # adult_content [4], then exact match / word order / index [8], then title length [10], then # of matches
-        multiMatches = sorted(sorted(sorted(sorted(multiMatches, key=itemgetter(9), reverse=True), key=itemgetter(10)), key=itemgetter(8)), key=itemgetter(4))
-        result = multiMatches[:FETCH_LIMIT + 10]
+        # Get the results
+        theResults = normalSearch(searchterm)
+        print(len(theResults))
 
         # Remove duplicates from the search results
-        seenIDs, cleanedResult = [], []
-        for resultNugget in result:
-            theID = resultNugget[7]
+        seenIDs, cleanedResults = [], []
+        for resultNugget in theResults:
+            theCanonicalID = resultNugget["canonical_id"]
 
             # Mark the search result as seen so it can be checked for a duplicate later
-            if theID in seenIDs:
+            if theCanonicalID in seenIDs:
                 pass
             else:
-                seenIDs.append(theID)
-                cleanedResult.append(resultNugget)
+                seenIDs.append(theCanonicalID)
+                cleanedResults.append({"canonical_id": resultNugget["canonical_id"], "score": resultNugget["score"]})
 
         # Assign a new variable and extract the article ids from the sorted results
-        result = cleanedResult
-        resultIDs = [int(x[7]) for x in result]
+        resultIDs = [int(x["canonical_id"]) for x in cleanedResults]
         idCommas = str(resultIDs)[1:-1]
         idString = "(" + idCommas + ")"
 
         # Get the full data for each article
         cursor = connection.cursor()
         queryString = """SELECT art.page_title, art.slug, art.photo_thumb_url, art.pageviews, art.is_adult_content, art.blurb_snippet, 
-                              art.photo_url, art.id, art.ipfs_hash_current FROM enterlink_articletable art 
+                              art.photo_url, art.id, art.ipfs_hash_current, art.page_lang FROM enterlink_articletable art 
                               WHERE art.id IN %s
-                              ORDER BY FIELD(art.id, %s)""" % (idString, idCommas)
+                              ORDER BY art.is_adult_content ASC,
+                              IF(art.page_lang='%s', 1, 0) DESC, 
+                              FIELD(art.id, %s)
+                              """ % (idString, passedLang, idCommas )
 
         cursor.execute(queryString)
         result = cursor.fetchall()
@@ -451,10 +546,27 @@ def mainSearch(url_param, search_type, searchterm, FETCH_LIMIT, BLURB_CHAR_LIMIT
     # Return the search results
     return result
 
-# Generate the sitemap
-def dispatchSitemapCreation():
-    try:
-        management.call_command('refresh_sitemap')
-    except:
-        pass
-
+def updateElasticsearch(articleObject, ACTION_TYPE="PAGE_UPDATED_OR_CREATED"):
+    # NOTE: Elasticsearch is only indexing IDs, canonical IDs, and page titles. Technically, you only need to update in the following cases:
+    # 4) A new page is created
+    # 2) A page is removed
+    # 3) The page title changes
+    # 4) A merge / redirect
+    if articleObject.redirect_page_id is None:
+        canonicalID = articleObject.id
+    else:
+        canonicalID = articleObject.redirect_page_id
+    jsonRequest = {
+        "id": articleObject.id,
+        "page_title": articleObject.page_title,
+        "canonical_id": canonicalID,
+    }
+    # A new page is created
+    if ACTION_TYPE == "PAGE_UPDATED_OR_CREATED":
+        ELASTIC_OBJECT.index(index=ELASTICSEARCH_INDEX_NAME, body=jsonRequest, doc_type=ELASTICSEARCH_DOCUMENT_TYPE, id=articleObject.id)
+    # A page is removed
+    elif ACTION_TYPE == "PAGE_REMOVED":
+        ELASTIC_OBJECT.delete(index=ELASTICSEARCH_INDEX_NAME, body=jsonRequest, doc_type=ELASTICSEARCH_DOCUMENT_TYPE, id=articleObject.id)
+    # A merge / redirect
+    elif ACTION_TYPE == "MERGE_REDIRECT":
+        ELASTIC_OBJECT.index(index=ELASTICSEARCH_INDEX_NAME, body=jsonRequest, doc_type=ELASTICSEARCH_DOCUMENT_TYPE, id=articleObject.id)

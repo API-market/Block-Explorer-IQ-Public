@@ -62,7 +62,7 @@
 				{% if paginatedresult != "nopersonfoundwiththatname" and paginatedresult != "urlnoresult" %}
 					{% for paginatedresult in paginatedresult %}
 						<div class="fb_margin"></div>
-						<a class="searchresult-anchor" href="/wiki/{{paginatedresult.1}}/">
+						<a class="searchresult-anchor" href="/wiki/lang_{{ paginatedresult.9 }}/{{paginatedresult.1}}/">
 							<div class="searchresult-row">
 								<img class="search_avatar lazyloadable" src="{{paginatedresult.2}}" data-src="{{paginatedresult.6}}">
 								<div class="searchresult-right-container">
@@ -113,6 +113,11 @@
     $('#result').html("");
     $('#indexresult').html("");
     $('#mobileresult').html("");
+
+	$(document).on("scatterNavbarDone", function () {
+		$(".search-create-new-page").show();
+	});
+
 </script>
 	
 

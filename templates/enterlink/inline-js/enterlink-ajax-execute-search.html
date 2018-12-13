@@ -91,12 +91,15 @@ function ajax_execute_search_TinyMCE_cite(editorID){
     // Get the HTML that contains the citations
     var citeHTML = $('#form_tinymce_container_ifr').contents().find(".reference-container").html();
 
+    // Get the HTML that contains the media
+    var mediaHTML = $('#form_tinymce_container_ifr').contents().find(".media-gallery").html();
+
     // Get the selector for the citation menu
     var selectorPrefix = ".tinymce-linkpage-menu.tinymce-citesource-menu[data-mce-editor-id='" + editorID + "']";
     $.ajax({
         type: "POST",
         url: "/AJAX-REQUEST/AJAX_Search/tinymce-cite-source/",
-        data: {htmlblock: citeHTML, slug: ARTICLE_SLUG},
+        data: {cite_block: citeHTML, media_block: mediaHTML, slug: ARTICLE_SLUG},
         success: function (data) {
             // Insert the search results into the citation menu
             $(selectorPrefix + ' #linkpage_results.citepage-results').html(data);
@@ -180,10 +183,85 @@ function ajax_execute_search_TinyMCE_citepicture(editorID){
 
 
 }
+
+// Execute an AJAX search for an article
+function ajax_execute_search_merge(){
+    // Get the search term
+    var searchedterm ;
+    searchedterm = $(this).val();
+
+    // See if the search term is blank
+    if (searchedterm == "") {
+        // If the result is blank, fill in the result areas with empty strings
+        $('#mergeResult').html("");
+    }
+    else {
+        // Execute the search
+        $.ajax({
+            type: "GET",
+            url: "/AJAX-REQUEST/AJAX_Search/merge-page/",
+            data: {searchterm: searchedterm},
+            beforeSend: function( xhr ) {
+                // Loading indicator
+                $('#AJAX-SpinBox').show();
+            },
+            success: function (data) {
+                // Fill the areas with the search results
+                $('#mergeResult').html(data);
+            },
+            complete: function(){
+                // Hide the loading indicator
+                $('#AJAX-SpinBox').hide();
+            }
+        });
+    }
+}
+
+// Execute an AJAX search for an article creation
+function ajax_execute_search_create(){
+    // Get the search term
+    var searchedterm ;
+    searchedterm = $(this).val();
+
+    // See if the search term is blank
+    if (searchedterm == "") {
+        // If the result is blank, fill in the result areas with empty strings
+        $('#createResult').html("");
+    }
+    else {
+        // Execute the search
+        $.ajax({
+            type: "GET",
+            url: "/AJAX-REQUEST/AJAX_Search/createpage/",
+            data: {searchterm: searchedterm},
+            beforeSend: function( xhr ) {
+                // Loading indicator
+                $('#AJAX-SpinBox').show();
+                $("#CreatePage_Button").hide();
+            },
+            success: function (data) {
+                // Fill the areas with the search results
+                $('#createResult').html(data);
+                $("#CreatePage_Button").show();
+            },
+            complete: function(){
+                // Hide the loading indicator
+                $('#AJAX-SpinBox').hide();
+            }
+        });
+    }
+}
+
 // Bind the article search. Debounce allows a delay between keystrokes before the AJAX is sent.
-$(document).on('keyup', '#AJAXBox', jQuery.debounce(600, ajax_execute_search ));
+$(document).on('keyup', '#AJAXBox', jQuery.debounce(300, ajax_execute_search ));
 
 // Bind the article search for inserting in TinyMCE. Debounce allows a delay between keystrokes before the AJAX is sent.
-$(document).on('keyup', '#AJAXBox-TinyMCE', jQuery.debounce(600, ajax_execute_search_TinyMCE ));
+$(document).on('keyup', '#AJAXBox-TinyMCE', jQuery.debounce(300, ajax_execute_search_TinyMCE ));
+
+// Bind the merge search for TinyMCE. Debounce allows a delay between keystrokes before the AJAX is sent.
+$(document).on('keyup', '#AJAXBox-Merge', jQuery.debounce(300, ajax_execute_search_merge ));
+
+// Bind the merge search for TinyMCE. Debounce allows a delay between keystrokes before the AJAX is sent.
+$(document).on('keyup', '#CreateBox', jQuery.debounce(300, ajax_execute_search_create ));
 
 </script>

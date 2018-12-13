@@ -1,5 +1,5 @@
 {% load i18n %}
-<script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/jquery.js"></script>
+<script src="https://epcdn-vz.azureedge.net/static/js/jquery.js"></script>
 <script src="/static/js/jquery-qrcode-0.14.0.min.js"></script>
 <div rel='nofollow' id="shareURL_QR" onclick="printImg();" class="copyURL-btn embedURL-btn shareURL-btn-qr btn-default btn" target="_blank">
 
@@ -17,13 +17,13 @@
         ecLevel: 'Q',
         background: '#FFFFFF',
         size: 200,
-        text: 'https://everipedia.org/wiki/{{pageinfo.slug}}/',
+        text: 'https://everipedia.org/wiki/lang_{{ pageinfo.page_lang }}/{{pageinfo.slug}}/',
         mode: 0,
         quiet: 2,
         mSize: 0.1,
         mPosX: 0.5,
         mPosY: 0.5,
-        label: 'https://everipedia.org/wiki/{{pageinfo.slug}}/',
+        label: 'https://everipedia.org/wiki/lang_{{ pageinfo.page_lang }}/{{pageinfo.slug}}/',
         fontname: 'sans',
         fontcolor: '#000',
         image: null

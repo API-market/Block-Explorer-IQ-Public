@@ -1,0 +1,24 @@
+{% load i18n %}
+{% load enterlink_custom_tags %}
+<script>
+    function mergeRedirect(eThis){
+        var currentHash = $(eThis).attr('data-current-hash');
+        var articleLang = $(eThis).attr('data-article-lang');
+        var targetHash = $("#AJAXBox-Merge").val();
+
+        window.top.location.href = "/wiki/lang_" + articleLang + '/{{ARTICLE_SLUG}}' + "/edit/?from_hash=" + currentHash + "&to_hash=" + targetHash;
+    }
+</script>
+<div class="merge-label">{% trans "Merge this page into:" %}</div>
+<input placeholder="{% trans 'Search' %}" name="SearchBox"  autocomplete="off" id="AJAXBox-Merge" type="text" value="">
+<div id="mergeResult">
+    {% include "enterlink/ajaxresults.html" %}
+</div>
+<button id="mergebox-merge" class="merge-merge-button" data-article-lang="" data-current-hash="{{ ARTICLE_CURRENT_HASH }}" onclick="mergeRedirect(this);" type="button" name="mergemergebtn">{% trans "Merge" %}</button>
+
+<button id="mergebox-close" class="merge-close-button" onclick="hideMergePane();" type="button" name="closemergebtn">{% trans "Close" %}</button>
+<script>
+    function hideMergePane() {
+        $("#merge-box-wrapper").hide();
+    }
+</script>

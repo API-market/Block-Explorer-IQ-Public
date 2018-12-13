@@ -5,23 +5,23 @@
  */
 
 var tinyMCEtoolbarSize = 'large';
-var tool1 = "savepage submitpage undo redo | fontsizeselect fontselect forecolor backcolor | bold italic underline | code";
-var tool2 = "loaddraft | styleselect | outdent indent | bullist numlist table | citepicture | citesource | linkpage | image | helptour";
-var tool1nonblurb = "savepage submitpage undo redo | fontsizeselect fontselect forecolor backcolor | bold italic underline | code";
-var tool2nonblurb = "loaddraft | styleselect | outdent indent | bullist numlist table | citesource | linkpage | image | helptour";
+var tool1 = "savepage undo redo | fontsizeselect fontselect forecolor backcolor | bold italic underline | code | merge";
+var tool2 = "styleselect | outdent indent | bullist numlist table | citepicture | citesource | linkpage | image | helptour";
+var tool1nonblurb = "savepage undo redo | fontsizeselect fontselect forecolor backcolor | bold italic underline | code | merge";
+var tool2nonblurb = "styleselect | outdent indent | bullist numlist table | citesource | linkpage | image | helptour";
 var code_dialog_width_val = 600;
 
 if (isMobile && !isTablet) {
     tinyMCEtoolbarSize = 'small';
-    tool1 = "savepage submitpage loaddraft | editrollup | fontrollup | forecolor | backcolor | fontsizeselect | styleselect | bullist | numlist table | citepicture | citesource | linkpage | code";
+    tool1 = "savepage | editrollup | fontrollup | forecolor | backcolor | fontsizeselect | styleselect | bullist | numlist table | citepicture | citesource | linkpage | code";
     tool2 = "";
-    tool1nonblurb = "savepage submitpage loadpage | editrollup | fontrollup | forecolor | backcolor | fontsizeselect | styleselect | bullist | numlist table | citesource | linkpage";
+    tool1nonblurb = "savepage loadpage | editrollup | fontrollup | forecolor | backcolor | fontsizeselect | styleselect | bullist | numlist table | citesource | linkpage";
     tool2nonblurb = "";
     code_dialog_width_val = 300;
   }
 
 
-//this is the tinyMCE for the advanced_edit blurb
+//this is the tinyMCE for the edit blurb
 function tinymce_attach_blob() {
     tinymce.init({
         selector: '#form_tinymce_container',
@@ -30,8 +30,8 @@ function tinymce_attach_blob() {
         mode: "textareas",
         plugins: [
             "advlist autolink autoresize lists link image charmap print hr anchor pagebreak rollups",
-            "searchreplace wordcount visualchars code fullscreen citesource citepicture linkpage savepage submitpage",
-            "insertdatetime placeholder media nonbreaking table directionality helptour mention noneditable",
+            "searchreplace wordcount visualchars code fullscreen citesource citepicture linkpage savepage",
+            "insertdatetime placeholder media nonbreaking table directionality merge mention noneditable helptour",
             "emoticons template paste textcolor colorpicker textpattern image code fullpage"
         ],
         toolbar1: tool1,
@@ -85,6 +85,8 @@ function tinymce_attach_blob() {
                             // console.log($td.eq(2).text());
                             // console.log($td.eq(3).text());
                             // console.log($td.eq(4).text());
+                            // console.log($td.eq(5).text());
+                            // console.log($td.eq(6).text());
                             // console.log("===============================================");
                             return {
                                 id: ++i,
@@ -92,7 +94,9 @@ function tinymce_attach_blob() {
                                 username: $td.eq(1).text(),
                                 fbid: $td.eq(2).text(),
                                 linkcomment: $td.eq(3).text(),
-                                thumbnail_url: $td.eq(4).text()
+                                thumbnail_url: $td.eq(4).text(),
+                                page_ipfs: $td.eq(5).text(),
+                                page_lang: $td.eq(6).text()
                             }
                         }).get();
                         //alert(tbl);
@@ -121,12 +125,16 @@ function tinymce_attach_blob() {
                         var arrCiteInt = $.map(data[2], function (el) {
                             return el;
                         });
+                        var arrPageLang = $.map(data[3], function (el) {
+                            return el;
+                        });
                         for (i = 0; i < arrURLs.length; i++) {
                             dict.push({
                                 id: i,
                                 name: arrURLs[i],
                                 linkcomment: arrComment[i],
                                 cite_integer: arrCiteInt[i],
+                                page_lang: arrPageLang[i],
                                 username: ARTICLE_SLUG,
                                 fbid: FACEBOOK_ID,
                                 cited_by: CITED_BY,
@@ -149,6 +157,22 @@ function tinymce_attach_blob() {
                     var editorInstance = editor.dom.$('#tinymce');
                 }
             });
+
+            // Warn about lost changes
+            window.pageHasBeenEdited = false;
+            editor.on("keydown", function () {
+                window.pageHasBeenEdited = true;
+            });
+            window.addEventListener("beforeunload", function (e) {
+                console.log(e);
+                var check = true;
+                if (window.pageHasBeenEdited)
+                    check = confirm();
+                if (!check) {
+                    event.preventDefault();
+                    event.returnValue = ''; // Chrome requires returnValue to be set.
+                }
+            });
         }
     });
 }
@@ -167,8 +191,8 @@ function tinymce_attach_textarea_addlink_iframe(targetTag) {
         selector: editarea,
         plugins: [
                 "advlist autolink autoresize lists link image charmap print hr anchor pagebreak rollups",
-                "searchreplace wordcount visualchars code fullscreen citesource linkpage savepage submitpage",
-                "insertdatetime placeholder media nonbreaking table mention directionality helptour",
+                "searchreplace wordcount visualchars code fullscreen citesource linkpage savepage",
+                "insertdatetime placeholder media merge nonbreaking table mention merge directionality helptour",
                 "emoticons template paste textcolor colorpicker textpattern image code"
             ],
         toolbar1: tool1nonblurb,
@@ -203,7 +227,9 @@ function tinymce_attach_textarea_addlink_iframe(targetTag) {
                                          username: $td.eq(1).text(),
                                          fbid: $td.eq(2).text(),
                                          linkcomment: $td.eq(3).text(),
-                                         thumbnail_url: $td.eq(4).text()
+                                         thumbnail_url: $td.eq(4).text(),
+                                         page_ipfs: $td.eq(5).text(),
+                                         page_lang: $td.eq(6).text()
                                        }
                         }).get();
                         process(tbl);
@@ -270,14 +296,14 @@ function tinymce__edit_attach_infobox_iframe(targetTag) {
     // var theElements = "a[class|name|href|target|title|onclick|rel],script[language|type|src],iframe[src|style|width|height|scrolling|marginwidth|marginheight|frameborder],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name]"
     var theElements = "strong/b,br,em,a[class|name|href|target|title|onclick|rel],iframe[src|style|width|height|scrolling|marginwidth|marginheight|frameborder],img[class|src|border=0|alt|title|hspace|vspace|width|height|align|onmouseover|onmouseout|name]";
 
-    var ed = new tinymce.Editor(editarea, {  // Create new editor for each desired element on the screen
+    var ed = new tinyMCE.Editor(editarea, {  // Create new editor for each desired element on the screen
         extended_valid_elements : theElements,
 
         selector: editarea,
         plugins: [
             "advlist autolink autoresize lists link image charmap print hr anchor pagebreak rollups",
-            "searchreplace wordcount visualchars code fullscreen citesource linkpage savepage submitpage",
-            "insertdatetime placeholder media nonbreaking table mention directionality helptour link",
+            "searchreplace wordcount visualchars code fullscreen citesource linkpage savepage",
+            "insertdatetime placeholder media nonbreaking table mention merge directionality helptour link",
             "emoticons template paste textcolor colorpicker textpattern image code"
         ],
         toolbar1: tool1nonblurb,
@@ -311,7 +337,9 @@ function tinymce__edit_attach_infobox_iframe(targetTag) {
                                          username: $td.eq(1).text(),
                                          fbid: $td.eq(2).text(),
                                          linkcomment: $td.eq(3).text(),
-                                         thumbnail_url: $td.eq(4).text()
+                                         thumbnail_url: $td.eq(4).text(),
+                                         page_ipfs: $td.eq(5).text(),
+                                         page_lang: $td.eq(6).text()
                                        }
                         }).get();
                         process(tbl);

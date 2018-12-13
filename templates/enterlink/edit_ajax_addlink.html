@@ -1,7 +1,7 @@
 {% load i18n %}
 
 <linkpost style="">
-    <form class="addlink-form" action="/{{pageinfo.stripped_username}}/advanced_edit/" enctype="multipart/form-data" method="POST">
+    <form class="addlink-form" action="/{{pageinfo.stripped_username}}/edit/" enctype="multipart/form-data" method="POST">
         {% csrf_token %}
         <div id="addlink_container" class="addlink">
             <h5>{% trans 'Add a Link or File' %}</h5>

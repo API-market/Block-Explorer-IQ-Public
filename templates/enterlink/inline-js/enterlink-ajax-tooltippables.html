@@ -43,8 +43,24 @@ function initializeTooltippables(selectionObject) {
         // Get the article slug from the tooltip
         var articleSlug = $(this).data('username');
 
+        if (isNaN(articleSlug) == false){
+            articleSlug = articleSlug.toString();
+        }
+
+        // If language-naive, set to the page language
+        if (articleSlug.includes("lang_") == false){
+            articleSlug = "lang_" + document.documentElement.lang + "/" + articleSlug;
+            // console.log("Mod slug: " + articleSlug);
+        }
+
+        // Make sure there is not a leading slash
+        if(articleSlug.charAt(0) == '/'){
+            articleSlug = articleSlug.substr(1);
+        }
+
         // Set the URL for the hoverblurb
         var workingLink = "/hoverblurb/" + articleSlug + "/";
+
 
         // Keeps track so only one hoverblurb appears on the page at once
         var visitedOnce = false;

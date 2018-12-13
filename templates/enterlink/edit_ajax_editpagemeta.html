@@ -1,17 +1,18 @@
 {% load i18n %}
 {% load enterlink_custom_tags %}
 
-<div class="topic-select-instructions">{% trans 'Select the topic of this page' %}:</div>
+<div class="topic-select-instructions">{% trans "Select the topic of this page" %}:</div>
 <div class="page_type">{{pagemetaform.page_type}}</div>
 <!--<div class="subpage_type">{{pagemetaform.subpage_type}}</div>-->
 <span id="edit_remove" class="checkbox-container">
-    {% trans 'Remove page' %}: {{pagemetaform.is_removed}}
+    {% trans "Remove page" %}: {{pagemetaform.is_removed}}
     <label for="id_is_removed"></label>
 </span>
 <span id="edit_remove" class="checkbox-container">
-    {% trans 'Adult Content' %}: {{pagemetaform.is_adult_content}}
+    {% trans "Adult Content" %}: {{pagemetaform.is_adult_content}}
     <label for="id_is_adult_content"></label>
 </span>
+<div class="page_lang">{{pagemetaform.page_lang}}</div>
 <button id="pagemeta-closepagemetabtn" class="pagemeta-close-button" onclick="hidePageMetaPane();" type="button" name="closepagemetabtn">{% trans "Close" %}</button>
 
 

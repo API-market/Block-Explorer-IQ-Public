@@ -4,12 +4,14 @@ from bs4 import BeautifulSoup
 from collections import Counter
 from csscompressor import compress
 from django.template.loader import render_to_string
+from django.db.models import Q
 from django.utils.crypto import get_random_string
 from django.utils.html import strip_tags
-from django.utils.translation import ugettext
-from enterlink.model_functions import BAD_TAGS, linkCategorizer
-from enterlink.models import SeeAlso, ArticleTable, EditProposal
+from django.utils.translation import gettext, ugettext
+from enterlink.model_functions import BAD_TAGS, BAD_TAGS_BY_BEAUTIFULSOUP, BLURB_STRING_REPLACES, linkCategorizer, deBeautifySoup
+from enterlink.models import SeeAlso, ArticleTable, EditProposal, ArticleGroup
 from fbwiki.settings import AZURE_ACCOUNT_NAME, AZURE_ACCOUNT_KEY
+import HTMLParser
 from jsmin import jsmin
 from threading import Thread
 import difflib
@@ -18,7 +20,10 @@ import gzip
 import random, re, time, os, sys
 import StringIO
 import timeout_decorator
+from uuid import uuid4
 import urllib
+import urllib2
+import textwrap
 
 AMP_REGEXES = [r'<html.*</head>', r'</html', r' style=".*?"', r" style='.*?'", r' scope=".*?"', r' summary=".*?"',
                   r' item=".*?"', r" item='.*?'", r" align='.*?'", r' valign=".*?"', r' v=".*?"', r' rules=".*?"',
@@ -59,28 +64,36 @@ def get_see_also_units(blurbOverride=""):
         bhrefs = ""
 
 
+
+
     # Try to find the most commonly linked articles on the page
     try:
         # Count the most common articles
         commonArticles = Counter(bhrefs).most_common(6)
 
         # Get the 1st and 2nd most common articles linked on the page
-        firstLink = commonArticles[0][0]['href'].replace("/wiki", "").replace("https://www.everipedia.com/", "")
-        secondLink = commonArticles[1][0]['href'].replace("/wiki", "").replace("https://www.everipedia.com/", "")
+        linkList = [[commonArticles[0][0]['href'].replace(u"/wiki", u"").replace(u"https://www.everipedia.com/", u""), u""],
+                    [commonArticles[1][0]['href'].replace(u"/wiki", u"").replace(u"https://www.everipedia.com/", u""), u""]]
 
         # Format the links
-        while firstLink.startswith('/') or firstLink.startswith('.'):
-           firstLink = firstLink[1:]
-        if firstLink.endswith("/"):
-           firstLink = firstLink[:-1]
-        while secondLink.startswith('/') or secondLink.startswith('.'):
-           secondLink = secondLink[1:]
-        if secondLink.endswith("/"):
-           secondLink = secondLink[:-1]
+        for linkPair in linkList:
+            while linkPair[0].startswith('/') or linkPair[0].startswith('.'):
+                linkPair[0] = linkPair[0][1:]
+            if linkPair[0].endswith("/"):
+                linkPair[0] = linkPair[0][:-1]
+
+            if linkPair[0][0:5] == "lang_":
+                quickSplit = linkPair[0][5:].split("/")
+                linkPair[0] = quickSplit[1]
+                linkPair[1] = quickSplit[0]
+                print(linkPair)
+
+
+
 
         # Get the article objects from the links
-        firstPage = getTheArticleObject(firstLink)[1]
-        secondPage = getTheArticleObject(secondLink)[1]
+        firstPage = getTheArticleObject(linkList[0][0], passedLang=linkList[0][1])[1]
+        secondPage = getTheArticleObject(linkList[1][0], passedLang=linkList[1][1])[1]
 
         # Override the blurbs if applicable
         if (blurbOverride == ""):
@@ -90,7 +103,8 @@ def get_see_also_units(blurbOverride=""):
                secondPage = ''
             else:
                pass
-    except:
+    except Exception, e:
+        print(unicode(e))
         firstPage = ''
         secondPage = ''
 
@@ -102,10 +116,9 @@ def get_see_also_units(blurbOverride=""):
     return(single_page_units, related_page_ad_units, sitewide_ad_pick, firstPage, secondPage)
 
 # Render the table of contents for an article
-def Prerender_Table_Of_Contents(blurbChunk, articleSlug, templateType, pageName, flags=[], isAuthenticated=False):
-    print(templateType)
+def Prerender_Table_Of_Contents(blurbChunk, articleSlug, templateType, pageName, flags=[], isAuthenticated=False, articleObj=""):
     # Convert the article blurb into a BeautifulSoup
-    pageSoup = BeautifulSoup(blurbChunk, "html5lib")
+    pageSoup = BeautifulSoup(blurbChunk, "html5lib", from_encoding="utf-8")
     
     # Find all the headings and Wikipedia heading spans
     rawHeadings = pageSoup.find_all(['h1','h2','h3','h4','h5','h6' ])
@@ -150,11 +163,15 @@ def Prerender_Table_Of_Contents(blurbChunk, articleSlug, templateType, pageName,
     processedHeadings.append([ugettext("See Also"), "seeAlsoPanel", "seeAlsoPanel", "menu2-button", "new-message"])
 
     # Render the ToC to a string and return it
-    return render_to_string('enterlink/template_table_of_contents.html', {'rawHeadings': processedHeadings,
+    return render_to_string('enterlink/template_table_of_contents.html', {'rawHeadings': processedHeadings, 'PAGE_LANG': articleObj.page_lang,
                           'articleSlug': articleSlug, 'templateType': templateType, 'isAuthenticated': isAuthenticated})
 
 # Clean up the article HTML so it passes Google AMP validation, which is used for the mobile pages
-def ampSanitizer(inputBlurb, bypassRegex=False, hide_ads=True, pageSlug=""):
+def ampSanitizer(inputBlurb, bypassRegex=False, hide_ads=True, pageSlug="", artObj=""):
+    pageSlugEncoded = urllib.quote_plus(pageSlug)
+    currentIPFS = artObj.ipfs_hash_current
+    page_lang = artObj.page_lang
+
     try:
         # Create a copy of the blurb
         intermediate = inputBlurb
@@ -163,7 +180,7 @@ def ampSanitizer(inputBlurb, bypassRegex=False, hide_ads=True, pageSlug=""):
         if bypassRegex == False:
             for compileItem in AMP_REGEXES:
                 try:
-                    pat = re.compile(compileItem, re.IGNORECASE)
+                    pat = re.compile(compileItem, re.IGNORECASE|re.UNICODE)
                     intermediate = pat.sub('', intermediate)
                 except:
                     pass
@@ -175,13 +192,13 @@ def ampSanitizer(inputBlurb, bypassRegex=False, hide_ads=True, pageSlug=""):
         ampSoup = BeautifulSoup(ampSanitizedBlurb, "html5lib")
 
         # Find the HTML tag and convert it into a div
-        badWikipediaHTMLTag = ampSoup.findAll('html')[0]
-        badWikipediaHTMLTag.name = 'div'
+        badWikipediaHTMLTag = ampSoup.findAll(u'html')[0]
+        badWikipediaHTMLTag.name = u'div'
 
         # Replace <font> with <span>
         if bypassRegex == False:
             try:
-                replacementTags = [['font', 'span']]
+                replacementTags = [[u'font', u'span']]
 
                 for replaceTagPair in replacementTags:
                     listOfReplaces = ampSoup.findAll(replaceTagPair[0])
@@ -201,7 +218,7 @@ def ampSanitizer(inputBlurb, bypassRegex=False, hide_ads=True, pageSlug=""):
 
         # Remove empty <p> tags to make the text look cleaner
         try:
-            listOfBads = ampSoup.findAll('p', string=' ')
+            listOfBads = ampSoup.findAll(u'p', string=u' ')
             for item in listOfBads:
                 item.extract()
         except:
@@ -209,7 +226,7 @@ def ampSanitizer(inputBlurb, bypassRegex=False, hide_ads=True, pageSlug=""):
 
         # Remove tags with bad classes from the HTML
         try:
-            badClasses = ['mwe-math-fallback-image-inline', 'sortkey', 'mw-graph-img','oly_at__img', 'timeline-wrapper', 'PopUpMediaTransform']
+            badClasses = [u'mwe-math-fallback-image-inline', u'sortkey', u'mw-graph-img',u'oly_at__img', u'timeline-wrapper', u'PopUpMediaTransform']
 
             for badClass in badClasses:
                 listOfBadClasses = ampSoup.findAll(class_=badClass)
@@ -231,33 +248,43 @@ def ampSanitizer(inputBlurb, bypassRegex=False, hide_ads=True, pageSlug=""):
         # Handle the hoverblurbs
         try:
             # Create a BeautifulSoup object from the HTML
-            sanitizedSoup = BeautifulSoup(unicode(ampSoup), "html.parser")
+            sanitizedSoup = BeautifulSoup(unicode(ampSoup), "html.parser", from_encoding='utf-8')
 
             # List of all amp-lightboxes
             tooltipHoverblobs = []
 
             # Find the hoverblurb links
-            tooltippableBlurbs = sanitizedSoup.findAll('a', class_='tooltippable')
+            tooltippableBlurbs = sanitizedSoup.findAll(u'a', class_=u'tooltippable')
 
             # Construct the AMP-compatible hoverblurb pane
             for index, ttBlurb in enumerate(tooltippableBlurbs):
                 # Generate a random string for the tag ID
-                unique_id = get_random_string(length=10)
+                unique_id = get_random_string(length=10).decode('utf-8')
 
                 # Get the slug
-                strippedUsername = urllib.quote_plus(ttBlurb['data-username'])
+                # MAY ALREADY HAVE A lang_
+                try:
+                    strippedUsername = urllib2.unquote(ttBlurb[u'data-username']).encode('latin-1').decode('utf-8')
+                except:
+                    strippedUsername = ttBlurb[u'data-username']
+
+                try:
+                    strippedUsername = urllib.quote(strippedUsername.encode("utf-8")).replace(" ", "_").replace("%20", "_")
+                except:
+                    strippedUsername = strippedUsername
 
                 # Get the text of the blue link
                 anchorText = ''.join(ttBlurb.findAll( text = True )).strip()
 
                 # Open button for the pane
-                openButtonTag = sanitizedSoup.new_tag('button')
-                openButtonTag['on'] = 'tap:hvrblb-%s__%s' % (strippedUsername, unique_id)
-                openButtonTag['role'] = 'button'
-                openButtonTag['tabindex'] = 0
-                openButtonTag['aria-label'] = strippedUsername
-                openButtonTag['aria-labelledby'] = 'hvrblb-%s__%s' % (strippedUsername, unique_id)
-                openButtonTag['class'] = 'tooltippable'
+                openButtonTag = sanitizedSoup.new_tag(u'button')
+                # openButtonTag[u'on'] = u'tap:hvrblb-%s__%s' % (strippedUsername, unique_id)
+                openButtonTag[u'on'] = u'tap:hvrblb-%s__%s' % (strippedUsername, unique_id)
+                openButtonTag[u'role'] = u'button'
+                openButtonTag[u'tabindex'] = 0
+                openButtonTag[u'aria-label'] = strippedUsername
+                openButtonTag[u'aria-labelledby'] = u'hvrblb-%s__%s' % (strippedUsername, unique_id)
+                openButtonTag[u'class'] = u'tooltippable'
                 openButtonTag.string = anchorText
 
                 # Reconstruct with interior tags
@@ -272,134 +299,142 @@ def ampSanitizer(inputBlurb, bypassRegex=False, hide_ads=True, pageSlug=""):
                 ttBlurb.replace_with(openButtonTag)
 
                 # Construct the amp-lightbox
-                lightBoxTag = sanitizedSoup.new_tag('amp-lightbox')
-                lightBoxTag['id'] = 'hvrblb-%s__%s' % (strippedUsername, unique_id)
-                lightBoxTag['class'] = 'amp-hc'
-                lightBoxTag['tabindex'] = 0
-                lightBoxTag['role'] = 'button'
-                lightBoxTag['on'] = 'tap:hvrblb-%s__%s.close' % (strippedUsername, unique_id)
-                lightBoxTag['layout'] = 'nodisplay'
+                lightBoxTag = sanitizedSoup.new_tag(u'amp-lightbox')
+                lightBoxTag[u'id'] = u'hvrblb-%s__%s' % (strippedUsername, unique_id)
+                lightBoxTag[u'class'] = u'amp-hc'
+                lightBoxTag[u'tabindex'] = 0
+                lightBoxTag[u'role'] = u'button'
+                lightBoxTag[u'on'] = u'tap:hvrblb-%s__%s.close' % (strippedUsername, unique_id)
+                lightBoxTag[u'layout'] = u'nodisplay'
 
                 # Construct the amp-iframe
-                iframeTag = sanitizedSoup.new_tag('amp-iframe')
-                iframeTag['class'] = 'amp-hc'
-                iframeTag['sandbox'] = 'allow-same-origin allow-scripts allow-top-navigation'
-                iframeTag['layout'] = 'fill'
-                iframeTag['frameborder'] = '0'
-                iframeTag['scrolling'] = 'no'
-                iframeTag['src'] = 'https://www.everipedia.org/AJAX-REQUEST/AJAX_Hoverblurb/%s/?from-amp=1' % strippedUsername
+                iframeTag = sanitizedSoup.new_tag(u'amp-iframe')
+                iframeTag[u'class'] = u'amp-hc'
+                iframeTag[u'sandbox'] = u'allow-same-origin allow-scripts allow-top-navigation'
+                iframeTag[u'layout'] = u'fill'
+                iframeTag[u'frameborder'] = u'0'
+                iframeTag[u'scrolling'] = u'no'
+                iframeTag[u'src'] = u'https://www.everipedia.org/AJAX-REQUEST/AJAX_Hoverblurb/%s/' % strippedUsername
 
                 # Placeholder image (leave this here or it will cause stupid AMP problems)
-                placeholderTag = sanitizedSoup.new_tag('amp-img')
-                placeholderTag['layout'] = 'fill'
-                placeholderTag['src'] = 'https://epcdn-vz.azureedge.net/static/images/white_dot.png'
-                placeholderTag['placeholder'] = ''
+                placeholderTag = sanitizedSoup.new_tag(u'amp-img')
+                placeholderTag[u'layout'] = u'fill'
+                placeholderTag[u'src'] = u'https://epcdn-vz.azureedge.net/static/images/white_dot.png'
+                placeholderTag[u'placeholder'] = u''
+
+                # print("--------------------------")
+                # print(linkURLEncoded)
+                # print("--------------------------")
 
                 # Construct the amp-lightbox
                 iframeTag.append(placeholderTag)
                 lightBoxTag.append(iframeTag)
 
                 # Convert the amp-lightbox into a string
-                unicodeBlob = unicode(lightBoxTag.prettify())
+                unicodeBlob = unicode(lightBoxTag)
 
                 # Append the amp-lightbox raw HTML to the list
                 tooltipHoverblobs.append(unicodeBlob)
 
+
             # Handle the hoverlinks
-            tooltippableLinks = sanitizedSoup.findAll('a', class_='tooltippableCarat')
+            tooltippableLinks = sanitizedSoup.findAll(u'a', class_=u'tooltippableCarat')
             for index, ttLink in enumerate(tooltippableLinks):
                 # Generate a random string for the tag ID
                 unique_id = get_random_string(length=10)
 
                 # Encode the URL
-                linkURLEncoded = urllib.quote_plus(ttLink['data-username'])
                 try:
-                    if "everipedia.com" in ttLink['href']:
-                        quickSplit = ttLink['href'].replace('https://www.everipedia.com','').split('/')
-                    elif "everipedia.org" in ttLink['href']:
-                        quickSplit = ttLink['href'].replace('https://everipedia.org', '').split('/')
+                    linkURLEncoded = urllib.quote_plus(ttLink[u'data-username'])
+                except:
+                    linkURLEncoded = ttLink[u'data-username']
+
+                try:
+                    if u"everipedia.com" in ttLink[u'href']:
+                        quickSplit = ttLink[u'href'].replace(u'https://www.everipedia.com',u'').split(u'/')
+                    elif u"everipedia.org" in ttLink[u'href']:
+                        quickSplit = ttLink[u'href'].replace(u'https://everipedia.org', u'').split(u'/')
                     else:
-                        quickSplit = ttLink['href'].split('/')
+                        quickSplit = ttLink[u'href'].split(u'/')
                 except:
                     continue
 
                 # Get the text of the link
-                anchorText = ''.join(ttLink.findAll(text=True)).strip()
+                anchorText = u''.join(ttLink.findAll(text=True)).strip()
 
                 # Open button for the pane
-                openButtonTag = sanitizedSoup.new_tag('button')
-                openButtonTag['on'] = 'tap:hvrlnk-%s' % unique_id
-                openButtonTag['role'] = 'button'
-                openButtonTag['tabindex'] = 0
-                openButtonTag['aria-label'] = anchorText
-                openButtonTag['aria-labelledby'] = 'hvrlnk-%s' % unique_id
-                openButtonTag['class'] = 'tooltippableCarat'
+                openButtonTag = sanitizedSoup.new_tag(u'button')
+                openButtonTag[u'on'] = u'tap:hvrlnk-%s' % unique_id
+                openButtonTag[u'role'] = u'button'
+                openButtonTag[u'tabindex'] = 0
+                openButtonTag[u'aria-label'] = anchorText
+                openButtonTag[u'aria-labelledby'] = u'hvrlnk-%s' % unique_id
+                openButtonTag[u'class'] = u'tooltippableCarat'
                 openButtonTag.string = anchorText
-
                 # Replace the <a> with the <button>
                 ttLink.replace_with(openButtonTag)
 
                 # AMP-lightbox
-                lightBoxTag = sanitizedSoup.new_tag('amp-lightbox')
-                lightBoxTag['id'] = 'hvrlnk-%s' % unique_id
-                lightBoxTag['class'] = 'amp-hc'
-                lightBoxTag['tabindex'] = 0
-                lightBoxTag['role'] = 'button'
-                lightBoxTag['on'] = 'tap:hvrlnk-%s.close' % unique_id
-                lightBoxTag['layout'] = 'nodisplay'
+                lightBoxTag = sanitizedSoup.new_tag(u'amp-lightbox')
+                lightBoxTag[u'id'] = u'hvrlnk-%s' % unique_id
+                lightBoxTag[u'class'] = u'amp-hc'
+                lightBoxTag[u'tabindex'] = 0
+                lightBoxTag[u'role'] = u'button'
+                lightBoxTag[u'on'] = u'tap:hvrlnk-%s.close' % unique_id
+                lightBoxTag[u'layout'] = u'nodisplay'
 
                 # AMP-iframe
-                iframeTag = sanitizedSoup.new_tag('amp-iframe')
-                iframeTag['class'] = 'amp-hc'
-                iframeTag['height'] = '250'
-                iframeTag['sandbox'] = 'allow-same-origin allow-scripts allow-top-navigation'
-                iframeTag['layout'] = 'fill'
-                iframeTag['frameborder'] = '0'
-                iframeTag['scrolling'] = 'no'
-                iframeTag['src'] = 'https://www.everipedia.org/AJAX-REQUEST/AJAX_Hoverlink/%s/?from-amp=1&target_url=%s' % (pageSlug, linkURLEncoded)
+                iframeTag = sanitizedSoup.new_tag(u'amp-iframe')
+                iframeTag[u'class'] = u'amp-hc'
+                iframeTag[u'height'] = u'250'
+                iframeTag[u'sandbox'] = u'allow-same-origin allow-scripts allow-top-navigation'
+                iframeTag[u'layout'] = u'fill'
+                iframeTag[u'frameborder'] = u'0'
+                iframeTag[u'scrolling'] = u'no'
+                iframeTag[u'src'] = u'https://www.everipedia.org/AJAX-REQUEST/AJAX_Hoverlink/%s/?target_url=%s' % (currentIPFS, linkURLEncoded)
 
                 # Placeholder image (leave this here or it will cause stupid AMP problems)
-                placeholderTag = sanitizedSoup.new_tag('amp-img')
-                placeholderTag['layout'] = 'fill'
-                placeholderTag['src'] = 'https://epcdn-vz.azureedge.net/static/images/white_dot.png'
-                placeholderTag['placeholder'] = ''
-
+                placeholderTag = sanitizedSoup.new_tag(u'amp-img')
+                placeholderTag[u'layout'] = u'fill'
+                placeholderTag[u'src'] = u'https://epcdn-vz.azureedge.net/static/images/white_dot.png'
+                placeholderTag[u'placeholder'] = ''
                 # Construct the amp-lightbox
                 iframeTag.append(placeholderTag)
                 lightBoxTag.append(iframeTag)
 
                 # Convert the amp-lightbox into a string
-                unicodeBlob = unicode(lightBoxTag.prettify())
+                unicodeBlob = unicode(lightBoxTag)
 
                 # Append the amp-lightbox raw HTML to the list
                 tooltipHoverblobs.append(unicodeBlob)
 
+
             # Convert GIFs into amp-anim's
-            theImages = sanitizedSoup.findAll('img', {'data-mimetype': 'image/gif'})
+            theImages = sanitizedSoup.findAll(u'img', {u'data-mimetype': u'image/gif'})
             for index, gifTag in enumerate(theImages):
                 # Get the full and thumbnail URLs
-                if gifTag.has_attr('data-src'):
-                    fullImgSrc = gifTag['data-src']
-                    thumbImgSrc = gifTag['src']
+                if gifTag.has_attr(u'data-src'):
+                    fullImgSrc = gifTag[u'data-src']
+                    thumbImgSrc = gifTag[u'src']
                 else:
-                    fullImgSrc = gifTag['src']
-                    thumbImgSrc = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
+                    fullImgSrc = gifTag[u'src']
+                    thumbImgSrc = u'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
 
                 # Create the amp-anim
-                ampAnimTag = sanitizedSoup.new_tag('amp-anim')
-                ampAnimTag['width'] = "auto"
-                ampAnimTag['height'] = 250
-                ampAnimTag['layout'] = "fixed-height"
-                ampAnimTag['data-mimetype'] = "image/gif"
-                ampAnimTag['src'] = fullImgSrc
+                ampAnimTag = sanitizedSoup.new_tag(u'amp-anim')
+                ampAnimTag[u'width'] = u"auto"
+                ampAnimTag[u'height'] = 250
+                ampAnimTag[u'layout'] = u"fixed-height"
+                ampAnimTag[u'data-mimetype'] = u"image/gif"
+                ampAnimTag[u'src'] = fullImgSrc
 
                 # Placeholder image
-                placeholderTag = sanitizedSoup.new_tag('amp-img')
-                placeholderTag['layout'] = 'fill'
-                placeholderTag['width'] = 1
-                placeholderTag['height'] = 1
-                placeholderTag['src'] = thumbImgSrc
-                placeholderTag['placeholder'] = ''
+                placeholderTag = sanitizedSoup.new_tag(u'amp-img')
+                placeholderTag[u'layout'] = u'fill'
+                placeholderTag[u'width'] = 1
+                placeholderTag[u'height'] = 1
+                placeholderTag[u'src'] = thumbImgSrc
+                placeholderTag[u'placeholder'] = u''
 
                 # Construct the amp-anim
                 ampAnimTag.append(placeholderTag)
@@ -407,61 +442,64 @@ def ampSanitizer(inputBlurb, bypassRegex=False, hide_ads=True, pageSlug=""):
 
 
             # Collect all the non-GIF images
-            theImages = sanitizedSoup.findAll('img', {'data-mimetype': re.compile(r'^image\/(?!gif).*$')})
-            theImages.extend(sanitizedSoup.findAll('img', class_='caption-video'))
+            theImages = sanitizedSoup.findAll(u'img', {u'data-mimetype': re.compile(ur'^image\/(?!gif).*$', flags=re.UNICODE)})
+            theImages.extend(sanitizedSoup.findAll(u'img', class_=u'caption-video'))
+
 
             # Convert images to amp-img's
             for index, picTag in enumerate(theImages):
                 # Get the full and thumbnail URLs
-                if picTag.has_attr('data-src'):
-                    fullImgSrc = picTag['data-src']
-                    thumbImgSrc = picTag['src']
+                if picTag.has_attr(u'data-src'):
+                    fullImgSrc = picTag[u'data-src']
+                    thumbImgSrc = picTag[u'src']
                 else:
-                    fullImgSrc = picTag['src']
-                    thumbImgSrc = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
+                    fullImgSrc = picTag[u'src']
+                    thumbImgSrc = u'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
 
                 # Create the amp-img
-                ampImgTag = sanitizedSoup.new_tag('amp-img')
-                ampImgTag['width'] = "auto"
-                ampImgTag['height'] = 250
-                ampImgTag['layout'] = "fixed-height"
-                ampImgTag['data-mimetype'] = picTag['data-mimetype']
-                ampImgTag['src'] = fullImgSrc
+                ampImgTag = sanitizedSoup.new_tag(u'amp-img')
+                ampImgTag[u'width'] = u"auto"
+                ampImgTag[u'height'] = 250
+                ampImgTag[u'layout'] = u"fixed-height"
+                ampImgTag[u'data-mimetype'] = picTag[u'data-mimetype']
+                ampImgTag[u'src'] = fullImgSrc
 
                 # Placeholder image
-                placeholderTag = sanitizedSoup.new_tag('amp-img')
-                placeholderTag['layout'] = 'fill'
-                placeholderTag['width'] = 1
-                placeholderTag['height'] = 1
-                placeholderTag['src'] = thumbImgSrc
-                placeholderTag['placeholder'] = ''
+                placeholderTag = sanitizedSoup.new_tag(u'amp-img')
+                placeholderTag[u'layout'] = u'fill'
+                placeholderTag[u'width'] = 1
+                placeholderTag[u'height'] = 1
+                placeholderTag[u'src'] = thumbImgSrc
+                placeholderTag[u'placeholder'] = ''
 
                 # Construct the amp-img
                 ampImgTag.append(placeholderTag)
                 picTag.replace_with(ampImgTag)
 
             # Convert HTML5 Videos to amp-video's
-            theImages = sanitizedSoup.findAll('video')
+            theImages = sanitizedSoup.findAll(u'video')
             for index, videoTag in enumerate(theImages):
                 # Create the amp-video
-                ampVideoTag = sanitizedSoup.new_tag('amp-video')
-                ampVideoTag['width'] = "auto"
-                ampVideoTag['height'] = 250
-                ampVideoTag['layout'] = "fixed-height"
-                ampVideoTag['preload'] = "metadata"
-                ampVideoTag['data-mimetype'] = videoTag['data-mimetype']
+                ampVideoTag = sanitizedSoup.new_tag(u'amp-video')
+                ampVideoTag[u'width'] = u"auto"
+                ampVideoTag[u'height'] = 250
+                ampVideoTag[u'layout'] = u"fixed-height"
+                ampVideoTag[u'preload'] = u"metadata"
+                ampVideoTag[u'data-mimetype'] = videoTag[u'data-mimetype']
                 ampVideoTag.string = " "
 
                 # Create the source tag
-                sourceTag = sanitizedSoup.new_tag('source')
-                sourceTag['src'] = videoTag['src'] + "#t=0.1"
-                sourceTag['type'] = videoTag['data-mimetype']
+                sourceTag = sanitizedSoup.new_tag(u'source')
+                sourceTag[u'src'] = videoTag[u'src'] + u"#t=0.1"
+                sourceTag[u'type'] = videoTag[u'data-mimetype']
 
                 # Construct the amp-video HTML
                 ampVideoTag.append(sourceTag)
                 videoTag.replace_with(ampVideoTag)
 
-        except:
+        except Exception, e:
+            print("AMP SANITIZER ERROR")
+            print(unicode(e))
             sanitizedSoup = ampSoup
 
     except Exception, e:
@@ -469,40 +507,40 @@ def ampSanitizer(inputBlurb, bypassRegex=False, hide_ads=True, pageSlug=""):
         return([inputBlurb, ""])
 
     # Check for remaining images in the HTML and make sure they have heights and widths
-    allImages = sanitizedSoup.findAll(re.compile(r'(img|amp-img)'))
+    allImages = sanitizedSoup.findAll(re.compile(ur'(img|amp-img)', flags=re.UNICODE))
     for imgTag in allImages:
         useFixTag = False
-        if imgTag.has_attr('height'):
-            if imgTag['height'] == "100%":
-                imgTag['height'] = 275
+        if imgTag.has_attr(u'height'):
+            if imgTag[u'height'] == u"100%":
+                imgTag[u'height'] = 275
                 useFixTag = True
         else:
-            imgTag["height"] = 275
+            imgTag[u"height"] = 275
             useFixTag = True
 
-        if imgTag.has_attr('width'):
-            if imgTag['width'] == "100%":
-                imgTag['width'] = 275
+        if imgTag.has_attr(u'width'):
+            if imgTag[u'width'] == u"100%":
+                imgTag[u'width'] = 275
                 useFixTag = True
         else:
-            imgTag["width"] = 275
+            imgTag[u"width"] = 275
             useFixTag = True
 
         if useFixTag == True:
-            ampFixTag = sanitizedSoup.new_tag('div', **{'class':'amp-san-picfix'})
+            ampFixTag = sanitizedSoup.new_tag(u'div', **{u'class':u'amp-san-picfix'})
             contents = imgTag.replace_with(ampFixTag)
             ampFixTag.append(contents)
 
         # Cleans up remaining images (mainly from wikipedia imports). Will fail for GIFs
-        if imgTag.name == 'img':
+        if imgTag.name == u'img':
             try:
-                if not imgTag.has_attr('placeholder'):
+                if not imgTag.has_attr(u'placeholder'):
                     # Construct the amp-img
-                    ampImgTag = sanitizedSoup.new_tag('amp-img')
-                    ampImgTag['width'] = imgTag['width']
-                    ampImgTag['height'] = imgTag["height"]
-                    ampImgTag['layout'] = "fixed"
-                    ampImgTag['src'] = imgTag['src']
+                    ampImgTag = sanitizedSoup.new_tag(u'amp-img')
+                    ampImgTag[u'width'] = imgTag[u'width']
+                    ampImgTag[u'height'] = imgTag[u"height"]
+                    ampImgTag[u'layout'] = u"fixed"
+                    ampImgTag[u'src'] = imgTag[u'src']
 
                     # Replace the img with amp-img
                     imgTag.replace_with(ampImgTag)
@@ -510,7 +548,7 @@ def ampSanitizer(inputBlurb, bypassRegex=False, hide_ads=True, pageSlug=""):
                 pass
 
     # Remove duplicate body tags
-    resultCollection = sanitizedSoup.findAll("body")
+    resultCollection = sanitizedSoup.findAll(u"body")
     for item in resultCollection:
         item.unwrap()
 
@@ -518,21 +556,21 @@ def ampSanitizer(inputBlurb, bypassRegex=False, hide_ads=True, pageSlug=""):
     sanitizedText = unicode("".join([unicode(x) for x in sanitizedSoup.contents]))
 
     # Replace font tags with spans
-    pat = re.compile(r'<font.*?>?')
-    temp2 = pat.sub('<span>', sanitizedText)
-    pat = re.compile(r"</font>")
-    sanitizedText = pat.sub('</span>', temp2)
+    pat = re.compile(ur'<font.*?>?', flags=re.UNICODE)
+    temp2 = pat.sub(u'<span>', sanitizedText)
+    pat = re.compile(ur"</font>", flags=re.UNICODE)
+    sanitizedText = pat.sub(u'</span>', temp2)
 
     # Attribute cleanup
     if bypassRegex == False:
-        badAttributes = [r"border=\".*?\"", r"pic_id=\".*?\"", r'style=".*?"', r"style='.*?'", r'xml:lang=".*?"']
+        badAttributes = [ur"border=\".*?\"", ur"pic_id=\".*?\"", ur'style=".*?"', ur"style='.*?'", ur'xml:lang=".*?"']
         for badAttribute in badAttributes:
             pat = re.compile(badAttribute)
             sanitizedText = pat.sub('', sanitizedText)
 
     # Clean up tooltip attributes
-    sanitizedText = sanitizedText.replace(" style=\"color: #71b8e4;\"", "")
-    sanitizedText = sanitizedText.replace(" style=\"color: #71b8e4; font-face: bold; text-decoration: none;\"", "")
+    sanitizedText = sanitizedText.replace(u" style=\"color: #71b8e4;\"", u"")
+    sanitizedText = sanitizedText.replace(u" style=\"color: #71b8e4; font-face: bold; text-decoration: none;\"", u"")
 
     # Add all the amp-lightbox constructs to the list
     tooltipChunk = ""
@@ -546,7 +584,7 @@ def ampSanitizer(inputBlurb, bypassRegex=False, hide_ads=True, pageSlug=""):
     return [sanitizedText, tooltipChunk]
 
 # Split the blurb into two parts. This is for the mobile AMP page (one before the infobox, one after)
-def blurbSplitter(inputBlurb, truncateLimit=0, miniblurb=False):
+def blurbSplitter(inputBlurb, truncateLimit=0, miniblurb=False, minimizeHTML=False):
     try:
         # Create a BeautifulSoup
         blurbSoup = BeautifulSoup(inputBlurb, "html.parser")
@@ -575,29 +613,78 @@ def blurbSplitter(inputBlurb, truncateLimit=0, miniblurb=False):
         if not goodParaFound:
             raise
 
-        # Conver the first paragraph into a string, then remove it from the soup
+        # Optionally reduce the amount of HTML to make the db entry smaller (helps with indexing)
+        if minimizeHTML:
+            paraNugget = snippifier(paraNugget)
+
+        # Convert the first paragraph into a string, then remove it from the soup
         firstPara = unicode(paraNugget)
         paraNugget.extract()
+
 
         # Convert the remaining blurb into a string
         remainingChunk = unicode(blurbSoup)
     except:
         # If the first paragraph could not be found, just get the blurb itself
+
+        # Optionally reduce the amount of HTML to make the db entry smaller (helps with indexing)
+        if minimizeHTML:
+            handledBlurb = snippifier(blurbSoup)
+        else:
+            handledBlurb = inputBlurb
+
         try:
             if (truncateLimit == 0):
-                firstPara = unicode(inputBlurb)
+                firstPara = unicode(handledBlurb)
             else:
-                firstPara = unicode(inputBlurb[0:truncateLimit])
+                try:
+                    firstPara = unicode(handledBlurb[0:truncateLimit])
+                except:
+                    firstPara = unicode(handledBlurb)[0:truncateLimit]
             remainingChunk = ""
         except:
             if (truncateLimit == 0):
-                firstPara = unicode(inputBlurb.decode('utf-8'))
+                firstPara = unicode(handledBlurb.decode('utf-8'))
             else:
-                firstPara = unicode(inputBlurb[0:truncateLimit].decode('utf-8'))
+                try:
+                    firstPara = unicode(handledBlurb[0:truncateLimit].decode('utf-8'))
+                except:
+                    firstPara = unicode(handledBlurb)[0:truncateLimit].decode('utf-8')
             remainingChunk = ""
 
     # Return the first paragraph and the remaining blurb
     return [firstPara, remainingChunk]
+
+# Creates the blurb snippet by stripping unnecessary HTML
+STRIP_LIST = [u'sup', u'img']
+REPLACE_LIST =[(u"a", u"b"), (u"div", u"div"), (u"strong", u"b")]
+UNWRAP_LIST = [u"span"]
+def snippifier(inputSoup):
+    try:
+        for badTag in STRIP_LIST:
+            for tag in inputSoup.findAll(badTag):
+
+                tag.extract()
+    except Exception, e:
+        print(unicode(e))
+
+    try:
+        for badTag in REPLACE_LIST:
+            for tag in inputSoup.findAll(badTag[0]):
+                tag.name = badTag[1]
+                tag.attrs = None
+                tag.string = tag.get_text().strip()
+    except Exception, e:
+        print(unicode(e))
+
+    try:
+        for badTag in UNWRAP_LIST:
+            for tag in inputSoup.findAll(badTag):
+                tag.unwrap()
+    except Exception, e:
+        print(unicode(e))
+
+    return inputSoup
 
 # Refresh the Azure blob for the article
 @timeout_decorator.timeout(15, use_signals=False)
@@ -618,115 +705,193 @@ def refreshTemplateCacheBlockchain(ipfs_hash, htmlBlob, folderPath):
     return gZipBlob
 
 # Calculate the difference between two HTML strings
-def getDiffs(textBlob1, textBlob2):
-    # BeautifulSoup the first HTML string
-    blob1Soup = BeautifulSoup(textBlob1, "html.parser")
+def getDiffs(textBlob1, textBlob2, difftype='view'):
+    soup1 = BeautifulSoup(textBlob1, "html5lib")
+    soup2 = BeautifulSoup(textBlob2, "html5lib")
+    soup1.find('style').decompose()
+    soup2.find('style').decompose()
+    [s.extract() for s in soup1.findAll('script')]
+    [s.extract() for s in soup2.findAll('script')]
+    lines1 = unicode(soup1).splitlines()
+    lines2 = unicode(soup2).splitlines()
 
-    # Remove the <head> tag
-    theHead = blob1Soup.find_all("head")
-    theHead[0].extract()
+    if difftype == 'text':
+        lines1 = soup1.findAll(text=True)
+        lines2 = soup2.findAll(text=True)
+        return difflib.HtmlDiff().make_file(lines1, lines2)
 
-    # Remove problematic tags that BeautifulSoup tends to add
-    resultCollection = blob1Soup.findAll("html")
-    for item in resultCollection:
-        item.unwrap()
-    resultCollection = blob1Soup.findAll("head")
-    for item in resultCollection:
-        item.unwrap()
-    resultCollection = blob1Soup.findAll("body")
-    for item in resultCollection:
-        item.unwrap()
+    if difftype == 'html': 
+        return difflib.HtmlDiff().make_file(lines1, lines2)
 
-    # BeautifulSoup the second HTML string
-    blob2Soup = BeautifulSoup(textBlob2, "html.parser")
+    textdiff = list(difflib.ndiff(lines2, lines1))
 
-    # Remove the <head> tag
-    theHead = blob2Soup.find_all("head")
-    theHead[0].extract()
+    textdiff = [line for line in textdiff if line[0:2] != "? "]
 
-    # Remove problematic tags that BeautifulSoup tends to add
-    resultCollection = blob2Soup.findAll("html")
-    for item in resultCollection:
-        item.unwrap()
-    resultCollection = blob2Soup.findAll("head")
-    for item in resultCollection:
-        item.unwrap()
-    resultCollection = blob2Soup.findAll("body")
-    for item in resultCollection:
-        item.unwrap()
+    blacklist = ["<h1 class", "</h1>", "</div>", "<div class", "</section>", "<section class"]
+    for i, line in enumerate(textdiff):
+        # check blacklist
+        blacked = False
+        for black in blacklist:
+            start = line[2:].strip()
+            if start[0:len(black)] == black:
+                textdiff[i] = line[2:]
+                blacked = True
+        if blacked:
+            continue
 
-    # Convert the soups into HTML strings
-    textBlob1 = unicode(blob1Soup).replace("<!DOCTYPE html>", "")
-    textBlob2 = unicode(blob2Soup).replace("<!DOCTYPE html>", "")
+        if line[0:2] == "+ ":
+            textdiff[i] = '<span class="diff_add">' + line[2:] + '</span>'
+        elif line[0:2] == "- ":
+            textdiff[i] = '<span class="diff_sub">' + line[2:] + '</span>'
 
-    # Get a list of all the lines
-    text1_lines = textBlob1.splitlines()
-    text2_lines = textBlob2.splitlines()
+    textdiff = "\n".join(textdiff)
 
-    # Compare differences between the lines
-    d = difflib.HtmlDiff()
-    theFile = d.make_file(text2_lines, text1_lines)
-    return theFile
+    return textdiff
+
+
+def prettifyCorrector(inputBlurb):
+    try:
+        tempBlurb = inputBlurb.decode("utf-8")
+    except Exception as e:
+        print(unicode(e))
+        tempBlurb = inputBlurb
+
+    try:
+        tempBlurb = re.sub(r"^\s+", " ", tempBlurb, flags=re.MULTILINE)
+        tempBlurb = re.sub(r"\n </a>\n", u"</a>", tempBlurb, flags=re.MULTILINE)
+        tempBlurb = re.sub(r"\n", u"", tempBlurb, flags=re.MULTILINE)
+        tempBlurb = re.sub(r"</a> (,|\.|:|\'|\))", r"</a>\1", tempBlurb, flags=re.MULTILINE)
+    except Exception as e:
+        print(unicode(e))
+
+    try:
+        return tempBlurb.encode("utf-8")
+    except Exception as e:
+        print(unicode(e))
+
+    return inputBlurb
+
+def editorStructureCorrector(inputBlurb, passedLang="en"):
+    # Create a BeautifulSoup object from the input string
+    try:
+        pagesoup = BeautifulSoup(inputBlurb.decode('utf-8', 'ignore'), "html.parser")
+    except:
+        pagesoup = BeautifulSoup(inputBlurb, "html.parser")
+
+    # Add the page_lang tr if it is missing
+    pageMetaTable = pagesoup.findAll("table", class_='pagemeta-table')
+    pageMetaBody = pageMetaTable[0].findAll("tbody")
+    pageLangNode = pageMetaBody[0].findAll("tr", {"data-key": "page_lang"})
+    try:
+        assert(len(pageLangNode) > 0)
+    except:
+        # Create the tr
+        pageLangNode = pagesoup.new_tag(u'tr')
+        pageLangNode[u'class'] = u'data-pair'
+        pageLangNode[u'data-key'] = u'page_lang'
+
+        # Create the first td
+        nodeTdInnerOne = pagesoup.new_tag(u'td')
+        nodeTdInnerOne[u'class'] = u'no-edit'
+        nodeTdInnerOne.string = ugettext(u"Page Language")
+        pageLangNode.append(nodeTdInnerOne)
+
+        # Create the second td
+        nodeTdInnerTwo = pagesoup.new_tag(u'td')
+        nodeTdInnerTwo[u'class'] = u'no-edit meta-value'
+        nodeTdInnerTwo.string = passedLang
+        pageLangNode.append(nodeTdInnerTwo)
+
+        # Inject the new tag into the HTML
+        pageMetaBody[0].append(pageLangNode)
+        # print(pageMetaBody)
+
+    # Return the cleaned string
+    blobString = deBeautifySoup(pagesoup)
+    return blobString
 
 # Return the page object from either a slug or an IPFS hash
-def getTheArticleObject(theParam):
+def getTheArticleObject(theParam, passedLang=""):
     cleaned_url_param = theParam
+    possibleArticles = []
 
     # Test first for an IPFS hash
     if (cleaned_url_param[0:2] == "Qm"):
         try:
-            articleObject = ArticleTable.objects.get(ipfs_hash_current__iexact=cleaned_url_param)
+            possibleArticles = ArticleTable.objects.filter(Q(ipfs_hash_current__iexact=cleaned_url_param) | Q(ipfs_hash_parent__iexact=cleaned_url_param))
+            assert(len(possibleArticles) > 0)
         except:
+            possibleArticles = []
             try:
-                testProposal = EditProposal.objects.get(proposed_article_hash__iexact=cleaned_url_param)
-                articleObject = testProposal.article
-            except:
+                testProposal = EditProposal.objects.filter(Q(proposed_article_hash__iexact=cleaned_url_param) | Q(
+                            old_article_hash__iexact=cleaned_url_param) | Q(grandparent_hash__iexact=cleaned_url_param))
+                possibleArticles.append(testProposal[0].article)
+            except Exception, e:
                 pass
     # Try various other encodings of the slug to try to find a match
     else:
         try:
-            try:
-                cleaned_url_param = urllib.quote_plus(theParam.encode("utf8").replace(" ", "_"), safe="").replace("%252F", "%2F")
-                articleObject = ArticleTable.objects.get(slug__iexact=cleaned_url_param)
-            except:
-                try:
-                    cleaned_url_param = urllib.unquote(cleaned_url_param).replace("%25", "%")
-                    articleObject = ArticleTable.objects.get(slug__iexact=cleaned_url_param)
-                except:
-                    quickSplit = theParam.split(u"#")[0].split(u"%23")
-                    cleaned_url_param = quickSplit[0]
-                    if (cleaned_url_param[0] == '/'):
-                        cleaned_url_param = cleaned_url_param[1:]
-                    articleObject = ArticleTable.objects.get(slug__iexact=cleaned_url_param)
+            cleaned_url_param = urllib.quote_plus(theParam.encode("utf8").replace(" ", "_"), safe="").replace("%252F", "%2F")
+            possibleArticles = ArticleTable.objects.filter(Q(slug__iexact=theParam) | Q(slug__iexact=cleaned_url_param) |
+                                        Q(slug_alt__iexact=theParam) | Q(slug_alt__iexact=cleaned_url_param)).order_by('-creation_timestamp')
+            assert(len(possibleArticles) > 0)
         except:
             try:
-                articleObject = ArticleTable.objects.get(slug__iexact=theParam)
-                cleaned_url_param = theParam
+                cleaned_url_param = urllib.unquote(cleaned_url_param).replace("%25", "%")
+                possibleArticles = ArticleTable.objects.filter(Q(slug__iexact=cleaned_url_param) | Q(slug_alt__iexact=cleaned_url_param)).order_by('-creation_timestamp')
+                assert (len(possibleArticles) > 0)
             except:
-                try:
-                    articleObject = ArticleTable.objects.get(slug_alt__iexact=theParam)
-                    cleaned_url_param = articleObject.slug
-                except:
-                    try:
-                        cleaned_url_param = urllib.quote_plus(theParam.encode("utf8").replace(" ", "_"), safe="").replace("%252F", "%2F")
-                        articleObject = ArticleTable.objects.get(slug_alt__iexact=cleaned_url_param)
-                    except:
-                        try:
-                            cleaned_url_param = urllib.unquote(cleaned_url_param).replace("%25", "%")
-                            articleObject = ArticleTable.objects.get(slug_alt__iexact=cleaned_url_param)
-                        except:
-                            pass
+                quickSplit = theParam.split(u"#")[0].split(u"%23")
+                cleaned_url_param = quickSplit[0]
+                if (cleaned_url_param[0] == '/'):
+                    cleaned_url_param = cleaned_url_param[1:]
+                    possibleArticles = ArticleTable.objects.filter(Q(slug__iexact=cleaned_url_param) | Q(slug_alt__iexact=cleaned_url_param)).order_by('-creation_timestamp')
+                assert (len(possibleArticles) > 0)
+
+
+    # NEED TO DO ARTICLE GROUPING SHIT HERE, OR NOT. THE ARTICLETABLE ROW NEEDS TO HAVE A FOREIGN KEY TO AN ARTICLEGROUP
 
     # Check if the article has a redirect page and if so, return it
-    if (articleObject.redirect_page != None):
-        articleObject = articleObject.redirect_page
-        cleaned_url_param = articleObject.slug
+    redirectedPossibleArticles = []
+    for testArticle in possibleArticles:
+        if (testArticle.redirect_page != None):
+            redirectedPossibleArticles.append(testArticle.redirect_page)
+        else:
+            redirectedPossibleArticles.append(testArticle)
 
-    # Return the canonical slug and the article object
-    return ([cleaned_url_param, articleObject])
+    # There may be more than one language version of an article. By default, select the oldest one unless there is extra logic
+    returnedLang = ""
+    try:
+        for testArt in redirectedPossibleArticles:
+            if testArt.page_lang == passedLang:
+                articleObject = testArt
+                returnedLang = articleObject.page_lang
+                break
+        assert(articleObject)
+    except:
+        # Default article as fallback
+        articleObject = redirectedPossibleArticles[0]
+        returnedLang = articleObject.page_lang
+
+    cleaned_url_param = articleObject.slug
+
+
+    # Try to get alternate language versions for the article
+    altLangArticles = []
+    try:
+        artGroupObjects = ArticleGroup.objects.filter(group_id=articleObject.article_group_id).exclude(canonical_lang=returnedLang)
+        for groupObj in artGroupObjects:
+            if groupObj.canonical_lang != passedLang:
+                altLangArticles.append(groupObj.canonical_article)
+    except:
+        pass
+
+
+    # Return the canonical slug, the article object, and the other language variants of it, if any
+    return ([cleaned_url_param, articleObject, altLangArticles])
 
 # Parse the raw HTML for the page into a JSON dictionary
-def parseBlockchainHTML(htmlBlob, useAMP=False):
+def parseBlockchainHTML(htmlBlob, useAMP=False, articleObj=""):
     # Convert the HTML string into a BeautifulSoup
     theSoup = BeautifulSoup(htmlBlob, "html5lib")
 
@@ -754,6 +919,7 @@ def parseBlockchainHTML(htmlBlob, useAMP=False):
 
         # Convert the title node into a string
         itemValue = targetNode[0].encode_contents(indent_level=None, encoding='utf-8').strip()
+        itemValue = HTMLParser.HTMLParser().unescape(itemValue)
 
         # Store the page title
         pageTitle = itemValue
@@ -818,7 +984,8 @@ def parseBlockchainHTML(htmlBlob, useAMP=False):
         itemValue = targetNode[0].encode_contents(indent_level=None, encoding='utf-8').strip()
 
         # Store the data
-        blobBoxObject = itemValue
+        blobBoxObject = prettifyCorrector(itemValue)
+
         parsedDictionary.update({"BLOBBOX": blobBoxObject})
     except Exception as e:
         parsedDictionary.update({"BLOBBOX": ""})
@@ -856,14 +1023,15 @@ def parseBlockchainHTML(htmlBlob, useAMP=False):
                 addlSchemaItemprop = ""
 
             nonpluralObjects.append({"key": key, "value": value, "schema": schema, "addlSchematype": addlSchematype, "addlSchemaItemprop": addlSchemaItemprop})
+        parsedDictionary.update({"NONPLURAL_INFOBOXES": nonpluralObjects})
     except Exception as e:
         print("%s not found" % itemMappedName)
 
     # Find the plural infobox items
-    pluralNodes = theSoup.findAll("table", class_="ibox-item-plural")
+    pluralNodes = theSoup.select('table.ibox-item-plural')
     try:
         for pluralNode in pluralNodes:
-            keyNode = pluralNode.findAll(class_="ibox-plural-key-inner")
+            keyNode = pluralNode.findAll(class_=re.compile("ibox-plural-key-inner"))
             key = keyNode[0].encode_contents(indent_level=None, encoding='utf-8').strip()
 
             # Try to get schema.org properties
@@ -891,10 +1059,12 @@ def parseBlockchainHTML(htmlBlob, useAMP=False):
                 value = valueNode.encode_contents(indent_level=None, encoding='utf-8').strip()
                 pluralObjects.append({"key": key, "value": value, "schema": schema, "addlSchematype": addlSchematype, "addlSchemaItemprop": addlSchemaItemprop})
             pluralPackages.append({"key": key, "objects": pluralObjects})
-        parsedDictionary.update({"NONPLURAL_INFOBOXES": nonpluralObjects})
         parsedDictionary.update({"PLURAL_INFOBOX_PACKAGES": pluralPackages})
+        # print(pluralPackages)
     except Exception as e:
         print("%s not found" % itemMappedName)
+
+
 
     # Parse the media objects from the article
     parseTinyMCE_Media(theSoup, parsedDictionary)
@@ -927,9 +1097,20 @@ def parseBlockchainHTML(htmlBlob, useAMP=False):
         itemValue = targetNode[0].encode_contents(indent_level=None, encoding='utf-8').strip()
         blurbObject = itemValue
 
+        # Fix the prettify() problem
+        blurbObject = prettifyCorrector(itemValue)
+
+        # print(theLines)
+        # print("---------------------")
+        # print(blurbObject)
+        # print("=====================")
+        # print(repr(blurbObject))
+
         parsedDictionary.update({"BLURB": blurbObject})
     except Exception as e:
+        print(e)
         print("%s not found" % itemMappedName)
+
 
     # Generate a flag if there are no media objects
     if (len(parsedDictionary["MEDIA_OBJECTS"]) == 0):
@@ -939,9 +1120,9 @@ def parseBlockchainHTML(htmlBlob, useAMP=False):
 
     # Generate the table of contents depending on desktop / tablet or mobile
     if useAMP:
-        renderedTableOfContents = Prerender_Table_Of_Contents(blurbObject, pageMetaObjects['url_slug'], 'BLOCKCHAIN_AMP', pageTitle, flags, False)
+        renderedTableOfContents = Prerender_Table_Of_Contents(blurbObject, pageMetaObjects['url_slug'], 'BLOCKCHAIN_AMP', pageTitle, flags, False, articleObj=articleObj)
     else:
-        renderedTableOfContents = Prerender_Table_Of_Contents(blurbObject, pageMetaObjects['url_slug'], 'BLOCKCHAIN', pageTitle, flags, False)
+        renderedTableOfContents = Prerender_Table_Of_Contents(blurbObject, pageMetaObjects['url_slug'], 'BLOCKCHAIN', pageTitle, flags, articleObj=articleObj)
 
     # Update the Django context dictionary
     parsedDictionary.update({"tableOfContentsChunk": renderedTableOfContents})
@@ -952,19 +1133,19 @@ def parseBlockchainHTML(htmlBlob, useAMP=False):
     if useAMP:
         # Create the infobox HTML block and sanitize it for AMP-validation
         infoboxBlob = render_to_string('enterlink/infobox_amp_json_blockchain.html', parsedDictionary)
-        sanitizedInfoboxCollection = ampSanitizer(infoboxBlob, hide_ads=True, pageSlug=articleSlug)
+        sanitizedInfoboxCollection = ampSanitizer(infoboxBlob, hide_ads=True, pageSlug=articleSlug, artObj=articleObj)
         ampSanitizedInfobox = sanitizedInfoboxCollection[0] + sanitizedInfoboxCollection[1]
         parsedDictionary.update({"ampSanitizedInfobox": ampSanitizedInfobox})
 
         # Create the citation HTML block and sanitize it for AMP-validation
         linksetBlob = render_to_string('enterlink/template_amp_links_json_blockchain.html', parsedDictionary)
-        quickLinksetArr = ampSanitizer(linksetBlob, bypassRegex=True, hide_ads=True, pageSlug=articleSlug)
+        quickLinksetArr = ampSanitizer(linksetBlob, bypassRegex=True, hide_ads=True, pageSlug=articleSlug, artObj=articleObj)
         ampSanitizedLinkset = quickLinksetArr[0] + quickLinksetArr[1]
         parsedDictionary.update({"ampSanitizedLinkset": ampSanitizedLinkset})
 
         # Create the media gallery HTML block and sanitize it for AMP-validation
         photoGalleryBlob = render_to_string('enterlink/template_photos_amp_json_blockchain.html', parsedDictionary)
-        quickPhotoGalleryArr = ampSanitizer(photoGalleryBlob, hide_ads=True, pageSlug=articleSlug)
+        quickPhotoGalleryArr = ampSanitizer(photoGalleryBlob, hide_ads=True, pageSlug=articleSlug, artObj=articleObj)
         ampSanitizedPhotoGallery = quickPhotoGalleryArr[0] + quickPhotoGalleryArr[1]
         parsedDictionary.update({"ampSanitizedPhotoGallery": ampSanitizedPhotoGallery})
 
@@ -976,7 +1157,7 @@ def parseBlockchainHTML(htmlBlob, useAMP=False):
         # AMP-sanitize the main article text
         ampSanitizedBlurb, tooltipChunk = "", ""
         try:
-            sanitizedCollection = ampSanitizer(blurbObject, hide_ads=True, pageSlug=articleSlug)
+            sanitizedCollection = ampSanitizer(blurbObject, hide_ads=True, pageSlug=articleSlug, artObj=articleObj)
             ampSanitizedBlurb = sanitizedCollection[0]
             tooltipChunk = sanitizedCollection[1]
         except:
@@ -1017,7 +1198,7 @@ def parseBlockchainHTML(htmlBlob, useAMP=False):
 
         # AMP-sanitize the photo caption
         try:
-            quickCommentCollection = ampSanitizer(photoObject["caption"], hide_ads=True, pageSlug=articleSlug)
+            quickCommentCollection = ampSanitizer(photoObject["caption"], hide_ads=True, pageSlug=articleSlug, artObj=articleObj)
             ampSanitizedPhotoComment = quickCommentCollection[0] + quickCommentCollection[1]
             if (ampSanitizedPhotoComment is None):
                 ampSanitizedPhotoComment = ""
@@ -1140,6 +1321,7 @@ def parseTinyMCE_Citations(theSoup, parsedDictionary):
 
         parsedDictionary.update({"CITATION_OBJECTS": citationObjects})
     except Exception as e:
+        parsedDictionary.update({"CITATION_OBJECTS": []})
         print("%s not found" % itemMappedName)
 
     return parsedDictionary
@@ -1159,65 +1341,69 @@ def parseTinyMCE_Media(theSoup, parsedDictionary):
     try:
         targetNodes = theSoup.findAll("li", class_="media-row")
         for targetNode in targetNodes:
-            mediaNode = targetNode.findAll(class_="media-obj")
-
-            # Caption for the media object
-            captionNode = targetNode.findAll(class_="media-caption")
-            mediaCaption = captionNode[0].encode_contents(indent_level=None, encoding='utf-8').strip()
-
-            # Classification (IMAGE, YOUTUBE, VIDEO, etc)
-            classNode = targetNode.findAll(class_="media-class")
-            mediaClass = classNode[0].encode_contents(indent_level=None, encoding='utf-8').strip()
-
-            # MIME type
-            mimeNode = targetNode.findAll(class_="media-mime")
-            mediaMIME = mimeNode[0].encode_contents(indent_level=None, encoding='utf-8').strip()
-
-            # Timestamp
-            timestampNode = targetNode.findAll(class_="media-timestamp")
-            mediaTimestamp = timestampNode[0].encode_contents(indent_level=None, encoding='utf-8').strip()
-
-            # Check if there is an attribution
             try:
-                mediaAttributionNode = targetNode.findAll(class_="media-ogsource")
-                mediaAttributionURL = mediaAttributionNode[0].encode_contents(indent_level=None, encoding='utf-8').strip()
+                mediaNode = targetNode.findAll(class_="media-obj")
+
+                # Caption for the media object
+                captionNode = targetNode.findAll(class_="media-caption")
+                mediaCaption = captionNode[0].encode_contents(indent_level=None, encoding='utf-8').strip()
+
+                # Classification (IMAGE, YOUTUBE, VIDEO, etc)
+                classNode = targetNode.findAll(class_="media-class")
+                mediaClass = classNode[0].encode_contents(indent_level=None, encoding='utf-8').strip()
+
+                # MIME type
+                mimeNode = targetNode.findAll(class_="media-mime")
+                mediaMIME = mimeNode[0].encode_contents(indent_level=None, encoding='utf-8').strip()
+
+                # Timestamp
+                timestampNode = targetNode.findAll(class_="media-timestamp")
+                mediaTimestamp = timestampNode[0].encode_contents(indent_level=None, encoding='utf-8').strip()
+
+                # Check if there is an attribution
+                try:
+                    mediaAttributionNode = targetNode.findAll(class_="media-ogsource")
+                    mediaAttributionURL = mediaAttributionNode[0].encode_contents(indent_level=None, encoding='utf-8').strip()
+                except:
+                    mediaAttrURL = None
+
+                # Random ID (for unique identification on the front end), if needed. Changes every time the front end is reloaded
+                mediaUnique = ""
+
+                # Get the URL and the thumbnail URL depending on the category of the media
+                try:
+                    if mediaClass == "PICTURE" or mediaClass == "GIF":
+                        mediaURL = mediaNode[0]["src"]
+                        mediaThumb = mediaNode[0]["data-thumb"]
+                    elif mediaClass == "YOUTUBE":
+                        LOAD_YOUTUBE_JS = True
+                        mediaURL = mediaNode[0]["data-videourl"]
+                        mediaThumb = mediaNode[0]["src"]
+                    elif mediaClass == "NORMAL_VIDEO":
+                        LOAD_VIDEO_JS = True
+                        sourceNode = mediaNode[0].findAll("source")
+                        mediaURL = sourceNode[0]["src"]
+                        mediaThumb = ""
+                        mediaUnique = get_random_string(length=10)
+                    elif mediaClass == "AUDIO":
+                        LOAD_AUDIO_JS = True
+                        sourceNode = mediaNode[0].findAll("source")
+                        mediaURL = sourceNode[0]["src"]
+                        mediaThumb = ""
+                        mediaUnique = get_random_string(length=10)
+                except Exception, e:
+                    print(unicode(e))
+
+                # Add the media to the list
+                mediaObjects.append({"url": mediaURL, "thumb": mediaThumb, "caption": mediaCaption, "class": mediaClass,
+                                     "mime": mediaMIME, "timestamp": mediaTimestamp, "attribution_url": mediaAttributionURL, "unique": mediaUnique})
             except:
-                mediaAttrURL = None
-
-            # Random ID (for unique identification on the front end), if needed. Changes every time the front end is reloaded
-            mediaUnique = ""
-
-            # Get the URL and the thumbnail URL depending on the category of the media
-            try:
-                if mediaClass == "PICTURE" or mediaClass == "GIF":
-                    mediaURL = mediaNode[0]["src"]
-                    mediaThumb = mediaNode[0]["data-thumb"]
-                elif mediaClass == "YOUTUBE":
-                    LOAD_YOUTUBE_JS = True
-                    mediaURL = mediaNode[0]["data-videourl"]
-                    mediaThumb = mediaNode[0]["src"]
-                elif mediaClass == "NORMAL_VIDEO":
-                    LOAD_VIDEO_JS = True
-                    sourceNode = mediaNode[0].findAll("source")
-                    mediaURL = sourceNode[0]["src"]
-                    mediaThumb = ""
-                    mediaUnique = get_random_string(length=10)
-                elif mediaClass == "AUDIO":
-                    LOAD_AUDIO_JS = True
-                    sourceNode = mediaNode[0].findAll("source")
-                    mediaURL = sourceNode[0]["src"]
-                    mediaThumb = ""
-                    mediaUnique = get_random_string(length=10)
-            except:
-                pass
-
-            # Add the media to the list
-            mediaObjects.append({"url": mediaURL, "thumb": mediaThumb, "caption": mediaCaption, "class": mediaClass,
-                                 "mime": mediaMIME, "timestamp": mediaTimestamp, "attribution_url": mediaAttributionURL, "unique": mediaUnique})
+                print("Something went wrong parsing a media gallery item. Skipping it...")
 
         parsedDictionary.update({"MEDIA_OBJECTS": mediaObjects})
     except Exception as e:
         print(unicode(e))
+        parsedDictionary.update({"MEDIA_OBJECTS": []})
         print("%s not found" % itemMappedName)
 
     parsedDictionary.update({"PREFETCH_LOAD_YOUTUBE_JS": LOAD_YOUTUBE_JS})
@@ -1227,11 +1413,11 @@ def parseTinyMCE_Media(theSoup, parsedDictionary):
 
 # Strip white spaces
 def whiteSpaceStripper(inputText):
-    pat = re.compile(r'\t')
+    pat = re.compile(r'\t', flags=re.UNICODE)
     temp = pat.sub('', inputText)
-    pat = re.compile(r'\n')
+    pat = re.compile(r'\n', flags=re.UNICODE)
     temp2 = pat.sub('', temp)
-    pat = re.compile(r' +')
+    pat = re.compile(r' +', flags=re.UNICODE)
     result = pat.sub(' ', temp2)
     result = result.strip()
     return result
@@ -1313,7 +1499,7 @@ def ipfs_to_uint64_trunc(hash):
     return quickResult
 
 
-def getCleanStrippedSlug(inputString):
+def getCleanStrippedSlug(inputString, allowDupes=True):
     new_slug_name = inputString
 
     # Remove dots and whitespaces from the provided slug
@@ -1333,16 +1519,22 @@ def getCleanStrippedSlug(inputString):
     while True:
         if (counter == 0):
             if ArticleTable.objects.filter(slug=testname).exists():
-                counter = counter + 1
-                continue
+                if allowDupes:
+                    counter = counter + 1
+                    continue
+                else:
+                    raise ValueError('Duplicate slugs with numbers is not allowed due to parameter')
             else:
                 new_slug_stripped = testname
                 break
         else:
             new_slug_stripped = testname + "-" + unicode(counter)
             if ArticleTable.objects.filter(slug=new_slug_stripped).exists():
-                counter = counter + 1
-                continue
+                if allowDupes:
+                    counter = counter + 1
+                    continue
+                else:
+                    raise ValueError('Duplicate slugs with numbers is not allowed due to parameter')
             else:
                 break
 
@@ -1356,3 +1548,37 @@ def getCleanStrippedSlug(inputString):
     # Return the slug
     return theSlugStripped
 
+# Create a redirect to the specified page
+def createRedirect(new_title, target_page_hash):
+    # Get the article
+    theArticle = getTheArticleObject(target_page_hash)[1]
+
+    # Get a random pseudo-hash
+    psuedoHash = unicode(uuid4()) + unicode(int(time.time()))
+
+    # Create a URL slug from the page title
+    newSlug = getCleanStrippedSlug(new_title, allowDupes=False)
+
+    try:
+        newArticle = ArticleTable.objects.create(ipfs_hash_parent="REDIRECT",
+                                                 ipfs_hash_current=psuedoHash,
+                                                 page_title=new_title,
+                                                 blurb_snippet=None,
+                                                 page_type=None,
+                                                 page_sub_type=None,
+                                                 creation_timestamp=None,
+                                                 lastmod_timestamp=None,
+                                                 slug=newSlug,
+                                                 slug_alt=urllib.quote(newSlug.encode("utf-8")).replace(" ", "_").replace("%20", "_"),
+                                                 photo_url=None,
+                                                 photo_thumb_url=None,
+                                                 is_removed=0,
+                                                 is_removed_from_index=1,
+                                                 pageviews=0,
+                                                 bing_index_override=0,
+                                                 is_adult_content=0,
+                                                 is_new_page=False,
+                                                 redirect_page=theArticle,
+                                                 page_lang=theArticle.page_lang)
+    except:
+        pass

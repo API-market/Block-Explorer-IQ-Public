@@ -7,7 +7,7 @@ background-color:#f5f8fa;
 font-size:15px;
 }
 
-.infobox-add-button, .infobox-closeinfoboxbtn, #pagemeta-closepagemetabtn, #mainphotoedit-close-btn {
+.infobox-add-button, #infobox-closeinfoboxbtn, #pagemeta-closepagemetabtn, #mainphotoedit-close-btn, #mergebox-close, #mergebox-merge {
 width:100%;
 padding:5px;
 margin-top:15px;
@@ -20,10 +20,15 @@ color:#fff;
 font-size:15px;
 }
 
-.infobox-add-button:hover, .infobox-closeinfoboxbtn:hover, #pagemeta-closepagemetabtn:hover, #mainphotoedit-close-btn:hover {
+.infobox-add-button:hover, #infobox-closeinfoboxbtn:hover, #pagemeta-closepagemetabtn:hover,
+#mainphotoedit-close-btn:hover, #mergebox-close:hover, #mergebox-merge:hover  {
 color:#FFF;
 background-color:#7bc5f6;
 border-color:#7bc5f6
+}
+
+#mergebox-close{
+	margin-top: 5px;
 }
 
 #pagemeta-closepagemetabtn{
@@ -196,7 +201,7 @@ border-radius: 4px;
 }
 
 
-.bio-ct-infobox .infobox_edit_list .edit-infobox-line{
+.bio-ct-infobox #infobox_edit_list .edit-infobox-line{
 float: left;
 width: 100%;
 display: block;

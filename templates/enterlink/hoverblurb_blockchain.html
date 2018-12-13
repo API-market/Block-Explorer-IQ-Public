@@ -64,7 +64,8 @@
             font-size:36px;
             display:block;
             text-decoration: none;
-            color:#222;
+            color:#555;
+            font-weight: bold;
             margin-top:0px;
         }
 
@@ -76,7 +77,7 @@
         }
 
         #hoverblurb .hoverdescription {
-            font-size:28px;
+            font-size:33px;
             color: #555 !important;
             cursor:pointer;
             border:0px solid red;
@@ -85,9 +86,9 @@
             pointer-events:none;
             font-family: 'Lora', Garamond, Georgia;
             line-height: 1.4;
-{#            text-align: left;#}
-            text-align: justify;
-    text-justify: inter-word;
+            text-align: left;
+            /*text-align: justify;*/
+            /*text-justify: inter-word;*/
         }
 
         #hoverblurb .hoverdescription .blurbholder{
@@ -109,7 +110,7 @@
 
         #hoverblurb .hovertitle{
             border-bottom: 0px solid #e5e5e5;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
 
         }
         #hoverblurb > .row {
@@ -210,7 +211,7 @@
 
 	<script type='text/javascript'>
      function newWindow() {
-         window.top.location.href = "../../../../wiki/{{ ARTICLE_SLUG }}/";
+         window.top.location.href = "../../../../wiki/lang_{{ ARTICLE_LANG }}/{{ ARTICLE_SLUG }}/";
      }
     </script>
 </head>
@@ -219,7 +220,7 @@
 		<div class="row">
             {% if ARTICLE_THUMB_URL|default_if_none:"" %}
 			    <div class="col-md-12 hovertitle" onclick="newWindow();">
-                    <a class="hovername" href="../../../../wiki/{{ ARTICLE_SLUG }}/" onclick="return false;">
+                    <a class="hovername" href="../../../../wiki/lang_{{ ARTICLE_LANG }}/{{ ARTICLE_SLUG }}/" onclick="return false;">
                         {{ARTICLE_NAME|truncatechars:52}}<span class="icon icon-export"></span>
                     </a>
                 </div>
@@ -234,7 +235,7 @@
                 </div>
             {% else %}
                 <div class="col-md-12 hovertitle" onclick="newWindow();">
-                    <a class="hovername" href="../../../../wiki/{{ ARTICLE_SLUG }}/" onclick="return false;">
+                    <a class="hovername" href="../../../../wiki/lang_{{ ARTICLE_LANG }}/{{ ARTICLE_SLUG }}/" onclick="return false;">
                         {{ARTICLE_NAME|truncatechars:52}}<span class="icon icon-export"></span>
                     </a>
                 </div>

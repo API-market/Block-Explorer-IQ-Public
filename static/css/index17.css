@@ -237,7 +237,7 @@ body {
 
 .modernage-ct h1 {
 	font-weight:800;
-	font-family:Open Sans;
+	font-family: 'Poppins', Helvetica, Arial;
 	font-size:40px;
 }
 
@@ -282,7 +282,7 @@ hr.separator-break.separator-accent {
 .feature-tile {
 	text-align:center;
 	padding:20px;
-	font-family:Open Sans;
+	font-family: 'Poppins', Helvetica, Arial;
 }
 
 .feature-tile img {
@@ -334,7 +334,7 @@ hr.separator-break.separator-accent {
 .vision-ct h2 {
 	font-weight:800;
 	color:#FFF;
-	font-family:Open Sans;
+	font-family: 'Poppins', Helvetica, Arial;
 	font-size:32px;
 }
 
@@ -342,7 +342,7 @@ hr.separator-break.separator-accent {
 	color: #FFF;
 	font-size: 22px;
 	font-weight: 600;
-	font-family: Open Sans;
+	font-family: 'Poppins', Helvetica, Arial;
 }
 
 .vision-ct p {
@@ -378,7 +378,7 @@ hr.separator-break.separator-accent {
 
 .telegram-ct h2 {
 	font-weight:800;
-	font-family:Open Sans;
+	font-family: 'Poppins', Helvetica, Arial;
 	font-size:32px;
 }
 
@@ -432,7 +432,7 @@ hr.separator-break.separator-accent {
 .team-ct h2 {
 	font-weight:800;
 	color:#FFF;
-	font-family:Open Sans;
+	font-family: 'Poppins', Helvetica, Arial;
 	font-size:32px;
 }
 
@@ -440,7 +440,7 @@ hr.separator-break.separator-accent {
 	color: #FFF;
 	font-size: 18px;
 	font-weight: 600;
-	font-family: Open Sans;
+	font-family: 'Poppins', Helvetica, Arial;
 }
 
 .team-ct p {

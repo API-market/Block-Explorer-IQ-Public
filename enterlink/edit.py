@@ -40,8 +40,10 @@ from django.views.decorators.http import require_GET, require_POST
 from enterlink.forms import NewlinkFileForm, LinkForm, PageMetaForm
 from enterlink.models import ArticleTable, HashCache, SchemaObject, EditProposal, SavedDraft
 from enterlink.model_functions import linkCategorizer, profileLinkTester, dupeLinkDetector, badLinkSanitizer, \
-    entireArticleHTMLSanitizer
-from enterlink.view_functions import getTheArticleObject, parseBlockchainHTML, parseTinyMCE_Citations, getDiffs, ipfs_to_uint64_trunc, encodeNameSwappedEndian, getCleanStrippedSlug
+    entireArticleHTMLSanitizer, updateElasticsearch
+from enterlink.view_functions import getTheArticleObject, parseBlockchainHTML, parseTinyMCE_Citations, getDiffs, ipfs_to_uint64_trunc, \
+    encodeNameSwappedEndian, getCleanStrippedSlug, prettifyCorrector, editorStructureCorrector, deBeautifySoup, blurbSplitter, \
+    whiteSpaceStripper
 from enterlink.media_functions import processPhoto, addMediaImage, fetchMetaThumbnail
 from fbwiki.settings import AWS_STORAGE_BUCKET_NAME, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
 import datetime
@@ -55,6 +57,7 @@ from mimetypes import MimeTypes
 import requests
 import StringIO
 import time
+import difflib
 
 # Placeholders for various forms
 PLACEHOLDER_LIST = [
@@ -92,7 +95,7 @@ def create_page(request):
         pagetitle = request.GET.get("newtitle")
         assert(pagetitle is not None)
     except:
-        pagetitle = request.POST.get("SearchBox")
+        pagetitle = request.POST.get("CreateBox")
 
     # Create a URL slug from the page title
     newSlug = getCleanStrippedSlug(pagetitle)
@@ -101,9 +104,11 @@ def create_page(request):
     hashObject = HashCache.objects.get(ipfs_hash=DEFAULT_PAGE_HASH)
 
     # Fill in the template page with the title and language-specific headers
-    replaceList = [("everipedia-blank-page-template", newSlug), ('<h1 class="page-title">', '<h1 class="page-title">%s' % pagetitle),
+    replaceList = [("everipedia-blank-page-template", newSlug), ('<h1 class="page-title">', '<h1 class="page-title">%s' % pagetitle), ("Page Language", ugettext("Page Language")),
                    ("Page Type", ugettext("Page Type")), ("Removed From Site", ugettext("Removed From Site")), ("Adult Content", ugettext("Adult Content")),
-                   ("Media Gallery", ugettext("Media Gallery")), ("References and Citations", ugettext("References and Citations"))]
+                   ("Media Gallery", ugettext("Media Gallery")), ("References and Citations", ugettext("References and Citations")),
+                   ("XXXXX_NEW_PAGE_LANGUAGE_CODE_XXXXX", translation.get_language()),
+                   ("05/01/2018 01:41:46 AM UTC", unicode(datetime.datetime.now(tz=pytz.utc)))]
     alteredDefaultHTML = hashObject.html_blob
     for replaceItem in replaceList:
         alteredDefaultHTML = alteredDefaultHTML.replace(replaceItem[0], replaceItem[1])
@@ -124,7 +129,7 @@ def create_page(request):
     HashCache.objects.create(ipfs_hash=ipfs_created_page, timestamp=datetime.datetime.now(tz=pytz.utc), html_blob=alteredDefaultHTML, articletable=newArticle)
 
     # Redirect to the edit page
-    return HttpResponseRedirect("/wiki/%s/advanced_edit/" % newSlug)
+    return HttpResponseRedirect(u"/wiki/lang_%s/%s/edit/" % (translation.get_language(), newSlug))
 
 
 
@@ -156,6 +161,223 @@ def sync_to_chain(request):
     # Return the page HTML
     return HttpResponse("Complete")
 
+
+# Edit page
+@csrf_exempt
+def edit(request, url_param="everipedia-blank-page-template", lang_param=""):
+    MERGED_FROM_HASH = ""
+
+    # Pull the article HTML from the cache
+    if "from_hash" in request.GET:
+        fromHash = request.GET.get("from_hash")
+        toHash = request.GET.get("to_hash")
+
+        if toHash == "":
+            return HttpResponseRedirect(u"/wiki/lang_%s/%s/edit/" % (lang_param, url_param))
+
+        MERGED_FROM_HASH = fromHash
+
+        # Fetch the article object from the URL parameter
+        cleanedParamList = getTheArticleObject(toHash)
+        articleObject = cleanedParamList[1]
+
+        if articleObject.slug != url_param and articleObject.slug_alt != url_param:
+            return HttpResponseRedirect(u"/wiki/lang_%s/%s/edit/?from_hash=%s&to_hash=%s" % (articleObject.page_lang, articleObject.slug, fromHash, toHash))
+
+        blobHTML = merge_page(fromHash, toHash)
+
+    else:
+        # Fetch the article object from the URL parameter
+        cleanedParamList = getTheArticleObject(url_param, passedLang=lang_param)
+        articleObject = cleanedParamList[1]
+        hashObject = HashCache.objects.get(ipfs_hash=articleObject.ipfs_hash_current)
+        blobHTML = hashObject.html_blob
+
+    # Check if the article is being submitted
+    if (request.GET.get('submission') == '1'):
+        # Get the POSTed article HTML
+        innerHTMLBlock = request.POST.get("blurbHTML")
+
+        # Clean up and canonicalize the submitted HTML.
+        innerHTMLBlock = entireArticleHTMLSanitizer(innerHTMLBlock)
+
+        # Remove temporary HTML elements that were injected into the TinyMCE in order to make the page more interactive
+        theSoup = BeautifulSoup(innerHTMLBlock, "html.parser")
+        try:
+            badClasses = [ 'add-row-btn', 'button-wrap', 'add-new-ibox', 'add-heading-wrap',  ]
+            for badClass in badClasses:
+                listOfBads = theSoup.findAll(class_=badClass)
+                for item in listOfBads:
+                    item.extract()
+        except:
+            pass
+
+        # Update the timestamp
+        theTimeStamp = unicode(datetime.datetime.now(tz=pytz.utc))
+        modTimeParent = theSoup.find_all("tr", attrs={"data-key": "last_modified"})
+        modTimeTds = modTimeParent[0].find_all("td")
+        modTimeTds[1].string = theTimeStamp
+
+        # quickTitleNode = theSoup.findAll("h1")
+        # print(unicode(quickTitleNode[0]))
+
+        # Convert the BeautifulSoup object back into a string
+        innerHTMLBlock = unicode(theSoup)
+
+
+        # quickBody = theSoup.findAll(class_="blurb-wrap")
+        # print(quickBody[0])
+        # raise
+
+        # Render the article HTML and its wrapper as a string and save it to the variable
+        resultHTML = render_to_string('enterlink/blockchain_article_wrap.html', {'innerHTMLBlock': innerHTMLBlock,})
+
+        # Connect to the IPFS daemon and add the article HTML
+        api = ipfsapi.connect('127.0.0.1', 5001)
+        ipfs_hash_new = api.add_str(resultHTML)
+        print("THE OFFICIAL NEW HASH IS: %s" % ipfs_hash_new)
+
+        # Cache the article HTML
+        try:
+            hashTable = HashCache.objects.create(ipfs_hash=ipfs_hash_new, timestamp=theTimeStamp,
+                                                 html_blob=resultHTML, articletable=articleObject)
+        except:
+            return HttpResponse("NO CHANGES DETECTED!")
+
+        # Set some variables
+        ipfs_hash_old = articleObject.ipfs_hash_current
+        ipfs_hash_grandparent = articleObject.ipfs_hash_parent
+
+        # Need to switch this later. MAKE SURE TO FIX BLURB COMPARE TOO
+        # return JsonResponse({"newIPFS": ipfs_hash_new, "oldIPFS": ipfs_hash_old, "grandparentIPFS": ipfs_hash_grandparent})
+        return JsonResponse({"newIPFS": ipfs_hash_new, "oldIPFS": ipfs_hash_old, "grandparentIPFS": ipfs_hash_grandparent})
+
+
+    # Verify that submission was actually recorded on the EOS chain
+    if (request.GET.get('verification') == '1'):
+
+        # Get the IPFS hash
+        ipfs_hash_new = request.GET.get('newIPFS')
+
+        MERGED_FROM_HASH = request.GET.get('merged_from_hash')
+        if MERGED_FROM_HASH != "":
+            mergeSourceArticle = ArticleTable.objects.get(ipfs_hash_current=MERGED_FROM_HASH)
+            mergeSourceArticle.is_removed = 1
+            mergeSourceArticle.redirect_page_id = articleObject.id
+            mergeSourceArticle.save()
+            # print("BEEEE %s" % MERGED_FROM_HASH)
+
+        # Because the EOS get tables command does not allow string lookups, convert the IPFS hash to a 64-bit unsigned integer
+        proposal_id = ipfs_to_uint64_trunc(ipfs_hash_new)
+        proposalID = int(proposal_id)
+        proposalIDPlusOne = proposalID + 1
+
+        # This errors out more often than it prevents bad submissions so I've commented it out - Kedar
+
+        ## Prepare the JSON for the get table API call
+        #jsonDict = {"scope": "eparticlectr", "code": "eparticlectr", "table": "propstbl", "key_type": "i64",
+        #            "index_position": "3", "lower_bound": proposalID, "upper_bound": proposalIDPlusOne, "json": "true"}
+
+        ## Make the API request and parse the JSON into a variable
+        #count = 0
+        #while count < 5:
+        #    # page = requests.post('https://mainnet.libertyblock.io:7777/v1/chain/get_table_rows', headers=REQUEST_HEADER, timeout=10, verify=False, json=jsonDict)
+        #    page = requests.post('https://proxy.eosnode.tools/v1/chain/get_table_rows', headers=REQUEST_HEADER, timeout=10, verify=False, json=jsonDict)
+        #    if 200 <= page.status_code <= 299:
+        #        json_data = json.loads(page.text)
+        #        break
+        #    else:
+        #        # Sleep for 1sec and try again
+        #        print("EOS API hit failed. Trying again in 500ms.")
+        #        time.sleep(1)
+        #        count += 1
+
+        ## Get the status of the proposal
+        #proposalStatus = json_data['rows'][0]['status']
+
+        ## Make sure the proposal is actually recorded on-chain
+        #try:
+        #    if (proposalStatus != 0):
+        #        # Possibly delete the IPFS entry to prevent spamming
+        #        pass
+        #except:
+        #    return JsonResponse({'status': 'false', 'message': "NO PROPOSAL FOUND"}, status=500)
+
+        # Parse some variables from the JSON
+        proposer = request.GET.get('proposer')
+        currentTime = int(time.time())
+        endTime = currentTime + 6*3600
+
+        # Get the cached article HTML and parse it
+        hashTable = HashCache.objects.get(ipfs_hash=ipfs_hash_new)
+        parsedDict = parseBlockchainHTML(hashTable.html_blob, articleObj=articleObject)
+
+        # Set some variables
+        ipfs_hash_old = articleObject.ipfs_hash_current
+        ipfs_hash_grandparent = articleObject.ipfs_hash_parent
+
+        miniBlurb = blurbSplitter(parsedDict["BLURB"], 2048, minimizeHTML=True)[0]
+        miniBlurb = whiteSpaceStripper(miniBlurb)
+
+        # Update the articleObject cache with data from the article HTML file (from the cache)
+        articleObject.ipfs_hash_parent = articleObject.ipfs_hash_current
+        articleObject.ipfs_hash_current = ipfs_hash_new
+        articleObject.blurb_snippet = miniBlurb
+        articleObject.page_type = (None if parsedDict["PAGEMETADATA"]["page_type"] == "None" else parsedDict["PAGEMETADATA"]["page_type"])
+        articleObject.page_title = parsedDict["PAGETITLE"]
+        articleObject.lastmod_timestamp = timezone.now()
+        articleObject.is_removed = parsedDict["PAGEMETADATA"]["is_removed"]
+        articleObject.is_removed_from_index = False
+        articleObject.is_adult_content = parsedDict["PAGEMETADATA"]["is_adult_content"]
+        articleObject.page_lang = parsedDict["PAGEMETADATA"]["page_lang"]
+        articleObject.save()
+
+        # Update the index
+        updateElasticsearch(articleObject, u"PAGE_UPDATED_OR_CREATED")
+
+        # Record the edit proposal internally. This should match all the proposals that are on-chain.
+        EditProposal.objects.create(id=ipfs_to_uint64_trunc(ipfs_hash_new), proposed_article_hash=ipfs_hash_new, old_article_hash=ipfs_hash_old,
+                grandparent_hash=ipfs_hash_grandparent, proposer=proposer, proposer_64t=encodeNameSwappedEndian(proposer), starttime=currentTime,
+                endtime=endTime, status=0, article=articleObject)
+
+        # Need to switch this later. MAKE SURE TO FIX BLURB COMPARE TOO
+        # return JsonResponse({"newIPFS": ipfs_hash_new, "oldIPFS": ipfs_hash_old, "grandparentIPFS": ipfs_hash_grandparent})
+        return JsonResponse({"newIPFS": ipfs_hash_new, "oldIPFS": ipfs_hash_old, "grandparentIPFS": ipfs_hash_grandparent})
+
+    # Temporary
+    # if(articleObject.id < 18682257):
+    #     return HttpResponseRedirect("/editing-disabled/")
+    if 'draft' in request.GET:
+        account_name = request.GET.get('draft')
+        draft = SavedDraft.objects.get(article_slug=articleObject.slug, account_name=account_name)
+        hashObject.html_blob = draft.html_blob
+
+    formattedArticleBlob = prettifyCorrector(blobHTML)
+    formattedArticleBlob = editorStructureCorrector(blobHTML, passedLang=lang_param)
+
+    # print(formattedArticleBlob)
+
+    # Update the Django templating dictionary for the edit page
+    contextDictionary = {}
+    contextDictionary.update({"ARTICLE_BLOB": formattedArticleBlob})
+    contextDictionary.update({"ARTICLE_NAME": articleObject.page_title})
+    contextDictionary.update({"PAGE_LANG": articleObject.page_lang})
+    contextDictionary.update({"ARTICLE_SLUG": articleObject.slug})
+    contextDictionary.update({"ARTICLE_SLUG_ALT": articleObject.slug_alt})
+    contextDictionary.update({"ARTICLE_IS_REMOVED": articleObject.is_removed})
+    contextDictionary.update({"ARTICLE_PHOTO_URL": articleObject.photo_url})
+    contextDictionary.update({"ARTICLE_THUMB_URL": articleObject.photo_thumb_url})
+    contextDictionary.update({"ARTICLE_PAGE_TYPE": articleObject.page_type})
+    contextDictionary.update({"ARTICLE_LANG": articleObject.page_lang})
+    contextDictionary.update({"ARTICLE_CURRENT_HASH": articleObject.ipfs_hash_current})
+    contextDictionary.update({"MERGED_FROM_HASH": MERGED_FROM_HASH})
+    contextDictionary.update({"newlinkfileform": NewlinkFileForm()})
+    contextDictionary.update({"linkform": LinkForm()})
+    contextDictionary.update({"pagemetaform": PageMetaForm(initial={'page_type': articleObject.page_type, 'sub_page_type': articleObject.page_sub_type, 'is_removed': articleObject.is_removed, 'is_adult_content': articleObject.is_adult_content, 'page_lang': articleObject.page_lang})})
+
+    # Return the HTML for the editing page
+    return render(request, 'enterlink/edit.html', contextDictionary)
+
 @csrf_exempt
 def check_new_articles(request):
     # Fetch all proposals marked as is_new_page = True
@@ -176,9 +398,9 @@ def check_new_articles(request):
 
 # Show all the votes for a given article
 @csrf_exempt
-def vote(request, url_param):
+def vote(request, url_param, lang_param=""):
     # Fetch the article from the URL parameter
-    cleanedParamList = getTheArticleObject(url_param)
+    cleanedParamList = getTheArticleObject(url_param, passedLang=lang_param)
     articleObject = cleanedParamList[1]
 
     # Fetch all proposals for a given article that have not been verified
@@ -212,7 +434,7 @@ def cacheFinalizedResult(proposal_id, verify_only=False):
      "lower_bound": proposalID, "upper_bound": proposalIDPlusOne, "json": "true"}
 
     # Get the JSON response
-    page = requests.post('https://nodes.get-scatter.com:443/v1/chain/get_table_rows', headers=REQUEST_HEADER, timeout=10, verify=False, json=jsonDict)
+    page = requests.post('https://proxy.eosnode.tools/v1/chain/get_table_rows', headers=REQUEST_HEADER, timeout=10, verify=False, json=jsonDict)
 
     # Load the JSON response into a dictionary object
     json_data = json.loads(page.text)
@@ -226,7 +448,7 @@ def cacheFinalizedResult(proposal_id, verify_only=False):
                     "lower_bound": proposalID, "upper_bound": proposalIDPlusOne, "json": "true"}
 
         # Get the JSON response
-        page = requests.post('https://nodes.get-scatter.com:443/v1/chain/get_table_rows', headers=REQUEST_HEADER,
+        page = requests.post('https://proxy.eosnode.tools/v1/chain/get_table_rows', headers=REQUEST_HEADER,
                              timeout=10, verify=False, json=jsonDict)
 
         # Load the JSON response into a dictionary object
@@ -275,159 +497,6 @@ def cacheFinalizedResult(proposal_id, verify_only=False):
     # Return the HTML page
     return HttpResponse(page)
 
-# Edit page
-@csrf_exempt
-def edit(request, url_param="everipedia-blank-page-template"):
-    # Fetch the article object from the URL parameter
-    cleanedParamList = getTheArticleObject(url_param)
-    articleObject = cleanedParamList[1]
-
-    # Pull the article HTML from the cache
-    hashObject = HashCache.objects.get(ipfs_hash=articleObject.ipfs_hash_current)
-
-    # Check if the article is being submitted
-    if (request.GET.get('submission') == '1'):
-        # Get the POSTed article HTML
-        innerHTMLBlock = request.POST.get("blurbHTML")
-
-        # Clean up and canonicalize the submitted HTML
-        innerHTMLBlock = entireArticleHTMLSanitizer(innerHTMLBlock)[5:]
-
-        # Remove temporary HTML elements that were injected into the TinyMCE in order to make the page more interactive
-        theSoup = BeautifulSoup(innerHTMLBlock, "html.parser")
-        try:
-            badClasses = [ 'add-row-btn', 'button-wrap', 'add-new-ibox', 'add-heading-wrap',  ]
-            for badClass in badClasses:
-                listOfBads = theSoup.findAll(class_=badClass)
-                for item in listOfBads:
-                    item.extract()
-        except:
-            pass
-
-        # quickTitleNode = theSoup.findAll("h1")
-        # print(unicode(quickTitleNode[0]))
-
-        # Convert the BeautifulSoup object back into a string
-        innerHTMLBlock = unicode(theSoup)
-
-        # quickBody = theSoup.findAll(class_="blurb-wrap")
-        # print(quickBody[0])
-        # raise
-
-        # Render the article HTML and its wrapper as a string and save it to the variable
-        resultHTML = render_to_string('enterlink/blockchain_article_wrap.html', {'innerHTMLBlock': innerHTMLBlock,})
-
-        # Connect to the IPFS daemon and add the article HTML
-        api = ipfsapi.connect('127.0.0.1', 5001)
-        ipfs_hash_new = api.add_str(resultHTML)
-        print("THE OFFICIAL NEW HASH IS: %s" % ipfs_hash_new)
-
-        # Cache the article HTML
-        try:
-            hashTable = HashCache.objects.create(ipfs_hash=ipfs_hash_new, timestamp=datetime.datetime.now(tz=pytz.utc),
-                                                 html_blob=resultHTML, articletable=articleObject)
-        except:
-            return HttpResponse("NO CHANGES DETECTED!")
-
-        # Set some variables
-        ipfs_hash_old = articleObject.ipfs_hash_current
-        ipfs_hash_grandparent = articleObject.ipfs_hash_parent
-
-        # Need to switch this later. MAKE SURE TO FIX BLURB COMPARE TOO
-        # return JsonResponse({"newIPFS": ipfs_hash_new, "oldIPFS": ipfs_hash_old, "grandparentIPFS": ipfs_hash_grandparent})
-        return JsonResponse({"newIPFS": ipfs_hash_new, "oldIPFS": ipfs_hash_old, "grandparentIPFS": ipfs_hash_grandparent})
-
-
-    # Verify that submission was actually recorded on the EOS chain
-    if (request.GET.get('verification') == '1'):
-        # Get the IPFS hash
-        ipfs_hash_new = request.GET.get('newIPFS')
-
-        # Because the EOS get tables command does not allow string lookups, convert the IPFS hash to a 64-bit unsigned integer
-        proposal_id = ipfs_to_uint64_trunc(ipfs_hash_new)
-        proposalID = int(proposal_id)
-        proposalIDPlusOne = proposalID + 1
-
-        # Prepare the JSON for the get table API call
-        jsonDict = {"scope": "eparticlectr", "code": "eparticlectr", "table": "propstbl", "key_type": "i64",
-                    "index_position": "3", "lower_bound": proposalID, "upper_bound": proposalIDPlusOne, "json": "true"}
-
-        # Make the API request and parse the JSON into a variable
-        # page = requests.post('https://mainnet.libertyblock.io:7777/v1/chain/get_table_rows', headers=REQUEST_HEADER, timeout=10, verify=False, json=jsonDict)
-        page = requests.post('https://nodes.get-scatter.com:443/v1/chain/get_table_rows', headers=REQUEST_HEADER, timeout=10, verify=False, json=jsonDict)
-
-        json_data = json.loads(page.text)
-
-        # Get the status of the proposal
-        proposalStatus = json_data['rows'][0]['status']
-
-        # Make sure the proposal is actually recorded on-chain
-        try:
-            if (proposalStatus != 0):
-                # Possibly delete the IPFS entry to prevent spamming
-                pass
-        except:
-            return JsonResponse({'status': 'false', 'message': "NO PROPOSAL FOUND"}, status=500)
-
-        # Parse some variables from the JSON
-        proposer = json_data['rows'][0]['proposer']
-        currentTime = json_data['rows'][0]['starttime']
-        endTime = json_data['rows'][0]['endtime']
-
-        # Get the cached article HTML and parse it
-        hashTable = HashCache.objects.get(ipfs_hash=ipfs_hash_new)
-        parsedDict = parseBlockchainHTML(hashTable.html_blob)
-
-        # Set some variables
-        ipfs_hash_old = articleObject.ipfs_hash_current
-        ipfs_hash_grandparent = articleObject.ipfs_hash_parent
-
-        # Update the articleObject cache with data from the article HTML file (from the cache)
-        articleObject.ipfs_hash_parent = articleObject.ipfs_hash_current
-        articleObject.ipfs_hash_current = ipfs_hash_new
-        articleObject.blurb_snippet = parsedDict["BLURB"]
-        articleObject.page_type = parsedDict["PAGEMETADATA"]["page_type"]
-        articleObject.page_title = parsedDict["PAGETITLE"]
-        articleObject.lastmod_timestamp = timezone.now()
-        articleObject.is_removed = parsedDict["PAGEMETADATA"]["is_removed"]
-        articleObject.is_removed_from_index = False
-        articleObject.is_adult_content = parsedDict["PAGEMETADATA"]["is_adult_content"]
-        articleObject.save()
-
-        # Record the edit proposal internally. This should match all the proposals that are on-chain.
-        EditProposal.objects.create(id=ipfs_to_uint64_trunc(ipfs_hash_new), proposed_article_hash=ipfs_hash_new, old_article_hash=ipfs_hash_old,
-                grandparent_hash=ipfs_hash_grandparent, proposer=proposer, proposer_64t=encodeNameSwappedEndian(proposer), starttime=currentTime,
-                endtime=endTime, status=0, article=articleObject)
-
-        # Need to switch this later. MAKE SURE TO FIX BLURB COMPARE TOO
-        # return JsonResponse({"newIPFS": ipfs_hash_new, "oldIPFS": ipfs_hash_old, "grandparentIPFS": ipfs_hash_grandparent})
-        return JsonResponse({"newIPFS": ipfs_hash_new, "oldIPFS": ipfs_hash_old, "grandparentIPFS": ipfs_hash_grandparent})
-
-    # Temporary
-    # if(articleObject.id < 18682257):
-    #     return HttpResponseRedirect("/editing-disabled/")
-    if 'draft' in request.GET:
-        account_name = request.GET.get('draft')
-        draft = SavedDraft.objects.get(article_slug=articleObject.slug, account_name=account_name)
-        hashObject.html_blob = draft.html_blob
-
-    # Update the Django templating dictionary for the edit page
-    contextDictionary = {}
-    contextDictionary.update({"ARTICLE_BLOB": hashObject.html_blob})
-    contextDictionary.update({"ARTICLE_NAME": articleObject.page_title})
-    contextDictionary.update({"ARTICLE_SLUG": articleObject.slug})
-    contextDictionary.update({"ARTICLE_SLUG_ALT": articleObject.slug_alt})
-    contextDictionary.update({"ARTICLE_IS_REMOVED": articleObject.is_removed})
-    contextDictionary.update({"ARTICLE_PHOTO_URL": articleObject.photo_url})
-    contextDictionary.update({"ARTICLE_THUMB_URL": articleObject.photo_thumb_url})
-    contextDictionary.update({"ARTICLE_PAGE_TYPE": articleObject.page_type})
-    # contextDictionary.update({"ARTICLE_PAGEVIEWS": articleObject.pageviews})
-    contextDictionary.update({"newlinkfileform": NewlinkFileForm()})
-    contextDictionary.update({"linkform": LinkForm()})
-    contextDictionary.update({"pagemetaform": PageMetaForm(initial={'page_type': articleObject.page_type, 'sub_page_type': articleObject.page_sub_type, 'is_removed': articleObject.is_removed, 'is_adult_content': articleObject.is_adult_content})})
-
-    # Return the HTML for the editing page
-    return render(request, 'enterlink/edit.html', contextDictionary)
 
 # Generate the diff table between the two versions
 @csrf_exempt
@@ -445,29 +514,13 @@ def AJAX_Fetch_Blurb_Compare(request, new_ipfs, old_ipfs):
     except:
         rightHTMLBlob = ""
 
-    # Get the article object
+    # Get the article and proposal objects
     articleObject = hashObj.articletable
+    proposalObject = EditProposal.objects.get(id=ipfs_to_uint64_trunc(new_ipfs))
 
     # Get the diff table
     returnBlob = getDiffs(leftHTMLBlob, rightHTMLBlob)
-
-    # Parse the diff table into a BeautifulSoup object
-    returnSoup = BeautifulSoup(returnBlob, "html.parser")
-
-    # Get the list of all changes by parsing the HTML
-    counter = 0
     tocIDList = []
-    try:
-        diffSect = returnSoup.find_all("span", {'class': ['diff_add', 'diff_chg', 'diff_sub']})
-        for diffNode in diffSect:
-            diffNode['id'] = "change-id-%s" % counter
-            tocIDList.append((diffNode['id'], diffNode.getText()))
-            counter += 1
-    except Exception, e:
-        print("---------------")
-        print(str(e))
-        print("---------------")
-    returnBlob = unicode(returnSoup)
 
     # Determine the type of request
     if (request.mobile):
@@ -479,8 +532,41 @@ def AJAX_Fetch_Blurb_Compare(request, new_ipfs, old_ipfs):
     renderedToC = render_to_string('enterlink/voting_table_of_contents.html', {'tocIDList': tocIDList, 'templateType': templateType, "articleObject": articleObject})
 
     return render(request, "enterlink/voting.html", {'compareBlob': returnBlob, 'renderedToC': renderedToC, 'new_ipfs': new_ipfs,
-            'old_ipfs': old_ipfs})
-#
+        'old_ipfs': old_ipfs, 'proposer': proposalObject.proposer})
+
+# Raw text diffs
+def html_diff(request, new_ipfs, old_ipfs):
+    # Get the two article HTMLs from the provided IPFS hashes
+    try:
+        new_html_blob = HashCache.objects.get(ipfs_hash=new_ipfs).html_blob
+    except:
+        new_html_blob = ""
+
+    try:
+        old_html_blob = HashCache.objects.get(ipfs_hash=old_ipfs).html_blob
+    except:
+        old_html_blob = ""
+
+    diffTable = getDiffs(new_html_blob, old_html_blob, difftype='html')
+
+    return render(request, 'enterlink/raw_diff.html', { "diffTable": diffTable })
+
+# Raw text diffs
+def text_diff(request, new_ipfs, old_ipfs):
+    # Get the two article HTMLs from the provided IPFS hashes
+    try:
+        new_html_blob = HashCache.objects.get(ipfs_hash=new_ipfs).html_blob
+    except:
+        new_html_blob = ""
+
+    try:
+        old_html_blob = HashCache.objects.get(ipfs_hash=old_ipfs).html_blob
+    except:
+        old_html_blob = ""
+
+    diffTable = getDiffs(new_html_blob, old_html_blob, difftype='text')
+
+    return render(request, 'enterlink/raw_diff.html', { "diffTable": diffTable })
 
 # ================================================================================
 # ================================NEWLINK EDITING=================================
@@ -681,6 +767,9 @@ def AJAX_Add_New_Infobox(request):
     infotype = request.POST['infotype']
     infotype = infotype.split("~")[0]
     pageslug = request.POST['pageslug']
+    page_type = request.POST['page_type']
+    if page_type == "":
+        page_type = "Thing"
 
     # Get the article object from the page slug
     cleanedParamList = getTheArticleObject(pageslug)
@@ -692,7 +781,7 @@ def AJAX_Add_New_Infobox(request):
 
         # Get all the possible schema.org properties based on the page type
         # E.g. for "Person", it is https://schema.org/Person
-        possibleSchemas = SchemaObject.objects.filter(schema_for=articleObject.page_type)
+        possibleSchemas = SchemaObject.objects.filter(schema_for=page_type)
 
         # Encode and lowercase the infotype
         lowerInfotype = infotype.lower().encode('utf-8')
@@ -826,7 +915,7 @@ def save_draft(request):
     innerHTMLBlock = request.POST.get("html_blob")
 
     # Clean up and canonicalize the submitted HTML
-    innerHTMLBlock = entireArticleHTMLSanitizer(innerHTMLBlock)[5:]
+    innerHTMLBlock = entireArticleHTMLSanitizer(innerHTMLBlock)
 
     # Remove temporary HTML elements that were injected into the TinyMCE in order to make the page more interactive
     theSoup = BeautifulSoup(innerHTMLBlock, "html.parser")
@@ -853,6 +942,7 @@ def save_draft(request):
 
     return JsonResponse({ "success": True })
 
+@csrf_exempt
 @require_GET
 def get_draft(request):
     draft = SavedDraft.objects.filter(
@@ -860,4 +950,90 @@ def get_draft(request):
         article_slug=request.GET.get('article_slug')
     ).values('account_name', 'article_slug', 'html_blob')
     return JsonResponse( list(draft)[0] )
+
+
+# ================================================================================
+# ===============================AUXILIARY FUNCTIONS================================
+# ================================================================================
+
+@csrf_exempt
+@require_POST
+def AJAX_Create_Redirect(request):
+    # Get the POSTed article HTML
+    innerHTMLBlock = request.POST.get("html_blob")
+
+    pass
+
+@csrf_exempt
+def merge_page(from_ipfs, to_ipfs):
+    # Need some sort of auth here
+    # The merge should refresh the page with the combined stuff added in, then force it through Scatter
+    # Basically, run parseBlockchainHTML on both pages, combine the JSONs, then create a new page
+    # Merge might need a separate screen
+
+    # Get the article objects
+    cleanedParamList1 = getTheArticleObject(from_ipfs)
+    cleanedParamList2 = getTheArticleObject(to_ipfs)
+    articleObjectFrom = cleanedParamList1[1]
+    articleObjectTo = cleanedParamList2[1]
+
+    # Pull the article HTMLs from the cache
+    hashObjectFrom = HashCache.objects.get(ipfs_hash=from_ipfs)
+    hashObjectTo = HashCache.objects.get(ipfs_hash=to_ipfs)
+
+    # Create the soups
+    try:
+        fromSoup = BeautifulSoup(hashObjectFrom.html_blob.decode('utf-8', 'ignore'), "html.parser")
+    except:
+        fromSoup = BeautifulSoup(hashObjectFrom.html_blob, "html.parser")
+
+    try:
+        toSoup = BeautifulSoup(hashObjectTo.html_blob.decode('utf-8', 'ignore'), "html.parser")
+    except:
+        toSoup = BeautifulSoup(hashObjectTo.html_blob, "html.parser")
+
+    # Merge the blurbs
+    fromBlurb = fromSoup.find_all("div", class_='blurb-wrap')[0]
+    toBlurb = toSoup.find_all("div", class_='blurb-wrap')[0]
+    toBlurb.append(fromBlurb)
+    fromBlurb.unwrap()
+
+    # Merge the galleries
+    fromGallery = fromSoup.find_all("ul", class_='media-list')[0]
+    toGallery = toSoup.find_all("ul", class_='media-list')[0]
+    toGallery.append(fromGallery)
+    fromGallery.unwrap()
+
+    # Merge the references
+    fromReferences = fromSoup.find_all("ul", class_='reference-list')[0]
+    toReferences = toSoup.find_all("ul", class_='reference-list')[0]
+    toReferences.append(fromReferences)
+    fromReferences.unwrap()
+
+    # Merge the nonplural infoboxes
+    fromInfoboxes = fromSoup.find_all("table", class_='ibox-list-nonplural')[0]
+    fromInfoboxesTD = fromInfoboxes.find_all("td")[0]
+    fromInfoboxesContainer = fromInfoboxesTD.parent
+    toInfoboxes = toSoup.find_all("table", class_='ibox-list-nonplural')[0]
+    toInfoboxesTD = toInfoboxes.find_all("td")[0]
+    toInfoboxesContainer = toInfoboxesTD.parent
+    toInfoboxesContainer.append(fromInfoboxes)
+    fromInfoboxesContainer.unwrap()
+
+    # Merge the plural infoboxes
+    fromInfoboxes = fromSoup.find_all("div", class_='ibox-list-plural')[0]
+    toInfoboxes = toSoup.find_all("div", class_='ibox-list-plural')[0]
+    toInfoboxes.append(fromInfoboxes)
+    fromInfoboxes.unwrap()
+
+    # Return the cleaned string
+    blobString = deBeautifySoup(toSoup, skipSlice=True)
+    return blobString
+
+
+
+
+
+
+
 

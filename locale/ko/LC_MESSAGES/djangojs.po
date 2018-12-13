@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-08 09:47-0700\n"
-"PO-Revision-Date: 2018-07-30 00:56-0700\n"
+"POT-Creation-Date: 2018-11-10 16:54+0900\n"
+"PO-Revision-Date: 2018-10-17 20:07-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ko\n"
@@ -104,10 +104,10 @@ msgstr "링크"
 #: static/tinymce_4.2.3/plugins/mention/plugin.min.js:374
 #: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:107
 #: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:110
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:218
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:221
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:325
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:328
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:234
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:237
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:341
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:344
 msgid "Cite as verified editor"
 msgstr "인증된 에디터를 예로 들기"
 
@@ -135,17 +135,9 @@ msgstr "폰트 스타일"
 msgid "Style"
 msgstr "스타일"
 
-#: static/js/scatterjs-plugin-eosjs2.min.js:15
-msgid "entries"
-msgstr ""
-
-#: static/js/scatterjs-plugin-eosjs2.min.js:15
-msgid "values"
-msgstr ""
-
-#: static/js/scatterjs-plugin-eosjs2.min.js:15
-msgid "keys"
-msgstr ""
+#: static/js/scatter-header-js.js:85
+msgid "Claim Rewards"
+msgstr "보상금 보상"
 
 #: static/tageditor/jquery.tag-editor.js:584
 #: static/tageditor/jquery.tag-editor.js:587
@@ -159,10 +151,30 @@ msgstr "해당 카테고리에 대한 부가 설명 추가하기"
 msgid "Delete this tag"
 msgstr "해당 태그 삭제하기"
 
+#: static/tinymce_4.2.3/plugins/helptour/plugin.min.js:3
+#: static/tinymce_4.2.3/plugins/helptour/plugin.min.js:4
+msgid "Help"
+msgstr "도움말"
+
+#: static/tinymce_4.2.3/plugins/merge/plugin.min.js:3
+#: static/tinymce_4.2.3/plugins/merge/plugin.min.js:4
+msgid "Merge"
+msgstr ""
+
 #: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:3
 #: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:4
 msgid "Save Draft"
-msgstr ""
+msgstr "임시로 저장"
+
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:10
+#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:11
+msgid "Load Draft"
+msgstr "임시 보관함로드"
+
+#: static/tinymce_4.2.3/plugins/submitpage/plugin.min.js:3
+#: static/tinymce_4.2.3/plugins/submitpage/plugin.min.js:4
+msgid "Submit"
+msgstr "제출"
 
 #: templates/enterlink/brainpowermgmt.html:142
 msgid "Claim"
@@ -239,15 +251,11 @@ msgstr "파일 추가하기"
 msgid "Add Link"
 msgstr "링크 추가하기"
 
-#: templates/enterlink/headers/scatter-header.html:143
-msgid "Claim Rewards"
-msgstr ""
-
-#: templates/enterlink/index.html:231
+#: templates/enterlink/index.html:234
 msgid "Loading more activity, please wait..."
 msgstr "더 많은 활동을 로드 중입니다, 잠시 기다려주십시오..."
 
-#: templates/enterlink/index.html:255
+#: templates/enterlink/index.html:258
 msgid "Create page"
 msgstr "페이지 생성하기"
 
@@ -440,10 +448,10 @@ msgstr "다음"
 
 #: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:107
 #: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:111
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:218
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:222
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:325
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:329
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:234
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:238
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:341
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:345
 msgid "Cite my own knowledge / experience as a verified editor"
 msgstr "인증된 에디터로서 내 지식 / 경험을 언급해주십시오."
 

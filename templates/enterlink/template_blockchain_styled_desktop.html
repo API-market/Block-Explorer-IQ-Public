@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 {% load i18n %}
-{% language LANG_OVERRIDE %}
+{% language PAGE_LANG %}
 {% load humanize %}
 {% load enterlink_custom_tags %}
-<html>
+<html lang="{{ PAGE_LANG }}">
 <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     {% include 'enterlink/inline-js/jquery.html' %}
     {% include "enterlink/inline-js/lazyload.html" %}
     <meta property="og:type" content="article"/>
@@ -45,7 +46,7 @@
     <meta property="article:modified_time" content="{{ PAGEMETADATA.last_modified }}" />
     <meta property="og:image" content="{{ PHOTOOBJECT.url }}" />
     <meta property="og:description" content="{{ BLURB|truncatewords_html:255|striptags }}"/>
-    <meta name="og:url" content="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/">
+    <meta name="og:url" content="https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/">
     {% if .PHOTOOBJECT.thumb != 'NOPICTURE' %}
     <meta property="og:image" content="{{ PHOTOOBJECT.thumb }}" />
     {% endif %}
@@ -56,9 +57,9 @@
     {% endif %}
     <meta name="twitter:description" content="{{ BLURB|truncatewords_html:255|striptags }}">
         {% if passedLanguage == 'en' %}
-        <meta name="twitter:url" content="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/">
+        <meta name="twitter:url" content="https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/">
     {% else %}
-        <meta name="twitter:url" content="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/?wiki-lang={{ passedLanguage }}">
+        <meta name="twitter:url" content="https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/?wiki-lang={{ passedLanguage }}">
     {% endif %}
 
     {% if IS_REMOVED_FROM_INDEX %}
@@ -71,20 +72,23 @@
 	<meta property="article:author" content="https://www.facebook.com/everipedia">
 
     <script>
-        var ARTICLE_SLUG = '{{ PAGEMETADATA.url_slug }}';
+        var ARTICLE_SLUG = '{{ PAGE_SLUG }}';
         var CITED_BY = '';
         var CITER_RANK = '';
         //var initializeTooltippables;
         var isMobile = parseInt('{{PREFETCH_REQUEST_MOBILE|yesno:"1,0"}}'); var isTablet = parseInt('{{request.tablet|yesno:"1,0"}}');
-        var embedHTML = "<a href='https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/'><img alt='Everipedia Logo' width='25' height='25' src='https://epcdn-vz.azureedge.net/static/images/everipedia_logo_small.png'></a>";
+        var embedHTML = "<a href='https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/'><img alt='Everipedia Logo' width='25' height='25' src='https://epcdn-vz.azureedge.net/static/images/everipedia_logo_small.png'></a>";
     </script>
 
-    <link rel="canonical" href="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/" >
-    <link rel="amphtml" href="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/amp/">
+    <link rel="canonical" href="https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/" >
+    <link rel="amphtml" href="https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/amp/">
+    {% for altLangPage in ALT_LANG_PAGES %}
+    <link rel="alternate" href="https://everipedia.org/wiki/lang_{{ altLangPage.page_lang }}/{{ altLangPage.slug }}/" hreflang="{{ altLangPage.page_lang }}" />
+    {% endfor %}
 
 	<!--- Include Header -->
 	{% include "enterlink/headers/header-common-template-desktop-only.html" %}
-    {% include "enterlink/headers/header-navbar.html" %}
+
     {{ compressedCSSBlob_PUSH_LEFT_COMPONENT|safe }}
 
 
@@ -92,10 +96,12 @@
 		#showLeft {display:block !important;}
     </style>
 
+    <script src="https://epcdn-vz.azureedge.net/static/js/jquery.js"></script>
 </head>
 
 
-<body id="top" itemscope itemtype="http://schema.org/NewsArticle" itemid="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/" class="cbp-spmenu-push {% if BLURB|safe|length > 5000 %}cbp-spmenu-push-toright{% else %}{% endif %}" style="overflow-x: visible !important;">
+<body id="top" itemscope itemtype="http://schema.org/NewsArticle" itemid="https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/" class="cbp-spmenu-push {% if BLURB|safe|length > 5000 %}cbp-spmenu-push-toright{% else %}{% endif %}" style="overflow-x: visible !important;">
+{% include "enterlink/headers/header-navbar.html" %}
 {% if PAGEMETADATA.page_type == 'Person' %}
     <meta itemprop="keywords" content="{{ PAGETITLE }} wiki, {{ PAGETITLE }} bio" >
     <meta itemprop="keywords" content="{{ PAGETITLE }} news, who is {{ PAGETITLE }}, where is {{ PAGETITLE }}" >
@@ -112,7 +118,7 @@
 
 <!-- body has the class "cbp-spmenu-push" -->
 <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left {% if BLURB|safe|length > 5000 %}cbp-spmenu-open{% else %}{% endif %}" id="cbp-spmenu-s1">
-<button id="hideLeft" style="display:none; background:transparent;"><img class="triggertoc-icon" height="24.3438" width="30" layout="fixed" src="https://epcdn-vz.azureedge.net/static/images/bull-icon-white.png"/></button>
+<button id="hideLeft" style="display:none; background:transparent;"><img class="triggertoc-icon" height="24" width="30" src="https://epcdn-vz.azureedge.net/static/images/bull-icon-white.png" alt="Bullet Point"/></button>
 	{{ tableOfContentsChunk }}
 </nav>
 <main class="container desktop-container" id="body-ct">
@@ -174,12 +180,32 @@
                             {% endif %}
 		                </div>
 		            </div>
-                    <a class="btn btn-default" rel='nofollow' data-delay='{"show":"500", "hide":"300"}' data-toggle="tooltip" data-placement="bottom" title="{% trans 'Edit' %}" id="edit-page-ico" href="/wiki/{{ PAGEMETADATA.url_slug }}/advanced_edit/" >
+                    <a class="btn btn-default" rel='nofollow' data-delay='{"show":"500", "hide":"300"}' data-toggle="tooltip" data-placement="bottom" title="{% trans 'Edit' %}" id="edit-page-ico" href="/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/edit/" >
                         <span class="icon icon-edit"></span>
                     </a>
-                    <a class="btn btn-default" rel='nofollow' data-delay='{"show":"500", "hide":"300"}' data-toggle="tooltip" data-placement="bottom" title="{% trans 'Vote' %}" id="vote-page-ico" href="/vote/{{ PAGEMETADATA.url_slug }}" >
+                    <a class="btn btn-default" rel='nofollow' data-delay='{"show":"500", "hide":"300"}' data-toggle="tooltip" data-placement="bottom" title="{% trans 'Vote' %}" id="vote-page-ico" href="/vote/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}" >
                         <span class="icon icon-box"></span>
                     </a>
+
+                    <div class="dropdown" style="float:right;">
+                        <button class="dropdown-toggle page-lang-dropdown" type="button" data-delay='{"show":"500", "hide":"300"}' data-placement="bottom" title='{% trans "Other Languages" %}' id="dropdownMenuAltPageLangs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <div class="flag-box">
+                                <img id="selected-language" height="35" width="35" alt="Language flag" class="page-lang-dropdown-flag" src="https://epcdn-vz.azureedge.net/static/images/flags/png/48/languages/{{ PAGE_LANG }}.png">
+                            </div>
+                        </button>
+                        {% if ALT_LANG_PAGES|length > 0 %}
+                        <ul class="dropdown-menu langdropdown-desktop" titleledby="dropdownMenuAltPageLangs">
+                            {% for altLangPage in ALT_LANG_PAGES %}
+                                <li>
+                                    <a rel="nofollow" href="/wiki/lang_{{ altLangPage.page_lang }}/{{ altLangPage.slug }}/">
+                                        <img class="mini-lang-flag" height="35" width="35" src="https://epcdn-vz.azureedge.net/static/images/flags/png/48/languages/{{ altLangPage.page_lang }}.png">
+                                        <span class="mini-lang-title">{{ altLangPage.page_title }}</span>
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+					</div>
 
 					<div class="dropdown" style="float:left;">
 						  <button class="btn btn-default dropdown-toggle share-dropdown" type="button" data-delay='{"show":"500", "hide":"300"}' data-placement="bottom" title='{% trans "Share" %}' id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -189,7 +215,7 @@
                             <div class="share-menu-left">
                                 <div class="share-container-row">
                                     <div class="share-divider">
-                                        <div id="copyURL" class="copyURL-btn btn-default btn" onclick="window.prompt(gettext('To copy to clipboard, press Ctrl+C, then Enter'), 'https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/');">{% trans 'Copy URL' %}</div>
+                                        <div id="copyURL" class="copyURL-btn btn-default btn" onclick="window.prompt(gettext('To copy to clipboard, press Ctrl+C, then Enter'), 'https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/');">{% trans 'Copy URL' %}</div>
                                     </div>
                                     <div class="share-divider">
                                         <div id="embedURL" class="copyURL-btn embedURL-btn btn-default btn" onclick="window.prompt(gettext('To copy to clipboard, press Ctrl+C, then Enter. Next, paste the HTML code on your website.'), embedHTML);">{% trans 'Embed / Widget' %}</div>
@@ -197,12 +223,12 @@
                                 </div>
                                 <div class="share-container-row">
                                     <div class="share-divider">
-                                        <a rel='nofollow' id="shareURL_fb" style="" class="copyURL-btn embedURL-btn shareURL-btn-fb btn-default btn" href="https://www.facebook.com/sharer/sharer.php?u=https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/" target="_blank">
+                                        <a rel='nofollow' id="shareURL_fb" style="" class="copyURL-btn embedURL-btn shareURL-btn-fb btn-default btn" href="https://www.facebook.com/sharer/sharer.php?u=https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/" target="_blank">
                                             <img alt="Share this {{ PAGETITLE }} {% if PAGEMETADATA.page_type == 'Person' %}biography{% else %}wiki{% endif %} on Facebook" src="https://epcdn-vz.azureedge.net/static/images/fb_share_button.png">
                                         </a>
                                     </div>
                                     <div class="share-divider">
-                                        <a rel='nofollow' id="shareURL_tw" style="" class="copyURL-btn embedURL-btn shareURL-btn-tw btn-default btn" href="http://www.twitter.com/share?url=https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/" target="_blank">
+                                        <a rel='nofollow' id="shareURL_tw" style="" class="copyURL-btn embedURL-btn shareURL-btn-tw btn-default btn" href="http://www.twitter.com/share?url=https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/" target="_blank">
                                             <img alt="Share this {{ PAGETITLE }} wiki on Twitter" src="https://epcdn-vz.azureedge.net/static/images/tw_share_button.png">
                                         </a>
                                     </div>
@@ -255,7 +281,7 @@
 				</div>
 
             </div>
-            <div id="blurbtwenty" class="blurb-desktop schema" itemprop="about" itemid="{{ PREFETCH_MAINLINK_URL }}" itemscope itemtype="http://schema.org/{% if PageAttr.sub_page_type != None %}{{ PageAttr.sub_page_type }}{% elif PAGEMETADATA.page_type != None %}{{ PAGEMETADATA.page_type }}{% else %}Thing{% endif %}" style="{% if PREFETCH_BLURB_LENGTH|eq:0 %}margin-bottom: 0px;{% endif %}">
+            <div id="blurbtwenty" class="blurb-desktop schema" itemprop="about" itemid="{{ PREFETCH_MAINLINK_URL }}" itemscope itemtype="http://schema.org/{% if PAGEMETADATA.page_type == None or PAGEMETADATA.page_type == 'None' %}Thing{% else %}{{ PAGEMETADATA.page_type }}{% endif %}" style="{% if PREFETCH_BLURB_LENGTH|eq:0 %}margin-bottom: 0px;{% endif %}">
                 <meta itemprop="name" content="{{ PAGETITLE }}" />
                 {% if PAGEMETADATA.page_type == 'Person' %}
                 <abbr itemprop="homeLocation" itemscope itemtype="http://schema.org/Place" />
@@ -269,7 +295,11 @@
 
                         {% if PHOTOOBJECT.url != "" %}
                             <div class="panel-heading" style="padding:0px; overflow:hidden;max-height: 300px !important;" itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                                {% if PHOTOOBJECT.attribution_url != None %}
                                 <a class="mainphoto-anchor" rel="nofollow" target="_blank" href="{{PHOTOOBJECT.attribution_url}}">
+                                {% else %}
+                                <a class="mainphoto-anchor" rel="nofollow" target="_blank" href="{{PHOTOOBJECT.url}}">
+                                {% endif %}
                                     <img id='main-image-for-page' style="object-fit: contain; width: 100%; max-height: 300px;" onerror="this.onerror=null;this.src='https://epcdn-vz.azureedge.net/static/images/white.png'" src="{{ PHOTOOBJECT.thumb }}" data-src="{{ PHOTOOBJECT.url }}"
                                          alt="{% if PAGEMETADATA.page_type == 'Person' %}{{ PAGETITLE }} wiki, {{ PAGETITLE }} bio, {{ PAGETITLE }} news{% elif PAGEMETADATA.page_type == 'Product'%}{{ PAGETITLE }} wiki, {{ PAGETITLE }} review, {{ PAGETITLE }} news{% elif PAGEMETADATA.page_type == 'Organization'%}{{ PAGETITLE }} wiki, {{ PAGETITLE }} review, {{ PAGETITLE }} history, {{ PAGETITLE }} news{% else %}{{ PAGETITLE }} wiki, {{ PAGETITLE }} history, {{ PAGETITLE }} news{% endif %}"
                                     />
@@ -308,7 +338,7 @@
 
 
                         <div class="panel-body infbx-ct" style="padding-top:0px;">
-                            {% if NONPLURAL_INFOBOXES|length > 0 or PLURAL_INFOBOXES|length > 0 or BLOBBOX|length > 0%}
+                            {% if NONPLURAL_INFOBOXES|length > 0 or PLURAL_INFOBOX_PACKAGES|length > 0 or BLOBBOX|length > 0 %}
                               {% include "enterlink/infobox_json_blockchain.html" %}
                             {% endif %}
                         </div>
@@ -356,13 +386,13 @@
                     {% for media in MEDIA_OBJECTS %}
                         {% if media.class == "PICTURE" or media.2 == "GIF" %}
                             <div class="grid-box">
-                                <a class="gallery-anchor" rel='nofollow' href="/wiki/{{ PAGEMETADATA.url_slug }}/"  >
+                                <a class="gallery-anchor" rel='nofollow' href="/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/"  >
                                     <div class="grid-wrap" data-src="{{ media.url }}" data-sub-html="{{ media.caption}}">
                                         <img class="grid-item lazyloadable" src="{{ media.thumb }}" data-src="{{ media.url }}" data-image="{{ media.url }}" data-description="{{ media.caption}}" alt="{{ media.caption|striptags }}" onerror="this.onerror=null;this.src='{{ media.thumb }}'"/>
                                     </div>
                                 </a>
                                 <div class="grid-title">
-                                    {% if media.attribution_url != None and media.attribution_url != "" %}
+                                    {% if media.attribution_url != "None" and media.attribution_url != "" %}
                                         <a class="grid-attribution" rel="nofollow" target="_blank" href="{{ media.attribution_url }}">
                                             <i class="glyphicon glyphicon-info-sign"></i>
                                         </a>
@@ -373,14 +403,14 @@
                             </div>
                         {% elif media.class == "YOUTUBE"  %}
                             <div class="grid-box tile-ct">
-                                <a class="gallery-anchor" rel='nofollow' href="/wiki/{{ PAGEMETADATA.url_slug }}/" >
+                                <a class="gallery-anchor" rel='nofollow' href="/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/" >
                                     <div class="grid-wrap video-wrapper" data-poster="{{ media.thumb }}" data-src="{{ media.url }}?rel=0&vq=hd1080&hd=1" data-sub-html="{{ media.caption}}">
                                         <div class="video-overlay"></div>
                                         <img class="grid-item lazyloadable" src="{{ media.thumb }}" data-type="youtube" data-description="{{ media.caption}}" alt="{{ media.caption|striptags }}" data-width="640" data-height="640"/>
                                     </div>
                                 </a>
                                 <div class="grid-title">
-                                    {% if media.attribution_url != None and media.attribution_url != "" %}
+                                    {% if media.attribution_url != "None" and media.attribution_url != "" %}
                                         <a class="grid-attribution" rel="nofollow" target="_blank" href="{{ media.attribution_url }}">
                                             <i class="glyphicon glyphicon-info-sign"></i>
                                         </a>
@@ -391,10 +421,10 @@
                             </div>
                        {% elif media.class == "NORMAL_VIDEO"  %}
                             <div class="grid-box tile-ct">
-                                <a class="gallery-anchor" rel='nofollow' href="/wiki/{{ PAGEMETADATA.url_slug }}/" >
+                                <a class="gallery-anchor" rel='nofollow' href="/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/" >
                                     <div class="grid-wrap video-wrapper" data-sub-html="{{ media.caption }}" data-html="#video-{{ media.unique }}">
                                         <div class="video-overlay"></div>
-                                        <a id="video-{{ media.unique }}" rel='nofollow' href="/wiki/{{ PAGEMETADATA.url_slug }}/" >
+                                        <a id="video-{{ media.unique }}" rel='nofollow' href="/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/" >
                                             <video class="lg-video-object lg-html5 video-js vjs-default-skin grid-item" controls preload="metadata">
                                                 <source src="{{ media.url }}#t=0.1" type="{{ media.mime }}">
                                                  {% trans 'Your browser does not support HTML5 video.' %}
@@ -403,7 +433,7 @@
                                     </div>
                                 </a>
                                 <div class="grid-title">
-                                    {% if media.attribution_url != None and media.attribution_url != "" %}
+                                    {% if media.attribution_url != "None" and media.attribution_url != "" %}
                                         <a class="grid-attribution" rel="nofollow" target="_blank" href="{{ media.attribution_url }}">
                                             <i class="glyphicon glyphicon-info-sign"></i>
                                         </a>
@@ -414,10 +444,10 @@
                             </div>
                        {% elif media.class == "AUDIO"  %}
                             <div class="grid-box">
-                                <a class="gallery-anchor" rel='nofollow' href="/wiki/{{ PAGEMETADATA.url_slug }}/" >
+                                <a class="gallery-anchor" rel='nofollow' href="/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/" >
                                     <div class="grid-wrap video-wrapper" data-poster="https://epcdn-vz.azureedge.net/static/images/placeholder-audio.png" data-sub-html="{{ media.caption }}" data-html="#video-AAABBBCCC">
                                         <div class="video-overlay"></div>
-                                        <a rel='nofollow' href="/wiki/{{ PAGEMETADATA.url_slug }}/" >
+                                        <a rel='nofollow' href="/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/" >
                                             <audio class="lg-video-object lg-html5 video-js vjs-default-skin grid-item" controls preload="metadata">
                                                 <source src="{{ media.url }}" type="{{ media.mime }}">
                                                  {% trans 'Your browser does not support HTML5 video.' %}
@@ -426,7 +456,7 @@
                                     </div>
                                 </a>
                                 <div class="grid-title">
-                                    {% if media.attribution_url != None and media.attribution_url != "" %}
+                                    {% if media.attribution_url != "None" and media.attribution_url != "" %}
                                         <a class="grid-attribution" rel="nofollow" target="_blank" href="{{ media.attribution_url }}">
                                             <i class="glyphicon glyphicon-info-sign"></i>
                                         </a>
@@ -501,7 +531,7 @@
             {% endif %}
             <!-- END LINK LOOP #1 -->
         </div>
-        </div>
+
         <!-- REFERENCE LINKS END -->
 
         <!-- SEEALSO START -->
@@ -521,7 +551,7 @@
                 <div class="seealso-ct">
                     <!-- This is the suggestion units, please leave this here until Sam fixes them -->
                     {%if SEEALSOS.3 %}
-                    <a href="/wiki/{{SEEALSOS.3.slug}}/">
+                    <a href="/wiki/lang_{{ PAGE_LANG }}/{{SEEALSOS.3.slug}}/">
                         <div class="seealso-item" >
                             <img class='sa-page-image' src="{{ SEEALSOS.3.photo_thumb_url }}" data-src="{{ SEEALSOS.3.photo_url }}" onerror="this.onerror=null;this.src='https://epcdn-vz.azureedge.net/static/images/no-image-slide-big.png'"/>
                             <div class="seealso-overlay">
@@ -532,7 +562,7 @@
                     {%endif%}
 
                     {%if SEEALSOS.4 %}
-                    <a href="/wiki/{{SEEALSOS.4.slug}}/">
+                    <a href="/wiki/lang_{{ PAGE_LANG }}/{{SEEALSOS.4.slug}}/">
                         <div class="seealso-item">
                             <img class='sa-page-image' src="{{ SEEALSOS.4.photo_thumb_url }}" data-src="{{ SEEALSOS.4.photo_url }}" onerror="this.onerror=null;this.src='https://epcdn-vz.azureedge.net/static/images/no-image-slide-big.png'"/>
                             <div class="seealso-overlay">
@@ -575,8 +605,8 @@
 
     <div class="page-times">
         <div>
-            <a rel='nofollow' class="tooltippable" data-username="InterPlanetary_File_System" href="/wiki/InterPlanetary_File_System/">
-                <img class='ipfs-logo' src="https://epcdn-vz.azureedge.net/static/images/ipfs_logo.png">
+            <a rel='nofollow' class="tooltippable" data-username="lang_{{ PAGE_LANG }}/InterPlanetary_File_System" href="/wiki/lang_{{ PAGE_LANG }}/InterPlanetary_File_System/">
+                <img class='ipfs-logo' alt="IPFS Logo" src="https://epcdn-vz.azureedge.net/static/images/ipfs_logo.png">
             </a>
             <span>{{ CURRENT_IPFS_HASH }}</span>
         </div>
@@ -589,8 +619,8 @@
 {% include "enterlink/footers/footer.html" %}
 
 {% spaceless %}
-<meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/"/>
-<meta itemprop="url" content="https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/">
+<meta itemscope itemprop="mainEntityOfPage" itemid="https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/"/>
+<meta itemprop="url" content="https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/">
 {% if PAGEMETADATA.page_type == 'Person' %}
     <meta itemprop="headline" content="{{ PAGETITLE }}'s biography and wiki on Everipedia">
 {% elif PAGEMETADATA.page_type == 'Product'%}
@@ -688,7 +718,7 @@
     <div class="waiting-header">{% trans 'Please wait' %}...</div>
     <div class="waiting-header-close"><span class="icon icon-squared-cross"></span></div>
     <div class="submission-wait-wrap">
-        <img src="/static/images/loading2.gif">
+        <img src="/static/images/loading2.gif" alt="Loading Spinner">
     </div>
     <script>
         $(".waiting-header-close").click(function() {
@@ -709,7 +739,7 @@
 
 
 <!-- Google Analytics -->
-<script type="text/javascript" src="https://epcdn-vz.azureedge.net/static/js/jquery-qrcode-0.14.0.min.js"></script>
+<script src="https://epcdn-vz.azureedge.net/static/js/jquery-qrcode-0.14.0.min.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -829,13 +859,13 @@
             ecLevel: 'Q',
             background: '#FFFFFF',
             size: 300,
-            text: 'https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/',
+            text: 'https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/',
             mode: 0,
             quiet: 2,
             mSize: 0.1,
             mPosX: 0.5,
             mPosY: 0.5,
-            label: 'https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/',
+            label: 'https://everipedia.org/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/',
             fontname: 'sans',
             fontcolor: '#000',
             image: null
@@ -955,27 +985,9 @@
     document.querySelector('head').innerHTML += '<link href="https://epcdn-vz.azureedge.net/static/css/jquery-qtip.css" rel="stylesheet">';
 
     var trackingPixel = new Image();
-    trackingPixel.src="https://everipedia.org/pagecounter/{{ PAGEMETADATA.url_slug }}/";
+    trackingPixel.src="https://everipedia.org/pagecounter/{{ PAGE_SLUG }}/";
 
 </script>
 
-<script type="application/ld+json">
-    {
-      "@context":"http://schema.org",
-      "@type":"ItemList",
-      "itemListElement":[
-        {
-          "@type":"ListItem",
-          "position":1,
-          "url":"https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/"
-        },
-        {
-          "@type":"ListItem",
-          "position":2,
-          "url":"https://everipedia.org/wiki/{{ PAGEMETADATA.url_slug }}/advanced_edit/history/"
-        }
-      ]
-    }
-</script>
 </html>
 {% endlanguage %}

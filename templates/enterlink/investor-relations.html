@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+{% load i18n %}
+<html>
+<head>
+    <title>{% trans 'Investor Relations' %} - {% trans "Everipedia, the encyclopedia of everything" %}</title>
+    <!-- ' -->
+    <meta name="description" content=" Everipedia is the world’s largest collection of hyperlinks grouped by identity. ">
+	<link rel="canonical" href="https://everipedia.org/contact/" />
+	<!--- Include Header -->
+	{% include "enterlink/headers/header-common.html" %}{% include "enterlink/headers/header-navbar.html" %}
+    <link href="/static/css/investor-relations.css" rel="stylesheet">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<body>
+	<div class="ir-ct tablet-compatible">
+        <h1 class="main-headline">{% trans 'Investor Relations' %}</h1>
+        <div class="news-list-wrap">
+            <h2 class="news-headline">{% trans 'Recent News' %}</h2>
+            <ul class="news-list">
+                {% for pressObject in pressReleases %}
+                <li class="news-item">
+                    <a class="news-link" href="{{ pressObject.link}}">
+                        <div class="news-date">{{ pressObject.timestamp }}</div>
+                        <div class="news-headline">{{ pressObject.headline }}</div>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="quick-links-wrap">
+            <h2 class="quick-links-headline">{% trans 'Links' %}</h2>
+            <ul class="quick-links">
+                <li class="quick-link-item">
+                    <a class="quick-link-link" href="/leadership/">
+                        <div class="link-title">{% trans 'Executive Leadership' %}</div>
+                    </a>
+                </li>
+                <li class="quick-link-item">
+                    <a class="quick-link-link" href="https://blockfolio.com/coin/IQ">
+                        <div class="link-title">{% trans 'Blog' %} (Blockfolio)</div>
+                    </a>
+                </li>
+                <li class="quick-link-item">
+                    <a class="quick-link-link" href="https://epcdndisk.blob.core.windows.net/static/Media/Presentation_15x4_10_10_2018.pdf">
+                        <div class="link-title">{% trans 'Investor Presentation' %} (75MB file)</div>
+                    </a>
+                </li>
+                <li class="quick-link-item">
+                    <a class="quick-link-link" href="/contact/">
+                        <div class="link-title">{% trans 'Contact Us' %}</div>
+                    </a>
+                </li>
+
+                <!-- INSERT LOOP BELOW HERE-->
+
+                <!--<li class="quick-link-item">-->
+                    <!--<a class="quick-link-link" href="https://www.google.com">-->
+                        <!--<div class="link-title">Powerpoint 1</div>-->
+                    <!--</a>-->
+                <!--</li>-->
+                <!--<li class="quick-link-item">-->
+                    <!--<a class="quick-link-link" href="https://www.google.com">-->
+                        <!--<div class="link-title">Powerpoint 2</div>-->
+                    <!--</a>-->
+                <!--</li>-->
+            </ul>
+        </div>
+		
+	</div>
+
+<!--- Everipedia Footer -->
+{% include "enterlink/footers/footer.html" %}
+{#{% include "enterlink/footers/deferredJS.html" %}#}
+{% include 'enterlink/inline-css/application.html' %}
+{% include 'enterlink/headers/extra-analytics-right-before-body-end.html' %}
+</body>
+</html>

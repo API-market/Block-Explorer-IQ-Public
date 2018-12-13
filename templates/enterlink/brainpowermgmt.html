@@ -101,7 +101,7 @@
 		<div class="waiting-header">{% trans 'Please wait' %}...</div>
 		<div class="waiting-header-close"><span class="icon icon-squared-cross"></span></div>
 		<div class="submission-wait-wrap">
-			<img src="/static/images/loading2.gif">
+			<img src="/static/images/loading2.gif" alt="Loading Spinner">
 		</div>
 		<script>
 			$(".waiting-header-close").click(function() {
@@ -116,7 +116,7 @@
 		<div class="brainpower-explanation">
 			<p>{% trans 'Staking IQ tokens will freeze them for 21 days and will generate nontransferable Brainpower, which can be used for editing and voting on the Everipedia network. At the end of the 21 days, you can claim back your IQ tokens and re-stake them for more Brainpower again. Thus, 1 IQ, staked every 21 days, can lead to 365 days / 21 days = 17.38 Brainpower every year.' %}</p>
 			<p>{% trans 'As you make pages, propose edits, and vote on article proposals, you will consume Brainpower. However, making successful edits and voting on the winning side of a proposal will generate rewards in IQ, not Brainpower. Therefore, you can generate more Brainpower (and any profit) by staking the new IQ you just earned.' %}</p>
-			<p>{% trans 'Every edit proposal requires a minimum of 10 Brainpower at this time, in order to prevent spam and poor-quality edits.' %}</p>
+			<p>{% trans 'Every edit proposal requires a minimum of 50 Brainpower at this time, in order to prevent spam and poor-quality edits.' %}</p>
 		</div>
 		<div class="new-stake-entry">
 			<input placeholder="{% trans 'Enter an integer amount of IQ to stake' %}" name="newstake" autocomplete="off" id="NewStakeBox" type="text" value="" class="new-stake-entry">

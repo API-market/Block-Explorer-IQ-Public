@@ -31,7 +31,7 @@ class ThisMonthsEdits_Sitemap(Sitemap):
         return ArticleTable.objects.filter(is_removed=False, is_removed_from_index=False, lastmod_timestamp__gt=(datetime.datetime.today()-datetime.timedelta(days=30))).exclude(blurb_snippet='<p><br/></p>').order_by('-lastmod_timestamp')[0:750]
 
     def location(self, obj):
-        return u"/wiki/%s/" % unicode(obj.slug)
+        return u"/wiki/lang_%s/%s/" % (obj.page_lang, unicode(obj.slug))
 
 # All indexed pages
 class IndexedSitemap(SlashedListSitemap):
@@ -41,10 +41,10 @@ class IndexedSitemap(SlashedListSitemap):
 
     def items(self):
         cursor = connection.cursor()
-        queryString = "SELECT slug FROM enterlink_articletable art WHERE art.is_removed=0 AND art.is_removed_from_index=0 AND blurb_snippet != '<p><br/></p>'"
+        queryString = "SELECT slug, page_lang FROM enterlink_articletable art WHERE art.is_removed=0 AND art.is_removed_from_index=0 AND blurb_snippet != '<p><br/></p>'"
 
         cursor.execute(queryString)
-        resultItems = [item[0] for item in cursor.fetchall()]
+        resultItems = []
         for item in cursor.fetchall():
             obj = item[0]
             candidateString = item[0]
@@ -59,11 +59,11 @@ class IndexedSitemap(SlashedListSitemap):
             # print(unicode(obj))
             # print(unicode(candidateString))
             # print("--------")
-            resultItems.append(candidateString)
+            resultItems.append([candidateString, item[1]])
         return resultItems
 
     def location(self, obj):
-        return u"/wiki/%s/" % unicode(obj)
+        return u"/wiki/lang_%s/%s/" % (obj[1], unicode(obj[0]))
 
 sitemaps = {
 	'indexed':IndexedSitemap,

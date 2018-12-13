@@ -1,13 +1,13 @@
 {% load i18n %}
 
 <!--EOSJS code-->
-<!--<script type="text/javascript" src="/static/js/eosjs-cdn.js"></script>-->
+<!--<script src="/static/js/eosjs-cdn.js"></script>-->
 
 <!--Help with parsing time and date strings-->
-<script type="text/javascript" src="/static/js/easytimer.min.js"></script>
+<script src="/static/js/easytimer.min.js"></script>
 
 <!--Page JS-->
-<script language="javascript" type="text/javascript">
+<script>
     // Attach TinyMCE to the page
     tinymce_attach_blob();
 
@@ -17,14 +17,14 @@
     // var scatterCallback = (err, res) => {err ? console.error(err) : console.log(res)};
 
     // Get the translated strings
-    var confirmStrings = [gettext("Please stake some IQ into Brainpower before continuing. Click OK to open the Brainpower management screen in a new tab. NOTE: Please make sure popups are enabled for this site, as you may receive a warning."),
-        gettext("Note that you will not be able to propose edits without Brainpower. Your work will be lost!"),
-        gettext("Error: proposal not found. Please try submitting again."),
-        gettext("Article proposal submission failed!"),
-        gettext("Add File"),
-        gettext("Add Link"),
-        gettext("Add New Infobox"),
-        gettext("Completing transaction...")];
+    var confirmStrings = [django.gettext("Please stake some IQ into Brainpower before continuing. Click OK to open the Brainpower management screen in a new tab. NOTE: Please make sure popups are enabled for this site, as you may receive a warning."),
+        django.gettext("Note that you will not be able to propose edits without Brainpower. Your work will be lost!"),
+        django.gettext("Error: proposal not found. Please try submitting again."),
+        django.gettext("Article proposal submission failed!"),
+        django.gettext("Add File"),
+        django.gettext("Add Link"),
+        django.gettext("Add New Infobox"),
+        django.gettext("Completing transaction...")];
 
 
 
@@ -124,10 +124,21 @@
             $("#pagemeta-box-wrapper").show();
         });
 
+        // Show the interactive pane for the page metadata when it is clicked
+        $('.mce-btn-merge').click(function() {
+            $("#merge-box-wrapper").show();
+        });
+
         // Inject the page type selection (from the page metadata pane) into TinyMCE
         $("#id_page_type").change(function() {
             var value = $(this).val();
             $('#form_tinymce_container_ifr').contents().find(".pagemeta-table [data-key='page_type'] td.meta-value").html(value);
+        });
+
+        // Inject the page language selection (from the page metadata pane) into TinyMCE
+        $("#id_page_lang").change(function() {
+            var value = $(this).val();
+            $('#form_tinymce_container_ifr').contents().find(".pagemeta-table [data-key='page_lang'] td.meta-value").html(value);
         });
 
         // Inject the removal status selection (from the page metadata pane) into TinyMCE
@@ -149,34 +160,13 @@
             $("#mainphoto-edit-box-wrapper").show();
         });
 
-        // Handler for when the page is saved
-        $(".mce-btn-save-page").click(function (event) {
-            // Get the TinyMCE object
-            var tinyEditor = tinyMCE.get("form_tinymce_container");
-
-            // Get the content from the TinyMCE
-            var blurbValue = tinyEditor.getContent();
-
-            // Show loading popup
-            $("#submission_waiting").show();
-
-            $.post("/save_draft/", {
-                account_name: $(".scatter-username").text(),
-                article_slug: ARTICLE_SLUG,
-                html_blob: blurbValue
-            }).then(function () {
-                $("#submission_waiting").hide();
-            });
-        });
-
-        $(".mce-btn-load-draft").click(function (event) {
-            window.location = window.location.pathname + "?draft=" + $(".scatter-username").text();
-        });
-
         // Handler for the Submit button
-        $(".mce-btn-submit").click(function (event) {
+        $(".mce-btn-save-page").click(function (event) {
             // Prevent the default form save from occuring
             event.preventDefault();
+
+            // Disable saved changes check on submission
+            window.pageHasBeenEdited = false;
 
             // Get the page title
             var titleValue = $('#form_tinymce_container_ifr').contents().find(".page-title").html();
@@ -317,6 +307,9 @@
 
         // Submit the edit form
         function submitMainForm() {
+            // Re-enable saved changes check on submission
+            window.pageHasBeenEdited = true;
+
             // Fetch the user's Brainpower and make sure they have at least the minimum required to make an edit
             var startingBrainpower = getBrainpower();
             if (startingBrainpower < 10){
@@ -349,7 +342,7 @@
             // that the proposal was actually recorded.
             $.ajax({
                 type: "POST",
-                url: "/wiki/{{ARTICLE_SLUG}}/advanced_edit/?submission=1",
+                url: "/wiki/lang_{{ PAGE_LANG }}/{{ARTICLE_SLUG}}/edit/?submission=1",
                 data: {"blurbHTML": blurbValue},
                 success: function (data) {
                     // Submit the proposal via Scatter
@@ -377,13 +370,16 @@
                         // Check to make sure that the proposal was recorded on-chain
                         $.ajax({
                             type: "POST",
-                            url: "/wiki/{{ARTICLE_SLUG}}/advanced_edit/?verification=1&newIPFS=" + data["newIPFS"],
+                            url: "/wiki/lang_{{ PAGE_LANG }}/{{ARTICLE_SLUG}}/edit/?merged_from_hash={{ MERGED_FROM_HASH }}&verification=1&newIPFS=" + data["newIPFS"] + "&proposer=" + scatterAccountName,
                             data: {},
                             success: function (data) {
                                 // Assuming the proposal was recorded, redirect the user to the proposal voting page
                                 $('#submission_waiting').show();
                                 $('#submission_waiting .waiting-header').html(confirmStrings[7]);
                                 window.location.href = window.location.origin + "/AJAX-REQUEST/AJAX_Fetch_Blurb_Compare/" + data["newIPFS"] + "/" + data["oldIPFS"] + "/";
+
+                                // Disable saved changes check on submission
+                                window.pageHasBeenEdited = false;
                             },
                             error: function(data){
                                alert(confirmStrings[2]);

@@ -158,7 +158,6 @@ a {
     float: left;
     width: calc(100% - 2px);
     border: 1px solid slategray;
-    border-top: 0px;
     word-break: break-all;
 }
 .right-body .media-orig-source-wrap .main-photo-og-url-label{
@@ -326,6 +325,10 @@ float: left;
     padding: 3px 5px 3px 5px;
     width: calc(100% - 10px);
     background: none;
+}
+/* for diffs */
+.right-body .right-body {
+    width: 100%;
 }
 .lower-body{
     float: left;
@@ -571,6 +574,10 @@ white-space:normal!important
 
 #blobBox_container td span {
 white-space:normal!important
+}
+
+#blobBox_container #coordinates {
+display: none;
 }
 
 #blobBox_container tr th:not([colspan]) {
