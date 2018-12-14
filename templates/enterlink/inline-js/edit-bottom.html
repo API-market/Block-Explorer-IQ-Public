@@ -310,31 +310,39 @@
             // Re-enable saved changes check on submission
             window.pageHasBeenEdited = true;
 
-            // Fetch the user's Brainpower and make sure they have at least the minimum required to make an edit
-            var startingBrainpower = getBrainpower();
-            if (startingBrainpower < 10){
-                // Notify the user that they need more Brainpower before they can edit and offer to redirect them to the
-                // Brainpower management screen
-                var r = confirm(confirmStrings[0]);
-
-                // If the user agrees to be redirected, send them to the Brainpower management page
-                if (r == true) {
-                    let url = location.origin + "/brainpower/" + scatterAccountName + "/";
-                    let win = window.open(url, '_blank');
-                    win.focus();
-                } else {
-                    // Otherwise, tell them that their edits will not be saved
-                    alert(confirmStrings[1])
-                }
-            }
-
             // Extract the TinyMCE object
             var tinyEditor = tinyMCE.get("form_tinymce_container");
 
             // Get the content of the TinyMCE
             var blurbValue = tinyEditor.getContent();
 
-            // Show the "Wait" box because Scatter can be slow sometimes
+            // Fetch the user's Brainpower and make sure they have at least the minimum required to make an edit
+            // Also checks if Scatter is loaded
+            try {
+                var userPack = ["SCATTER", scatterAccountName];
+                var startingBrainpower = getBrainpower();
+                if (startingBrainpower < 10){
+                    // Notify the user that they need more Brainpower before they can edit and offer to redirect them to the
+                    // Brainpower management screen
+                    var r = confirm(confirmStrings[0]);
+
+                    // If the user agrees to be redirected, send them to the Brainpower management page
+                    if (r == true) {
+                        let url = location.origin + "/brainpower/" + scatterAccountName + "/";
+                        let win = window.open(url, '_blank');
+                        win.focus();
+                    } else {
+                        // Otherwise, tell them that their edits will not be saved
+                        alert(confirmStrings[1]);
+                        return
+                    }
+                }
+            } catch(err) {
+                // Scatter not loaded, so assuming OREID
+                var userPack = ["OREID", "eporeidusers"];
+            }
+
+            // Show the "Wait" box
             $('#submission_waiting').show();
 
             // Submit the article to the server to generate the IPFS hash, which will then be sent to Scatter for the "propose" function.
@@ -352,47 +360,61 @@
                             account: 'eparticlectr',
                             name: 'propose',
                             authorization: [{
-                                actor: scatterAccountName,
+                                actor: userPack[1],
                                 permission: "active",
                             }],
                             data: {
-                                proposer: scatterAccountName,
+                                proposer: userPack[1],
                                 proposed_article_hash: data["newIPFS"],
                                 old_article_hash: data["oldIPFS"],
                                 grandparent_hash: data["grandparentIPFS"],
                             },
                         }]
                     };
-                    eos.transact(transactionJSON, {blocksBehind: 3, expireSeconds: 30,}).then(result => {
-                        // Hide the submission popup
-                        $('#submission_waiting').hide();
 
-                        // Check to make sure that the proposal was recorded on-chain
-                        $.ajax({
-                            type: "POST",
-                            url: "/wiki/lang_{{ PAGE_LANG }}/{{ARTICLE_SLUG}}/edit/?merged_from_hash={{ MERGED_FROM_HASH }}&verification=1&newIPFS=" + data["newIPFS"] + "&proposer=" + scatterAccountName,
-                            data: {},
-                            success: function (data) {
-                                // Assuming the proposal was recorded, redirect the user to the proposal voting page
-                                $('#submission_waiting').show();
-                                $('#submission_waiting .waiting-header').html(confirmStrings[7]);
-                                window.location.href = window.location.origin + "/AJAX-REQUEST/AJAX_Fetch_Blurb_Compare/" + data["newIPFS"] + "/" + data["oldIPFS"] + "/";
+                    switch(userPack[0]) {
+                    case "SCATTER":
+                        eos.transact(transactionJSON, {blocksBehind: 3, expireSeconds: 30,}).then(result => {
+                            // Hide the submission popup
+                            $('#submission_waiting').hide();
 
-                                // Disable saved changes check on submission
-                                window.pageHasBeenEdited = false;
-                            },
-                            error: function(data){
-                               alert(confirmStrings[2]);
-                           }
+                            // Check to make sure that the proposal was recorded on-chain
+                            $.ajax({
+                                type: "POST",
+                                url: "/wiki/lang_{{ PAGE_LANG }}/{{ARTICLE_SLUG}}/edit/?merged_from_hash={{ MERGED_FROM_HASH }}&verification=1&newIPFS=" + data["newIPFS"] + "&proposer=" + scatterAccountName,
+                                data: {},
+                                success: function (data) {
+                                    // Assuming the proposal was recorded, redirect the user to the proposal voting page
+                                    $('#submission_waiting').show();
+                                    $('#submission_waiting .waiting-header').html(confirmStrings[7]);
+                                    window.location.href = window.location.origin + "/AJAX-REQUEST/AJAX_Fetch_Blurb_Compare/" + data["newIPFS"] + "/" + data["oldIPFS"] + "/";
+
+                                    // Disable saved changes check on submission
+                                    window.pageHasBeenEdited = false;
+                                },
+                                error: function(data){
+                                   alert(confirmStrings[2]);
+                               }
+                            });
+                            console.log("Transaction completed:" + result.transaction_id);
+                        }).catch(e => {
+                            $('#submission_waiting').hide();
+                            alert(e);
+                            // if (e instanceof eosjs_jsonrpc.RpcError){
+                            // 	console.log(JSON.stringify(e.json, null, 2));
+                            // }
                         });
-                        console.log("Transaction completed:" + result.transaction_id);
-                    }).catch(e => {
-                        $('#submission_waiting').hide();
-                        alert(e);
-                        // if (e instanceof eosjs_jsonrpc.RpcError){
-                        // 	console.log(JSON.stringify(e.json, null, 2));
-                        // }
-                    });
+                        break;
+                    case "OREID":
+                        console.log("COINED");
+                        break;
+                    default:
+                        return
+                    }
+
+
+
+
                 }
             });
         }
