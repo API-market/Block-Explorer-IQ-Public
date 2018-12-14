@@ -319,7 +319,7 @@
             // Fetch the user's Brainpower and make sure they have at least the minimum required to make an edit
             // Also checks if Scatter is loaded
             try {
-                var userPack = ["SCATTER", scatterAccountName];
+                var userPack = ["SCATTER", scatterAccountName, "active"];
                 var startingBrainpower = getBrainpower();
                 if (startingBrainpower < 10){
                     // Notify the user that they need more Brainpower before they can edit and offer to redirect them to the
@@ -339,7 +339,7 @@
                 }
             } catch(err) {
                 // Scatter not loaded, so assuming OREID
-                var userPack = ["OREID", "eporeidusers"];
+                var userPack = ["OREID", "eporeidusers", "oreidusrname"];
             }
 
             // Show the "Wait" box
@@ -353,15 +353,13 @@
                 url: "/wiki/lang_{{ PAGE_LANG }}/{{ARTICLE_SLUG}}/edit/?submission=1",
                 data: {"blurbHTML": blurbValue},
                 success: function (data) {
-                    // Submit the proposal via Scatter
-
                     var transactionJSON = {
                         actions: [{
                             account: 'eparticlectr',
                             name: 'propose',
                             authorization: [{
                                 actor: userPack[1],
-                                permission: "active",
+                                permission: userPack[2],
                             }],
                             data: {
                                 proposer: userPack[1],
@@ -374,6 +372,7 @@
 
                     switch(userPack[0]) {
                     case "SCATTER":
+                        // Submit the proposal via Scatter
                         eos.transact(transactionJSON, {blocksBehind: 3, expireSeconds: 30,}).then(result => {
                             // Hide the submission popup
                             $('#submission_waiting').hide();
@@ -406,6 +405,7 @@
                         });
                         break;
                     case "OREID":
+                        // Use orejs
                         console.log("COINED");
                         break;
                     default:
