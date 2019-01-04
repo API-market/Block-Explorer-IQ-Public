@@ -102,6 +102,73 @@ h1.main-headline {
 	width: 100%;
 }
 
+.partners-wrap{
+	float: left;
+    width: 100%;
+}
+
+.partners-wrap .partners-heading{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;
+    margin: 30px 0px 30px 0px;
+}
+
+ul.partners-list{
+	list-style: none;
+	width: 100%;
+	text-align: center;
+}
+
+ul.partners-list li{
+	padding: 0px 10px;
+	width: 170px;
+	height: 100px;
+	display: inline-block;
+	border-top: 1px solid rgba(128,128,128,0.13);
+    border-left: 1px solid rgba(128,128,128,0.13);
+    -webkit-box-shadow: 3px 3px 4px 0px rgba(196,196,196,1);
+    -moz-box-shadow: 3px 3px 4px 0px rgba(196,196,196,1);
+    box-shadow: 3px 3px 4px 0px rgba(196,196,196,1);
+	margin: 0px 5px 5px 0px;
+	cursor: pointer;
+}
+ul.partners-list li:hover{
+	background: rgba(211, 211, 211, 0.22);
+}
+
+ul.partners-list li a{
+	width: 100%;
+	float: left;
+	height: 100%;
+}
+
+ul.partners-list li a .logo-wrap{
+	float:	left;
+    width: 150px;
+    text-align: center;
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+ul.partners-list li a .logo-wrap .partner-text{
+	margin-left: 7px;
+    color: white;
+    font-size: 17px;
+    position: relative;
+    top: 5px;
+}
+
+
+
+
+ul.partners-list li a .logo-wrap .partner-logo{
+	object-fit: contain;
+}
+
+
 @media (max-width: 992px) {
 	.news-list-wrap, .quick-links-wrap {
 		width: 100%;

@@ -588,15 +588,31 @@
 		    </div>
 
 		    <div class="usermenu-ct">
-
-	            <div class="usermenu-header">
-		            <div class="usermenu-header-inner">
-
+                <div class="usermenu-header">
+                    <div class="scatter-username">
+                        {% trans 'Menu' %}
                     </div>
-	            </div>
-
+                </div>
 	            <div>
 	                <ul>
+                        <li class="oreid-line oreid-line-grp" >
+                            <a href="https://aikon.com/ore-id">
+                                <img class="line-logo" src="/static/images/oreid.svg" />
+                                <div class="line-text fixed-items-description">{% trans 'ORE ID Logins' %}</div>
+                            </a>
+                        </li>
+                        <li class="oreid-facebook oreid-line-grp" >
+                            <a href="/AJAX-REQUEST/AJAX_OREID_Auth/?provider=facebook&source_url={{ request.path }}" class='oreid-auth-link' data-provider="facebook" >
+                                <img class="line-logo" src="/static/images/facebook.png" />
+                                <div class="line-text fixed-items-description">{% trans 'Facebook' %}</div>
+                            </a>
+                        </li>
+                        <li class="oreid-twitter oreid-line-grp" >
+                            <a href="/AJAX-REQUEST/AJAX_OREID_Auth/?provider=twitter&source_url={{ request.path }}" class='oreid-auth-link' data-provider="twitter" >
+                                <img class="line-logo" src="/static/images/twitter.png" />
+                                <div class="line-text fixed-items-description">{% trans 'Twitter' %}</div>
+                            </a>
+                        </li>
 					    <li>
 					        <a rel="nofollow" href="/wiki/everipedia-faq/">
 					            <span class="icon"><i class="fa fa-question"></i></span>

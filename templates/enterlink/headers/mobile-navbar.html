@@ -80,12 +80,30 @@
 		<div class="usermenu-ct">
 			
             <div class="usermenu-header">
-	            <div class="usermenu-header-inner">
-		            <!--<a rel="nofollow" href="/registration_login_intermediate/?login_type=&referral_path={{ request.path }}&origin_click=mobile_navbar_register&redirect_type={{ request.resolver_match.url_name }}&object_id="><h2>{% trans 'Register / Log in' %}</h2></a>-->
+	            <div class="scatter-username">
+                    {% trans 'Menu' %}
 	            </div>
             </div>
             <div>
                 <ul>
+                    <li class="oreid-line oreid-line-grp" >
+                        <a href="https://aikon.com/ore-id">
+                            <img class="line-logo" src="/static/images/oreid.svg" />
+                            <div class="line-text fixed-items-description">{% trans 'ORE ID Logins' %}</div>
+                        </a>
+                    </li>
+                    <li class="oreid-facebook oreid-line-grp" >
+                        <a href="/AJAX-REQUEST/AJAX_OREID_Auth/?provider=facebook&source_url={{ request.path }}" class='oreid-auth-link' data-provider="facebook" >
+                            <img class="line-logo" src="/static/images/facebook.png" />
+                            <div class="line-text fixed-items-description">{% trans 'Facebook' %}</div>
+                        </a>
+                    </li>
+                    <li class="oreid-twitter oreid-line-grp" >
+                        <a href="/AJAX-REQUEST/AJAX_OREID_Auth/?provider=twitter&source_url={{ request.path }}" class='oreid-auth-link' data-provider="twitter" >
+                            <img class="line-logo" src="/static/images/twitter.png" />
+                            <div class="line-text fixed-items-description">{% trans 'Twitter' %}</div>
+                        </a>
+                    </li>
                     <li>
                         <a href="/wiki/everipedia-faq/">
                             <span class="icon icon-help"></span>
@@ -120,7 +138,7 @@
             </div>
 
 		</div>
-
+    </div>
 </div>
 
 <script>
@@ -131,21 +149,8 @@
         $('body').unbind('touchmove');
     };
 
-{#    $("#header_create_page_btn").click(function() {#}
-{#        var searchValue = $("#custom-search-input #AJAXBox").val();#}
-{#        $(".createpage-field #CreateBox").val(searchValue);#}
-{#    });#}
-
-
 </script>
 
-{% include "enterlink/headers/scatter-header.html" %}
 
-{% if request.mobile %}
-    <div id="mobile-hovercard-bottom">
-        <div onclick="hoverCardCloseHandler(); return false;" id="card-close-btn"></div>
-        <div id="card-content">
-            {#Content will be injected here#}
-        </div>
-    </div>
-{% endif %}
+
+{% include "enterlink/headers/scatter-header.html" %}

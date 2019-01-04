@@ -22,6 +22,24 @@
         <!--</li>-->
         <!--<li><a rel='nofollow' href="/notifications/">{% trans 'Notifications' %}</a></li>-->
         <!--<li><a rel='nofollow' href="/messages/">{% trans 'Messages' %}</a></li>-->
+        <li class="oreid-line oreid-line-grp" >
+            <a href="https://aikon.com/ore-id">
+                <img class="line-logo" src="/static/images/oreid.svg" />
+                <span class="line-text">{% trans 'ORE ID Logins' %}</span>
+            </a>
+        </li>
+        <li class="oreid-facebook oreid-line-grp" >
+            <a href="/AJAX-REQUEST/AJAX_OREID_Auth/?provider=facebook&source_url={{ request.path }}" class='oreid-auth-link' data-provider="facebook" >
+                <img class="line-logo" src="/static/images/facebook.png" />
+                <span class="line-text">{% trans 'Facebook' %}</span>
+            </a>
+        </li>
+        <li class="oreid-twitter oreid-line-grp" >
+            <a href="/AJAX-REQUEST/AJAX_OREID_Auth/?provider=twitter&source_url={{ request.path }}" class='oreid-auth-link' data-provider="twitter" >
+                <img class="line-logo" src="/static/images/twitter.png" />
+                <span class="line-text">{% trans 'Twitter' %}</span>
+            </a>
+        </li>
         <li><a href="https://github.com/GetScatter/ScatterDesktop/releases" id="get_scatter" >{% trans 'Get Scatter' %}</a></li>
         <li><a class="create-page-dropdown" href="/create_page/edit/?key=">{% trans 'Create Page' %}</a></li>
         <li><a href="/recent-activity/">{% trans 'Recent Activity' %}</a></li>

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-10 16:54+0900\n"
-"PO-Revision-Date: 2018-07-31 15:53-0700\n"
+"POT-Creation-Date: 2018-12-29 16:09-0800\n"
+"PO-Revision-Date: 2018-12-29 16:00-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: uk\n"
@@ -17,39 +17,41 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2\n"
 
-#: enterlink/edit.py:105 enterlink/model_functions.py:368
-#: enterlink/view_functions.py:727
+#: enterlink/edit.py:109 enterlink/model_functions.py:375
+#: enterlink/view_functions.py:796
 msgid "Page Language"
 msgstr "Мова"
 
-#: enterlink/edit.py:106 enterlink/model_functions.py:353
+#: enterlink/edit.py:110 enterlink/model_functions.py:360
 msgid "Page Type"
 msgstr "Сторінка"
 
-#: enterlink/edit.py:106 enterlink/model_functions.py:358
+#: enterlink/edit.py:110 enterlink/model_functions.py:365
 msgid "Removed From Site"
-msgstr ""
+msgstr "Видалено з сайту"
 
-#: enterlink/edit.py:106 enterlink/model_functions.py:363
+#: enterlink/edit.py:110 enterlink/model_functions.py:370
 #: templates/enterlink/edit_ajax_editpagemeta.html:12
 msgid "Adult Content"
 msgstr "Зміст для дорослих"
 
-#: enterlink/edit.py:107 enterlink/model_functions.py:343
+#: enterlink/edit.py:111 enterlink/model_functions.py:350
 msgid "Media Gallery"
 msgstr "Галерея"
 
-#: enterlink/edit.py:107 enterlink/model_functions.py:348
+#: enterlink/edit.py:111 enterlink/model_functions.py:355
 msgid "References and Citations"
-msgstr ""
+msgstr "Посилання та цитати"
 
-#: enterlink/edit.py:821
+#: enterlink/edit.py:883
 msgid ""
 "This is the reference link for the lead picture/gif of the page. Delete this "
 "link here or replace the picture/gif above."
 msgstr ""
+"Це посилання на головний малюнок / gif сторінки. Видалити це посилання тут "
+"або замінити зображення / gif вище."
 
 #: enterlink/forms.py:11
 msgid "How can we help?"
@@ -67,28 +69,28 @@ msgstr "Повне ім’я"
 msgid "Subject"
 msgstr "Тема"
 
-#: enterlink/forms.py:15 enterlink/models.py:13
+#: enterlink/forms.py:15 enterlink/models.py:86
 msgid "Report Abuse"
 msgstr "Повідомити про зловживання"
 
-#: enterlink/forms.py:15 enterlink/models.py:13
+#: enterlink/forms.py:15 enterlink/models.py:86
 msgid "Report Bug"
 msgstr "повідомити про помилку"
 
-#: enterlink/forms.py:15 enterlink/models.py:13
+#: enterlink/forms.py:15 enterlink/models.py:86
 msgid "Verify Account"
 msgstr "Підтвердити обліковий запис"
 
-#: enterlink/forms.py:15 enterlink/models.py:13
+#: enterlink/forms.py:15 enterlink/models.py:86
 msgid "Anonymous Tip"
 msgstr "Анонімна підказка"
 
-#: enterlink/forms.py:15 enterlink/models.py:13
+#: enterlink/forms.py:15 enterlink/models.py:86
 msgid "Investment Inquiries"
 msgstr "Інвестиційні запити"
 
-#: enterlink/forms.py:15 enterlink/forms.py:76 enterlink/models.py:13
-#: enterlink/models.py:68
+#: enterlink/forms.py:15 enterlink/forms.py:76 enterlink/models.py:86
+#: enterlink/models.py:141
 msgid "Other"
 msgstr "Інше"
 
@@ -132,65 +134,65 @@ msgstr "Введіть тип (наприклад, професія)"
 msgid "Enter value (e.g. CEO)"
 msgstr "Введіть значення (наприклад, виконавчий директор)"
 
-#: enterlink/forms.py:71 enterlink/models.py:68
+#: enterlink/forms.py:71 enterlink/models.py:141
 msgid "Person"
 msgstr "Особа"
 
-#: enterlink/forms.py:71 enterlink/models.py:68
+#: enterlink/forms.py:71 enterlink/models.py:141
 msgid "Place/Location"
 msgstr "Місце / місце"
 
-#: enterlink/forms.py:72 enterlink/models.py:68
+#: enterlink/forms.py:72 enterlink/models.py:141
 msgid "Organization/Company/Institution"
 msgstr "Організація / Компанія / Інститут"
 
-#: enterlink/forms.py:72 enterlink/models.py:68
+#: enterlink/forms.py:72 enterlink/models.py:141
 msgid "Event"
 msgstr "Подія"
 
-#: enterlink/forms.py:73 enterlink/models.py:68
+#: enterlink/forms.py:73 enterlink/models.py:141
 msgid "List/Ranking"
 msgstr "Список / Рейтинг"
 
-#: enterlink/forms.py:73 enterlink/models.py:68
+#: enterlink/forms.py:73 enterlink/models.py:141
 msgid "Product/Merchandise"
 msgstr "Продукт / Товари"
 
-#: enterlink/forms.py:74 enterlink/models.py:68
+#: enterlink/forms.py:74 enterlink/models.py:141
 msgid "Electronics/Software"
 msgstr "Електроніка / Програмне забезпечення"
 
-#: enterlink/forms.py:74 enterlink/models.py:68
+#: enterlink/forms.py:74 enterlink/models.py:141
 msgid "Medical/Biology"
 msgstr "Медицина / Біологія"
 
-#: enterlink/forms.py:75 enterlink/models.py:68
+#: enterlink/forms.py:75 enterlink/models.py:141
 msgid "Creative Work/Art"
 msgstr "Творча робота / Мистецтво"
 
-#: enterlink/forms.py:76 enterlink/models.py:68
+#: enterlink/forms.py:76 enterlink/models.py:141
 msgid "Science/Academia/Humanities"
 msgstr "Наука / Академія / Гуманітарні науки"
 
-#: enterlink/view_functions.py:150
+#: enterlink/view_functions.py:153
 msgid "Images & Videos"
 msgstr "Зображення та відео"
 
-#: enterlink/view_functions.py:153
+#: enterlink/view_functions.py:156
 msgid "References"
 msgstr "Список літератури"
 
-#: enterlink/view_functions.py:160
-#: templates/enterlink/template_blockchain_styled_amp.html:318
-#: templates/enterlink/template_blockchain_styled_desktop.html:518
+#: enterlink/view_functions.py:163
+#: templates/enterlink/template_blockchain_styled_amp.html:330
+#: templates/enterlink/template_blockchain_styled_desktop.html:541
 msgid "See Also"
 msgstr "Прочитайте також"
 
-#: enterlink/view_functions.py:1103
+#: enterlink/view_functions.py:1175
 msgid "Wiki and references for"
 msgstr "Вікі та посилання для"
 
-#: enterlink/view_functions.py:1104
+#: enterlink/view_functions.py:1176
 msgid "You can edit something on this wiki now!"
 msgstr "Ви можете щось редагувати на цій вікі вже зараз!"
 
@@ -225,80 +227,81 @@ msgstr "Створіть Wiki"
 #: templates/enterlink/ajax_infobox_singlet.html:14
 #: templates/enterlink/ajax_infobox_singlet.html:42
 msgid "Add Row"
-msgstr ""
+msgstr "Додати рядок"
 
 #: templates/enterlink/ajax_infobox_singlet.html:17
 #: templates/enterlink/ajax_infobox_singlet.html:45
 msgid "Schema"
-msgstr ""
+msgstr "Схема"
 
 #: templates/enterlink/ajax_infobox_singlet.html:21
 #: templates/enterlink/ajax_infobox_singlet.html:49
 msgid "Schema Type"
-msgstr ""
+msgstr "Тип схеми"
 
 #: templates/enterlink/ajax_infobox_singlet.html:25
 #: templates/enterlink/ajax_infobox_singlet.html:53
 msgid "Subschema"
-msgstr ""
+msgstr "Підсх"
 
 #: templates/enterlink/ajax_link_singlet.html:25
 msgid "Social Media"
-msgstr ""
+msgstr "Соц.медіа"
 
 #: templates/enterlink/ajax_link_singlet.html:27
 msgid "Attributes"
-msgstr ""
+msgstr "Атрибути"
 
 #: templates/enterlink/ajax_link_singlet.html:29
 #: templates/enterlink/ajax_media_gallery_singlet.html:33
 msgid "Timestamp"
-msgstr ""
+msgstr "Тимчасова позначка"
 
 #: templates/enterlink/ajax_media_gallery_singlet.html:14
 #: templates/enterlink/ajax_media_gallery_singlet.html:19
-#: templates/enterlink/ajaxresults.html:104
+#: templates/enterlink/ajaxresults.html:109
 #: templates/enterlink/hoverlink_iframe_blockchain.html:94
-#: templates/enterlink/template_blockchain_styled_desktop.html:407
 #: templates/enterlink/template_blockchain_styled_desktop.html:430
+#: templates/enterlink/template_blockchain_styled_desktop.html:453
 #: templates/enterlink/template_photos_amp_json_blockchain.html:79
-msgid "Your browser does not support HTML5 video."
+msgid "Please click to play the video."
 msgstr "Ваш веб-переглядач не підтримує відео HTML5."
 
 #: templates/enterlink/ajax_media_gallery_singlet.html:29
 msgid "Type"
-msgstr ""
+msgstr "Тип"
 
 #: templates/enterlink/ajax_media_gallery_singlet.html:31
 msgid "MIME Type"
-msgstr ""
+msgstr "MIME-тип"
 
 #: templates/enterlink/ajax_media_gallery_singlet.html:37
 msgid "Original URL"
-msgstr ""
+msgstr "Оригінальна URL-адреса"
 
-#: templates/enterlink/ajaxresults.html:57
+#: templates/enterlink/ajaxresults.html:62
 msgid "Click to add a new link or file to this list"
 msgstr "Натисніть, щоб додати нове посилання або файл до цього списку"
 
-#: templates/enterlink/ajaxresults.html:60
+#: templates/enterlink/ajaxresults.html:65
 msgid "Or click an existing link below to add it to the article"
 msgstr "Або натисніть існуючу посилання нижче, щоб додати її до статті"
 
-#: templates/enterlink/ajaxresults.html:142
-#: templates/enterlink/ajaxresults.html:193
-#: templates/enterlink/ajaxresults.html:230
-#: templates/enterlink/template_blockchain_styled_desktop.html:160
+#: templates/enterlink/ajaxresults.html:147
+#: templates/enterlink/ajaxresults.html:177
+#: templates/enterlink/ajaxresults.html:233
+#: templates/enterlink/ajaxresults.html:270
+#: templates/enterlink/template_blockchain_styled_desktop.html:163
 msgid "Views"
 msgstr "Перегляди"
 
-#: templates/enterlink/ajaxresults.html:165
+#: templates/enterlink/ajaxresults.html:200
 #: templates/enterlink/hovereditor_ajax.html:74
 msgid "IQ"
 msgstr "Коефіцієнт інтелекту"
 
-#: templates/enterlink/ajaxresults.html:176
-#: templates/enterlink/ajaxresults.html:213
+#: templates/enterlink/ajaxresults.html:216
+#: templates/enterlink/ajaxresults.html:253
 msgid "page(s) have this link"
 msgstr "сторінка(и) з цим посиланням"
 
@@ -317,7 +320,9 @@ msgstr "Управління Brainpower"
 #: templates/enterlink/exchange-listings.html:7
 #: templates/enterlink/headers/index_header.html:17
 #: templates/enterlink/headers/index_header.html:18
-#: templates/enterlink/index.html:7 templates/enterlink/leadership.html:6
+#: templates/enterlink/index.html:7
+#: templates/enterlink/investor-relations.html:5
+#: templates/enterlink/leadership.html:6
 #: templates/enterlink/limitreached.html:7 templates/enterlink/login.html:7
 #: templates/enterlink/recent-activity.html:7
 #: templates/enterlink/rewardsmgmt.html:4 templates/enterlink/search.html:7
@@ -328,7 +333,7 @@ msgstr "Everipedia, енциклопедія всього"
 
 #: templates/enterlink/brainpowermgmt.html:101
 #: templates/enterlink/rewardsmgmt.html:123
-#: templates/enterlink/template_blockchain_styled_desktop.html:695
+#: templates/enterlink/template_blockchain_styled_desktop.html:718
 #: templates/enterlink/voting.html:194
 msgid "Please wait"
 msgstr "Ну годі, прошу тебе!"
@@ -401,33 +406,25 @@ msgstr "Сума"
 msgid "Claim"
 msgstr "Стверджувати"
 
-#: templates/enterlink/contact.html:5 templates/enterlink/contact.html:22
+#: templates/enterlink/contact.html:5 templates/enterlink/contact.html:16
 msgid "Contact us"
 msgstr "Контакти"
 
-#: templates/enterlink/contact.html:18
-msgid "To get quicker replies from our community"
-msgstr "Щоб отримати швидше відповіді від нашого співтовариства"
-
-#: templates/enterlink/contact.html:18
-msgid "create a post in our forum"
-msgstr "створити повідомлення на нашому форумі"
-
-#: templates/enterlink/contact.html:23
+#: templates/enterlink/contact.html:17
 msgid "Get in touch with us"
 msgstr "Зв'яжіться з нами"
 
-#: templates/enterlink/contact.html:31
+#: templates/enterlink/contact.html:25
 msgid "Thanks, we got your message. We will respond in a bit"
 msgstr "Спасибі, ми отримали ваше повідомлення. Ми відповімо згодом."
 
-#: templates/enterlink/contact.html:39 templates/enterlink/transfer-iq.html:131
+#: templates/enterlink/contact.html:33 templates/enterlink/transfer-iq.html:131
 msgid "Send"
 msgstr "Відправити"
 
-#: templates/enterlink/dropzone.html:140 templates/enterlink/edit.html:131
-#: templates/enterlink/edit.html:140 templates/enterlink/edit.html:149
-#: templates/enterlink/edit.html:159 templates/enterlink/edit.html:168
+#: templates/enterlink/dropzone.html:140 templates/enterlink/edit.html:137
+#: templates/enterlink/edit.html:146 templates/enterlink/edit.html:155
+#: templates/enterlink/edit.html:165 templates/enterlink/edit.html:174
 msgid "OK"
 msgstr "ДОБРЕ"
 
@@ -439,26 +436,26 @@ msgstr "Введіть заголовок для основного зображ
 msgid "Loading"
 msgstr "Завантаження"
 
-#: templates/enterlink/edit.html:109
+#: templates/enterlink/edit.html:115
 msgid "Please enter the destination page you wish to merge this one into"
 msgstr "Будь ласка, введіть цільову сторінку, яку ви хочете об'єднати"
 
-#: templates/enterlink/edit.html:110 templates/enterlink/search-iframe.html:122
+#: templates/enterlink/edit.html:116 templates/enterlink/search-iframe.html:122
 #: templates/enterlink/search.html:27
 msgid "Search Everipedia"
 msgstr "Пошук у Everipedia"
 
-#: templates/enterlink/edit.html:114
+#: templates/enterlink/edit.html:120
 msgid "Merge Page"
 msgstr "Об'єднати сторінку"
 
-#: templates/enterlink/edit.html:121 templates/enterlink/edit.html:129
-#: templates/enterlink/edit.html:138 templates/enterlink/edit.html:147
-#: templates/enterlink/edit.html:156 templates/enterlink/edit.html:166
+#: templates/enterlink/edit.html:127 templates/enterlink/edit.html:135
+#: templates/enterlink/edit.html:144 templates/enterlink/edit.html:153
+#: templates/enterlink/edit.html:162 templates/enterlink/edit.html:172
 msgid "Hey there scholar!"
 msgstr "Вітаємо, вчений!"
 
-#: templates/enterlink/edit.html:122
+#: templates/enterlink/edit.html:128
 msgid ""
 "Looks like you have been editing for a while. You should take a moment to "
 "save your work before continuing!"
@@ -466,7 +463,7 @@ msgstr ""
 "Ви, напевно, редагуєте вже деякий час. Перш ніж продовжувати, потрібно "
 "зберегти свою роботу!"
 
-#: templates/enterlink/edit.html:130
+#: templates/enterlink/edit.html:136
 msgid ""
 "Looks like you are using first-person! (ex: Our product, I am, We are, You "
 "should). Everipedia is a neutral encyclopedia written in third-person tense "
@@ -477,18 +474,18 @@ msgstr ""
 "особи(наприклад: &quot;Це, вони&quot;, &quot;Компанія робить&quot;). ЦЕ НЕ "
 "FACEBOOK!!"
 
-#: templates/enterlink/edit.html:139
+#: templates/enterlink/edit.html:145
 msgid "Please enter a title for the page."
 msgstr "Будь ласка, введіть назву сторінки."
 
-#: templates/enterlink/edit.html:148
+#: templates/enterlink/edit.html:154
 msgid ""
 "Please write something for the article section. Make sure to use citations."
 msgstr ""
 "Будь ласка, напишіть щось для розділу статті. Обов'язково використовуйте "
 "цитати."
 
-#: templates/enterlink/edit.html:157
+#: templates/enterlink/edit.html:163
 msgid ""
 "Hello! This page needs citations (also known as footnotes, references, "
 "sources) before it can be saved. Add the links you're using as sources with "
@@ -498,16 +495,16 @@ msgstr ""
 "джерела), перш ніж ії можна буде зберегти. Додайте посилання, які ви "
 "використовуєте як джерела,за допомогою наведеної вище кнопки."
 
-#: templates/enterlink/edit.html:158
+#: templates/enterlink/edit.html:164
 msgid "Join our official Facebook group if you need help with it!:"
 msgstr ""
 "Приєднуйтесь до нашої офіційної групи Facebook, якщо вам потрібна допомога!"
 
-#: templates/enterlink/edit.html:158
+#: templates/enterlink/edit.html:164
 msgid "- we will hook you up. It's not hard!"
 msgstr "- ми підсадемо вас. Це не так важко!"
 
-#: templates/enterlink/edit.html:167
+#: templates/enterlink/edit.html:173
 msgid ""
 "Please cite the link(s) you just added into the main article body. First "
 "click at the end of the sentence or paragraph you want to cite, then click "
@@ -536,6 +533,7 @@ msgstr "Додати елемент Infobox"
 #: templates/enterlink/edit_ajax_addinfobox.html:26
 #: templates/enterlink/edit_ajax_addlink.html:26
 #: templates/enterlink/edit_ajax_editpagemeta.html:16
+#: templates/enterlink/edit_ajax_langgroup.html:38
 #: templates/enterlink/edit_ajax_merge.html:19
 #: templates/enterlink/edit_ajax_page_photo.html:4
 msgid "Close"
@@ -577,10 +575,11 @@ msgstr "Виберіть тему цієї сторінки"
 msgid "Remove page"
 msgstr "Вилучити сторінку"
 
-#: templates/enterlink/edit_ajax_merge.html:12
-msgid "Merge this page into:"
-msgstr "Розповісти друзям"
+#: templates/enterlink/edit_ajax_langgroup.html:32
+msgid "Link this page to:"
+msgstr "Посилання на цю сторінку:"
 
+#: templates/enterlink/edit_ajax_langgroup.html:33
 #: templates/enterlink/edit_ajax_merge.html:13
 #: templates/enterlink/headers/desktop-navbar-index.html:29
 #: templates/enterlink/headers/desktop-navbar.html:43
@@ -588,6 +587,14 @@ msgstr "Розповісти друзям"
 #: templates/enterlink/search.html:7
 msgid "Search"
 msgstr "Пошук"
+
+#: templates/enterlink/edit_ajax_langgroup.html:37
+msgid "Group"
+msgstr "Група"
+
+#: templates/enterlink/edit_ajax_merge.html:12
+msgid "Merge this page into:"
+msgstr "Розповісти друзям"
 
 #: templates/enterlink/edit_ajax_merge.html:17
 msgid "Merge"
@@ -642,7 +649,7 @@ msgid "In The News"
 msgstr "У новинах"
 
 #: templates/enterlink/error.html:197
-#: templates/enterlink/headers/header_dropdown.html:28
+#: templates/enterlink/headers/header_dropdown.html:45
 #: templates/enterlink/recent-activity.html:7
 #: templates/enterlink/recent-activity.html:84
 msgid "Recent Activity"
@@ -669,100 +676,112 @@ msgstr "Підтримувані біржі"
 msgid "The following exchanges indicated that they will support the IQ airdrop"
 msgstr "Наступні біржі вказали, що вони будуть підтримувати IQ ейрдроп"
 
-#: templates/enterlink/exchange-listings.html:149
+#: templates/enterlink/exchange-listings.html:163
 msgid "Supported Wallets"
 msgstr "Підтримувані гаманці"
 
-#: templates/enterlink/exchange-listings.html:198
+#: templates/enterlink/exchange-listings.html:212
 msgid "Token Pockets"
 msgstr "Токенні кишені"
 
+#: templates/enterlink/exchange-listings.html:224
+msgid "Tools"
+msgstr "Інструменти"
+
 #: templates/enterlink/footers/desktop_footer.html:5
 #: templates/enterlink/footers/footer_no_extras.html:5
-#: templates/enterlink/footers/index_footer.html:23
+#: templates/enterlink/footers/index_footer.html:24
 #: templates/enterlink/footers/mobile_footer.html:137
-#: templates/enterlink/template_blockchain_styled_amp.html:516
+#: templates/enterlink/template_blockchain_styled_amp.html:528
 msgid "About"
 msgstr "Про"
 
 #: templates/enterlink/footers/desktop_footer.html:6
 #: templates/enterlink/footers/footer_no_extras.html:6
 #: templates/enterlink/footers/index_footer.html:7
-#: templates/enterlink/footers/index_footer.html:25
+#: templates/enterlink/footers/index_footer.html:26
 #: templates/enterlink/footers/mobile_footer.html:138
-#: templates/enterlink/template_blockchain_styled_amp.html:517
+#: templates/enterlink/template_blockchain_styled_amp.html:529
 msgid "FAQ"
 msgstr "Часті питання"
 
 #: templates/enterlink/footers/desktop_footer.html:7
 #: templates/enterlink/footers/footer_no_extras.html:7
 #: templates/enterlink/footers/index_footer.html:8
-#: templates/enterlink/footers/index_footer.html:26
+#: templates/enterlink/footers/index_footer.html:27
 #: templates/enterlink/footers/mobile_footer.html:139
-#: templates/enterlink/template_blockchain_styled_amp.html:518
+#: templates/enterlink/template_blockchain_styled_amp.html:530
 msgid "Contact"
 msgstr "Контакти"
 
 #: templates/enterlink/footers/desktop_footer.html:8
 #: templates/enterlink/footers/footer_no_extras.html:9
 #: templates/enterlink/footers/index_footer.html:9
-#: templates/enterlink/footers/index_footer.html:27
+#: templates/enterlink/footers/index_footer.html:28
 #: templates/enterlink/footers/mobile_footer.html:143
-#: templates/enterlink/template_blockchain_styled_amp.html:520
+#: templates/enterlink/template_blockchain_styled_amp.html:532
 msgid "Terms"
 msgstr "Умови"
 
 #: templates/enterlink/footers/desktop_footer.html:9
 #: templates/enterlink/footers/footer_no_extras.html:10
 #: templates/enterlink/footers/index_footer.html:10
-#: templates/enterlink/footers/index_footer.html:28
+#: templates/enterlink/footers/index_footer.html:29
 #: templates/enterlink/footers/mobile_footer.html:141
 #: templates/enterlink/headers/header_dropdown.html:7
-#: templates/enterlink/headers/header_dropdown.html:29
+#: templates/enterlink/headers/header_dropdown.html:46
 #: templates/enterlink/headers/index_header.html:128
 #: templates/enterlink/headers/index_header.html:153
 #: templates/enterlink/headers/index_header.html:157
-#: templates/enterlink/headers/mobile-navbar.html:98
+#: templates/enterlink/headers/mobile-navbar.html:116
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:138
-#: templates/enterlink/template_blockchain_styled_amp.html:519
-#: templates/enterlink/template_blockchain_styled_amp.html:597
+#: templates/enterlink/template_blockchain_styled_amp.html:531
+#: templates/enterlink/template_blockchain_styled_amp.html:626
 msgid "Forum"
 msgstr "Форум"
 
 #: templates/enterlink/footers/desktop_footer.html:10
 #: templates/enterlink/footers/footer_no_extras.html:11
 #: templates/enterlink/footers/index_footer.html:11
-#: templates/enterlink/footers/index_footer.html:29
+#: templates/enterlink/footers/index_footer.html:30
 #: templates/enterlink/footers/mobile_footer.html:144
 #: templates/enterlink/headers/header_dropdown.html:8
-#: templates/enterlink/headers/header_dropdown.html:31
-#: templates/enterlink/template_blockchain_styled_amp.html:521
+#: templates/enterlink/headers/header_dropdown.html:48
+#: templates/enterlink/template_blockchain_styled_amp.html:533
 msgid "Get IQ"
 msgstr "Отримати IQ"
 
-#: templates/enterlink/footers/desktop_footer.html:33
-#: templates/enterlink/footers/footer_no_extras.html:34
-#: templates/enterlink/footers/mobile_footer.html:167
-#: templates/enterlink/template_blockchain_styled_amp.html:548
+#: templates/enterlink/footers/desktop_footer.html:11
+#: templates/enterlink/footers/footer_no_extras.html:12
+#: templates/enterlink/footers/index_footer.html:12
+#: templates/enterlink/footers/mobile_footer.html:145
+#: templates/enterlink/template_blockchain_styled_amp.html:534
+msgid "Investors"
+msgstr "Інвестори"
+
+#: templates/enterlink/footers/desktop_footer.html:34
+#: templates/enterlink/footers/footer_no_extras.html:35
+#: templates/enterlink/footers/mobile_footer.html:168
+#: templates/enterlink/template_blockchain_styled_amp.html:561
 msgid "Powered by"
 msgstr "Працює на"
 
-#: templates/enterlink/footers/desktop_footer.html:38
-#: templates/enterlink/footers/footer_no_extras.html:39
-#: templates/enterlink/footers/mobile_footer.html:171
-#: templates/enterlink/template_blockchain_styled_amp.html:552
+#: templates/enterlink/footers/desktop_footer.html:39
+#: templates/enterlink/footers/footer_no_extras.html:40
+#: templates/enterlink/footers/mobile_footer.html:172
+#: templates/enterlink/template_blockchain_styled_amp.html:565
 msgid "API by"
 msgstr "За допомогою API"
 
-#: templates/enterlink/footers/desktop_footer.html:43
-#: templates/enterlink/footers/footer_no_extras.html:44
-#: templates/enterlink/footers/mobile_footer.html:175
-#: templates/enterlink/template_blockchain_styled_amp.html:556
+#: templates/enterlink/footers/desktop_footer.html:44
+#: templates/enterlink/footers/footer_no_extras.html:45
+#: templates/enterlink/footers/mobile_footer.html:176
+#: templates/enterlink/template_blockchain_styled_amp.html:569
 msgid "and"
 msgstr "та"
 
-#: templates/enterlink/footers/desktop_footer.html:51
-#: templates/enterlink/footers/footer_no_extras.html:52
+#: templates/enterlink/footers/desktop_footer.html:52
+#: templates/enterlink/footers/footer_no_extras.html:53
 #: templates/enterlink/headers/desktop-navbar-index.html:6
 #: templates/enterlink/headers/index_header.html:93
 #: templates/enterlink/language_selector.html:79
@@ -786,33 +805,33 @@ msgid "About Everipedia"
 msgstr "Про Everipedia"
 
 #: templates/enterlink/footers/index_footer.html:6
-#: templates/enterlink/footers/index_footer.html:24
+#: templates/enterlink/footers/index_footer.html:25
 msgid "How To Use"
 msgstr "ЯК ВИКОРИСТОВУВАТИ"
 
-#: templates/enterlink/footers/index_footer.html:12
-#: templates/enterlink/footers/index_footer.html:30
+#: templates/enterlink/footers/index_footer.html:13
+#: templates/enterlink/footers/index_footer.html:31
 #: templates/enterlink/footers/mobile_footer.html:140
 msgid "Donate"
 msgstr "Пожертвувати"
 
 #: templates/enterlink/footers/mobile_footer.html:131
-#: templates/enterlink/template_blockchain_styled_amp.html:527
+#: templates/enterlink/template_blockchain_styled_amp.html:540
 msgid "By using this website, you agree to the"
 msgstr "Використовуючи цей веб-сайт, ви погоджуєтеся з цим"
 
 #: templates/enterlink/footers/mobile_footer.html:131
-#: templates/enterlink/template_blockchain_styled_amp.html:527
+#: templates/enterlink/template_blockchain_styled_amp.html:540
 msgid "Terms of Use"
 msgstr "Умови використання"
 
 #: templates/enterlink/footers/mobile_footer.html:131
-#: templates/enterlink/template_blockchain_styled_amp.html:527
+#: templates/enterlink/template_blockchain_styled_amp.html:540
 msgid "Everipedia® is a trademark of Everipedia International"
 msgstr "Everipedia® є торговою маркою Everipedia International"
 
 #: templates/enterlink/footers/mobile_footer.html:142
-#: templates/enterlink/headers/mobile-navbar.html:104
+#: templates/enterlink/headers/mobile-navbar.html:122
 msgid "Chat"
 msgstr "Чат"
 
@@ -832,7 +851,7 @@ msgstr "Йде пошук ..."
 #: templates/enterlink/headers/desktop-navbar.html:24
 #: templates/enterlink/headers/desktop-navbar.html:61
 #: templates/enterlink/headers/desktop-navbar.html:71
-#: templates/enterlink/headers/header_dropdown.html:27
+#: templates/enterlink/headers/header_dropdown.html:44
 #: templates/enterlink/index.html:66
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:50
 msgid "Create Page"
@@ -840,7 +859,7 @@ msgstr "Створити сторінку"
 
 #: templates/enterlink/headers/desktop-navbar-index.html:71
 #: templates/enterlink/headers/desktop-navbar.html:77
-#: templates/enterlink/headers/header_dropdown.html:25
+#: templates/enterlink/headers/header_dropdown.html:24
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:44
 #: templates/enterlink/notifications/index.html:67
 #: templates/enterlink/notifications/index.html:97
@@ -849,7 +868,7 @@ msgstr "Повідомлення"
 
 #: templates/enterlink/headers/desktop-navbar-index.html:77
 #: templates/enterlink/headers/desktop-navbar.html:83
-#: templates/enterlink/headers/header_dropdown.html:24
+#: templates/enterlink/headers/header_dropdown.html:23
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:38
 #: templates/enterlink/notifications/index.html:96
 msgid "Notifications"
@@ -861,23 +880,21 @@ msgid "Your IQ Score"
 msgstr "Ваш показник IQ"
 
 #: templates/enterlink/headers/desktop-navbar.html:19
-#, fuzzy
-#| msgid "Searching..."
 msgid "Searching for duplicates..."
-msgstr "Йде пошук ..."
+msgstr "Пошук дублікатів ..."
 
 #: templates/enterlink/headers/desktop-navbar.html:33
 msgid "Table of contents"
 msgstr "Зміст"
 
 #: templates/enterlink/headers/desktop-navbar.html:33
-#: templates/enterlink/template_blockchain_styled_amp.html:102
+#: templates/enterlink/template_blockchain_styled_amp.html:105
 msgid "Table of contents and facts for this wiki"
 msgstr "Зміст та факти для цієї вікі"
 
 #: templates/enterlink/headers/desktop-navbar.html:66
-#: templates/enterlink/headers/mobile-navbar.html:110
-#: templates/enterlink/template_blockchain_styled_amp.html:603
+#: templates/enterlink/headers/mobile-navbar.html:128
+#: templates/enterlink/template_blockchain_styled_amp.html:632
 msgid "Feed"
 msgstr "Feed"
 
@@ -886,30 +903,47 @@ msgid "Please log in with Scatter"
 msgstr "Будь ласка, увійдіть у систему з розсилкою"
 
 #: templates/enterlink/headers/desktop-navbar.html:95
+#: templates/enterlink/headers/mobile-navbar.html:84
+#: templates/enterlink/template_blockchain_styled_amp.html:593
 msgid "Menu"
-msgstr ""
+msgstr "Меню"
 
 #: templates/enterlink/headers/header_dropdown.html:12
-#: templates/enterlink/headers/header_dropdown.html:35
+#: templates/enterlink/headers/header_dropdown.html:52
 #: templates/enterlink/notifications/index.html:100
 #: templates/enterlink/notifications/index.html:105
 msgid "Log out"
 msgstr "Вийти"
 
-#: templates/enterlink/headers/header_dropdown.html:18
-msgid "Claim Rewards"
-msgstr ""
+#: templates/enterlink/headers/header_dropdown.html:28
+#: templates/enterlink/headers/mobile-navbar.html:92
+#: templates/enterlink/login.html:41
+#: templates/enterlink/template_blockchain_styled_amp.html:601
+msgid "ORE ID Logins"
+msgstr "Вхід до ORE ID"
 
-#: templates/enterlink/headers/header_dropdown.html:26
+#: templates/enterlink/headers/header_dropdown.html:34
+#: templates/enterlink/headers/mobile-navbar.html:98
+#: templates/enterlink/template_blockchain_styled_amp.html:607
+msgid "Facebook"
+msgstr "Facebook"
+
+#: templates/enterlink/headers/header_dropdown.html:40
+#: templates/enterlink/headers/mobile-navbar.html:104
+#: templates/enterlink/template_blockchain_styled_amp.html:613
+msgid "Twitter"
+msgstr "Twitter"
+
+#: templates/enterlink/headers/header_dropdown.html:43
 msgid "Get Scatter"
 msgstr "Завантаження розкиду"
 
-#: templates/enterlink/headers/header_dropdown.html:30
-#: templates/enterlink/headers/mobile-navbar.html:92
+#: templates/enterlink/headers/header_dropdown.html:47
+#: templates/enterlink/headers/mobile-navbar.html:110
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:67
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:90
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:144
-#: templates/enterlink/template_blockchain_styled_amp.html:590
+#: templates/enterlink/template_blockchain_styled_amp.html:619
 msgid "Help"
 msgstr "Допомога"
 
@@ -918,36 +952,28 @@ msgid "Sign In"
 msgstr "Увійти"
 
 #: templates/enterlink/headers/index_header.html:101
-#: templates/enterlink/index.html:46
 msgid "Register"
 msgstr "Реєстрація"
 
 #: templates/enterlink/headers/index_header.html:105
-#: templates/enterlink/login.html:36
 msgid "Username"
 msgstr "Ім'я користувача"
 
 #: templates/enterlink/headers/index_header.html:106
-#: templates/enterlink/login.html:40
 msgid "Password"
 msgstr "Пароль"
 
 #: templates/enterlink/headers/index_header.html:108
 #: templates/enterlink/headers/index_header.html:152
-#: templates/enterlink/login.html:45
 msgid "Log in"
 msgstr "Увійти"
 
 #: templates/enterlink/headers/index_header.html:154
 #: templates/enterlink/headers/index_header.html:158
-#: templates/enterlink/headers/mobile-navbar.html:116
-#: templates/enterlink/template_blockchain_styled_amp.html:609
+#: templates/enterlink/headers/mobile-navbar.html:134
+#: templates/enterlink/template_blockchain_styled_amp.html:638
 msgid "Language"
 msgstr "Мова"
-
-#: templates/enterlink/headers/mobile-navbar.html:84
-msgid "Register / Log in"
-msgstr "Зареєструватися / Увійти"
 
 #: templates/enterlink/hoverblurb_ajax_blockchain.html:64
 msgid "Go to article"
@@ -991,13 +1017,13 @@ msgstr "Пряме посилання"
 
 #: templates/enterlink/hoverlink_iframe_blockchain.html:64
 #: templates/enterlink/hoverlink_iframe_blockchain.html:65
-#: templates/enterlink/template_blockchain_styled_desktop.html:188
-#: templates/enterlink/template_blockchain_styled_desktop.html:189
+#: templates/enterlink/template_blockchain_styled_desktop.html:211
+#: templates/enterlink/template_blockchain_styled_desktop.html:212
 msgid "Share"
 msgstr "Поділитися"
 
 #: templates/enterlink/hoverlink_iframe_blockchain.html:68
-#: templates/enterlink/template_blockchain_styled_desktop.html:195
+#: templates/enterlink/template_blockchain_styled_desktop.html:218
 msgid "Copy URL"
 msgstr "Копіювати адресу URL"
 
@@ -1030,13 +1056,17 @@ msgstr ""
 "якому користувачеві стати зацікавленою стороною в системі та отримувати "
 "звання, нагороди та жетони для обміну контентом."
 
+#: templates/enterlink/index.html:46
+msgid "Log In / Register"
+msgstr "Вхід / Реєстрація"
+
 #: templates/enterlink/index.html:47
 msgid "Learn more"
 msgstr "Дізнатися більше"
 
 #: templates/enterlink/index.html:79
 msgid "As Seen In"
-msgstr ""
+msgstr "Як видно в"
 
 #: templates/enterlink/index.html:100
 msgid "An Encyclopedia for the modern age"
@@ -1167,13 +1197,43 @@ msgstr ""
 msgid "Executive Team"
 msgstr "Виконавча команда"
 
-#: templates/enterlink/leadership.html:6
-msgid "Leadership"
-msgstr "Лідерство"
+#: templates/enterlink/investor-relations.html:5
+#: templates/enterlink/investor-relations.html:16
+msgid "Investor Relations"
+msgstr "Зв&#39;язки з інвесторами"
 
+#: templates/enterlink/investor-relations.html:18
+msgid "Recent News"
+msgstr "Останні новини"
+
+#: templates/enterlink/investor-relations.html:31
+msgid "Links"
+msgstr "Додати посилання, файли тощо."
+
+#: templates/enterlink/investor-relations.html:35
 #: templates/enterlink/leadership.html:22
 msgid "Executive Leadership"
 msgstr "Виконаве лідерство"
+
+#: templates/enterlink/investor-relations.html:40
+msgid "Blog"
+msgstr "Блог"
+
+#: templates/enterlink/investor-relations.html:45
+msgid "Investor Presentation"
+msgstr "Презентація інвестора"
+
+#: templates/enterlink/investor-relations.html:50
+msgid "Contact Us"
+msgstr "Зв'яжіться з нами"
+
+#: templates/enterlink/investor-relations.html:69
+msgid "Partners"
+msgstr "Партнери"
+
+#: templates/enterlink/leadership.html:6
+msgid "Leadership"
+msgstr "Лідерство"
 
 #: templates/enterlink/leadership.html:34
 msgid "Chief Information Officer"
@@ -1239,21 +1299,21 @@ msgstr "Це найкращий спосіб досягти спільноти!"
 msgid "Sign in"
 msgstr "Увійти"
 
-#: templates/enterlink/login.html:33
+#: templates/enterlink/login.html:28
 msgid "Sign in to Everipedia"
 msgstr "Увійдіть у Everipedia"
 
-#: templates/enterlink/login.html:41
-msgid "Forgot your password?"
-msgstr "Забули свій пароль?"
+#: templates/enterlink/login.html:34
+msgid "Scatter Login"
+msgstr "Scatter Вхід"
 
-#: templates/enterlink/login.html:48
-msgid "Log in with Facebook"
-msgstr "Увійти через Facebook"
+#: templates/enterlink/login.html:44
+msgid "Use Facebook"
+msgstr "Використовуйте Facebook"
 
-#: templates/enterlink/login.html:49
-msgid "Log in with Twitter"
-msgstr "Увійдіть з системи Twitter"
+#: templates/enterlink/login.html:45
+msgid "Use Twitter"
+msgstr "Використовуйте Twitter"
 
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:33
 msgid "Visit Profile"
@@ -1281,12 +1341,12 @@ msgid "by"
 msgstr "від"
 
 #: templates/enterlink/recent-activity.html:105
-#: templates/enterlink/template_blockchain_styled_desktop.html:183
+#: templates/enterlink/template_blockchain_styled_desktop.html:186
 msgid "Vote"
 msgstr "Голосувати"
 
 #: templates/enterlink/recent-activity.html:106
-#: templates/enterlink/template_blockchain_styled_desktop.html:180
+#: templates/enterlink/template_blockchain_styled_desktop.html:183
 #: templates/enterlink/voting_table_of_contents.html:12
 msgid "Edit"
 msgstr "Редагувати"
@@ -1308,18 +1368,23 @@ msgid ""
 "fail, claim a few rewards manually first, then try again. This is due to "
 "transaction time limitations with EOS."
 msgstr ""
+"Тут ви можете вимагати винагороди за внесені зміни та / або голоси. Якщо "
+"&quot;Поскаржити всі нагороди&quot; не працює спочатку, спробуйте знову "
+"через 5 - 10 секунд, оскільки деякі виробники блоків швидше, ніж інші. Якщо "
+"він продовжує виходити з ладу, спочатку потрібно подати кілька винагород, а "
+"потім повторити спробу. Це пов&#39;язано з обмеженням часу транзакцій з EOS."
 
 #: templates/enterlink/rewardsmgmt.html:143
 msgid "Claim all rewards"
-msgstr ""
+msgstr "Вимагайте всі нагороди"
 
 #: templates/enterlink/rewardsmgmt.html:148
 msgid "Proposal Hash"
-msgstr ""
+msgstr "Пропозиція хеш"
 
 #: templates/enterlink/rewardsmgmt.html:149
 msgid "Finalized Time"
-msgstr ""
+msgstr "Закінчений час"
 
 #: templates/enterlink/rewardsmgmt.html:150
 msgid "Period"
@@ -1327,7 +1392,7 @@ msgstr "Період голосування"
 
 #: templates/enterlink/rewardsmgmt.html:151
 msgid "Redeem"
-msgstr ""
+msgstr "Викуп"
 
 #: templates/enterlink/rewardsmgmt.html:158
 msgid "Redeem successful"
@@ -1365,59 +1430,59 @@ msgstr ""
 "Якщо ви знаєте будь-які посилання, пов'язані з цією сторінкою, спробуйте "
 "знайти ці посилання"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:113
+#: templates/enterlink/template_blockchain_styled_amp.html:116
 msgid "Bullet"
 msgstr "Куля"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:175
+#: templates/enterlink/template_blockchain_styled_amp.html:178
 msgid "Recent news"
 msgstr "Останні новини"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:175
+#: templates/enterlink/template_blockchain_styled_amp.html:178
 msgid ""
 "Everipedia IQ tokens are now in circulation on the EOS mainnet. Follow "
 "Everipedia on"
 msgstr ""
 "Токени IQ EverePedia тепер в обігу на EOS-смартфоні. Слідкуйте за Everipedia"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:175
+#: templates/enterlink/template_blockchain_styled_amp.html:178
 msgid "to learn about upcoming features and developments!"
 msgstr "щоб дізнатися про майбутні функції та розробки!"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:241
+#: templates/enterlink/template_blockchain_styled_amp.html:253
 msgid "Quick Biography"
-msgstr ""
+msgstr "Швидка біографія"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:243
+#: templates/enterlink/template_blockchain_styled_amp.html:255
 msgid "Quick Facts For This Wiki"
 msgstr "Посилання на посилання для цієї вікі"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:272
-#: templates/enterlink/template_blockchain_styled_desktop.html:353
+#: templates/enterlink/template_blockchain_styled_amp.html:284
+#: templates/enterlink/template_blockchain_styled_desktop.html:376
 msgid "Image & Video Gallery"
 msgstr "Галерея зображень та відео"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:274
-#: templates/enterlink/template_blockchain_styled_desktop.html:355
+#: templates/enterlink/template_blockchain_styled_amp.html:286
+#: templates/enterlink/template_blockchain_styled_desktop.html:378
 msgid "images, pictures, and videos"
 msgstr "зображення, картинки та відео"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:278
+#: templates/enterlink/template_blockchain_styled_amp.html:290
 msgid "Gallery"
 msgstr "Галерея"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:295
-#: templates/enterlink/template_blockchain_styled_desktop.html:488
+#: templates/enterlink/template_blockchain_styled_amp.html:307
+#: templates/enterlink/template_blockchain_styled_desktop.html:511
 msgid "Reference Links For This Biography"
 msgstr "Посилання на цю біографію"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:297
-#: templates/enterlink/template_blockchain_styled_desktop.html:490
+#: templates/enterlink/template_blockchain_styled_amp.html:309
+#: templates/enterlink/template_blockchain_styled_desktop.html:513
 msgid "Reference Links For This Wiki"
 msgstr "Посилання на посилання для цієї вікі"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:300
-#: templates/enterlink/template_blockchain_styled_desktop.html:493
+#: templates/enterlink/template_blockchain_styled_amp.html:312
+#: templates/enterlink/template_blockchain_styled_desktop.html:516
 msgid ""
 "Links to historical reviews, career / educational facts, and other "
 "encyclopedic information"
@@ -1425,13 +1490,13 @@ msgstr ""
 "Посилання на історичні огляди, кар'єру / навчальні факти та іншу "
 "енциклопедичну інформацію"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:305
-#: templates/enterlink/template_blockchain_styled_desktop.html:499
+#: templates/enterlink/template_blockchain_styled_amp.html:317
+#: templates/enterlink/template_blockchain_styled_desktop.html:522
 msgid "All information for"
 msgstr "Вся інформація для"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:305
-#: templates/enterlink/template_blockchain_styled_desktop.html:499
+#: templates/enterlink/template_blockchain_styled_amp.html:317
+#: templates/enterlink/template_blockchain_styled_desktop.html:522
 msgid ""
 "wiki comes from the below links. Any source is valid, including Twitter, "
 "Facebook, Instagram, and LinkedIn. Pictures, videos, biodata, and files "
@@ -1441,13 +1506,13 @@ msgstr ""
 "включаючи Twitter, Facebook, Instagram і LinkedIn. Картинки, відео, "
 "біографічні дані та файли, що відносяться до"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:305
-#: templates/enterlink/template_blockchain_styled_desktop.html:499
+#: templates/enterlink/template_blockchain_styled_amp.html:317
+#: templates/enterlink/template_blockchain_styled_desktop.html:522
 msgid "are also acceptable encyclopedic sources."
 msgstr "також є прийнятними енциклопедичними джерелами."
 
-#: templates/enterlink/template_blockchain_styled_amp.html:320
-#: templates/enterlink/template_blockchain_styled_desktop.html:520
+#: templates/enterlink/template_blockchain_styled_amp.html:332
+#: templates/enterlink/template_blockchain_styled_desktop.html:543
 msgid ""
 "See related encyclopedia articles, biographies, reviews, and historical "
 "facts."
@@ -1455,55 +1520,59 @@ msgstr ""
 "Подивіться відповідні статті енциклопедії, біографії, огляди та історичні "
 "факти."
 
-#: templates/enterlink/template_blockchain_styled_amp.html:324
-#: templates/enterlink/template_blockchain_styled_desktop.html:527
+#: templates/enterlink/template_blockchain_styled_amp.html:336
+#: templates/enterlink/template_blockchain_styled_desktop.html:550
 msgid "Other wiki pages related to"
 msgstr "Інші сторінки вікі, пов'язані з"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:503
+#: templates/enterlink/template_blockchain_styled_amp.html:515
 msgid "Created"
 msgstr "Створено"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:504
+#: templates/enterlink/template_blockchain_styled_amp.html:516
 msgid "Last Modified"
 msgstr "Востаннє змінено"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:505
+#: templates/enterlink/template_blockchain_styled_amp.html:517
 msgid "IPFS"
 msgstr "IPFS"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:643
+#: templates/enterlink/template_blockchain_styled_amp.html:672
 msgid "Top Page Editors"
 msgstr "Редактори популярноі сторінки"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:663
+#: templates/enterlink/template_blockchain_styled_amp.html:692
 msgid "Share this page"
 msgstr "Розповісти друзям"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:675
+#: templates/enterlink/template_blockchain_styled_amp.html:704
 msgid "DIRECT LINK"
 msgstr "ПРЯМЕ ПОСИЛАННЯ"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:680
-#: templates/enterlink/template_blockchain_styled_desktop.html:214
+#: templates/enterlink/template_blockchain_styled_amp.html:709
+#: templates/enterlink/template_blockchain_styled_desktop.html:237
 msgid "Suggested Hashtags"
 msgstr "Запропоновані хеш-теги"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:714
-#: templates/enterlink/template_blockchain_styled_desktop.html:252
+#: templates/enterlink/template_blockchain_styled_amp.html:743
+#: templates/enterlink/template_blockchain_styled_desktop.html:275
 msgid "QR Code"
 msgstr "QR-код"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:764
+msgid "Alternate Languages"
+msgstr "Альтернативні мови"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:15
 #: templates/enterlink/template_blockchain_styled_desktop.html:20
 msgid "Bio"
-msgstr ""
+msgstr "Біо"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:17
 #: templates/enterlink/template_blockchain_styled_desktop.html:18
-#: templates/enterlink/template_blockchain_styled_desktop.html:218
+#: templates/enterlink/template_blockchain_styled_desktop.html:241
 msgid "bio"
-msgstr ""
+msgstr "біо"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:17
 #: templates/enterlink/template_blockchain_styled_desktop.html:18
@@ -1514,75 +1583,84 @@ msgstr ""
 #: templates/enterlink/template_blockchain_styled_desktop.html:38
 #: templates/enterlink/template_blockchain_styled_desktop.html:39
 msgid "encylopedia"
-msgstr ""
+msgstr "encylopedia"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:22
 #: templates/enterlink/template_blockchain_styled_desktop.html:27
 #: templates/enterlink/template_blockchain_styled_desktop.html:29
 #: templates/enterlink/template_blockchain_styled_desktop.html:34
 msgid "Review"
-msgstr ""
+msgstr "Огляд"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:24
 #: templates/enterlink/template_blockchain_styled_desktop.html:25
 #: templates/enterlink/template_blockchain_styled_desktop.html:31
 #: templates/enterlink/template_blockchain_styled_desktop.html:32
-#: templates/enterlink/template_blockchain_styled_desktop.html:224
-#: templates/enterlink/template_blockchain_styled_desktop.html:230
-#: templates/enterlink/template_blockchain_styled_desktop.html:236
+#: templates/enterlink/template_blockchain_styled_desktop.html:247
+#: templates/enterlink/template_blockchain_styled_desktop.html:253
+#: templates/enterlink/template_blockchain_styled_desktop.html:259
 msgid "review"
-msgstr ""
+msgstr "відгук"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:31
 #: templates/enterlink/template_blockchain_styled_desktop.html:32
-#: templates/enterlink/template_blockchain_styled_desktop.html:225
-#: templates/enterlink/template_blockchain_styled_desktop.html:231
-#: templates/enterlink/template_blockchain_styled_desktop.html:237
+#: templates/enterlink/template_blockchain_styled_desktop.html:248
+#: templates/enterlink/template_blockchain_styled_desktop.html:254
+#: templates/enterlink/template_blockchain_styled_desktop.html:260
 msgid "history"
-msgstr ""
+msgstr "історія"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:198
+#: templates/enterlink/template_blockchain_styled_desktop.html:191
+msgid "Other Languages"
+msgstr "Інші мови"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:221
 msgid "Embed / Widget"
 msgstr "Вставити / Віджет"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:217
-#: templates/enterlink/template_blockchain_styled_desktop.html:223
-#: templates/enterlink/template_blockchain_styled_desktop.html:229
-#: templates/enterlink/template_blockchain_styled_desktop.html:235
+#: templates/enterlink/template_blockchain_styled_desktop.html:240
+#: templates/enterlink/template_blockchain_styled_desktop.html:246
+#: templates/enterlink/template_blockchain_styled_desktop.html:252
+#: templates/enterlink/template_blockchain_styled_desktop.html:258
 msgid "wiki"
-msgstr ""
+msgstr "wiki"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:219
+#: templates/enterlink/template_blockchain_styled_desktop.html:242
 msgid "net worth"
-msgstr ""
+msgstr "чиста вартість"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:220
+#: templates/enterlink/template_blockchain_styled_desktop.html:243
 msgid "age"
 msgstr "Сторінка"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:221
+#: templates/enterlink/template_blockchain_styled_desktop.html:244
 msgid "married"
-msgstr ""
+msgstr "одружений"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:226
+#: templates/enterlink/template_blockchain_styled_desktop.html:249
 msgid "sales"
-msgstr ""
+msgstr "продажів"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:227
-#: templates/enterlink/template_blockchain_styled_desktop.html:233
-#: templates/enterlink/template_blockchain_styled_desktop.html:239
+#: templates/enterlink/template_blockchain_styled_desktop.html:250
+#: templates/enterlink/template_blockchain_styled_desktop.html:256
+#: templates/enterlink/template_blockchain_styled_desktop.html:262
 msgid "facts"
 msgstr ""
+"Everipedia - це як Вікіпедія, але набагато простіше для редагування та "
+"розповсюдження.Кожна сторінка складається з блоків інформації для коротких "
+"фактів,основної статті, написаної віь третьої особи,медіа-галереєю "
+"зображень, відеозаписів, аудіо по темі, списку посилань на веб-сторінки та "
+"файли, які використовуються як цитати в статті та інформаційніих блоках."
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:232
+#: templates/enterlink/template_blockchain_styled_desktop.html:255
 msgid "founders"
-msgstr ""
+msgstr "засновників"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:238
+#: templates/enterlink/template_blockchain_styled_desktop.html:261
 msgid "encyclopedia"
-msgstr ""
+msgstr "енциклопедія"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:325
+#: templates/enterlink/template_blockchain_styled_desktop.html:348
 msgid "Profiles"
 msgstr "Профілі"
 
@@ -1636,11 +1714,11 @@ msgstr "Голосування"
 msgid "Editing History"
 msgstr "Історія голосування"
 
-#: templates/enterlink/voting.html:225
+#: templates/enterlink/voting.html:233
 msgid "Rejectors"
 msgstr "Відхилити"
 
-#: templates/enterlink/voting.html:231
+#: templates/enterlink/voting.html:239
 msgid "Approvers"
 msgstr "Затвердити"
 

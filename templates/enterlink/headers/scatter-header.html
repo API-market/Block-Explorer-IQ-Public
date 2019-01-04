@@ -4,6 +4,7 @@
     var scripts = [];
     var _scripts = ['/static/js/eosjs-debug.js', '/static/js/eosjs-jsonrpc-debug.js', '/static/js/eosjs-jssig-debug.js', '/static/js/eosjs-format-mini.js',
                     '/static/js/scatterjs-core.min.js', '/static/js/scatterjs-plugin-eosjs2.min.js', '/static/js/BigInteger.js', '/static/js/scatter-header-js.js'  ];
+    var oreid_scripts = ['/static/js/oreid-header-js.js'];
 
     // load script function with callback to handle synchronicity
     function loadScriptScatter( src, script, callbackfunc ){
@@ -38,6 +39,54 @@
         loopArray(_scripts, scripts);
     }
 
+    function getCookie(name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length == 2) {
+            return parts.pop().split(";").shift();
+        }
+        else{
+            return null;
+        }
+    }
+
+    function ipfs_to_uint64_trunc(hash){
+        var preHash = hash.replace(/[6789\s]/g, '');
+        var truncatedHash = preHash.substring(2, 14).toLowerCase();
+        var hashNumber = encodeName(truncatedHash, 0);
+        var result = bigInt(hashNumber).mod(9007199254740990).toJSNumber();
+        return(result);
+    }
+
+    function increaseLastCharByOne(inputString) {
+        let stringLength = inputString.length;
+        let newChar = String.fromCharCode(inputString.charCodeAt(stringLength - 1) + 1);
+        let newString = inputString.slice(0, -1) + newChar;
+        return newString;
+    }
+
+    function addZeroes(num) {
+       return num.toLocaleString("en", {useGrouping: false, minimumFractionDigits: 3})
+    }
+
+    function convertSecs(secs) {
+        var d, h, m, s;
+        s = secs;
+        m = Math.floor(s / 60);
+        s = s % 60;
+        h = Math.floor(m / 60);
+        m = m % 60;
+        d = Math.floor(h / 24);
+        h = h % 24;
+        return { d: d, h: h, m: m, s: s };
+    }
+
+    function isNormalInteger(str) {
+        var n = Math.floor(Number(str));
+        return n !== Infinity && String(n) === str && n >= 0;
+    }
+
+    var oreIDUsername, oreIDAccessToken;
     var host1, host2, socket1, socket2;
     host1 = 'local.get-scatter.com:50006'; // wss://local.get-scatter.com:50006
     socket1 = new WebSocket(`wss://${host1}/socket.io/?EIO=3&transport=websocket`);
@@ -47,11 +96,25 @@
         host2 = '127.0.0.1:50005';
         socket2 = new WebSocket(`ws://${host2}/socket.io/?EIO=3&transport=websocket`);
         socket2.onerror = function(evt) {
-            console.log("Could connect to Scatter. Please try again.");
-            $("#header_iq_count").parent().remove();
-            $("#header_bpwr_count").parent().remove();
-            $("#header_rwd_claim").parent().remove();
-            $(".create-page-dropdown").parent().remove();
+            console.log("Could connect to Scatter. Checking for OREID.");
+
+            oreIDUsername = getCookie('oreid-account-name');
+            oreIDAccessToken = getCookie('oreid-access-token');
+            if (oreIDUsername != null){
+                console.log("OREID Found!");
+                LoadScriptsSync(oreid_scripts, scripts);
+                $("#header_iq_count").parent().remove();
+                $("#header_bpwr_count").parent().remove();
+                $("#header_rwd_claim").parent().remove();
+            }
+            else{
+                console.log("Could not find OREID either.");
+                $("#header_iq_count").parent().remove();
+                $("#header_bpwr_count").parent().remove();
+                $("#header_rwd_claim").parent().remove();
+                $(".create-page-dropdown").parent().remove();
+            }
+
         };
         socket2.onopen = function(evt) {
             LoadScriptsSync(_scripts, scripts);

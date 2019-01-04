@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-10 16:54+0900\n"
-"PO-Revision-Date: 2018-07-30 20:25-0700\n"
+"POT-Creation-Date: 2018-12-29 16:09-0800\n"
+"PO-Revision-Date: 2018-12-29 16:08-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: hi\n"
@@ -16,39 +16,41 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2\n"
 
-#: enterlink/edit.py:105 enterlink/model_functions.py:368
-#: enterlink/view_functions.py:727
+#: enterlink/edit.py:109 enterlink/model_functions.py:375
+#: enterlink/view_functions.py:796
 msgid "Page Language"
 msgstr "भाषा"
 
-#: enterlink/edit.py:106 enterlink/model_functions.py:353
+#: enterlink/edit.py:110 enterlink/model_functions.py:360
 msgid "Page Type"
 msgstr "पृष्ठ"
 
-#: enterlink/edit.py:106 enterlink/model_functions.py:358
+#: enterlink/edit.py:110 enterlink/model_functions.py:365
 msgid "Removed From Site"
-msgstr ""
+msgstr "साइट से हटाया गया"
 
-#: enterlink/edit.py:106 enterlink/model_functions.py:363
+#: enterlink/edit.py:110 enterlink/model_functions.py:370
 #: templates/enterlink/edit_ajax_editpagemeta.html:12
 msgid "Adult Content"
 msgstr "वयस्क सामग्री"
 
-#: enterlink/edit.py:107 enterlink/model_functions.py:343
+#: enterlink/edit.py:111 enterlink/model_functions.py:350
 msgid "Media Gallery"
 msgstr "गैलरी"
 
-#: enterlink/edit.py:107 enterlink/model_functions.py:348
+#: enterlink/edit.py:111 enterlink/model_functions.py:355
 msgid "References and Citations"
-msgstr ""
+msgstr "सन्दर्भ और उद्धरण"
 
-#: enterlink/edit.py:821
+#: enterlink/edit.py:883
 msgid ""
 "This is the reference link for the lead picture/gif of the page. Delete this "
 "link here or replace the picture/gif above."
 msgstr ""
+"यह पृष्ठ के प्रमुख चित्र / gif के लिए संदर्भ लिंक है। यहाँ इस लिंक को हटा दें या ऊपर चित्र / "
+"gif को बदलें।"
 
 #: enterlink/forms.py:11
 msgid "How can we help?"
@@ -66,28 +68,28 @@ msgstr "पूरा नाम"
 msgid "Subject"
 msgstr "विषय"
 
-#: enterlink/forms.py:15 enterlink/models.py:13
+#: enterlink/forms.py:15 enterlink/models.py:86
 msgid "Report Abuse"
 msgstr "दुरुपयोग होने की सूचना दें"
 
-#: enterlink/forms.py:15 enterlink/models.py:13
+#: enterlink/forms.py:15 enterlink/models.py:86
 msgid "Report Bug"
 msgstr "त्रुटी की सूचना दें"
 
-#: enterlink/forms.py:15 enterlink/models.py:13
+#: enterlink/forms.py:15 enterlink/models.py:86
 msgid "Verify Account"
 msgstr "खाता सत्यापित करें"
 
-#: enterlink/forms.py:15 enterlink/models.py:13
+#: enterlink/forms.py:15 enterlink/models.py:86
 msgid "Anonymous Tip"
 msgstr "अनाम टिप"
 
-#: enterlink/forms.py:15 enterlink/models.py:13
+#: enterlink/forms.py:15 enterlink/models.py:86
 msgid "Investment Inquiries"
 msgstr "निवेश पूछताछ"
 
-#: enterlink/forms.py:15 enterlink/forms.py:76 enterlink/models.py:13
-#: enterlink/models.py:68
+#: enterlink/forms.py:15 enterlink/forms.py:76 enterlink/models.py:86
+#: enterlink/models.py:141
 msgid "Other"
 msgstr "अन्य"
 
@@ -131,65 +133,65 @@ msgstr "प्रकार डालें (जैसे: व्यवसाय)
 msgid "Enter value (e.g. CEO)"
 msgstr "मूल्य डालें (जैसे: सीईओ)"
 
-#: enterlink/forms.py:71 enterlink/models.py:68
+#: enterlink/forms.py:71 enterlink/models.py:141
 msgid "Person"
 msgstr "व्यक्ति"
 
-#: enterlink/forms.py:71 enterlink/models.py:68
+#: enterlink/forms.py:71 enterlink/models.py:141
 msgid "Place/Location"
 msgstr "जगह/स्थान"
 
-#: enterlink/forms.py:72 enterlink/models.py:68
+#: enterlink/forms.py:72 enterlink/models.py:141
 msgid "Organization/Company/Institution"
 msgstr "संगठन/कंपनी/संस्था"
 
-#: enterlink/forms.py:72 enterlink/models.py:68
+#: enterlink/forms.py:72 enterlink/models.py:141
 msgid "Event"
 msgstr "कार्यक्रम"
 
-#: enterlink/forms.py:73 enterlink/models.py:68
+#: enterlink/forms.py:73 enterlink/models.py:141
 msgid "List/Ranking"
 msgstr "सूची/श्रेणी"
 
-#: enterlink/forms.py:73 enterlink/models.py:68
+#: enterlink/forms.py:73 enterlink/models.py:141
 msgid "Product/Merchandise"
 msgstr "उत्पाद/वस्तु"
 
-#: enterlink/forms.py:74 enterlink/models.py:68
+#: enterlink/forms.py:74 enterlink/models.py:141
 msgid "Electronics/Software"
 msgstr "इलेक्ट्रॉनिक्स/सॉफ्टवेयर"
 
-#: enterlink/forms.py:74 enterlink/models.py:68
+#: enterlink/forms.py:74 enterlink/models.py:141
 msgid "Medical/Biology"
 msgstr "चिकित्सा/जीवविज्ञान"
 
-#: enterlink/forms.py:75 enterlink/models.py:68
+#: enterlink/forms.py:75 enterlink/models.py:141
 msgid "Creative Work/Art"
 msgstr "रचनात्मक कार्य/कला"
 
-#: enterlink/forms.py:76 enterlink/models.py:68
+#: enterlink/forms.py:76 enterlink/models.py:141
 msgid "Science/Academia/Humanities"
 msgstr "विज्ञान/शिक्षा/मानविकी"
 
-#: enterlink/view_functions.py:150
+#: enterlink/view_functions.py:153
 msgid "Images & Videos"
 msgstr "छवियां और वीडियो"
 
-#: enterlink/view_functions.py:153
+#: enterlink/view_functions.py:156
 msgid "References"
 msgstr "संदर्भ"
 
-#: enterlink/view_functions.py:160
-#: templates/enterlink/template_blockchain_styled_amp.html:318
-#: templates/enterlink/template_blockchain_styled_desktop.html:518
+#: enterlink/view_functions.py:163
+#: templates/enterlink/template_blockchain_styled_amp.html:330
+#: templates/enterlink/template_blockchain_styled_desktop.html:541
 msgid "See Also"
 msgstr "यह भी देखें"
 
-#: enterlink/view_functions.py:1103
+#: enterlink/view_functions.py:1175
 msgid "Wiki and references for"
 msgstr "इनके लिए विकी और संदर्भ"
 
-#: enterlink/view_functions.py:1104
+#: enterlink/view_functions.py:1176
 msgid "You can edit something on this wiki now!"
 msgstr "अब आप इस विकी पर कुछ संपादित कर सकते हैं!"
 
@@ -224,80 +226,81 @@ msgstr "विकी बनाएं"
 #: templates/enterlink/ajax_infobox_singlet.html:14
 #: templates/enterlink/ajax_infobox_singlet.html:42
 msgid "Add Row"
-msgstr ""
+msgstr "पंक्ति जोड़ें"
 
 #: templates/enterlink/ajax_infobox_singlet.html:17
 #: templates/enterlink/ajax_infobox_singlet.html:45
 msgid "Schema"
-msgstr ""
+msgstr "योजना"
 
 #: templates/enterlink/ajax_infobox_singlet.html:21
 #: templates/enterlink/ajax_infobox_singlet.html:49
 msgid "Schema Type"
-msgstr ""
+msgstr "स्कीमा प्रकार"
 
 #: templates/enterlink/ajax_infobox_singlet.html:25
 #: templates/enterlink/ajax_infobox_singlet.html:53
 msgid "Subschema"
-msgstr ""
+msgstr "Subschema"
 
 #: templates/enterlink/ajax_link_singlet.html:25
 msgid "Social Media"
-msgstr ""
+msgstr "सामाजिक मीडिया"
 
 #: templates/enterlink/ajax_link_singlet.html:27
 msgid "Attributes"
-msgstr ""
+msgstr "गुण"
 
 #: templates/enterlink/ajax_link_singlet.html:29
 #: templates/enterlink/ajax_media_gallery_singlet.html:33
 msgid "Timestamp"
-msgstr ""
+msgstr "समय-चिह्न"
 
 #: templates/enterlink/ajax_media_gallery_singlet.html:14
 #: templates/enterlink/ajax_media_gallery_singlet.html:19
-#: templates/enterlink/ajaxresults.html:104
+#: templates/enterlink/ajaxresults.html:109
 #: templates/enterlink/hoverlink_iframe_blockchain.html:94
-#: templates/enterlink/template_blockchain_styled_desktop.html:407
 #: templates/enterlink/template_blockchain_styled_desktop.html:430
+#: templates/enterlink/template_blockchain_styled_desktop.html:453
 #: templates/enterlink/template_photos_amp_json_blockchain.html:79
-msgid "Your browser does not support HTML5 video."
+msgid "Please click to play the video."
 msgstr "आपका ब्राउज़र HTML5 वीडियो का समर्थन नहीं करता है।"
 
 #: templates/enterlink/ajax_media_gallery_singlet.html:29
 msgid "Type"
-msgstr ""
+msgstr "प्रकार"
 
 #: templates/enterlink/ajax_media_gallery_singlet.html:31
 msgid "MIME Type"
-msgstr ""
+msgstr "माइम प्रकार"
 
 #: templates/enterlink/ajax_media_gallery_singlet.html:37
 msgid "Original URL"
-msgstr ""
+msgstr "मूल URL"
 
-#: templates/enterlink/ajaxresults.html:57
+#: templates/enterlink/ajaxresults.html:62
 msgid "Click to add a new link or file to this list"
 msgstr "इस सूची में नया लिंक या फाइल जोड़ने के लिए क्लिक करें"
 
-#: templates/enterlink/ajaxresults.html:60
+#: templates/enterlink/ajaxresults.html:65
 msgid "Or click an existing link below to add it to the article"
 msgstr "या इसे लेख में जोड़ने के लिए नीचे दिए गए मौजूदा लिंक पर क्लिक करें"
 
-#: templates/enterlink/ajaxresults.html:142
-#: templates/enterlink/ajaxresults.html:193
-#: templates/enterlink/ajaxresults.html:230
-#: templates/enterlink/template_blockchain_styled_desktop.html:160
+#: templates/enterlink/ajaxresults.html:147
+#: templates/enterlink/ajaxresults.html:177
+#: templates/enterlink/ajaxresults.html:233
+#: templates/enterlink/ajaxresults.html:270
+#: templates/enterlink/template_blockchain_styled_desktop.html:163
 msgid "Views"
 msgstr "दृश्य"
 
-#: templates/enterlink/ajaxresults.html:165
+#: templates/enterlink/ajaxresults.html:200
 #: templates/enterlink/hovereditor_ajax.html:74
 msgid "IQ"
 msgstr "आईक्यू"
 
-#: templates/enterlink/ajaxresults.html:176
-#: templates/enterlink/ajaxresults.html:213
+#: templates/enterlink/ajaxresults.html:216
+#: templates/enterlink/ajaxresults.html:253
 msgid "page(s) have this link"
 msgstr "पृष्ठ(पृष्ठों) में यह लिंक है"
 
@@ -316,7 +319,9 @@ msgstr "ब्रेनपावर प्रबंधन"
 #: templates/enterlink/exchange-listings.html:7
 #: templates/enterlink/headers/index_header.html:17
 #: templates/enterlink/headers/index_header.html:18
-#: templates/enterlink/index.html:7 templates/enterlink/leadership.html:6
+#: templates/enterlink/index.html:7
+#: templates/enterlink/investor-relations.html:5
+#: templates/enterlink/leadership.html:6
 #: templates/enterlink/limitreached.html:7 templates/enterlink/login.html:7
 #: templates/enterlink/recent-activity.html:7
 #: templates/enterlink/rewardsmgmt.html:4 templates/enterlink/search.html:7
@@ -327,7 +332,7 @@ msgstr "Everipedia, सभी चीजों का विश्वकोश"
 
 #: templates/enterlink/brainpowermgmt.html:101
 #: templates/enterlink/rewardsmgmt.html:123
-#: templates/enterlink/template_blockchain_styled_desktop.html:695
+#: templates/enterlink/template_blockchain_styled_desktop.html:718
 #: templates/enterlink/voting.html:194
 msgid "Please wait"
 msgstr "कृपया"
@@ -398,33 +403,25 @@ msgstr "राशि"
 msgid "Claim"
 msgstr "प्राप्त करें"
 
-#: templates/enterlink/contact.html:5 templates/enterlink/contact.html:22
+#: templates/enterlink/contact.html:5 templates/enterlink/contact.html:16
 msgid "Contact us"
 msgstr "हमें संपर्क करें"
 
-#: templates/enterlink/contact.html:18
-msgid "To get quicker replies from our community"
-msgstr "हमारे समुदाय से तुरंत जवाब पाने के लिए"
-
-#: templates/enterlink/contact.html:18
-msgid "create a post in our forum"
-msgstr "हमारे फोरम में एक पोस्ट बनाएं"
-
-#: templates/enterlink/contact.html:23
+#: templates/enterlink/contact.html:17
 msgid "Get in touch with us"
 msgstr "हमारे संपर्क में रहें"
 
-#: templates/enterlink/contact.html:31
+#: templates/enterlink/contact.html:25
 msgid "Thanks, we got your message. We will respond in a bit"
 msgstr "धन्यवाद, हमें आपका संदेश मिला। हम थोड़ी देर में जवाब देंगे"
 
-#: templates/enterlink/contact.html:39 templates/enterlink/transfer-iq.html:131
+#: templates/enterlink/contact.html:33 templates/enterlink/transfer-iq.html:131
 msgid "Send"
 msgstr "भेजें"
 
-#: templates/enterlink/dropzone.html:140 templates/enterlink/edit.html:131
-#: templates/enterlink/edit.html:140 templates/enterlink/edit.html:149
-#: templates/enterlink/edit.html:159 templates/enterlink/edit.html:168
+#: templates/enterlink/dropzone.html:140 templates/enterlink/edit.html:137
+#: templates/enterlink/edit.html:146 templates/enterlink/edit.html:155
+#: templates/enterlink/edit.html:165 templates/enterlink/edit.html:174
 msgid "OK"
 msgstr "ठीक है"
 
@@ -436,26 +433,26 @@ msgstr "पृष्ठ की मुख्य छवि के लिए एक
 msgid "Loading"
 msgstr "शुरू हो रहा है"
 
-#: templates/enterlink/edit.html:109
+#: templates/enterlink/edit.html:115
 msgid "Please enter the destination page you wish to merge this one into"
 msgstr "कृपया वो गंतव्य पृष्ठ डालें जिसमें आप इसे मिलाना चाहते हैं"
 
-#: templates/enterlink/edit.html:110 templates/enterlink/search-iframe.html:122
+#: templates/enterlink/edit.html:116 templates/enterlink/search-iframe.html:122
 #: templates/enterlink/search.html:27
 msgid "Search Everipedia"
 msgstr "Everipedia खोजें"
 
-#: templates/enterlink/edit.html:114
+#: templates/enterlink/edit.html:120
 msgid "Merge Page"
 msgstr "पृष्ठ मिलाएं"
 
-#: templates/enterlink/edit.html:121 templates/enterlink/edit.html:129
-#: templates/enterlink/edit.html:138 templates/enterlink/edit.html:147
-#: templates/enterlink/edit.html:156 templates/enterlink/edit.html:166
+#: templates/enterlink/edit.html:127 templates/enterlink/edit.html:135
+#: templates/enterlink/edit.html:144 templates/enterlink/edit.html:153
+#: templates/enterlink/edit.html:162 templates/enterlink/edit.html:172
 msgid "Hey there scholar!"
 msgstr "नमस्कार!"
 
-#: templates/enterlink/edit.html:122
+#: templates/enterlink/edit.html:128
 msgid ""
 "Looks like you have been editing for a while. You should take a moment to "
 "save your work before continuing!"
@@ -463,7 +460,7 @@ msgstr ""
 "ऐसा लगता है आप काफी समय से संपादन कर रहे हैं। जारी रखने से पहलेकृपया थोड़ा समय लेकर अपना "
 "काम सहेजें!"
 
-#: templates/enterlink/edit.html:130
+#: templates/enterlink/edit.html:136
 msgid ""
 "Looks like you are using first-person! (ex: Our product, I am, We are, You "
 "should). Everipedia is a neutral encyclopedia written in third-person tense "
@@ -473,16 +470,16 @@ msgstr ""
 "चाहिए)।Everipedia एक तटस्थ विश्वकोश है जिसे अन्य पुरुष काल में लिखा गया है(जैसे: यह है, वे "
 "हैं, कंपनी बनाती है)। यह फेसबुक नहीं है!!"
 
-#: templates/enterlink/edit.html:139
+#: templates/enterlink/edit.html:145
 msgid "Please enter a title for the page."
 msgstr "कृपया पृष्ठ के लिए शीर्षक डालें।"
 
-#: templates/enterlink/edit.html:148
+#: templates/enterlink/edit.html:154
 msgid ""
 "Please write something for the article section. Make sure to use citations."
 msgstr "कृपया लेख अनुभाग के लिए कुछ लिखें। उद्धरणों का प्रयोग करना ना भूलें।"
 
-#: templates/enterlink/edit.html:157
+#: templates/enterlink/edit.html:163
 msgid ""
 "Hello! This page needs citations (also known as footnotes, references, "
 "sources) before it can be saved. Add the links you're using as sources with "
@@ -492,16 +489,16 @@ msgstr ""
 "जाना जाता है) की जरुरत है। ऊपर दिए गए उद्धरण बटन से प्रयोग कियेजाने वाले लिंक को स्रोत "
 "के रूप में जोड़ें।"
 
-#: templates/enterlink/edit.html:158
+#: templates/enterlink/edit.html:164
 msgid "Join our official Facebook group if you need help with it!:"
 msgstr ""
 "यदि आपको इसके संबंध में सहायता की जरुरत है तो हमारे आधिकारिक फेसबुक समूह में शामिल होइए!:"
 
-#: templates/enterlink/edit.html:158
+#: templates/enterlink/edit.html:164
 msgid "- we will hook you up. It's not hard!"
 msgstr "- हम आपको समुदाय से जोड़ देंगे। यह मुश्किल नहीं है!"
 
-#: templates/enterlink/edit.html:167
+#: templates/enterlink/edit.html:173
 msgid ""
 "Please cite the link(s) you just added into the main article body. First "
 "click at the end of the sentence or paragraph you want to cite, then click "
@@ -530,6 +527,7 @@ msgstr "इंफोबॉक्स सामग्री जोड़ें"
 #: templates/enterlink/edit_ajax_addinfobox.html:26
 #: templates/enterlink/edit_ajax_addlink.html:26
 #: templates/enterlink/edit_ajax_editpagemeta.html:16
+#: templates/enterlink/edit_ajax_langgroup.html:38
 #: templates/enterlink/edit_ajax_merge.html:19
 #: templates/enterlink/edit_ajax_page_photo.html:4
 msgid "Close"
@@ -571,10 +569,11 @@ msgstr "इस पृष्ठ का विषय चुनें"
 msgid "Remove page"
 msgstr "पृष्ठ हटाएं"
 
-#: templates/enterlink/edit_ajax_merge.html:12
-msgid "Merge this page into:"
-msgstr "यह पृष्ठ साझा करें"
+#: templates/enterlink/edit_ajax_langgroup.html:32
+msgid "Link this page to:"
+msgstr "इस पेज को इससे लिंक करें:"
 
+#: templates/enterlink/edit_ajax_langgroup.html:33
 #: templates/enterlink/edit_ajax_merge.html:13
 #: templates/enterlink/headers/desktop-navbar-index.html:29
 #: templates/enterlink/headers/desktop-navbar.html:43
@@ -582,6 +581,14 @@ msgstr "यह पृष्ठ साझा करें"
 #: templates/enterlink/search.html:7
 msgid "Search"
 msgstr "खोजें"
+
+#: templates/enterlink/edit_ajax_langgroup.html:37
+msgid "Group"
+msgstr "समूह"
+
+#: templates/enterlink/edit_ajax_merge.html:12
+msgid "Merge this page into:"
+msgstr "यह पृष्ठ साझा करें"
 
 #: templates/enterlink/edit_ajax_merge.html:17
 msgid "Merge"
@@ -636,7 +643,7 @@ msgid "In The News"
 msgstr "समाचार में"
 
 #: templates/enterlink/error.html:197
-#: templates/enterlink/headers/header_dropdown.html:28
+#: templates/enterlink/headers/header_dropdown.html:45
 #: templates/enterlink/recent-activity.html:7
 #: templates/enterlink/recent-activity.html:84
 msgid "Recent Activity"
@@ -663,100 +670,112 @@ msgstr "समर्थित विनिमय"
 msgid "The following exchanges indicated that they will support the IQ airdrop"
 msgstr "निम्नलिखित विनिमयों ने दर्शाया है कि वे आईक्यू एयरड्रॉप का समर्थन करेंगे"
 
-#: templates/enterlink/exchange-listings.html:149
+#: templates/enterlink/exchange-listings.html:163
 msgid "Supported Wallets"
 msgstr "समर्थित वॉलेट"
 
-#: templates/enterlink/exchange-listings.html:198
+#: templates/enterlink/exchange-listings.html:212
 msgid "Token Pockets"
 msgstr "टोकन पॉकेट"
 
+#: templates/enterlink/exchange-listings.html:224
+msgid "Tools"
+msgstr "उपकरण"
+
 #: templates/enterlink/footers/desktop_footer.html:5
 #: templates/enterlink/footers/footer_no_extras.html:5
-#: templates/enterlink/footers/index_footer.html:23
+#: templates/enterlink/footers/index_footer.html:24
 #: templates/enterlink/footers/mobile_footer.html:137
-#: templates/enterlink/template_blockchain_styled_amp.html:516
+#: templates/enterlink/template_blockchain_styled_amp.html:528
 msgid "About"
 msgstr "बारे में"
 
 #: templates/enterlink/footers/desktop_footer.html:6
 #: templates/enterlink/footers/footer_no_extras.html:6
 #: templates/enterlink/footers/index_footer.html:7
-#: templates/enterlink/footers/index_footer.html:25
+#: templates/enterlink/footers/index_footer.html:26
 #: templates/enterlink/footers/mobile_footer.html:138
-#: templates/enterlink/template_blockchain_styled_amp.html:517
+#: templates/enterlink/template_blockchain_styled_amp.html:529
 msgid "FAQ"
 msgstr "अक्सर पूछे जाने वाले प्रश्न"
 
 #: templates/enterlink/footers/desktop_footer.html:7
 #: templates/enterlink/footers/footer_no_extras.html:7
 #: templates/enterlink/footers/index_footer.html:8
-#: templates/enterlink/footers/index_footer.html:26
+#: templates/enterlink/footers/index_footer.html:27
 #: templates/enterlink/footers/mobile_footer.html:139
-#: templates/enterlink/template_blockchain_styled_amp.html:518
+#: templates/enterlink/template_blockchain_styled_amp.html:530
 msgid "Contact"
 msgstr "संपर्क करें"
 
 #: templates/enterlink/footers/desktop_footer.html:8
 #: templates/enterlink/footers/footer_no_extras.html:9
 #: templates/enterlink/footers/index_footer.html:9
-#: templates/enterlink/footers/index_footer.html:27
+#: templates/enterlink/footers/index_footer.html:28
 #: templates/enterlink/footers/mobile_footer.html:143
-#: templates/enterlink/template_blockchain_styled_amp.html:520
+#: templates/enterlink/template_blockchain_styled_amp.html:532
 msgid "Terms"
 msgstr "नियम"
 
 #: templates/enterlink/footers/desktop_footer.html:9
 #: templates/enterlink/footers/footer_no_extras.html:10
 #: templates/enterlink/footers/index_footer.html:10
-#: templates/enterlink/footers/index_footer.html:28
+#: templates/enterlink/footers/index_footer.html:29
 #: templates/enterlink/footers/mobile_footer.html:141
 #: templates/enterlink/headers/header_dropdown.html:7
-#: templates/enterlink/headers/header_dropdown.html:29
+#: templates/enterlink/headers/header_dropdown.html:46
 #: templates/enterlink/headers/index_header.html:128
 #: templates/enterlink/headers/index_header.html:153
 #: templates/enterlink/headers/index_header.html:157
-#: templates/enterlink/headers/mobile-navbar.html:98
+#: templates/enterlink/headers/mobile-navbar.html:116
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:138
-#: templates/enterlink/template_blockchain_styled_amp.html:519
-#: templates/enterlink/template_blockchain_styled_amp.html:597
+#: templates/enterlink/template_blockchain_styled_amp.html:531
+#: templates/enterlink/template_blockchain_styled_amp.html:626
 msgid "Forum"
 msgstr "फोरम"
 
 #: templates/enterlink/footers/desktop_footer.html:10
 #: templates/enterlink/footers/footer_no_extras.html:11
 #: templates/enterlink/footers/index_footer.html:11
-#: templates/enterlink/footers/index_footer.html:29
+#: templates/enterlink/footers/index_footer.html:30
 #: templates/enterlink/footers/mobile_footer.html:144
 #: templates/enterlink/headers/header_dropdown.html:8
-#: templates/enterlink/headers/header_dropdown.html:31
-#: templates/enterlink/template_blockchain_styled_amp.html:521
+#: templates/enterlink/headers/header_dropdown.html:48
+#: templates/enterlink/template_blockchain_styled_amp.html:533
 msgid "Get IQ"
 msgstr "आईक्यू प्राप्त करें"
 
-#: templates/enterlink/footers/desktop_footer.html:33
-#: templates/enterlink/footers/footer_no_extras.html:34
-#: templates/enterlink/footers/mobile_footer.html:167
-#: templates/enterlink/template_blockchain_styled_amp.html:548
+#: templates/enterlink/footers/desktop_footer.html:11
+#: templates/enterlink/footers/footer_no_extras.html:12
+#: templates/enterlink/footers/index_footer.html:12
+#: templates/enterlink/footers/mobile_footer.html:145
+#: templates/enterlink/template_blockchain_styled_amp.html:534
+msgid "Investors"
+msgstr "निवेशक"
+
+#: templates/enterlink/footers/desktop_footer.html:34
+#: templates/enterlink/footers/footer_no_extras.html:35
+#: templates/enterlink/footers/mobile_footer.html:168
+#: templates/enterlink/template_blockchain_styled_amp.html:561
 msgid "Powered by"
 msgstr "...सौजन्य"
 
-#: templates/enterlink/footers/desktop_footer.html:38
-#: templates/enterlink/footers/footer_no_extras.html:39
-#: templates/enterlink/footers/mobile_footer.html:171
-#: templates/enterlink/template_blockchain_styled_amp.html:552
+#: templates/enterlink/footers/desktop_footer.html:39
+#: templates/enterlink/footers/footer_no_extras.html:40
+#: templates/enterlink/footers/mobile_footer.html:172
+#: templates/enterlink/template_blockchain_styled_amp.html:565
 msgid "API by"
 msgstr "एपीआई"
 
-#: templates/enterlink/footers/desktop_footer.html:43
-#: templates/enterlink/footers/footer_no_extras.html:44
-#: templates/enterlink/footers/mobile_footer.html:175
-#: templates/enterlink/template_blockchain_styled_amp.html:556
+#: templates/enterlink/footers/desktop_footer.html:44
+#: templates/enterlink/footers/footer_no_extras.html:45
+#: templates/enterlink/footers/mobile_footer.html:176
+#: templates/enterlink/template_blockchain_styled_amp.html:569
 msgid "and"
 msgstr "और"
 
-#: templates/enterlink/footers/desktop_footer.html:51
-#: templates/enterlink/footers/footer_no_extras.html:52
+#: templates/enterlink/footers/desktop_footer.html:52
+#: templates/enterlink/footers/footer_no_extras.html:53
 #: templates/enterlink/headers/desktop-navbar-index.html:6
 #: templates/enterlink/headers/index_header.html:93
 #: templates/enterlink/language_selector.html:79
@@ -780,33 +799,33 @@ msgid "About Everipedia"
 msgstr "Everipedia के बारे में"
 
 #: templates/enterlink/footers/index_footer.html:6
-#: templates/enterlink/footers/index_footer.html:24
+#: templates/enterlink/footers/index_footer.html:25
 msgid "How To Use"
 msgstr "कैसे इस्तेमाल करें"
 
-#: templates/enterlink/footers/index_footer.html:12
-#: templates/enterlink/footers/index_footer.html:30
+#: templates/enterlink/footers/index_footer.html:13
+#: templates/enterlink/footers/index_footer.html:31
 #: templates/enterlink/footers/mobile_footer.html:140
 msgid "Donate"
 msgstr "दान करें"
 
 #: templates/enterlink/footers/mobile_footer.html:131
-#: templates/enterlink/template_blockchain_styled_amp.html:527
+#: templates/enterlink/template_blockchain_styled_amp.html:540
 msgid "By using this website, you agree to the"
 msgstr "इस वेबसाइट का प्रयोग करके, आप"
 
 #: templates/enterlink/footers/mobile_footer.html:131
-#: templates/enterlink/template_blockchain_styled_amp.html:527
+#: templates/enterlink/template_blockchain_styled_amp.html:540
 msgid "Terms of Use"
 msgstr "प्रयोग की शर्तों के लिए सहमति देते हैं"
 
 #: templates/enterlink/footers/mobile_footer.html:131
-#: templates/enterlink/template_blockchain_styled_amp.html:527
+#: templates/enterlink/template_blockchain_styled_amp.html:540
 msgid "Everipedia® is a trademark of Everipedia International"
 msgstr "Everipedia® Everipedia इंटरनेशनल का ट्रेडमार्क है"
 
 #: templates/enterlink/footers/mobile_footer.html:142
-#: templates/enterlink/headers/mobile-navbar.html:104
+#: templates/enterlink/headers/mobile-navbar.html:122
 msgid "Chat"
 msgstr "चैट"
 
@@ -826,7 +845,7 @@ msgstr "खोज रहा है..."
 #: templates/enterlink/headers/desktop-navbar.html:24
 #: templates/enterlink/headers/desktop-navbar.html:61
 #: templates/enterlink/headers/desktop-navbar.html:71
-#: templates/enterlink/headers/header_dropdown.html:27
+#: templates/enterlink/headers/header_dropdown.html:44
 #: templates/enterlink/index.html:66
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:50
 msgid "Create Page"
@@ -834,7 +853,7 @@ msgstr "पृष्ठ बनाएं"
 
 #: templates/enterlink/headers/desktop-navbar-index.html:71
 #: templates/enterlink/headers/desktop-navbar.html:77
-#: templates/enterlink/headers/header_dropdown.html:25
+#: templates/enterlink/headers/header_dropdown.html:24
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:44
 #: templates/enterlink/notifications/index.html:67
 #: templates/enterlink/notifications/index.html:97
@@ -843,7 +862,7 @@ msgstr "संदेश"
 
 #: templates/enterlink/headers/desktop-navbar-index.html:77
 #: templates/enterlink/headers/desktop-navbar.html:83
-#: templates/enterlink/headers/header_dropdown.html:24
+#: templates/enterlink/headers/header_dropdown.html:23
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:38
 #: templates/enterlink/notifications/index.html:96
 msgid "Notifications"
@@ -855,23 +874,21 @@ msgid "Your IQ Score"
 msgstr "आपका आईक्यू स्कोर"
 
 #: templates/enterlink/headers/desktop-navbar.html:19
-#, fuzzy
-#| msgid "Searching..."
 msgid "Searching for duplicates..."
-msgstr "खोज रहा है..."
+msgstr "डुप्लिकेट की खोज ..."
 
 #: templates/enterlink/headers/desktop-navbar.html:33
 msgid "Table of contents"
 msgstr "विषय-सूची"
 
 #: templates/enterlink/headers/desktop-navbar.html:33
-#: templates/enterlink/template_blockchain_styled_amp.html:102
+#: templates/enterlink/template_blockchain_styled_amp.html:105
 msgid "Table of contents and facts for this wiki"
 msgstr "इस विकी के लिए विषय-सूची और तथ्य"
 
 #: templates/enterlink/headers/desktop-navbar.html:66
-#: templates/enterlink/headers/mobile-navbar.html:110
-#: templates/enterlink/template_blockchain_styled_amp.html:603
+#: templates/enterlink/headers/mobile-navbar.html:128
+#: templates/enterlink/template_blockchain_styled_amp.html:632
 msgid "Feed"
 msgstr "फ़ीड"
 
@@ -880,30 +897,47 @@ msgid "Please log in with Scatter"
 msgstr "कृपया स्कैटर से लॉग इन करें"
 
 #: templates/enterlink/headers/desktop-navbar.html:95
+#: templates/enterlink/headers/mobile-navbar.html:84
+#: templates/enterlink/template_blockchain_styled_amp.html:593
 msgid "Menu"
-msgstr ""
+msgstr "मेन्यू"
 
 #: templates/enterlink/headers/header_dropdown.html:12
-#: templates/enterlink/headers/header_dropdown.html:35
+#: templates/enterlink/headers/header_dropdown.html:52
 #: templates/enterlink/notifications/index.html:100
 #: templates/enterlink/notifications/index.html:105
 msgid "Log out"
 msgstr "लॉग आउट करें"
 
-#: templates/enterlink/headers/header_dropdown.html:18
-msgid "Claim Rewards"
-msgstr ""
+#: templates/enterlink/headers/header_dropdown.html:28
+#: templates/enterlink/headers/mobile-navbar.html:92
+#: templates/enterlink/login.html:41
+#: templates/enterlink/template_blockchain_styled_amp.html:601
+msgid "ORE ID Logins"
+msgstr "ORE ID लॉगिन"
 
-#: templates/enterlink/headers/header_dropdown.html:26
+#: templates/enterlink/headers/header_dropdown.html:34
+#: templates/enterlink/headers/mobile-navbar.html:98
+#: templates/enterlink/template_blockchain_styled_amp.html:607
+msgid "Facebook"
+msgstr "Facebook"
+
+#: templates/enterlink/headers/header_dropdown.html:40
+#: templates/enterlink/headers/mobile-navbar.html:104
+#: templates/enterlink/template_blockchain_styled_amp.html:613
+msgid "Twitter"
+msgstr "Twitter"
+
+#: templates/enterlink/headers/header_dropdown.html:43
 msgid "Get Scatter"
 msgstr "स्कैटर शुरू हो रहा है"
 
-#: templates/enterlink/headers/header_dropdown.html:30
-#: templates/enterlink/headers/mobile-navbar.html:92
+#: templates/enterlink/headers/header_dropdown.html:47
+#: templates/enterlink/headers/mobile-navbar.html:110
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:67
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:90
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:144
-#: templates/enterlink/template_blockchain_styled_amp.html:590
+#: templates/enterlink/template_blockchain_styled_amp.html:619
 msgid "Help"
 msgstr "सहायता"
 
@@ -912,36 +946,28 @@ msgid "Sign In"
 msgstr "साइन इन करें"
 
 #: templates/enterlink/headers/index_header.html:101
-#: templates/enterlink/index.html:46
 msgid "Register"
 msgstr "पंजीकरण करें"
 
 #: templates/enterlink/headers/index_header.html:105
-#: templates/enterlink/login.html:36
 msgid "Username"
 msgstr "प्रयोगकर्ता नाम"
 
 #: templates/enterlink/headers/index_header.html:106
-#: templates/enterlink/login.html:40
 msgid "Password"
 msgstr "पासवर्ड"
 
 #: templates/enterlink/headers/index_header.html:108
 #: templates/enterlink/headers/index_header.html:152
-#: templates/enterlink/login.html:45
 msgid "Log in"
 msgstr "लॉगइन करें"
 
 #: templates/enterlink/headers/index_header.html:154
 #: templates/enterlink/headers/index_header.html:158
-#: templates/enterlink/headers/mobile-navbar.html:116
-#: templates/enterlink/template_blockchain_styled_amp.html:609
+#: templates/enterlink/headers/mobile-navbar.html:134
+#: templates/enterlink/template_blockchain_styled_amp.html:638
 msgid "Language"
 msgstr "भाषा"
-
-#: templates/enterlink/headers/mobile-navbar.html:84
-msgid "Register / Log in"
-msgstr "पंजीकरण करें/लॉगइन करें"
 
 #: templates/enterlink/hoverblurb_ajax_blockchain.html:64
 msgid "Go to article"
@@ -985,13 +1011,13 @@ msgstr "प्रत्यक्ष लिंक"
 
 #: templates/enterlink/hoverlink_iframe_blockchain.html:64
 #: templates/enterlink/hoverlink_iframe_blockchain.html:65
-#: templates/enterlink/template_blockchain_styled_desktop.html:188
-#: templates/enterlink/template_blockchain_styled_desktop.html:189
+#: templates/enterlink/template_blockchain_styled_desktop.html:211
+#: templates/enterlink/template_blockchain_styled_desktop.html:212
 msgid "Share"
 msgstr "साझा करें"
 
 #: templates/enterlink/hoverlink_iframe_blockchain.html:68
-#: templates/enterlink/template_blockchain_styled_desktop.html:195
+#: templates/enterlink/template_blockchain_styled_desktop.html:218
 msgid "Copy URL"
 msgstr "यूआरएल कॉपी करें"
 
@@ -1024,13 +1050,17 @@ msgstr ""
 "हितधारक बनने की और सामग्री एकत्रित करने के लिए श्रेणी,पुरस्कार और टोकन कमाने की अनुमति "
 "देता है।"
 
+#: templates/enterlink/index.html:46
+msgid "Log In / Register"
+msgstr "लॉग इन / रजिस्टर"
+
 #: templates/enterlink/index.html:47
 msgid "Learn more"
 msgstr "और अधिक जानें"
 
 #: templates/enterlink/index.html:79
 msgid "As Seen In"
-msgstr ""
+msgstr "जैसा इसमें दिखे"
 
 #: templates/enterlink/index.html:100
 msgid "An Encyclopedia for the modern age"
@@ -1157,13 +1187,43 @@ msgstr ""
 msgid "Executive Team"
 msgstr "कार्यकारी टीम"
 
-#: templates/enterlink/leadership.html:6
-msgid "Leadership"
-msgstr "नेतृत्व"
+#: templates/enterlink/investor-relations.html:5
+#: templates/enterlink/investor-relations.html:16
+msgid "Investor Relations"
+msgstr "निवेशक सम्बन्ध"
 
+#: templates/enterlink/investor-relations.html:18
+msgid "Recent News"
+msgstr "नवीनतम समाचार"
+
+#: templates/enterlink/investor-relations.html:31
+msgid "Links"
+msgstr "लिंक, फाइल, आदि जोड़ें"
+
+#: templates/enterlink/investor-relations.html:35
 #: templates/enterlink/leadership.html:22
 msgid "Executive Leadership"
 msgstr "कार्यकारी नेतृत्व"
+
+#: templates/enterlink/investor-relations.html:40
+msgid "Blog"
+msgstr "ब्लॉग"
+
+#: templates/enterlink/investor-relations.html:45
+msgid "Investor Presentation"
+msgstr "निवेशक प्रस्तुति"
+
+#: templates/enterlink/investor-relations.html:50
+msgid "Contact Us"
+msgstr "हमसे संपर्क करें"
+
+#: templates/enterlink/investor-relations.html:69
+msgid "Partners"
+msgstr "भागीदारों"
+
+#: templates/enterlink/leadership.html:6
+msgid "Leadership"
+msgstr "नेतृत्व"
 
 #: templates/enterlink/leadership.html:34
 msgid "Chief Information Officer"
@@ -1229,21 +1289,21 @@ msgstr "यह समुदाय तक पहुंचने का सबस�
 msgid "Sign in"
 msgstr "साइन इन करें"
 
-#: templates/enterlink/login.html:33
+#: templates/enterlink/login.html:28
 msgid "Sign in to Everipedia"
 msgstr "Everipedia में साइन इन करें"
 
-#: templates/enterlink/login.html:41
-msgid "Forgot your password?"
-msgstr "क्या आप अपना पासवर्ड भूल गए?"
+#: templates/enterlink/login.html:34
+msgid "Scatter Login"
+msgstr "स्कैटर लॉगिन"
 
-#: templates/enterlink/login.html:48
-msgid "Log in with Facebook"
-msgstr "फेसबुक से लॉगइन करें"
+#: templates/enterlink/login.html:44
+msgid "Use Facebook"
+msgstr "फेसबुक का उपयोग करें"
 
-#: templates/enterlink/login.html:49
-msgid "Log in with Twitter"
-msgstr "ट्विटर से लॉगइन करें"
+#: templates/enterlink/login.html:45
+msgid "Use Twitter"
+msgstr "ट्विटर का उपयोग करें"
 
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:33
 msgid "Visit Profile"
@@ -1271,12 +1331,12 @@ msgid "by"
 msgstr "इनके द्वारा"
 
 #: templates/enterlink/recent-activity.html:105
-#: templates/enterlink/template_blockchain_styled_desktop.html:183
+#: templates/enterlink/template_blockchain_styled_desktop.html:186
 msgid "Vote"
 msgstr "मतदान करें"
 
 #: templates/enterlink/recent-activity.html:106
-#: templates/enterlink/template_blockchain_styled_desktop.html:180
+#: templates/enterlink/template_blockchain_styled_desktop.html:183
 #: templates/enterlink/voting_table_of_contents.html:12
 msgid "Edit"
 msgstr "संपादित करें"
@@ -1298,18 +1358,23 @@ msgid ""
 "fail, claim a few rewards manually first, then try again. This is due to "
 "transaction time limitations with EOS."
 msgstr ""
+"यहां आप अपने द्वारा किए गए संपादन और / या वोट के लिए पुरस्कार का दावा कर सकते हैं। यदि "
+"&quot;दावा सभी पुरस्कार&quot; शुरू में काम नहीं करते हैं, तो 5 - 10 सेकंड के बाद फिर से "
+"प्रयास करें, क्योंकि कुछ ब्लॉक निर्माता दूसरों की तुलना में तेज़ हैं। यदि यह विफल रहता है, तो "
+"पहले कुछ पुरस्कारों का मैन्युअल रूप से दावा करें, फिर प्रयास करें। यह ईओएस के साथ लेनदेन की "
+"समय सीमा के कारण है।"
 
 #: templates/enterlink/rewardsmgmt.html:143
 msgid "Claim all rewards"
-msgstr ""
+msgstr "सभी पुरस्कारों का दावा करें"
 
 #: templates/enterlink/rewardsmgmt.html:148
 msgid "Proposal Hash"
-msgstr ""
+msgstr "प्रस्ताव हश"
 
 #: templates/enterlink/rewardsmgmt.html:149
 msgid "Finalized Time"
-msgstr ""
+msgstr "अंतिम समय दिया"
 
 #: templates/enterlink/rewardsmgmt.html:150
 msgid "Period"
@@ -1317,7 +1382,7 @@ msgstr "मतदान अवधि"
 
 #: templates/enterlink/rewardsmgmt.html:151
 msgid "Redeem"
-msgstr ""
+msgstr "के एवज"
 
 #: templates/enterlink/rewardsmgmt.html:158
 msgid "Redeem successful"
@@ -1353,72 +1418,72 @@ msgid ""
 "links"
 msgstr "यदि आपको इस पृष्ठ से संबंधित कोई लिंक पता है तोउन लिंक्स को खोजने का प्रयास करें"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:113
+#: templates/enterlink/template_blockchain_styled_amp.html:116
 msgid "Bullet"
 msgstr "बुलेट"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:175
+#: templates/enterlink/template_blockchain_styled_amp.html:178
 msgid "Recent news"
 msgstr "नया समाचार"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:175
+#: templates/enterlink/template_blockchain_styled_amp.html:178
 msgid ""
 "Everipedia IQ tokens are now in circulation on the EOS mainnet. Follow "
 "Everipedia on"
 msgstr ""
 "Everipedia आईक्यू टोकन अब EOS मेननेट पर संचार में हैं। इसपर Everipedia को फॉलो करें"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:175
+#: templates/enterlink/template_blockchain_styled_amp.html:178
 msgid "to learn about upcoming features and developments!"
 msgstr "आगामी सुविधाओं और विकासों के बारे में जानने के लिए!"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:241
+#: templates/enterlink/template_blockchain_styled_amp.html:253
 msgid "Quick Biography"
-msgstr ""
+msgstr "त्वरित जीवनी"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:243
+#: templates/enterlink/template_blockchain_styled_amp.html:255
 msgid "Quick Facts For This Wiki"
 msgstr "इस विकी के लिए संदर्भ लिंक"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:272
-#: templates/enterlink/template_blockchain_styled_desktop.html:353
+#: templates/enterlink/template_blockchain_styled_amp.html:284
+#: templates/enterlink/template_blockchain_styled_desktop.html:376
 msgid "Image & Video Gallery"
 msgstr "छवि और वीडियो गैलरी"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:274
-#: templates/enterlink/template_blockchain_styled_desktop.html:355
+#: templates/enterlink/template_blockchain_styled_amp.html:286
+#: templates/enterlink/template_blockchain_styled_desktop.html:378
 msgid "images, pictures, and videos"
 msgstr "छवि, चित्र, और वीडियो"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:278
+#: templates/enterlink/template_blockchain_styled_amp.html:290
 msgid "Gallery"
 msgstr "गैलरी"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:295
-#: templates/enterlink/template_blockchain_styled_desktop.html:488
+#: templates/enterlink/template_blockchain_styled_amp.html:307
+#: templates/enterlink/template_blockchain_styled_desktop.html:511
 msgid "Reference Links For This Biography"
 msgstr "इस जीवनी के लिए संदर्भ लिंक"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:297
-#: templates/enterlink/template_blockchain_styled_desktop.html:490
+#: templates/enterlink/template_blockchain_styled_amp.html:309
+#: templates/enterlink/template_blockchain_styled_desktop.html:513
 msgid "Reference Links For This Wiki"
 msgstr "इस विकी के लिए संदर्भ लिंक"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:300
-#: templates/enterlink/template_blockchain_styled_desktop.html:493
+#: templates/enterlink/template_blockchain_styled_amp.html:312
+#: templates/enterlink/template_blockchain_styled_desktop.html:516
 msgid ""
 "Links to historical reviews, career / educational facts, and other "
 "encyclopedic information"
 msgstr ""
 "ऐतिहासिक समीक्षाओं, करियर / शैक्षिक तथ्यों, और अन्य विश्वकोश संबंधीजानकारियों के लिए लिंक"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:305
-#: templates/enterlink/template_blockchain_styled_desktop.html:499
+#: templates/enterlink/template_blockchain_styled_amp.html:317
+#: templates/enterlink/template_blockchain_styled_desktop.html:522
 msgid "All information for"
 msgstr "विकी के लिए सारी जानकारी"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:305
-#: templates/enterlink/template_blockchain_styled_desktop.html:499
+#: templates/enterlink/template_blockchain_styled_amp.html:317
+#: templates/enterlink/template_blockchain_styled_desktop.html:522
 msgid ""
 "wiki comes from the below links. Any source is valid, including Twitter, "
 "Facebook, Instagram, and LinkedIn. Pictures, videos, biodata, and files "
@@ -1427,67 +1492,71 @@ msgstr ""
 "नीचे दिए गए लिंक्स से आती है। ट्विटर, फेसबुक, इंस्टाग्रामऔर लिंक्डइन सहित कोई भी स्रोत "
 "मान्य है। इससे संबंधित चित्र, वीडियो, बायोडाटा, और फाइलें"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:305
-#: templates/enterlink/template_blockchain_styled_desktop.html:499
+#: templates/enterlink/template_blockchain_styled_amp.html:317
+#: templates/enterlink/template_blockchain_styled_desktop.html:522
 msgid "are also acceptable encyclopedic sources."
 msgstr "भी स्वीकृत विश्वकोश स्रोत हैं।"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:320
-#: templates/enterlink/template_blockchain_styled_desktop.html:520
+#: templates/enterlink/template_blockchain_styled_amp.html:332
+#: templates/enterlink/template_blockchain_styled_desktop.html:543
 msgid ""
 "See related encyclopedia articles, biographies, reviews, and historical "
 "facts."
 msgstr "संबंधित विश्वकोश लेख, जीवनियां, समीक्षाएं औरऐतिहासिक तथ्य देखें।"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:324
-#: templates/enterlink/template_blockchain_styled_desktop.html:527
+#: templates/enterlink/template_blockchain_styled_amp.html:336
+#: templates/enterlink/template_blockchain_styled_desktop.html:550
 msgid "Other wiki pages related to"
 msgstr "इससे संबंधित अन्य विकी पृष्ठ"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:503
+#: templates/enterlink/template_blockchain_styled_amp.html:515
 msgid "Created"
 msgstr "बनाये गए"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:504
+#: templates/enterlink/template_blockchain_styled_amp.html:516
 msgid "Last Modified"
 msgstr "अंतिम संशोधन"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:505
+#: templates/enterlink/template_blockchain_styled_amp.html:517
 msgid "IPFS"
 msgstr "IPFS"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:643
+#: templates/enterlink/template_blockchain_styled_amp.html:672
 msgid "Top Page Editors"
 msgstr "शीर्ष पृष्ठ संपादक"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:663
+#: templates/enterlink/template_blockchain_styled_amp.html:692
 msgid "Share this page"
 msgstr "यह पृष्ठ साझा करें"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:675
+#: templates/enterlink/template_blockchain_styled_amp.html:704
 msgid "DIRECT LINK"
 msgstr "प्रत्यक्ष लिंक"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:680
-#: templates/enterlink/template_blockchain_styled_desktop.html:214
+#: templates/enterlink/template_blockchain_styled_amp.html:709
+#: templates/enterlink/template_blockchain_styled_desktop.html:237
 msgid "Suggested Hashtags"
 msgstr "सुझावित हैशटैग"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:714
-#: templates/enterlink/template_blockchain_styled_desktop.html:252
+#: templates/enterlink/template_blockchain_styled_amp.html:743
+#: templates/enterlink/template_blockchain_styled_desktop.html:275
 msgid "QR Code"
 msgstr "क्यूआर कोड"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:764
+msgid "Alternate Languages"
+msgstr "वैकल्पिक भाषा"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:15
 #: templates/enterlink/template_blockchain_styled_desktop.html:20
 msgid "Bio"
-msgstr ""
+msgstr "जैव"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:17
 #: templates/enterlink/template_blockchain_styled_desktop.html:18
-#: templates/enterlink/template_blockchain_styled_desktop.html:218
+#: templates/enterlink/template_blockchain_styled_desktop.html:241
 msgid "bio"
-msgstr ""
+msgstr "जैव"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:17
 #: templates/enterlink/template_blockchain_styled_desktop.html:18
@@ -1498,75 +1567,84 @@ msgstr ""
 #: templates/enterlink/template_blockchain_styled_desktop.html:38
 #: templates/enterlink/template_blockchain_styled_desktop.html:39
 msgid "encylopedia"
-msgstr ""
+msgstr "विश्वज्ञानकोश"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:22
 #: templates/enterlink/template_blockchain_styled_desktop.html:27
 #: templates/enterlink/template_blockchain_styled_desktop.html:29
 #: templates/enterlink/template_blockchain_styled_desktop.html:34
 msgid "Review"
-msgstr ""
+msgstr "समीक्षा"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:24
 #: templates/enterlink/template_blockchain_styled_desktop.html:25
 #: templates/enterlink/template_blockchain_styled_desktop.html:31
 #: templates/enterlink/template_blockchain_styled_desktop.html:32
-#: templates/enterlink/template_blockchain_styled_desktop.html:224
-#: templates/enterlink/template_blockchain_styled_desktop.html:230
-#: templates/enterlink/template_blockchain_styled_desktop.html:236
+#: templates/enterlink/template_blockchain_styled_desktop.html:247
+#: templates/enterlink/template_blockchain_styled_desktop.html:253
+#: templates/enterlink/template_blockchain_styled_desktop.html:259
 msgid "review"
-msgstr ""
+msgstr "समीक्षा"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:31
 #: templates/enterlink/template_blockchain_styled_desktop.html:32
-#: templates/enterlink/template_blockchain_styled_desktop.html:225
-#: templates/enterlink/template_blockchain_styled_desktop.html:231
-#: templates/enterlink/template_blockchain_styled_desktop.html:237
+#: templates/enterlink/template_blockchain_styled_desktop.html:248
+#: templates/enterlink/template_blockchain_styled_desktop.html:254
+#: templates/enterlink/template_blockchain_styled_desktop.html:260
 msgid "history"
-msgstr ""
+msgstr "इतिहास"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:198
+#: templates/enterlink/template_blockchain_styled_desktop.html:191
+msgid "Other Languages"
+msgstr "अन्य भाषाएँ"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:221
 msgid "Embed / Widget"
 msgstr "एम्बेड / विजेट"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:217
-#: templates/enterlink/template_blockchain_styled_desktop.html:223
-#: templates/enterlink/template_blockchain_styled_desktop.html:229
-#: templates/enterlink/template_blockchain_styled_desktop.html:235
+#: templates/enterlink/template_blockchain_styled_desktop.html:240
+#: templates/enterlink/template_blockchain_styled_desktop.html:246
+#: templates/enterlink/template_blockchain_styled_desktop.html:252
+#: templates/enterlink/template_blockchain_styled_desktop.html:258
 msgid "wiki"
-msgstr ""
+msgstr "विकि"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:219
+#: templates/enterlink/template_blockchain_styled_desktop.html:242
 msgid "net worth"
-msgstr ""
+msgstr "कुल मूल्य"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:220
+#: templates/enterlink/template_blockchain_styled_desktop.html:243
 msgid "age"
 msgstr "पृष्ठ"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:221
+#: templates/enterlink/template_blockchain_styled_desktop.html:244
 msgid "married"
-msgstr ""
+msgstr "शादी हो ग"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:226
+#: templates/enterlink/template_blockchain_styled_desktop.html:249
 msgid "sales"
-msgstr ""
+msgstr "बिक्री"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:227
-#: templates/enterlink/template_blockchain_styled_desktop.html:233
-#: templates/enterlink/template_blockchain_styled_desktop.html:239
+#: templates/enterlink/template_blockchain_styled_desktop.html:250
+#: templates/enterlink/template_blockchain_styled_desktop.html:256
+#: templates/enterlink/template_blockchain_styled_desktop.html:262
 msgid "facts"
 msgstr ""
+"Everipedia बिलकुल विकिपीडिया जैसा है लेकिन इसे संपादित करना और इसमें योगदान करनाकहीं "
+"ज्यादा आसान है। प्रत्येक पृष्ठ में संक्षिप्त तथ्यों के लिए एक इंफोबॉक्स क्षेत्र, तटस्थ अन्य पुरुष "
+"कालमें लिखित एक मुख्य लेख, विषय के बारे में तस्वीरों, विडियो, ऑडियो आदि की मीडिया गैलरी, "
+"वेबपृष्ठों केलिए सन्दर्भों की सूची और लेख में उद्धरण के रूप में प्रयोग की जाने वालीफाइलें और "
+"इंफोबॉक्स शामिल होते हैं।"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:232
+#: templates/enterlink/template_blockchain_styled_desktop.html:255
 msgid "founders"
-msgstr ""
+msgstr "संस्थापकों"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:238
+#: templates/enterlink/template_blockchain_styled_desktop.html:261
 msgid "encyclopedia"
-msgstr ""
+msgstr "विश्वकोश"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:325
+#: templates/enterlink/template_blockchain_styled_desktop.html:348
 msgid "Profiles"
 msgstr "प्रोफाइल"
 
@@ -1619,11 +1697,11 @@ msgstr "मतदान करें"
 msgid "Editing History"
 msgstr "मतदान इतिहास"
 
-#: templates/enterlink/voting.html:225
+#: templates/enterlink/voting.html:233
 msgid "Rejectors"
 msgstr "अस्वीकार करें"
 
-#: templates/enterlink/voting.html:231
+#: templates/enterlink/voting.html:239
 msgid "Approvers"
 msgstr "स्वीकार करें"
 

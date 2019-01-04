@@ -38,7 +38,7 @@ from django.utils.translation import ugettext
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_GET, require_POST
 from enterlink.forms import NewlinkFileForm, LinkForm, PageMetaForm
-from enterlink.models import ArticleTable, HashCache, SchemaObject, EditProposal, SavedDraft
+from enterlink.models import ArticleTable, HashCache, SchemaObject, EditProposal, SavedDraft, ArticleGroup
 from enterlink.model_functions import linkCategorizer, profileLinkTester, dupeLinkDetector, badLinkSanitizer, \
     entireArticleHTMLSanitizer, updateElasticsearch
 from enterlink.view_functions import getTheArticleObject, parseBlockchainHTML, parseTinyMCE_Citations, getDiffs, ipfs_to_uint64_trunc, \
@@ -46,6 +46,7 @@ from enterlink.view_functions import getTheArticleObject, parseBlockchainHTML, p
     whiteSpaceStripper
 from enterlink.media_functions import processPhoto, addMediaImage, fetchMetaThumbnail
 from fbwiki.settings import AWS_STORAGE_BUCKET_NAME, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
+import base64
 import datetime
 import django.utils.text as DjangoText
 import gzip
@@ -58,6 +59,7 @@ import requests
 import StringIO
 import time
 import difflib
+import threading
 
 # Placeholders for various forms
 PLACEHOLDER_LIST = [
@@ -333,7 +335,10 @@ def edit(request, url_param="everipedia-blank-page-template", lang_param=""):
         articleObject.save()
 
         # Update the index
-        updateElasticsearch(articleObject, u"PAGE_UPDATED_OR_CREATED")
+        t = threading.Thread(target=updateElasticsearch,
+                            args=(articleObject, u"PAGE_UPDATED_OR_CREATED"))
+        t.setDaemon(True)
+        t.start()
 
         # Record the edit proposal internally. This should match all the proposals that are on-chain.
         EditProposal.objects.create(id=ipfs_to_uint64_trunc(ipfs_hash_new), proposed_article_hash=ipfs_hash_new, old_article_hash=ipfs_hash_old,
@@ -961,8 +966,43 @@ def get_draft(request):
 def AJAX_Create_Redirect(request):
     # Get the POSTed article HTML
     innerHTMLBlock = request.POST.get("html_blob")
-
     pass
+
+@csrf_exempt
+def AJAX_Group_Languages(request, sourceIPFS, destinationIPFS):
+    sourceArticle = ArticleTable.objects.get(ipfs_hash_current=sourceIPFS)
+    sourceArticleGroup = sourceArticle.article_group_id
+    destinationArticle = ArticleTable.objects.get(ipfs_hash_current=destinationIPFS)
+    destinationArticleGroup = destinationArticle.article_group_id
+
+    if sourceArticle.page_lang == destinationArticle.page_lang:
+        return HttpResponse(u"Cannot link to another page with the same language!")
+
+    if (sourceArticleGroup is None) and (destinationArticleGroup is None):
+        sourceGroup = ArticleGroup.objects.create(group_id=sourceArticle.id, canonical_article=sourceArticle, canonical_lang=sourceArticle.page_lang)
+        sourceGroupID = sourceGroup.group_id
+        sourceArticle.article_group_id = sourceGroupID
+        sourceArticle.save()
+
+        destinationGroup = ArticleGroup.objects.create(group_id=sourceGroupID, canonical_article=destinationArticle, canonical_lang=destinationArticle.page_lang)
+        destinationArticle.article_group_id = sourceGroupID
+        destinationArticle.save()
+
+    elif (sourceArticleGroup is None) and (destinationArticleGroup is not None):
+        sourceGroup = ArticleGroup.objects.create(group_id=destinationArticleGroup, canonical_article=sourceArticle, canonical_lang=sourceArticle.page_lang)
+        sourceGroupID = sourceGroup.group_id
+        sourceArticle.article_group_id = sourceGroupID
+        sourceArticle.save()
+    elif (sourceArticleGroup is not None) and (destinationArticleGroup is None):
+        destinationGroup = ArticleGroup.objects.create(group_id=destinationArticleGroup, canonical_article=destinationArticle, canonical_lang=destinationArticle.page_lang)
+        destinationGroupID = destinationGroup.group_id
+        destinationArticle.article_group_id = destinationGroupID
+        destinationGroup.save()
+    else:
+        return HttpResponse(u"Both pages already have existing language groupings!")
+
+    return HttpResponse(u"SUCCESS")
+
 
 @csrf_exempt
 def merge_page(from_ipfs, to_ipfs):
@@ -1030,8 +1070,61 @@ def merge_page(from_ipfs, to_ipfs):
     blobString = deBeautifySoup(toSoup, skipSlice=True)
     return blobString
 
+@csrf_exempt
+def AJAX_OREID_Signing_Callback(request):
+    signedTX = request.GET.get('signed_transaction')
+    rawJSON = base64.b64decode(signedTX)
+    jsonResult = json.loads(rawJSON)
+    txid = jsonResult['transaction_id']
+    actionData = jsonResult['processed']['action_traces'][0]['act']['data']
+    proposedIPFS = actionData['proposed_article_hash']
+    parentIPFS = actionData['old_article_hash']
+    proposer = "eporeidusers@" + jsonResult['processed']['action_traces'][0]['act']['authorization'][0]['permission']
 
+    # Fetch the article object from the URL parameter
+    cleanedParamList = getTheArticleObject(parentIPFS)
+    articleObject = cleanedParamList[1]
 
+    # Parse some variables from the JSON
+    currentTime = int(time.time())
+    endTime = currentTime + 6 * 3600
+
+    # Get the cached article HTML and parse it
+    hashTable = HashCache.objects.get(ipfs_hash=proposedIPFS)
+    parsedDict = parseBlockchainHTML(hashTable.html_blob, articleObj=articleObject)
+
+    # Set some variables
+    ipfs_hash_old = articleObject.ipfs_hash_current
+    ipfs_hash_grandparent = articleObject.ipfs_hash_parent
+
+    miniBlurb = blurbSplitter(parsedDict["BLURB"], 2048, minimizeHTML=True)[0]
+    miniBlurb = whiteSpaceStripper(miniBlurb)
+
+    # Update the articleObject cache with data from the article HTML file (from the cache)
+    articleObject.ipfs_hash_parent = articleObject.ipfs_hash_current
+    articleObject.ipfs_hash_current = proposedIPFS
+    articleObject.blurb_snippet = miniBlurb
+    articleObject.page_type = (
+        None if parsedDict["PAGEMETADATA"]["page_type"] == "None" else parsedDict["PAGEMETADATA"]["page_type"])
+    articleObject.page_title = parsedDict["PAGETITLE"]
+    articleObject.lastmod_timestamp = timezone.now()
+    articleObject.is_removed = parsedDict["PAGEMETADATA"]["is_removed"]
+    articleObject.is_removed_from_index = False
+    articleObject.is_adult_content = parsedDict["PAGEMETADATA"]["is_adult_content"]
+    articleObject.page_lang = parsedDict["PAGEMETADATA"]["page_lang"]
+    articleObject.save()
+
+    # Update the index
+    updateElasticsearch(articleObject, u"PAGE_UPDATED_OR_CREATED")
+
+    # Record the edit proposal internally. This should match all the proposals that are on-chain.
+    EditProposal.objects.create(id=ipfs_to_uint64_trunc(proposedIPFS), proposed_article_hash=proposedIPFS,
+                                old_article_hash=ipfs_hash_old,
+                                grandparent_hash=ipfs_hash_grandparent, proposer=proposer,
+                                proposer_64t=encodeNameSwappedEndian(proposer), starttime=currentTime,
+                                endtime=endTime, status=0, article=articleObject)
+
+    return HttpResponseRedirect("/AJAX-REQUEST/AJAX_Fetch_Blurb_Compare/%s/%s/" % (proposedIPFS, parentIPFS))
 
 
 

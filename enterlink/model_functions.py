@@ -547,26 +547,29 @@ def mainSearch(url_param, search_type, searchterm, FETCH_LIMIT, BLURB_CHAR_LIMIT
     return result
 
 def updateElasticsearch(articleObject, ACTION_TYPE="PAGE_UPDATED_OR_CREATED"):
-    # NOTE: Elasticsearch is only indexing IDs, canonical IDs, and page titles. Technically, you only need to update in the following cases:
-    # 4) A new page is created
-    # 2) A page is removed
-    # 3) The page title changes
-    # 4) A merge / redirect
-    if articleObject.redirect_page_id is None:
-        canonicalID = articleObject.id
-    else:
-        canonicalID = articleObject.redirect_page_id
-    jsonRequest = {
-        "id": articleObject.id,
-        "page_title": articleObject.page_title,
-        "canonical_id": canonicalID,
-    }
-    # A new page is created
-    if ACTION_TYPE == "PAGE_UPDATED_OR_CREATED":
-        ELASTIC_OBJECT.index(index=ELASTICSEARCH_INDEX_NAME, body=jsonRequest, doc_type=ELASTICSEARCH_DOCUMENT_TYPE, id=articleObject.id)
-    # A page is removed
-    elif ACTION_TYPE == "PAGE_REMOVED":
-        ELASTIC_OBJECT.delete(index=ELASTICSEARCH_INDEX_NAME, body=jsonRequest, doc_type=ELASTICSEARCH_DOCUMENT_TYPE, id=articleObject.id)
-    # A merge / redirect
-    elif ACTION_TYPE == "MERGE_REDIRECT":
-        ELASTIC_OBJECT.index(index=ELASTICSEARCH_INDEX_NAME, body=jsonRequest, doc_type=ELASTICSEARCH_DOCUMENT_TYPE, id=articleObject.id)
+    try:
+        # NOTE: Elasticsearch is only indexing IDs, canonical IDs, and page titles. Technically, you only need to update in the following cases:
+        # 4) A new page is created
+        # 2) A page is removed
+        # 3) The page title changes
+        # 4) A merge / redirect
+        if articleObject.redirect_page_id is None:
+            canonicalID = articleObject.id
+        else:
+            canonicalID = articleObject.redirect_page_id
+        jsonRequest = {
+            "id": articleObject.id,
+            "page_title": articleObject.page_title,
+            "canonical_id": canonicalID,
+        }
+        # A new page is created
+        if ACTION_TYPE == "PAGE_UPDATED_OR_CREATED":
+            ELASTIC_OBJECT.index(index=ELASTICSEARCH_INDEX_NAME, body=jsonRequest, doc_type=ELASTICSEARCH_DOCUMENT_TYPE, id=articleObject.id)
+        # A page is removed
+        elif ACTION_TYPE == "PAGE_REMOVED":
+            ELASTIC_OBJECT.delete(index=ELASTICSEARCH_INDEX_NAME, body=jsonRequest, doc_type=ELASTICSEARCH_DOCUMENT_TYPE, id=articleObject.id)
+        # A merge / redirect
+        elif ACTION_TYPE == "MERGE_REDIRECT":
+            ELASTIC_OBJECT.index(index=ELASTICSEARCH_INDEX_NAME, body=jsonRequest, doc_type=ELASTICSEARCH_DOCUMENT_TYPE, id=articleObject.id)
+    except:
+        pass

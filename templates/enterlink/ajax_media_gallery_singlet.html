@@ -11,12 +11,12 @@
         {% elif theLink.category == "NORMAL_VIDEO"  %}
             <video class="media-obj media-video" controls preload="metadata">
                 <source src="{{ theLink.url }}" type="{{ theLink.mime }}">
-                {% trans 'Your browser does not support HTML5 video.' %}
+                {% trans 'Please click to play the video.' %}
             </video>
         {% elif theLink.category == "AUDIO"  %}
             <audio class="media-obj media-audio" controls preload="metadata">
                 <source src="{{ theLink.url }}" type="{{ theLink.mime }}">
-                 {% trans 'Your browser does not support HTML5 video.' %}
+                 {% trans 'Please click to play the video.' %}
             </audio>
         {% endif %}
     </td>

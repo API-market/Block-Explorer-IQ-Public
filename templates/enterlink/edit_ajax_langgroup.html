@@ -1,0 +1,43 @@
+{% load i18n %}
+{% load enterlink_custom_tags %}
+<script>
+    function linkTheLangs(eThis){
+        var sourceHash = "{{ ARTICLE_CURRENT_HASH }}";
+        var destinationHash = $("#AJAXBox-LangGroup").val();
+
+        // Execute the grouping
+        $.ajax({
+            type: "GET",
+            url: "/AJAX-REQUEST/AJAX_Group_Languages/" + sourceHash + "/" + destinationHash + "/",
+            data: {},
+            beforeSend: function( xhr ) {
+                // Loading indicator
+                $('#AJAX-SpinBox').show();
+            },
+            success: function (data) {
+                // Fill the areas with the search results
+                $('#langGroupResult').html("COMPLETE!");
+            },
+            error: function (data) {
+                alert(data);
+            },
+            complete: function(){
+                // Hide the loading indicator
+                $('#AJAX-SpinBox').hide();
+            }
+        });
+
+    }
+</script>
+<div class="langgroup-label">{% trans "Link this page to:" %}</div>
+<input placeholder="{% trans 'Search' %}" name="SearchBox"  autocomplete="off" id="AJAXBox-LangGroup" type="text" value="">
+<div id="langGroupResult">
+    {% include "enterlink/ajaxresults.html" %}
+</div>
+<button id="langgroup-group" class="langgroup-group-button" data-article-lang="" data-current-hash="{{ ARTICLE_CURRENT_HASH }}" onclick="linkTheLangs(this);" type="button" name="langgroupgroupbtn">{% trans "Group" %}</button>
+<button id="langgroup-close" class="langgroup-close-button" onclick="hideLangGroupPane();" type="button" name="closelanggroupbtn">{% trans "Close" %}</button>
+<script>
+    function hideLangGroupPane() {
+        $("#langgroup-box-wrapper").hide();
+    }
+</script>

@@ -427,7 +427,7 @@
                                         <a id="video-{{ media.unique }}" rel='nofollow' href="/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/" >
                                             <video class="lg-video-object lg-html5 video-js vjs-default-skin grid-item" controls preload="metadata">
                                                 <source src="{{ media.url }}#t=0.1" type="{{ media.mime }}">
-                                                 {% trans 'Your browser does not support HTML5 video.' %}
+                                                 {% trans 'Please click to play the video.' %}
                                             </video>
                                         </a>
                                     </div>
@@ -450,7 +450,7 @@
                                         <a rel='nofollow' href="/wiki/lang_{{ PAGE_LANG }}/{{ PAGE_SLUG }}/" >
                                             <audio class="lg-video-object lg-html5 video-js vjs-default-skin grid-item" controls preload="metadata">
                                                 <source src="{{ media.url }}" type="{{ media.mime }}">
-                                                 {% trans 'Your browser does not support HTML5 video.' %}
+                                                 {% trans 'Please click to play the video.' %}
                                             </audio>
                                         </a>
                                     </div>

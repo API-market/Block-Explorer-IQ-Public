@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-10 16:54+0900\n"
-"PO-Revision-Date: 2018-07-30 20:09-0700\n"
+"POT-Creation-Date: 2018-12-29 16:09-0800\n"
+"PO-Revision-Date: 2018-12-29 16:02-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2\n"
 
 #: static/js/easytimer.min.js:7
 msgid "secondTenthsUpdated"
@@ -76,70 +76,15 @@ msgstr "js_sdk_force_status_on_load"
 msgid "auth.logout"
 msgstr "auth.logout"
 
-#: static/js/plugins/citepicture/plugin.min.js:16
-#: static/js/plugins/citepicture/plugin.min.js:17
-#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:16
-#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:17
-msgid "Media"
-msgstr "Медиа"
+#: static/js/scatter-header-js.js:49
+msgid "Claim Rewards"
+msgstr "Вознаграждения за претензии"
 
-#: static/js/plugins/citesource/plugin.min.js:15
-#: static/js/plugins/citesource/plugin.min.js:16
-#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:15
-#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:16
-msgid "Cite"
-msgstr "Цитировать"
-
-#: static/js/plugins/linkpage/plugin.min.js:1
-#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:1
-msgid "Search Everipedia"
-msgstr "Поиск в Everipedia"
-
-#: static/js/plugins/linkpage/plugin.min.js:17
-#: static/js/plugins/linkpage/plugin.min.js:18
-#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:17
-#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:18
-msgid "Link"
-msgstr "Ссылка"
-
-#: static/js/plugins/mention/plugin.min.js:374
-#: static/tinymce_4.2.3/plugins/mention/plugin.min.js:374
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:107
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:110
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:234
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:237
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:341
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:344
-msgid "Cite as verified editor"
-msgstr "Cite как проверенный редактор"
-
-#: static/js/plugins/rollups/plugin.min.js:3
-#: static/js/plugins/savepage/plugin.min.js:6
-#: static/js/plugins/savepage/plugin.min.js:7
 #: static/tageditor/jquery.tag-editor.js:335
 #: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:3
 #: templates/enterlink/inline-js/enterlink-edit-prefix.html:202
 msgid "Save"
 msgstr "Сохранить"
-
-#: static/js/plugins/rollups/plugin.min.js:4
-#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:4
-msgid "Edit"
-msgstr "Редактировать"
-
-#: static/js/plugins/rollups/plugin.min.js:11
-#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
-msgid "Font Style"
-msgstr "Стиль шрифта"
-
-#: static/js/plugins/rollups/plugin.min.js:11
-#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
-msgid "Style"
-msgstr "Стиль"
-
-#: static/js/scatter-header-js.js:85
-msgid "Claim Rewards"
-msgstr ""
 
 #: static/tageditor/jquery.tag-editor.js:584
 #: static/tageditor/jquery.tag-editor.js:587
@@ -153,30 +98,68 @@ msgstr "Добавить дополнительное описание для э
 msgid "Delete this tag"
 msgstr "Удалить этот тег ..."
 
+#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:16
+#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:17
+msgid "Media"
+msgstr "Медиа"
+
+#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:15
+#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:16
+msgid "Cite"
+msgstr "Цитировать"
+
 #: static/tinymce_4.2.3/plugins/helptour/plugin.min.js:3
 #: static/tinymce_4.2.3/plugins/helptour/plugin.min.js:4
 msgid "Help"
-msgstr ""
+msgstr "Помощь"
+
+#: static/tinymce_4.2.3/plugins/langgroup/plugin.min.js:3
+#: static/tinymce_4.2.3/plugins/langgroup/plugin.min.js:4
+msgid "Connect Languages"
+msgstr "Подключение языков"
+
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:1
+msgid "Search Everipedia"
+msgstr "Поиск в Everipedia"
+
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:17
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:18
+msgid "Link"
+msgstr "Ссылка"
+
+#: static/tinymce_4.2.3/plugins/mention/plugin.min.js:376
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:111
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:114
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:244
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:247
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:353
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:356
+msgid "Cite as verified editor"
+msgstr "Cite как проверенный редактор"
 
 #: static/tinymce_4.2.3/plugins/merge/plugin.min.js:3
 #: static/tinymce_4.2.3/plugins/merge/plugin.min.js:4
 msgid "Merge"
-msgstr ""
+msgstr "Страница слияния"
+
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:4
+msgid "Edit"
+msgstr "Редактировать"
+
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
+msgid "Font Style"
+msgstr "Стиль шрифта"
+
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
+msgid "Style"
+msgstr "Стиль"
 
 #: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:3
 #: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:4
-msgid "Save Draft"
-msgstr ""
-
-#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:10
-#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:11
-msgid "Load Draft"
-msgstr ""
-
 #: static/tinymce_4.2.3/plugins/submitpage/plugin.min.js:3
 #: static/tinymce_4.2.3/plugins/submitpage/plugin.min.js:4
 msgid "Submit"
-msgstr ""
+msgstr "Отправить"
 
 #: templates/enterlink/brainpowermgmt.html:142
 msgid "Claim"
@@ -194,7 +177,7 @@ msgstr "Перетащите свою фотографию здесь или н�
 msgid "Please enter a description for the photo"
 msgstr "Пожалуйста, введите описание фотографии"
 
-#: templates/enterlink/edit_ajax_addinfobox.html:96
+#: templates/enterlink/edit_ajax_addinfobox.html:97
 msgid "Adding infobox item, please wait..."
 msgstr "Добавление элемента информации, пожалуйста, подождите ..."
 
@@ -455,12 +438,12 @@ msgstr "Назад"
 msgid "Next"
 msgstr "Следующий"
 
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:107
 #: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:111
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:234
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:238
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:341
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:345
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:115
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:244
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:248
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:353
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:357
 msgid "Cite my own knowledge / experience as a verified editor"
 msgstr "Приведите мои собственные знания / опыт как проверенный редактор"
 

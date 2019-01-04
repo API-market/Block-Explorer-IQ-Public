@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-07-31 15:45-0700\n"
-"PO-Revision-Date: 2018-08-06 23:43+0200\n"
+"PO-Revision-Date: 2018-12-29 15:56-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
-"%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
-"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
-"X-Generator: Poedit 2.0.8\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n"
+"%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 "
+"&& n%100<=14) ? 2 : 3);\n"
+"X-Generator: Poedit 2.2\n"
 
 #: enterlink/forms.py:9
 msgid "Contains"
@@ -155,8 +155,8 @@ msgid ""
 "Describe the file briefly. A summary of the information found is best. Avoid "
 "simply repeating the page title."
 msgstr ""
-"Opisz krótko plik. Najlepsze jest podsumowanie uzyskanych informacji. Unikaj "
-"po prostu powtarzania tytułu strony."
+"Opisz krótko plik. Najlepsze jest podsumowanie uzyskanych informacji. Unikaj po "
+"prostu powtarzania tytułu strony."
 
 #: enterlink/forms.py:148
 msgid "File type not allowed."
@@ -172,11 +172,11 @@ msgstr "Wpisz adres strony"
 
 #: enterlink/forms.py:156
 msgid ""
-"Describe the URL briefly. A summary of the information found is best. Avoid "
-"simply repeating the page title."
+"Describe the URL briefly. A summary of the information found is best. Avoid simply "
+"repeating the page title."
 msgstr ""
-"Opisz krótko adres URL. Najlepsze jest podsumowanie uzyskanych informacji. "
-"Unikaj po prostu powtarzania tytułu strony."
+"Opisz krótko adres URL. Najlepsze jest podsumowanie uzyskanych informacji. Unikaj "
+"po prostu powtarzania tytułu strony."
 
 #: enterlink/forms.py:165 templates/enterlink/edit_ajax_addinfobox.html:28
 msgid "Enter type (e.g. Occupation)"
@@ -272,11 +272,11 @@ msgstr "Normalny (osobisty)"
 
 #: enterlink/view_functions.py:144
 msgid ""
-"Your Everipedia editor restrictions have been removed. You can now edit "
-"pages freely!"
+"Your Everipedia editor restrictions have been removed. You can now edit pages "
+"freely!"
 msgstr ""
-"Ograniczenia edytora Everipedia zostały usunięte. Teraz możesz swobodnie "
-"edytować strony!"
+"Ograniczenia edytora Everipedia zostały usunięte. Teraz możesz swobodnie edytować "
+"strony!"
 
 #: enterlink/view_functions.py:607
 msgid "Images & Videos"
@@ -372,9 +372,9 @@ msgid "Log in again"
 msgstr "Zaloguj się ponownie"
 
 #: templates/admin/password_change_done.html:46
-#: templates/admin/password_change_form.html:48
-#: templates/enterlink/edit.html:145 templates/enterlink/search-iframe.html:123
-#: templates/enterlink/search.html:27 templates/enterlink/user.html:220
+#: templates/admin/password_change_form.html:48 templates/enterlink/edit.html:145
+#: templates/enterlink/search-iframe.html:123 templates/enterlink/search.html:27
+#: templates/enterlink/user.html:220
 msgid "Search Everipedia"
 msgstr "Wyszukaj w Everipedii"
 
@@ -421,11 +421,10 @@ msgstr "Wprowadź nowe hasło"
 
 #: templates/admin/password_reset_confirm.html:19
 msgid ""
-"Please enter your new password twice so we can verify you typed it in "
-"correctly."
+"Please enter your new password twice so we can verify you typed it in correctly."
 msgstr ""
-"Proszę wpisać dwukrotnie nowe hasło, dzięki czemu możemy sprawdzić czy "
-"wpisałeś je poprawnie."
+"Proszę wpisać dwukrotnie nowe hasło, dzięki czemu możemy sprawdzić czy wpisałeś je "
+"poprawnie."
 
 #: templates/admin/password_reset_confirm.html:23
 msgid "New password:"
@@ -445,11 +444,11 @@ msgstr "Resetowania hasła nieudane"
 
 #: templates/admin/password_reset_confirm.html:33
 msgid ""
-"The password reset link was invalid, possibly because it has already been "
-"used.  Please request a new password reset."
+"The password reset link was invalid, possibly because it has already been used.  "
+"Please request a new password reset."
 msgstr ""
-"Link do zresetowania hasła był nieprawidłowy, prawdopodobnie dlatego, że "
-"został już użyty. Proszę ponownie zażądać zresetowania hasła."
+"Link do zresetowania hasła był nieprawidłowy, prawdopodobnie dlatego, że został "
+"już użyty. Proszę ponownie zażądać zresetowania hasła."
 
 #: templates/admin/password_reset_done.html:11
 #: templates/admin/password_reset_done.html:15
@@ -461,16 +460,16 @@ msgid ""
 "We have emailed you instructions for setting your password. You should be "
 "receiving them shortly."
 msgstr ""
-"Wysłaliśmy do Ciebie e-mail z instrukcją ustawienia hasła. Powinieneś "
-"wkrótce go otrzymać."
+"Wysłaliśmy do Ciebie e-mail z instrukcją ustawienia hasła. Powinieneś wkrótce go "
+"otrzymać."
 
 #: templates/admin/password_reset_done.html:19
 msgid ""
-"If you don't receive an email, please make sure you've entered the address "
-"you registered with, and check your spam folder."
+"If you don't receive an email, please make sure you've entered the address you "
+"registered with, and check your spam folder."
 msgstr ""
-"Jeśli nie otrzymasz wiadomości e-mail, upewnij się, że podałeś prawidłowy "
-"adres, który użyłeś w trakcie rejestracji i sprawdź folder spamu."
+"Jeśli nie otrzymasz wiadomości e-mail, upewnij się, że podałeś prawidłowy adres, "
+"który użyłeś w trakcie rejestracji i sprawdź folder spamu."
 
 #: templates/admin/password_reset_email.html:2
 msgid ""
@@ -509,8 +508,7 @@ msgid "Reset my password"
 msgstr "Zresetuj hasło"
 
 #: templates/email/sanger_announcement.html:276
-#: templates/email/welcome_email.html:264
-#: templates/email/welcome_email_old.html:68
+#: templates/email/welcome_email.html:264 templates/email/welcome_email_old.html:68
 #: templates/enterlink/welcome.html:33
 msgid "Learn More"
 msgstr "Dowiedz się więcej"
@@ -519,8 +517,8 @@ msgstr "Dowiedz się więcej"
 msgid "View My Profile"
 msgstr "Zobacz mój profil"
 
-#: templates/email/welcome_email_old.html:67
-#: templates/enterlink/welcome.html:28 templates/enterlink/welcome.html:30
+#: templates/email/welcome_email_old.html:67 templates/enterlink/welcome.html:28
+#: templates/enterlink/welcome.html:30
 msgid "Create a Wiki"
 msgstr "Utwórz Wiki"
 
@@ -535,7 +533,7 @@ msgstr "więcej"
 #: templates/enterlink/template_blockchain_styled_desktop.html:413
 #: templates/enterlink/template_blockchain_styled_desktop.html:436
 #: templates/enterlink/template_photos_amp_json_blockchain.html:79
-msgid "Your browser does not support HTML5 video."
+msgid "Please click to play the video."
 msgstr "Twoja przeglądarka nie obsługuje video HTML5"
 
 #: templates/enterlink/ajaxresults.html:57
@@ -546,8 +544,7 @@ msgstr "Kliknij, aby dodać do tej listy nowy link lub plik."
 msgid "Or click an existing link below to add it to the article"
 msgstr "Lub kliknij na istniejący link poniżej, aby dodać go do artykułu."
 
-#: templates/enterlink/ajaxresults.html:135
-#: templates/enterlink/ajaxresults.html:192
+#: templates/enterlink/ajaxresults.html:135 templates/enterlink/ajaxresults.html:192
 #: templates/enterlink/template_blockchain_styled_desktop.html:165
 msgid "Views"
 msgstr "Widoki"
@@ -563,8 +560,7 @@ msgstr "strona(-y) posiada(-ją) ten link"
 
 #: templates/enterlink/analytics.html:7 templates/enterlink/faq.html:6
 msgid "Frequently Asked Questions - Everipedia, everyone's encyclopedia"
-msgstr ""
-"Najczęściej zadawane pytania - Everipedia, encyklopedia dla każdego z nas..."
+msgstr "Najczęściej zadawane pytania - Everipedia, encyklopedia dla każdego z nas..."
 
 #: templates/enterlink/brainpowermgmt.html:5
 #: templates/enterlink/brainpowermgmt.html:115
@@ -573,17 +569,14 @@ msgstr "Zarządzanie Mocą mózgu"
 
 #: templates/enterlink/brainpowermgmt.html:5 templates/enterlink/contact.html:7
 #: templates/enterlink/edit.html:7 templates/enterlink/editing-disabled.html:7
-#: templates/enterlink/editors.html:23
-#: templates/enterlink/exchange-listings.html:7
+#: templates/enterlink/editors.html:23 templates/enterlink/exchange-listings.html:7
 #: templates/enterlink/headers/index_header.html:17
-#: templates/enterlink/headers/index_header.html:18
-#: templates/enterlink/inbox.html:12 templates/enterlink/index.html:7
-#: templates/enterlink/leadership.html:7
+#: templates/enterlink/headers/index_header.html:18 templates/enterlink/inbox.html:12
+#: templates/enterlink/index.html:7 templates/enterlink/leadership.html:7
 #: templates/enterlink/limitreached.html:7 templates/enterlink/login.html:7
-#: templates/enterlink/recent-activity.html:7
-#: templates/enterlink/register.html:6 templates/enterlink/search.html:7
-#: templates/enterlink/transfer-iq.html:7 templates/enterlink/user.html:12
-#: templates/enterlink/votehistory.html:7
+#: templates/enterlink/recent-activity.html:7 templates/enterlink/register.html:6
+#: templates/enterlink/search.html:7 templates/enterlink/transfer-iq.html:7
+#: templates/enterlink/user.html:12 templates/enterlink/votehistory.html:7
 msgid "Everipedia, the encyclopedia of everything"
 msgstr "Everipedia, encyklopedia wszystkiego"
 
@@ -594,40 +587,38 @@ msgstr "Ładowanie Rozproszenia"
 
 #: templates/enterlink/brainpowermgmt.html:118
 msgid ""
-"Staking IQ tokens will freeze them for 21 days and will generate "
-"nontransferable Brainpower, which can be used for editing and voting on the "
-"Everipedia network. At the end of the 21 days, you can claim back your IQ "
-"tokens and re-stake them for more Brainpower again. Thus, 1 IQ, staked every "
-"21 days, can lead to 365 days / 21 days = 17.38 Brainpower every year."
+"Staking IQ tokens will freeze them for 21 days and will generate nontransferable "
+"Brainpower, which can be used for editing and voting on the Everipedia network. At "
+"the end of the 21 days, you can claim back your IQ tokens and re-stake them for "
+"more Brainpower again. Thus, 1 IQ, staked every 21 days, can lead to 365 days / 21 "
+"days = 17.38 Brainpower every year."
 msgstr ""
-"Stawianie tokenów IQ zamrozi je na 21 dni i wygeneruje niezbywalną Moc "
-"mózgu, która może być wykorzystana do edycji i głosowania w sieci "
-"Everipedia. Po upływie 21 dni możesz odzyskać swoje tokeny IQ i ponownie "
-"pobrać je, aby kolejny raz uzyskać większą ilość Mocy mózgu. Tak więc, 1 IQ "
-"postawione co 21 dni, może prowadzić do 365 dni / 21 dni = 17.38 Mocy mózgu "
-"każdego roku."
+"Stawianie tokenów IQ zamrozi je na 21 dni i wygeneruje niezbywalną Moc mózgu, "
+"która może być wykorzystana do edycji i głosowania w sieci Everipedia. Po upływie "
+"21 dni możesz odzyskać swoje tokeny IQ i ponownie pobrać je, aby kolejny raz "
+"uzyskać większą ilość Mocy mózgu. Tak więc, 1 IQ postawione co 21 dni, może "
+"prowadzić do 365 dni / 21 dni = 17.38 Mocy mózgu każdego roku."
 
 #: templates/enterlink/brainpowermgmt.html:119
 msgid ""
-"As you make pages, propose edits, and vote on article proposals, you will "
-"consume Brainpower. However, making successful edits and voting on the "
-"winning side of a proposal will generate rewards in IQ, not Brainpower. "
-"Therefore, you can generate more Brainpower (and any profit) by staking the "
-"new IQ you just earned."
+"As you make pages, propose edits, and vote on article proposals, you will consume "
+"Brainpower. However, making successful edits and voting on the winning side of a "
+"proposal will generate rewards in IQ, not Brainpower. Therefore, you can generate "
+"more Brainpower (and any profit) by staking the new IQ you just earned."
 msgstr ""
 "Kiedy tworzysz strony, proponujesz poprawki i głosujesz nad propozycjami "
-"artykułów, zużywasz Moc mózgu. Jednakże udana edycja i głosowanie na "
-"zwycięską propozycję przyniesie Ci nagrody w IQ, a nie w Mocy mózgu. Dlatego "
-"możesz wygenerować więcej mocy mózgu (i innych zysków) poprzez postawienie "
-"nowego IQ, który właśnie zarobiłeś."
+"artykułów, zużywasz Moc mózgu. Jednakże udana edycja i głosowanie na zwycięską "
+"propozycję przyniesie Ci nagrody w IQ, a nie w Mocy mózgu. Dlatego możesz "
+"wygenerować więcej mocy mózgu (i innych zysków) poprzez postawienie nowego IQ, "
+"który właśnie zarobiłeś."
 
 #: templates/enterlink/brainpowermgmt.html:120
 msgid ""
-"Every edit proposal requires a minimum of 50 Brainpower at this time, in "
-"order to prevent spam and poor-quality edits."
+"Every edit proposal requires a minimum of 50 Brainpower at this time, in order to "
+"prevent spam and poor-quality edits."
 msgstr ""
-"Każda propozycja edycji wymaga co najmniej 10 Mocy mózgu w tym samym czasie, "
-"aby zapobiec spamowi i niskiej jakości edycji."
+"Każda propozycja edycji wymaga co najmniej 10 Mocy mózgu w tym samym czasie, aby "
+"zapobiec spamowi i niskiej jakości edycji."
 
 #: templates/enterlink/brainpowermgmt.html:123
 msgid "Enter an integer amount of IQ to stake"
@@ -721,11 +712,11 @@ msgstr "Witaj znawco!"
 
 #: templates/enterlink/edit.html:157
 msgid ""
-"Looks like you have been editing for a while. You should take a moment to "
-"save your work before continuing!"
+"Looks like you have been editing for a while. You should take a moment to save "
+"your work before continuing!"
 msgstr ""
-"Wygląda na to, że edytujesz już od jakiegoś czasu. Powinieneś poświęcić "
-"chwilę na zapisanie swojej pracy przed kontynuacją!"
+"Wygląda na to, że edytujesz już od jakiegoś czasu. Powinieneś poświęcić chwilę na "
+"zapisanie swojej pracy przed kontynuacją!"
 
 #: templates/enterlink/edit.html:158
 msgid "Save"
@@ -734,39 +725,35 @@ msgstr "Zapisz"
 #: templates/enterlink/edit.html:166
 msgid ""
 "Looks like you are using first-person! (ex: Our product, I am, We are, You "
-"should). Everipedia is a neutral encyclopedia written in third-person tense "
-"(ex: It is, They are, The company makes). THIS IS NOT FACEBOOK!!"
+"should). Everipedia is a neutral encyclopedia written in third-person tense (ex: "
+"It is, They are, The company makes). THIS IS NOT FACEBOOK!!"
 msgstr ""
-"Wygląda na to, że używasz pierwszej osoby! (ex: Nasz produkt, jestem, "
-"jesteśmy, powinieneś). Everipedia jest neutralną encyklopedią napisaną w "
-"formie trzeciej osoby (np.: To jest, Oni są, Firma wytwarza). TO NIE JEST "
-"FACEBOOK!"
+"Wygląda na to, że używasz pierwszej osoby! (ex: Nasz produkt, jestem, jesteśmy, "
+"powinieneś). Everipedia jest neutralną encyklopedią napisaną w formie trzeciej "
+"osoby (np.: To jest, Oni są, Firma wytwarza). TO NIE JEST FACEBOOK!"
 
 #: templates/enterlink/edit.html:175
 msgid "Please enter a title for the page."
 msgstr "Wprowadź tytuł strony."
 
 #: templates/enterlink/edit.html:184
-msgid ""
-"Please write something for the article section. Make sure to use citations."
+msgid "Please write something for the article section. Make sure to use citations."
 msgstr ""
-"Prosimy o napisanie czegoś w sekcji artykułów. Upewnij się, że użyłeś "
-"cytatów."
+"Prosimy o napisanie czegoś w sekcji artykułów. Upewnij się, że użyłeś cytatów."
 
 #: templates/enterlink/edit.html:193
 msgid ""
-"Hello! This page needs citations (also known as footnotes, references, "
-"sources) before it can be saved. Add the links you're using as sources with "
-"the cite button above."
+"Hello! This page needs citations (also known as footnotes, references, sources) "
+"before it can be saved. Add the links you're using as sources with the cite button "
+"above."
 msgstr ""
-"Witaj! Ta strona potrzebuje cytatów (znanych również jako przypisy, "
-"odnośniki, źródła), zanim będzie mogła zostać zapisana. Dodaj linki, których "
-"używasz jako źródeł, naciskając powyżej przycisk cytuj."
+"Witaj! Ta strona potrzebuje cytatów (znanych również jako przypisy, odnośniki, "
+"źródła), zanim będzie mogła zostać zapisana. Dodaj linki, których używasz jako "
+"źródeł, naciskając powyżej przycisk cytuj."
 
 #: templates/enterlink/edit.html:194
 msgid "Join our official Facebook group if you need help with it!:"
-msgstr ""
-"Dołącz do naszej oficjalnej grupy na Facebooku, jeśli potrzebujesz pomocy!:"
+msgstr "Dołącz do naszej oficjalnej grupy na Facebooku, jeśli potrzebujesz pomocy!:"
 
 #: templates/enterlink/edit.html:194
 msgid "- we will hook you up. It's not hard!"
@@ -774,13 +761,13 @@ msgstr "- połączymy się z Tobą. To nie jest trudne!"
 
 #: templates/enterlink/edit.html:203
 msgid ""
-"Please cite the link(s) you just added into the main article body. First "
-"click at the end of the sentence or paragraph you want to cite, then click "
-"the (Cite) button on the edit panel above!"
+"Please cite the link(s) you just added into the main article body. First click at "
+"the end of the sentence or paragraph you want to cite, then click the (Cite) "
+"button on the edit panel above!"
 msgstr ""
-"Proszę zacytować link(i), który właśnie dodałeś do głównego artykułu. "
-"Najpierw kliknij na końcu zdania lub akapitu, który chcesz zacytować, a "
-"następnie kliknij przycisk (Cytuj) na panelu edycji powyżej!"
+"Proszę zacytować link(i), który właśnie dodałeś do głównego artykułu. Najpierw "
+"kliknij na końcu zdania lub akapitu, który chcesz zacytować, a następnie kliknij "
+"przycisk (Cytuj) na panelu edycji powyżej!"
 
 #: templates/enterlink/edit_ajax_addinfobox.html:10
 msgid "Add New Infobox Item"
@@ -858,26 +845,22 @@ msgid "Everipedia Editors"
 msgstr "Edytorzy Everipedia"
 
 #: templates/enterlink/editors.html:93 templates/enterlink/inbox.html:52
-#: templates/enterlink/recent-activity.html:103
-#: templates/enterlink/search.html:89
+#: templates/enterlink/recent-activity.html:103 templates/enterlink/search.html:89
 msgid "Previous"
 msgstr "Poprzednia"
 
 #: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
-#: templates/enterlink/recent-activity.html:107
-#: templates/enterlink/search.html:93
+#: templates/enterlink/recent-activity.html:107 templates/enterlink/search.html:93
 msgid "Page"
 msgstr "Strona"
 
 #: templates/enterlink/editors.html:97 templates/enterlink/inbox.html:56
-#: templates/enterlink/recent-activity.html:107
-#: templates/enterlink/search.html:93
+#: templates/enterlink/recent-activity.html:107 templates/enterlink/search.html:93
 msgid "of"
 msgstr "z"
 
 #: templates/enterlink/editors.html:101 templates/enterlink/inbox.html:60
-#: templates/enterlink/recent-activity.html:111
-#: templates/enterlink/search.html:97
+#: templates/enterlink/recent-activity.html:111 templates/enterlink/search.html:97
 msgid "Next"
 msgstr "Następna"
 
@@ -896,8 +879,7 @@ msgstr "Wiadomości"
 #: templates/enterlink/error.html:214
 #: templates/enterlink/headers/header_dropdown.html:51
 #: templates/enterlink/recent-activity.html:7
-#: templates/enterlink/recent-activity.html:73
-#: templates/enterlink/user.html:192
+#: templates/enterlink/recent-activity.html:73 templates/enterlink/user.html:192
 msgid "Recent Activity"
 msgstr "Ostatnia aktywność"
 
@@ -905,8 +887,7 @@ msgstr "Ostatnia aktywność"
 msgid "This page has been removed"
 msgstr "Ta strona została usunięta"
 
-#: templates/enterlink/error_410.html:63
-#: templates/enterlink/in_progress_404.html:86
+#: templates/enterlink/error_410.html:63 templates/enterlink/in_progress_404.html:86
 msgid "Click here to return to recent activity"
 msgstr "Kliknij tutaj, aby powrócić do ostatnio wykonywanej czynności"
 
@@ -940,19 +921,18 @@ msgstr "Czym jest Everipedia?"
 
 #: templates/enterlink/faq.html:25
 msgid ""
-"Everipedia is a knowledge aggregator and knowledge base. We think it's much "
-"easier to edit than Wikipedia. Anyone can create a page about any person, "
-"place, organization, or thing and populate it with relevant reference links/"
-"sources. The only main rules of EP are: Information on the page must always "
-"be cited and the article must be in a neutral point of view. Check out the "
-"actual entry for Everipedia... on"
+"Everipedia is a knowledge aggregator and knowledge base. We think it's much easier "
+"to edit than Wikipedia. Anyone can create a page about any person, place, "
+"organization, or thing and populate it with relevant reference links/sources. The "
+"only main rules of EP are: Information on the page must always be cited and the "
+"article must be in a neutral point of view. Check out the actual entry for "
+"Everipedia... on"
 msgstr ""
 "Everipedia jest agregatorem wiedzy i bazą wiedzy. Uważamy, że edycja na tej "
-"stronie jest o wiele łatwiejsza niż w Wikipedii. Każdy może utworzyć stronę "
-"o każdej osobie, miejscu, organizacji lub rzeczy i wypełnić ją odpowiednimi "
-"odnośnikami/źródłami. Jedyne główne zasady EP to: Należy zawsze cytować "
-"informacje na stronie, a artykuł musi być neutralny. Sprawdź aktualny wpis w "
-"Everipedii..."
+"stronie jest o wiele łatwiejsza niż w Wikipedii. Każdy może utworzyć stronę o "
+"każdej osobie, miejscu, organizacji lub rzeczy i wypełnić ją odpowiednimi "
+"odnośnikami/źródłami. Jedyne główne zasady EP to: Należy zawsze cytować informacje "
+"na stronie, a artykuł musi być neutralny. Sprawdź aktualny wpis w Everipedii..."
 
 #: templates/enterlink/faq.html:27
 msgid "Why should I sign up?"
@@ -960,18 +940,17 @@ msgstr "Dlaczego powinienem się zarejestrować?"
 
 #: templates/enterlink/faq.html:28
 msgid ""
-"Because it’s fun and easy! We thought contributing to large knowledge "
-"projects shouldn't require high barriers to entry so we made Everipedia very "
-"easy to navigate, edit, and get started. Editors gain more privileges as "
-"they accumulate IQ and rise through the ranks. Top site-wide editors are "
-"displayed on the front page. Top editors for each page are also displayed."
+"Because it’s fun and easy! We thought contributing to large knowledge projects "
+"shouldn't require high barriers to entry so we made Everipedia very easy to "
+"navigate, edit, and get started. Editors gain more privileges as they accumulate "
+"IQ and rise through the ranks. Top site-wide editors are displayed on the front "
+"page. Top editors for each page are also displayed."
 msgstr ""
-"Ponieważ jest to zabawne i proste! Pomyśleliśmy, że udział w dużych "
-"projektach wiedzy nie powinien wymagać wysokich barier wejścia, więc "
-"uczyniliśmy Everipedię bardzo łatwą w nawigacji, edycji i starcie. Edytorzy "
-"zyskują więcej przywilejów, gdy gromadzą IQ i awansują w rankingach. Na "
-"stronie głównej wyświetlani są najlepsi edytorzy. Wyświetlani są również "
-"najlepsi edytorzy dla każdej strony."
+"Ponieważ jest to zabawne i proste! Pomyśleliśmy, że udział w dużych projektach "
+"wiedzy nie powinien wymagać wysokich barier wejścia, więc uczyniliśmy Everipedię "
+"bardzo łatwą w nawigacji, edycji i starcie. Edytorzy zyskują więcej przywilejów, "
+"gdy gromadzą IQ i awansują w rankingach. Na stronie głównej wyświetlani są "
+"najlepsi edytorzy. Wyświetlani są również najlepsi edytorzy dla każdej strony."
 
 #: templates/enterlink/faq.html:30
 msgid "Try it!"
@@ -987,18 +966,17 @@ msgstr "Czym wiec Everipedia różni się od Wikipedii i podobnych stron?"
 
 #: templates/enterlink/faq.html:33
 msgid ""
-"Editing on Everipedia is graphic and modern, talk pages are designed as "
-"discussion threads, celebrities have verified accounts, and anyone can make "
-"pages about anything as long as they are properly cited. Every page from "
-"Wikipedia is already here on Everipedia to build on top of and improve. All "
-"this makes EP the biggest knowledge project ever!"
+"Editing on Everipedia is graphic and modern, talk pages are designed as discussion "
+"threads, celebrities have verified accounts, and anyone can make pages about "
+"anything as long as they are properly cited. Every page from Wikipedia is already "
+"here on Everipedia to build on top of and improve. All this makes EP the biggest "
+"knowledge project ever!"
 msgstr ""
-"Edycja w Everipedii jest graficzna i nowoczesna, strony dyskusji są "
-"zaprojektowane jako wątki dyskusji, celebryci posiadają zweryfikowane konta, "
-"a każda osoba może stworzyć strony o czymkolwiek, tak długo, jak są one "
-"prawidłowo cytowane. Każda strona z Wikipedii jest już dostępna w "
-"Everipedii, aby ją rozbudowywać i ulepszać. Wszystko to sprawia, że EP jest "
-"największym projektem wiedzy w historii!"
+"Edycja w Everipedii jest graficzna i nowoczesna, strony dyskusji są zaprojektowane "
+"jako wątki dyskusji, celebryci posiadają zweryfikowane konta, a każda osoba może "
+"stworzyć strony o czymkolwiek, tak długo, jak są one prawidłowo cytowane. Każda "
+"strona z Wikipedii jest już dostępna w Everipedii, aby ją rozbudowywać i ulepszać. "
+"Wszystko to sprawia, że EP jest największym projektem wiedzy w historii!"
 
 #: templates/enterlink/faq.html:35
 msgid "Is Everipedia free?"
@@ -1006,21 +984,19 @@ msgstr "Czy Everipedia jest darmowa?"
 
 #: templates/enterlink/faq.html:36
 msgid ""
-"All information found on Everipedia is freely available for anyone to use "
-"and access. All we ask is a link back to the source Everipedia page for "
-"attribution purposes. The information on this encyclopedia is meant to be "
-"free to all. We will never charge for or withhold any of the information on "
-"this website. We just ask that you do not throttle the site and "
-"programmatically harvest information that would dramatically affect our "
-"servers."
+"All information found on Everipedia is freely available for anyone to use and "
+"access. All we ask is a link back to the source Everipedia page for attribution "
+"purposes. The information on this encyclopedia is meant to be free to all. We will "
+"never charge for or withhold any of the information on this website. We just ask "
+"that you do not throttle the site and programmatically harvest information that "
+"would dramatically affect our servers."
 msgstr ""
-"Wszystkie informacje znajdujące się w Everipedii są dostępne dla każdego, w "
-"celu swobodnego korzystania z nich. Jedyne, o co prosimy, to link do strony "
-"źródłowej Everipedia w celu przypisania. Informacje zawarte w tej "
-"encyklopedii mają być darmowe dla wszystkich. Nigdy nie będziemy pobierać "
-"opłat za informacje zawarte na tej stronie. Prosimy tylko o to, aby Państwo "
-"nie blokowali strony i nie zbierali programowo informacji, co mogłyby mieć "
-"dramatyczny wpływ na nasze serwery."
+"Wszystkie informacje znajdujące się w Everipedii są dostępne dla każdego, w celu "
+"swobodnego korzystania z nich. Jedyne, o co prosimy, to link do strony źródłowej "
+"Everipedia w celu przypisania. Informacje zawarte w tej encyklopedii mają być "
+"darmowe dla wszystkich. Nigdy nie będziemy pobierać opłat za informacje zawarte na "
+"tej stronie. Prosimy tylko o to, aby Państwo nie blokowali strony i nie zbierali "
+"programowo informacji, co mogłyby mieć dramatyczny wpływ na nasze serwery."
 
 #: templates/enterlink/faq.html:42
 msgid "Much love,"
@@ -1404,8 +1380,8 @@ msgid ""
 "Everipedia is a free and easy to use wiki platform. Write about anyone and "
 "anything!"
 msgstr ""
-"Everipedia jest darmową i łatwą w użyciu platformą wiki. Napisz o kimkolwiek "
-"i o czymkolwiek!"
+"Everipedia jest darmową i łatwą w użyciu platformą wiki. Napisz o kimkolwiek i o "
+"czymkolwiek!"
 
 #: templates/enterlink/howto.html:36 templates/enterlink/howto.html:45
 msgid "Go back to the page you started from"
@@ -1437,11 +1413,10 @@ msgstr "Ta strona jest obecnie tworzona przez innego użytkownika."
 
 #: templates/enterlink/in_progress_404.html:82
 msgid ""
-"This page is currently in the process of being created by another user. "
-"Please return later!"
+"This page is currently in the process of being created by another user. Please "
+"return later!"
 msgstr ""
-"Strona ta jest obecnie tworzona przez innego użytkownika. Wróć do niej "
-"później!"
+"Strona ta jest obecnie tworzona przez innego użytkownika. Wróć do niej później!"
 
 #: templates/enterlink/inbox.html:30
 msgid "You have"
@@ -1461,13 +1436,13 @@ msgstr "Pierwsza na świecie encyklopedia oparta na łańcuchu bloków"
 
 #: templates/enterlink/index.html:41
 msgid ""
-"Everipedia's IQ Network is the world's first Encyclopedia that allows anyone "
-"to become a stakeholder in the system and earn rank, rewards & tokens for "
-"curating content."
+"Everipedia's IQ Network is the world's first Encyclopedia that allows anyone to "
+"become a stakeholder in the system and earn rank, rewards & tokens for curating "
+"content."
 msgstr ""
-"Sieć IQ Everipedia jest pierwszą na świecie Encyklopedią, która pozwala "
-"każdemu stać się udziałowcem systemu i zyskać miejsce w rankingu, nagrody "
-"oraz żetony za zajmowanie się treścią strony."
+"Sieć IQ Everipedia jest pierwszą na świecie Encyklopedią, która pozwala każdemu "
+"stać się udziałowcem systemu i zyskać miejsce w rankingu, nagrody oraz żetony za "
+"zajmowanie się treścią strony."
 
 #: templates/enterlink/index.html:48
 msgid "Learn more"
@@ -1479,18 +1454,17 @@ msgstr "Encyklopedia na miarę nowoczesnych czasów"
 
 #: templates/enterlink/index.html:104
 msgid ""
-"The Everipedia IQ blockchain provides a new paradigm change and knowledge "
-"economy to disrupt the old centralized internet knowledge encyclopedia model "
-"similar to Wikipedia. By creating a new incentive structure and a "
-"distributed backend hosted within a blockchain, the new Everipedia knowledge "
-"base will be able to improve upon all fundamental features of Wikipedia."
+"The Everipedia IQ blockchain provides a new paradigm change and knowledge economy "
+"to disrupt the old centralized internet knowledge encyclopedia model similar to "
+"Wikipedia. By creating a new incentive structure and a distributed backend hosted "
+"within a blockchain, the new Everipedia knowledge base will be able to improve "
+"upon all fundamental features of Wikipedia."
 msgstr ""
-"Łańcuch bloków Everipedia IQ zapewnia nową zmianę paradygmatu i gospodarkę "
-"opartą na wiedzy w celu przerwania starego, scentralizowanego modelu "
-"internetowej encyklopedii wiedzy, podobnego do modelu Wikipedii. Tworząc "
-"nową strukturę motywacyjną i rozproszony backend mieszczący się w łańcuchu "
-"blokowym, nowa baza wiedzy Everipedia będzie w stanie ulepszyć wszystkie "
-"podstawowe cechy Wikipedii."
+"Łańcuch bloków Everipedia IQ zapewnia nową zmianę paradygmatu i gospodarkę opartą "
+"na wiedzy w celu przerwania starego, scentralizowanego modelu internetowej "
+"encyklopedii wiedzy, podobnego do modelu Wikipedii. Tworząc nową strukturę "
+"motywacyjną i rozproszony backend mieszczący się w łańcuchu blokowym, nowa baza "
+"wiedzy Everipedia będzie w stanie ulepszyć wszystkie podstawowe cechy Wikipedii."
 
 #: templates/enterlink/index.html:112
 msgid "Decentralized"
@@ -1498,11 +1472,11 @@ msgstr "Decentralizacja"
 
 #: templates/enterlink/index.html:113
 msgid ""
-"Articles are fetched using IPFS and EOS Storage. Majority of IQ being "
-"distributed during the airdrop."
+"Articles are fetched using IPFS and EOS Storage. Majority of IQ being distributed "
+"during the airdrop."
 msgstr ""
-"Artykuły są pobierane przy użyciu IPFS i EOS Storage. Większość IQ jest "
-"rozłożona podczas zrzutu."
+"Artykuły są pobierane przy użyciu IPFS i EOS Storage. Większość IQ jest rozłożona "
+"podczas zrzutu."
 
 #: templates/enterlink/index.html:117
 msgid "Democratic"
@@ -1510,13 +1484,12 @@ msgstr "Demokracja"
 
 #: templates/enterlink/index.html:118
 msgid ""
-"Proof of Stake (PoS) model allows for voting to change and upgrade the IQ "
-"network as it grows. Also will facilitate batch imports of new content with "
-"no fees."
+"Proof of Stake (PoS) model allows for voting to change and upgrade the IQ network "
+"as it grows. Also will facilitate batch imports of new content with no fees."
 msgstr ""
-"Model PoS (Proof of Stake) pozwala na głosowanie za zmianą i modernizacją "
-"sieci IQ wraz z jej rozwojem. Ułatwi również import partii nowej zawartości "
-"bez pobierania opłat."
+"Model PoS (Proof of Stake) pozwala na głosowanie za zmianą i modernizacją sieci IQ "
+"wraz z jej rozwojem. Ułatwi również import partii nowej zawartości bez pobierania "
+"opłat."
 
 #: templates/enterlink/index.html:122
 msgid "Censorship Resistant"
@@ -1524,11 +1497,11 @@ msgstr "Odporna na cenzurę"
 
 #: templates/enterlink/index.html:123
 msgid ""
-"Live and permanent edits of content on the blockchain beyond the control of "
-"a central authority."
+"Live and permanent edits of content on the blockchain beyond the control of a "
+"central authority."
 msgstr ""
-"Żywe i stałe edycje treści w ramach łańcucha bloków, na które organ "
-"centralny nie ma wpływu."
+"Żywe i stałe edycje treści w ramach łańcucha bloków, na które organ centralny nie "
+"ma wpływu."
 
 #: templates/enterlink/index.html:127
 msgid "Financial Incentive"
@@ -1536,11 +1509,11 @@ msgstr "Zachęta finansowa"
 
 #: templates/enterlink/index.html:128
 msgid ""
-"All holders of IQ will be incentivized to create quality, neutral content "
-"and to work together in building the reputation of the network."
+"All holders of IQ will be incentivized to create quality, neutral content and to "
+"work together in building the reputation of the network."
 msgstr ""
-"Wszyscy posiadacze IQ będą zachęcani do tworzenia wysokiej jakości, "
-"neutralnych treści oraz do współpracy w budowaniu reputacji sieci."
+"Wszyscy posiadacze IQ będą zachęcani do tworzenia wysokiej jakości, neutralnych "
+"treści oraz do współpracy w budowaniu reputacji sieci."
 
 #: templates/enterlink/index.html:139
 msgid "Become an editor today and start creating your own wiki articles."
@@ -1552,13 +1525,11 @@ msgstr "Otwarta społeczność"
 
 #: templates/enterlink/index.html:143
 msgid ""
-"Our vibrant community is open and welcoming to people from all backgrounds. "
-"Our guidelines and policies are based on common sense rather than strict "
-"bureaucracy."
+"Our vibrant community is open and welcoming to people from all backgrounds. Our "
+"guidelines and policies are based on common sense rather than strict bureaucracy."
 msgstr ""
-"Nasza tętniąca życiem społeczność jest otwarta na ludzi z różnych środowisk. "
-"Nasze wytyczne i polityka opierają się na zdrowym rozsądku, a nie na ścisłej "
-"biurokracji."
+"Nasza tętniąca życiem społeczność jest otwarta na ludzi z różnych środowisk. Nasze "
+"wytyczne i polityka opierają się na zdrowym rozsądku, a nie na ścisłej biurokracji."
 
 #: templates/enterlink/index.html:145
 msgid "Redesigned for the modern age"
@@ -1566,13 +1537,13 @@ msgstr "Odświeżona z myślą o współczesności"
 
 #: templates/enterlink/index.html:146
 msgid ""
-"Everipedia is an encyclopedia modernized and re-designed for the twenty-"
-"first century. Our editing interface makes creating and editing wiki's as "
-"easy as using Facebook."
+"Everipedia is an encyclopedia modernized and re-designed for the twenty-first "
+"century. Our editing interface makes creating and editing wiki's as easy as using "
+"Facebook."
 msgstr ""
-"Everipedia to encyklopedia zmodernizowana i przeprojektowana na miarę XXI "
-"wieku. Nasz interfejs edycyjny sprawia, że tworzenie i edycja wiki jest tak "
-"prosta jak korzystanie z Facebooka."
+"Everipedia to encyklopedia zmodernizowana i przeprojektowana na miarę XXI wieku. "
+"Nasz interfejs edycyjny sprawia, że tworzenie i edycja wiki jest tak prosta jak "
+"korzystanie z Facebooka."
 
 #: templates/enterlink/index.html:155
 msgid "Follow us on Telegram"
@@ -1584,21 +1555,19 @@ msgstr "Pod przewodnictwem założyciela Wikipedii i Geniusa.com."
 
 #: templates/enterlink/index.html:171
 msgid ""
-"Everipedia is being lead by a team with extensive experience and knowledge "
-"both in the online knowledge space as well as the blockchain industry. The "
-"executive team is made up of several prominent individuals in the industry, "
-"the Co-Founder of Wikipedia, Larry Sanger, the founder of Genius.com, Mahbod "
-"Moghadam, and several others. Academic credentials includes UCLA, Stanford, "
-"Yale & Columbia, covering nationalities from the United States, Sweden, Norway and "
-"Italy. "
+"Everipedia is being lead by a team with extensive experience and knowledge both in "
+"the online knowledge space as well as the blockchain industry. The executive team "
+"is made up of several prominent individuals in the industry, the Co-Founder of "
+"Wikipedia, Larry Sanger, the founder of Genius.com, Mahbod Moghadam, and several "
+"others. Academic credentials includes UCLA, Stanford, Yale & Columbia, covering "
+"nationalities from the United States, Sweden, Norway and Italy. "
 msgstr ""
-"Everipedia jest kierowana przez zespół z dużym doświadczeniem i wiedzą "
-"zarówno w obszarze wiedzy online, jak i w branży łańcuchów blokowych. Kadra "
-"Zarządzająca składa się z kilku wybitnych osób z branży, współzałożyciela "
-"Wikipedii, Larry'ego Sangera, założyciela Genius.com, Mahboda Moghadama i "
-"kilku innych osób. Referencje akademickie obejmują uniwersytety UCLA, "
-"Stanford, Yale i Columbia, obejmując narodowości amerykańskie, szwedzkie, "
-"norweskie i włoskie."
+"Everipedia jest kierowana przez zespół z dużym doświadczeniem i wiedzą zarówno w "
+"obszarze wiedzy online, jak i w branży łańcuchów blokowych. Kadra Zarządzająca "
+"składa się z kilku wybitnych osób z branży, współzałożyciela Wikipedii, Larry'ego "
+"Sangera, założyciela Genius.com, Mahboda Moghadama i kilku innych osób. Referencje "
+"akademickie obejmują uniwersytety UCLA, Stanford, Yale i Columbia, obejmując "
+"narodowości amerykańskie, szwedzkie, norweskie i włoskie."
 
 #: templates/enterlink/index.html:172
 msgid "Executive Team"
@@ -1646,15 +1615,14 @@ msgstr "Osiągnięto limit aktywności"
 
 #: templates/enterlink/limitreached.html:23
 msgid ""
-"Hey! You've added 15 morsels of knowledge to Everipedia now, so we have "
-"paused your account until Master Editors have had a chance to review your "
-"work. Shouldn't take too long, you'll probably be good to go in less than 5 "
-"minutes."
+"Hey! You've added 15 morsels of knowledge to Everipedia now, so we have paused "
+"your account until Master Editors have had a chance to review your work. Shouldn't "
+"take too long, you'll probably be good to go in less than 5 minutes."
 msgstr ""
-"Dodałeś teraz do Everipedii 15 części wiedzy, więc wstrzymaliśmy Twoje konto "
-"do czasu, aż Główni Edytorzy będą mieli możliwość zapoznania się z Twoją "
-"pracą. Nie powinno to trwać zbyt długo, prawdopodobnie będziesz mógł przejść "
-"dalej w mniej niż 5 minut."
+"Dodałeś teraz do Everipedii 15 części wiedzy, więc wstrzymaliśmy Twoje konto do "
+"czasu, aż Główni Edytorzy będą mieli możliwość zapoznania się z Twoją pracą. Nie "
+"powinno to trwać zbyt długo, prawdopodobnie będziesz mógł przejść dalej w mniej "
+"niż 5 minut."
 
 #: templates/enterlink/limitreached.html:24
 msgid "In the meantime, please join our official Facebook group:"
@@ -1728,13 +1696,12 @@ msgstr "Zaloguj się"
 
 #: templates/enterlink/register.html:42
 msgid ""
-"Registration is currently invite only due to blockchain software testing. "
-"Join us on Telegram and Reddit in the meantime to become a part of "
-"Everipedia today!"
+"Registration is currently invite only due to blockchain software testing. Join us "
+"on Telegram and Reddit in the meantime to become a part of Everipedia today!"
 msgstr ""
-"Rejestracja przebiega obecnie tylko poprzez zaproszenie, w związku z "
-"testowaniem oprogramowania w ramach łańcucha bloków. W międzyczasie dołącz "
-"do nas na Telegramie i Reddit, aby już dziś stać się częścią Everipedii!"
+"Rejestracja przebiega obecnie tylko poprzez zaproszenie, w związku z testowaniem "
+"oprogramowania w ramach łańcucha bloków. W międzyczasie dołącz do nas na "
+"Telegramie i Reddit, aby już dziś stać się częścią Everipedii!"
 
 #: templates/enterlink/register.html:60
 msgid "Welcome to the Everipedia editor community!"
@@ -1742,8 +1709,7 @@ msgstr "Witamy w społeczności edytorów Everipedia!"
 
 #: templates/enterlink/register.html:63
 msgid ""
-"Sign up to become an editor to access more features and an ad-free "
-"experience."
+"Sign up to become an editor to access more features and an ad-free experience."
 msgstr ""
 "Zarejestruj się, aby zostać edytorem, aby uzyskać dostęp do większej liczby "
 "funkcji i darmowych treści reklamowych."
@@ -1790,8 +1756,7 @@ msgstr "Everipedia nie mogła znaleźć niczego z tą nazwą"
 
 #: templates/enterlink/search.html:50
 msgid ""
-"If you know any links associated with this page, try searching for those "
-"links"
+"If you know any links associated with this page, try searching for those links"
 msgstr "Jeśli znasz linki powiązane z tą stroną, spróbuj wyszukać te linki."
 
 #: templates/enterlink/template_ajax_genius.html:17
@@ -1811,8 +1776,8 @@ msgstr "Aktualności"
 #: templates/enterlink/template_blockchain_styled_amp.html:184
 #: templates/enterlink/template_blockchain_styled_desktop.html:124
 msgid ""
-"Everipedia IQ tokens are now in circulation on the EOS mainnet. Follow "
-"Everipedia on"
+"Everipedia IQ tokens are now in circulation on the EOS mainnet. Follow Everipedia "
+"on"
 msgstr "Żetony Everipedia IQ są teraz w obiegu w sieci EOS. Śledź Everipedia"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:184
@@ -1852,11 +1817,11 @@ msgstr "Linki referencyjne do stron Wiki"
 #: templates/enterlink/template_blockchain_styled_amp.html:331
 #: templates/enterlink/template_blockchain_styled_desktop.html:499
 msgid ""
-"Links to historical reviews, career / educational facts, and other "
-"encyclopedic information"
+"Links to historical reviews, career / educational facts, and other encyclopedic "
+"information"
 msgstr ""
-"Linki do recenzji historycznych, faktów dotyczących kariery zawodowej/"
-"edukacji oraz innych informacji encyklopedycznych"
+"Linki do recenzji historycznych, faktów dotyczących kariery zawodowej/edukacji "
+"oraz innych informacji encyklopedycznych"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:336
 #: templates/enterlink/template_blockchain_styled_desktop.html:505
@@ -1866,13 +1831,12 @@ msgstr "Wszystkie informacje dotyczące"
 #: templates/enterlink/template_blockchain_styled_amp.html:336
 #: templates/enterlink/template_blockchain_styled_desktop.html:505
 msgid ""
-"wiki comes from the below links. Any source is valid, including Twitter, "
-"Facebook, Instagram, and LinkedIn. Pictures, videos, biodata, and files "
-"relating to"
+"wiki comes from the below links. Any source is valid, including Twitter, Facebook, "
+"Instagram, and LinkedIn. Pictures, videos, biodata, and files relating to"
 msgstr ""
-"wiki pochodzą z poniższych linków. Każde źródło jest prawidłowe, w tym "
-"Twitter, Facebook, Instagram i LinkedIn. Obrazy, filmy wideo, biodane i "
-"pliki odnoszące się do"
+"wiki pochodzą z poniższych linków. Każde źródło jest prawidłowe, w tym Twitter, "
+"Facebook, Instagram i LinkedIn. Obrazy, filmy wideo, biodane i pliki odnoszące się "
+"do"
 
 #: templates/enterlink/template_blockchain_styled_amp.html:336
 #: templates/enterlink/template_blockchain_styled_desktop.html:505
@@ -1882,11 +1846,9 @@ msgstr "są również dopuszczalnymi źródłami encyklopedycznymi."
 #: templates/enterlink/template_blockchain_styled_amp.html:351
 #: templates/enterlink/template_blockchain_styled_desktop.html:526
 msgid ""
-"See related encyclopedia articles, biographies, reviews, and historical "
-"facts."
+"See related encyclopedia articles, biographies, reviews, and historical facts."
 msgstr ""
-"Zobacz powiązane artykuły encyklopedyczne, biografie, recenzje i fakty "
-"historyczne."
+"Zobacz powiązane artykuły encyklopedyczne, biografie, recenzje i fakty historyczne."
 
 #: templates/enterlink/template_blockchain_styled_amp.html:355
 #: templates/enterlink/template_blockchain_styled_desktop.html:533
@@ -1948,8 +1910,7 @@ msgstr "Wbudowany / Widżet"
 msgid "Profiles"
 msgstr "Profile"
 
-#: templates/enterlink/transfer-iq.html:7
-#: templates/enterlink/transfer-iq.html:116
+#: templates/enterlink/transfer-iq.html:7 templates/enterlink/transfer-iq.html:116
 msgid "Transfer IQ"
 msgstr "Transfer IQ"
 
@@ -1979,8 +1940,7 @@ msgstr "Kup RAM"
 
 #: templates/enterlink/transfer-iq.html:139
 msgid "See your RAM, CPU, and Bandwidth on FeeXplorer"
-msgstr ""
-"Zobacz swoją pamięć RAM, procesor i przepustowość w aplikacji FeeXplorer."
+msgstr "Zobacz swoją pamięć RAM, procesor i przepustowość w aplikacji FeeXplorer."
 
 #: templates/enterlink/user.html:12
 msgid "profile"

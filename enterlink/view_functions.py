@@ -832,8 +832,8 @@ def getTheArticleObject(theParam, passedLang=""):
     else:
         try:
             cleaned_url_param = urllib.quote_plus(theParam.encode("utf8").replace(" ", "_"), safe="").replace("%252F", "%2F")
-            possibleArticles = ArticleTable.objects.filter(Q(slug__iexact=theParam) | Q(slug__iexact=cleaned_url_param) |
-                                        Q(slug_alt__iexact=theParam) | Q(slug_alt__iexact=cleaned_url_param)).order_by('-creation_timestamp')
+            possibleArticles = ArticleTable.objects.filter(Q(ipfs_hash_current__iexact=theParam) | Q(slug__iexact=theParam) |
+                        Q(slug__iexact=cleaned_url_param) | Q(slug_alt__iexact=theParam) | Q(slug_alt__iexact=cleaned_url_param)).order_by('-creation_timestamp')
             assert(len(possibleArticles) > 0)
         except:
             try:

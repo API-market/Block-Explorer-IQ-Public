@@ -1,39 +1,3 @@
-function ipfs_to_uint64_trunc(hash){
-    var preHash = hash.replace(/[6789\s]/g, '');
-    var truncatedHash = preHash.substring(2, 14).toLowerCase();
-    var hashNumber = encodeName(truncatedHash, 0);
-    var result = bigInt(hashNumber).mod(9007199254740990).toJSNumber();
-    return(result);
-}
-
-function increaseLastCharByOne(inputString) {
-    let stringLength = inputString.length;
-    let newChar = String.fromCharCode(inputString.charCodeAt(stringLength - 1) + 1);
-    let newString = inputString.slice(0, -1) + newChar;
-    return newString;
-}
-
-function addZeroes(num) {
-   return num.toLocaleString("en", {useGrouping: false, minimumFractionDigits: 3})
-}
-
-function convertSecs(secs) {
-    var d, h, m, s;
-    s = secs;
-    m = Math.floor(s / 60);
-    s = s % 60;
-    h = Math.floor(m / 60);
-    m = m % 60;
-    d = Math.floor(h / 24);
-    h = h % 24;
-    return { d: d, h: h, m: m, s: s };
-}
-
-function isNormalInteger(str) {
-    var n = Math.floor(Number(str));
-    return n !== Infinity && String(n) === str && n >= 0;
-}
-
 function refreshIQ() {
     $.ajax({
         type: "POST",
@@ -171,12 +135,8 @@ scatter.connect("Everipedia").then(connected => {
 
         eos = new eosjs.Api({ rpc, signatureProvider:scatter.eosHook(network) });
 
-        if (isMobile){
-            // alert(isMobile);
-        }
-        else{
-            $("ul.nav li.avatar-iq .scatter-username").html(scatterAccountName);
-        }
+        // Need to handle mobile eventually
+        $(".scatter-username").html(scatterAccountName);
 
         refreshIQ();
         refreshBrainpower();
@@ -190,5 +150,6 @@ scatter.connect("Everipedia").then(connected => {
 });
 
 $(document).on("scatterNavbarDone", function () {
+    // Show the create page button
     $(".create-page-plus").attr('style', 'margin-right: 10px; display: block !important');
 });

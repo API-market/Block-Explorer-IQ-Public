@@ -5,17 +5,18 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-10 16:54+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2018-12-29 16:09-0800\n"
+"PO-Revision-Date: 2018-12-29 15:58-0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.2\n"
 
 #: static/js/easytimer.min.js:7
 msgid "secondTenthsUpdated"
@@ -73,70 +74,15 @@ msgstr "מעמד כוח js sdk בטעינה"
 msgid "auth.logout"
 msgstr "יציאה‫.‬אותנטית"
 
-#: static/js/plugins/citepicture/plugin.min.js:16
-#: static/js/plugins/citepicture/plugin.min.js:17
-#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:16
-#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:17
-msgid "Media"
-msgstr "מדיה"
+#: static/js/scatter-header-js.js:49
+msgid "Claim Rewards"
+msgstr "לתבוע Rewards"
 
-#: static/js/plugins/citesource/plugin.min.js:15
-#: static/js/plugins/citesource/plugin.min.js:16
-#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:15
-#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:16
-msgid "Cite"
-msgstr "אזכור"
-
-#: static/js/plugins/linkpage/plugin.min.js:1
-#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:1
-msgid "Search Everipedia"
-msgstr "חיפוש ב‫-‬Everipedia"
-
-#: static/js/plugins/linkpage/plugin.min.js:17
-#: static/js/plugins/linkpage/plugin.min.js:18
-#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:17
-#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:18
-msgid "Link"
-msgstr "קישור"
-
-#: static/js/plugins/mention/plugin.min.js:374
-#: static/tinymce_4.2.3/plugins/mention/plugin.min.js:374
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:107
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:110
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:234
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:237
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:341
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:344
-msgid "Cite as verified editor"
-msgstr "אזכר כעורך מאומת"
-
-#: static/js/plugins/rollups/plugin.min.js:3
-#: static/js/plugins/savepage/plugin.min.js:6
-#: static/js/plugins/savepage/plugin.min.js:7
 #: static/tageditor/jquery.tag-editor.js:335
 #: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:3
 #: templates/enterlink/inline-js/enterlink-edit-prefix.html:202
 msgid "Save"
 msgstr "שמירה"
-
-#: static/js/plugins/rollups/plugin.min.js:4
-#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:4
-msgid "Edit"
-msgstr "עריכה"
-
-#: static/js/plugins/rollups/plugin.min.js:11
-#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
-msgid "Font Style"
-msgstr "סגנון גופן"
-
-#: static/js/plugins/rollups/plugin.min.js:11
-#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
-msgid "Style"
-msgstr "סגנון"
-
-#: static/js/scatter-header-js.js:85
-msgid "Claim Rewards"
-msgstr ""
 
 #: static/tageditor/jquery.tag-editor.js:584
 #: static/tageditor/jquery.tag-editor.js:587
@@ -150,30 +96,68 @@ msgstr "הוסף תיאור נוסף לקטגוריה זו"
 msgid "Delete this tag"
 msgstr "מחק תגית זו"
 
+#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:16
+#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:17
+msgid "Media"
+msgstr "מדיה"
+
+#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:15
+#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:16
+msgid "Cite"
+msgstr "אזכור"
+
 #: static/tinymce_4.2.3/plugins/helptour/plugin.min.js:3
 #: static/tinymce_4.2.3/plugins/helptour/plugin.min.js:4
 msgid "Help"
-msgstr ""
+msgstr "עזרה"
+
+#: static/tinymce_4.2.3/plugins/langgroup/plugin.min.js:3
+#: static/tinymce_4.2.3/plugins/langgroup/plugin.min.js:4
+msgid "Connect Languages"
+msgstr "התחבר לשפות"
+
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:1
+msgid "Search Everipedia"
+msgstr "חיפוש ב‫-‬Everipedia"
+
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:17
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:18
+msgid "Link"
+msgstr "קישור"
+
+#: static/tinymce_4.2.3/plugins/mention/plugin.min.js:376
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:111
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:114
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:244
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:247
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:353
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:356
+msgid "Cite as verified editor"
+msgstr "אזכר כעורך מאומת"
 
 #: static/tinymce_4.2.3/plugins/merge/plugin.min.js:3
 #: static/tinymce_4.2.3/plugins/merge/plugin.min.js:4
 msgid "Merge"
-msgstr ""
+msgstr "מיזוג"
+
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:4
+msgid "Edit"
+msgstr "עריכה"
+
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
+msgid "Font Style"
+msgstr "סגנון גופן"
+
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
+msgid "Style"
+msgstr "סגנון"
 
 #: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:3
 #: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:4
-msgid "Save Draft"
-msgstr ""
-
-#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:10
-#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:11
-msgid "Load Draft"
-msgstr ""
-
 #: static/tinymce_4.2.3/plugins/submitpage/plugin.min.js:3
 #: static/tinymce_4.2.3/plugins/submitpage/plugin.min.js:4
 msgid "Submit"
-msgstr ""
+msgstr "שלח"
 
 #: templates/enterlink/brainpowermgmt.html:142
 msgid "Claim"
@@ -191,7 +175,7 @@ msgstr "גררו ושחררו את תמונתכם כאן‫,‬ או לחצו ל
 msgid "Please enter a description for the photo"
 msgstr "אנא הזינו תיאור לתמונה"
 
-#: templates/enterlink/edit_ajax_addinfobox.html:96
+#: templates/enterlink/edit_ajax_addinfobox.html:97
 msgid "Adding infobox item, please wait..."
 msgstr "מוסיף פריט לתיבת המידע‫,‬ אנא המתינו‫...‬"
 
@@ -436,12 +420,12 @@ msgstr "הקודם"
 msgid "Next"
 msgstr "הבא"
 
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:107
 #: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:111
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:234
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:238
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:341
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:345
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:115
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:244
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:248
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:353
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:357
 msgid "Cite my own knowledge / experience as a verified editor"
 msgstr "אזכור הידע‫/‬הניסיון שלי כעורך מאומת"
 

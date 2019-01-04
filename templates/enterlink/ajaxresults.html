@@ -106,7 +106,7 @@
                         <div class="embed-menu-video-overlay"></div>
                         <video class="ajax_picture_dropdown" preload="metadata">
                             <source src="{{ linkitem.0.0 }}#t=0.1" type="{{ linkitem.0.4 }}">
-                             {% trans 'Your browser does not support HTML5 video.' %}
+                             {% trans 'Please click to play the video.' %}
                         </video>
                     </td>
                 {% elif linkitem.0.2 == "AUDIO" %}
@@ -128,6 +128,36 @@
         function updateInputValue(inputSlug, inputLang) {
             $("#AJAXBox-Merge").val(inputSlug);
             $("#mergebox-merge").attr("data-article-lang", inputLang);
+        }
+    </script>
+    {% if result == "nopersonfoundwiththatname" %}
+    {% else %}
+        {% if result != None %}
+            <ul class="ajax-search-mobile ajax-result-ul">
+                {% for resultItem in result|slice:":3" %}
+                    <li>
+                    <a class="ajax-result-link" href="javascript:void(0)" onclick="updateInputValue('{{resultItem.8}}', '{{resultItem.9}}')">
+                        {% if resultItem.4 != None %}
+                            <img class="ajax_avatar" src="{{resultItem.2}}"/>
+                        {% else %}
+                            <img class="ajax_avatar" src="https://epcdn-vz.azureedge.net/static/images/no-image-slide.png"/>
+                        {% endif %}
+                        <div class="ajax_username" style="display:block;">
+                            <span class="ajax_links ajax-page-title" >{{resultItem.0}}</span>
+                            <span class="ajax_links ajax-view-count">{{resultItem.3|intcomma}} {% trans "Views" %}</span>
+                        </div>
+                        <div class="ajax_blurb">{{resultItem.5|striptags|truncatewords_html:200}}</div>
+                    </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endif %}
+{% elif renderType == 'langgroup-group' %}
+    <script>
+        function updateInputValue(inputSlug, inputLang) {
+            $("#AJAXBox-LangGroup").val(inputSlug);
+            $("#langgroup-merge").attr("data-article-lang", inputLang);
         }
     </script>
     {% if result == "nopersonfoundwiththatname" %}

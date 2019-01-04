@@ -217,6 +217,39 @@ function ajax_execute_search_merge(){
     }
 }
 
+// Execute an AJAX search for an article
+function ajax_execute_search_langgroup(){
+    // Get the search term
+    var searchedterm ;
+    searchedterm = $(this).val();
+
+    // See if the search term is blank
+    if (searchedterm == "") {
+        // If the result is blank, fill in the result areas with empty strings
+        $('#langGroupResult').html("");
+    }
+    else {
+        // Execute the search
+        $.ajax({
+            type: "GET",
+            url: "/AJAX-REQUEST/AJAX_Search/langgroup-group/",
+            data: {searchterm: searchedterm},
+            beforeSend: function( xhr ) {
+                // Loading indicator
+                $('#AJAX-SpinBox').show();
+            },
+            success: function (data) {
+                // Fill the areas with the search results
+                $('#langGroupResult').html(data);
+            },
+            complete: function(){
+                // Hide the loading indicator
+                $('#AJAX-SpinBox').hide();
+            }
+        });
+    }
+}
+
 // Execute an AJAX search for an article creation
 function ajax_execute_search_create(){
     // Get the search term
@@ -260,6 +293,9 @@ $(document).on('keyup', '#AJAXBox-TinyMCE', jQuery.debounce(300, ajax_execute_se
 
 // Bind the merge search for TinyMCE. Debounce allows a delay between keystrokes before the AJAX is sent.
 $(document).on('keyup', '#AJAXBox-Merge', jQuery.debounce(300, ajax_execute_search_merge ));
+
+// Bind the merge search for TinyMCE. Debounce allows a delay between keystrokes before the AJAX is sent.
+$(document).on('keyup', '#AJAXBox-LangGroup', jQuery.debounce(300, ajax_execute_search_langgroup ));
 
 // Bind the merge search for TinyMCE. Debounce allows a delay between keystrokes before the AJAX is sent.
 $(document).on('keyup', '#CreateBox', jQuery.debounce(300, ajax_execute_search_create ));

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-10 16:54+0900\n"
-"PO-Revision-Date: 2018-08-01 02:36-0700\n"
+"POT-Creation-Date: 2018-12-29 16:09-0800\n"
+"PO-Revision-Date: 2018-12-29 15:56-0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: th\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2\n"
 
 #: static/js/easytimer.min.js:7
 msgid "secondTenthsUpdated"
@@ -69,70 +69,15 @@ msgstr "js_sdk_force_status_on_load"
 msgid "auth.logout"
 msgstr "ออกจากระบบอัตโนมัติ"
 
-#: static/js/plugins/citepicture/plugin.min.js:16
-#: static/js/plugins/citepicture/plugin.min.js:17
-#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:16
-#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:17
-msgid "Media"
-msgstr "มีเดีย"
+#: static/js/scatter-header-js.js:49
+msgid "Claim Rewards"
+msgstr "รับรางวัล"
 
-#: static/js/plugins/citesource/plugin.min.js:15
-#: static/js/plugins/citesource/plugin.min.js:16
-#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:15
-#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:16
-msgid "Cite"
-msgstr "อ้างอิง"
-
-#: static/js/plugins/linkpage/plugin.min.js:1
-#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:1
-msgid "Search Everipedia"
-msgstr "ค้นหา Everipedia"
-
-#: static/js/plugins/linkpage/plugin.min.js:17
-#: static/js/plugins/linkpage/plugin.min.js:18
-#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:17
-#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:18
-msgid "Link"
-msgstr "ลิงค์"
-
-#: static/js/plugins/mention/plugin.min.js:374
-#: static/tinymce_4.2.3/plugins/mention/plugin.min.js:374
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:107
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:110
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:234
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:237
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:341
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:344
-msgid "Cite as verified editor"
-msgstr "อ้างอิงในฐานะบรรณาธิการที่ยืนยันตัวตนแล้ว"
-
-#: static/js/plugins/rollups/plugin.min.js:3
-#: static/js/plugins/savepage/plugin.min.js:6
-#: static/js/plugins/savepage/plugin.min.js:7
 #: static/tageditor/jquery.tag-editor.js:335
 #: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:3
 #: templates/enterlink/inline-js/enterlink-edit-prefix.html:202
 msgid "Save"
 msgstr "บันทึก"
-
-#: static/js/plugins/rollups/plugin.min.js:4
-#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:4
-msgid "Edit"
-msgstr "แก้ไข"
-
-#: static/js/plugins/rollups/plugin.min.js:11
-#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
-msgid "Font Style"
-msgstr "รูปแบบอักษร"
-
-#: static/js/plugins/rollups/plugin.min.js:11
-#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
-msgid "Style"
-msgstr "รูปแบบ"
-
-#: static/js/scatter-header-js.js:85
-msgid "Claim Rewards"
-msgstr ""
 
 #: static/tageditor/jquery.tag-editor.js:584
 #: static/tageditor/jquery.tag-editor.js:587
@@ -146,30 +91,68 @@ msgstr "เพิ่มคำอธิบายเพิ่มเติมสำ
 msgid "Delete this tag"
 msgstr "ลบแท็กนี้"
 
+#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:16
+#: static/tinymce_4.2.3/plugins/citepicture/plugin.min.js:17
+msgid "Media"
+msgstr "มีเดีย"
+
+#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:15
+#: static/tinymce_4.2.3/plugins/citesource/plugin.min.js:16
+msgid "Cite"
+msgstr "อ้างอิง"
+
 #: static/tinymce_4.2.3/plugins/helptour/plugin.min.js:3
 #: static/tinymce_4.2.3/plugins/helptour/plugin.min.js:4
 msgid "Help"
-msgstr ""
+msgstr "ช่วยเหลือ"
+
+#: static/tinymce_4.2.3/plugins/langgroup/plugin.min.js:3
+#: static/tinymce_4.2.3/plugins/langgroup/plugin.min.js:4
+msgid "Connect Languages"
+msgstr "เชื่อมต่อภาษา"
+
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:1
+msgid "Search Everipedia"
+msgstr "ค้นหา Everipedia"
+
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:17
+#: static/tinymce_4.2.3/plugins/linkpage/plugin.min.js:18
+msgid "Link"
+msgstr "ลิงค์"
+
+#: static/tinymce_4.2.3/plugins/mention/plugin.min.js:376
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:111
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:114
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:244
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:247
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:353
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:356
+msgid "Cite as verified editor"
+msgstr "อ้างอิงในฐานะบรรณาธิการที่ยืนยันตัวตนแล้ว"
 
 #: static/tinymce_4.2.3/plugins/merge/plugin.min.js:3
 #: static/tinymce_4.2.3/plugins/merge/plugin.min.js:4
 msgid "Merge"
-msgstr ""
+msgstr "เชื่อม"
+
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:4
+msgid "Edit"
+msgstr "แก้ไข"
+
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
+msgid "Font Style"
+msgstr "รูปแบบอักษร"
+
+#: static/tinymce_4.2.3/plugins/rollups/plugin.min.js:11
+msgid "Style"
+msgstr "รูปแบบ"
 
 #: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:3
 #: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:4
-msgid "Save Draft"
-msgstr ""
-
-#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:10
-#: static/tinymce_4.2.3/plugins/savepage/plugin.min.js:11
-msgid "Load Draft"
-msgstr ""
-
 #: static/tinymce_4.2.3/plugins/submitpage/plugin.min.js:3
 #: static/tinymce_4.2.3/plugins/submitpage/plugin.min.js:4
 msgid "Submit"
-msgstr ""
+msgstr "ส่ง"
 
 #: templates/enterlink/brainpowermgmt.html:142
 msgid "Claim"
@@ -187,7 +170,7 @@ msgstr "ลากและวางรูปภาพของคุณที่
 msgid "Please enter a description for the photo"
 msgstr "โปรดกรอกคำอธิบายสำหรับรูปนี้"
 
-#: templates/enterlink/edit_ajax_addinfobox.html:96
+#: templates/enterlink/edit_ajax_addinfobox.html:97
 msgid "Adding infobox item, please wait..."
 msgstr "กำลังไอเทม infobox โปรดรอสักครู่ ..."
 
@@ -429,12 +412,12 @@ msgstr "กลับ"
 msgid "Next"
 msgstr "ถัดไป"
 
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:107
 #: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:111
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:234
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:238
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:341
-#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:345
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:115
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:244
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:248
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:353
+#: templates/enterlink/inline-js/enterlink-edit-tinyMCEs.html:357
 msgid "Cite my own knowledge / experience as a verified editor"
 msgstr "อ้างถึงความรู้/ประสบการณ์ของตัวเองในฐานะบรรณาธิการที่ยืนยันตัวตนแล้ว"
 

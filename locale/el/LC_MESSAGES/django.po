@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-10 16:54+0900\n"
+"POT-Creation-Date: 2018-12-29 16:09-0800\n"
 "PO-Revision-Date: 2018-07-31 21:43-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,33 +18,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 2.1.1\n"
 
-#: enterlink/edit.py:105 enterlink/model_functions.py:368
-#: enterlink/view_functions.py:727
+#: enterlink/edit.py:109 enterlink/model_functions.py:375
+#: enterlink/view_functions.py:796
 msgid "Page Language"
 msgstr "Γλώσσα"
 
-#: enterlink/edit.py:106 enterlink/model_functions.py:353
+#: enterlink/edit.py:110 enterlink/model_functions.py:360
 msgid "Page Type"
 msgstr "Σελίδα"
 
-#: enterlink/edit.py:106 enterlink/model_functions.py:358
+#: enterlink/edit.py:110 enterlink/model_functions.py:365
 msgid "Removed From Site"
 msgstr ""
 
-#: enterlink/edit.py:106 enterlink/model_functions.py:363
+#: enterlink/edit.py:110 enterlink/model_functions.py:370
 #: templates/enterlink/edit_ajax_editpagemeta.html:12
 msgid "Adult Content"
 msgstr "Περιεχόμενο για ενήλικες"
 
-#: enterlink/edit.py:107 enterlink/model_functions.py:343
+#: enterlink/edit.py:111 enterlink/model_functions.py:350
 msgid "Media Gallery"
 msgstr "Συλλογή"
 
-#: enterlink/edit.py:107 enterlink/model_functions.py:348
+#: enterlink/edit.py:111 enterlink/model_functions.py:355
 msgid "References and Citations"
 msgstr ""
 
-#: enterlink/edit.py:821
+#: enterlink/edit.py:883
 msgid ""
 "This is the reference link for the lead picture/gif of the page. Delete this "
 "link here or replace the picture/gif above."
@@ -66,28 +66,28 @@ msgstr "Ονοματεπώνυμο"
 msgid "Subject"
 msgstr "Θέμα"
 
-#: enterlink/forms.py:15 enterlink/models.py:13
+#: enterlink/forms.py:15 enterlink/models.py:86
 msgid "Report Abuse"
 msgstr "Αναφορά κακής χρήσης"
 
-#: enterlink/forms.py:15 enterlink/models.py:13
+#: enterlink/forms.py:15 enterlink/models.py:86
 msgid "Report Bug"
 msgstr "Αναφορά σφάλματος"
 
-#: enterlink/forms.py:15 enterlink/models.py:13
+#: enterlink/forms.py:15 enterlink/models.py:86
 msgid "Verify Account"
 msgstr "Επιβεβαιώστε τον Λογαριασμό"
 
-#: enterlink/forms.py:15 enterlink/models.py:13
+#: enterlink/forms.py:15 enterlink/models.py:86
 msgid "Anonymous Tip"
 msgstr "Ανώνυμη συμβουλή"
 
-#: enterlink/forms.py:15 enterlink/models.py:13
+#: enterlink/forms.py:15 enterlink/models.py:86
 msgid "Investment Inquiries"
 msgstr "Επενδυτικές έρευνες"
 
-#: enterlink/forms.py:15 enterlink/forms.py:76 enterlink/models.py:13
-#: enterlink/models.py:68
+#: enterlink/forms.py:15 enterlink/forms.py:76 enterlink/models.py:86
+#: enterlink/models.py:141
 msgid "Other"
 msgstr "Άλλο"
 
@@ -131,65 +131,65 @@ msgstr "Πληκτρολογήστε είδος (π.χ. Επάγγελμα)"
 msgid "Enter value (e.g. CEO)"
 msgstr "Εισάγετε τιμή (π.χ. Διευθύνων Σύμβουλος)"
 
-#: enterlink/forms.py:71 enterlink/models.py:68
+#: enterlink/forms.py:71 enterlink/models.py:141
 msgid "Person"
 msgstr "Άτομο"
 
-#: enterlink/forms.py:71 enterlink/models.py:68
+#: enterlink/forms.py:71 enterlink/models.py:141
 msgid "Place/Location"
 msgstr "Τόπος / Τοποθεσία"
 
-#: enterlink/forms.py:72 enterlink/models.py:68
+#: enterlink/forms.py:72 enterlink/models.py:141
 msgid "Organization/Company/Institution"
 msgstr "Οργάνωση / Εταιρεία / Ίδρυμα"
 
-#: enterlink/forms.py:72 enterlink/models.py:68
+#: enterlink/forms.py:72 enterlink/models.py:141
 msgid "Event"
 msgstr "Γεγονός"
 
-#: enterlink/forms.py:73 enterlink/models.py:68
+#: enterlink/forms.py:73 enterlink/models.py:141
 msgid "List/Ranking"
 msgstr "Λίστα / Κατάταξη"
 
-#: enterlink/forms.py:73 enterlink/models.py:68
+#: enterlink/forms.py:73 enterlink/models.py:141
 msgid "Product/Merchandise"
 msgstr "Προϊόν / Εμπόρευμα"
 
-#: enterlink/forms.py:74 enterlink/models.py:68
+#: enterlink/forms.py:74 enterlink/models.py:141
 msgid "Electronics/Software"
 msgstr "Ηλεκτρονικά / Λογισμικά"
 
-#: enterlink/forms.py:74 enterlink/models.py:68
+#: enterlink/forms.py:74 enterlink/models.py:141
 msgid "Medical/Biology"
 msgstr "Ιατρική / Βιολογία"
 
-#: enterlink/forms.py:75 enterlink/models.py:68
+#: enterlink/forms.py:75 enterlink/models.py:141
 msgid "Creative Work/Art"
 msgstr "Δημιουργική εργασία / Τέχνη"
 
-#: enterlink/forms.py:76 enterlink/models.py:68
+#: enterlink/forms.py:76 enterlink/models.py:141
 msgid "Science/Academia/Humanities"
 msgstr "Επιστήμη / Πανεπιστημιακή κοινότητα / Ανθρωπιστικές Επιστήμες"
 
-#: enterlink/view_functions.py:150
+#: enterlink/view_functions.py:153
 msgid "Images & Videos"
 msgstr "Εικόνες και βίντεο"
 
-#: enterlink/view_functions.py:153
+#: enterlink/view_functions.py:156
 msgid "References"
 msgstr "Αναφορές"
 
-#: enterlink/view_functions.py:160
-#: templates/enterlink/template_blockchain_styled_amp.html:318
-#: templates/enterlink/template_blockchain_styled_desktop.html:518
+#: enterlink/view_functions.py:163
+#: templates/enterlink/template_blockchain_styled_amp.html:330
+#: templates/enterlink/template_blockchain_styled_desktop.html:541
 msgid "See Also"
 msgstr "Δείτε επίσης"
 
-#: enterlink/view_functions.py:1103
+#: enterlink/view_functions.py:1175
 msgid "Wiki and references for"
 msgstr "Wiki και αναφορές για"
 
-#: enterlink/view_functions.py:1104
+#: enterlink/view_functions.py:1176
 msgid "You can edit something on this wiki now!"
 msgstr "Μπορείτε να επεξεργαστείτε κάτι σε αυτό το wiki τώρα!"
 
@@ -256,12 +256,12 @@ msgstr ""
 
 #: templates/enterlink/ajax_media_gallery_singlet.html:14
 #: templates/enterlink/ajax_media_gallery_singlet.html:19
-#: templates/enterlink/ajaxresults.html:104
+#: templates/enterlink/ajaxresults.html:109
 #: templates/enterlink/hoverlink_iframe_blockchain.html:94
-#: templates/enterlink/template_blockchain_styled_desktop.html:407
 #: templates/enterlink/template_blockchain_styled_desktop.html:430
+#: templates/enterlink/template_blockchain_styled_desktop.html:453
 #: templates/enterlink/template_photos_amp_json_blockchain.html:79
-msgid "Your browser does not support HTML5 video."
+msgid "Please click to play the video."
 msgstr "Το πρόγραμμα περιήγησής σας δεν υποστηρίζει βίντεο HTML5"
 
 #: templates/enterlink/ajax_media_gallery_singlet.html:29
@@ -276,31 +276,32 @@ msgstr ""
 msgid "Original URL"
 msgstr ""
 
-#: templates/enterlink/ajaxresults.html:57
+#: templates/enterlink/ajaxresults.html:62
 msgid "Click to add a new link or file to this list"
 msgstr ""
 "Κάντε κλικ για να προσθέσετε έναν νέο σύνδεσμο ή αρχείο σε αυτήν τη λίστα"
 
-#: templates/enterlink/ajaxresults.html:60
+#: templates/enterlink/ajaxresults.html:65
 msgid "Or click an existing link below to add it to the article"
 msgstr ""
 "Ή κάντε κλικ σε έναν ήδη υπάρχοντα σύνδεσμο παρακάτω για να τον προσθέσετε "
 "στο άρθρο"
 
-#: templates/enterlink/ajaxresults.html:142
-#: templates/enterlink/ajaxresults.html:193
-#: templates/enterlink/ajaxresults.html:230
-#: templates/enterlink/template_blockchain_styled_desktop.html:160
+#: templates/enterlink/ajaxresults.html:147
+#: templates/enterlink/ajaxresults.html:177
+#: templates/enterlink/ajaxresults.html:233
+#: templates/enterlink/ajaxresults.html:270
+#: templates/enterlink/template_blockchain_styled_desktop.html:163
 msgid "Views"
 msgstr "Προβολές"
 
-#: templates/enterlink/ajaxresults.html:165
+#: templates/enterlink/ajaxresults.html:200
 #: templates/enterlink/hovereditor_ajax.html:74
 msgid "IQ"
 msgstr "Δείκτης Νοημοσύνης (IQ)"
 
-#: templates/enterlink/ajaxresults.html:176
-#: templates/enterlink/ajaxresults.html:213
+#: templates/enterlink/ajaxresults.html:216
+#: templates/enterlink/ajaxresults.html:253
 msgid "page(s) have this link"
 msgstr "η σελίδα (ες) έχουν αυτόν τον σύνδεσμο"
 
@@ -319,7 +320,9 @@ msgstr "Διαχείριση Νοημοσύνης"
 #: templates/enterlink/exchange-listings.html:7
 #: templates/enterlink/headers/index_header.html:17
 #: templates/enterlink/headers/index_header.html:18
-#: templates/enterlink/index.html:7 templates/enterlink/leadership.html:6
+#: templates/enterlink/index.html:7
+#: templates/enterlink/investor-relations.html:5
+#: templates/enterlink/leadership.html:6
 #: templates/enterlink/limitreached.html:7 templates/enterlink/login.html:7
 #: templates/enterlink/recent-activity.html:7
 #: templates/enterlink/rewardsmgmt.html:4 templates/enterlink/search.html:7
@@ -330,7 +333,7 @@ msgstr "Everipedia, η εγκυκλοπαίδεια για τα πάντα"
 
 #: templates/enterlink/brainpowermgmt.html:101
 #: templates/enterlink/rewardsmgmt.html:123
-#: templates/enterlink/template_blockchain_styled_desktop.html:695
+#: templates/enterlink/template_blockchain_styled_desktop.html:718
 #: templates/enterlink/voting.html:194
 msgid "Please wait"
 msgstr "Παρακαλώ."
@@ -403,33 +406,25 @@ msgstr "Ποσό"
 msgid "Claim"
 msgstr "Απόκτηση"
 
-#: templates/enterlink/contact.html:5 templates/enterlink/contact.html:22
+#: templates/enterlink/contact.html:5 templates/enterlink/contact.html:16
 msgid "Contact us"
 msgstr "Επικοινωνήστε μαζί μας"
 
-#: templates/enterlink/contact.html:18
-msgid "To get quicker replies from our community"
-msgstr "Για να λάβετε ταχύτερες απαντήσεις από την κοινότητά μας"
-
-#: templates/enterlink/contact.html:18
-msgid "create a post in our forum"
-msgstr "Δημιουργήστε μια ανάρτηση στο φόρουμ μας"
-
-#: templates/enterlink/contact.html:23
+#: templates/enterlink/contact.html:17
 msgid "Get in touch with us"
 msgstr "Επικοινωνήστε μαζί μας"
 
-#: templates/enterlink/contact.html:31
+#: templates/enterlink/contact.html:25
 msgid "Thanks, we got your message. We will respond in a bit"
 msgstr "Ευχαριστούμε, πήραμε το μήνυμά σας. Θα απαντήσουμε σε λίγο"
 
-#: templates/enterlink/contact.html:39 templates/enterlink/transfer-iq.html:131
+#: templates/enterlink/contact.html:33 templates/enterlink/transfer-iq.html:131
 msgid "Send"
 msgstr "Αποστολή"
 
-#: templates/enterlink/dropzone.html:140 templates/enterlink/edit.html:131
-#: templates/enterlink/edit.html:140 templates/enterlink/edit.html:149
-#: templates/enterlink/edit.html:159 templates/enterlink/edit.html:168
+#: templates/enterlink/dropzone.html:140 templates/enterlink/edit.html:137
+#: templates/enterlink/edit.html:146 templates/enterlink/edit.html:155
+#: templates/enterlink/edit.html:165 templates/enterlink/edit.html:174
 msgid "OK"
 msgstr "ΟΚ"
 
@@ -441,28 +436,28 @@ msgstr "Καταχωρίστε μια λεζάντα για την κύρια ε
 msgid "Loading"
 msgstr "Φόρτωση…"
 
-#: templates/enterlink/edit.html:109
+#: templates/enterlink/edit.html:115
 msgid "Please enter the destination page you wish to merge this one into"
 msgstr ""
 "Εισαγάγετε τη σελίδα προορισμού την οποία θέλετε να συγχωνεύσετε σε αυτή τη "
 "σελίδα"
 
-#: templates/enterlink/edit.html:110 templates/enterlink/search-iframe.html:122
+#: templates/enterlink/edit.html:116 templates/enterlink/search-iframe.html:122
 #: templates/enterlink/search.html:27
 msgid "Search Everipedia"
 msgstr "Αναζήτηση στην Everipedia"
 
-#: templates/enterlink/edit.html:114
+#: templates/enterlink/edit.html:120
 msgid "Merge Page"
 msgstr "Συγχώνευση σελίδας"
 
-#: templates/enterlink/edit.html:121 templates/enterlink/edit.html:129
-#: templates/enterlink/edit.html:138 templates/enterlink/edit.html:147
-#: templates/enterlink/edit.html:156 templates/enterlink/edit.html:166
+#: templates/enterlink/edit.html:127 templates/enterlink/edit.html:135
+#: templates/enterlink/edit.html:144 templates/enterlink/edit.html:153
+#: templates/enterlink/edit.html:162 templates/enterlink/edit.html:172
 msgid "Hey there scholar!"
 msgstr "Γεια σου λόγιε!"
 
-#: templates/enterlink/edit.html:122
+#: templates/enterlink/edit.html:128
 msgid ""
 "Looks like you have been editing for a while. You should take a moment to "
 "save your work before continuing!"
@@ -470,7 +465,7 @@ msgstr ""
 "Φαίνεται ότι κάνετε επεξεργασίες για αρκετό καιρό. Θα πρέπει να αφιερώσετε "
 "λίγο χρόνογια να αποθηκεύσετε την εργασία σας προτού συνεχίσετε!"
 
-#: templates/enterlink/edit.html:130
+#: templates/enterlink/edit.html:136
 msgid ""
 "Looks like you are using first-person! (ex: Our product, I am, We are, You "
 "should). Everipedia is a neutral encyclopedia written in third-person tense "
@@ -481,18 +476,18 @@ msgstr ""
 "εγκυκλοπαίδεια γραμμένη σε τρίτο πρόσωπο (π.χ., αυτό είναι, αυτοί είναι, η "
 "εταιρία κάνει). Αυτό δεν είναι FACEBOOK !!"
 
-#: templates/enterlink/edit.html:139
+#: templates/enterlink/edit.html:145
 msgid "Please enter a title for the page."
 msgstr "Παρακαλώ εισάγετε έναν τίτλο για τη σελίδα."
 
-#: templates/enterlink/edit.html:148
+#: templates/enterlink/edit.html:154
 msgid ""
 "Please write something for the article section. Make sure to use citations."
 msgstr ""
 "Παρακαλώ γράψτε κάτι για την ενότητα του άρθρου. Βεβαιωθείτε ότι "
 "χρησιμοποιείτε παραπομπές."
 
-#: templates/enterlink/edit.html:157
+#: templates/enterlink/edit.html:163
 msgid ""
 "Hello! This page needs citations (also known as footnotes, references, "
 "sources) before it can be saved. Add the links you're using as sources with "
@@ -502,17 +497,17 @@ msgstr ""
 "αναφορές, πηγές) προτού μπορέσει να αποθηκευτεί. Προσθέστε τους συνδέσμους "
 "που χρησιμοποιείτε ως πηγές με την παραπάνω επιλογή παραπομπής."
 
-#: templates/enterlink/edit.html:158
+#: templates/enterlink/edit.html:164
 msgid "Join our official Facebook group if you need help with it!:"
 msgstr ""
 "Εγγραφείτε στην επίσημη ομάδα μας στο Facebook αν χρειάζεστε βοήθεια με "
 "αυτό !:"
 
-#: templates/enterlink/edit.html:158
+#: templates/enterlink/edit.html:164
 msgid "- we will hook you up. It's not hard!"
 msgstr "- Θα σας συνδέσουμε. Δεν είναι δύσκολο!"
 
-#: templates/enterlink/edit.html:167
+#: templates/enterlink/edit.html:173
 msgid ""
 "Please cite the link(s) you just added into the main article body. First "
 "click at the end of the sentence or paragraph you want to cite, then click "
@@ -542,6 +537,7 @@ msgstr "Προσθήκη στοιχείου Infobox"
 #: templates/enterlink/edit_ajax_addinfobox.html:26
 #: templates/enterlink/edit_ajax_addlink.html:26
 #: templates/enterlink/edit_ajax_editpagemeta.html:16
+#: templates/enterlink/edit_ajax_langgroup.html:38
 #: templates/enterlink/edit_ajax_merge.html:19
 #: templates/enterlink/edit_ajax_page_photo.html:4
 msgid "Close"
@@ -583,10 +579,11 @@ msgstr "Επιλέξτε το θέμα αυτής της σελίδας"
 msgid "Remove page"
 msgstr "Αφαίρεση σελίδας"
 
-#: templates/enterlink/edit_ajax_merge.html:12
-msgid "Merge this page into:"
+#: templates/enterlink/edit_ajax_langgroup.html:32
+msgid "Link this page to:"
 msgstr "Κοινοποιήστε αυτή τη σελίδα!"
 
+#: templates/enterlink/edit_ajax_langgroup.html:33
 #: templates/enterlink/edit_ajax_merge.html:13
 #: templates/enterlink/headers/desktop-navbar-index.html:29
 #: templates/enterlink/headers/desktop-navbar.html:43
@@ -594,6 +591,14 @@ msgstr "Κοινοποιήστε αυτή τη σελίδα!"
 #: templates/enterlink/search.html:7
 msgid "Search"
 msgstr "Αναζήτηση"
+
+#: templates/enterlink/edit_ajax_langgroup.html:37
+msgid "Group"
+msgstr ""
+
+#: templates/enterlink/edit_ajax_merge.html:12
+msgid "Merge this page into:"
+msgstr "Κοινοποιήστε αυτή τη σελίδα!"
 
 #: templates/enterlink/edit_ajax_merge.html:17
 msgid "Merge"
@@ -648,7 +653,7 @@ msgid "In The News"
 msgstr "Στα νέα"
 
 #: templates/enterlink/error.html:197
-#: templates/enterlink/headers/header_dropdown.html:28
+#: templates/enterlink/headers/header_dropdown.html:45
 #: templates/enterlink/recent-activity.html:7
 #: templates/enterlink/recent-activity.html:84
 msgid "Recent Activity"
@@ -675,100 +680,112 @@ msgstr "Υποστηριζόμενες Ανταλλαγές"
 msgid "The following exchanges indicated that they will support the IQ airdrop"
 msgstr "Οι ακόλουθες ανταλλαγές έδειξαν ότι θα υποστηρίξουν το airdrop του IQ"
 
-#: templates/enterlink/exchange-listings.html:149
+#: templates/enterlink/exchange-listings.html:163
 msgid "Supported Wallets"
 msgstr "Υποστηριζόμενα πορτοφόλια"
 
-#: templates/enterlink/exchange-listings.html:198
+#: templates/enterlink/exchange-listings.html:212
 msgid "Token Pockets"
 msgstr "Τσέπες Token"
 
+#: templates/enterlink/exchange-listings.html:224
+msgid "Tools"
+msgstr ""
+
 #: templates/enterlink/footers/desktop_footer.html:5
 #: templates/enterlink/footers/footer_no_extras.html:5
-#: templates/enterlink/footers/index_footer.html:23
+#: templates/enterlink/footers/index_footer.html:24
 #: templates/enterlink/footers/mobile_footer.html:137
-#: templates/enterlink/template_blockchain_styled_amp.html:516
+#: templates/enterlink/template_blockchain_styled_amp.html:528
 msgid "About"
 msgstr "Σχετικά"
 
 #: templates/enterlink/footers/desktop_footer.html:6
 #: templates/enterlink/footers/footer_no_extras.html:6
 #: templates/enterlink/footers/index_footer.html:7
-#: templates/enterlink/footers/index_footer.html:25
+#: templates/enterlink/footers/index_footer.html:26
 #: templates/enterlink/footers/mobile_footer.html:138
-#: templates/enterlink/template_blockchain_styled_amp.html:517
+#: templates/enterlink/template_blockchain_styled_amp.html:529
 msgid "FAQ"
 msgstr "Συχνές Ερωτήσεις"
 
 #: templates/enterlink/footers/desktop_footer.html:7
 #: templates/enterlink/footers/footer_no_extras.html:7
 #: templates/enterlink/footers/index_footer.html:8
-#: templates/enterlink/footers/index_footer.html:26
+#: templates/enterlink/footers/index_footer.html:27
 #: templates/enterlink/footers/mobile_footer.html:139
-#: templates/enterlink/template_blockchain_styled_amp.html:518
+#: templates/enterlink/template_blockchain_styled_amp.html:530
 msgid "Contact"
 msgstr "Επικοινωνία"
 
 #: templates/enterlink/footers/desktop_footer.html:8
 #: templates/enterlink/footers/footer_no_extras.html:9
 #: templates/enterlink/footers/index_footer.html:9
-#: templates/enterlink/footers/index_footer.html:27
+#: templates/enterlink/footers/index_footer.html:28
 #: templates/enterlink/footers/mobile_footer.html:143
-#: templates/enterlink/template_blockchain_styled_amp.html:520
+#: templates/enterlink/template_blockchain_styled_amp.html:532
 msgid "Terms"
 msgstr "Όροι"
 
 #: templates/enterlink/footers/desktop_footer.html:9
 #: templates/enterlink/footers/footer_no_extras.html:10
 #: templates/enterlink/footers/index_footer.html:10
-#: templates/enterlink/footers/index_footer.html:28
+#: templates/enterlink/footers/index_footer.html:29
 #: templates/enterlink/footers/mobile_footer.html:141
 #: templates/enterlink/headers/header_dropdown.html:7
-#: templates/enterlink/headers/header_dropdown.html:29
+#: templates/enterlink/headers/header_dropdown.html:46
 #: templates/enterlink/headers/index_header.html:128
 #: templates/enterlink/headers/index_header.html:153
 #: templates/enterlink/headers/index_header.html:157
-#: templates/enterlink/headers/mobile-navbar.html:98
+#: templates/enterlink/headers/mobile-navbar.html:116
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:138
-#: templates/enterlink/template_blockchain_styled_amp.html:519
-#: templates/enterlink/template_blockchain_styled_amp.html:597
+#: templates/enterlink/template_blockchain_styled_amp.html:531
+#: templates/enterlink/template_blockchain_styled_amp.html:626
 msgid "Forum"
 msgstr "Φόρουμ"
 
 #: templates/enterlink/footers/desktop_footer.html:10
 #: templates/enterlink/footers/footer_no_extras.html:11
 #: templates/enterlink/footers/index_footer.html:11
-#: templates/enterlink/footers/index_footer.html:29
+#: templates/enterlink/footers/index_footer.html:30
 #: templates/enterlink/footers/mobile_footer.html:144
 #: templates/enterlink/headers/header_dropdown.html:8
-#: templates/enterlink/headers/header_dropdown.html:31
-#: templates/enterlink/template_blockchain_styled_amp.html:521
+#: templates/enterlink/headers/header_dropdown.html:48
+#: templates/enterlink/template_blockchain_styled_amp.html:533
 msgid "Get IQ"
 msgstr "Αποκτήστε IQ"
 
-#: templates/enterlink/footers/desktop_footer.html:33
-#: templates/enterlink/footers/footer_no_extras.html:34
-#: templates/enterlink/footers/mobile_footer.html:167
-#: templates/enterlink/template_blockchain_styled_amp.html:548
+#: templates/enterlink/footers/desktop_footer.html:11
+#: templates/enterlink/footers/footer_no_extras.html:12
+#: templates/enterlink/footers/index_footer.html:12
+#: templates/enterlink/footers/mobile_footer.html:145
+#: templates/enterlink/template_blockchain_styled_amp.html:534
+msgid "Investors"
+msgstr ""
+
+#: templates/enterlink/footers/desktop_footer.html:34
+#: templates/enterlink/footers/footer_no_extras.html:35
+#: templates/enterlink/footers/mobile_footer.html:168
+#: templates/enterlink/template_blockchain_styled_amp.html:561
 msgid "Powered by"
 msgstr "Με την υποστήριξη του "
 
-#: templates/enterlink/footers/desktop_footer.html:38
-#: templates/enterlink/footers/footer_no_extras.html:39
-#: templates/enterlink/footers/mobile_footer.html:171
-#: templates/enterlink/template_blockchain_styled_amp.html:552
+#: templates/enterlink/footers/desktop_footer.html:39
+#: templates/enterlink/footers/footer_no_extras.html:40
+#: templates/enterlink/footers/mobile_footer.html:172
+#: templates/enterlink/template_blockchain_styled_amp.html:565
 msgid "API by"
 msgstr "API από"
 
-#: templates/enterlink/footers/desktop_footer.html:43
-#: templates/enterlink/footers/footer_no_extras.html:44
-#: templates/enterlink/footers/mobile_footer.html:175
-#: templates/enterlink/template_blockchain_styled_amp.html:556
+#: templates/enterlink/footers/desktop_footer.html:44
+#: templates/enterlink/footers/footer_no_extras.html:45
+#: templates/enterlink/footers/mobile_footer.html:176
+#: templates/enterlink/template_blockchain_styled_amp.html:569
 msgid "and"
 msgstr "και"
 
-#: templates/enterlink/footers/desktop_footer.html:51
-#: templates/enterlink/footers/footer_no_extras.html:52
+#: templates/enterlink/footers/desktop_footer.html:52
+#: templates/enterlink/footers/footer_no_extras.html:53
 #: templates/enterlink/headers/desktop-navbar-index.html:6
 #: templates/enterlink/headers/index_header.html:93
 #: templates/enterlink/language_selector.html:79
@@ -792,33 +809,33 @@ msgid "About Everipedia"
 msgstr "Σχετικά με την Everipedia"
 
 #: templates/enterlink/footers/index_footer.html:6
-#: templates/enterlink/footers/index_footer.html:24
+#: templates/enterlink/footers/index_footer.html:25
 msgid "How To Use"
 msgstr "Τρόπος χρήσης"
 
-#: templates/enterlink/footers/index_footer.html:12
-#: templates/enterlink/footers/index_footer.html:30
+#: templates/enterlink/footers/index_footer.html:13
+#: templates/enterlink/footers/index_footer.html:31
 #: templates/enterlink/footers/mobile_footer.html:140
 msgid "Donate"
 msgstr "Δωρεά"
 
 #: templates/enterlink/footers/mobile_footer.html:131
-#: templates/enterlink/template_blockchain_styled_amp.html:527
+#: templates/enterlink/template_blockchain_styled_amp.html:540
 msgid "By using this website, you agree to the"
 msgstr "Χρησιμοποιώντας αυτόν τον ιστότοπο, συμφωνείτε με τους"
 
 #: templates/enterlink/footers/mobile_footer.html:131
-#: templates/enterlink/template_blockchain_styled_amp.html:527
+#: templates/enterlink/template_blockchain_styled_amp.html:540
 msgid "Terms of Use"
 msgstr "Όροι χρήσης"
 
 #: templates/enterlink/footers/mobile_footer.html:131
-#: templates/enterlink/template_blockchain_styled_amp.html:527
+#: templates/enterlink/template_blockchain_styled_amp.html:540
 msgid "Everipedia® is a trademark of Everipedia International"
 msgstr "Το Everipedia® είναι εμπορικό σήμα της Everipedia International"
 
 #: templates/enterlink/footers/mobile_footer.html:142
-#: templates/enterlink/headers/mobile-navbar.html:104
+#: templates/enterlink/headers/mobile-navbar.html:122
 msgid "Chat"
 msgstr "Chat"
 
@@ -838,7 +855,7 @@ msgstr "Αναζήτηση..."
 #: templates/enterlink/headers/desktop-navbar.html:24
 #: templates/enterlink/headers/desktop-navbar.html:61
 #: templates/enterlink/headers/desktop-navbar.html:71
-#: templates/enterlink/headers/header_dropdown.html:27
+#: templates/enterlink/headers/header_dropdown.html:44
 #: templates/enterlink/index.html:66
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:50
 msgid "Create Page"
@@ -846,7 +863,7 @@ msgstr "Δημιουργία Σελίδας"
 
 #: templates/enterlink/headers/desktop-navbar-index.html:71
 #: templates/enterlink/headers/desktop-navbar.html:77
-#: templates/enterlink/headers/header_dropdown.html:25
+#: templates/enterlink/headers/header_dropdown.html:24
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:44
 #: templates/enterlink/notifications/index.html:67
 #: templates/enterlink/notifications/index.html:97
@@ -855,7 +872,7 @@ msgstr "Μηνύματα"
 
 #: templates/enterlink/headers/desktop-navbar-index.html:77
 #: templates/enterlink/headers/desktop-navbar.html:83
-#: templates/enterlink/headers/header_dropdown.html:24
+#: templates/enterlink/headers/header_dropdown.html:23
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:38
 #: templates/enterlink/notifications/index.html:96
 msgid "Notifications"
@@ -867,8 +884,6 @@ msgid "Your IQ Score"
 msgstr "Το σκορ IQ σας"
 
 #: templates/enterlink/headers/desktop-navbar.html:19
-#, fuzzy
-#| msgid "Searching..."
 msgid "Searching for duplicates..."
 msgstr "Αναζήτηση..."
 
@@ -877,13 +892,13 @@ msgid "Table of contents"
 msgstr "Πίνακας περιεχομένων"
 
 #: templates/enterlink/headers/desktop-navbar.html:33
-#: templates/enterlink/template_blockchain_styled_amp.html:102
+#: templates/enterlink/template_blockchain_styled_amp.html:105
 msgid "Table of contents and facts for this wiki"
 msgstr "Πίνακας περιεχομένων και γεγονότα για αυτό το wiki"
 
 #: templates/enterlink/headers/desktop-navbar.html:66
-#: templates/enterlink/headers/mobile-navbar.html:110
-#: templates/enterlink/template_blockchain_styled_amp.html:603
+#: templates/enterlink/headers/mobile-navbar.html:128
+#: templates/enterlink/template_blockchain_styled_amp.html:632
 msgid "Feed"
 msgstr "Γνώμες"
 
@@ -892,30 +907,47 @@ msgid "Please log in with Scatter"
 msgstr "Παρακαλούμε συνδεθείτε με το Scatter"
 
 #: templates/enterlink/headers/desktop-navbar.html:95
+#: templates/enterlink/headers/mobile-navbar.html:84
+#: templates/enterlink/template_blockchain_styled_amp.html:593
 msgid "Menu"
 msgstr ""
 
 #: templates/enterlink/headers/header_dropdown.html:12
-#: templates/enterlink/headers/header_dropdown.html:35
+#: templates/enterlink/headers/header_dropdown.html:52
 #: templates/enterlink/notifications/index.html:100
 #: templates/enterlink/notifications/index.html:105
 msgid "Log out"
 msgstr "Αποσύνδεση"
 
-#: templates/enterlink/headers/header_dropdown.html:18
-msgid "Claim Rewards"
+#: templates/enterlink/headers/header_dropdown.html:28
+#: templates/enterlink/headers/mobile-navbar.html:92
+#: templates/enterlink/login.html:41
+#: templates/enterlink/template_blockchain_styled_amp.html:601
+msgid "ORE ID Logins"
 msgstr ""
 
-#: templates/enterlink/headers/header_dropdown.html:26
+#: templates/enterlink/headers/header_dropdown.html:34
+#: templates/enterlink/headers/mobile-navbar.html:98
+#: templates/enterlink/template_blockchain_styled_amp.html:607
+msgid "Facebook"
+msgstr ""
+
+#: templates/enterlink/headers/header_dropdown.html:40
+#: templates/enterlink/headers/mobile-navbar.html:104
+#: templates/enterlink/template_blockchain_styled_amp.html:613
+msgid "Twitter"
+msgstr ""
+
+#: templates/enterlink/headers/header_dropdown.html:43
 msgid "Get Scatter"
 msgstr "Φόρτωση Scatter"
 
-#: templates/enterlink/headers/header_dropdown.html:30
-#: templates/enterlink/headers/mobile-navbar.html:92
+#: templates/enterlink/headers/header_dropdown.html:47
+#: templates/enterlink/headers/mobile-navbar.html:110
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:67
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:90
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:144
-#: templates/enterlink/template_blockchain_styled_amp.html:590
+#: templates/enterlink/template_blockchain_styled_amp.html:619
 msgid "Help"
 msgstr "Βοήθεια"
 
@@ -924,36 +956,28 @@ msgid "Sign In"
 msgstr "Σύνδεση"
 
 #: templates/enterlink/headers/index_header.html:101
-#: templates/enterlink/index.html:46
 msgid "Register"
 msgstr "Εγγραφή"
 
 #: templates/enterlink/headers/index_header.html:105
-#: templates/enterlink/login.html:36
 msgid "Username"
 msgstr "Όνομα Χρήστη"
 
 #: templates/enterlink/headers/index_header.html:106
-#: templates/enterlink/login.html:40
 msgid "Password"
 msgstr "Κωδικός πρόσβασης"
 
 #: templates/enterlink/headers/index_header.html:108
 #: templates/enterlink/headers/index_header.html:152
-#: templates/enterlink/login.html:45
 msgid "Log in"
 msgstr "Σύνδεση"
 
 #: templates/enterlink/headers/index_header.html:154
 #: templates/enterlink/headers/index_header.html:158
-#: templates/enterlink/headers/mobile-navbar.html:116
-#: templates/enterlink/template_blockchain_styled_amp.html:609
+#: templates/enterlink/headers/mobile-navbar.html:134
+#: templates/enterlink/template_blockchain_styled_amp.html:638
 msgid "Language"
 msgstr "Γλώσσα"
-
-#: templates/enterlink/headers/mobile-navbar.html:84
-msgid "Register / Log in"
-msgstr "Εγγραφή / Σύνδεση"
 
 #: templates/enterlink/hoverblurb_ajax_blockchain.html:64
 msgid "Go to article"
@@ -997,13 +1021,13 @@ msgstr "Άμεσος Σύνδεσμος"
 
 #: templates/enterlink/hoverlink_iframe_blockchain.html:64
 #: templates/enterlink/hoverlink_iframe_blockchain.html:65
-#: templates/enterlink/template_blockchain_styled_desktop.html:188
-#: templates/enterlink/template_blockchain_styled_desktop.html:189
+#: templates/enterlink/template_blockchain_styled_desktop.html:211
+#: templates/enterlink/template_blockchain_styled_desktop.html:212
 msgid "Share"
 msgstr "Κοινοποίηση"
 
 #: templates/enterlink/hoverlink_iframe_blockchain.html:68
-#: templates/enterlink/template_blockchain_styled_desktop.html:195
+#: templates/enterlink/template_blockchain_styled_desktop.html:218
 msgid "Copy URL"
 msgstr "Αντιγραφή URL"
 
@@ -1036,6 +1060,10 @@ msgstr ""
 "Το IQ Δίκτυο της Everipedia είναι η πρώτη Εγκυκλοπαίδεια στον κόσμο που "
 "επιτρέπει σε οποιονδήποτε να έχει μερίδιο στο σύστημα και να κερδίζει "
 "βαθμούς, ανταμοιβές και tokens για διαμόρφωση περιεχομένου."
+
+#: templates/enterlink/index.html:46
+msgid "Log In / Register"
+msgstr "Εγγραφή"
 
 #: templates/enterlink/index.html:47
 msgid "Learn more"
@@ -1177,13 +1205,43 @@ msgstr ""
 msgid "Executive Team"
 msgstr "Εκτελεστική ομάδα"
 
-#: templates/enterlink/leadership.html:6
-msgid "Leadership"
-msgstr "Ηγεσία"
+#: templates/enterlink/investor-relations.html:5
+#: templates/enterlink/investor-relations.html:16
+msgid "Investor Relations"
+msgstr ""
 
+#: templates/enterlink/investor-relations.html:18
+msgid "Recent News"
+msgstr "Πρόσφατες ειδήσεις"
+
+#: templates/enterlink/investor-relations.html:31
+msgid "Links"
+msgstr "Σύνδεσμος"
+
+#: templates/enterlink/investor-relations.html:35
 #: templates/enterlink/leadership.html:22
 msgid "Executive Leadership"
 msgstr "Εκτελεστική Ηγεσία"
+
+#: templates/enterlink/investor-relations.html:40
+msgid "Blog"
+msgstr ""
+
+#: templates/enterlink/investor-relations.html:45
+msgid "Investor Presentation"
+msgstr ""
+
+#: templates/enterlink/investor-relations.html:50
+msgid "Contact Us"
+msgstr "Επικοινωνήστε μαζί μας"
+
+#: templates/enterlink/investor-relations.html:69
+msgid "Partners"
+msgstr ""
+
+#: templates/enterlink/leadership.html:6
+msgid "Leadership"
+msgstr "Ηγεσία"
 
 #: templates/enterlink/leadership.html:34
 msgid "Chief Information Officer"
@@ -1251,21 +1309,21 @@ msgstr "Είναι ο καλύτερος τρόπος να αποτελείτε 
 msgid "Sign in"
 msgstr "Σύνδεση"
 
-#: templates/enterlink/login.html:33
+#: templates/enterlink/login.html:28
 msgid "Sign in to Everipedia"
 msgstr "Συνδεθείτε στην Everipedia"
 
-#: templates/enterlink/login.html:41
-msgid "Forgot your password?"
-msgstr "Ξεχάσατε τον κωδικό σας;"
+#: templates/enterlink/login.html:34
+msgid "Scatter Login"
+msgstr "Τελευταία είσοδος"
 
-#: templates/enterlink/login.html:48
-msgid "Log in with Facebook"
-msgstr "Συνδεθείτε μέσω Facebook"
+#: templates/enterlink/login.html:44
+msgid "Use Facebook"
+msgstr ""
 
-#: templates/enterlink/login.html:49
-msgid "Log in with Twitter"
-msgstr "Συνδεθείτε μέσω Twitter"
+#: templates/enterlink/login.html:45
+msgid "Use Twitter"
+msgstr ""
 
 #: templates/enterlink/mobile/inline-css/mobile-navbar.html:33
 msgid "Visit Profile"
@@ -1293,12 +1351,12 @@ msgid "by"
 msgstr "από"
 
 #: templates/enterlink/recent-activity.html:105
-#: templates/enterlink/template_blockchain_styled_desktop.html:183
+#: templates/enterlink/template_blockchain_styled_desktop.html:186
 msgid "Vote"
 msgstr "Ψηφίστε"
 
 #: templates/enterlink/recent-activity.html:106
-#: templates/enterlink/template_blockchain_styled_desktop.html:180
+#: templates/enterlink/template_blockchain_styled_desktop.html:183
 #: templates/enterlink/voting_table_of_contents.html:12
 msgid "Edit"
 msgstr "Επεξεργασία"
@@ -1377,15 +1435,15 @@ msgstr ""
 "Αν γνωρίζετε συνδέσμους που σχετίζονται με αυτή τη σελίδα, δοκιμάστε να "
 "αναζητήσετε αυτούς τους συνδέσμους"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:113
+#: templates/enterlink/template_blockchain_styled_amp.html:116
 msgid "Bullet"
 msgstr "Κουκίδα"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:175
+#: templates/enterlink/template_blockchain_styled_amp.html:178
 msgid "Recent news"
 msgstr "Πρόσφατες ειδήσεις"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:175
+#: templates/enterlink/template_blockchain_styled_amp.html:178
 msgid ""
 "Everipedia IQ tokens are now in circulation on the EOS mainnet. Follow "
 "Everipedia on"
@@ -1393,44 +1451,44 @@ msgstr ""
 "Τα token του IQ της Everipedia κυκλοφορούν τώρα στο κεντρικό δίκτυο EOS. "
 "Ακολουθήστε την Everipedia"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:175
+#: templates/enterlink/template_blockchain_styled_amp.html:178
 msgid "to learn about upcoming features and developments!"
 msgstr "για να μάθετε για τα προσεχή  χαρακτηριστικά και εξελίξεις!"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:241
+#: templates/enterlink/template_blockchain_styled_amp.html:253
 msgid "Quick Biography"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_amp.html:243
+#: templates/enterlink/template_blockchain_styled_amp.html:255
 msgid "Quick Facts For This Wiki"
 msgstr "Σύνδεσμοι αναφοράς για αυτό το Wiki"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:272
-#: templates/enterlink/template_blockchain_styled_desktop.html:353
+#: templates/enterlink/template_blockchain_styled_amp.html:284
+#: templates/enterlink/template_blockchain_styled_desktop.html:376
 msgid "Image & Video Gallery"
 msgstr "Συλλογή Εικόνων & Βίντεο"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:274
-#: templates/enterlink/template_blockchain_styled_desktop.html:355
+#: templates/enterlink/template_blockchain_styled_amp.html:286
+#: templates/enterlink/template_blockchain_styled_desktop.html:378
 msgid "images, pictures, and videos"
 msgstr "εικόνες, φωτογραφίες και βίντεο"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:278
+#: templates/enterlink/template_blockchain_styled_amp.html:290
 msgid "Gallery"
 msgstr "Συλλογή"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:295
-#: templates/enterlink/template_blockchain_styled_desktop.html:488
+#: templates/enterlink/template_blockchain_styled_amp.html:307
+#: templates/enterlink/template_blockchain_styled_desktop.html:511
 msgid "Reference Links For This Biography"
 msgstr "Σύνδεσμοι αναφοράς για αυτήν τη βιογραφία"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:297
-#: templates/enterlink/template_blockchain_styled_desktop.html:490
+#: templates/enterlink/template_blockchain_styled_amp.html:309
+#: templates/enterlink/template_blockchain_styled_desktop.html:513
 msgid "Reference Links For This Wiki"
 msgstr "Σύνδεσμοι αναφοράς για αυτό το Wiki"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:300
-#: templates/enterlink/template_blockchain_styled_desktop.html:493
+#: templates/enterlink/template_blockchain_styled_amp.html:312
+#: templates/enterlink/template_blockchain_styled_desktop.html:516
 msgid ""
 "Links to historical reviews, career / educational facts, and other "
 "encyclopedic information"
@@ -1438,13 +1496,13 @@ msgstr ""
 "Σύνδεσμοι σε ιστορικές κριτικές, καριέρες / εκπαιδευτικά γεγονότα και άλλες "
 "εγκυκλοπαιδικές πληροφορίες"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:305
-#: templates/enterlink/template_blockchain_styled_desktop.html:499
+#: templates/enterlink/template_blockchain_styled_amp.html:317
+#: templates/enterlink/template_blockchain_styled_desktop.html:522
 msgid "All information for"
 msgstr "Όλες οι πληροφορίες για"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:305
-#: templates/enterlink/template_blockchain_styled_desktop.html:499
+#: templates/enterlink/template_blockchain_styled_amp.html:317
+#: templates/enterlink/template_blockchain_styled_desktop.html:522
 msgid ""
 "wiki comes from the below links. Any source is valid, including Twitter, "
 "Facebook, Instagram, and LinkedIn. Pictures, videos, biodata, and files "
@@ -1454,13 +1512,13 @@ msgstr ""
 "συμπεριλαμβανομένων των Twitter, Facebook, Instagram και LinkedIn. Εικόνες, "
 "βίντεο, βιογραφικά στοιχεία και αρχεία που είναι σχετικά"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:305
-#: templates/enterlink/template_blockchain_styled_desktop.html:499
+#: templates/enterlink/template_blockchain_styled_amp.html:317
+#: templates/enterlink/template_blockchain_styled_desktop.html:522
 msgid "are also acceptable encyclopedic sources."
 msgstr "είναι επίσης αποδεκτές εγκυκλοπαιδικές πηγές."
 
-#: templates/enterlink/template_blockchain_styled_amp.html:320
-#: templates/enterlink/template_blockchain_styled_desktop.html:520
+#: templates/enterlink/template_blockchain_styled_amp.html:332
+#: templates/enterlink/template_blockchain_styled_desktop.html:543
 msgid ""
 "See related encyclopedia articles, biographies, reviews, and historical "
 "facts."
@@ -1468,44 +1526,48 @@ msgstr ""
 "Δείτε άρθρα σχετικά με εγκυκλοπαιδικά άρθρα, βιογραφίες, κριτικές και "
 "ιστορικά γεγονότα."
 
-#: templates/enterlink/template_blockchain_styled_amp.html:324
-#: templates/enterlink/template_blockchain_styled_desktop.html:527
+#: templates/enterlink/template_blockchain_styled_amp.html:336
+#: templates/enterlink/template_blockchain_styled_desktop.html:550
 msgid "Other wiki pages related to"
 msgstr "Άλλες σελίδες wiki που σχετίζονται με"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:503
+#: templates/enterlink/template_blockchain_styled_amp.html:515
 msgid "Created"
 msgstr "Δημιουργήθηκε"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:504
+#: templates/enterlink/template_blockchain_styled_amp.html:516
 msgid "Last Modified"
 msgstr "Τελευταία τροποποίηση"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:505
+#: templates/enterlink/template_blockchain_styled_amp.html:517
 msgid "IPFS"
 msgstr "IPFS"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:643
+#: templates/enterlink/template_blockchain_styled_amp.html:672
 msgid "Top Page Editors"
 msgstr "Σελίδα με τους κορυφαίους συντάκτες"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:663
+#: templates/enterlink/template_blockchain_styled_amp.html:692
 msgid "Share this page"
 msgstr "Κοινοποιήστε αυτή τη σελίδα!"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:675
+#: templates/enterlink/template_blockchain_styled_amp.html:704
 msgid "DIRECT LINK"
 msgstr "ΆΜΕΣΟΣ ΣΥΝΔΕΣΜΟΣ"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:680
-#: templates/enterlink/template_blockchain_styled_desktop.html:214
+#: templates/enterlink/template_blockchain_styled_amp.html:709
+#: templates/enterlink/template_blockchain_styled_desktop.html:237
 msgid "Suggested Hashtags"
 msgstr "Προτεινόμενα Hashtags"
 
-#: templates/enterlink/template_blockchain_styled_amp.html:714
-#: templates/enterlink/template_blockchain_styled_desktop.html:252
+#: templates/enterlink/template_blockchain_styled_amp.html:743
+#: templates/enterlink/template_blockchain_styled_desktop.html:275
 msgid "QR Code"
 msgstr "Κωδικός QR"
+
+#: templates/enterlink/template_blockchain_styled_amp.html:764
+msgid "Alternate Languages"
+msgstr "Γλώσσα"
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:15
 #: templates/enterlink/template_blockchain_styled_desktop.html:20
@@ -1514,7 +1576,7 @@ msgstr ""
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:17
 #: templates/enterlink/template_blockchain_styled_desktop.html:18
-#: templates/enterlink/template_blockchain_styled_desktop.html:218
+#: templates/enterlink/template_blockchain_styled_desktop.html:241
 msgid "bio"
 msgstr ""
 
@@ -1540,62 +1602,66 @@ msgstr ""
 #: templates/enterlink/template_blockchain_styled_desktop.html:25
 #: templates/enterlink/template_blockchain_styled_desktop.html:31
 #: templates/enterlink/template_blockchain_styled_desktop.html:32
-#: templates/enterlink/template_blockchain_styled_desktop.html:224
-#: templates/enterlink/template_blockchain_styled_desktop.html:230
-#: templates/enterlink/template_blockchain_styled_desktop.html:236
+#: templates/enterlink/template_blockchain_styled_desktop.html:247
+#: templates/enterlink/template_blockchain_styled_desktop.html:253
+#: templates/enterlink/template_blockchain_styled_desktop.html:259
 msgid "review"
 msgstr ""
 
 #: templates/enterlink/template_blockchain_styled_desktop.html:31
 #: templates/enterlink/template_blockchain_styled_desktop.html:32
-#: templates/enterlink/template_blockchain_styled_desktop.html:225
-#: templates/enterlink/template_blockchain_styled_desktop.html:231
-#: templates/enterlink/template_blockchain_styled_desktop.html:237
+#: templates/enterlink/template_blockchain_styled_desktop.html:248
+#: templates/enterlink/template_blockchain_styled_desktop.html:254
+#: templates/enterlink/template_blockchain_styled_desktop.html:260
 msgid "history"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:198
+#: templates/enterlink/template_blockchain_styled_desktop.html:191
+msgid "Other Languages"
+msgstr "Γλώσσα"
+
+#: templates/enterlink/template_blockchain_styled_desktop.html:221
 msgid "Embed / Widget"
 msgstr "Ενσωμάτωση / Widget"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:217
-#: templates/enterlink/template_blockchain_styled_desktop.html:223
-#: templates/enterlink/template_blockchain_styled_desktop.html:229
-#: templates/enterlink/template_blockchain_styled_desktop.html:235
+#: templates/enterlink/template_blockchain_styled_desktop.html:240
+#: templates/enterlink/template_blockchain_styled_desktop.html:246
+#: templates/enterlink/template_blockchain_styled_desktop.html:252
+#: templates/enterlink/template_blockchain_styled_desktop.html:258
 msgid "wiki"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:219
+#: templates/enterlink/template_blockchain_styled_desktop.html:242
 msgid "net worth"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:220
+#: templates/enterlink/template_blockchain_styled_desktop.html:243
 msgid "age"
 msgstr "Σελίδα"
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:221
+#: templates/enterlink/template_blockchain_styled_desktop.html:244
 msgid "married"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:226
+#: templates/enterlink/template_blockchain_styled_desktop.html:249
 msgid "sales"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:227
-#: templates/enterlink/template_blockchain_styled_desktop.html:233
-#: templates/enterlink/template_blockchain_styled_desktop.html:239
+#: templates/enterlink/template_blockchain_styled_desktop.html:250
+#: templates/enterlink/template_blockchain_styled_desktop.html:256
+#: templates/enterlink/template_blockchain_styled_desktop.html:262
 msgid "facts"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:232
+#: templates/enterlink/template_blockchain_styled_desktop.html:255
 msgid "founders"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:238
+#: templates/enterlink/template_blockchain_styled_desktop.html:261
 msgid "encyclopedia"
 msgstr ""
 
-#: templates/enterlink/template_blockchain_styled_desktop.html:325
+#: templates/enterlink/template_blockchain_styled_desktop.html:348
 msgid "Profiles"
 msgstr "Προφίλ"
 
@@ -1648,11 +1714,11 @@ msgstr "Ψηφοφορία"
 msgid "Editing History"
 msgstr "Ιστορία της ψηφοφορίας"
 
-#: templates/enterlink/voting.html:225
+#: templates/enterlink/voting.html:233
 msgid "Rejectors"
 msgstr "Απόρριψη"
 
-#: templates/enterlink/voting.html:231
+#: templates/enterlink/voting.html:239
 msgid "Approvers"
 msgstr "Έγκριση"
 

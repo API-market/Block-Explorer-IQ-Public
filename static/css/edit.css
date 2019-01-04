@@ -685,7 +685,7 @@ background: #ebebeb;
     border: 1px solid #ccc;
 }
 #pagemeta-box-wrapper{
-    height: 270px;
+    height: 300px;
     width: 350px;
     left: unset;
     right: 0;
@@ -701,7 +701,7 @@ background: #ebebeb;
     border: 1px solid #ccc;
 	padding: 10px;
 }
-#merge-box-wrapper {
+#merge-box-wrapper, #langgroup-box-wrapper{
 	position: fixed;
     width: 300px;
     height: 365px;
@@ -713,12 +713,12 @@ background: #ebebeb;
     border: 1px solid #ccc;
     border-radius: 3px;
 }
-#merge-box-wrapper #merge-box {
+#merge-box-wrapper #merge-box, #langgroup-box-wrapper #langgroup-box {
 	width: 100%;
     height: 100%;
     float: left;
 }
-#merge-box-wrapper .merge-label {
+#merge-box-wrapper .merge-label, #langgroup-box-wrapper .langgroup-label {
     float: left;
     width: 100%;
     text-align: center;
@@ -726,7 +726,7 @@ background: #ebebeb;
     font-weight: bold;
     margin: 7px 0px;
 }
-#merge-box-wrapper #AJAXBox-Merge{
+#merge-box-wrapper #AJAXBox-Merge, #langgroup-box-wrapper #AJAXBox-LangGroup{
     height: 25px;
     background: #F6F6F6;
     padding-right: 3px;
@@ -736,7 +736,7 @@ background: #ebebeb;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    font-size: 10px;
+    font-size: 14px;
     line-height: 15px;
     border: 0;
     box-shadow: none;
@@ -744,17 +744,17 @@ background: #ebebeb;
     padding-left: 6px;
 }
 
-#mergeResult ul{
+#mergeResult ul, #langGroupResult ul{
 	margin-bottom: 0px !important;
 	list-style: none;
 }
 
-#mergeResult ul a {
+#mergeResult ul a, #langGroupResult ul {
     float:left;
     width:100%
 }
 
-#mergeResult ul li {
+#mergeResult ul li, #langGroupResult ul li {
 text-align:left;
 width:100%;
 min-height:18px;
@@ -767,11 +767,11 @@ animation-name: fadeinopacity;
 animation-duration: .5s;
 }
 
-#mergeResult ul li:hover {
+#mergeResult ul li:hover, #langGroupResult ul li:hover {
     background-color:#eeeeee
 }
 
-#mergeResult .ajax_avatar {
+#mergeResult .ajax_avatar, #langGroupResult .ajax_avatar {
 	display: block;
 	float: left;
 	width: 40px;
@@ -781,7 +781,7 @@ animation-duration: .5s;
 	background-color: rgba(162, 162, 162, 0.10);
 }
 
-#mergeResult .ajax_username {
+#mergeResult .ajax_username, #langGroupResult .ajax_username {
 	font-weight: 700;
 	color: #313131;
 	font-size: 13px;
@@ -791,7 +791,7 @@ animation-duration: .5s;
 	float: left;
 }
 
-#mergeResult .ajax_links {
+#mergeResult .ajax_links, #langGroupResult .ajax_links {
 	color:#687380;
 	font-size:16px;
 	font-weight:400;
@@ -800,7 +800,7 @@ animation-duration: .5s;
 	font-family:inherit;
 }
 
-#mergeResult .ajax-view-count {
+#mergeResult .ajax-view-count, #langGroupResult .ajax-view-count {
     font-size: 12px;
     color: #999;
     float: right;
@@ -808,7 +808,7 @@ animation-duration: .5s;
     line-height: 18px;
 }
 
-#mergeResult .ajax-page-title {
+#mergeResult .ajax-page-title, #langGroupResult .ajax-page-title {
     color: #394c56;
     float: left;
     font-size: 14px;
@@ -820,7 +820,7 @@ animation-duration: .5s;
     text-overflow: ellipsis;
 }
 
-#mergeResult .ajax_blurb {
+#mergeResult .ajax_blurb, #langGroupResult .ajax_blurb {
     color: #888;
     font-size: 13px;
     width: calc(100% - 55px);

@@ -49,7 +49,7 @@ from django.utils.translation import LANGUAGE_SESSION_KEY, ugettext
 from django.views.decorators.csrf import csrf_exempt
 from elasticsearch import Elasticsearch
 from enterlink.forms import ContactForm, SearchBox
-from enterlink.models import HashCache, SchemaObject, ArticleTable, EditProposal, SiteNotice, PressRelease
+from enterlink.models import HashCache, SchemaObject, ArticleTable, EditProposal, SiteNotice, PressRelease, EveripediaUser
 from enterlink.view_functions import parseBlockchainHTML, createRedirect, \
     blurbSplitter, parseTinyMCE_Citations, getTheArticleObject, \
     refreshTemplateCacheBlockchain, whiteSpaceStripper, parseTinyMCE_Media
@@ -57,7 +57,7 @@ from enterlink.media_functions import addItemToS3FromURL_local_function, getYouT
 from enterlink.model_functions import getIPAddress, mainSearch
 from fbwiki import settings
 from fbwiki.settings import VALID_VIDEO_EXTENSIONS, VALID_AUDIO_EXTENSIONS, ELASTICSEARCH_HOST, ELASTICSEARCH_PORT, ELASTICSEARCH_PROTOCOL, \
-    ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASSWORD, ELASTICSEARCH_INDEX_NAME, ELASTICSEARCH_DOCUMENT_TYPE
+    ELASTICSEARCH_USERNAME, ELASTICSEARCH_PASSWORD, ELASTICSEARCH_INDEX_NAME, ELASTICSEARCH_DOCUMENT_TYPE, OREID_API_KEY, OREID_PUBLIC_KEY, OREID_HOST, OREID_APP_ID
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 import warnings
@@ -379,7 +379,8 @@ def search(request, useIframe=False):
 
     # Process the main search
     BLURB_CHAR_LIMIT = 650
-    result = mainSearch(None, "tinyMCE_JSON", searchterm, 80, BLURB_CHAR_LIMIT)
+    lang_param = translation.get_language()
+    result = mainSearch(None, "tinyMCE_JSON", searchterm, 80, BLURB_CHAR_LIMIT, passedLang=lang_param)
 
     # Paginate the search results
     paginator = Paginator(result, 20)
@@ -631,7 +632,7 @@ def AJAX_Search(request, url_param):
                "citer_rank": citer_rank, "citer_is_verified": citer_is_verified})
 
     # Generate a list of the photos
-    if url_param == 'tinymce-cite-picture':
+    elif url_param == 'tinymce-cite-picture':
         try:
             cited_by = request.GET.get('cited_by')
             citer_rank = request.GET.get('citer_rank')
@@ -709,6 +710,7 @@ def AJAX_Search(request, url_param):
               {"result": resultArray, "renderType": url_param, "cited_by": cited_by,
                "citer_rank": citer_rank, "citer_is_verified": citer_is_verified})
 
+
     # Get the search term
     searchterm = request.GET['searchterm']
 
@@ -735,7 +737,8 @@ def AJAX_Search(request, url_param):
     BLURB_CHAR_LIMIT = 250
 
     # Perform the search
-    result = mainSearch(url_param, search_type, searchterm, FETCH_LIMIT, BLURB_CHAR_LIMIT)
+    lang_param = translation.get_language()
+    result = mainSearch(url_param, search_type, searchterm, FETCH_LIMIT, BLURB_CHAR_LIMIT, passedLang=lang_param)
 
     blurbResults = []
     # Blank result
@@ -1052,6 +1055,11 @@ def brainpowermgmt(request, account_name):
 def rewardsmgmt(request, account_name):
     return render(request, 'enterlink/rewardsmgmt.html', )
 
+# Login
+@csrf_exempt
+def login(request):
+    return render(request, 'enterlink/login.html', )
+
 # Recent article proposals
 @csrf_exempt
 def recent_activity(request):
@@ -1074,3 +1082,40 @@ def recent_activity(request):
 
     # Return the HTML
     return render(request, 'enterlink/recent-activity.html', {'theProposals': theProposals})
+
+@csrf_exempt
+def AJAX_Get_OREID_Token(request, nonHTTP=False):
+    headers = {'user-agent': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)',
+               'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+               'Accept-Charset': 'utf-8,ISO-8859-1;q=0.7,*;q=0.3',
+               'Accept-Language': 'en-US,en;q=0.5',
+               'Accept-Encoding': 'gzip, deflate',
+               'Connection': 'keep-alive',
+               'api-key': '%s' % OREID_API_KEY}
+    theURL = OREID_HOST + "/api/app-token"
+    response = requests.get(theURL, headers=headers, allow_redirects=True, timeout=10, verify=True)
+    jsonResult = json.loads(response.text)
+    accessToken = jsonResult['appAccessToken']
+    if nonHTTP:
+        return accessToken
+    else:
+        quickResponse = HttpResponse(accessToken)
+        quickResponse.set_cookie('oreid-access-token', accessToken)
+        return quickResponse
+
+@csrf_exempt
+def AJAX_OREID_Callback(request):
+    accountName = request.GET.get('account')
+    response = recent_activity(request)
+    response.set_cookie('oreid-account-name', accountName)
+    theAccessToken = AJAX_Get_OREID_Token(request, nonHTTP=True)
+    response.set_cookie('oreid-access-token', theAccessToken)
+    return response
+
+@csrf_exempt
+def AJAX_OREID_Auth(request):
+    provider = request.GET.get('provider')
+    source_url = request.GET.get('source_url')
+    theAccessToken = AJAX_Get_OREID_Token(request, nonHTTP=True)
+    destinationURL = u"https://oreid.io/auth?app_access_token=" + theAccessToken + '&provider=' + provider + "&callback_url=https%3A%2F%2Feveripedia.org%2FAJAX-REQUEST%2FAJAX_OREID_Callback";
+    return HttpResponseRedirect(destinationURL)

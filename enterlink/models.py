@@ -1,9 +1,80 @@
 from __future__ import unicode_literals
-from django.contrib.auth.models import User
+from django.contrib.auth.models import ( BaseUserManager, AbstractBaseUser, User)
 from django.db import models
 from django.utils.translation import ugettext_lazy
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+
+class EveripediaUser(AbstractBaseUser):
+    id = models.BigAutoField(primary_key=True)
+    username = models.CharField(max_length=255)
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    nationality = models.CharField(max_length=10, blank=True, null=True)
+    pref_lang = models.CharField(max_length=10, blank=True, null=True, default="en")
+    email = models.EmailField(max_length=255,unique=True,)
+    photo_url = models.URLField(max_length=1024)
+    photo_thumb_url = models.URLField(max_length=1024)
+    user_type = models.CharField(max_length=255) # e.g. OreID
+    is_active = models.BooleanField(default=True)
+    is_admin = models.BooleanField(default=False)
+
+    USERNAME_FIELD = 'id'
+    REQUIRED_FIELDS = []
+
+    def get_full_name(self):
+        return "%s %s (%s)" % (self.first_name, self.last_name, self.username)
+
+    def get_short_name(self):
+        return "%s %s (%s)" % (self.first_name, self.last_name, self.username)
+
+    def __str__(self):
+        return "%s %s (%s)" % (self.first_name, self.last_name, self.username)
+
+    def __unicode__(self):
+        return "%s %s (%s)" % (self.first_name, self.last_name, self.username)
+
+    def has_perm(self, perm, obj=None):
+        return True
+
+    def has_module_perms(self, app_label):
+        return True
+
+    @property
+    def is_staff(self):
+        return self.is_admin
+
+
+class UserContinued(models.Model):
+    gender = models.CharField(max_length=7, choices=(('male', 'male'), ('female', 'female'), ('other', 'other')), blank=True, null=True)
+    points = models.IntegerField(default=0)
+    editnumber = models.IntegerField(default=0)
+    rank = models.CharField(max_length=128, default="Link Editor", choices=(('Link Editor', 'Link Editor'), ('Everipedia Editor', 'Everipedia Editor'), ('Master Editor', 'Master Editor'), ('Staff', 'Staff'), ('Founder', 'Founder')))
+    nationality = models.CharField(max_length=5, blank=True, null=True)
+    usertag = models.OneToOneField(User)
+    age = models.IntegerField(default=0, blank=True, null=True)
+    isverified = models.BooleanField(default=False)
+    usertitle = models.CharField(max_length=512, blank=True, null=True)
+    activation_key = models.CharField(max_length= 40, blank=True)
+    key_expires = models.DateTimeField(auto_now_add=True, null=True)
+    badgestring = models.CharField(max_length=2048, blank=True, null=True)
+    profile_pic = models.ImageField(upload_to='everipedia_profile_pics', blank=True)
+    edit_amount = models.IntegerField(default=0) #for checking how much they have edited articles, the higher the number the more edits they have
+    pref_lang = models.CharField(max_length=5, blank=True, null=True, default="en")
+    noteItem = models.CharField(max_length=512, blank=True, null=True)
+    everipediapage = models.IntegerField(default=0, blank=True, null=True)
+    photourl = models.CharField(max_length=512, blank=True, null=True)
+    photo_thumb100url = models.CharField(max_length=512, blank=True, null=True)
+    btc_addr = models.CharField(max_length=34, blank=True, null=True)
+    eth_addr = models.CharField(max_length=42, blank=True, null=True)
+    doge_addr = models.CharField(max_length=34, blank=True, null=True)
+    pages_created = models.IntegerField(blank=True, null=True)
+
+    def __unicode__(self):
+        if self.isverified == True:
+            return self.usertag.first_name + ' ' + self.usertag.last_name + ', ' + self.usertitle
+        else:
+            return self.usertag.username
 
 # "Contact Us" object
 class Contact(models.Model):
@@ -112,7 +183,7 @@ class SeeAlso(models.Model):
     see_also_tag_id = models.IntegerField(null=False, default=0)
     see_also_content = models.CharField(max_length=1024)
     see_also_date = models.DateTimeField(auto_now_add=True)
-    currenteditor = models.ForeignKey(User, null=True, blank=True)
+    # currenteditor = models.IntegerField(null=False, default=0)
     editnote = models.CharField(max_length=512, null=True, blank=True)
     see_also_clicks = models.IntegerField(null=False, default=0)
     is_active = models.BooleanField(default=False)
