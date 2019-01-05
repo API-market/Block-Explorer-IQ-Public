@@ -463,17 +463,26 @@ pointer-events:auto
 	box-shadow: 0 2px 10px rgba(0,0,0,.05);
 	-moz-animation: gb__a .2s;
 	animation: gb__a .2s;
-	border-radius:2px;
+	border-radius:4px;
     padding: 0px 0px 7px 0px;
 	top:110%;
 }
 
 #user-dropdown .oreid-line{
-    background-color: #0f0f0f;
+    background-color: #fafafa;
+}
+
+#user-dropdown .oreid-line a{
+    text-align: right;
 }
 
 #user-dropdown .oreid-line a .line-text{
-    color: white;
+    color: #aaa;
+    left: 0;
+}
+
+#user-dropdown .oreid-line a .line-logo{
+    float: none;
 }
 
 #user-dropdown .oreid-facebook:hover, #user-dropdown .oreid-twitter:hover{
@@ -494,9 +503,9 @@ pointer-events:auto
 }
 
 #user-dropdown .line-text{
+    left: 10px;
     line-height: 25px;
     position: relative;
-    left: -13px;
 }
 
 #user-dropdown .line-logo {
@@ -514,10 +523,10 @@ pointer-events:auto
 }
 
 #user-dropdown .nav > li > a {
-	padding: 7px 10px;
-	text-align: center;
+	padding: 10px 15px;
+	text-align: left;
     line-height: 1.25;
-    font-size: 16px;
+    font-size: 14px;
 	color: rgba(0,0,0,.6);
 }
 
