@@ -18,6 +18,7 @@ padding:0
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 100px;
+	margin-bottom: 100px;
 
     background-color: #fff;
     border: 1px solid #e6e6e6;
@@ -112,10 +113,12 @@ margin-top:10px
 	width: 100%;
 	padding-top: 11px;
 	padding-bottom: 11px;
+	margin-top: 20px;
 	background-position: 8px 6px;
 	font-size: 16px;
 	float:none;
 	line-height: 24px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .login-ct .fb_login {
@@ -127,6 +130,7 @@ margin-top:10px
 	float:none;
 	margin-bottom:3px;
 	line-height: 24px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .login-ct .fb_login:hover {
@@ -188,17 +192,18 @@ margin-top:10px
 }
 
 .login-ct .scatter-bar {
-	float: left;
     width: 100%;
-    padding: 10px 0px 0px 0px;
-    margin: 15px 0px 0px 0px;
-    border-top: 5px solid #e6e6e6;
+    padding: 20px 0px 0px 0px;
+    margin: 20px 0px 0px 0px;
+    border-top: 1px solid #e6e6e6;
 }
 
 .login-ct .scatter-bar a {
 	display: inline-block;
 	padding: 5px 0px;
 	width: 100%;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 100px;
 }
 .login-ct .scatter-bar a:hover{
 	background: #f6f6f6;
@@ -206,37 +211,41 @@ margin-top:10px
 }
 
 .login-ct .scatter-bar .line-text{
-    line-height: 66px;
-    font-size: 20px;
+    line-height: 24px;
+	font-size: 16px;
+	vertical-align: middle;
     position: relative;
     color: #666;
 }
 
 .login-ct .scatter-bar .line-logo {
-    width: 50px;
+    width: 20px;
     margin-right: 10px;
 }
 
 .login-ct .oreid-bar {
-	float: left;
     width: 100%;
-    padding: 15px 0px 0px 0px;
-    margin: 10px 0px 15px 0px;
-    border-top: 5px solid #e6e6e6;
+    padding: 20px 0px 0px 0px;
+    margin: 20px 0px 15px 0px;
+    border-top: 1px solid #e6e6e6;
 }
 
 .login-ct .oreid-bar a{
 	display: inline-block;
 }
 
+.login-ct .oreid-bar .powered-by-oreid {
+	margin-top: 20px;
+}
+
 .login-ct .oreid-bar .line-text{
-    line-height: 50px;
-    font-size: 20px;
+    line-height: 12px;
+	font-size: 12px;
+	vertical-align: middle;
     position: relative;
-    color: #666;
+    color: #aaa;
 }
 
 .login-ct .oreid-bar .line-logo {
-    width: 50px;
-    margin-right: 10px;
+    margin-left: 10px;
 }

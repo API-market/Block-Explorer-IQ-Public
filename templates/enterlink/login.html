@@ -25,24 +25,27 @@
 			{% csrf_token %}
 				
 				<img class="login-logo hidden-xs" src="https://epcdn-vz.azureedge.net/static/images/Everipedia_Logo.svg"/>
-                <h1>{%  trans 'Sign in to Everipedia' %}</h1>
-                <div style="margin: -10px 0px 10px 0px; color: #d56464; font-size: 12px;">{{ errorMessage }}</div>
+                <h1>{%  trans 'Everipedia' %}</h1>
+                <div style="margin: 10px 0px 10px 0px; color: #d56464; font-size: 12px;">{{ errorMessage }}</div>
 
                 <div class="scatter-bar">
                     <a class='scatter-anchor' href="https://github.com/GetScatter/ScatterDesktop/releases">
                         <img class="line-logo" src="https://epcdn-vz.azureedge.net/static/images/scatter.png" />
-                        <span class="line-text">{% trans 'Get Scatter' %}</span>
+                        <span class="line-text">{% trans 'Connect with Scatter' %}</span>
                     </a>
                 </div>
 
                 <div class="oreid-bar">
-                    <a href="https://aikon.com/ore-id">
-                        <img class="line-logo" src="/static/images/oreid.svg" />
-                        <span class="line-text">{% trans 'ORE ID Logins' %}</span>
-                    </a>
+                    <a class="fb_login social-login" rel="nofollow" href="/AJAX-REQUEST/AJAX_OREID_Auth/?provider=facebook&source_url={{ request.path }}"><div>{% trans 'Log in with Facebook' %}</div></a>
+                    <a class="tw_login social-login" rel="nofollow" href="/AJAX-REQUEST/AJAX_OREID_Auth/?provider=twitter&source_url={{ request.path }}"><div>{% trans 'Log in with Twitter' %}</div></a>
+
+                    <div class="powered-by-oreid">
+                        <span class="line-text">{% trans 'Powered by' %}</span>
+                        <a href="https://aikon.com/ore-id">
+                            <img class="line-logo" src="/static/images/oreid-badge-light.svg" />
+                        </a>
+                    </div>
                 </div>
-                <a class="fb_login social-login" rel="nofollow" href="/AJAX-REQUEST/AJAX_OREID_Auth/?provider=facebook&source_url={{ request.path }}"><div>{% trans 'Use Facebook' %}</div></a>
-                <a class="tw_login social-login" rel="nofollow" href="/AJAX-REQUEST/AJAX_OREID_Auth/?provider=twitter&source_url={{ request.path }}"><div>{% trans 'Use Twitter' %}</div></a>
 
 		        <input type="hidden" name="next" value="{{next}}" />
 		
